@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion'; // Changed this line to fix the build crash
 import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
