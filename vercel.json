@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/work",
+      "destination": "/vault",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
