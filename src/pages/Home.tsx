@@ -17,7 +17,6 @@ export default function Home() {
         <section className="min-h-[85vh] flex flex-col justify-center px-6 md:px-12 max-w-7xl mx-auto py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             
-            {/* Visual Column - The O+X Monogram with 60s Rotation */}
             <div className="order-1 lg:order-2 flex justify-center items-center relative">
               <motion.div
                 animate={{ rotate: 360 }}
@@ -31,7 +30,6 @@ export default function Home() {
               </motion.div>
             </div>
 
-            {/* Text Column */}
             <div className="order-2 lg:order-1">
               <p className="text-[10px] text-[#A1A1AA] mb-8 font-bold tracking-[0.3em] uppercase">
                 {homeData.hero.badge}
@@ -59,13 +57,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Methodology Section */}
         <RevealSection className="py-20 px-6 md:px-12 border-t border-[#FAFAFA]/10">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-32">
             <div className="flex flex-col justify-center">
-              <h2 className="text-2xl md:text-3xl mb-8 font-display uppercase tracking-widest">
-                {homeData.methodology.title}
-              </h2>
+              <h2 className="text-2xl md:text-3xl mb-8 font-display uppercase tracking-widest">{homeData.methodology.title}</h2>
               <p className="text-sm md:text-base leading-relaxed opacity-60">
                 {homeData.methodology.description}
               </p>
@@ -73,16 +68,9 @@ export default function Home() {
             
             <div className="grid grid-cols-2 gap-4 md:gap-8">
               {homeData.methodology.pillars.map((pillar) => (
-                <div 
-                  key={pillar.id} 
-                  className="border border-[#FAFAFA]/10 p-6 md:p-8 flex flex-col justify-between aspect-square bg-[#FAFAFA]/5 hover:border-[#FAFAFA]/40 transition-colors duration-500"
-                >
-                  <span className={`text-3xl font-display ${pillar.accent ? 'text-[#A1A1AA]' : 'text-[#FAFAFA]'}`}>
-                    {pillar.id}
-                  </span>
-                  <span className="text-[10px] tracking-[0.2em] uppercase opacity-60">
-                    {pillar.label}
-                  </span>
+                <div key={pillar.id} className="border border-[#FAFAFA]/10 p-6 md:p-8 flex flex-col justify-between aspect-square bg-[#FAFAFA]/5 hover:border-[#FAFAFA]/40 transition-colors duration-500">
+                  <span className={`text-3xl font-display ${pillar.accent ? 'text-[#A1A1AA]' : 'text-[#FAFAFA]'}`}>{pillar.id}</span>
+                  <span className="text-[10px] tracking-[0.2em] uppercase opacity-60">{pillar.label}</span>
                 </div>
               ))}
             </div>
