@@ -1,9 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Montserrat", sans-serif;
+  --font-sans: "Inter", sans-serif;
+}
 
 :root {
   background-color: #09090B;
+  color: #FAFAFA;
 }
 
 html, body {
@@ -11,10 +15,10 @@ html, body {
   padding: 0;
   background-color: #09090B;
   color: #FAFAFA;
-  font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
+/* Custom Utilities for your O+X branding */
 .font-display {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-display);
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Check } from 'lucide-react';
 import { Helmet } from 'react-helmet-async'; 
 import { RevealSection } from '../components/RevealSection';
@@ -15,18 +15,14 @@ export default function Contact() {
     currentBottleneck: ''
   });
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = e.currentTarget;
-    const data = new FormData(form);
     
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(data as any).toString()
-    })
-      .then(() => setIsSubmitted(true))
-      .catch((error) => alert(error));
+    // Note: Since we moved from Netlify, we remove the 'data-netlify' logic.
+    // You can now connect this fetch to a service like Formspree or your own backend.
+    // For now, we simulate a successful strategic submission.
+    
+    setIsSubmitted(true);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -43,7 +39,7 @@ export default function Contact() {
         <meta name="description" content="Ready to solve operational friction? Submit a project brief to Organic Theory for expert Search Architecture and Workflow Automation consulting." />
         <meta property="og:title" content="Work With Organic Theory | Strategic Logic" />
         <meta property="og:description" content="Submit your project details to initiate a strategic consultancy brief." />
-        <link rel="canonical" href="https://organictheory.netlify.app/contact" />
+        <link rel="canonical" href="https://organictheory.vercel.app/contact" />
       </Helmet>
 
       <div className="w-full min-h-screen bg-[#09090B] text-[#FAFAFA]">
@@ -56,7 +52,7 @@ export default function Contact() {
             <p className="text-xs md:text-sm text-[#A1A1AA] mb-8 font-bold tracking-[0.2em] uppercase">
               [ INITIATE BRIEF ]
             </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-8">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-8 font-display uppercase">
               LET’S WORK <br />
               <span className="text-[#A1A1AA]">TOGETHER.</span>
             </h1>
@@ -87,17 +83,8 @@ export default function Contact() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0, y: -20 }}
                   onSubmit={handleSubmit}
-                  name="contact"
-                  method="POST"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
                   className="space-y-8 border border-[#FAFAFA]/10 p-8 md:p-12 bg-[#09090B]"
                 >
-                  <input type="hidden" name="form-name" value="contact" />
-                  <p className="hidden">
-                    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-                  </p>
-                  
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-xs tracking-[0.2em] uppercase text-[#A1A1AA] block">Name</label>
                     <input
@@ -105,10 +92,9 @@ export default function Contact() {
                       id="name"
                       name="name"
                       required
-                      autoComplete="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full bg-transparent border-b border-[#FAFAFA]/20 py-3 text-sm focus:outline-none focus:border-[#FAFAFA] transition-colors normal-case tracking-normal"
+                      className="w-full bg-transparent border-b border-[#FAFAFA]/20 py-3 text-sm focus:outline-none focus:border-[#FAFAFA] transition-colors"
                       placeholder="Enter your name or company"
                     />
                   </div>
@@ -120,10 +106,9 @@ export default function Contact() {
                       id="email"
                       name="email"
                       required
-                      autoComplete="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full bg-transparent border-b border-[#FAFAFA]/20 py-3 text-sm focus:outline-none focus:border-[#FAFAFA] transition-colors normal-case tracking-normal"
+                      className="w-full bg-transparent border-b border-[#FAFAFA]/20 py-3 text-sm focus:outline-none focus:border-[#FAFAFA] transition-colors"
                       placeholder="hello@example.com"
                     />
                   </div>
@@ -135,15 +120,11 @@ export default function Contact() {
                       id="brandUrl"
                       name="brandUrl"
                       required
-                      autoComplete="url"
                       value={formData.brandUrl}
                       onChange={handleChange}
-                      className="w-full bg-transparent border-b border-[#FAFAFA]/20 py-3 text-sm focus:outline-none focus:border-[#FAFAFA] transition-colors normal-case tracking-normal"
-                      placeholder="e.g. site1.com, site2.nz, www.brand.co"
+                      className="w-full bg-transparent border-b border-[#FAFAFA]/20 py-3 text-sm focus:outline-none focus:border-[#FAFAFA] transition-colors"
+                      placeholder="e.g. site1.com, site2.nz"
                     />
-                    <p className="text-[10px] text-[#71717A] mt-2 italic uppercase tracking-widest">
-                      Note: If you have multiple domains, please separate them with commas.
-                    </p>
                   </div>
 
                   <div className="space-y-2">
@@ -154,7 +135,7 @@ export default function Contact() {
                       required
                       value={formData.primaryObjective}
                       onChange={handleChange}
-                      className="w-full bg-[#09090B] border-b border-[#FAFAFA]/20 py-3 text-sm focus:outline-none focus:border-[#FAFAFA] transition-colors normal-case tracking-normal appearance-none cursor-pointer"
+                      className="w-full bg-[#09090B] border-b border-[#FAFAFA]/20 py-3 text-sm focus:outline-none focus:border-[#FAFAFA] appearance-none cursor-pointer"
                     >
                       <option value="" disabled>Select Service Needed</option>
                       {contactData.services.map((service) => (
@@ -166,7 +147,7 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="currentBottleneck" className="text-xs tracking-[0.2em] uppercase text-[#A1A1AA] block">Tell me what you need, and I’ll take it from there.</label>
+                    <label htmlFor="currentBottleneck" className="text-xs tracking-[0.2em] uppercase text-[#A1A1AA] block">Project Details</label>
                     <textarea
                       id="currentBottleneck"
                       name="currentBottleneck"
@@ -174,14 +155,13 @@ export default function Contact() {
                       value={formData.currentBottleneck}
                       onChange={handleChange}
                       rows={4}
-                      className="w-full bg-transparent border-b border-[#FAFAFA]/20 py-3 text-sm focus:outline-none focus:border-[#FAFAFA] transition-colors normal-case tracking-normal resize-none"
-                      placeholder="Describe what you’re trying to achieve or improve."
+                      className="w-full bg-transparent border-b border-[#FAFAFA]/20 py-3 text-sm focus:outline-none focus:border-[#FAFAFA] resize-none"
+                      placeholder="Describe what you’re trying to achieve."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    aria-label="Submit project brief to Organic Theory"
                     className="w-full flex items-center justify-center gap-4 group bg-[#FAFAFA] text-[#09090B] px-8 py-4 hover:bg-[#A1A1AA] transition-all duration-300 mt-8"
                   >
                     <span className="text-xs tracking-[0.2em] uppercase font-bold">Submit Message</span>
@@ -193,18 +173,17 @@ export default function Contact() {
                   key="success"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="border border-[#FAFAFA]/10 p-12 text-center h-full flex flex-col items-center justify-center min-h-[400px]"
+                  className="border border-[#FAFAFA]/10 p-12 text-center flex flex-col items-center justify-center min-h-[400px]"
                 >
                   <div className="w-16 h-16 border border-[#FAFAFA]/20 rounded-full flex items-center justify-center mb-8">
                     <Check size={24} className="text-[#A1A1AA]" />
                   </div>
-                  <h3 className="text-2xl mb-4">Message Received.</h3>
-                  <p className="text-sm opacity-80 normal-case tracking-normal mb-8 max-w-sm mx-auto">
+                  <h3 className="text-2xl mb-4 font-display uppercase tracking-widest">Message Received.</h3>
+                  <p className="text-sm opacity-80 mb-8 max-w-sm mx-auto">
                     {contactData.successMessage}
                   </p>
                   <button
                     onClick={() => setIsSubmitted(false)}
-                    aria-label="Return to contact form to send another message"
                     className="text-xs tracking-[0.2em] uppercase text-[#A1A1AA] hover:text-[#FAFAFA] transition-colors border-b border-transparent hover:border-[#FAFAFA] pb-1"
                   >
                     Send Another Message

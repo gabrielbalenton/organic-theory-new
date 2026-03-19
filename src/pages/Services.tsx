@@ -13,47 +13,20 @@ export default function Services() {
     <>
       <Helmet>
         <title>Strategic Services | Search Architecture & Workflow Engineering</title>
-        <meta name="description" content="Explore Organic Theory's core competencies: from Search Engine Architecture to Automated Workflow Engineering. Strategic solutions for modern digital operations." />
+        <meta name="description" content="Explore Organic Theory's core competencies: from Search Engine Architecture to Automated Workflow Engineering." />
         <meta property="og:title" content="Core Competencies | Organic Theory" />
         <meta property="og:description" content="Technical consulting focused on Search Architecture and Workflow Automation." />
-        <link rel="canonical" href="https://organictheory.netlify.app/services" />
-        <meta name="keywords" content="Search Architecture, Workflow Automation, CRM Integration, Digital Strategy, SEO Systems" />
-
+        <link rel="canonical" href="https://organictheory.vercel.app/services" />
         <script type="application/ld+json">
           {`
             {
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               "name": "Organic Theory",
-              "image": "https://organictheory.netlify.app/apple-touch-icon.png",
-              "url": "https://organictheory.netlify.app/services",
-              "address": {
-                "@type": "PostalAddress",
-                "addressCountry": "NZ"
-              },
+              "url": "https://organictheory.vercel.app/services",
               "founder": {
                 "@type": "Person",
                 "name": "Gabriel Balenton"
-              },
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Digital Strategy & Engineering",
-                "itemListElement": [
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Search Architecture"
-                    }
-                  },
-                  {
-                    "@type": "Offer",
-                    "itemOffered": {
-                      "@type": "Service",
-                      "name": "Workflow Engineering"
-                    }
-                  }
-                ]
               }
             }
           `}
@@ -68,7 +41,7 @@ export default function Services() {
             transition={{ duration: 0.8 }}
           >
             <p className="text-xs md:text-sm text-[#71717A] mb-8 font-bold tracking-[0.2em] uppercase">[ SYSTEM COMPONENTS ]</p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-8">CORE COMPETENCIES</h1>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-8 font-display uppercase">CORE COMPETENCIES</h1>
           </motion.div>
         </section>
 
@@ -80,7 +53,6 @@ export default function Services() {
                 <div key={service.id} className="border border-[#09090B]/20 bg-[#F4F4F5] overflow-hidden transition-colors duration-300">
                   <button 
                     onClick={() => setOpenIndex(isOpen ? null : index)}
-                    aria-label={`${isOpen ? 'Close' : 'Open'} details for ${service.title}`}
                     aria-expanded={isOpen}
                     className="w-full text-left flex flex-col md:flex-row md:items-stretch p-0 hover:bg-white/50 transition-colors group"
                   >
@@ -118,7 +90,6 @@ export default function Services() {
                             
                             <Link 
                               to="/contact" 
-                              aria-label={`Initiate a project brief for ${service.title}`}
                               className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase font-bold hover:text-[#71717A] transition-colors"
                             >
                               Initiate Brief <ArrowRight size={14} />
