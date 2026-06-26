@@ -1,14 +1,7 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 
-// 1. STRATEGIC SOLVE: Code-splitting into page-specific chunks
-// This directly addresses the "Reduce unused JavaScript" Lighthouse warning.
 const Home = lazy(() => import('./pages/Home'));
 const Services = lazy(() => import('./pages/Services'));
 const Work = lazy(() => import('./pages/Work'));
@@ -18,18 +11,19 @@ const FPX = lazy(() => import('./pages/case-studies/FPX'));
 const ICSH = lazy(() => import('./pages/case-studies/ICSH'));
 const ContentSystem = lazy(() => import('./pages/case-studies/ContentSystem'));
 const Tools = lazy(() => import('./pages/Tools'));
+const Blog = lazy(() => import('./pages/Blog'));
+const BlogPost = lazy(() => import('./pages/BlogPost'));
+const Process = lazy(() => import('./pages/Process'));
+const Courses = lazy(() => import('./pages/Courses'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
-// 2. PERFORMANCE: Minimalist fallback UI to prevent Layout Shift
 const PageLoader = () => <div className="min-h-screen bg-[#09090B]" />;
 
 export default function App() {
   return (
     <BrowserRouter>
-      {/* Suspense handles the 'wait time' between chunk downloads */}
       <Suspense fallback={<PageLoader />}>
         <Routes>
-          {/* Layout acts as the Wrapper; all children render inside its <Outlet /> */}
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="services" element={<Services />} />
@@ -40,6 +34,10 @@ export default function App() {
             <Route path="vault/content-system" element={<ContentSystem />} />
             <Route path="contact" element={<Contact />} />
             <Route path="tools" element={<Tools />} />
+            <Route path="insights" element={<Blog />} />
+            <Route path="insights/:slug" element={<BlogPost />} />
+            <Route path="process" element={<Process />} />
+            <Route path="courses" element={<Courses />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

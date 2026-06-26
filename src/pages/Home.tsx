@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { motion, AnimatePresence, useInView, useScroll, useTransform } from 'framer-motion';
-import { ArrowRight, Plus, Minus } from 'lucide-react';
+import { ArrowRight, Plus, Minus, Quote } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { RevealSection } from '../components/RevealSection';
@@ -10,6 +10,7 @@ import { TextReveal, TextRevealLines } from '../components/TextReveal';
 import { ScrambleText } from '../components/ScrambleText';
 import { MagneticButton } from '../components/MagneticButton';
 import { ParallaxImage } from '../components/ParallaxImage';
+import { testimonials } from '../data/testimonialsData';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -413,6 +414,67 @@ export default function Home() {
                   </motion.div>
                 ))}
               </div>
+            </div>
+          </div>
+        </RevealSection>
+
+        {/* ── TESTIMONIALS (DARK) ── */}
+        <RevealSection className="py-20 px-6 md:px-12 border-t border-[#FAFAFA]/10 overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-14">
+              <div>
+                <p className="text-[10px] text-[#A1A1AA] mb-4 font-bold tracking-[0.3em] uppercase">
+                  <ScrambleText text="[ CLIENT RESULTS ]" />
+                </p>
+                <TextReveal>
+                  <h2 className="text-2xl md:text-3xl font-display uppercase tracking-widest">What clients say.</h2>
+                </TextReveal>
+              </div>
+              <p className="text-sm opacity-30 max-w-xs text-right md:text-right">{testimonials.length} testimonials across all services</p>
+            </div>
+
+            {/* Featured testimonials — first 3 large */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+              {testimonials.slice(0, 3).map((t, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.6, delay: i * 0.1, ease: EASE }}
+                  className="border border-[#FAFAFA]/10 bg-[#FAFAFA]/[0.02] p-8 flex flex-col justify-between hover:border-[#FAFAFA]/20 hover:bg-[#FAFAFA]/[0.04] transition-all duration-500"
+                >
+                  <div>
+                    <Quote size={20} className="text-[#A1A1AA]/30 mb-5" />
+                    <p className="text-sm leading-[1.8] opacity-70 mb-6">"{t.quote}"</p>
+                  </div>
+                  <div className="border-t border-[#FAFAFA]/10 pt-4">
+                    <p className="text-xs font-bold tracking-[0.1em]">{t.name}</p>
+                    <p className="text-[10px] opacity-40 tracking-[0.1em] mt-0.5">{t.role}, {t.company}</p>
+                    <span className="text-[9px] tracking-[0.2em] uppercase border border-[#FAFAFA]/10 px-2 py-0.5 text-[#A1A1AA] inline-block mt-2">{t.service}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Scrolling ticker row — remaining testimonials */}
+            <div className="relative overflow-hidden">
+              <motion.div
+                animate={{ x: ['0%', '-50%'] }}
+                transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
+                className="flex gap-4 w-max"
+              >
+                {[...testimonials.slice(3), ...testimonials.slice(3)].map((t, i) => (
+                  <div key={i} className="w-72 shrink-0 border border-[#FAFAFA]/8 bg-[#FAFAFA]/[0.01] p-5">
+                    <p className="text-xs leading-[1.7] opacity-50 mb-4 line-clamp-4">"{t.quote}"</p>
+                    <p className="text-[10px] font-bold tracking-[0.1em] opacity-70">{t.name}</p>
+                    <p className="text-[9px] opacity-30 tracking-[0.1em]">{t.company} · {t.service}</p>
+                  </div>
+                ))}
+              </motion.div>
+              {/* Fade edges */}
+              <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#09090B] to-transparent pointer-events-none" />
+              <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#09090B] to-transparent pointer-events-none" />
             </div>
           </div>
         </RevealSection>

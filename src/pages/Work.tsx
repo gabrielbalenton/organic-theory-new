@@ -61,7 +61,7 @@ export default function Work() {
             >
               {/* Image side */}
               <div className={`lg:col-span-7 ${index % 2 !== 0 ? 'lg:order-1' : 'lg:order-2'}`}>
-                <TiltCard className="h-[300px] md:h-[420px] w-full relative overflow-hidden">
+                <TiltCard className="h-[420px] md:h-[580px] lg:h-[640px] w-full relative overflow-hidden">
                   <ParallaxImage
                     src={project.image}
                     alt={project.alt}

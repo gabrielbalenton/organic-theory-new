@@ -9,10 +9,15 @@ import FloatingCTA from './FloatingCTA';
 import CookieBanner from './CookieBanner';
 import { ScrollProgress } from './ScrollProgress';
 import { MagneticButton } from './MagneticButton';
+import { Chatbot } from './Chatbot';
+import { Newsletter } from './Newsletter';
 
 const NAV_LINKS = [
   { to: '/services', label: 'Services' },
   { to: '/vault', label: 'The Vault' },
+  { to: '/process', label: 'Process' },
+  { to: '/insights', label: 'Insights' },
+  { to: '/courses', label: 'Courses' },
   { to: '/tools', label: 'Tools' },
   { to: '/contact', label: 'Contact' },
 ];
@@ -184,6 +189,9 @@ export default function Layout() {
           <Outlet />
         </main>
 
+        {/* Newsletter */}
+        <Newsletter />
+
         {/* Footer */}
         <footer className="border-t border-[#FAFAFA]/10 px-6 md:px-12 py-12">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
@@ -227,6 +235,7 @@ export default function Layout() {
 
         <FloatingCTA />
         <CookieBanner />
+        <Chatbot />
       </motion.div>
     </>
   );
