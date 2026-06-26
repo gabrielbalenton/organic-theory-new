@@ -58,6 +58,27 @@ export default function Home() {
         </section>
 
         <RevealSection className="py-20 px-6 md:px-12 border-t border-[#FAFAFA]/10">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-12">
+              <p className="text-[10px] text-[#A1A1AA] mb-4 font-bold tracking-[0.3em] uppercase">[ SERVICE ARCHITECTURE ]</p>
+              <h2 className="text-2xl md:text-3xl mb-4 font-display uppercase tracking-widest">{homeData.layers.title}</h2>
+              <p className="text-sm md:text-base leading-relaxed opacity-60 max-w-xl">{homeData.layers.description}</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {homeData.layers.items.map((layer) => (
+                <div key={layer.id} className="border border-[#FAFAFA]/10 p-6 md:p-8 flex flex-col justify-between bg-[#FAFAFA]/5 hover:border-[#FAFAFA]/40 transition-colors duration-500">
+                  <span className="text-3xl font-display text-[#A1A1AA]">{layer.id}</span>
+                  <div className="mt-8">
+                    <p className="text-[10px] tracking-[0.2em] uppercase font-bold mb-3">{layer.label}</p>
+                    <p className="text-sm leading-relaxed opacity-60">{layer.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </RevealSection>
+
+        <RevealSection className="py-20 px-6 md:px-12 border-t border-[#FAFAFA]/10">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-32">
             <div className="flex flex-col justify-center">
               <h2 className="text-2xl md:text-3xl mb-8 font-display uppercase tracking-widest">{homeData.methodology.title}</h2>
