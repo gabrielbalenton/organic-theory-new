@@ -15,10 +15,10 @@ export const homeData = {
     title: "The System",
     description: "Four layers, one machine. Each works alone. They're built to connect.",
     items: [
-      { id: "01", label: "Traffic", description: "Search architecture built to be found by people and AI." },
-      { id: "02", label: "Capture", description: "Pages engineered to turn visitors into leads." },
-      { id: "03", label: "Conversion", description: "Email and nurture flows that move leads toward a yes." },
-      { id: "04", label: "Infrastructure", description: "Custom CRM and automation that runs it all." }
+      { id: "01", label: "Traffic", description: "Search architecture built to be found by people and AI.", detail: "Technical SEO, keyword architecture, programmatic page deployment, and AEO optimization. This layer is about being structurally visible — to Google, to AI answer engines, and to the humans running both." },
+      { id: "02", label: "Capture", description: "Pages engineered to turn visitors into leads.", detail: "Landing pages, conversion architecture, and UX systems designed around a single outcome. Traffic that doesn't convert is expensive noise. This layer turns attention into action." },
+      { id: "03", label: "Conversion", description: "Email and nurture flows that move leads toward a yes.", detail: "Email sequences, behavioral triggers, and automation flows that shorten the gap between interest and commitment. Built to run without constant input." },
+      { id: "04", label: "Infrastructure", description: "Custom CRM and automation that runs it all.", detail: "CRM setup, workflow automation, API integrations, and the operational logic that keeps the machine running cleanly — with zero manual overhead." }
     ]
   },
   methodology: {

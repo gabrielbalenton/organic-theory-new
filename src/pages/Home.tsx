@@ -1,6 +1,6 @@
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { useRef, useEffect, useState } from 'react';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
+import { ArrowRight, Plus, Minus } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { RevealSection } from '../components/RevealSection';
@@ -18,71 +18,195 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: EASE } },
 };
 
-function Counter({ value, suffix }: { value: number; suffix: string }) {
-  const ref = useRef<HTMLSpanElement>(null);
+// ── Simple RAF-based counter ──────────────────────────────────
+function AnimatedCounter({ target, suffix }: { target: number; suffix: string }) {
+  const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true });
+  const [display, setDisplay] = useState(0);
+  const started = useRef(false);
+
+  useEffect(() => {
+    if (!inView || started.current) return;
+    started.current = true;
+    const duration = 1800;
+    const startTime = performance.now();
+    const tick = (now: number) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setDisplay(Math.round(eased * target));
+      if (progress < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }, [inView, target]);
+
   return (
-    <motion.span
-      ref={ref}
-      initial={{ opacity: 0 }}
-      animate={inView ? { opacity: 1 } : {}}
-      transition={{ duration: 0.4 }}
-    >
-      <motion.span
-        initial={{ opacity: 0 }}
-        animate={inView ? { opacity: 1 } : {}}
-        transition={{ duration: 1.2, ease: 'easeOut' }}
-      >
-        {inView ? (
-          <CountUp target={value} />
-        ) : '0'}
-      </motion.span>
-      {suffix}
-    </motion.span>
+    <div ref={ref} className="tabular-nums">
+      {display.toLocaleString()}{suffix}
+    </div>
   );
 }
 
-function CountUp({ target }: { target: number }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true });
-
+// ── Accordion layer card ───────────────────────────────────────
+function LayerCard({ layer, index, isOpen, onToggle }: {
+  layer: typeof homeData.layers.items[0];
+  index: number;
+  isOpen: boolean;
+  onToggle: () => void;
+}) {
   return (
-    <motion.span
-      ref={ref}
-      initial={{ '--n': 0 } as never}
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, delay: index * 0.08, ease: EASE }}
     >
-      <motion.span
-        animate={inView ? { opacity: 1 } : {}}
-        style={{ display: 'inline-block' }}
+      <button
+        onClick={onToggle}
+        className={`w-full text-left border p-6 md:p-8 transition-all duration-400 group ${
+          isOpen
+            ? 'border-[#FAFAFA]/30 bg-[#FAFAFA]/[0.05]'
+            : 'border-[#FAFAFA]/10 bg-[#FAFAFA]/[0.02] hover:border-[#FAFAFA]/25 hover:bg-[#FAFAFA]/[0.04]'
+        }`}
       >
-        <AnimatedNumber target={target} />
-      </motion.span>
-    </motion.span>
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex-1">
+            <span className="text-3xl font-display text-[#A1A1AA] block mb-6">{layer.id}</span>
+            <p className="text-[10px] tracking-[0.2em] uppercase font-bold mb-2">{layer.label}</p>
+            <p className="text-sm leading-relaxed opacity-50">{layer.description}</p>
+          </div>
+          <div className={`shrink-0 mt-1 transition-transform duration-300 ${isOpen ? 'text-[#FAFAFA]' : 'text-[#FAFAFA]/30'}`}>
+            {isOpen ? <Minus size={16} /> : <Plus size={16} />}
+          </div>
+        </div>
+
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.35, ease: EASE }}
+              className="overflow-hidden"
+            >
+              <div className="pt-6 mt-6 border-t border-[#FAFAFA]/10">
+                <p className="text-sm leading-relaxed opacity-70">{layer.detail}</p>
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-2 mt-4 text-[10px] tracking-[0.2em] uppercase font-bold opacity-40 hover:opacity-100 transition-opacity duration-200"
+                  onClick={e => e.stopPropagation()}
+                >
+                  See services <ArrowRight size={11} />
+                </Link>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </button>
+    </motion.div>
   );
 }
 
-function AnimatedNumber({ target }: { target: number }) {
-  const ref = useRef<HTMLSpanElement>(null);
-  const inView = useInView(ref, { once: true });
-
+// ── Hero right panel — animated system diagram ─────────────────
+function HeroDiagram() {
   return (
-    <motion.span
-      ref={ref}
-      initial={{ opacity: 0 }}
-      animate={inView ? { opacity: 1 } : {}}
-    >
-      <motion.span
-        initial={0}
-        animate={inView ? target : 0}
-        transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
-      >
-        {(v: number) => Math.round(v).toLocaleString()}
-      </motion.span>
-    </motion.span>
+    <div className="hidden lg:block relative w-full h-[480px]">
+      {/* Subtle grid */}
+      <svg className="absolute inset-0 w-full h-full opacity-[0.04]" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#FAFAFA" strokeWidth="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </svg>
+
+      {/* Animated bars — abstract analytics */}
+      <svg viewBox="0 0 400 380" className="absolute inset-0 w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Chart baseline */}
+        <line x1="60" y1="300" x2="380" y2="300" stroke="#FAFAFA" strokeOpacity="0.1" strokeWidth="1"/>
+        <line x1="60" y1="240" x2="380" y2="240" stroke="#FAFAFA" strokeOpacity="0.05" strokeWidth="1"/>
+        <line x1="60" y1="180" x2="380" y2="180" stroke="#FAFAFA" strokeOpacity="0.05" strokeWidth="1"/>
+        <line x1="60" y1="120" x2="380" y2="120" stroke="#FAFAFA" strokeOpacity="0.05" strokeWidth="1"/>
+        <line x1="60" y1="60" x2="380" y2="60" stroke="#FAFAFA" strokeOpacity="0.05" strokeWidth="1"/>
+
+        {/* Y axis */}
+        <line x1="60" y1="40" x2="60" y2="300" stroke="#FAFAFA" strokeOpacity="0.1" strokeWidth="1"/>
+
+        {/* Bars with staggered animations */}
+        {[
+          { x: 90,  height: 80,  delay: 0 },
+          { x: 130, height: 130, delay: 0.1 },
+          { x: 170, height: 100, delay: 0.2 },
+          { x: 210, height: 180, delay: 0.3 },
+          { x: 250, height: 150, delay: 0.4 },
+          { x: 290, height: 220, delay: 0.5 },
+          { x: 330, height: 200, delay: 0.6 },
+          { x: 370, height: 250, delay: 0.7 },
+        ].map((bar, i) => (
+          <motion.rect
+            key={i}
+            x={bar.x - 14}
+            y={300 - bar.height}
+            width={28}
+            height={bar.height}
+            fill="#FAFAFA"
+            fillOpacity={0}
+            initial={{ scaleY: 0, fillOpacity: 0 }}
+            animate={{ scaleY: 1, fillOpacity: i === 7 ? 0.15 : 0.06 }}
+            transition={{ duration: 1, delay: 1.2 + bar.delay, ease: EASE }}
+            style={{ transformOrigin: `${bar.x}px 300px` }}
+          />
+        ))}
+
+        {/* Trend line */}
+        <motion.polyline
+          points="90,220 130,170 170,200 210,120 250,150 290,80 330,100 370,50"
+          stroke="#FAFAFA"
+          strokeOpacity="0.25"
+          strokeWidth="1.5"
+          fill="none"
+          strokeDasharray="400"
+          initial={{ strokeDashoffset: 400 }}
+          animate={{ strokeDashoffset: 0 }}
+          transition={{ duration: 2, delay: 1.8, ease: EASE }}
+        />
+
+        {/* End dot */}
+        <motion.circle
+          cx="370" cy="50" r="4"
+          fill="#FAFAFA"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 0.6, scale: 1 }}
+          transition={{ duration: 0.4, delay: 3.8 }}
+        />
+
+        {/* Labels */}
+        <motion.text x="376" y="48" fill="#FAFAFA" fillOpacity="0.4" fontSize="8" fontFamily="monospace" letterSpacing="1"
+          initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 4, duration: 0.5 }}>
+          +154%
+        </motion.text>
+
+        {/* Axis labels */}
+        {['W1','W2','W3','W4','W5','W6','W7','W8'].map((w, i) => (
+          <text key={w} x={90 + i * 40} y="316" fill="#FAFAFA" fillOpacity="0.2" fontSize="7" fontFamily="monospace" textAnchor="middle">{w}</text>
+        ))}
+        <text x="20" y="304" fill="#FAFAFA" fillOpacity="0.2" fontSize="7" fontFamily="monospace">0</text>
+        <text x="14" y="244" fill="#FAFAFA" fillOpacity="0.2" fontSize="7" fontFamily="monospace">25%</text>
+        <text x="14" y="184" fill="#FAFAFA" fillOpacity="0.2" fontSize="7" fontFamily="monospace">50%</text>
+        <text x="14" y="124" fill="#FAFAFA" fillOpacity="0.2" fontSize="7" fontFamily="monospace">75%</text>
+
+        {/* Label */}
+        <text x="60" y="345" fill="#FAFAFA" fillOpacity="0.15" fontSize="8" fontFamily="monospace" letterSpacing="3">SEARCH VISIBILITY — 8 WEEK RAMP</text>
+      </svg>
+    </div>
   );
 }
 
 export default function Home() {
+  const [openLayer, setOpenLayer] = useState<string | null>(null);
+
+  const toggleLayer = (id: string) => setOpenLayer(prev => prev === id ? null : id);
+
   const schemaWebsite = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -129,7 +253,7 @@ export default function Home() {
       <div className="w-full overflow-x-hidden bg-[#09090B] text-[#FAFAFA]">
 
         {/* ── Hero ── */}
-        <section className="min-h-[92vh] flex flex-col justify-center px-6 md:px-12 max-w-7xl mx-auto py-20">
+        <section className="min-h-[92vh] flex flex-col justify-center px-6 md:px-12 max-w-7xl mx-auto py-20 relative">
           <motion.div
             variants={stagger}
             initial="hidden"
@@ -175,21 +299,7 @@ export default function Home() {
               </motion.div>
             </div>
 
-            {/* Decorative mark */}
-            <div className="hidden lg:flex justify-center items-center">
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 80, repeat: Infinity, ease: 'linear' }}
-                className="w-72 h-72 opacity-[0.06]"
-              >
-                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="50" cy="50" r="42" stroke="#FAFAFA" strokeWidth="0.8" />
-                  <circle cx="50" cy="50" r="28" stroke="#FAFAFA" strokeWidth="0.5" />
-                  <path d="M20 20L80 80M80 20L20 80" stroke="#FAFAFA" strokeWidth="0.8" />
-                  <circle cx="50" cy="50" r="4" fill="#FAFAFA" />
-                </svg>
-              </motion.div>
-            </div>
+            <HeroDiagram />
           </motion.div>
 
           {/* Scroll cue */}
@@ -212,12 +322,12 @@ export default function Home() {
         <Marquee />
 
         {/* ── Metrics ── */}
-        <RevealSection className="py-20 px-6 md:px-12">
+        <RevealSection className="py-20 px-6 md:px-12 border-t border-[#FAFAFA]/10">
           <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-0 md:divide-x divide-[#FAFAFA]/10">
             {homeData.metrics.map((m) => (
               <div key={m.label} className="flex flex-col items-start md:items-center text-center px-0 md:px-8">
-                <div className="text-4xl md:text-5xl font-display font-bold mb-2 tabular-nums">
-                  <Counter value={m.value} suffix={m.suffix} />
+                <div className="text-4xl md:text-5xl font-display font-bold mb-2">
+                  <AnimatedCounter value={m.value} suffix={m.suffix} />
                 </div>
                 <p className="text-[10px] tracking-[0.2em] uppercase opacity-40">{m.label}</p>
               </div>
@@ -233,22 +343,15 @@ export default function Home() {
               <h2 className="text-2xl md:text-3xl mb-4 font-display uppercase tracking-widest">{homeData.layers.title}</h2>
               <p className="text-sm md:text-base leading-relaxed opacity-50 max-w-xl">{homeData.layers.description}</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {homeData.layers.items.map((layer, i) => (
-                <motion.div
+                <LayerCard
                   key={layer.id}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.6, delay: i * 0.08, ease: EASE }}
-                  className="border border-[#FAFAFA]/10 p-6 md:p-8 flex flex-col justify-between bg-[#FAFAFA]/[0.02] hover:border-[#FAFAFA]/30 hover:bg-[#FAFAFA]/[0.04] transition-all duration-500 group"
-                >
-                  <span className="text-3xl font-display text-[#A1A1AA] mb-8">{layer.id}</span>
-                  <div>
-                    <p className="text-[10px] tracking-[0.2em] uppercase font-bold mb-2">{layer.label}</p>
-                    <p className="text-sm leading-relaxed opacity-50">{layer.description}</p>
-                  </div>
-                </motion.div>
+                  layer={layer}
+                  index={i}
+                  isOpen={openLayer === layer.id}
+                  onToggle={() => toggleLayer(layer.id)}
+                />
               ))}
             </div>
           </div>
@@ -281,7 +384,7 @@ export default function Home() {
             <div>
               <p className="text-[10px] text-[#A1A1AA] mb-4 font-bold tracking-[0.3em] uppercase">[ READY TO BUILD ]</p>
               <h2 className="text-3xl md:text-5xl font-display uppercase tracking-tight leading-tight max-w-lg">
-                Let's build the system.
+                Let&rsquo;s build the system.
               </h2>
             </div>
             <Link
