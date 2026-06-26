@@ -5,13 +5,19 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { RevealSection } from '../components/RevealSection';
 import { auditService, coreServices, ongoingServices } from '../data/servicesData';
+import { TextReveal } from '../components/TextReveal';
+import { ScrambleText } from '../components/ScrambleText';
+import { MagneticButton } from '../components/MagneticButton';
+import { ParallaxImage } from '../components/ParallaxImage';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 function SectionLabel({ children }: { children: string }) {
   return (
     <div className="flex items-center gap-6 mb-10">
-      <p className="text-[10px] tracking-[0.3em] uppercase font-bold text-[#A1A1AA] shrink-0">{children}</p>
+      <p className="text-[10px] tracking-[0.3em] uppercase font-bold text-[#A1A1AA] shrink-0">
+        <ScrambleText text={children} />
+      </p>
       <div className="flex-1 h-px bg-[#FAFAFA]/10" />
     </div>
   );
@@ -86,22 +92,42 @@ export default function Services() {
 
       <div className="w-full min-h-screen bg-[#09090B] text-[#FAFAFA]">
 
-        {/* Header */}
-        <section className="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: EASE }}
-          >
-            <p className="text-[10px] text-[#A1A1AA] mb-6 font-bold tracking-[0.3em] uppercase">[ THE OFFER ]</p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-8 font-display uppercase tracking-tight">
-              What I build,<br />
-              <span className="text-[#A1A1AA]">and what it costs.</span>
-            </h1>
-            <p className="text-sm md:text-base leading-relaxed opacity-50 max-w-xl">
+        {/* Header with hero image */}
+        <section className="pt-32 pb-0 px-0 overflow-hidden">
+          <div className="px-6 md:px-12 max-w-7xl mx-auto pb-16">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-[10px] text-[#A1A1AA] mb-6 font-bold tracking-[0.3em] uppercase"
+            >
+              <ScrambleText text="[ THE OFFER ]" delay={0.3} />
+            </motion.p>
+            <TextReveal>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-8 font-display uppercase tracking-tight">
+                What I build,<br />
+                <span className="text-[#A1A1AA]">and what it costs.</span>
+              </h1>
+            </TextReveal>
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="text-sm md:text-base leading-relaxed max-w-xl"
+            >
               Start with an audit to see exactly what's leaking. Then build the layers that fix it. No retainer required to begin.
-            </p>
-          </motion.div>
+            </motion.p>
+          </div>
+          {/* Hero image full-width */}
+          <div className="relative h-[40vh] md:h-[55vh] w-full overflow-hidden">
+            <ParallaxImage
+              src="/images/services-hero.png"
+              alt="Services overview"
+              className="absolute inset-0 w-full h-full"
+              strength={10}
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#09090B]/60 via-transparent to-[#09090B]/80" />
+          </div>
         </section>
 
         {/* START HERE */}

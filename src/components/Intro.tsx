@@ -10,7 +10,9 @@ export default function Intro({ onComplete }: { onComplete: () => void }) {
       setTimeout(onComplete, 700);
     }, 2400);
     return () => clearTimeout(t);
-  }, [onComplete]);
+    // intentionally omit onComplete — it changes every render and would reset the timer
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <AnimatePresence>

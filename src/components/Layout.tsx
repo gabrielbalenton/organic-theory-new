@@ -7,6 +7,8 @@ import Intro from './Intro';
 import Cursor from './Cursor';
 import FloatingCTA from './FloatingCTA';
 import CookieBanner from './CookieBanner';
+import { ScrollProgress } from './ScrollProgress';
+import { MagneticButton } from './MagneticButton';
 
 const NAV_LINKS = [
   { to: '/services', label: 'Services' },
@@ -72,7 +74,19 @@ export default function Layout() {
   return (
     <>
       <Cursor />
+      <ScrollProgress />
       {showIntro && <Intro onComplete={handleIntroComplete} />}
+
+      {/* Page transition overlay */}
+      <AnimatePresence>
+        <motion.div
+          key={location.pathname + '_overlay'}
+          initial={{ scaleY: 1, transformOrigin: 'top' }}
+          animate={{ scaleY: 0, transformOrigin: 'top' }}
+          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.05 }}
+          className="fixed inset-0 z-[250] bg-[#09090B] pointer-events-none"
+        />
+      </AnimatePresence>
 
       <motion.div
         initial={introDone ? false : { opacity: 0 }}
