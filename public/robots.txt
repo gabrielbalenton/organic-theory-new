@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://organic-theory.vercel.app/sitemap.xml
+Sitemap: https://organictheory.vercel.app/sitemap.xml

@@ -17,6 +17,8 @@ const DMR = lazy(() => import('./pages/case-studies/DMR'));
 const FPX = lazy(() => import('./pages/case-studies/FPX'));
 const ICSH = lazy(() => import('./pages/case-studies/ICSH'));
 const ContentSystem = lazy(() => import('./pages/case-studies/ContentSystem'));
+const Tools = lazy(() => import('./pages/Tools'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 // 2. PERFORMANCE: Minimalist fallback UI to prevent Layout Shift
 const PageLoader = () => <div className="min-h-screen bg-[#09090B]" />;
@@ -37,6 +39,8 @@ export default function App() {
             <Route path="vault/icsh" element={<ICSH />} />
             <Route path="vault/content-system" element={<ContentSystem />} />
             <Route path="contact" element={<Contact />} />
+            <Route path="tools" element={<Tools />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </Suspense>

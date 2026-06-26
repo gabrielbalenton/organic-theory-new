@@ -16,9 +16,26 @@ html, body {
   background-color: #09090B;
   color: #FAFAFA;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 
-/* Custom Utilities for your O+X branding */
 .font-display {
   font-family: var(--font-display);
 }
+
+/* Hide default cursor on pointer devices — custom cursor replaces it */
+@media (pointer: fine) {
+  html, * { cursor: none !important; }
+}
+
+/* Minimal scrollbar */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(250,250,250,0.15); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(250,250,250,0.3); }
+
+/* Selection */
+::selection { background: rgba(250,250,250,0.15); color: #FAFAFA; }
+
+/* Smooth focus */
+:focus-visible { outline: 1px solid rgba(250,250,250,0.4); outline-offset: 3px; }

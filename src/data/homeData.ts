@@ -1,4 +1,10 @@
 export const homeData = {
+  metrics: [
+    { value: 63, suffix: '%', label: 'Search visibility' },
+    { value: 100, suffix: '', label: 'Lighthouse SEO score' },
+    { value: 1281, suffix: '', label: 'Pages deployed' },
+    { value: 154, suffix: '%', label: 'Impressions increase' },
+  ],
   hero: {
     badge: "[ GLOBAL DIGITAL CONSULTANCY ]",
     titlePrimary: "STRATEGIC LOGIC.",
