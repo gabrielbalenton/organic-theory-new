@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { Helmet } from 'react-helmet-async'; 
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { RevealSection } from '../components/RevealSection';
 import { portfolioData } from '../data/portfolioData';
 
@@ -43,23 +44,18 @@ export default function Work() {
                   <h2 className="text-3xl md:text-4xl mb-6 font-display uppercase tracking-wider">{project.title}</h2>
                   
                   <p className="text-base leading-relaxed opacity-70 mb-8 font-medium">
-                    {project.id === '01' 
-                      ? "We didn't just build a site; we engineered a digital timber marketplace. By restructuring the search architecture, we achieved a 100/100 SEO score, turning technical friction into a high-performance inventory engine."
-                      : "Facing a massive deployment hurdle, we built a scalable engine that birthed 1,281 council-compliant pages in 56 days. The result? A 154% surge in search impressions through sheer structural efficiency."
-                    }
+                    {project.description}
                   </p>
 
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <Link
+                    to={project.slug}
                     className="inline-flex items-center gap-4 group border border-[#09090B]/20 px-6 py-3 hover:bg-[#09090B] hover:text-[#FAFAFA] transition-all duration-300"
                   >
                     <span className="text-xs tracking-[0.2em] uppercase font-bold">
-                      {project.id === '01' ? '[ SEE THE CALIBRATION LOGIC ]' : '[ EXPLORE THE SCALE STRATEGY ]'}
+                      {project.buttonLabel}
                     </span>
                     <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                  </a>
+                  </Link>
                 </motion.div>
                 
                 <motion.div 

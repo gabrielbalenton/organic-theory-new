@@ -3,22 +3,44 @@ export const portfolioData = [
     id: '01',
     client: 'FPX',
     title: 'FPX Calibration',
-    description: 'Optimized site structure and performance for a digital timber marketplace.',
-    /* PERFORMANCE SOLVE: Local AVIF avoids external handshakes and DNS lookups */
-    image: '/images/fpx-vault.avif', 
+    description: 'A timber platform rebuilt from the ground up so search engines and AI tools could finally read it. Lighthouse score from 27 to 72. SEO score: 100.',
+    buttonLabel: '[ See the Calibration Logic ]',
+    slug: '/vault/fpx',
+    image: '/images/fpx-vault.avif',
     alt: 'Technical performance metrics and data visualization for FPX marketplace',
     metrics: ['96 Performance Score', '100 SEO Score'],
-    link: 'https://drive.google.com/file/d/1YhEhQpQjrZuZn7C6r3TfvESjTpPVLcNF/view?usp=drive_link'
   },
   {
     id: '02',
     client: 'DMR',
     title: 'DMR Scalable Engine',
-    description: 'Deployed 1,281 unique council-compliant landing pages in 8 weeks.',
-    /* PERFORMANCE SOLVE: Next-gen compression for sub-second mobile loading */
+    description: '1,281 suburb-specific landing pages deployed in 8 weeks. Search visibility hit 63.21% — more than double the 30% target.',
+    buttonLabel: '[ Explore the Scale Strategy ]',
+    slug: '/vault/dmr',
     image: '/images/dmr-vault.avif',
     alt: 'Digital architecture and scale visualization for DMR industrial solutions',
-    metrics: ['+154% search impressions'],
-    link: 'https://drive.google.com/file/d/1lnGxQtv1dtpq3GphCzBrMfxFfyu-NiMe/view?usp=drive_link'
-  }
+    metrics: ['+154% Search Impressions', '63.21% Search Visibility'],
+  },
+  {
+    id: '03',
+    client: 'ICSH',
+    title: 'ICSH Membership System',
+    description: 'Annual membership that processes itself — form to CRM to inbox, with zero manual data entry and three automated handling paths.',
+    buttonLabel: '[ See the Automation Logic ]',
+    slug: '/vault/icsh',
+    image: '/images/fpx-vault.avif',
+    alt: 'Workflow automation and CRM system for ICSH membership processing',
+    metrics: ['Zero Manual Entry', 'Instant Processing'],
+  },
+  {
+    id: '04',
+    client: 'Capability',
+    title: 'Content & Social System',
+    description: 'A five-pillar content system for a B2B platform building authority from zero — structured for sign-off, cadence, and compounding reach.',
+    buttonLabel: '[ See the Content System ]',
+    slug: '/vault/content-system',
+    image: '/images/fpx-vault.avif',
+    alt: 'Content and social strategy system for B2B platform',
+    metrics: ['40 Ready-to-Produce Posts', 'Five-Pillar System'],
+  },
 ];
