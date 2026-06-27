@@ -29,7 +29,7 @@ export const courses: Course[] = [
     duration: '4 hours',
     level: 'Beginner - Intermediate',
     tag: 'SEO',
-    checkoutUrl: 'https://organictheory.lemonsqueezy.com/checkout/buy/25beaf73-6835-4b44-8b8c-4bd31c86bee6',
+    checkoutUrl: 'https://organic-theory.lemonsqueezy.com/checkout/buy/2dd0e939-9f6f-493d-ab08-b1f0d5b3e30b',
     accessKey: 'ot-seo-2025',
     pdfPath: '/course-pdfs/technical-seo-founders.pdf',
     modules: [
@@ -95,7 +95,7 @@ export const courses: Course[] = [
     duration: '5 hours',
     level: 'Beginner',
     tag: 'Automation',
-    checkoutUrl: 'https://organictheory.lemonsqueezy.com/checkout/buy/976a89a7-9949-43df-885b-b4d36d9ba2a4',
+    checkoutUrl: 'https://organic-theory.lemonsqueezy.com/checkout/buy/3caf6013-7e69-49da-9742-dde45db908c0',
     accessKey: 'ot-auto-2025',
     pdfPath: '/course-pdfs/automation-stack.pdf',
     modules: [
@@ -156,7 +156,7 @@ export const courses: Course[] = [
     duration: '4.5 hours',
     level: 'Intermediate',
     tag: 'AEO',
-    checkoutUrl: 'https://organictheory.lemonsqueezy.com/checkout/buy/07dbe795-2778-4bb3-a532-e834a7799962',
+    checkoutUrl: 'https://organic-theory.lemonsqueezy.com/checkout/buy/fbffa491-76fa-45ac-a890-7efe10f38b67',
     accessKey: 'ot-aeo-2025',
     pdfPath: '/course-pdfs/aeo-masterclass.pdf',
     modules: [
