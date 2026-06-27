@@ -12,14 +12,14 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 
 const SERVICES = [
   { value: '', label: 'Select a service' },
-  { value: 'Search & Systems Audit — $400', label: 'Search & Systems Audit — $400' },
-  { value: 'Search Architecture — from $1,500', label: 'Search Architecture — from $1,500' },
-  { value: 'AI Automation — from $1,800', label: 'AI Automation — from $1,800' },
-  { value: 'Workflow Engineering — from $1,500', label: 'Workflow Engineering — from $1,500' },
-  { value: 'Interface Design & Dev — from $2,000', label: 'Interface Design & Dev — from $2,000' },
-  { value: 'Content Strategy — from $1,200/mo', label: 'Content Strategy — from $1,200/mo' },
-  { value: 'Email & Automation — from $800/mo', label: 'Email & Automation — from $800/mo' },
-  { value: 'Not sure yet', label: "Not sure yet — let's talk" },
+  { value: 'Search & Systems Audit - $400', label: 'Search & Systems Audit - $400' },
+  { value: 'Search Architecture - from $1,500', label: 'Search Architecture - from $1,500' },
+  { value: 'AI Automation - from $1,800', label: 'AI Automation - from $1,800' },
+  { value: 'Workflow Engineering - from $1,500', label: 'Workflow Engineering - from $1,500' },
+  { value: 'Interface Design & Dev - from $2,000', label: 'Interface Design & Dev - from $2,000' },
+  { value: 'Content Strategy - from $1,200/mo', label: 'Content Strategy - from $1,200/mo' },
+  { value: 'Email & Automation - from $800/mo', label: 'Email & Automation - from $800/mo' },
+  { value: 'Not sure yet', label: "Not sure yet - let's talk" },
 ];
 
 type Status = 'idle' | 'sending' | 'success' | 'error';
@@ -30,7 +30,7 @@ const INFO_ITEMS = [
   { label: 'Email', value: 'gabrielbalenton@gmail.com' },
   { label: 'LinkedIn', value: 'linkedin.com/in/gabrielbalenton' },
   { label: 'Response time', value: 'Within 24 hours.' },
-  { label: 'Based', value: 'Worldwide — fully remote.' },
+  { label: 'Based', value: 'Worldwide - fully remote.' },
 ];
 
 export default function Contact() {
@@ -90,7 +90,7 @@ export default function Contact() {
           <div className="relative h-[45vh] lg:h-auto overflow-hidden order-2 lg:order-1">
             <ParallaxImage
               src="/images/contact-photo.png"
-              alt="Gabriel Balenton — Let's talk"
+              alt="Gabriel Balenton - Let's talk"
               className="absolute inset-0 w-full h-full"
               strength={12}
             />
@@ -140,7 +140,7 @@ export default function Contact() {
         <div className="border-t border-[#FAFAFA]/10 px-6 md:px-12 py-20">
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20">
 
-            {/* Left — info */}
+            {/* Left - info */}
             <div className="space-y-8">
               <p className="text-[10px] text-[#A1A1AA] font-bold tracking-[0.3em] uppercase">
                 <ScrambleText text="[ DETAILS ]" />
@@ -160,7 +160,7 @@ export default function Contact() {
               ))}
             </div>
 
-            {/* Right — form */}
+            {/* Right - form */}
             <div>
               <AnimatePresence mode="wait">
                 {status === 'success' ? (

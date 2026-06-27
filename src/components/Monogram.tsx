@@ -28,7 +28,7 @@ export default function Monogram() {
 
   return (
     <div 
-      className={`fixed bottom-8 right-8 z-20 pointer-events-none mix-blend-difference text-[#FAFAFA] transition-opacity duration-500 ${isHeroVisible ? 'opacity-0' : 'opacity-50'}`}
+      className={`fixed bottom-8 left-8 z-20 pointer-events-none mix-blend-difference text-[#FAFAFA] transition-opacity duration-500 ${isHeroVisible ? 'opacity-0' : 'opacity-50'}`}
     >
       <motion.div
         animate={{ rotate: 360 }}

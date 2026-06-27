@@ -25,7 +25,7 @@ export function TextReveal({ children, className = '', delay = 0, as: Tag = 'div
   );
 }
 
-// Multi-line — wraps each line in its own mask
+// Multi-line - wraps each line in its own mask
 export function TextRevealLines({ lines, className = '', staggerDelay = 0.1, baseDelay = 0 }: {
   lines: string[];
   className?: string;

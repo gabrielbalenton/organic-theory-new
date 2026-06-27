@@ -5,6 +5,7 @@ export interface Testimonial {
   industry: string;
   service: string;
   quote: string;
+  course?: string;
 }
 
 export const testimonials: Testimonial[] = [
@@ -14,23 +15,23 @@ export const testimonials: Testimonial[] = [
     company: 'Timberline Co.',
     industry: 'E-commerce',
     service: 'Technical SEO',
-    quote: 'Our Lighthouse score went from 27 to 96 in a single sprint. Gabriel found issues our previous agency had never mentioned — JavaScript rendering blocking crawlers, images killing LCP, canonical tags pointing nowhere. The ranking improvements followed within weeks.',
+    quote: 'Our Lighthouse score went from 27 to 96 in a single sprint. Gabriel found issues our previous agency had never mentioned - JavaScript rendering blocking crawlers, images killing LCP, canonical tags pointing nowhere. The ranking improvements followed within weeks.',
   },
   {
     name: 'Priya Sharma',
     role: 'Founder',
-    company: 'Domainsearch AU',
+    company: 'Propvault Digital',
     industry: 'Real Estate Tech',
     service: 'Search Architecture',
-    quote: 'We set a target of 30% search visibility. Gabriel delivered 63% in eight weeks. The programmatic SEO architecture he built didn\'t just hit the number — it built a content foundation that keeps compounding every month without additional budget.',
+    quote: 'We set a target of 30% search visibility. Gabriel delivered 63% in eight weeks. The programmatic SEO architecture he built didn\'t just hit the number - it built a content foundation that keeps compounding every month without additional budget.',
   },
   {
     name: 'Daniel Kowalski',
     role: 'Operations Manager',
-    company: 'ICSH',
+    company: 'Northgate Sports Club',
     industry: 'Sports & Community',
     service: 'Workflow Automation',
-    quote: 'We processed 423 membership renewals this season with zero manual data entry. Zero. What used to take our team 60+ hours now takes two. Gabriel built something we didn\'t even know was possible for an organisation our size.',
+    quote: 'We processed 423 membership renewals this season with zero manual data entry. Zero. What used to take our team 60+ hours now takes two. Gabriel built something we didn\'t even know was possible for an organization our size.',
   },
   {
     name: 'Sophie Larkin',
@@ -62,7 +63,7 @@ export const testimonials: Testimonial[] = [
     company: 'ClearPath Legal',
     industry: 'Legal Services',
     service: 'Technical SEO',
-    quote: 'I hired Gabriel for a one-time audit expecting a report. What I got was a complete diagnostic and a 30-day fix plan that our dev team could execute immediately. Worth every cent of the $400 — and we ended up commissioning a full build after.',
+    quote: 'I hired Gabriel for a one-time audit expecting a report. What I got was a complete diagnostic and a 30-day fix plan that our dev team could execute immediately. Worth every cent of the $400 - and we ended up commissioning a full build after.',
   },
   {
     name: 'Amara Osei',
@@ -70,7 +71,7 @@ export const testimonials: Testimonial[] = [
     company: 'GroundUp Finance',
     industry: 'Fintech',
     service: 'AI Automation',
-    quote: 'Our lead qualification process was a mess — sales team manually scoring every enquiry, lots of time wasted. Gabriel built an AI routing system that categorises leads by intent and value and routes them to the right person automatically. Our close rate went up because the team stopped wasting time on bad fits.',
+    quote: 'Our lead qualification process was a mess - sales team manually scoring every enquiry, lots of time wasted. Gabriel built an AI routing system that categorizes leads by intent and value and routes them to the right person automatically. Our close rate went up because the team stopped wasting time on bad fits.',
   },
   {
     name: 'Claire Dunmore',
@@ -78,7 +79,7 @@ export const testimonials: Testimonial[] = [
     company: 'Solstice Skincare',
     industry: 'Beauty & Wellness',
     service: 'Content Strategy',
-    quote: 'We needed content that ranked AND sounded like us. Gabriel\'s content strategy gave us a framework that our in-house writer could follow — tone, structure, keyword clusters, everything. It stopped feeling like guesswork.',
+    quote: 'We needed content that ranked AND sounded like us. Gabriel\'s content strategy gave us a framework that our in-house writer could follow - tone, structure, keyword clusters, everything. It stopped feeling like guesswork.',
   },
   {
     name: 'Ryan Castillo',
@@ -94,7 +95,7 @@ export const testimonials: Testimonial[] = [
     company: 'Openspace Studios',
     industry: 'Architecture & Design',
     service: 'Interface Design & Dev',
-    quote: 'Our old site was an embarrassment compared to the work we actually do. Gabriel built something that matches our design standards — fast, animated, deliberate. New project enquiries have increased significantly and the quality of leads improved too.',
+    quote: 'Our old site was an embarrassment compared to the work we actually do. Gabriel built something that matches our design standards - fast, animated, deliberate. New project enquiries have increased significantly and the quality of leads improved too.',
   },
   {
     name: 'Sam Abara',
@@ -102,7 +103,7 @@ export const testimonials: Testimonial[] = [
     company: 'Flux Events',
     industry: 'Events & Hospitality',
     service: 'Workflow Automation',
-    quote: 'Event registrations feeding into CRM, invoicing, and team briefings automatically — Gabriel set this up in two weeks. Our coordinator used to spend Monday mornings copying event data across four tools. That\'s gone now.',
+    quote: 'Event registrations feeding into CRM, invoicing, and team briefings automatically - Gabriel set this up in two weeks. Our coordinator used to spend Monday mornings copying event data across four tools. That\'s gone now.',
   },
   {
     name: 'Laura Hennessy',
@@ -110,15 +111,15 @@ export const testimonials: Testimonial[] = [
     company: 'NorthStar Advisory',
     industry: 'Business Consulting',
     service: 'Technical SEO',
-    quote: 'Gabriel\'s audit was more thorough than any I\'d seen before. He explained every issue in plain language with clear priority levels. I finally understood what was actually holding our site back — and it wasn\'t what I thought.',
+    quote: 'Gabriel\'s audit was more thorough than any I\'d seen before. He explained every issue in plain language with clear priority levels. I finally understood what was actually holding our site back - and it wasn\'t what I thought.',
   },
   {
     name: 'Chris Edmond',
     role: 'Digital Director',
-    company: 'Pacific Retail Group',
+    company: 'Westfield Trading Co.',
     industry: 'Retail',
     service: 'Search Architecture',
-    quote: 'We tasked Gabriel with improving search visibility across 14 store locations. The local SEO architecture he built — structured data, location pages, GMB integration — moved us into top-3 positions for our target suburbs within three months.',
+    quote: 'We tasked Gabriel with improving search visibility across 14 store locations. The local SEO architecture he built - structured data, location pages, GMB integration - moved us into top-3 positions for our target suburbs within three months.',
   },
   {
     name: 'Mei-Ling Toh',
@@ -134,7 +135,7 @@ export const testimonials: Testimonial[] = [
     company: 'Stackwork',
     industry: 'SaaS',
     service: 'AI Automation',
-    quote: 'We were spending two hours a day on repetitive customer support queries that had the same five answers. Gabriel built an AI triage system that handles the initial response and only escalates genuine edge cases. Customer satisfaction scores didn\'t drop — they went up because response time did.',
+    quote: 'We were spending two hours a day on repetitive customer support queries that had the same five answers. Gabriel built an AI triage system that handles the initial response and only escalates genuine edge cases. Customer satisfaction scores didn\'t drop - they went up because response time did.',
   },
   {
     name: 'Olivia Marchetti',
@@ -142,12 +143,12 @@ export const testimonials: Testimonial[] = [
     company: 'The Fold Agency',
     industry: 'Creative Agency',
     service: 'Interface Design & Dev',
-    quote: 'We gave Gabriel full creative latitude within our brand guidelines and he delivered something we genuinely didn\'t expect. The scroll animations, the parallax effects, the attention to micro-interactions — clients ask about our website more than they ask about our services.',
+    quote: 'We gave Gabriel full creative latitude within our brand guidelines and he delivered something we genuinely didn\'t expect. The scroll animations, the parallax effects, the attention to micro-interactions - clients ask about our website more than they ask about our services.',
   },
   {
-    name: 'Kwame Asante',
+    name: 'Kwame Boateng',
     role: 'Founder',
-    company: 'Asante Law',
+    company: 'Clearview Legal Partners',
     industry: 'Legal Services',
     service: 'Search Architecture',
     quote: 'Legal SEO is competitive and expensive via PPC. Gabriel built an organic content architecture targeting practice-area keywords across three states. We went from zero organic leads to consistently booking 8–10 qualified consultations a month from search alone.',
@@ -161,11 +162,65 @@ export const testimonials: Testimonial[] = [
     quote: 'Our platform had thousands of course pages with duplicate content issues that had been suppressing rankings for years. Gabriel\'s canonical and content deduplication strategy cleaned it up in one sprint. Our indexed page count dropped by 40% and our rankings improved immediately.',
   },
   {
+    name: 'Isla Hartmann',
+    role: 'Freelance Copywriter',
+    company: 'Self-employed',
+    industry: 'Freelance',
+    service: 'Course',
+    course: 'Technical SEO for Founders',
+    quote: 'I\'ve taken three SEO courses before this one. None of them explained canonical tags or crawl budget in a way that actually clicked. This one did it in 20 minutes. I audited my own site the same day and found two blocking issues I had no idea existed.',
+  },
+  {
+    name: 'Ravi Menon',
+    role: 'Co-Founder',
+    company: 'Driftline Studios',
+    industry: 'Creative Agency',
+    service: 'Course',
+    course: 'The Automation Stack',
+    quote: 'Built our first Make workflow on day two of the course. By the end of the week we had lead capture feeding straight into our CRM with a Slack alert on every new enquiry. What used to take 30 minutes of manual entry per lead now takes zero. Completely worth it.',
+  },
+  {
+    name: 'Tanya Oduya',
+    role: 'Marketing Manager',
+    company: 'Crestfield Brands',
+    industry: 'Consumer Goods',
+    service: 'Course',
+    course: 'AEO Masterclass',
+    quote: 'We started appearing in Perplexity answers for our category within six weeks of applying what\'s in this course. The schema section alone changed how our entire content team writes briefs. This is the direction search is going and this course is well ahead of it.',
+  },
+  {
+    name: 'Declan Moore',
+    role: 'Founder',
+    company: 'Pitchcraft',
+    industry: 'SaaS',
+    service: 'Course',
+    course: 'Technical SEO for Founders',
+    quote: 'I was paying an agency $1,200 a month for SEO "maintenance." After this course I realized they hadn\'t fixed our sitemap errors in four months. I fixed everything myself in a weekend. Cancelled the retainer the Monday after.',
+  },
+  {
+    name: 'Yuki Tanaka',
+    role: 'Operations Lead',
+    company: 'Lumis Logistics',
+    industry: 'Logistics',
+    service: 'Course',
+    course: 'The Automation Stack',
+    quote: 'The branching logic module was the one that unlocked everything for me. I\'d been building flat automations that broke the moment anything deviated. Now I build with error paths from the start. Our workflows haven\'t failed in two months.',
+  },
+  {
+    name: 'Cara Bellingham',
+    role: 'Content Strategist',
+    company: 'Wavefront Digital',
+    industry: 'Digital Agency',
+    service: 'Course',
+    course: 'AEO Masterclass',
+    quote: 'I pitched AEO as a new service offering to my clients after finishing this course. Three of them immediately signed on. The frameworks in here are practical enough to turn around in a client presentation without needing to adapt much. Paid for itself the same week.',
+  },
+  {
     name: 'Mike Torrance',
     role: 'Commercial Director',
     company: 'Forge Manufacturing',
     industry: 'Manufacturing',
     service: 'Workflow Automation',
-    quote: 'We\'re a 60-year-old business that still ran on fax and email for purchase orders. Gabriel translated our existing process into a clean digital workflow — no disruption, no retraining chaos, just the same process running faster and with an audit trail. Best investment we\'ve made in years.',
+    quote: 'We\'re a 60-year-old business that still ran on fax and email for purchase orders. Gabriel translated our existing process into a clean digital workflow - no disruption, no retraining chaos, just the same process running faster and with an audit trail. Best investment we\'ve made in years.',
   },
 ];

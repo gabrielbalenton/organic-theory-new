@@ -38,14 +38,16 @@ export default function Cursor() {
 
   return (
     <>
-      {/* Dot — instant */}
+      {/* X - instant, mix-blend-difference so it's always visible */}
       <motion.div
-        className="fixed top-0 left-0 w-[5px] h-[5px] rounded-full bg-[#FAFAFA] pointer-events-none z-[999]"
-        style={{ x: mx, y: my, translateX: '-50%', translateY: '-50%' }}
-      />
-      {/* Ring — spring lag */}
+        className="fixed top-0 left-0 pointer-events-none z-[999] font-bold leading-none select-none text-white"
+        style={{ x: mx, y: my, translateX: '-50%', translateY: '-50%', fontSize: '12px', mixBlendMode: 'difference' }}
+      >
+        ×
+      </motion.div>
+      {/* Ring - spring lag */}
       <motion.div
-        className="fixed top-0 left-0 rounded-full border border-[#FAFAFA]/50 pointer-events-none z-[998] transition-all duration-200"
+        className="fixed top-0 left-0 rounded-full pointer-events-none z-[998] transition-all duration-200 border border-white"
         style={{
           x: sx,
           y: sy,
@@ -53,7 +55,8 @@ export default function Cursor() {
           translateY: '-50%',
           width: hovering ? 44 : 28,
           height: hovering ? 44 : 28,
-          borderColor: hovering ? 'rgba(250,250,250,0.8)' : 'rgba(250,250,250,0.35)',
+          opacity: hovering ? 0.8 : 0.35,
+          mixBlendMode: 'difference',
         }}
       />
     </>

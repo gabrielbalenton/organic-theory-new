@@ -28,7 +28,7 @@ export function ParallaxImage({ src, alt, className = '', strength = 15 }: Paral
   );
 }
 
-// Tilt on hover — for vault cards
+// Tilt on hover - for vault cards
 export function TiltCard({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   const ref = useRef<HTMLDivElement>(null);
 

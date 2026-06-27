@@ -15,6 +15,8 @@ const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Process = lazy(() => import('./pages/Process'));
 const Courses = lazy(() => import('./pages/Courses'));
+const CoursePlayer = lazy(() => import('./pages/CoursePlayer'));
+const About = lazy(() => import('./pages/About'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 const PageLoader = () => <div className="min-h-screen bg-[#09090B]" />;
@@ -36,10 +38,12 @@ export default function App() {
             <Route path="tools" element={<Tools />} />
             <Route path="insights" element={<Blog />} />
             <Route path="insights/:slug" element={<BlogPost />} />
+            <Route path="about" element={<About />} />
             <Route path="process" element={<Process />} />
             <Route path="courses" element={<Courses />} />
             <Route path="*" element={<NotFound />} />
           </Route>
+          <Route path="/courses/:courseId/learn" element={<CoursePlayer />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

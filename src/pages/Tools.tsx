@@ -11,7 +11,7 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 
 function ScorePill({ score }: { score: number }) {
   const color = score >= 80 ? 'text-green-400 border-green-400/30' : score >= 50 ? 'text-yellow-400 border-yellow-400/30' : score > 0 ? 'text-red-400 border-red-400/30' : 'text-[#A1A1AA] border-[#FAFAFA]/10';
-  return <span className={`text-[10px] font-bold border px-2 py-0.5 ${color}`}>{score > 0 ? `${score}/100` : '—'}</span>;
+  return <span className={`text-[10px] font-bold border px-2 py-0.5 ${color}`}>{score > 0 ? `${score}/100` : '-'}</span>;
 }
 
 function CopyButton({ text }: { text: string }) {
@@ -36,7 +36,7 @@ function scoreTitle(t: string) {
   if (!l) return { score: 0, note: 'Enter a title.' };
   if (l < 30) return { score: 40, note: 'Too short. Aim for 50–60 characters.' };
   if (l <= 60) return { score: 100, note: 'Perfect length.' };
-  if (l <= 70) return { score: 70, note: 'Slightly long — may get truncated.' };
+  if (l <= 70) return { score: 70, note: 'Slightly long - may get truncated.' };
   return { score: 30, note: 'Too long. Google will truncate this.' };
 }
 function scoreDesc(d: string) {
@@ -44,7 +44,7 @@ function scoreDesc(d: string) {
   if (!l) return { score: 0, note: 'Enter a description.' };
   if (l < 70) return { score: 40, note: 'Too short. Aim for 120–160 characters.' };
   if (l <= 160) return { score: 100, note: 'Perfect length.' };
-  if (l <= 180) return { score: 70, note: 'Slightly long — may be truncated.' };
+  if (l <= 180) return { score: 70, note: 'Slightly long - may be truncated.' };
   return { score: 30, note: 'Too long. Keep under 160 characters.' };
 }
 
@@ -57,12 +57,12 @@ function MetaLens() {
       <div>
         <label className={labelCls}>Meta Title</label>
         <input value={title} onChange={e => setTitle(e.target.value)} placeholder="Your page title…" maxLength={100} className={inputCls} />
-        <div className="flex justify-between mt-1"><span className="text-xs opacity-40">{title.length} chars — {tS.note}</span><ScorePill score={tS.score} /></div>
+        <div className="flex justify-between mt-1"><span className="text-xs opacity-40">{title.length} chars - {tS.note}</span><ScorePill score={tS.score} /></div>
       </div>
       <div>
         <label className={labelCls}>Meta Description</label>
         <textarea value={desc} onChange={e => setDesc(e.target.value)} placeholder="Your meta description…" rows={3} maxLength={250} className={`${textareaCls} border-b border-[#FAFAFA]/15 border-0 border-b p-0`} />
-        <div className="flex justify-between mt-1"><span className="text-xs opacity-40">{desc.length} chars — {dS.note}</span><ScorePill score={dS.score} /></div>
+        <div className="flex justify-between mt-1"><span className="text-xs opacity-40">{desc.length} chars - {dS.note}</span><ScorePill score={dS.score} /></div>
       </div>
       {(title || desc) && (
         <div className="border border-[#FAFAFA]/10 p-6 bg-[#FAFAFA]/[0.02]">
@@ -122,7 +122,7 @@ function HeadingAudit() {
         <div className="space-y-2">
           <div className="flex items-center justify-between mb-4">
             <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA] font-bold">Heading tree</p>
-            {h1Count !== 1 && <span className="text-[10px] text-amber-400 font-bold uppercase tracking-widest">⚠ {h1Count === 0 ? 'No H1 found' : `${h1Count} H1s — should be 1`}</span>}
+            {h1Count !== 1 && <span className="text-[10px] text-amber-400 font-bold uppercase tracking-widest">⚠ {h1Count === 0 ? 'No H1 found' : `${h1Count} H1s - should be 1`}</span>}
           </div>
           {headings.map((h, i) => (
             <div key={i} className="flex items-baseline gap-3" style={{ paddingLeft: `${(h.level - 1) * 16}px` }}>
@@ -195,7 +195,7 @@ function AEOChecker() {
     const tips: string[] = []; let score = 50;
     const hasQ = /\?/.test(text), hasBullets = /\n[-•*]|\n\d+\./.test(text), sentences = text.split(/[.!?]+/).filter(Boolean), avgLen = sentences.reduce((a, s) => a + s.trim().split(' ').length, 0) / (sentences.length || 1), hasDef = /\bis\b|\bare\b|\bmeans\b|\brefers to\b/i.test(text);
     if (hasQ) score += 15; else tips.push('Include a direct question to match how AI queries are phrased.');
-    if (hasBullets) score += 15; else tips.push('Use bullet points or numbered lists — AI models extract structured data easily.');
+    if (hasBullets) score += 15; else tips.push('Use bullet points or numbered lists - AI models extract structured data easily.');
     if (avgLen <= 20) score += 10; else tips.push('Shorten sentences to under 20 words for better AI parsing.');
     if (hasDef) score += 10; else tips.push('Add a clear definition sentence (e.g., "X is…") for featured snippet eligibility.');
     if (text.length >= 300) score += 10; else tips.push('Aim for at least 300 characters for substantive coverage.');
@@ -208,7 +208,7 @@ function AEOChecker() {
         <div className="border border-[#FAFAFA]/10 p-6 bg-[#FAFAFA]/[0.02] space-y-4">
           <div className="flex items-center justify-between"><div><span className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA] font-bold block mb-1">AEO Score</span><span className="text-3xl font-display font-bold">{result.score}/100</span></div></div>
           <div className="w-full h-1 bg-[#FAFAFA]/10"><div className="h-full bg-[#FAFAFA]/60 transition-all duration-700" style={{ width: `${result.score}%` }} /></div>
-          {result.tips.length > 0 && <div className="space-y-2 pt-2"><p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA] font-bold">Tips</p>{result.tips.map((t, i) => <div key={i} className="flex gap-3 text-sm opacity-60"><span className="text-[#A1A1AA] shrink-0">—</span>{t}</div>)}</div>}
+          {result.tips.length > 0 && <div className="space-y-2 pt-2"><p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA] font-bold">Tips</p>{result.tips.map((t, i) => <div key={i} className="flex gap-3 text-sm opacity-60"><span className="text-[#A1A1AA] shrink-0">-</span>{t}</div>)}</div>}
         </div>
       )}
     </div>
@@ -257,10 +257,10 @@ function GrammarChecker() {
     if (passiveMatches && passiveMatches.length > 1) found.push({ type: 'Passive Voice', message: `${passiveMatches.length} passive constructions found. Active voice is more direct.`, example: passiveMatches[0] });
     const weakAdverbs = ['very', 'really', 'quite', 'rather', 'somewhat', 'fairly', 'extremely', 'incredibly'];
     const usedAdverbs = weakAdverbs.filter(a => new RegExp(`\\b${a}\\b`, 'i').test(text));
-    if (usedAdverbs.length) found.push({ type: 'Weak Adverbs', message: `Found: "${usedAdverbs.join('", "')}". These dilute impact — try stronger words or cut them.` });
+    if (usedAdverbs.length) found.push({ type: 'Weak Adverbs', message: `Found: "${usedAdverbs.join('", "')}". These dilute impact - try stronger words or cut them.` });
     const filler = ['in order to', 'due to the fact that', 'at this point in time', 'it is important to note', 'as a matter of fact', 'needless to say'];
     const usedFiller = filler.filter(f => text.toLowerCase().includes(f));
-    if (usedFiller.length) found.push({ type: 'Filler Phrases', message: `Found: "${usedFiller.join('", "')}". These add length without meaning — cut or replace.` });
+    if (usedFiller.length) found.push({ type: 'Filler Phrases', message: `Found: "${usedFiller.join('", "')}". These add length without meaning - cut or replace.` });
     const sentences = text.split(/[.!?]+/).filter(s => s.trim());
     const longSentences = sentences.filter(s => s.trim().split(/\s+/).length > 30);
     if (longSentences.length) found.push({ type: 'Long Sentences', message: `${longSentences.length} sentence(s) exceed 30 words. Break them up for clarity.` });
@@ -268,13 +268,13 @@ function GrammarChecker() {
     if (doubleSpace) found.push({ type: 'Double Spaces', message: 'Multiple consecutive spaces detected. Use single spaces between words.' });
     const aiCliches = ['delve into', 'it\'s important to', 'in conclusion', 'leverage', 'synergy', 'utilize', 'paradigm shift', 'game-changer', 'cutting-edge', 'best practices'];
     const usedCliches = aiCliches.filter(c => text.toLowerCase().includes(c));
-    if (usedCliches.length) found.push({ type: 'Overused / AI Phrases', message: `Found: "${usedCliches.join('", "')}". These read as generic — swap for specific language.` });
+    if (usedCliches.length) found.push({ type: 'Overused / AI Phrases', message: `Found: "${usedCliches.join('", "')}". These read as generic - swap for specific language.` });
     return found;
   })() : [];
 
   return (
     <div className="space-y-6">
-      <div><label className={labelCls}>Paste content to analyse</label><textarea value={text} onChange={e => setText(e.target.value)} placeholder="Paste your text here…" rows={8} className={textareaCls} /></div>
+      <div><label className={labelCls}>Paste content to analyze</label><textarea value={text} onChange={e => setText(e.target.value)} placeholder="Paste your text here…" rows={8} className={textareaCls} /></div>
       {text.trim() && (
         issues.length === 0
           ? <div className="border border-green-400/20 p-6 text-green-400 text-sm">No issues found. Clean writing.</div>
@@ -326,9 +326,9 @@ function AIHumanizer() {
         </div>
       )}
       {humanized && humanized === text && text.trim() && (
-        <div className="border border-green-400/20 p-4 text-green-400 text-sm">Already reads naturally — no substitutions needed.</div>
+        <div className="border border-green-400/20 p-4 text-green-400 text-sm">Already reads naturally - no substitutions needed.</div>
       )}
-      <p className="text-[10px] opacity-30 leading-relaxed">Rule-based substitutions. Review output — context changes meaning.</p>
+      <p className="text-[10px] opacity-30 leading-relaxed">Rule-based substitutions. Review output - context changes meaning.</p>
     </div>
   );
 }
@@ -346,13 +346,13 @@ function ReadingLevel() {
     }, 0);
     const fk = Math.max(0, Math.min(100, 206.835 - 1.015 * (words / sentences) - 84.6 * (syllables / words)));
     let grade = '', desc = '';
-    if (fk >= 90) { grade = '5th grade'; desc = 'Very Easy — ideal for general audiences.'; }
-    else if (fk >= 80) { grade = '6th grade'; desc = 'Easy — conversational, most adults comfortable.'; }
-    else if (fk >= 70) { grade = '7th grade'; desc = 'Fairly Easy — good for general web copy.'; }
-    else if (fk >= 60) { grade = '8–9th grade'; desc = 'Standard — mainstream media level.'; }
-    else if (fk >= 50) { grade = '10–12th grade'; desc = 'Fairly Difficult — academic / professional.'; }
-    else if (fk >= 30) { grade = 'College'; desc = 'Difficult — consider simplifying for wider reach.'; }
-    else { grade = 'Graduate'; desc = 'Very Difficult — highly technical or dense.'; }
+    if (fk >= 90) { grade = '5th grade'; desc = 'Very Easy - ideal for general audiences.'; }
+    else if (fk >= 80) { grade = '6th grade'; desc = 'Easy - conversational, most adults comfortable.'; }
+    else if (fk >= 70) { grade = '7th grade'; desc = 'Fairly Easy - good for general web copy.'; }
+    else if (fk >= 60) { grade = '8–9th grade'; desc = 'Standard - mainstream media level.'; }
+    else if (fk >= 50) { grade = '10–12th grade'; desc = 'Fairly Difficult - academic / professional.'; }
+    else if (fk >= 30) { grade = 'College'; desc = 'Difficult - consider simplifying for wider reach.'; }
+    else { grade = 'Graduate'; desc = 'Very Difficult - highly technical or dense.'; }
     return { fk: Math.round(fk), grade, desc, words, sentences, avgWords: (words / sentences).toFixed(1) };
   })() : null;
   return (
@@ -488,10 +488,10 @@ function SubjectScorer() {
           <div className="flex items-center justify-between"><span className={`text-2xl font-display font-bold ${color}`}>{score}/100</span><span className={`text-sm font-bold ${color}`}>{grade}</span></div>
           <div className="w-full h-1 bg-[#FAFAFA]/10"><div className={`h-full transition-all duration-700 ${score >= 80 ? 'bg-green-400' : score >= 60 ? 'bg-yellow-400' : 'bg-red-400'}`} style={{ width: `${score}%` }} /></div>
           <ul className="space-y-1 text-xs opacity-50">
-            <li>{subject.length >= 30 && subject.length <= 50 ? '✓' : '—'} Ideal length (30–50 chars)</li>
-            <li>{/\d/.test(subject) ? '✓' : '—'} Contains a number</li>
-            <li>{subject.includes('?') ? '✓' : '—'} Contains a question</li>
-            <li>{/\p{Emoji}/u.test(subject) ? '✓' : '—'} Contains an emoji</li>
+            <li>{subject.length >= 30 && subject.length <= 50 ? '✓' : '-'} Ideal length (30–50 chars)</li>
+            <li>{/\d/.test(subject) ? '✓' : '-'} Contains a number</li>
+            <li>{subject.includes('?') ? '✓' : '-'} Contains a question</li>
+            <li>{/\p{Emoji}/u.test(subject) ? '✓' : '-'} Contains an emoji</li>
           </ul>
         </div>
       )}
@@ -554,7 +554,7 @@ function ImageCompressor() {
         <button onClick={() => inputRef.current?.click()} className="w-full border border-dashed border-[#FAFAFA]/20 py-16 flex flex-col items-center gap-3 hover:border-[#FAFAFA]/40 transition-colors duration-300 group">
           <Upload size={24} className="opacity-30 group-hover:opacity-60 transition-opacity" />
           <span className="text-[10px] tracking-[0.3em] uppercase font-bold opacity-40 group-hover:opacity-60">Click to upload image</span>
-          <span className="text-xs opacity-20">PNG, JPG, WebP — any size</span>
+          <span className="text-xs opacity-20">PNG, JPG, WebP - any size</span>
         </button>
       ) : (
         <>
@@ -576,7 +576,7 @@ function ImageCompressor() {
             </div>
             {format !== 'image/png' && (
               <div>
-                <label className={labelCls}>Quality — {quality}%</label>
+                <label className={labelCls}>Quality - {quality}%</label>
                 <input type="range" min={10} max={100} value={quality} onChange={e => setQuality(Number(e.target.value))} className="w-full accent-[#FAFAFA] mt-3" />
               </div>
             )}
@@ -602,6 +602,176 @@ function ImageCompressor() {
   );
 }
 
+// ─── Stack showcase ───────────────────────────────────────────
+
+function LogoVercel() {
+  return <svg viewBox="0 0 116 100" className="w-7 h-7 fill-current"><path d="M57.5 0L115 100H0L57.5 0z"/></svg>;
+}
+function LogoReact() {
+  return <svg viewBox="0 0 100 100" className="w-7 h-7 fill-none stroke-current" strokeWidth="4"><circle cx="50" cy="50" r="7" fill="currentColor" stroke="none"/><ellipse cx="50" cy="50" rx="46" ry="17"/><ellipse cx="50" cy="50" rx="46" ry="17" transform="rotate(60 50 50)"/><ellipse cx="50" cy="50" rx="46" ry="17" transform="rotate(120 50 50)"/></svg>;
+}
+function LogoMake() {
+  return <svg viewBox="0 0 80 40" className="w-9 h-5 fill-current"><circle cx="10" cy="20" r="9"/><line x1="19" y1="20" x2="30" y2="20" stroke="currentColor" strokeWidth="3"/><circle cx="40" cy="20" r="9"/><line x1="49" y1="20" x2="60" y2="20" stroke="currentColor" strokeWidth="3"/><circle cx="70" cy="20" r="9"/></svg>;
+}
+function LogoN8N() {
+  return <span className="text-[15px] font-black tracking-tighter leading-none">n8n</span>;
+}
+function LogoClaude() {
+  return (
+    <svg viewBox="0 0 24 24" className="w-7 h-7 stroke-current fill-none" strokeWidth="1.8" strokeLinecap="round">
+      <line x1="12" y1="2" x2="12" y2="6"/>
+      <line x1="12" y1="18" x2="12" y2="22"/>
+      <line x1="2" y1="12" x2="6" y2="12"/>
+      <line x1="18" y1="12" x2="22" y2="12"/>
+      <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/>
+      <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
+      <line x1="19.07" y1="4.93" x2="16.24" y2="7.76"/>
+      <line x1="7.76" y1="16.24" x2="4.93" y2="19.07"/>
+    </svg>
+  );
+}
+function LogoChatGPT() {
+  return (
+    <svg viewBox="0 0 41 41" className="w-7 h-7 fill-current">
+      <path d="M37.5 16.6a10 10 0 0 0-.9-8.2 10.4 10.4 0 0 0-11.1-5 10 10 0 0 0-7.5-3.4A10.4 10.4 0 0 0 8.1 6.4a10 10 0 0 0-6.7 4.9 10.4 10.4 0 0 0 1.3 12.2 10 10 0 0 0 .9 8.2 10.4 10.4 0 0 0 11.1 5 10 10 0 0 0 7.5 3.3 10.4 10.4 0 0 0 9.9-7.2 10 10 0 0 0 6.7-4.8 10.4 10.4 0 0 0-1.3-11.4zM22 37.3a7.7 7.7 0 0 1-4.9-1.8l.2-.1 8.2-4.7a1.4 1.4 0 0 0 .7-1.2V18.3l3.4 2a.1.1 0 0 1 .1.1v9.5A7.7 7.7 0 0 1 22 37.3zM6 31.2a7.7 7.7 0 0 1-.9-5.2l.2.1 8.2 4.7a1.4 1.4 0 0 0 1.4 0l10-5.8v3.9a.1.1 0 0 1 0 .1l-8.3 4.8A7.7 7.7 0 0 1 6 31.2zm-2-17.9a7.7 7.7 0 0 1 4-3.4V20a1.4 1.4 0 0 0 .7 1.2l10 5.8-3.5 2a.1.1 0 0 1-.1 0L6.8 24A7.7 7.7 0 0 1 4 13.3zM32.4 22l-10-5.8 3.5-2a.1.1 0 0 1 .1 0l8.3 4.8a7.7 7.7 0 0 1-1.2 13.9V23a1.4 1.4 0 0 0-.7-1.1zm3.4-5.2-.2-.1-8.2-4.7a1.4 1.4 0 0 0-1.4 0l-10 5.8v-3.9a.1.1 0 0 1 0-.1l8.3-4.8a7.7 7.7 0 0 1 11.5 8zm-21.8 7.2-3.5-2a.1.1 0 0 1-.1-.1v-9.5a7.7 7.7 0 0 1 12.6-5.9l-.2.1-8.2 4.7a1.4 1.4 0 0 0-.7 1.2zm1.9-4 4.5-2.6 4.5 2.6v5.1l-4.5 2.6-4.5-2.6z"/>
+    </svg>
+  );
+}
+function LogoPerplexity() {
+  return (
+    <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current">
+      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+    </svg>
+  );
+}
+function LogoGemini() {
+  return (
+    <svg viewBox="0 0 28 28" className="w-7 h-7 fill-current">
+      <path d="M14 28A14 14 0 0 0 14 0a14 14 0 0 0 0 28z" opacity=".15"/>
+      <path d="M14 0c0 7.73-6.27 14-14 14 7.73 0 14 6.27 14 14 0-7.73 6.27-14 14-14-7.73 0-14-6.27-14-14z"/>
+    </svg>
+  );
+}
+function LogoAhrefs() {
+  return <span className="text-[13px] font-black tracking-tight leading-none">Ahrefs</span>;
+}
+function LogoSemrush() {
+  return <span className="text-[13px] font-black tracking-tight leading-none">SEMrush</span>;
+}
+function LogoGSC() {
+  return (
+    <svg viewBox="0 0 24 24" className="w-7 h-7 fill-current">
+      <path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+    </svg>
+  );
+}
+function LogoScreamingFrog() {
+  return (
+    <svg viewBox="0 0 40 40" className="w-7 h-7 fill-current">
+      <circle cx="14" cy="16" r="5"/><circle cx="26" cy="16" r="5"/>
+      <ellipse cx="20" cy="26" rx="12" ry="8"/>
+      <circle cx="12" cy="13" r="2" fill="#09090B"/><circle cx="28" cy="13" r="2" fill="#09090B"/>
+      <path d="M8 30 Q6 38 4 36" stroke="currentColor" strokeWidth="2" fill="none"/>
+      <path d="M32 30 Q34 38 36 36" stroke="currentColor" strokeWidth="2" fill="none"/>
+    </svg>
+  );
+}
+function LogoZapier() {
+  return <span className="text-[13px] font-black tracking-tight leading-none">Zapier</span>;
+}
+function LogoHubSpot() {
+  return (
+    <svg viewBox="0 0 40 40" className="w-7 h-7 fill-current">
+      <circle cx="28" cy="12" r="6"/><circle cx="28" cy="12" r="3" fill="#09090B"/>
+      <path d="M22 12 H8 Q4 12 4 16 V28 Q4 32 8 32 H20 Q24 32 24 28 V20"/>
+    </svg>
+  );
+}
+function LogoActiveCampaign() {
+  return <span className="text-[11px] font-black tracking-tight leading-none">Active<br/>Campaign</span>;
+}
+function LogoTailwind() {
+  return (
+    <svg viewBox="0 0 54 33" className="w-9 h-5 fill-current">
+      <path fillRule="evenodd" clipRule="evenodd" d="M27 0C19.8 0 15.3 3.6 13.5 10.8c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C30.744 12.672 33.808 16 40.5 16c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.514-3.522-2.004-5.147-3.653C36.756 3.328 33.692 0 27 0zM13.5 16C6.3 16 1.8 19.6 0 26.8c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 28.672 20.308 32 27 32c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.514-3.522-2.004-5.147-3.653C23.256 12.328 20.192 9 13.5 9z"/>
+    </svg>
+  );
+}
+function LogoFigma() {
+  return (
+    <svg viewBox="0 0 38 57" className="w-5 h-7 fill-current">
+      <path d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"/>
+      <path d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 0 1-19 0z"/>
+      <path d="M19 0v19h9.5a9.5 9.5 0 0 0 0-19H19z"/>
+      <path d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"/>
+      <path d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/>
+    </svg>
+  );
+}
+function LogoVite() {
+  return (
+    <svg viewBox="0 0 32 32" className="w-7 h-7 fill-current">
+      <path d="M29.9 6.5L16.8 30a.8.8 0 0 1-1.4 0L2.1 6.5a.8.8 0 0 1 .8-1.2l13.1 2.4 13.1-2.4a.8.8 0 0 1 .8 1.2z"/>
+    </svg>
+  );
+}
+function LogoSlack() {
+  return (
+    <svg viewBox="0 0 40 40" className="w-7 h-7 fill-current">
+      <rect x="6" y="6" width="10" height="10" rx="3"/>
+      <rect x="24" y="6" width="10" height="10" rx="3"/>
+      <rect x="6" y="24" width="10" height="10" rx="3"/>
+      <rect x="24" y="24" width="10" height="10" rx="3"/>
+    </svg>
+  );
+}
+
+const STACK_CATEGORIES = [
+  {
+    label: 'SEO & Search',
+    color: 'border-blue-400/20 text-blue-400',
+    tools: [
+      { name: 'Google Search Console', desc: 'Index & performance monitoring', logo: <LogoGSC /> },
+      { name: 'Screaming Frog', desc: 'Site crawler & technical audits', logo: <LogoScreamingFrog /> },
+      { name: 'Ahrefs', desc: 'Backlink & keyword intelligence', logo: <LogoAhrefs /> },
+      { name: 'SEMrush', desc: 'Competitive research', logo: <LogoSemrush /> },
+      { name: 'PageSpeed Insights', desc: 'Core Web Vitals analysis', logo: <LogoGSC /> },
+    ],
+  },
+  {
+    label: 'Automation',
+    color: 'border-amber-400/20 text-amber-400',
+    tools: [
+      { name: 'Make', desc: 'Visual workflow automation', logo: <LogoMake /> },
+      { name: 'n8n', desc: 'Self-hosted automation builder', logo: <LogoN8N /> },
+      { name: 'Zapier', desc: 'App-to-app integrations', logo: <LogoZapier /> },
+      { name: 'HubSpot', desc: 'CRM & pipeline automation', logo: <LogoHubSpot /> },
+      { name: 'Slack', desc: 'Notification & alert routing', logo: <LogoSlack /> },
+    ],
+  },
+  {
+    label: 'AI & AEO',
+    color: 'border-purple-400/20 text-purple-400',
+    tools: [
+      { name: 'Claude', desc: 'AI agents, content & strategy', logo: <LogoClaude /> },
+      { name: 'ChatGPT', desc: 'Content generation & research', logo: <LogoChatGPT /> },
+      { name: 'Gemini', desc: 'Google AI & AEO testing', logo: <LogoGemini /> },
+      { name: 'Perplexity', desc: 'AI citation & answer tracking', logo: <LogoPerplexity /> },
+    ],
+  },
+  {
+    label: 'Build & Design',
+    color: 'border-green-400/20 text-green-400',
+    tools: [
+      { name: 'Vercel', desc: 'Deployment & edge hosting', logo: <LogoVercel /> },
+      { name: 'React', desc: 'UI component framework', logo: <LogoReact /> },
+      { name: 'Tailwind', desc: 'Utility-first CSS', logo: <LogoTailwind /> },
+      { name: 'Figma', desc: 'Design & prototyping', logo: <LogoFigma /> },
+      { name: 'Vite', desc: 'Lightning-fast build tool', logo: <LogoVite /> },
+    ],
+  },
+];
+
 // ─── Tool registry ─────────────────────────────────────────────
 
 const CATEGORIES = [
@@ -622,7 +792,7 @@ const CATEGORIES = [
       { id: 'wordcount', label: 'Word Counter', desc: 'Instant word, character, sentence, paragraph count and estimated read time.', component: WordCounter },
       { id: 'grammar', label: 'Grammar Checker', desc: 'Flag passive voice, filler phrases, AI clichés, and weak adverbs.', component: GrammarChecker },
       { id: 'humanizer', label: 'AI Humanizer', desc: 'Replace stiff, AI-sounding language with cleaner, more natural alternatives.', component: AIHumanizer },
-      { id: 'reading', label: 'Reading Level', desc: 'Flesch-Kincaid score — see what education level your content targets.', component: ReadingLevel },
+      { id: 'reading', label: 'Reading Level', desc: 'Flesch-Kincaid score - see what education level your content targets.', component: ReadingLevel },
     ],
   },
   {
@@ -636,13 +806,13 @@ const CATEGORIES = [
     tools: [
       { id: 'utm', label: 'UTM Builder', desc: 'Build clean UTM tracking URLs for any campaign in seconds.', component: UTMBuilder },
       { id: 'slug', label: 'Slug Generator', desc: 'Convert any title or phrase into a clean, SEO-ready URL slug.', component: SlugGenerator },
-      { id: 'json', label: 'JSON Formatter', desc: 'Pretty-print or minify any JSON payload — with error detection.', component: JSONFormatter },
+      { id: 'json', label: 'JSON Formatter', desc: 'Pretty-print or minify any JSON payload - with error detection.', component: JSONFormatter },
     ],
   },
   {
     label: 'Image',
     tools: [
-      { id: 'imgcomp', label: 'Image Compressor', desc: 'Compress and convert images to JPEG, WebP, or PNG — fully in browser, nothing uploaded.', component: ImageCompressor },
+      { id: 'imgcomp', label: 'Image Compressor', desc: 'Compress and convert images to JPEG, WebP, or PNG - fully in browser, nothing uploaded.', component: ImageCompressor },
     ],
   },
 ];
@@ -678,20 +848,76 @@ export default function Tools() {
 
         <section className="pt-32 pb-16 px-6 md:px-12 max-w-7xl mx-auto">
           <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-[10px] text-[#A1A1AA] mb-6 font-bold tracking-[0.3em] uppercase">
-            <ScrambleText text="[ FREE TOOLS ]" delay={0.3} />
+            <ScrambleText text="[ THE VAULT ]" delay={0.3} />
           </motion.p>
           <TextReveal>
             <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.0] mb-6 font-display uppercase tracking-tight">
-              Tools.<br /><span className="text-[#A1A1AA]">Use them.</span>
+              Stack.<br /><span className="text-[#A1A1AA]">Tools. Vault.</span>
             </h1>
           </TextReveal>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 0.5 }} transition={{ duration: 0.8, delay: 0.4 }} className="text-sm md:text-base max-w-md leading-relaxed">
-            {ALL_TOOLS.length} client-side utilities for SEO, writing, and build — no login, no tracking.
+            Every tool we deploy across client engagements - plus {ALL_TOOLS.length} free utilities you can use right now.
           </motion.p>
         </section>
 
+        {/* ── STACK SHOWCASE ── */}
+        <section className="pb-24 px-6 md:px-12 border-t border-[#FAFAFA]/10">
+          <div className="max-w-7xl mx-auto pt-16">
+            <div className="flex items-end justify-between mb-12">
+              <div>
+                <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#A1A1AA]/40 mb-3">
+                  <ScrambleText text="[ TOOLS WE DEPLOY ]" />
+                </p>
+                <h2 className="text-2xl md:text-3xl font-display uppercase tracking-tight">The stack behind every engagement.</h2>
+              </div>
+              <div className="text-right shrink-0 ml-8">
+                <p className="text-3xl md:text-4xl font-display text-[#FAFAFA]">100+</p>
+                <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/40 mt-1">tools in active use</p>
+              </div>
+            </div>
+
+            <div className="space-y-12">
+              {STACK_CATEGORIES.map((cat, ci) => (
+                <div key={cat.label}>
+                  <div className="flex items-center gap-4 mb-5">
+                    <span className={`text-[9px] font-bold tracking-[0.25em] uppercase border px-2.5 py-1 ${cat.color}`}>{cat.label}</span>
+                    <div className="flex-1 h-px bg-[#FAFAFA]/8" />
+                  </div>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+                    {cat.tools.map((tool, ti) => (
+                      <motion.div
+                        key={tool.name}
+                        initial={{ opacity: 0, y: 16 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.3 }}
+                        transition={{ duration: 0.4, delay: ci * 0.05 + ti * 0.04, ease: EASE }}
+                        className="border border-[#FAFAFA]/8 bg-[#FAFAFA]/[0.02] p-4 flex flex-col gap-3 hover:border-[#FAFAFA]/20 hover:bg-[#FAFAFA]/[0.04] transition-all duration-300 group"
+                      >
+                        <div className="text-[#FAFAFA]/60 group-hover:text-[#FAFAFA]/90 transition-colors duration-300 h-8 flex items-center">
+                          {tool.logo}
+                        </div>
+                        <div>
+                          <p className="text-xs font-bold tracking-[0.05em] text-[#FAFAFA]/80">{tool.name}</p>
+                          <p className="text-[10px] text-[#A1A1AA]/40 mt-0.5 leading-snug">{tool.desc}</p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-10 border border-[#FAFAFA]/8 px-6 py-4 flex items-center justify-between">
+              <p className="text-xs opacity-40">Plus Apollo.io, ActiveCampaign, EmailJS, Lemon Squeezy, Google Analytics, Hotjar, Cloudflare, and 90+ more.</p>
+              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#A1A1AA]/40 shrink-0 ml-6">+100 tools</span>
+            </div>
+          </div>
+        </section>
+
+        {/* ── FREE UTILITY TOOLS ── */}
         <div className="pb-28 px-6 md:px-12 border-t border-[#FAFAFA]/10">
           <div className="max-w-7xl mx-auto pt-12">
+            <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#A1A1AA]/40 mb-8">[ FREE UTILITIES - NO LOGIN ]</p>
 
             {/* Mobile selector */}
             <div className="md:hidden mb-8">

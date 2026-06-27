@@ -36,7 +36,7 @@ export default function Blog() {
             initial={{ opacity: 0 }} animate={{ opacity: 0.5 }} transition={{ duration: 0.8, delay: 0.4 }}
             className="text-sm md:text-base max-w-md leading-relaxed"
           >
-            No fluff. Practical frameworks for search, automation, and systems — written from live client work.
+            No fluff. Practical frameworks for search, automation, and systems - written from live client work.
           </motion.p>
         </section>
 

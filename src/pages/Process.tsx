@@ -14,7 +14,7 @@ const STEPS = [
     phase: 'Discovery',
     title: 'Understand the system before touching it.',
     duration: '1–2 days',
-    description: 'Every engagement starts with a structured discovery. I map your current digital stack — what tools you use, how data flows between them, what your team does manually, and where the friction lives. I review your analytics, crawl your site, and document what I find. No assumptions, no templates applied before I understand the problem.',
+    description: 'Every engagement starts with a structured discovery. I map your current digital stack - what tools you use, how data flows between them, what your team does manually, and where the friction lives. I review your analytics, crawl your site, and document what I find. No assumptions, no templates applied before I understand the problem.',
     deliverables: ['Current-state audit document', 'Stack mapping (tools, integrations, gaps)', 'Priority problem list', 'Scope definition for the build'],
   },
   {
@@ -22,8 +22,8 @@ const STEPS = [
     phase: 'Audit',
     title: 'Diagnose before prescribing.',
     duration: '2–5 days',
-    description: 'The $400 Search & Systems Audit is often where most engagements begin. It covers technical SEO, Core Web Vitals, content structure, search visibility, workflow gaps, and automation opportunities. The output is a prioritised fix list with a 30-day action plan — not a report full of generic recommendations, but a specific roadmap tied to your situation.',
-    deliverables: ['Full Screaming Frog crawl analysis', 'Core Web Vitals assessment', 'Search visibility & keyword gap report', 'Workflow friction map', '30-day prioritised action plan'],
+    description: 'The $400 Search & Systems Audit is often where most engagements begin. It covers technical SEO, Core Web Vitals, content structure, search visibility, workflow gaps, and automation opportunities. The output is a prioritized fix list with a 30-day action plan - not a report full of generic recommendations, but a specific roadmap tied to your situation.',
+    deliverables: ['Full Screaming Frog crawl analysis', 'Core Web Vitals assessment', 'Search visibility & keyword gap report', 'Workflow friction map', '30-day prioritized action plan'],
   },
   {
     number: '03',
@@ -38,7 +38,7 @@ const STEPS = [
     phase: 'Build',
     title: 'Build precisely. No scope creep.',
     duration: '1–8 weeks',
-    description: 'The build phase executes the architecture. Search builds involve creating or restructuring pages, implementing schema, optimising technical elements, and building out content. Automation builds involve creating workflows in Make, n8n, or Zapier, connecting APIs, and testing every path. Interface builds involve design and development in Webflow, Framer, or code. The scope is fixed — what was agreed is what gets built.',
+    description: 'The build phase executes the architecture. Search builds involve creating or restructuring pages, implementing schema, optimising technical elements, and building out content. Automation builds involve creating workflows in Make, n8n, or Zapier, connecting APIs, and testing every path. Interface builds involve design and development in Webflow, Framer, or code. The scope is fixed - what was agreed is what gets built.',
     deliverables: ['All deliverables scoped in the architecture phase', 'Testing documentation', 'QA checklist sign-off', 'Staging environment review'],
   },
   {
@@ -54,7 +54,7 @@ const STEPS = [
     phase: 'Measure & Iterate',
     title: 'Track what matters. Adjust what doesn\'t.',
     duration: 'Ongoing',
-    description: 'The month after launch is where most agencies disappear. I stay in. For ongoing retainers, this phase involves monthly reporting on the metrics that matter for the specific build — Search Console data, automation success rates, CWV scores, organic traffic trends. For one-time builds, I provide a 30-day check-in report with performance data and any recommended adjustments.',
+    description: 'The month after launch is where most agencies disappear. I stay in. For ongoing retainers, this phase involves monthly reporting on the metrics that matter for the specific build - Search Console data, automation success rates, CWV scores, organic traffic trends. For one-time builds, I provide a 30-day check-in report with performance data and any recommended adjustments.',
     deliverables: ['Monthly Looker Studio report', 'Automation health checks', 'Search visibility tracking', 'Quarterly strategy review (retainer clients)'],
   },
 ];
@@ -87,7 +87,7 @@ export default function Process() {
             initial={{ opacity: 0 }} animate={{ opacity: 0.5 }} transition={{ duration: 0.8, delay: 0.5 }}
             className="text-sm md:text-base max-w-lg leading-relaxed mt-6"
           >
-            From first conversation to live system. Every engagement follows the same architecture — discover, audit, design, build, launch, measure. What changes is the scope and the specific tools.
+            From first conversation to live system. Every engagement follows the same architecture - discover, audit, design, build, launch, measure. What changes is the scope and the specific tools.
           </motion.p>
         </section>
 
@@ -133,7 +133,7 @@ export default function Process() {
                       transition={{ duration: 0.4, delay: 0.1 + j * 0.06, ease: EASE }}
                       className="flex items-start gap-3 text-sm"
                     >
-                      <span className="text-[#A1A1AA] shrink-0 mt-px">—</span>
+                      <span className="text-[#A1A1AA] shrink-0 mt-px">-</span>
                       <span className="opacity-50">{d}</span>
                     </motion.li>
                   ))}
@@ -152,7 +152,7 @@ export default function Process() {
               </p>
               {[
                 { q: 'Do I have to start with the audit?', a: 'Not always. If you have a clear brief and we\'ve spoken, we can go straight to the build. The audit is the right starting point when you\'re not sure what the problem is.' },
-                { q: 'How long does a typical engagement take?', a: 'A search architecture build runs 4–8 weeks. An automation build is usually 2–3 weeks. Interface builds depend on scope — from 3 weeks to 3 months for a full site.' },
+                { q: 'How long does a typical engagement take?', a: 'A search architecture build runs 4–8 weeks. An automation build is usually 2–3 weeks. Interface builds depend on scope - from 3 weeks to 3 months for a full site.' },
                 { q: 'Do you work with agencies or just direct clients?', a: 'Both. I white-label for agencies who need specialist delivery, and I work directly with brands who want the strategy and the build in one place.' },
               ].map(({ q, a }) => (
                 <div key={q} className="mb-8">
@@ -165,7 +165,7 @@ export default function Process() {
               {[
                 { q: 'What if the scope changes during the build?', a: 'Scope changes are documented and agreed before they\'re actioned. Nothing is added to a build without a written change order. This protects both parties.' },
                 { q: 'Can I just hire you for strategy without execution?', a: 'Yes. Strategy-only engagements work well for in-house teams who can execute but need the architecture designed. Priced per project.' },
-                { q: 'Is there a minimum engagement size?', a: 'The $400 audit is the starting point. There\'s no minimum beyond that — but most builds start at $1,500 and scale from there.' },
+                { q: 'Is there a minimum engagement size?', a: 'The $400 audit is the starting point. There\'s no minimum beyond that - but most builds start at $1,500 and scale from there.' },
               ].map(({ q, a }) => (
                 <div key={q} className="mb-8">
                   <h3 className="text-sm font-bold mb-2">{q}</h3>
@@ -198,7 +198,7 @@ export default function Process() {
                   to="/contact"
                   className="inline-flex items-center gap-4 group border border-[#09090B]/20 px-10 py-5 hover:bg-[#09090B] hover:text-[#FAFAFA] transition-all duration-300 text-[#09090B]"
                 >
-                  <span className="text-[10px] tracking-[0.2em] uppercase font-bold group-hover:text-[#FAFAFA] transition-colors duration-300">Book the Audit — $400</span>
+                  <span className="text-[10px] tracking-[0.2em] uppercase font-bold group-hover:text-[#FAFAFA] transition-colors duration-300">Book the Audit - $400</span>
                   <ArrowRight size={14} className="group-hover:translate-x-1 transition-all duration-300" />
                 </Link>
               </MagneticButton>

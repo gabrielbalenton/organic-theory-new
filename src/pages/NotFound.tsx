@@ -9,7 +9,7 @@ export default function NotFound() {
   return (
     <>
       <Helmet>
-        <title>404 — Page Not Found | Organic Theory</title>
+        <title>404 - Page Not Found | Organic Theory</title>
         <meta name="robots" content="noindex" />
       </Helmet>
 
@@ -39,7 +39,7 @@ export default function NotFound() {
               <span className="text-[#A1A1AA]">here.</span>
             </h1>
             <p className="text-sm opacity-50 leading-relaxed max-w-xs mx-auto">
-              This page doesn't exist or was moved. The system keeps running — just not here.
+              This page doesn't exist or was moved. The system keeps running - just not here.
             </p>
           </div>
 

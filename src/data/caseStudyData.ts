@@ -57,7 +57,7 @@ export const caseStudies: CaseStudy[] = [
     downloadUrl: 'https://drive.google.com/file/d/1YhEhQpQjrZuZn7C6r3TfvESjTpPVLcNF/view',
     seo: {
       title: 'DMR Designs: 63% Search Visibility in 8 Weeks | Organic Theory',
-      description: 'How 1,281 suburb-specific landing pages pushed DMR Designs to 63.21% search visibility in 8 weeks — more than double the 30% target.',
+      description: 'How 1,281 suburb-specific landing pages pushed DMR Designs to 63.21% search visibility in 8 weeks - more than double the 30% target.',
       canonical: 'https://organictheory.vercel.app/vault/dmr',
     },
   },
@@ -105,7 +105,7 @@ export const caseStudies: CaseStudy[] = [
     slug: 'icsh',
     label: 'CRM and Automation',
     client: 'ICSH',
-    context: 'A membership organisation processing annual member renewals and signups.',
+    context: 'A membership organization processing annual member renewals and signups.',
     headline: 'Annual membership that processes itself, from form submission to CRM to the member\'s inbox.',
     sections: [
       {
@@ -137,7 +137,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     seo: {
       title: 'ICSH: Automated Membership Processing, Zero Manual Entry | Organic Theory',
-      description: 'How a fully automated workflow replaced manual membership processing for ICSH — from form submission to CRM record to welcome email, instantly.',
+      description: 'How a fully automated workflow replaced manual membership processing for ICSH - from form submission to CRM record to welcome email, instantly.',
       canonical: 'https://organictheory.vercel.app/vault/icsh',
     },
   },
@@ -167,7 +167,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     seo: {
       title: 'Content & Social System: B2B Presence Without Ad Spend | Organic Theory',
-      description: 'A five-pillar content system built for a B2B platform establishing authority from zero — structured for approval, cadence, and compounding reach.',
+      description: 'A five-pillar content system built for a B2B platform establishing authority from zero - structured for approval, cadence, and compounding reach.',
       canonical: 'https://organictheory.vercel.app/vault/content-system',
     },
   },

@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import { Outlet, useLocation, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import Monogram from './Monogram';
 import Intro from './Intro';
 import Cursor from './Cursor';
 import FloatingCTA from './FloatingCTA';
@@ -19,6 +18,7 @@ const NAV_LINKS = [
   { to: '/insights', label: 'Insights' },
   { to: '/courses', label: 'Courses' },
   { to: '/tools', label: 'Tools' },
+  { to: '/about', label: 'About' },
   { to: '/contact', label: 'Contact' },
 ];
 
@@ -45,7 +45,7 @@ export default function Layout() {
     return () => window.removeEventListener('resize', measure);
   }, [scrolled]);
 
-  // Scroll behaviour
+  // Scroll behavior
   useEffect(() => {
     const onScroll = () => {
       if (rafId.current) cancelAnimationFrame(rafId.current);
@@ -99,8 +99,6 @@ export default function Layout() {
         transition={{ duration: 0.5 }}
         className="min-h-screen flex flex-col relative overflow-x-hidden"
       >
-        <Monogram />
-
         {/* Navbar */}
         <motion.header
           ref={headerRef}
@@ -184,7 +182,7 @@ export default function Layout() {
           )}
         </AnimatePresence>
 
-        {/* Page content — padding driven by measured header height */}
+        {/* Page content - padding driven by measured header height */}
         <main className="flex-grow w-full" style={{ paddingTop: headerHeight }}>
           <Outlet />
         </main>
@@ -193,39 +191,77 @@ export default function Layout() {
         <Newsletter />
 
         {/* Footer */}
-        <footer className="border-t border-[#FAFAFA]/10 px-6 md:px-12 py-12">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
-            <div>
+        <footer className="border-t border-[#FAFAFA]/10 px-6 md:px-12 py-16">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
+
+            {/* Brand */}
+            <div className="md:col-span-1">
               <div className="font-display font-bold text-lg tracking-[0.3em] text-[#FAFAFA] mb-2">
                 O<span className="text-[#A1A1AA] mx-1">+</span>X
               </div>
-              <p className="text-[10px] tracking-[0.2em] uppercase opacity-30">Organic Theory</p>
-              <p className="text-xs opacity-40 mt-3 leading-relaxed max-w-xs">
+              <p className="text-[10px] tracking-[0.2em] uppercase opacity-30 mb-3">Organic Theory</p>
+              <p className="text-xs opacity-40 leading-relaxed max-w-xs">
                 Search, automation, and systems for global brands that want to scale without friction.
               </p>
             </div>
-            <nav className="flex flex-col gap-3">
-              {NAV_LINKS.map(({ to, label }) => (
-                <Link key={to} to={to} className="text-[10px] tracking-[0.2em] uppercase opacity-40 hover:opacity-100 transition-opacity duration-200">
-                  {label}
-                </Link>
-              ))}
-            </nav>
-            <div className="flex flex-col gap-3">
-              <a
-                href="https://www.linkedin.com/in/gabrielbalenton/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[10px] tracking-[0.2em] uppercase opacity-40 hover:opacity-100 transition-opacity duration-200"
-              >
-                LinkedIn
-              </a>
-              <Link to="/contact" className="text-[10px] tracking-[0.2em] uppercase opacity-40 hover:opacity-100 transition-opacity duration-200">
-                gabrielbalenton@gmail.com
-              </Link>
+
+            {/* Work */}
+            <div>
+              <p className="text-[9px] tracking-[0.3em] uppercase opacity-25 mb-4 font-bold">Work</p>
+              <nav className="flex flex-col gap-3">
+                {[
+                  { to: '/services', label: 'Services' },
+                  { to: '/vault', label: 'The Vault' },
+                  { to: '/process', label: 'Process' },
+                ].map(({ to, label }) => (
+                  <Link key={to} to={to} className="text-[10px] tracking-[0.2em] uppercase opacity-40 hover:opacity-100 transition-opacity duration-200">
+                    {label}
+                  </Link>
+                ))}
+              </nav>
             </div>
+
+            {/* Learn */}
+            <div>
+              <p className="text-[9px] tracking-[0.3em] uppercase opacity-25 mb-4 font-bold">Learn</p>
+              <nav className="flex flex-col gap-3">
+                {[
+                  { to: '/insights', label: 'Insights' },
+                  { to: '/courses', label: 'Courses' },
+                  { to: '/tools', label: 'Tools' },
+                ].map(({ to, label }) => (
+                  <Link key={to} to={to} className="text-[10px] tracking-[0.2em] uppercase opacity-40 hover:opacity-100 transition-opacity duration-200">
+                    {label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+
+            {/* Connect */}
+            <div>
+              <p className="text-[9px] tracking-[0.3em] uppercase opacity-25 mb-4 font-bold">Connect</p>
+              <div className="flex flex-col gap-3">
+                <Link to="/about" className="text-[10px] tracking-[0.2em] uppercase opacity-40 hover:opacity-100 transition-opacity duration-200">About</Link>
+                <Link to="/contact" className="text-[10px] tracking-[0.2em] uppercase opacity-40 hover:opacity-100 transition-opacity duration-200">Contact</Link>
+                <a
+                  href="https://www.linkedin.com/in/gabrielbalenton/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[10px] tracking-[0.2em] uppercase opacity-40 hover:opacity-100 transition-opacity duration-200"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="mailto:gabrielbalenton@gmail.com"
+                  className="text-[10px] tracking-[0.2em] uppercase opacity-40 hover:opacity-100 transition-opacity duration-200 lowercase"
+                >
+                  gabrielbalenton@gmail.com
+                </a>
+              </div>
+            </div>
+
           </div>
-          <div className="max-w-7xl mx-auto mt-10 pt-6 border-t border-[#FAFAFA]/5 flex flex-col md:flex-row justify-between gap-2">
+          <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-[#FAFAFA]/5 flex flex-col md:flex-row justify-between gap-2">
             <p className="text-[10px] tracking-[0.15em] uppercase opacity-20">
               &copy; {new Date().getFullYear()} Organic Theory // Gabriel Balenton
             </p>

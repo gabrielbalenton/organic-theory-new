@@ -21,7 +21,7 @@ export function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      content: 'Hey — I\'m the Organic Theory assistant. What\'s the biggest problem with your website right now?',
+      content: 'Hey - I\'m the Organic Theory assistant. What\'s the biggest problem with your website right now?',
     },
   ]);
   const [input, setInput] = useState('');
@@ -51,7 +51,7 @@ export function Chatbot() {
     if (userMessageCount >= 10) {
       setMessages(prev => [...prev, { role: 'user', content }, {
         role: 'assistant',
-        content: 'We\'ve covered a lot of ground. To keep going, email gabrielbalenton@gmail.com or book the audit directly — I\'ll give you a full diagnosis.',
+        content: 'We\'ve covered a lot of ground. To keep going, email gabrielbalenton@gmail.com or book the audit directly - I\'ll give you a full diagnosis.',
       }]);
       return;
     }
@@ -160,7 +160,7 @@ export function Chatbot() {
                 </div>
               )}
 
-              {/* Starter prompts — only show on first message */}
+              {/* Starter prompts - only show on first message */}
               {messages.length === 1 && !loading && (
                 <div className="flex flex-wrap gap-2 pt-1">
                   {STARTERS.map(s => (

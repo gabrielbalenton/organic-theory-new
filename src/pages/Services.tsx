@@ -49,7 +49,7 @@ function ServiceCard({ service, index }: { service: typeof coreServices[0]; inde
         <ul className="space-y-2.5 mb-10">
           {service.bullets.map((bullet, i) => (
             <li key={i} className="flex items-start gap-3 text-sm opacity-60">
-              <span className="text-[#A1A1AA] shrink-0 mt-px">—</span>
+              <span className="text-[#A1A1AA] shrink-0 mt-px">-</span>
               {bullet}
             </li>
           ))}
@@ -74,7 +74,7 @@ export default function Services() {
     mainEntity: [
       { '@type': 'Question', name: 'What does the Search & Systems Audit include?', acceptedAnswer: { '@type': 'Answer', text: 'The audit covers search visibility, site structure, speed, workflow gaps, and delivers a prioritized fix list with a 30-day action plan.' } },
       { '@type': 'Question', name: 'Do I need a retainer to work with Organic Theory?', acceptedAnswer: { '@type': 'Answer', text: 'No retainer required. You can start with the $400 audit, then commission individual builds as needed.' } },
-      { '@type': 'Question', name: 'What is the difference between Search Architecture and AI Automation?', acceptedAnswer: { '@type': 'Answer', text: 'Search Architecture focuses on being found — keyword strategy, technical SEO, and content structure. AI Automation focuses on intelligence inside your workflow — AI agents, lead routing, and smart processing.' } },
+      { '@type': 'Question', name: 'What is the difference between Search Architecture and AI Automation?', acceptedAnswer: { '@type': 'Answer', text: 'Search Architecture focuses on being found - keyword strategy, technical SEO, and content structure. AI Automation focuses on intelligence inside your workflow - AI agents, lead routing, and smart processing.' } },
     ],
   };
 
@@ -158,7 +158,7 @@ export default function Services() {
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
                     {auditService.bullets.map((b, i) => (
                       <li key={i} className="flex items-start gap-3 text-sm opacity-60">
-                        <span className="text-[#A1A1AA] shrink-0 mt-px">—</span>{b}
+                        <span className="text-[#A1A1AA] shrink-0 mt-px">-</span>{b}
                       </li>
                     ))}
                   </ul>
@@ -178,7 +178,7 @@ export default function Services() {
         {/* CORE BUILDS */}
         <RevealSection className="py-20 px-6 md:px-12 border-t border-[#FAFAFA]/10">
           <div className="max-w-7xl mx-auto">
-            <SectionLabel>[ CORE BUILDS — ONE-TIME ]</SectionLabel>
+            <SectionLabel>[ CORE BUILDS - ONE-TIME ]</SectionLabel>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {coreServices.map((s, i) => <ServiceCard key={s.id} service={s} index={i} />)}
             </div>
@@ -188,7 +188,7 @@ export default function Services() {
         {/* ONGOING */}
         <RevealSection className="py-20 px-6 md:px-12 border-t border-[#FAFAFA]/10">
           <div className="max-w-7xl mx-auto">
-            <SectionLabel>[ ONGOING — MONTHLY ]</SectionLabel>
+            <SectionLabel>[ ONGOING - MONTHLY ]</SectionLabel>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {ongoingServices.map((s, i) => <ServiceCard key={s.id} service={s} index={i} />)}
             </div>
