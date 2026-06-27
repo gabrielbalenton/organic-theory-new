@@ -2,7 +2,12 @@
   "redirects": [
     {
       "source": "/work",
-      "destination": "/vault",
+      "destination": "/case-studies",
+      "permanent": true
+    },
+    {
+      "source": "/vault",
+      "destination": "/case-studies",
       "permanent": true
     }
   ],
