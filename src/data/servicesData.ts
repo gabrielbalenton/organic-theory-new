@@ -1,7 +1,7 @@
 export const auditService = {
   name: 'Search & Systems Audit',
   price: '$400, one-time',
-  descriptor: 'The fastest way to see what\'s leaking and what to fix first.',
+  descriptor: 'One hour. I go through your site, find what\'s stopping you from showing up on Google, and hand you a clear list of what to fix — in order of importance.',
   bullets: [
     'Search and visibility audit',
     'Site structure and speed review',
@@ -31,7 +31,7 @@ export const coreServices = [
     id: '02',
     name: 'AI Automation',
     price: 'from $1,800',
-    descriptor: 'Intelligence inside your workflow, not just bolted on top.',
+    descriptor: 'I build AI tools that handle the repetitive thinking — answering questions, qualifying leads, sorting requests — so your team only touches what actually needs a human.',
     bullets: [
       'AI agents and assistants',
       'Lead scoring and routing',
@@ -45,7 +45,7 @@ export const coreServices = [
     id: '03',
     name: 'Workflow Engineering',
     price: 'from $1,500',
-    descriptor: 'Systems that run the repetitive work so your team doesn\'t.',
+    descriptor: 'I connect your tools — forms, email, CRM, spreadsheets — so information moves between them automatically. No more copying data by hand or chasing follow-ups that should have sent themselves.',
     bullets: [
       'CRM automation',
       'Email and CRM integration',

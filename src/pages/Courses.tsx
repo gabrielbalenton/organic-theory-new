@@ -101,6 +101,19 @@ export default function Courses() {
       <Helmet>
         <title>Courses | Learn SEO, Automation & AEO | Organic Theory</title>
         <meta name="description" content="Self-paced courses on Technical SEO, workflow automation, and AEO. Built from 40+ real client engagements. Buy once, access forever." />
+        <meta property="og:site_name" content="Organic Theory" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://organictheory.vercel.app/courses" />
+        <meta property="og:title" content="Courses | Learn SEO, Automation & AEO | Organic Theory" />
+        <meta property="og:description" content="Self-paced courses on Technical SEO, workflow automation, and AEO. Built from 40+ real client engagements. From $49. Buy once, access forever." />
+        <meta property="og:image" content="https://organictheory.vercel.app/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Organic Theory Courses — SEO, Automation & AEO. From $49." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Courses | Learn SEO, Automation & AEO | Organic Theory" />
+        <meta name="twitter:description" content="Self-paced courses built from 40+ real client engagements. From $49. Buy once, access forever." />
+        <meta name="twitter:image" content="https://organictheory.vercel.app/og-image.png" />
         <link rel="canonical" href="https://organictheory.vercel.app/courses" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>

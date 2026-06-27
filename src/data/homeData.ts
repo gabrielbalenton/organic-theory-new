@@ -9,7 +9,7 @@ export const homeData = {
     badge: "[ GLOBAL DIGITAL CONSULTANCY ]",
     titlePrimary: "STRATEGIC LOGIC.",
     titleAccent: "MEASURABLE GROWTH.",
-    description: "Organic Theory is a specialized digital consultancy founded by Gabriel Balenton. Focused on the structural integrity of search and the efficiency of automated workflows, I build systems that allow global brands to scale without friction."
+    description: "I help businesses show up on Google, get found by AI, and stop wasting hours on tasks that should run themselves. No agency markup. No monthly retainers. Just a clear system that brings in the right people — and handles everything once they arrive."
   },
   layers: {
     title: "The System",

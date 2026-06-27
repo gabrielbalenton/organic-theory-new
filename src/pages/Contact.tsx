@@ -75,8 +75,19 @@ export default function Contact() {
       <Helmet>
         <title>Start a Conversation | Contact Organic Theory</title>
         <meta name="description" content="Ready to build something? Book a $400 audit or brief a full project. Organic Theory responds within 24 hours." />
-        <meta property="og:title" content="Contact Organic Theory" />
+        <meta property="og:site_name" content="Organic Theory" />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://organictheory.vercel.app/contact" />
+        <meta property="og:title" content="Start a Conversation | Contact Organic Theory" />
+        <meta property="og:description" content="Book a $400 site audit or brief a full project. Organic Theory responds within 24 hours." />
+        <meta property="og:image" content="https://organictheory.vercel.app/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Contact Organic Theory — Book your $400 audit." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Start a Conversation | Contact Organic Theory" />
+        <meta name="twitter:description" content="Book a $400 site audit or brief a full project. Responds within 24 hours." />
+        <meta name="twitter:image" content="https://organictheory.vercel.app/og-image.png" />
         <link rel="canonical" href="https://organictheory.vercel.app/contact" />
         <script type="application/ld+json">{JSON.stringify(schemaContact)}</script>
       </Helmet>

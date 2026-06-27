@@ -73,7 +73,7 @@ export default function Services() {
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: 'What does the Search & Systems Audit include?', acceptedAnswer: { '@type': 'Answer', text: 'The audit covers search visibility, site structure, speed, workflow gaps, and delivers a prioritized fix list with a 30-day action plan.' } },
-      { '@type': 'Question', name: 'Do I need a retainer to work with Organic Theory?', acceptedAnswer: { '@type': 'Answer', text: 'No retainer required. You can start with the $400 audit, then commission individual builds as needed.' } },
+      { '@type': 'Question', name: 'Do I need to commit to a monthly plan?', acceptedAnswer: { '@type': 'Answer', text: 'No monthly commitment required. Start with the $400 audit, then choose which projects to commission. You only pay for the work you want done.' } },
       { '@type': 'Question', name: 'What is the difference between Search Architecture and AI Automation?', acceptedAnswer: { '@type': 'Answer', text: 'Search Architecture focuses on being found - keyword strategy, technical SEO, and content structure. AI Automation focuses on intelligence inside your workflow - AI agents, lead routing, and smart processing.' } },
     ],
   };
@@ -83,9 +83,19 @@ export default function Services() {
       <Helmet>
         <title>Services & Pricing | Organic Theory</title>
         <meta name="description" content="Search architecture, AI automation, workflow engineering, and interface builds. Start with a $400 audit. No retainer required." />
-        <meta property="og:title" content="Services & Pricing | Organic Theory" />
-        <meta property="og:description" content="From a $400 audit to full system builds. Search, AI, workflow, and interface." />
+        <meta property="og:site_name" content="Organic Theory" />
+        <meta property="og:type" content="website" />
         <meta property="og:url" content="https://organictheory.vercel.app/services" />
+        <meta property="og:title" content="Services & Pricing | Organic Theory" />
+        <meta property="og:description" content="From a $400 audit to full system builds. Search, AI, workflow, and interface. No retainer required." />
+        <meta property="og:image" content="https://organictheory.vercel.app/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Organic Theory Services — From $400 audit to full system builds." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Services & Pricing | Organic Theory" />
+        <meta name="twitter:description" content="From a $400 audit to full system builds. Search, AI, workflow, and interface. No retainer required." />
+        <meta name="twitter:image" content="https://organictheory.vercel.app/og-image.png" />
         <link rel="canonical" href="https://organictheory.vercel.app/services" />
         <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
@@ -115,7 +125,7 @@ export default function Services() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="text-sm md:text-base leading-relaxed max-w-xl"
             >
-              Start with an audit to see exactly what's leaking. Then build the layers that fix it. No retainer required to begin.
+              Start with the $400 audit — one session where I review your site and tell you exactly what's holding you back. From there, you choose what to fix and when. No monthly lock-in, no ongoing commitment unless you want it.
             </motion.p>
           </div>
           {/* Hero image full-width */}

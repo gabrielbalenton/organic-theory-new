@@ -335,10 +335,21 @@ export default function Home() {
       <Helmet>
         <title>Organic Theory | Strategic Search Architecture & Systems</title>
         <meta name="description" content="Organic Theory builds search systems, AI automation, and workflow infrastructure that allow global brands to scale without friction. Founded by Gabriel Balenton." />
-        <meta property="og:title" content="Organic Theory | Strategic Search Architecture & Systems" />
-        <meta property="og:description" content="Search architecture, AI automation, and workflow engineering for global brands." />
-        <meta property="og:url" content="https://organictheory.vercel.app" />
+        <meta property="og:site_name" content="Organic Theory" />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://organictheory.vercel.app" />
+        <meta property="og:title" content="Organic Theory | Strategic Search Architecture & Systems" />
+        <meta property="og:description" content="Search architecture, AI automation, and workflow engineering for global brands. Founded by Gabriel Balenton." />
+        <meta property="og:image" content="https://organictheory.vercel.app/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Organic Theory — Strategic Logic. Measurable Growth." />
+        <meta property="og:locale" content="en_US" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Organic Theory | Strategic Search Architecture & Systems" />
+        <meta name="twitter:description" content="Search architecture, AI automation, and workflow engineering for global brands." />
+        <meta name="twitter:image" content="https://organictheory.vercel.app/og-image.png" />
+        <meta name="twitter:image:alt" content="Organic Theory — Strategic Logic. Measurable Growth." />
         <link rel="canonical" href="https://organictheory.vercel.app" />
         <script type="application/ld+json">{JSON.stringify(schemaWebsite)}</script>
         <script type="application/ld+json">{JSON.stringify(schemaProfessional)}</script>
