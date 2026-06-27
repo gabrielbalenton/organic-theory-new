@@ -51,7 +51,7 @@ export function Chatbot() {
     if (userMessageCount >= 10) {
       setMessages(prev => [...prev, { role: 'user', content }, {
         role: 'assistant',
-        content: 'We\'ve covered a lot of ground. To keep going, email gabrielbalenton@gmail.com or book the audit directly - I\'ll give you a full diagnosis.',
+        content: 'That\'s a good place to pause. To keep going, email gabrielbalenton@gmail.com or book the audit directly - I\'ll give you a full diagnosis.',
       }]);
       return;
     }

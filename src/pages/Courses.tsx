@@ -109,7 +109,7 @@ export default function Courses() {
         <meta property="og:image" content="https://organictheory.vercel.app/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Organic Theory Courses — SEO, Automation & AEO. From $49." />
+        <meta property="og:image:alt" content="Organic Theory Courses - SEO, Automation & AEO. From $49." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Courses | Learn SEO, Automation & AEO | Organic Theory" />
         <meta name="twitter:description" content="Self-paced courses built from 40+ real client engagements. From $49. Buy once, access forever." />
@@ -130,7 +130,7 @@ export default function Courses() {
           </motion.p>
           <TextRevealLines
             lines={['Learn the system.', 'Build it yourself.']}
-            className="text-4xl md:text-6xl lg:text-7xl leading-[1.0] font-display uppercase tracking-tight"
+            className="text-4xl md:text-6xl lg:text-7xl leading-[1.0] font-editorial uppercase tracking-tight"
             staggerDelay={0.12}
           />
           <motion.p

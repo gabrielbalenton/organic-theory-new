@@ -9,7 +9,7 @@ export const homeData = {
     badge: "[ GLOBAL DIGITAL CONSULTANCY ]",
     titlePrimary: "STRATEGIC LOGIC.",
     titleAccent: "MEASURABLE GROWTH.",
-    description: "I help businesses show up on Google, get found by AI, and stop wasting hours on tasks that should run themselves. No agency markup. No monthly retainers. Just a clear system that brings in the right people — and handles everything once they arrive."
+    description: "Not just Google. Every search engine, every AI tool, every map. Your business gets found by the right people, at the right moment. Then the systems built around it handle everything once they arrive."
   },
   layers: {
     title: "The System",
@@ -23,7 +23,7 @@ export const homeData = {
   },
   methodology: {
     title: "Two pillars. One system.",
-    description: "Most agencies optimize one thing. We build both sides - the foundation that earns long-term attention, and the precision layer that converts it into measurable outcomes.",
+    description: "Most agencies optimize one thing. I build both sides - the foundation that earns long-term attention, and the precision layer that converts it into measurable outcomes.",
     pillars: [
       {
         id: "O",

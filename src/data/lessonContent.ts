@@ -555,8 +555,8 @@ export const lessonContent: Record<string, LessonContent> = {
   'automation-stack__1__0': {
     readTime: '28 min',
     blocks: [
-      { type: 'paragraph', text: 'This is the most common automation in business: a web form submission automatically creates a contact in your CRM. We\'ll build this in Make.' },
-      { type: 'heading', text: 'What We\'re Building' },
+      { type: 'paragraph', text: 'This is the most common automation in business: a web form submission automatically creates a contact in your CRM. You\'ll build this in Make.' },
+      { type: 'heading', text: 'What You\'re Building' },
       { type: 'paragraph', text: 'Trigger: Contact form submitted → Action: Create contact in HubSpot → Action: Tag contact with source "Website Form"' },
       { type: 'heading', text: 'Step 1: Set Up the Webhook in Make' },
       { type: 'numbered', items: ['In Make, create a new scenario', 'Add first module: Webhooks → Custom Webhook', 'Click "Add" → copy the webhook URL', 'Make will wait for a test submission'] },
@@ -574,7 +574,7 @@ export const lessonContent: Record<string, LessonContent> = {
     readTime: '22 min',
     blocks: [
       { type: 'paragraph', text: 'Companies that respond within 5 minutes are 9x more likely to close a lead. This workflow ensures your team is notified instantly about every new contact.' },
-      { type: 'heading', text: 'What We\'re Building' },
+      { type: 'heading', text: 'What You\'re Building' },
       { type: 'paragraph', text: 'Trigger: New HubSpot contact → Action: Post Slack message with contact details → Action: Send welcome email to the lead' },
       { type: 'heading', text: 'Slack Notification Module' },
       { type: 'numbered', items: ['Add module: Slack → Create a Message', 'Connect your Slack workspace', 'Channel: #leads', 'Message: include contact name, email, company from HubSpot data'] },
@@ -588,7 +588,7 @@ export const lessonContent: Record<string, LessonContent> = {
     readTime: '30 min',
     blocks: [
       { type: 'paragraph', text: 'Most CRMs let you change a contact\'s status (New Lead → Qualified → Proposal Sent → Closed). This workflow watches for status changes and triggers the right follow-up automatically.' },
-      { type: 'heading', text: 'What We\'re Building' },
+      { type: 'heading', text: 'What You\'re Building' },
       { type: 'paragraph', text: 'Trigger: HubSpot lifecycle stage changes → Router: Branch by new stage → Action A (Qualified): Send discovery call link → Action B (Proposal): Start follow-up sequence → Action C (Closed): Send onboarding email' },
       { type: 'heading', text: 'Building the Router' },
       { type: 'numbered', items: ['After trigger, add a Router module', 'Path 1 filter: Lifecycle Stage = "qualifiedlead"', 'Path 2 filter: Lifecycle Stage = "opportunity"', 'Path 3 filter: Lifecycle Stage = "customer"'] },

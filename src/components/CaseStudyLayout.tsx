@@ -106,11 +106,11 @@ export function CaseStudyLayout({ study }: { study: CaseStudy }) {
 
           <div className="max-w-7xl mx-auto mt-12">
             <Link
-              to="/vault"
+              to="/case-studies"
               className="inline-flex items-center gap-3 group opacity-40 hover:opacity-100 transition-opacity duration-300"
             >
               <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform duration-300" />
-              <span className="text-[10px] tracking-[0.2em] uppercase font-bold">Back to Vault</span>
+              <span className="text-[10px] tracking-[0.2em] uppercase font-bold">Back to Case Studies</span>
             </Link>
           </div>
         </RevealSection>

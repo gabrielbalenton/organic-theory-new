@@ -91,7 +91,7 @@ export default function Services() {
         <meta property="og:image" content="https://organictheory.vercel.app/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Organic Theory Services — From $400 audit to full system builds." />
+        <meta property="og:image:alt" content="Organic Theory Services - From $400 audit to full system builds." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Services & Pricing | Organic Theory" />
         <meta name="twitter:description" content="From a $400 audit to full system builds. Search, AI, workflow, and interface. No retainer required." />
@@ -114,7 +114,7 @@ export default function Services() {
               <ScrambleText text="[ THE OFFER ]" delay={0.3} />
             </motion.p>
             <TextReveal>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-8 font-display uppercase tracking-tight">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-8 font-editorial uppercase tracking-tight">
                 What I build,<br />
                 <span className="text-[#A1A1AA]">and what it costs.</span>
               </h1>
@@ -125,7 +125,7 @@ export default function Services() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="text-sm md:text-base leading-relaxed max-w-xl"
             >
-              Start with the $400 audit — one session where I review your site and tell you exactly what's holding you back. From there, you choose what to fix and when. No monthly lock-in, no ongoing commitment unless you want it.
+              Start with the $400 audit - one session where I review your site and tell you exactly what's holding you back. From there, you choose what to fix and when. No monthly lock-in, no ongoing commitment unless you want it.
             </motion.p>
           </div>
           {/* Hero image full-width */}

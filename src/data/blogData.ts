@@ -55,7 +55,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         heading: 'The architecture',
-        body: 'We built 1,281 suburb-specific landing pages over eight weeks. Each page followed a structured template built around genuine local intent signals - median property prices from public data, suburb demographic profiles, nearby infrastructure, school catchments, and market trend data. Crucially, no two pages shared the same introductory paragraph. The structure was templated; the data was unique. That distinction is everything.',
+        body: 'I built 1,281 suburb-specific landing pages over eight weeks. Each page followed a structured template built around genuine local intent signals - median property prices from public data, suburb demographic profiles, nearby infrastructure, school catchments, and market trend data. Crucially, no two pages shared the same introductory paragraph. The structure was templated; the data was unique. That distinction is everything.',
       },
       {
         heading: 'The keyword architecture behind it',
@@ -73,8 +73,8 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: 'automation-stack-eliminating-manual-entry',
-    title: 'The Automation Stack: How We Eliminated Manual Data Entry Across a 400-Member Association',
-    excerpt: 'A membership form that spawned three Slack messages, two spreadsheet updates, and a manual CRM entry. Every. Single. Time. Here\'s how we killed that workflow in one build.',
+    title: 'The Automation Stack: How I Eliminated Manual Data Entry Across a 400-Member Association',
+    excerpt: 'A membership form that spawned three Slack messages, two spreadsheet updates, and a manual CRM entry. Every. Single. Time. Here\'s how I killed that workflow in one build.',
     category: 'AI Automation',
     readTime: 5,
     date: '2025-03-17',
@@ -88,7 +88,7 @@ export const blogPosts: BlogPost[] = [
       },
       {
         heading: 'The build',
-        body: 'We connected the membership form (Gravity Forms on WordPress) to Make (formerly Integromat) via webhook. The automation runs three parallel paths: (1) CRM path - check for existing contact in HubSpot, update if found, create if new, assign the correct membership tier tag and renewal date. (2) Communication path - trigger a personalised email sequence in ActiveCampaign confirming the membership, including the member\'s details and a unique membership ID. (3) Admin path - log the submission to a Google Sheet with timestamp and payment status, and post a formatted summary to a dedicated Slack channel. All three paths run simultaneously in under 4 seconds of the form submission.',
+        body: 'I connected the membership form (Gravity Forms on WordPress) to Make (formerly Integromat) via webhook. The automation runs three parallel paths: (1) CRM path - check for existing contact in HubSpot, update if found, create if new, assign the correct membership tier tag and renewal date. (2) Communication path - trigger a personalised email sequence in ActiveCampaign confirming the membership, including the member\'s details and a unique membership ID. (3) Admin path - log the submission to a Google Sheet with timestamp and payment status, and post a formatted summary to a dedicated Slack channel. All three paths run simultaneously in under 4 seconds of the form submission.',
       },
       {
         heading: 'The three handling paths',

@@ -30,7 +30,7 @@ const STEPS = [
     phase: 'Architecture',
     title: 'Design the system on paper before building it.',
     duration: '3–7 days',
-    description: 'Before any code or content is written, I architect the solution. For search builds, this means keyword clustering, content hierarchies, internal linking strategy, and page templates. For automation, it means mapping every trigger, condition, and action path across tools. This phase prevents expensive rebuilds later and aligns the build with the outcome we\'re targeting.',
+    description: 'Before any code or content is written, I architect the solution. For search builds, this means keyword clustering, content hierarchies, internal linking strategy, and page templates. For automation, it means mapping every trigger, condition, and action path across tools. This phase prevents expensive rebuilds later and aligns the build with the target outcome.',
     deliverables: ['Content architecture map', 'Keyword cluster document', 'Automation flow diagram', 'Tech stack decisions with rationale', 'Build timeline and milestones'],
   },
   {
@@ -73,7 +73,7 @@ export default function Process() {
         <meta property="og:image" content="https://organictheory.vercel.app/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Organic Theory — Six-phase system from discovery to results." />
+        <meta property="og:image:alt" content="Organic Theory - Six-phase system from discovery to results." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="How It Works | The Process | Organic Theory" />
         <meta name="twitter:description" content="Six phases from first conversation to live system. No guesswork, no scope creep." />
@@ -93,7 +93,7 @@ export default function Process() {
           </motion.p>
           <TextRevealLines
             lines={['Six phases.', 'No surprises.']}
-            className="text-4xl md:text-6xl lg:text-7xl leading-[1.0] font-display uppercase tracking-tight"
+            className="text-4xl md:text-6xl lg:text-7xl leading-[1.0] font-editorial uppercase tracking-tight"
             staggerDelay={0.12}
           />
           <motion.p
@@ -202,7 +202,7 @@ export default function Process() {
                 </h2>
               </TextReveal>
               <p className="text-sm opacity-50 mt-4 max-w-sm leading-relaxed">
-                Book the $400 audit and we begin Phase 01 immediately.
+                Book the $400 audit and Phase 01 starts immediately.
               </p>
             </div>
             <div className="flex flex-col gap-4">

@@ -13,12 +13,12 @@ import { Newsletter } from './Newsletter';
 
 const NAV_LINKS = [
   { to: '/services', label: 'Services' },
-  { to: '/vault', label: 'The Vault' },
+  { to: '/case-studies', label: 'Case Studies' },
   { to: '/process', label: 'Process' },
+  { to: '/about', label: 'About' },
   { to: '/insights', label: 'Insights' },
   { to: '/courses', label: 'Courses' },
-  { to: '/tools', label: 'Tools' },
-  { to: '/about', label: 'About' },
+  { to: '/tools', label: 'Free Tools' },
   { to: '/contact', label: 'Contact' },
 ];
 
@@ -211,7 +211,7 @@ export default function Layout() {
               <nav className="flex flex-col gap-3">
                 {[
                   { to: '/services', label: 'Services' },
-                  { to: '/vault', label: 'The Vault' },
+                  { to: '/case-studies', label: 'Case Studies' },
                   { to: '/process', label: 'Process' },
                 ].map(({ to, label }) => (
                   <Link key={to} to={to} className="text-[10px] tracking-[0.2em] uppercase opacity-40 hover:opacity-100 transition-opacity duration-200">
@@ -228,7 +228,7 @@ export default function Layout() {
                 {[
                   { to: '/insights', label: 'Insights' },
                   { to: '/courses', label: 'Courses' },
-                  { to: '/tools', label: 'Tools' },
+                  { to: '/tools', label: 'Free Tools' },
                 ].map(({ to, label }) => (
                   <Link key={to} to={to} className="text-[10px] tracking-[0.2em] uppercase opacity-40 hover:opacity-100 transition-opacity duration-200">
                     {label}

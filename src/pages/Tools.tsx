@@ -837,8 +837,8 @@ export default function Tools() {
   return (
     <>
       <Helmet>
-        <title>Free SEO, Writing & Build Tools | Organic Theory</title>
-        <meta name="description" content="15 free client-side tools: meta checker, keyword density, grammar checker, AI humanizer, image compressor, UTM builder, JSON formatter, and more. No login." />
+        <title>Free SEO & Marketing Tools | Organic Theory</title>
+        <meta name="description" content="15 free browser-based tools for SEO, content, and marketing. Meta checker, keyword density, AI humanizer, image compressor, UTM builder, and more. No login required." />
         <meta property="og:site_name" content="Organic Theory" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://organictheory.vercel.app/tools" />
@@ -847,7 +847,7 @@ export default function Tools() {
         <meta property="og:image" content="https://organictheory.vercel.app/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Organic Theory — Free SEO and marketing tools. No login." />
+        <meta property="og:image:alt" content="Organic Theory - Free SEO and marketing tools. No login." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free SEO & Marketing Tools | Organic Theory" />
         <meta name="twitter:description" content="15 free browser-based tools for SEO, content, and marketing. No login required." />
@@ -859,70 +859,16 @@ export default function Tools() {
 
         <section className="pt-32 pb-16 px-6 md:px-12 max-w-7xl mx-auto">
           <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-[10px] text-[#A1A1AA] mb-6 font-bold tracking-[0.3em] uppercase">
-            <ScrambleText text="[ THE VAULT ]" delay={0.3} />
+            <ScrambleText text="[ FREE UTILITIES ]" delay={0.3} />
           </motion.p>
           <TextReveal>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.0] mb-6 font-display uppercase tracking-tight">
-              Stack.<br /><span className="text-[#A1A1AA]">Tools. Vault.</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.0] mb-6 font-editorial uppercase tracking-tight">
+              Free tools.<br /><span className="text-[#A1A1AA]">No login.</span>
             </h1>
           </TextReveal>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 0.5 }} transition={{ duration: 0.8, delay: 0.4 }} className="text-sm md:text-base max-w-md leading-relaxed">
-            Every tool we deploy across client engagements - plus {ALL_TOOLS.length} free utilities you can use right now.
+            {ALL_TOOLS.length} browser-based utilities for SEO, content, and marketing. Everything runs in your browser - nothing is sent to a server.
           </motion.p>
-        </section>
-
-        {/* ── STACK SHOWCASE ── */}
-        <section className="pb-24 px-6 md:px-12 border-t border-[#FAFAFA]/10">
-          <div className="max-w-7xl mx-auto pt-16">
-            <div className="flex items-end justify-between mb-12">
-              <div>
-                <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#A1A1AA]/40 mb-3">
-                  <ScrambleText text="[ TOOLS WE DEPLOY ]" />
-                </p>
-                <h2 className="text-2xl md:text-3xl font-display uppercase tracking-tight">The stack behind every engagement.</h2>
-              </div>
-              <div className="text-right shrink-0 ml-8">
-                <p className="text-3xl md:text-4xl font-display text-[#FAFAFA]">100+</p>
-                <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/40 mt-1">tools in active use</p>
-              </div>
-            </div>
-
-            <div className="space-y-12">
-              {STACK_CATEGORIES.map((cat, ci) => (
-                <div key={cat.label}>
-                  <div className="flex items-center gap-4 mb-5">
-                    <span className={`text-[9px] font-bold tracking-[0.25em] uppercase border px-2.5 py-1 ${cat.color}`}>{cat.label}</span>
-                    <div className="flex-1 h-px bg-[#FAFAFA]/8" />
-                  </div>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-                    {cat.tools.map((tool, ti) => (
-                      <motion.div
-                        key={tool.name}
-                        initial={{ opacity: 0, y: 16 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, amount: 0.3 }}
-                        transition={{ duration: 0.4, delay: ci * 0.05 + ti * 0.04, ease: EASE }}
-                        className="border border-[#FAFAFA]/8 bg-[#FAFAFA]/[0.02] p-4 flex flex-col gap-3 hover:border-[#FAFAFA]/20 hover:bg-[#FAFAFA]/[0.04] transition-all duration-300 group"
-                      >
-                        <div className="text-[#FAFAFA]/60 group-hover:text-[#FAFAFA]/90 transition-colors duration-300 h-8 flex items-center">
-                          {tool.logo}
-                        </div>
-                        <div>
-                          <p className="text-xs font-bold tracking-[0.05em] text-[#FAFAFA]/80">{tool.name}</p>
-                          <p className="text-[10px] text-[#A1A1AA]/40 mt-0.5 leading-snug">{tool.desc}</p>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-10 border border-[#FAFAFA]/8 px-6 py-4 flex items-center justify-between">
-              <p className="text-xs opacity-40">Plus Apollo.io, ActiveCampaign, EmailJS, Lemon Squeezy, Google Analytics, Hotjar, Cloudflare, and 90+ more.</p>
-              <span className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#A1A1AA]/40 shrink-0 ml-6">+100 tools</span>
-            </div>
-          </div>
         </section>
 
         {/* ── FREE UTILITY TOOLS ── */}

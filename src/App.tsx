@@ -29,11 +29,11 @@ export default function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="services" element={<Services />} />
-            <Route path="vault" element={<Work />} />
-            <Route path="vault/dmr" element={<DMR />} />
-            <Route path="vault/fpx" element={<FPX />} />
-            <Route path="vault/icsh" element={<ICSH />} />
-            <Route path="vault/content-system" element={<ContentSystem />} />
+            <Route path="case-studies" element={<Work />} />
+            <Route path="case-studies/dmr" element={<DMR />} />
+            <Route path="case-studies/fpx" element={<FPX />} />
+            <Route path="case-studies/icsh" element={<ICSH />} />
+            <Route path="case-studies/content-system" element={<ContentSystem />} />
             <Route path="contact" element={<Contact />} />
             <Route path="tools" element={<Tools />} />
             <Route path="insights" element={<Blog />} />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -36,6 +36,16 @@ const INFO_ITEMS = [
 export default function Contact() {
   const [form, setForm] = useState<FormData>({ name: '', email: '', service: '', message: '' });
   const [status, setStatus] = useState<Status>('idle');
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      if (document.body.contains(script)) document.body.removeChild(script);
+    };
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -83,7 +93,7 @@ export default function Contact() {
         <meta property="og:image" content="https://organictheory.vercel.app/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Contact Organic Theory — Book your $400 audit." />
+        <meta property="og:image:alt" content="Contact Organic Theory - Book your $400 audit." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Start a Conversation | Contact Organic Theory" />
         <meta name="twitter:description" content="Book a $400 site audit or brief a full project. Responds within 24 hours." />
@@ -131,7 +141,7 @@ export default function Contact() {
               <ScrambleText text="[ INITIATE BRIEF ]" delay={0.4} />
             </motion.p>
             <TextReveal>
-              <h1 className="text-4xl md:text-6xl leading-[1.0] mb-6 font-display uppercase tracking-tight">
+              <h1 className="text-4xl md:text-6xl leading-[1.0] mb-6 font-editorial uppercase tracking-tight">
                 Let&rsquo;s build<br />
                 <span className="text-[#A1A1AA]">something.</span>
               </h1>
@@ -294,6 +304,28 @@ export default function Contact() {
                 )}
               </AnimatePresence>
             </div>
+          </div>
+        </div>
+
+        {/* ── CALENDLY ── */}
+        <div className="border-t border-[#FAFAFA]/10 px-6 md:px-12 py-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-10">
+              <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#A1A1AA]/40 mb-4">
+                <ScrambleText text="[ SCHEDULE A CALL ]" />
+              </p>
+              <h2 className="text-2xl md:text-3xl font-editorial uppercase tracking-tight">
+                Prefer to talk first?
+              </h2>
+              <p className="text-sm opacity-40 mt-3 max-w-md leading-relaxed">
+                Book a free 30-minute call. No pitch - just a conversation about where you are and whether we're a good fit.
+              </p>
+            </div>
+            <div
+              className="calendly-inline-widget rounded-none overflow-hidden"
+              data-url="https://calendly.com/gabrielbalenton/30min"
+              style={{ minWidth: '320px', height: '700px' }}
+            />
           </div>
         </div>
 

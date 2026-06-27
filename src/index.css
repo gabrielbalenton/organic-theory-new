@@ -3,6 +3,13 @@
 @theme {
   --font-display: "Montserrat", sans-serif;
   --font-sans: "Inter", sans-serif;
+  --font-editorial: "Cormorant Garamond", Georgia, serif;
+}
+
+.font-editorial {
+  font-family: var(--font-editorial);
+  font-weight: 300;
+  letter-spacing: 0.02em;
 }
 
 :root {

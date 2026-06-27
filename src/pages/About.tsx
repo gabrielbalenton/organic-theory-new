@@ -60,11 +60,11 @@ export default function About() {
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://organictheory.vercel.app/about" />
         <meta property="og:title" content="About Gabriel Balenton | Organic Theory" />
-        <meta property="og:description" content="The theory didn't start in marketing. Gabriel Balenton is the founder of Organic Theory — the non-linear path that built a systems-first approach to digital growth." />
+        <meta property="og:description" content="The theory didn't start in marketing. Gabriel Balenton is the founder of Organic Theory - the non-linear path that built a systems-first approach to digital growth." />
         <meta property="og:image" content="https://organictheory.vercel.app/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Gabriel Balenton — Founder of Organic Theory" />
+        <meta property="og:image:alt" content="Gabriel Balenton - Founder of Organic Theory" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About Gabriel Balenton | Organic Theory" />
         <meta name="twitter:description" content="The theory didn't start in marketing. The non-linear path that built a systems-first approach to digital growth." />
@@ -85,7 +85,7 @@ export default function About() {
             <ScrambleText text="[ THE FOUNDER ]" delay={0.3} />
           </motion.p>
           <TextReveal>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display uppercase tracking-tight leading-[0.95] mb-10 max-w-4xl">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-editorial uppercase tracking-tight leading-[0.95] mb-10 max-w-4xl">
               The theory didn't start in marketing.
             </h1>
           </TextReveal>

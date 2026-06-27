@@ -343,13 +343,13 @@ export default function Home() {
         <meta property="og:image" content="https://organictheory.vercel.app/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Organic Theory — Strategic Logic. Measurable Growth." />
+        <meta property="og:image:alt" content="Organic Theory - Strategic Logic. Measurable Growth." />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Organic Theory | Strategic Search Architecture & Systems" />
         <meta name="twitter:description" content="Search architecture, AI automation, and workflow engineering for global brands." />
         <meta name="twitter:image" content="https://organictheory.vercel.app/og-image.png" />
-        <meta name="twitter:image:alt" content="Organic Theory — Strategic Logic. Measurable Growth." />
+        <meta name="twitter:image:alt" content="Organic Theory - Strategic Logic. Measurable Growth." />
         <link rel="canonical" href="https://organictheory.vercel.app" />
         <script type="application/ld+json">{JSON.stringify(schemaWebsite)}</script>
         <script type="application/ld+json">{JSON.stringify(schemaProfessional)}</script>
@@ -390,7 +390,7 @@ export default function Home() {
 
             <TextRevealLines
               lines={[homeData.hero.titlePrimary, homeData.hero.titleAccent]}
-              className="text-5xl md:text-7xl lg:text-[7rem] leading-[1.0] font-display uppercase tracking-tight"
+              className="text-5xl md:text-7xl lg:text-[7rem] leading-[1.0] font-editorial uppercase tracking-tight"
               staggerDelay={0.12}
               baseDelay={0.1}
             />
@@ -421,7 +421,7 @@ export default function Home() {
               </MagneticButton>
               <MagneticButton>
                 <Link
-                  to="/vault"
+                  to="/case-studies"
                   className="inline-flex items-center gap-4 group px-8 py-4 hover:opacity-60 transition-opacity duration-300"
                 >
                   <span className="text-[10px] tracking-[0.2em] uppercase font-bold opacity-50 group-hover:opacity-100 transition-opacity">See the work</span>
@@ -452,7 +452,7 @@ export default function Home() {
         {/* ── CLIENT LOGO STRIP ── */}
         <section className="py-10 px-6 md:px-12 border-t border-[#FAFAFA]/8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <p className="text-[9px] font-bold tracking-[0.3em] uppercase text-[#A1A1AA]/25 mb-8 text-center">Trusted by</p>
+            <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-[#FAFAFA]/70 mb-8 text-center">Brands I've worked with</p>
             <div className="relative overflow-hidden">
               <motion.div
                 animate={{ x: ['0%', '-50%'] }}
@@ -471,6 +471,56 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* ── FOUNDER TEASER ── */}
+        <RevealSection className="py-20 px-6 md:px-12 border-t border-[#FAFAFA]/10">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7">
+              <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#A1A1AA]/40 mb-5">
+                <ScrambleText text="[ THE FOUNDER ]" />
+              </p>
+              <TextReveal>
+                <h2 className="text-2xl md:text-4xl font-display uppercase tracking-tight leading-tight mb-6">
+                  You work directly<br />with the founder.
+                </h2>
+              </TextReveal>
+              <p className="text-sm leading-relaxed opacity-50 max-w-lg mb-8">
+                Gabriel Balenton - from the first conversation to the finished build. No account managers in between, no handoffs to someone else halfway through. Just someone who takes the time to understand what you're actually dealing with before touching the work.
+              </p>
+              <MagneticButton strength={0.4}>
+                <Link
+                  to="/about"
+                  className="inline-flex items-center gap-3 group"
+                >
+                  <span className="text-[10px] tracking-[0.2em] uppercase font-bold opacity-50 group-hover:opacity-100 transition-opacity duration-300">Read the backstory</span>
+                  <ArrowRight size={12} className="opacity-50 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
+                </Link>
+              </MagneticButton>
+            </div>
+            <div className="lg:col-span-5 lg:flex lg:justify-end">
+              <div className="grid grid-cols-2 gap-3 max-w-xs">
+                {[
+                  { val: '40+', label: 'Site audits' },
+                  { val: '1,281', label: 'Pages deployed' },
+                  { val: '63%', label: 'Peak visibility gain' },
+                  { val: '8 wks', label: 'Fastest turnaround' },
+                ].map((s, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 12 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.4, delay: i * 0.08, ease: EASE }}
+                    className="border border-[#FAFAFA]/10 p-5"
+                  >
+                    <p className="text-2xl font-display text-[#FAFAFA] mb-1">{s.val}</p>
+                    <p className="text-[10px] tracking-[0.15em] uppercase text-[#A1A1AA]/40">{s.label}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </RevealSection>
 
         {/* ── STATS GRID ── */}
         <RevealSection className="py-20 px-6 md:px-12 border-t border-[#FAFAFA]/10">
@@ -728,6 +778,10 @@ export default function Home() {
             {
               q: 'What industries do you work with?',
               a: "E-commerce, SaaS, professional services, legal, health and wellness, real estate, and creative agencies. The frameworks transfer across industries because the underlying problems - poor site structure, manual workflows, content that doesn't convert - are the same everywhere.",
+            },
+            {
+              q: 'Why hire you instead of an agency?',
+              a: "Agencies have account managers, overhead, junior staff doing the actual work, and a business model built on keeping you on retainer. With Organic Theory, you work directly with the person who scoped it, built it, and will pick up if something needs fixing. No handoffs, no upsells, no monthly fees unless you want ongoing work. The $400 audit alone usually surfaces more than six months of agency reporting.",
             },
             {
               q: 'Do you work with overseas clients?',
