@@ -80,6 +80,9 @@ function ModuleAccordion({ modules }: { modules: typeof courses[0]['modules'] })
 export default function Courses() {
   const [activeTab, setActiveTab] = useState<string>(courses[0].id);
   const activeCourse = courses.find(c => c.id === activeTab) ?? courses[0];
+  const activeIndex = courses.findIndex(c => c.id === activeTab);
+  const goPrev = () => activeIndex > 0 && setActiveTab(courses[activeIndex - 1].id);
+  const goNext = () => activeIndex < courses.length - 1 && setActiveTab(courses[activeIndex + 1].id);
 
   const schema = {
     '@context': 'https://schema.org',
@@ -137,7 +140,7 @@ export default function Courses() {
             initial={{ opacity: 0 }} animate={{ opacity: 0.5 }} transition={{ duration: 0.8, delay: 0.5 }}
             className="text-sm md:text-base max-w-lg leading-relaxed mt-6"
           >
-            Three self-paced courses built directly from real client work. No fluff, no filler - just the frameworks and builds that actually move numbers. Buy once, access forever.
+            {courses.length} self-paced courses built directly from real client work. No fluff, no filler - just the frameworks and builds that actually move numbers. Buy once, access forever.
           </motion.p>
 
           <motion.div
@@ -147,9 +150,9 @@ export default function Courses() {
             className="flex flex-wrap gap-8 mt-10"
           >
             {[
-              { value: '3', label: 'Courses available now' },
+              { value: `${courses.length}`, label: 'Courses available now' },
               { value: '40+', label: 'Real audits sourced from' },
-              { value: '$49–$79', label: 'One-time pricing' },
+              { value: '$19–$29', label: 'One-time pricing' },
               { value: '0', label: 'Hours of fluff' },
             ].map(s => (
               <div key={s.label}>
@@ -163,24 +166,52 @@ export default function Courses() {
         {/* ── COURSE TABS ── */}
         <div className="border-t border-[#FAFAFA]/10">
           <div className="px-6 md:px-12 max-w-7xl mx-auto">
-            <div className="flex gap-0 border-b border-[#FAFAFA]/10 overflow-x-auto">
-              {courses.map(c => (
-                <button
-                  key={c.id}
-                  onClick={() => setActiveTab(c.id)}
-                  className={`px-6 py-5 text-left shrink-0 border-b-2 transition-all duration-200 ${
-                    activeTab === c.id
-                      ? 'border-[#FAFAFA] opacity-100'
-                      : 'border-transparent opacity-40 hover:opacity-70'
-                  }`}
-                >
-                  <div className={`text-[9px] font-bold tracking-[0.25em] uppercase border px-2 py-0.5 mb-2 inline-block ${TAG_COLORS[c.tag] ?? 'border-[#FAFAFA]/20 text-[#A1A1AA]'}`}>
-                    {c.tag}
-                  </div>
-                  <div className="text-sm font-display uppercase tracking-wide">{c.title}</div>
-                </button>
-              ))}
+            <div className="flex items-stretch border-b border-[#FAFAFA]/10">
+              {/* Prev button */}
+              <button
+                onClick={goPrev}
+                disabled={activeIndex === 0}
+                className="px-4 shrink-0 border-r border-[#FAFAFA]/10 text-[#FAFAFA] disabled:opacity-20 hover:bg-[#FAFAFA]/5 transition-colors"
+                aria-label="Previous course"
+              >
+                ←
+              </button>
+
+              {/* Scrollable tabs */}
+              <div className="flex gap-0 overflow-x-auto flex-1 scrollbar-hide">
+                {courses.map(c => (
+                  <button
+                    key={c.id}
+                    onClick={() => setActiveTab(c.id)}
+                    className={`px-6 py-5 text-left shrink-0 border-b-2 transition-all duration-200 ${
+                      activeTab === c.id
+                        ? 'border-[#FAFAFA] opacity-100'
+                        : 'border-transparent opacity-40 hover:opacity-70'
+                    }`}
+                  >
+                    <div className={`text-[9px] font-bold tracking-[0.25em] uppercase border px-2 py-0.5 mb-2 inline-block ${TAG_COLORS[c.tag] ?? 'border-[#FAFAFA]/20 text-[#A1A1AA]'}`}>
+                      {c.tag}
+                    </div>
+                    <div className="text-sm font-display uppercase tracking-wide">{c.title}</div>
+                  </button>
+                ))}
+              </div>
+
+              {/* Next button */}
+              <button
+                onClick={goNext}
+                disabled={activeIndex === courses.length - 1}
+                className="px-4 shrink-0 border-l border-[#FAFAFA]/10 text-[#FAFAFA] disabled:opacity-20 hover:bg-[#FAFAFA]/5 transition-colors"
+                aria-label="Next course"
+              >
+                →
+              </button>
             </div>
+
+            {/* Counter */}
+            <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/40 pt-3 pb-1">
+              {activeIndex + 1} / {courses.length}
+            </p>
           </div>
 
           <AnimatePresence mode="wait">

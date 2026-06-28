@@ -67,7 +67,8 @@ export default function SiteAuditTool() {
     setResult(null);
 
     try {
-      const endpoint = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(target)}&strategy=mobile&category=seo&category=performance`;
+      const apiKey = import.meta.env.VITE_PSI_KEY ? `&key=${import.meta.env.VITE_PSI_KEY}` : '';
+      const endpoint = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(target)}&strategy=mobile&category=seo&category=performance${apiKey}`;
       const res = await fetch(endpoint);
       const data = await res.json();
 
