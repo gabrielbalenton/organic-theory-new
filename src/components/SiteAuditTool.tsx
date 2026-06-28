@@ -69,9 +69,15 @@ export default function SiteAuditTool() {
     try {
       const endpoint = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(target)}&strategy=mobile&category=seo&category=performance`;
       const res = await fetch(endpoint);
-      if (!res.ok) throw new Error('API error');
       const data = await res.json();
+
+      if (!res.ok || data.error) {
+        const msg = data.error?.message ?? data.error?.status ?? 'API error';
+        throw new Error(msg);
+      }
+
       const lhr = data.lighthouseResult;
+      if (!lhr) throw new Error('No lighthouse result returned');
       const audits = lhr.audits;
 
       const seoScore = Math.round((lhr.categories?.seo?.score ?? 0) * 100);
@@ -99,8 +105,8 @@ export default function SiteAuditTool() {
       });
 
       setTimeout(() => resultsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
-    } catch {
-      setError("Could not reach that URL. Make sure it's publicly accessible and try again.");
+    } catch (err: any) {
+      setError(err?.message ?? "Something went wrong. Try again.");
     } finally {
       setLoading(false);
     }
