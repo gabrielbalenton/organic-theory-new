@@ -30,6 +30,218 @@ const inputCls = 'w-full bg-transparent border-b border-[#FAFAFA]/15 py-3 text-s
 const labelCls = 'text-[10px] tracking-[0.25em] uppercase text-[#A1A1AA] block mb-2 font-bold';
 const textareaCls = 'w-full bg-transparent border border-[#FAFAFA]/10 p-4 text-sm text-[#FAFAFA] focus:outline-none focus:border-[#FAFAFA]/30 transition-colors placeholder:text-[#FAFAFA]/30 resize-none';
 
+// ─── SCHEMA MARKUP GENERATOR ──────────────────────────────────
+
+function SchemaMarkupGenerator() {
+  const [type, setType] = useState<'LocalBusiness' | 'FAQPage' | 'Article' | 'HowTo'>('LocalBusiness');
+
+  // LocalBusiness fields
+  const [lbName, setLbName] = useState('');
+  const [lbUrl, setLbUrl] = useState('');
+  const [lbDesc, setLbDesc] = useState('');
+  const [lbPhone, setLbPhone] = useState('');
+  const [lbStreet, setLbStreet] = useState('');
+  const [lbCity, setLbCity] = useState('');
+  const [lbCountry, setLbCountry] = useState('');
+  const [lbBizType, setLbBizType] = useState('LocalBusiness');
+
+  // FAQPage fields
+  const [faqs, setFaqs] = useState([{ q: '', a: '' }, { q: '', a: '' }]);
+
+  // Article fields
+  const [artHeadline, setArtHeadline] = useState('');
+  const [artAuthor, setArtAuthor] = useState('');
+  const [artDatePub, setArtDatePub] = useState('');
+  const [artDateMod, setArtDateMod] = useState('');
+  const [artDesc, setArtDesc] = useState('');
+  const [artUrl, setArtUrl] = useState('');
+
+  // HowTo fields
+  const [howTitle, setHowTitle] = useState('');
+  const [howDesc, setHowDesc] = useState('');
+  const [howSteps, setHowSteps] = useState([{ name: '', text: '' }, { name: '', text: '' }]);
+
+  const buildSchema = (): object => {
+    if (type === 'LocalBusiness') {
+      const obj: Record<string, unknown> = {
+        '@context': 'https://schema.org',
+        '@type': lbBizType || 'LocalBusiness',
+      };
+      if (lbName) obj.name = lbName;
+      if (lbUrl) obj.url = lbUrl;
+      if (lbDesc) obj.description = lbDesc;
+      if (lbPhone) obj.telephone = lbPhone;
+      if (lbStreet || lbCity || lbCountry) {
+        const addr: Record<string, string> = { '@type': 'PostalAddress' };
+        if (lbStreet) addr.streetAddress = lbStreet;
+        if (lbCity) addr.addressLocality = lbCity;
+        if (lbCountry) addr.addressCountry = lbCountry;
+        obj.address = addr;
+      }
+      return obj;
+    }
+    if (type === 'FAQPage') {
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs
+          .filter(f => f.q.trim())
+          .map(f => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a },
+          })),
+      };
+    }
+    if (type === 'Article') {
+      const obj: Record<string, unknown> = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+      };
+      if (artHeadline) obj.headline = artHeadline;
+      if (artAuthor) obj.author = { '@type': 'Person', name: artAuthor };
+      if (artDatePub) obj.datePublished = artDatePub;
+      if (artDateMod) obj.dateModified = artDateMod;
+      if (artDesc) obj.description = artDesc;
+      if (artUrl) obj.url = artUrl;
+      return obj;
+    }
+    // HowTo
+    const obj: Record<string, unknown> = {
+      '@context': 'https://schema.org',
+      '@type': 'HowTo',
+    };
+    if (howTitle) obj.name = howTitle;
+    if (howDesc) obj.description = howDesc;
+    const steps = howSteps.filter(s => s.name.trim() || s.text.trim());
+    if (steps.length) {
+      obj.step = steps.map((s, i) => ({
+        '@type': 'HowToStep',
+        position: i + 1,
+        name: s.name,
+        text: s.text,
+      }));
+    }
+    return obj;
+  };
+
+  const json = JSON.stringify(buildSchema(), null, 2);
+  const output = `<script type="application/ld+json">\n${json}\n<\/script>`;
+
+  const selectCls = `${inputCls} appearance-none`;
+
+  return (
+    <div className="space-y-8">
+      {/* Type selector */}
+      <div>
+        <label className={labelCls}>Schema type</label>
+        <select
+          value={type}
+          onChange={e => setType(e.target.value as typeof type)}
+          className={selectCls}
+          style={{ background: 'transparent' }}
+        >
+          {(['LocalBusiness', 'FAQPage', 'Article', 'HowTo'] as const).map(t => (
+            <option key={t} value={t} className="bg-[#09090B]">{t}</option>
+          ))}
+        </select>
+      </div>
+
+      {/* LocalBusiness fields */}
+      {type === 'LocalBusiness' && (
+        <div className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div><label className={labelCls}>Business Name</label><input value={lbName} onChange={e => setLbName(e.target.value)} placeholder="Acme Corp" className={inputCls} /></div>
+            <div><label className={labelCls}>Website URL</label><input value={lbUrl} onChange={e => setLbUrl(e.target.value)} placeholder="https://acmecorp.com" className={inputCls} /></div>
+            <div><label className={labelCls}>Phone</label><input value={lbPhone} onChange={e => setLbPhone(e.target.value)} placeholder="+1-800-555-0100" className={inputCls} /></div>
+            <div>
+              <label className={labelCls}>Business Type</label>
+              <select value={lbBizType} onChange={e => setLbBizType(e.target.value)} className={selectCls} style={{ background: 'transparent' }}>
+                {['LocalBusiness','Restaurant','MedicalBusiness','LegalService','FinancialService','ProfessionalService'].map(t => (
+                  <option key={t} value={t} className="bg-[#09090B]">{t}</option>
+                ))}
+              </select>
+            </div>
+            <div><label className={labelCls}>Street Address</label><input value={lbStreet} onChange={e => setLbStreet(e.target.value)} placeholder="123 Main St" className={inputCls} /></div>
+            <div><label className={labelCls}>City</label><input value={lbCity} onChange={e => setLbCity(e.target.value)} placeholder="San Francisco" className={inputCls} /></div>
+            <div><label className={labelCls}>Country (2-letter code)</label><input value={lbCountry} onChange={e => setLbCountry(e.target.value)} placeholder="US" maxLength={2} className={inputCls} /></div>
+          </div>
+          <div><label className={labelCls}>Description</label><textarea value={lbDesc} onChange={e => setLbDesc(e.target.value)} placeholder="Brief description of the business…" rows={3} className={textareaCls} /></div>
+        </div>
+      )}
+
+      {/* FAQPage fields */}
+      {type === 'FAQPage' && (
+        <div className="space-y-4">
+          {faqs.map((faq, i) => (
+            <div key={i} className="border border-[#FAFAFA]/10 p-5 bg-[#FAFAFA]/[0.015] space-y-3">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] tracking-[0.25em] uppercase text-[#A1A1AA] font-bold">Q&amp;A {i + 1}</span>
+                {faqs.length > 1 && (
+                  <button onClick={() => setFaqs(prev => prev.filter((_, idx) => idx !== i))} className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA] hover:text-red-400 transition-colors font-bold">Remove</button>
+                )}
+              </div>
+              <div><label className={labelCls}>Question</label><input value={faq.q} onChange={e => setFaqs(prev => prev.map((f, idx) => idx === i ? { ...f, q: e.target.value } : f))} placeholder="What is your return policy?" className={inputCls} /></div>
+              <div><label className={labelCls}>Answer</label><textarea value={faq.a} onChange={e => setFaqs(prev => prev.map((f, idx) => idx === i ? { ...f, a: e.target.value } : f))} placeholder="Our return policy allows…" rows={3} className={textareaCls} /></div>
+            </div>
+          ))}
+          {faqs.length < 4 && (
+            <button onClick={() => setFaqs(prev => [...prev, { q: '', a: '' }])} className="text-[10px] tracking-[0.2em] uppercase font-bold text-[#A1A1AA] hover:text-[#FAFAFA] transition-colors border border-[#FAFAFA]/10 px-4 py-2 hover:border-[#FAFAFA]/30">+ Add Q&amp;A pair</button>
+          )}
+        </div>
+      )}
+
+      {/* Article fields */}
+      {type === 'Article' && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="md:col-span-2"><label className={labelCls}>Headline</label><input value={artHeadline} onChange={e => setArtHeadline(e.target.value)} placeholder="How to Master SEO in 2026" className={inputCls} /></div>
+          <div><label className={labelCls}>Author Name</label><input value={artAuthor} onChange={e => setArtAuthor(e.target.value)} placeholder="Jane Smith" className={inputCls} /></div>
+          <div><label className={labelCls}>URL</label><input value={artUrl} onChange={e => setArtUrl(e.target.value)} placeholder="https://yoursite.com/article" className={inputCls} /></div>
+          <div><label className={labelCls}>Date Published</label><input type="date" value={artDatePub} onChange={e => setArtDatePub(e.target.value)} className={inputCls} /></div>
+          <div><label className={labelCls}>Date Modified</label><input type="date" value={artDateMod} onChange={e => setArtDateMod(e.target.value)} className={inputCls} /></div>
+          <div className="md:col-span-2"><label className={labelCls}>Description</label><textarea value={artDesc} onChange={e => setArtDesc(e.target.value)} placeholder="A brief summary of the article…" rows={3} className={textareaCls} /></div>
+        </div>
+      )}
+
+      {/* HowTo fields */}
+      {type === 'HowTo' && (
+        <div className="space-y-5">
+          <div><label className={labelCls}>Title</label><input value={howTitle} onChange={e => setHowTitle(e.target.value)} placeholder="How to bake sourdough bread" className={inputCls} /></div>
+          <div><label className={labelCls}>Description</label><textarea value={howDesc} onChange={e => setHowDesc(e.target.value)} placeholder="A step-by-step guide to…" rows={2} className={textareaCls} /></div>
+          <div className="space-y-3">
+            <p className="text-[10px] tracking-[0.25em] uppercase text-[#A1A1AA] font-bold">Steps</p>
+            {howSteps.map((step, i) => (
+              <div key={i} className="border border-[#FAFAFA]/10 p-5 bg-[#FAFAFA]/[0.015] space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] tracking-[0.25em] uppercase text-[#A1A1AA] font-bold">Step {i + 1}</span>
+                  {howSteps.length > 1 && (
+                    <button onClick={() => setHowSteps(prev => prev.filter((_, idx) => idx !== i))} className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA] hover:text-red-400 transition-colors font-bold">Remove</button>
+                  )}
+                </div>
+                <div><label className={labelCls}>Step Name</label><input value={step.name} onChange={e => setHowSteps(prev => prev.map((s, idx) => idx === i ? { ...s, name: e.target.value } : s))} placeholder="Mix the ingredients" className={inputCls} /></div>
+                <div><label className={labelCls}>Step Description</label><textarea value={step.text} onChange={e => setHowSteps(prev => prev.map((s, idx) => idx === i ? { ...s, text: e.target.value } : s))} placeholder="Combine flour, water, and salt in a large bowl…" rows={2} className={textareaCls} /></div>
+              </div>
+            ))}
+            {howSteps.length < 6 && (
+              <button onClick={() => setHowSteps(prev => [...prev, { name: '', text: '' }])} className="text-[10px] tracking-[0.2em] uppercase font-bold text-[#A1A1AA] hover:text-[#FAFAFA] transition-colors border border-[#FAFAFA]/10 px-4 py-2 hover:border-[#FAFAFA]/30">+ Add step</button>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Output */}
+      <div className="border border-[#FAFAFA]/10 bg-[#FAFAFA]/[0.02] p-4 relative">
+        <div className="flex items-center justify-between mb-3">
+          <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA] font-bold">JSON-LD Output</p>
+          <CopyButton text={output} />
+        </div>
+        <pre className="text-xs text-[#FAFAFA]/60 overflow-auto max-h-64 font-mono whitespace-pre-wrap">{output}</pre>
+      </div>
+      <p className="text-[10px] opacity-30 leading-relaxed">Paste the output into your page's &lt;head&gt; tag. Validate at schema.org/validator before deploying.</p>
+    </div>
+  );
+}
+
 // ─── SEO TOOLS ────────────────────────────────────────────────
 
 function scoreTitle(t: string) {
@@ -783,6 +995,7 @@ const CATEGORIES = [
       { id: 'keyword', label: 'Keyword Density', desc: 'Paste content and instantly see your top keywords by frequency.', component: KeywordDensity },
       { id: 'heading', label: 'Heading Auditor', desc: 'Paste HTML and visualize your H1–H6 structure for SEO compliance.', component: HeadingAudit },
       { id: 'schema', label: 'Schema Builder', desc: 'Generate JSON-LD structured data markup for your page type.', component: SchemaBuilder },
+      { id: 'schemamarkup', label: 'Schema Markup Generator', desc: 'Generate rich, valid JSON-LD for LocalBusiness, FAQPage, Article, and HowTo — ready to paste into your <head>.', component: SchemaMarkupGenerator },
       { id: 'og', label: 'OG Preview', desc: 'Preview how your page looks when shared on Facebook and LinkedIn.', component: OGPreview },
       { id: 'aeo', label: 'AEO Checker', desc: 'Score your content for AI readability and answer-engine optimization.', component: AEOChecker },
     ],

@@ -335,4 +335,82 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'google-business-profile-setup-2026',
+    title: 'How to Set Up Google Business Profile the Right Way in 2026',
+    excerpt: "Most businesses create a Google Business Profile and leave it half-finished. Here's the complete setup that actually drives calls, directions, and clicks.",
+    category: 'Local SEO',
+    readTime: 6,
+    date: '2026-06-25',
+    sections: [
+      {
+        body: "Most Google Business Profiles are 40% complete. The business name is there, maybe an address, a handful of photos from two years ago. That's not a profile — it's a placeholder. A fully built-out GBP is one of the highest-ROI things a local business can do. Here's how to do it properly.",
+      },
+      {
+        heading: 'Claiming vs creating',
+        body: "Before you build anything, check whether a profile already exists for your business. Google sometimes auto-generates listings from public data. Search your business name on Google Maps. If a listing exists but isn't claimed, claim it — don't create a duplicate. Duplicate listings split your authority and confuse the algorithm. If you're starting fresh, go to business.google.com and follow the verification steps. Phone or postcard verification is standard for most categories.",
+      },
+      {
+        heading: 'Category selection — primary matters most',
+        body: "Your primary category is the most important field in the entire profile. It tells Google what your business fundamentally is, and it determines which searches you're eligible to appear for. Be specific. 'Plumber' outperforms 'Contractor'. 'Personal Injury Attorney' outperforms 'Legal Services'. Don't keyword-stuff the category — pick the one that most precisely describes your core service. Add secondary categories for supplementary services, but don't add more than five or six. Dilution is real.",
+      },
+      {
+        heading: 'Writing your business description',
+        body: "You have 750 characters. Use the first 250 well — that's what shows before the 'More' cutoff. Write in plain language about what you do, who you serve, and what makes you different. Include natural mentions of your primary service and location. Don't stuff keywords. 'Sydney plumber offering hot water systems, gas fitting, and emergency repairs' reads naturally and contains the keywords that matter. 'Best plumber Sydney — #1 plumbing services Sydney NSW' reads like spam and gets ignored by both users and the algorithm.",
+      },
+      {
+        heading: 'Services, products, and attributes',
+        body: "Fill out the services section completely. Add every service you actually offer with a name, description, and price if applicable. Google surfaces individual services in search results — a search for 'roof repair near me' can return your specific roof repair service listing, not just your general profile. Attributes are equally important. 'Women-led', 'wheelchair accessible entrance', 'outdoor seating', 'free Wi-Fi' — these filter signals that match your profile to specific searches. Check every applicable attribute. Most businesses skip this section entirely.",
+      },
+      {
+        heading: 'Photos — real ones',
+        body: "Upload real photos. Not stock images. Not renders. Photos of your team, your work, your premises, and your process. Google can detect stock photography patterns and it negatively affects profile quality scores. Aim for at least 20 photos at launch: exterior, interior, team, products or work samples, and a logo. Add new photos regularly — profiles with recent photo activity rank higher than static ones. Geo-tagged photos (taken on a phone with location enabled) carry additional local authority signals.",
+      },
+      {
+        heading: 'The section most businesses skip: Q&A',
+        body: "The Q&A section on your GBP is public — anyone can ask a question, and anyone can answer it. That includes competitors and bots. The move is to pre-populate it yourself. Log in as your business, go to your profile, and add the 8–10 questions your customers most commonly ask. 'Do you offer emergency callouts?' 'What areas do you service?' 'Do you charge for quotes?' Answer them thoroughly. This controls the narrative, adds keyword-rich content to your profile, and prevents misinformation from filling the gap.",
+      },
+      {
+        heading: 'The profile is table stakes — activity is what separates ranked from invisible',
+        body: "A complete profile gets you in the game. What keeps you ranking is consistent activity. Post weekly Google Business updates — offers, news, events, or tips. Respond to every review within 24 hours, positive or negative. Add photos monthly. Answer new Q&A questions as they appear. The businesses in the local three-pack aren't just there because their profile is complete. They're there because their profile is alive. Set a recurring calendar reminder and treat your GBP like a channel, not a one-time setup.",
+      },
+    ],
+  },
+  {
+    slug: 'what-is-aeo-2026',
+    title: 'What Is AEO and Why Should You Care in 2026',
+    excerpt: "Answer Engine Optimisation isn't SEO with a new name. It's a different game with different rules — and most businesses haven't started playing it yet.",
+    category: 'AEO & Content',
+    readTime: 5,
+    date: '2026-06-26',
+    sections: [
+      {
+        body: "AEO stands for Answer Engine Optimisation. It's the practice of structuring your content so that AI systems — ChatGPT, Perplexity, Google's AI Overviews, Claude — can extract it, cite it, and surface it in answer-format responses. It's not a rebrand of SEO. It's a different layer of the same problem.",
+      },
+      {
+        heading: 'The difference between search and answer engines',
+        body: "In traditional search, Google returns a ranked list of links. Your job is to get your link high enough that someone clicks it. The user visits your page. In an answer engine, the AI synthesises an answer from multiple sources and delivers it directly. The user may never visit any page at all. Your job is no longer to rank — it's to be the source the AI draws from. That's a meaningful shift. Ranking and being cited are related but not the same thing.",
+      },
+      {
+        heading: 'Why most businesses are at 0%',
+        body: "Traditional SEO has been around since the late nineties. There are entire agencies, certification programs, and tools built around it. AEO is two years old as a deliberate practice. Most businesses have no AEO strategy, no structured data, no content written to be cited by AI, and no visibility into whether AI systems are mentioning them at all. That's not a criticism — it's an opportunity. The field isn't crowded yet.",
+      },
+      {
+        heading: 'What signals AI uses to decide who to cite',
+        body: "AI systems aren't ranking pages — they're evaluating sources for authority, clarity, and relevance. The signals that matter: domain authority (are you a credible source on this topic?), content clarity (is the answer extractable without interpretation?), structure (does the content use headings, lists, and direct answers?), and being quotable (can the AI lift a sentence that stands alone?). A 3,000-word article that buries the answer in paragraph seven is hard for AI to use. A 600-word post that answers the question directly in the first 100 words is easy.",
+      },
+      {
+        heading: 'What to do practically',
+        body: "Start with structure. Write in a direct Q&A format where the heading is the question and the first sentence is the answer. Use numbered lists for processes. Use bulleted lists for options or comparisons. Add FAQ schema to every service page and blog post — JSON-LD markup that explicitly tells AI systems what questions your content answers. Write definition sentences: 'AEO is...' 'A Google Business Profile is...' These give AI systems a quotable anchor point they can pull cleanly.",
+      },
+      {
+        heading: 'Be the clearest source, not the most comprehensive',
+        body: "There's a common instinct to write exhaustive, 5,000-word pieces to cover every angle of a topic. That instinct made sense for traditional SEO. For AEO, it's often counterproductive. AI systems don't need your entire article — they need one clear, accurate, citable answer to a specific question. A focused 800-word piece that answers one thing perfectly will be cited more often than a sprawling guide that touches everything but nails nothing. Depth on a narrow question beats breadth across a wide topic.",
+      },
+      {
+        heading: 'The window is open right now',
+        body: "Most businesses are 0% optimised for AEO. The ones who start structuring their content, adding structured data, and writing for citability now have a 2–3 year head start on the ones who wait until AEO is mainstream. It took SEO about five years to go from niche practice to table stakes. AEO is on a similar trajectory, compressed by the pace of AI adoption. The businesses that build this into their content process today will be the authoritative sources AI cites when their competitors finally show up.",
+      },
+    ],
+  },
 ];

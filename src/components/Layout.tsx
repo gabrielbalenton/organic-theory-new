@@ -126,7 +126,17 @@ export default function Layout() {
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex gap-8 font-sans text-[10px] tracking-[0.2em] uppercase z-50">
+          <nav className="hidden md:flex items-center gap-8 font-sans text-[10px] tracking-[0.2em] uppercase z-50">
+            <Link
+              to="/start"
+              className={`border px-3 py-1.5 transition-all duration-200 ${
+                location.pathname === '/start'
+                  ? 'border-[#FAFAFA] text-[#FAFAFA]'
+                  : 'border-[#FAFAFA]/30 text-[#FAFAFA]/70 hover:border-[#FAFAFA] hover:text-[#FAFAFA]'
+              }`}
+            >
+              Start Here
+            </Link>
             {NAV_LINKS.map(({ to, label }) => (
               <Link
                 key={to}
@@ -160,7 +170,7 @@ export default function Layout() {
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               className="fixed inset-0 z-40 bg-[#09090B] flex flex-col items-center justify-center gap-10"
             >
-              {[{ to: '/', label: 'Home' }, ...NAV_LINKS].map(({ to, label }) => (
+              {[{ to: '/', label: 'Home' }, { to: '/start', label: 'Start Here' }, ...NAV_LINKS].map(({ to, label }) => (
                 <Link
                   key={to}
                   to={to}
