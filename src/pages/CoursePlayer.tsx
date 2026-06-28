@@ -3,6 +3,7 @@ import { useParams, Link, useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { ChevronDown, CheckCircle, Download, ArrowLeft, Lock, X, ArrowRight, BookOpen, Lightbulb, AlertTriangle, Info } from 'lucide-react';
+import Cursor from '../components/Cursor';
 import { courses } from '../data/coursesData';
 import { lessonContent, type Block } from '../data/lessonContent';
 
@@ -248,6 +249,7 @@ export default function CoursePlayer() {
 
   return (
     <>
+      <Cursor />
       <Helmet>
         <title>{course.title} | Organic Theory</title>
         <meta name="robots" content="noindex" />

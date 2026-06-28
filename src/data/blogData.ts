@@ -162,4 +162,177 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: 'google-ai-overviews-clicks',
+    title: "Google's AI Overviews Are Eating Clicks. Here's What to Do About It.",
+    excerpt: "AI Overviews are reducing clicks for certain queries — but the businesses getting hit hardest built their traffic on thin informational content. The fix isn't to panic. It's to become the source AI cites.",
+    category: 'AEO & Content',
+    readTime: 6,
+    date: '2025-05-08',
+    sections: [
+      {
+        body: "Google's AI Overviews rolled out broadly in 2024 and the click-through rate data is in: yes, they reduce clicks for some queries. Specifically the ones where someone types a question and Google can answer it without sending them anywhere. If your traffic strategy relied on those queries, you felt it.",
+      },
+      {
+        heading: 'Who actually got hurt',
+        body: "The sites that took the biggest hit were built on what I'd call tourist content — 'What is X?' and 'How does Y work?' articles written to rank, not to convert. That content was always on borrowed time. AI Overviews just made the clock visible. If you were pulling organic traffic from top-of-funnel informational queries with no real depth behind them, that traffic was never as valuable as it looked in Analytics.",
+      },
+      {
+        heading: 'The shift: from ranking to being cited',
+        body: "Here's the reframe. Traditional SEO was about getting your page to rank in position one. AEO — answer engine optimisation — is about getting your content cited as the source. Google's AI Overview still pulls from somewhere. Perplexity cites sources explicitly. ChatGPT's browsing mode references pages. The goal has shifted from 'rank on page one' to 'be the authoritative source the AI draws from.'",
+      },
+      {
+        heading: 'What actually helps you get cited',
+        body: "Three things matter more than anything else right now. First, structured data. JSON-LD schema — especially FAQPage, HowTo, and Article — gives AI systems a machine-readable signal about what your content is and what questions it answers. Second, E-E-A-T signals: Experience, Expertise, Authoritativeness, Trustworthiness. Real author bylines. First-person experience in the writing. Citations of your own data or case results. Third, being quotable. Write sentences that can be extracted cleanly. Short, declarative, factual. AI models pull sentences, not paragraphs.",
+      },
+      {
+        heading: 'The practical checklist',
+        body: "Audit your top-ten traffic pages. For each one, ask: does this page have FAQPage schema? Does the opening 150 words contain a direct, extractable answer to the primary query? Is the author attributed with credentials? Is there original data or insight here that can't be scraped from Wikipedia? If the answer to most of those is no, you have work to do — but it's fixable work.",
+      },
+      {
+        heading: 'The bigger picture',
+        body: "Businesses that built traffic on genuine authority — real expertise, real case studies, real answers to hard questions — are seeing AI Overviews send them more qualified traffic, not less. The AI cites them and the user clicks through wanting more. That's the direction of travel. Build content that deserves to be the source, and the algorithm catches up.",
+      },
+    ],
+  },
+  {
+    slug: 'businesses-using-ai-wrong',
+    title: 'Why I Think Most Businesses Are Using AI Wrong',
+    excerpt: "Everyone's using ChatGPT to write blog posts nobody reads. The real value of AI in business is in operations — routing, sorting, summarising, responding — not content generation.",
+    category: 'AI Automation',
+    readTime: 5,
+    date: '2025-05-21',
+    sections: [
+      {
+        body: "Walk into any marketing meeting and someone will bring up AI-generated content. 'We can publish five times a week now.' 'We can fill out every page on the site.' It's the wrong conversation. Not because AI content is inherently bad — it's because content volume was never the constraint.",
+      },
+      {
+        heading: 'The wrong game',
+        body: "The businesses treating AI as a content machine are solving a problem that wasn't limiting their growth. They already had plenty of blog posts. What they didn't have was enough hours to handle incoming leads properly, a clean way to route support tickets, a reliable process for summarising call notes into CRM entries, or a consistent method for qualifying enquiries before a salesperson touches them. Those are the problems that compound.",
+      },
+      {
+        heading: 'Where AI actually moves the needle',
+        body: "The highest-leverage applications of AI I've seen in client work are all operational. An AI layer that reads incoming support emails and routes them to the right team member with a one-line summary. A system that listens to a sales call recording and writes the CRM note automatically. A chatbot that asks three qualification questions and books a call if the criteria are met — or sends a resources link if they aren't. These aren't flashy. They don't generate content you can point to. But they remove hours of manual drag from teams every week, permanently.",
+      },
+      {
+        heading: 'The content trap',
+        body: "Publishing more content with AI is tempting because it's measurable and visible. You can see the article count go up. What you can't see easily is that most of that content gets zero organic traffic, drives no conversions, and exists largely to make someone feel productive. Meanwhile the real wins — automated lead routing, AI-assisted qualification, summarisation workflows — sit unbuilt because they're less visible and harder to pitch in a boardroom.",
+      },
+      {
+        heading: 'What ahead of 90% looks like',
+        body: "I've worked with businesses that use AI to handle the first 80% of their inbound process with no human involvement. The enquiry comes in. AI classifies it. Relevant information is pulled together. A draft response is staged for human review or sent automatically if it meets set criteria. The human only steps in for edge cases and relationship-critical moments. That's not futuristic — it's running now. And businesses doing it have a structural cost and speed advantage that's only going to widen.",
+      },
+      {
+        heading: 'The question to ask',
+        body: "If you're evaluating where to use AI in your business, ask this: what does my team do every week that requires human time but not human judgment? The answer to that question is where AI belongs. Content generation is rarely the answer. Operations almost always is.",
+      },
+    ],
+  },
+  {
+    slug: 'chatgpt-didnt-kill-seo',
+    title: "ChatGPT Didn't Kill SEO. But It Changed the Game.",
+    excerpt: "The death-of-SEO takes were wrong. What changed is the type of content that gets rewarded. Authority, clarity, and structure still win — but the tactics on top are new.",
+    category: 'AEO & Content',
+    readTime: 6,
+    date: '2025-06-03',
+    sections: [
+      {
+        body: "When ChatGPT launched in late 2022, a wave of content appeared declaring SEO dead. The logic: if people can get answers from an AI directly, why would they search? Two years on, Google is still processing over 8 billion searches a day. SEO isn't dead. But it's genuinely different, and the difference matters.",
+      },
+      {
+        heading: 'What actually changed',
+        body: "What changed is where the answer gets delivered. For an increasing share of queries — particularly informational ones — the answer now appears in the search interface itself, via AI Overviews, or in a separate tool like Perplexity or ChatGPT. The user gets their answer without clicking through. The page that would have ranked still exists. But the visit doesn't happen. That's a real shift. It doesn't kill SEO, but it changes which queries are worth optimising for.",
+      },
+      {
+        heading: 'AEO is now a real discipline',
+        body: "Answer Engine Optimisation is the practice of structuring content so AI systems can extract, cite, and surface it accurately. It runs alongside traditional SEO, not instead of it. Traditional SEO still determines whether your content earns the domain authority to be cited at all. AEO determines whether the content, once found, is structured in a way that AI can use. You need both.",
+      },
+      {
+        heading: "The fundamentals haven't moved",
+        body: "What gets you cited by AI systems is almost identical to what gets you ranked in traditional search: authority signals on the domain, clear and accurate content, a logical structure that makes the topic hierarchy obvious, fast load times, and proper technical implementation. The underlying logic hasn't changed. A site with genuine topical authority, well-structured content, and solid technical SEO performs well in both traditional and AI-era search. The sites that are struggling are the ones that relied on tactics — thin content, exact-match domains, aggressive link schemes — rather than fundamentals.",
+      },
+      {
+        heading: 'The new tactics on top',
+        body: "On top of the unchanged fundamentals, there are new execution details that matter. Structured data is more important than it was — FAQPage and HowTo schema map directly to the formats AI systems prefer. Sentence-level clarity matters more — AI extracts individual sentences, so vague or complex prose gets skipped. First-person experience signals matter more — AI systems increasingly weight content that demonstrates lived experience, not just aggregated information. These aren't replacements for good SEO. They're additions.",
+      },
+      {
+        heading: 'The businesses that are fine',
+        body: "The businesses I work with that have strong domain authority, genuine expertise, and well-structured content aren't panicking about ChatGPT. Their traffic has shifted — fewer navigational clicks on basic queries, more qualified clicks from users who found them cited in an AI answer and wanted to know more. The signal-to-noise ratio on their traffic has actually improved. The game changed. The fundamentals didn't.",
+      },
+    ],
+  },
+  {
+    slug: 'automation-stack-2025',
+    title: 'The Automation Stack I Actually Use in 2025',
+    excerpt: "Make, n8n, and a few well-placed AI agents handle what used to take hours. Here's what's in the stack, why I chose each tool, and what the honest tradeoffs are.",
+    category: 'AI Automation',
+    readTime: 7,
+    date: '2025-06-11',
+    sections: [
+      {
+        body: "I get asked about tooling a lot. What do I actually use? What would I recommend? The honest answer is: it depends on the client and the complexity of the workflow. But there's a core stack I reach for most often, and I'll walk through it here — what each tool does, why it's in the stack, and where it falls short.",
+      },
+      {
+        heading: 'Make (formerly Integromat)',
+        body: "Make is my default for client-facing automations. The visual builder is genuinely good — clients can understand what a workflow does by looking at it, which matters when they need to hand it to a new team member or troubleshoot something without me. It handles most common integrations natively: HubSpot, Mailchimp, Shopify, Google Workspace, Slack, Typeform, Gravity Forms. For 80% of the automations I build, Make is the right tool. It's fast to build, easy to maintain, and the pricing is reasonable at scale.",
+      },
+      {
+        heading: 'Where Make hits its limits',
+        body: "Make becomes painful when you need complex conditional logic with many branching paths, or when you're processing large datasets in a single run. The scenario execution model — where each scenario run counts against your operations limit — can get expensive if you're running high-volume workflows. For anything involving more than a few hundred records per run, or deep conditional trees, Make starts to fight you.",
+      },
+      {
+        heading: 'n8n',
+        body: "n8n is what I reach for when the workflow is complex, when I want self-hosting control, or when the client has specific data sovereignty requirements. It's more flexible than Make — the node-based architecture lets you build flows that would be architecturally awkward in Make — and the self-hosted option means sensitive data never leaves the client's infrastructure. The tradeoff is the learning curve. n8n assumes a more technical user. Setting up credentials, handling errors gracefully, and building reliable retry logic all require more deliberate work than Make. I use it for the workflows that need that depth.",
+      },
+      {
+        heading: 'AI agents in the stack',
+        body: "I'm using Claude (via API) as an AI layer in a growing number of client workflows. The most common pattern: an automation fires when something arrives — an email, a form submission, a support ticket — and Claude classifies it, extracts key information, drafts a response, or routes it, before the rest of the workflow executes. This isn't a chatbot. It's a processing layer that makes the downstream automation smarter. The input arrives as unstructured text; Claude turns it into structured data that Make or n8n can act on.",
+      },
+      {
+        heading: "What I don't use",
+        body: "Zapier used to be my default before Make. I moved away from it because the pricing at scale is punishing and the feature set hasn't kept pace. It's still fine for simple, low-volume automations, and it has the best native integration library — if you need something obscure connected quickly, Zapier will have the connector. But for anything I'm building to last, Make or n8n win. I've also looked at Activepieces and Pipedream — both interesting, neither has displaced n8n for me yet.",
+      },
+      {
+        heading: 'The honest summary',
+        body: "Make for most things. n8n when complexity or data sovereignty demands it. Claude as an AI processing layer when unstructured inputs need to become structured outputs. That's the stack. None of these tools are magic — every automation I've built has required careful error handling, testing with real data, and iteration after the first real-world run. The value isn't in the tools. It's in the workflow design.",
+      },
+    ],
+  },
+  {
+    slug: 'agentic-ai-small-business',
+    title: "Agentic AI Is Coming. Most Small Businesses Aren't Ready.",
+    excerpt: "AI that takes actions — not just answers questions — is moving from hype to real. The businesses that built clean operations now will be the ones that can plug in AI agents effectively later.",
+    category: 'AI Automation',
+    readTime: 6,
+    date: '2025-06-19',
+    sections: [
+      {
+        body: "Agentic AI is the next meaningful shift in how businesses interact with artificial intelligence. Not AI that answers a question when you ask it — AI that takes a sequence of actions autonomously to complete a task. Book the appointment. Send the follow-up. Update the CRM. Flag the anomaly. Route the ticket. All without a human initiating each step.",
+      },
+      {
+        heading: 'What agentic actually means',
+        body: "The term gets used loosely, but for practical purposes: an AI agent is a system that can perceive its environment, decide what action to take, execute that action, observe the result, and loop until the task is done. It operates over multiple steps, uses tools (web search, email, CRM APIs, file systems), and handles some degree of ambiguity without human intervention at each step. That's qualitatively different from a chatbot or a classification model.",
+      },
+      {
+        heading: "It's not hype anymore",
+        body: "I've been sceptical of AI hype cycles for a while. Agentic AI is the one area where I think the pace of development is outrunning most people's mental models. The capability is here. Tools like Claude, GPT-4o, and the emerging agent frameworks built on top of them can reliably complete multi-step tasks across connected systems — when those systems are connected, properly documented, and the data is clean. That last clause is the catch.",
+      },
+      {
+        heading: 'The readiness gap',
+        body: "Most small businesses aren't ready for AI agents not because agents are too complex — but because the underlying infrastructure isn't there. Data is siloed across tools that don't talk to each other. Processes that should be in a CRM are in someone's inbox. There's no single source of truth for customer records. Automations are duct-taped together with manual handoffs in the middle. An AI agent can't work reliably in that environment. It needs clean inputs, clear outputs, and connected systems.",
+      },
+      {
+        heading: 'The advantage being built right now',
+        body: "The businesses building clean operational infrastructure now — connecting their tools, migrating to proper CRMs, building documented workflows, cleaning their data — are doing something that looks like overhead today and will look like a moat in two years. When capable AI agents become available off the shelf, the businesses with connected, structured operations will plug them in and run. The businesses with fragmented data and manual processes will spend months just getting to baseline.",
+      },
+      {
+        heading: 'What to do now',
+        body: "You don't need to build AI agents today. But you should be building toward an environment where they can operate. That means: consolidating your customer data into one system of record. Documenting your core operational workflows. Connecting your tools via APIs or automation platforms so data flows without manual intervention. Removing the human steps in your processes that don't require human judgment. Each of these investments pays off independently. But they also compound — because every connected, documented, clean-data process is one an AI agent can eventually take over entirely.",
+      },
+      {
+        heading: 'The gap will widen',
+        body: "The distance between businesses that have automated their operations and those that haven't is about to grow significantly. Not because the laggards are doing anything wrong — but because the leaders are building a platform that increasingly powerful AI can run on. If you're reading this and thinking 'we'll deal with AI later,' later is coming faster than you think.",
+      },
+    ],
+  },
 ];

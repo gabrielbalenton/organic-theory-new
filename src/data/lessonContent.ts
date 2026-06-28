@@ -929,4 +929,561 @@ export const lessonContent: Record<string, LessonContent> = {
       { type: 'callout', variant: 'success', title: 'Course complete', text: 'You now have the full AEO framework: how AI reads the web, structural patterns that get cited, schema implementation, and a 6-week monitoring plan. Apply this to every page you publish going forward.' },
     ],
   },
+
+  // ─── WEB DESIGN 101 ───────────────────────────────────────────────────────
+
+  'web-design-101__0__0': {
+    readTime: '12 min',
+    blocks: [
+      { type: 'paragraph', text: 'Most business websites look fine. They have a logo, some text, a contact form. And they do almost nothing. The gap between a site that looks acceptable and a site that actually generates enquiries is not about aesthetics — it\'s about clarity, structure, and intent.' },
+      { type: 'heading', text: 'The Job of a Business Website' },
+      { type: 'paragraph', text: 'Your website has one job: turn visitors into leads or buyers. Everything else — the design, the copy, the technology — is in service of that outcome. When a site fails to convert, the problem is almost always that this job was never clearly defined before a single pixel was placed.' },
+      { type: 'bullets', items: [
+        'A converting site answers three questions in seconds: what you do, who it\'s for, and what to do next',
+        'A pretty site that doesn\'t answer those questions is a liability, not an asset',
+        'Speed, clarity, and trust signals matter more than visual polish',
+        'Most conversion problems are copy problems wearing a design costume',
+      ]},
+      { type: 'heading', text: 'The Four Ingredients of a Working Site' },
+      { type: 'numbered', items: [
+        'Clear positioning — visitors know immediately if they\'re in the right place',
+        'Logical structure — the path from homepage to contact is obvious',
+        'Trust signals — social proof, credentials, and specifics that remove doubt',
+        'A single strong CTA — one clear next step, repeated consistently',
+      ]},
+      { type: 'callout', variant: 'tip', title: 'Quick test', text: 'Show your homepage to someone unfamiliar with your business. Ask them: what does this company do? Who is it for? What should I do next? If they can\'t answer all three in 10 seconds, your site has a clarity problem.' },
+      { type: 'heading', text: 'What We\'re Building in This Course' },
+      { type: 'paragraph', text: 'You\'ll leave this course knowing how to plan, design, and launch a site that converts — using the tools already available to you, without needing a designer or developer on call. Every module builds toward that outcome.' },
+    ],
+  },
+
+  'web-design-101__0__1': {
+    readTime: '15 min',
+    blocks: [
+      { type: 'paragraph', text: 'Most business sites have too many pages or the wrong pages. Here are the five pages that actually move the needle — everything else can wait.' },
+      { type: 'heading', text: 'Page 1: Homepage' },
+      { type: 'paragraph', text: 'Your homepage is not a brochure. It\'s a filter. It should immediately tell the right people they\'re in the right place and move them toward a service page or contact. Keep it focused: headline, one-paragraph explanation, primary CTA, three social proof signals, and a brief overview of services.' },
+      { type: 'heading', text: 'Page 2: Service Page(s)' },
+      { type: 'paragraph', text: 'You need at least one dedicated page per core service. This is where SEO and conversion overlap — specific service pages rank for specific queries and convert because they speak directly to a specific problem. One service per page, not all services on one page.' },
+      { type: 'heading', text: 'Page 3: About Page' },
+      { type: 'paragraph', text: 'People buy from people. Your about page builds the trust that closes the gap between interest and enquiry. Include who you are, why you do this work, your approach, and a direct link to contact. Keep it short — this is not your life story.' },
+      { type: 'heading', text: 'Page 4: Case Studies or Proof Page' },
+      { type: 'paragraph', text: 'Testimonials are good. Specific case studies with before/after results are better. A dedicated page for proof gives you a page to link to from every service page and ad campaign. Even two or three solid examples will outperform a wall of five-star quotes.' },
+      { type: 'heading', text: 'Page 5: Contact Page' },
+      { type: 'paragraph', text: 'Underestimated every time. Your contact page is a conversion page — treat it like one. Include a form (short), your email address, your location if relevant, expected response time, and optionally a brief re-statement of who you help. Remove friction at every point.' },
+      { type: 'callout', variant: 'info', title: 'When to add more pages', text: 'Only add pages when you have a clear reason: a service that deserves its own SEO target, a location page for local search, a resources section to support content strategy. Never add pages to look bigger.' },
+    ],
+  },
+
+  'web-design-101__0__2': {
+    readTime: '20 min',
+    blocks: [
+      { type: 'paragraph', text: 'Platform choice shapes what you can build, how fast, and at what ongoing cost. The wrong choice costs you time every month. Here\'s a direct comparison of the three platforms worth considering.' },
+      { type: 'heading', text: 'Webflow' },
+      { type: 'paragraph', text: 'Webflow is the most powerful no-code builder available. It produces clean, fast HTML/CSS, has strong SEO control, and handles complex layouts without restriction. The learning curve is steeper than WordPress page builders — expect a week to feel comfortable.' },
+      { type: 'bullets', items: [
+        'Best for: marketing sites, landing pages, portfolio sites, service business sites',
+        'Pros: design freedom, clean code output, good CMS for blogs and case studies',
+        'Cons: monthly cost ($23+/mo), steeper learning curve, less plugin ecosystem than WordPress',
+      ]},
+      { type: 'heading', text: 'Framer' },
+      { type: 'paragraph', text: 'Framer has emerged as the fastest way to build a high-quality marketing site. The interface is closer to a design tool (Figma-like) and the default output looks polished with minimal effort. Less flexible than Webflow for complex CMS needs.' },
+      { type: 'bullets', items: [
+        'Best for: solo founders, consultancies, and personal brands wanting speed',
+        'Pros: fast to build, excellent defaults, AI-assisted generation, good performance',
+        'Cons: less control over code, CMS is limited compared to Webflow, smaller community',
+      ]},
+      { type: 'heading', text: 'WordPress' },
+      { type: 'paragraph', text: 'WordPress powers 40% of the web. The ecosystem is unmatched — plugins for everything, thousands of developers, and every integration you\'ll ever need. The downside: it requires more maintenance and is only as good as the theme and builder you use.' },
+      { type: 'bullets', items: [
+        'Best for: content-heavy sites, WooCommerce stores, teams already on WordPress',
+        'Pros: maximum flexibility, huge ecosystem, SEO plugins (Yoast, RankMath)',
+        'Cons: maintenance overhead, security vulnerabilities if neglected, performance requires work',
+      ]},
+      { type: 'callout', variant: 'tip', title: 'My recommendation', text: 'For most small service businesses building or rebuilding from scratch: start with Framer for speed or Webflow for control. Only choose WordPress if you have a specific reason (existing site, WooCommerce, team familiarity).' },
+    ],
+  },
+
+  'web-design-101__0__3': {
+    readTime: '12 min',
+    blocks: [
+      { type: 'paragraph', text: 'The most common reason web projects take three times longer than planned: people start designing before they\'ve defined what the site needs to do. Structure first, design second.' },
+      { type: 'heading', text: 'Step 1: Define Your One Goal' },
+      { type: 'paragraph', text: 'What is the single most important action you want a visitor to take? Book a call, submit a form, buy a product? Every page should point toward that action. If you have two goals, you\'ll dilute both.' },
+      { type: 'heading', text: 'Step 2: Map the User Journey' },
+      { type: 'paragraph', text: 'Think about the three types of visitors who arrive at your site: cold (never heard of you), warm (heard of you, checking you out), and hot (ready to buy). Your site needs to serve all three — but in that order, because cold traffic is where most visitors start.' },
+      { type: 'heading', text: 'Step 3: Sketch the Sitemap' },
+      { type: 'paragraph', text: 'Before touching any design tool, write down the pages you need and how they link together. This doesn\'t need to be beautiful — a notes app or a piece of paper works. You\'re deciding: what pages exist, what each page does, and where each page links to.' },
+      { type: 'heading', text: 'Step 4: Write the Copy First' },
+      { type: 'paragraph', text: 'This is the step most people skip and always regret. Write the words for each page before you design it. Design wraps around content — it doesn\'t precede it. If you design first and write later, you\'ll find your copy doesn\'t fit, your hierarchy breaks, and you redesign three times.' },
+      { type: 'callout', variant: 'warning', title: 'Common mistake', text: 'Using placeholder text (Lorem Ipsum) in your design and filling in "real words later." This produces a site that looks great in mockup and confuses visitors in reality. Real words, real structure, before real design.' },
+    ],
+  },
+
+  // ─── EMAIL SERIES THAT CONVERTS ───────────────────────────────────────────
+
+  'email-series-converts__0__0': {
+    readTime: '12 min',
+    blocks: [
+      { type: 'paragraph', text: 'Most email sequences fail before a single word is written. They fail because the person writing them hasn\'t defined what the sequence is supposed to do, who it\'s for, or where it sits in the buyer journey. Strategy first, writing second.' },
+      { type: 'heading', text: 'The Three Failure Modes' },
+      { type: 'numbered', items: [
+        'Generic messaging — the sequence talks to everyone and resonates with no one',
+        'Wrong timing — emails arrive before the reader is ready for that conversation',
+        'No defined outcome — the sequence wanders without moving toward a clear next step',
+      ]},
+      { type: 'heading', text: 'What a Sequence Is Actually For' },
+      { type: 'paragraph', text: 'An email sequence is a structured movement through a journey. Your reader enters at one point — interested but not ready — and exits at another: trusting you enough to take an action. That action might be booking a call, buying a product, or simply staying subscribed. Define it before you write email one.' },
+      { type: 'callout', variant: 'info', title: 'The three sequence types', text: 'Welcome sequences build trust with new subscribers. Nurture sequences develop interest over time. Sales sequences move readers toward a specific purchase or booking. You need all three — most businesses only have the first, and badly.' },
+      { type: 'heading', text: 'Before You Start Writing' },
+      { type: 'bullets', items: [
+        'Who is this sequence for? (Be specific — "small business owners" is too broad)',
+        'Where did they come from? (Opt-in, purchase, enquiry form?)',
+        'What do they already know and believe about the problem you solve?',
+        'What\'s the one action you want them to take at the end?',
+        'What objections do they have that you need to address along the way?',
+      ]},
+      { type: 'paragraph', text: 'Answering these five questions is the strategy work. Everything after this — the writing, the timing, the automation — is execution.' },
+    ],
+  },
+
+  'email-series-converts__0__1': {
+    readTime: '20 min',
+    blocks: [
+      { type: 'paragraph', text: 'Your buyer doesn\'t go from "stranger" to "paying client" in one email. They move through stages — awareness, consideration, decision — and your email flows need to map to that movement.' },
+      { type: 'heading', text: 'The Buyer Journey in Email Terms' },
+      { type: 'table', headers: ['Stage', 'What They\'re Thinking', 'Email Job'], rows: [
+        ['Awareness', 'I have a problem. Is there a solution?', 'Validate the problem, introduce your perspective'],
+        ['Consideration', 'What options exist? Is this the right fit?', 'Build trust, demonstrate expertise, address objections'],
+        ['Decision', 'Should I buy from this person?', 'Remove last objections, create urgency, make the offer clear'],
+      ]},
+      { type: 'heading', text: 'Mapping Sequences to Stages' },
+      { type: 'paragraph', text: 'Your welcome sequence covers awareness and the early edge of consideration. Your nurture sequence covers consideration. Your sales sequence closes at decision. If you try to do all three in a single 5-email welcome sequence, you\'ll lose people at every stage.' },
+      { type: 'heading', text: 'Drawing the Map' },
+      { type: 'paragraph', text: 'Open a blank document or whiteboard. Draw the entry points — every way someone can join your list. For each entry point, define which sequence they enter. Then map where they go next based on behaviour: clicked the offer → sales sequence; didn\'t engage → re-engagement flow.' },
+      { type: 'callout', variant: 'tip', title: 'Start with one path', text: 'You don\'t need to map every possible journey before you start. Pick your most important entry point (e.g., opt-in from a lead magnet) and map that one path completely. Build the rest once the first sequence is live and converting.' },
+    ],
+  },
+
+  'email-series-converts__0__2': {
+    readTime: '15 min',
+    blocks: [
+      { type: 'paragraph', text: 'Segmentation is the practice of sending different emails to different groups of subscribers based on what you know about them. It sounds obvious. Most businesses don\'t do it. The ones that do get dramatically better results.' },
+      { type: 'heading', text: 'Why Segmentation Matters' },
+      { type: 'paragraph', text: 'A subscriber who downloaded a beginner\'s guide needs different emails than one who just requested a proposal. Sending them the same sequence is a missed opportunity at best and an unsubscribe trigger at worst.' },
+      { type: 'heading', text: 'The Three Types of Segments' },
+      { type: 'numbered', items: [
+        'Source-based — where did they come from? (Opt-in page, purchase, webinar, referral)',
+        'Behaviour-based — what have they done? (Opened X emails, clicked a specific link, visited your pricing page)',
+        'Profile-based — what do you know about them? (Industry, company size, stated interest)',
+      ]},
+      { type: 'heading', text: 'Minimum Viable Segmentation' },
+      { type: 'paragraph', text: 'You don\'t need complex segments to start. At minimum, separate: subscribers who have bought from subscribers who haven\'t; leads who have enquired from leads who have only browsed. These two splits alone will immediately improve relevance.' },
+      { type: 'callout', variant: 'warning', title: 'Don\'t over-engineer it', text: 'Marketers who spend weeks designing a 12-segment system before sending a single email are stalling. Start with two segments, send, learn, then add complexity when you have data to support the decision.' },
+    ],
+  },
+
+  'email-series-converts__0__3': {
+    readTime: '12 min',
+    blocks: [
+      { type: 'paragraph', text: 'Choosing the right email platform matters more than most people admit. The wrong platform puts a ceiling on what you can automate, how you can segment, and how clearly you can track results.' },
+      { type: 'heading', text: 'The Platforms Worth Considering' },
+      { type: 'table', headers: ['Platform', 'Best For', 'Starting Price'], rows: [
+        ['ActiveCampaign', 'Service businesses, complex automation, CRM integration', '$15/mo'],
+        ['Klaviyo', 'E-commerce and product businesses, revenue tracking', '$20/mo'],
+        ['Kit (ConvertKit)', 'Creators, solo operators, simpler sequences', '$9/mo'],
+        ['Mailchimp', 'Beginners, basic newsletters, simple list management', 'Free tier'],
+      ]},
+      { type: 'heading', text: 'What to Evaluate' },
+      { type: 'bullets', items: [
+        'Automation builder quality — can you build the flows you actually need?',
+        'Segmentation depth — can you tag, score, and filter contacts properly?',
+        'CRM integration — does it connect to what you already use?',
+        'Deliverability reputation — does email from this platform land in inboxes?',
+        'Price as you scale — check the cost at 5,000 and 10,000 subscribers, not just today',
+      ]},
+      { type: 'callout', variant: 'tip', title: 'For most service businesses', text: 'ActiveCampaign at the Plus tier ($49/mo) gives you everything covered in this course: tags, segmentation, pipeline, automation, and CRM. It\'s the platform we\'ll use for examples throughout.' },
+    ],
+  },
+
+  // ─── LOCAL SEO MASTERCLASS ────────────────────────────────────────────────
+
+  'local-seo-masterclass__0__0': {
+    readTime: '15 min',
+    blocks: [
+      { type: 'paragraph', text: 'Local search is not just a smaller version of regular SEO. Google applies a separate algorithm for queries with local intent — and the signals it uses to rank businesses are quite different from the signals that determine organic rankings.' },
+      { type: 'heading', text: 'What "Local Search" Actually Means' },
+      { type: 'paragraph', text: 'Local search covers any query where Google determines the user wants results near them. This includes explicit queries ("plumber in Manchester") and implicit ones ("emergency dentist" searched from a phone). Google infers location from IP address, GPS data, and account settings.' },
+      { type: 'heading', text: 'The Three Local Ranking Signals' },
+      { type: 'table', headers: ['Signal', 'What It Means', 'How to Influence It'], rows: [
+        ['Relevance', 'How well your business matches the search query', 'Optimise your GBP categories, description, and website content'],
+        ['Distance', 'How close your business is to the searcher', 'You can\'t move — but service area settings matter'],
+        ['Prominence', 'How well-known and trusted your business is', 'Reviews, citations, backlinks, and brand mentions'],
+      ]},
+      { type: 'callout', variant: 'info', title: 'Key insight', text: 'Distance is the one signal you can\'t control. Relevance and prominence are entirely within your power. Most local SEO work focuses on these two.' },
+      { type: 'heading', text: 'The Local Search Ecosystem' },
+      { type: 'paragraph', text: 'Local results appear in multiple places: the local pack (the map with 3 listings), organic results below it, and increasingly in AI-generated answers at the top. This course covers all three. The good news: the same foundational work — GBP, citations, reviews — improves performance across all placements.' },
+    ],
+  },
+
+  'local-seo-masterclass__0__1': {
+    readTime: '12 min',
+    blocks: [
+      { type: 'paragraph', text: 'Google uses three factors to rank local businesses: relevance, distance, and prominence. Most businesses only optimise for one. Here\'s how each works and what you can actually do about it.' },
+      { type: 'heading', text: 'Relevance: Are You the Right Answer?' },
+      { type: 'paragraph', text: 'Relevance is how closely your business profile matches what was searched. Google looks at your GBP primary category, secondary categories, business name, description, services listed, and the content on your website.' },
+      { type: 'bullets', items: [
+        'Your primary GBP category is the most important relevance signal — choose it carefully',
+        'Add every relevant secondary category, but don\'t add irrelevant ones to game the system',
+        'Your business description should naturally include your core service terms',
+        'Your website\'s homepage and service pages reinforce GBP relevance signals',
+      ]},
+      { type: 'heading', text: 'Distance: How Close Are You?' },
+      { type: 'paragraph', text: 'Distance is calculated from the searcher\'s location to your business address. You cannot move your business to game this. But you can expand your service area in GBP if you serve clients at their location — this affects where you can appear.' },
+      { type: 'heading', text: 'Prominence: How Trusted Are You?' },
+      { type: 'paragraph', text: 'Prominence is the combination of your online reputation and authority. Google measures: review count and rating, citation consistency across directories, backlinks to your website, search volume for your brand name, and social signals.' },
+      { type: 'callout', variant: 'tip', title: 'Where to focus first', text: 'New to local SEO? Start with relevance (GBP optimisation) because it\'s the fastest to improve. Then move to prominence (reviews and citations). Distance is fixed — don\'t waste energy on it.' },
+    ],
+  },
+
+  'local-seo-masterclass__0__2': {
+    readTime: '18 min',
+    blocks: [
+      { type: 'paragraph', text: 'Local results appear in three distinct placements in Google, and the rules for winning each one are slightly different. Understanding this shapes where you invest your effort.' },
+      { type: 'heading', text: 'The Local Pack' },
+      { type: 'paragraph', text: 'The local pack is the map with three business listings that appears near the top of local search results. It\'s driven almost entirely by your Google Business Profile. To rank here, you need: a verified GBP, the right categories, consistent NAP across the web, and reviews.' },
+      { type: 'heading', text: 'Organic Local Results' },
+      { type: 'paragraph', text: 'Below the local pack, you\'ll see regular organic results for locally-targeted pages. These are traditional SEO: on-page optimisation for location-specific keywords, local backlinks, and site authority. Your website ranks here — not your GBP.' },
+      { type: 'heading', text: 'AI Overviews and Local' },
+      { type: 'paragraph', text: 'Google\'s AI Overviews are appearing more frequently for local queries. They typically pull from a combination of GBP data, third-party review platforms (Trustpilot, Yelp), and established local websites. Prominence signals — especially reviews and citations — are the main lever here.' },
+      { type: 'callout', variant: 'info', title: 'The smart approach', text: 'Optimise your GBP first (pack), then build local pages on your site (organic), then let prominence signals (reviews, citations) lift all three placements simultaneously. The work compounds.' },
+    ],
+  },
+
+  'local-seo-masterclass__0__3': {
+    readTime: '20 min',
+    blocks: [
+      { type: 'paragraph', text: 'A local SEO baseline audit tells you where you stand before you start optimising. Without it, you\'re improving things that might already be fine while missing the actual problems.' },
+      { type: 'heading', text: 'Audit Step 1: Search Yourself' },
+      { type: 'paragraph', text: 'Open an incognito window and search your top three service terms with your location (e.g., "accountant Leeds"). Record: do you appear in the local pack? On page one of organic? What position? Screenshot everything — this is your benchmark.' },
+      { type: 'heading', text: 'Audit Step 2: Check Your GBP' },
+      { type: 'bullets', items: [
+        'Is your profile verified?',
+        'Is your name, address, and phone number accurate?',
+        'Do you have a primary category set?',
+        'Have you added services, a business description, and opening hours?',
+        'How many reviews do you have and what\'s your average rating?',
+        'When was your last Google Post?',
+      ]},
+      { type: 'heading', text: 'Audit Step 3: Citation Consistency Check' },
+      { type: 'paragraph', text: 'Search your business name in quotes on Google. Look at the top 20 results. Are your name, address, and phone number consistent across every listing you find? Any inconsistency is a relevance signal working against you.' },
+      { type: 'heading', text: 'Audit Step 4: Competitor Analysis' },
+      { type: 'paragraph', text: 'Look at the top 3 businesses ranking in the local pack for your main keyword. How many reviews do they have? What categories are they using? What does their GBP look like? This sets the benchmark you need to beat.' },
+      { type: 'callout', variant: 'tip', title: 'Free audit tool', text: 'BrightLocal\'s Citation Tracker has a free version that checks citation consistency across the major directories. Run it once before you start building new citations.' },
+    ],
+  },
+
+  // ─── AI AUTOMATION FOR SMALL BUSINESS ────────────────────────────────────
+
+  'ai-automation-small-biz__0__0': {
+    readTime: '15 min',
+    blocks: [
+      { type: 'paragraph', text: 'The biggest mistake small businesses make with AI automation is trying to automate everything at once. The second biggest is automating the wrong things. This lesson gives you a framework for identifying exactly where automation will make the most difference.' },
+      { type: 'heading', text: 'The Automation Opportunity Map' },
+      { type: 'paragraph', text: 'Look at every recurring task in your business through two lenses: how often does it happen, and how long does it take each time? The tasks in the top-right of that matrix — frequent and time-consuming — are your highest-value automation targets.' },
+      { type: 'table', headers: ['Task Type', 'Examples', 'Automation Potential'], rows: [
+        ['High frequency, low complexity', 'Sending follow-up emails, updating records, scheduling', 'Automate immediately'],
+        ['High frequency, high complexity', 'Client communication, content creation, reporting', 'Automate with AI assist'],
+        ['Low frequency, low complexity', 'Monthly invoicing, weekly check-ins', 'Template + reminder'],
+        ['Low frequency, high complexity', 'Strategy, creative work, relationship management', 'Keep human'],
+      ]},
+      { type: 'heading', text: 'Where to Look First' },
+      { type: 'bullets', items: [
+        'Lead intake and qualification — how do new leads get captured and sorted?',
+        'Follow-up and nurturing — how do warm leads get stayed in touch with?',
+        'Onboarding — how do new clients get set up and briefed?',
+        'Reporting — how do you gather and present data regularly?',
+        'Content production — how do you create and distribute content?',
+      ]},
+      { type: 'callout', variant: 'tip', title: 'Start here', text: 'Spend 30 minutes writing down every task you did last week. Mark each one: could a machine do this? Could a machine do 80% of this? This list becomes your automation backlog.' },
+    ],
+  },
+
+  'ai-automation-small-biz__0__1': {
+    readTime: '12 min',
+    blocks: [
+      { type: 'paragraph', text: 'Not every task should be automated. Automating the wrong things creates problems that are harder to fix than the inefficiency you started with. Here\'s how to separate good automation candidates from bad ones.' },
+      { type: 'heading', text: 'Tasks Worth Automating' },
+      { type: 'bullets', items: [
+        'Repeatable with consistent inputs — the same trigger reliably produces the same action',
+        'Rule-based — decisions can be expressed as clear if/then logic',
+        'Low stakes if something goes wrong — an incorrect automated email is fixable',
+        'Currently wasting significant human time — the ROI is clear',
+      ]},
+      { type: 'heading', text: 'Tasks That Need a Human' },
+      { type: 'bullets', items: [
+        'Require nuanced judgment — understanding context, emotion, or edge cases',
+        'High stakes if wrong — legal decisions, sensitive client communication, financial approvals',
+        'Relationship-critical — the human touch is part of the value',
+        'Too variable to systematise — every instance is genuinely different',
+      ]},
+      { type: 'callout', variant: 'warning', title: 'The AI overpromise trap', text: 'AI vendors will tell you their tool can handle everything. It can\'t — not reliably, not yet. Apply the same test to AI-assisted tasks as to rule-based ones: what happens when it gets it wrong? If the answer is "that would be a problem," keep a human in the loop.' },
+      { type: 'heading', text: 'The Hybrid Model' },
+      { type: 'paragraph', text: 'The best automation setups combine AI generation with human review. AI drafts the email; you approve it. AI classifies the lead; you take the call. AI produces the report; you add the interpretation. This approach captures most of the time savings while avoiding the failure modes.' },
+    ],
+  },
+
+  'ai-automation-small-biz__0__2': {
+    readTime: '20 min',
+    blocks: [
+      { type: 'paragraph', text: 'The AI tools landscape is moving fast, but the categories are stable. Understanding what each type of tool does — and doesn\'t do — prevents expensive mistakes and wasted setup time.' },
+      { type: 'heading', text: 'Category 1: Large Language Models (LLMs)' },
+      { type: 'paragraph', text: 'ChatGPT (OpenAI), Claude (Anthropic), and Gemini (Google) are text generation engines. They write, summarise, classify, and reason. You access them via their interfaces or APIs. They don\'t take actions on their own — they produce text that you or another tool acts on.' },
+      { type: 'heading', text: 'Category 2: Automation Platforms' },
+      { type: 'paragraph', text: 'Make, n8n, and Zapier connect your tools together and trigger actions based on events. They\'re the plumbing. You can use them without AI, but combining them with LLM API calls is where the real power emerges.' },
+      { type: 'heading', text: 'Category 3: AI-Native Applications' },
+      { type: 'paragraph', text: 'Tools like Notion AI, HubSpot AI, and Canva AI have AI baked into existing products. Lower setup cost, less flexibility. Use them for quick wins inside tools you\'re already in.' },
+      { type: 'heading', text: 'Category 4: Chatbot Builders' },
+      { type: 'paragraph', text: 'Voiceflow, Botpress, and Tidio let you build conversational interfaces without code. You define the flows, connect knowledge bases, and deploy to your website or messaging channels.' },
+      { type: 'callout', variant: 'info', title: 'The stack we\'ll build', text: 'In this course we\'ll use Make or n8n as the automation backbone, the OpenAI or Anthropic API for LLM tasks, and Voiceflow for the chatbot module. All four categories, integrated.' },
+    ],
+  },
+
+  'ai-automation-small-biz__0__3': {
+    readTime: '15 min',
+    blocks: [
+      { type: 'paragraph', text: 'A roadmap is not a nice-to-have — it\'s how you avoid the trap of automating random things and then wondering why nothing feels meaningfully better. This lesson walks you through building a 90-day automation roadmap.' },
+      { type: 'heading', text: 'Step 1: Prioritise Your Backlog' },
+      { type: 'paragraph', text: 'Take the task list you built in Lesson 1 and score each item on two dimensions: time saved per week (1–5) and implementation complexity (1–5). Subtract complexity from time saved. The highest scores go first.' },
+      { type: 'heading', text: 'Step 2: Group Into Phases' },
+      { type: 'numbered', items: [
+        'Days 1–30: Quick wins — simple automations using tools you already have',
+        'Days 31–60: Core flows — the 2–3 automations that will save the most time',
+        'Days 61–90: AI layer — adding LLM intelligence to the flows you\'ve already built',
+      ]},
+      { type: 'heading', text: 'Step 3: Define Success Before You Build' },
+      { type: 'paragraph', text: 'For each automation you plan to build, write down: what it does, what triggers it, what the output is, and how you\'ll know it\'s working. This becomes your test specification. If you can\'t write this in three sentences, the automation isn\'t well enough defined to build.' },
+      { type: 'callout', variant: 'tip', title: 'Your first automation', text: 'Before moving to the next module, pick one task from your backlog that you\'ll automate in the next 7 days. Write the three-sentence spec. We\'ll build the first flow in Module 2.' },
+    ],
+  },
+
+  // ─── CONTENT STRATEGY BLUEPRINT ───────────────────────────────────────────
+
+  'content-strategy-blueprint__0__0': {
+    readTime: '15 min',
+    blocks: [
+      { type: 'paragraph', text: 'Content without a defined audience is marketing to no one. The more specifically you can describe the person you\'re writing for, the more useful your content becomes — and the more it attracts the kind of clients you actually want.' },
+      { type: 'heading', text: 'The Audience Definition Exercise' },
+      { type: 'paragraph', text: 'Don\'t start with demographics. Start with problems. What specific problem does your ideal client have? How do they describe it in their own words? What have they already tried? What do they believe is causing it? This language becomes the foundation of every content decision.' },
+      { type: 'bullets', items: [
+        'Talk to your best current clients — what problem did they have before they hired you?',
+        'Read the questions in relevant LinkedIn groups, Reddit forums, and industry communities',
+        'Review your own email inbox — what do clients ask you most often?',
+        'Look at your competitors\' testimonials — what outcomes are clients celebrating?',
+      ]},
+      { type: 'heading', text: 'What Makes Content Stand Out' },
+      { type: 'paragraph', text: 'Most content in any niche covers the same ground the same way. Standing out requires a point of view. Not a controversial opinion for its own sake — a genuine perspective on how things should work, informed by your actual experience.' },
+      { type: 'callout', variant: 'tip', title: 'The POV test', text: 'For any content topic, ask: what do most people in my industry say about this? Then ask: what do I actually believe based on what I\'ve seen work? The gap between those two answers is your point of view.' },
+    ],
+  },
+
+  'content-strategy-blueprint__0__1': {
+    readTime: '18 min',
+    blocks: [
+      { type: 'paragraph', text: 'Positioning your content means deciding what your work stands for in your audience\'s mind — before you write a single post or article. Without it, you produce content that\'s competent but forgettable.' },
+      { type: 'heading', text: 'Content Positioning vs. Brand Positioning' },
+      { type: 'paragraph', text: 'Brand positioning is about your company. Content positioning is about your ideas. You can have a clear brand but still publish content that doesn\'t have a distinct perspective. Content positioning answers: what consistent angle or lens do I bring to every topic I cover?' },
+      { type: 'heading', text: 'The Four Content Positioning Moves' },
+      { type: 'numbered', items: [
+        'The practitioner — "I\'ve done this, here\'s what actually happened"',
+        'The contrarian — "Everyone says X, but based on evidence it\'s actually Y"',
+        'The simplifier — "This seems complex. Here\'s what actually matters"',
+        'The framework builder — "Here\'s a reusable way to think about this problem"',
+      ]},
+      { type: 'paragraph', text: 'You don\'t have to pick just one — most effective content voices combine two. But being aware of which moves you\'re making helps you be more intentional about every piece you publish.' },
+      { type: 'callout', variant: 'info', title: 'Apply this now', text: 'Look at your last 5 pieces of content. Which positioning move did each one use? If they\'re all "simplifier," try a practitioner piece next — real-world experience content almost always outperforms explanation content.' },
+    ],
+  },
+
+  'content-strategy-blueprint__0__2': {
+    readTime: '15 min',
+    blocks: [
+      { type: 'paragraph', text: 'Not all content drives business. Some content generates traffic, some builds trust, some closes sales. Understanding which type you\'re publishing — and whether you have enough of each — is the difference between a content strategy and a random publication schedule.' },
+      { type: 'heading', text: 'The Three Content Jobs' },
+      { type: 'table', headers: ['Content Type', 'Job', 'Examples'], rows: [
+        ['Top of funnel', 'Attract new audiences', 'SEO articles, social posts, podcast guesting'],
+        ['Middle of funnel', 'Build trust with warm audiences', 'Case studies, detailed guides, email sequences'],
+        ['Bottom of funnel', 'Convert ready buyers', 'Service page copy, comparison content, testimonials'],
+      ]},
+      { type: 'heading', text: 'The Common Imbalance' },
+      { type: 'paragraph', text: 'Most content-producing businesses are heavily weighted toward top-of-funnel: blog posts, social content, SEO. They get traffic but poor conversion because there\'s nothing in the middle to build trust, and nothing at the bottom to close.' },
+      { type: 'callout', variant: 'warning', title: 'Check your ratio', text: 'Audit your existing content. What percentage is top, middle, and bottom of funnel? If you\'re running a service business and more than 70% is top-of-funnel, you have a trust gap. The next pieces you create should be case studies and detailed how-to content.' },
+    ],
+  },
+
+  // ─── CRM SETUP & WORKFLOW AUTOMATION ──────────────────────────────────────
+
+  'crm-workflow-automation__0__0': {
+    readTime: '12 min',
+    blocks: [
+      { type: 'paragraph', text: 'A CRM is a contact database with logic. That\'s it. The misconception that it\'s a complex enterprise tool puts people off implementing one until they\'re badly organised. Here\'s what a CRM actually does — and what it doesn\'t.' },
+      { type: 'heading', text: 'What a CRM Does' },
+      { type: 'bullets', items: [
+        'Stores every contact you\'ve ever interacted with in one place',
+        'Tracks the history of every interaction: emails, calls, meetings, notes',
+        'Gives you a pipeline view of where every deal or lead currently sits',
+        'Triggers automated actions based on what happens (new lead, status change, date reached)',
+        'Reports on performance: conversion rates, deal values, time in stage',
+      ]},
+      { type: 'heading', text: 'What a CRM Doesn\'t Do' },
+      { type: 'bullets', items: [
+        'It doesn\'t build relationships — you do',
+        'It doesn\'t generate leads — you need marketing for that',
+        'It doesn\'t replace a sales process — it supports one',
+        'It doesn\'t work if your team doesn\'t use it',
+      ]},
+      { type: 'callout', variant: 'info', title: 'The real value', text: 'The value of a CRM is not in any individual feature. It\'s in having one system of record — one place where everyone who matters to your business exists, with full context. That visibility changes how you follow up, how you prioritise, and how you forecast.' },
+    ],
+  },
+
+  'crm-workflow-automation__0__1': {
+    readTime: '18 min',
+    blocks: [
+      { type: 'paragraph', text: 'Choosing a CRM when you don\'t need enterprise-level features is not complicated — but people make it complicated. Here\'s a decision framework that will point you to the right choice in five minutes.' },
+      { type: 'heading', text: 'Decision Factor 1: Do You Sell Products or Services?' },
+      { type: 'paragraph', text: 'Service businesses need a pipeline and follow-up automation. Product businesses need inventory, order management, and often e-commerce integration. These are different tools. This course is built for service businesses.' },
+      { type: 'heading', text: 'Decision Factor 2: How Complex Is Your Sales Process?' },
+      { type: 'paragraph', text: 'If your sales cycle is: contact → proposal → decision, you don\'t need a complex CRM. If it involves multiple stakeholders, long nurture periods, and complex deal stages, you need more firepower.' },
+      { type: 'table', headers: ['Business Type', 'Recommended CRM', 'Starting Cost'], rows: [
+        ['Solo operator, simple sales', 'HubSpot Free or Kit', 'Free'],
+        ['Small service team, light automation', 'HubSpot Starter or Pipedrive', '$15–20/mo'],
+        ['Service business, complex automation', 'ActiveCampaign Plus or HubSpot Pro', '$49–90/mo'],
+        ['Growth-stage, multiple pipelines', 'HubSpot Pro or Salesforce Essentials', '$90+/mo'],
+      ]},
+      { type: 'callout', variant: 'tip', title: 'Start with HubSpot Free', text: 'If you\'re not currently using any CRM, start with HubSpot Free. It\'s genuinely useful, has no time limit, and upgrades cleanly as you grow. Avoid paying for features before you\'ve proven you\'ll use the basics.' },
+    ],
+  },
+
+  'crm-workflow-automation__0__2': {
+    readTime: '20 min',
+    blocks: [
+      { type: 'paragraph', text: 'Custom fields and contact properties are how your CRM becomes specific to your business rather than a generic contact database. Getting these right at the start saves significant pain later.' },
+      { type: 'heading', text: 'Default Properties vs. Custom Properties' },
+      { type: 'paragraph', text: 'Every CRM ships with default contact properties: name, email, phone, company, website. These are fine for basic contact storage. Custom properties are the ones that reflect your specific business: how they found you, what service they\'re interested in, their industry, their budget range.' },
+      { type: 'heading', text: 'Properties You Should Almost Always Add' },
+      { type: 'bullets', items: [
+        'Lead source — how did they first come to you? (Essential for attribution)',
+        'Service interest — which of your services are they considering?',
+        'Last contact date — when did you last speak or email? (Supports follow-up)',
+        'Deal value estimate — what is this relationship potentially worth?',
+        'Referring client — did someone send them? (Supports referral tracking)',
+      ]},
+      { type: 'heading', text: 'Property Hygiene Rules' },
+      { type: 'numbered', items: [
+        'Only create a property if you have a clear use for it in automation or reporting',
+        'Use dropdowns and checkboxes over free text wherever possible — consistency matters',
+        'Don\'t create properties "just in case" — you\'ll clutter the system and stop using it',
+        'Review and clean up properties every 6 months',
+      ]},
+      { type: 'callout', variant: 'warning', title: 'Garbage in, garbage out', text: 'A CRM full of incomplete or inconsistent data is worse than a spreadsheet — it gives you false confidence. Set required fields for new contacts from day one, and enforce the standard with anyone else who adds to the system.' },
+    ],
+  },
+
+  'crm-workflow-automation__0__3': {
+    readTime: '12 min',
+    blocks: [
+      { type: 'paragraph', text: 'Dirty data is the number one reason CRMs fail. Not the technology, not the onboarding — the data. If your contacts have inconsistent names, missing fields, and duplicate records, the automations you build on top will misbehave and your reporting will be meaningless.' },
+      { type: 'heading', text: 'The Four Data Quality Problems' },
+      { type: 'numbered', items: [
+        'Duplicates — the same person or company entered multiple times with different details',
+        'Missing required fields — contacts without email, phone, or source data',
+        'Inconsistent formatting — "Ltd" vs "Limited", "+44" vs "0", mixed case in names',
+        'Stale records — contacts who haven\'t engaged in years, with no activity noted',
+      ]},
+      { type: 'heading', text: 'Preventing Problems at Entry' },
+      { type: 'paragraph', text: 'The cheapest time to fix data quality is before records are created. Set required fields on your forms. Use dropdown menus instead of free text for any field you\'ll use for segmentation. Connect your form directly to your CRM via automation — no manual entry, no transcription errors.' },
+      { type: 'callout', variant: 'tip', title: 'First clean, then automate', text: 'Before you build any automation, export your existing contact list and clean it in a spreadsheet. Remove duplicates, fill missing fields, standardise formatting. Import once, clean. Then build automation on top of clean data.' },
+    ],
+  },
+
+  // ─── CONVERSION RATE OPTIMISATION ─────────────────────────────────────────
+
+  'cro-fundamentals__0__0': {
+    readTime: '12 min',
+    blocks: [
+      { type: 'paragraph', text: 'CRO has a mythology problem. People associate it with multivariate testing, heat maps, and statistical models — and conclude it\'s something only large businesses with serious traffic can do. That\'s wrong. The principles are universal. The tools are accessible. Here\'s what CRO actually is.' },
+      { type: 'heading', text: 'The Simple Definition' },
+      { type: 'paragraph', text: 'Conversion Rate Optimisation is the practice of understanding why visitors don\'t take the action you want them to take — and systematically fixing it. That\'s it. The sophistication of your testing methodology is secondary to the quality of your diagnosis.' },
+      { type: 'heading', text: 'The Myths That Waste Your Time' },
+      { type: 'bullets', items: [
+        'Myth: "We need more traffic first." Reality: with 500 visitors/month you can run meaningful tests on page structure',
+        'Myth: "We should test button colours." Reality: copy, layout, and trust signals move the needle. Button colour almost never does',
+        'Myth: "A/B testing is the only valid approach." Reality: qualitative insight from 5 user interviews often beats months of A/B testing',
+        'Myth: "CRO is for e-commerce." Reality: service businesses have the most to gain — a single extra enquiry per week can be worth tens of thousands per year',
+      ]},
+      { type: 'heading', text: 'The CRO Mindset' },
+      { type: 'paragraph', text: 'Stop asking "how do we get more traffic?" Start asking "why aren\'t the visitors we have converting?" Every page on your site has a conversion rate. Some are terrible. The gap between current performance and industry benchmark is opportunity — and it\'s often far larger than any traffic increase would deliver.' },
+      { type: 'callout', variant: 'info', title: 'A useful benchmark', text: 'A typical service business contact page converts at 1–3% of all visitors. If yours is under 1%, fixing it is more valuable than doubling your traffic. If it\'s over 5%, you\'re doing something right — study what and replicate it.' },
+    ],
+  },
+
+  'cro-fundamentals__0__1': {
+    readTime: '20 min',
+    blocks: [
+      { type: 'paragraph', text: 'Heatmaps and session recordings are the closest thing to standing behind your visitor and watching them use your site. Used correctly, they reveal problems you\'d never guess from looking at the page yourself.' },
+      { type: 'heading', text: 'Heatmaps: What They Show' },
+      { type: 'paragraph', text: 'A heatmap aggregates where hundreds of visitors clicked, moved, or scrolled across your page. The patterns it reveals are often surprising:' },
+      { type: 'bullets', items: [
+        'Click maps — where people click (including things that aren\'t links but look like they could be)',
+        'Scroll maps — how far down the page most visitors actually reach',
+        'Move maps — where cursor movement clusters (often correlates with where eyes go)',
+      ]},
+      { type: 'heading', text: 'What to Look For in Heatmaps' },
+      { type: 'numbered', items: [
+        'Rage clicks — rapid repeated clicking on non-interactive elements (signals broken expectations)',
+        'Click deserts below the fold — if no one\'s clicking below a certain point, they\'re not reading it',
+        'Ignored CTAs — your primary button getting zero attention means placement, colour, or copy is wrong',
+        'Confusion clicks — people clicking on non-link text or images that look clickable',
+      ]},
+      { type: 'heading', text: 'Session Recordings: What to Watch For' },
+      { type: 'paragraph', text: 'Don\'t watch randomly — filter for sessions where visitors reached the contact page but didn\'t submit the form. These are your most valuable recordings. They show exactly what happened in the final moments before someone didn\'t convert.' },
+      { type: 'callout', variant: 'tip', title: 'Free tool', text: 'Microsoft Clarity is free, has no session or recording limits, and integrates with Google Analytics. Install it on your site today. You\'ll have data to analyse within a week.' },
+    ],
+  },
+
+  'cro-fundamentals__0__2': {
+    readTime: '18 min',
+    blocks: [
+      { type: 'paragraph', text: 'Google Analytics 4 can feel overwhelming for CRO purposes. You don\'t need to master all of it. These are the reports that directly reveal conversion problems.' },
+      { type: 'heading', text: 'Report 1: Landing Page Performance' },
+      { type: 'paragraph', text: 'Go to Engagement → Landing Pages. This shows which pages visitors arrive on first, with sessions, bounce rate, and conversions. Sort by sessions descending. Your top landing pages are your top CRO priorities — if they\'re not converting, fixing them has the biggest impact.' },
+      { type: 'heading', text: 'Report 2: Funnel Exploration' },
+      { type: 'paragraph', text: 'In Explore → Funnel Exploration, build a funnel: Homepage → Service Page → Contact Page → Thank You Page. The drop-off at each step tells you exactly where people leave. A 90% drop between service page and contact page is a different problem from a 90% drop between contact page and thank you page.' },
+      { type: 'heading', text: 'Report 3: User Path Exploration' },
+      { type: 'paragraph', text: 'In Explore → Path Exploration, start from your contact page and see where visitors came from immediately before reaching it. This reveals which pages are best at priming visitors to convert — replicate those patterns.' },
+      { type: 'callout', variant: 'info', title: 'Set up conversion events first', text: 'None of these reports are useful if you haven\'t defined conversion events in GA4. At minimum: form submission (contact enquiry), thank you page view, and phone number click. Set these up before reading any CRO data.' },
+    ],
+  },
+
+  'cro-fundamentals__0__3': {
+    readTime: '15 min',
+    blocks: [
+      { type: 'paragraph', text: 'Quantitative data — analytics, heatmaps — tells you what is happening. Qualitative data tells you why. User surveys and feedback are the most efficient way to get from observation to diagnosis.' },
+      { type: 'heading', text: 'The Three Questions Worth Asking' },
+      { type: 'paragraph', text: 'You don\'t need a long survey. Three questions, asked at the right moment, give you more actionable insight than most analytics dashboards:' },
+      { type: 'numbered', items: [
+        '"What were you looking for on this page?" — reveals unmet expectations',
+        '"What stopped you from [taking the desired action] today?" — reveals friction',
+        '"What would have made you more confident to proceed?" — reveals trust gaps',
+      ]},
+      { type: 'heading', text: 'Where and When to Ask' },
+      { type: 'bullets', items: [
+        'Exit-intent popup on key service pages — catches people as they\'re about to leave',
+        'Post-visit email to recent visitors who didn\'t enquire (if you have their email)',
+        '5-person usability test with target-audience participants (Askable or UserTesting)',
+        'One-question widget on high-traffic pages (Hotjar Feedback, Usabilla)',
+      ]},
+      { type: 'callout', variant: 'tip', title: 'The fastest insight', text: 'Find five people who match your target client profile and ask them to talk through your homepage out loud while they use it. Don\'t explain anything — just watch and listen. One hour of this replaces weeks of hypothesis-driven analytics work.' },
+    ],
+  },
 };
