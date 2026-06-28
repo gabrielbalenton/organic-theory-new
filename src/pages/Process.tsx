@@ -67,18 +67,18 @@ export default function Process() {
         <meta name="description" content="Discovery, audit, architecture, build, launch, measure. Six phases from first conversation to live system. No guesswork, no scope creep." />
         <meta property="og:site_name" content="Organic Theory" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://organictheory.vercel.app/process" />
+        <meta property="og:url" content="https://organic-theory.vercel.app/process" />
         <meta property="og:title" content="How It Works | The Process | Organic Theory" />
         <meta property="og:description" content="Six phases from first conversation to live system. Discovery, audit, architecture, build, launch, measure. No guesswork, no scope creep." />
-        <meta property="og:image" content="https://organictheory.vercel.app/og-image.png" />
+        <meta property="og:image" content="https://organic-theory.vercel.app/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Organic Theory - Six-phase system from discovery to results." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="How It Works | The Process | Organic Theory" />
         <meta name="twitter:description" content="Six phases from first conversation to live system. No guesswork, no scope creep." />
-        <meta name="twitter:image" content="https://organictheory.vercel.app/og-image.png" />
-        <link rel="canonical" href="https://organictheory.vercel.app/process" />
+        <meta name="twitter:image" content="https://organic-theory.vercel.app/og-image.png" />
+        <link rel="canonical" href="https://organic-theory.vercel.app/process" />
       </Helmet>
 
       <div className="w-full min-h-screen bg-[#09090B] text-[#FAFAFA]">

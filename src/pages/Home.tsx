@@ -314,15 +314,15 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Organic Theory',
-    url: 'https://organictheory.vercel.app',
+    url: 'https://organic-theory.vercel.app',
     description: 'Digital consultancy specializing in search architecture, AI automation, and workflow engineering.',
-    author: { '@type': 'Person', name: 'Gabriel Balenton', url: 'https://organictheory.vercel.app', sameAs: ['https://www.linkedin.com/in/gabrielbalenton/'] },
+    author: { '@type': 'Person', name: 'Gabriel Balenton', url: 'https://organic-theory.vercel.app', sameAs: ['https://www.linkedin.com/in/gabrielbalenton/'] },
   };
   const schemaProfessional = {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'Organic Theory',
-    url: 'https://organictheory.vercel.app',
+    url: 'https://organic-theory.vercel.app',
     description: 'Strategic digital consultancy building search systems, AI automation, and workflow infrastructure for global brands.',
     founder: { '@type': 'Person', name: 'Gabriel Balenton' },
     areaServed: 'Worldwide',
@@ -337,10 +337,10 @@ export default function Home() {
         <meta name="description" content="Organic Theory builds search systems, AI automation, and workflow infrastructure that allow global brands to scale without friction. Founded by Gabriel Balenton." />
         <meta property="og:site_name" content="Organic Theory" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://organictheory.vercel.app" />
+        <meta property="og:url" content="https://organic-theory.vercel.app" />
         <meta property="og:title" content="Organic Theory | Strategic Search Architecture & Systems" />
         <meta property="og:description" content="Search architecture, AI automation, and workflow engineering for global brands. Founded by Gabriel Balenton." />
-        <meta property="og:image" content="https://organictheory.vercel.app/og-image.png" />
+        <meta property="og:image" content="https://organic-theory.vercel.app/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Organic Theory - Strategic Logic. Measurable Growth." />
@@ -348,9 +348,9 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Organic Theory | Strategic Search Architecture & Systems" />
         <meta name="twitter:description" content="Search architecture, AI automation, and workflow engineering for global brands." />
-        <meta name="twitter:image" content="https://organictheory.vercel.app/og-image.png" />
+        <meta name="twitter:image" content="https://organic-theory.vercel.app/og-image.png" />
         <meta name="twitter:image:alt" content="Organic Theory - Strategic Logic. Measurable Growth." />
-        <link rel="canonical" href="https://organictheory.vercel.app" />
+        <link rel="canonical" href="https://organic-theory.vercel.app" />
         <script type="application/ld+json">{JSON.stringify(schemaWebsite)}</script>
         <script type="application/ld+json">{JSON.stringify(schemaProfessional)}</script>
       </Helmet>

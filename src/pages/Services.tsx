@@ -85,18 +85,18 @@ export default function Services() {
         <meta name="description" content="Search architecture, AI automation, workflow engineering, and interface builds. Start with a $400 audit. No retainer required." />
         <meta property="og:site_name" content="Organic Theory" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://organictheory.vercel.app/services" />
+        <meta property="og:url" content="https://organic-theory.vercel.app/services" />
         <meta property="og:title" content="Services & Pricing | Organic Theory" />
         <meta property="og:description" content="From a $400 audit to full system builds. Search, AI, workflow, and interface. No retainer required." />
-        <meta property="og:image" content="https://organictheory.vercel.app/og-image.png" />
+        <meta property="og:image" content="https://organic-theory.vercel.app/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Organic Theory Services - From $400 audit to full system builds." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Services & Pricing | Organic Theory" />
         <meta name="twitter:description" content="From a $400 audit to full system builds. Search, AI, workflow, and interface. No retainer required." />
-        <meta name="twitter:image" content="https://organictheory.vercel.app/og-image.png" />
-        <link rel="canonical" href="https://organictheory.vercel.app/services" />
+        <meta name="twitter:image" content="https://organic-theory.vercel.app/og-image.png" />
+        <link rel="canonical" href="https://organic-theory.vercel.app/services" />
         <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
 

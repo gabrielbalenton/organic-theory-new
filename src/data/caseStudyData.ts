@@ -58,7 +58,7 @@ export const caseStudies: CaseStudy[] = [
     seo: {
       title: 'DMR Designs: 63% Search Visibility in 8 Weeks | Organic Theory',
       description: 'How 1,281 suburb-specific landing pages pushed DMR Designs to 63.21% search visibility in 8 weeks - more than double the 30% target.',
-      canonical: 'https://organictheory.vercel.app/case-studies/dmr',
+      canonical: 'https://organic-theory.vercel.app/case-studies/dmr',
     },
   },
   {
@@ -98,7 +98,7 @@ export const caseStudies: CaseStudy[] = [
     seo: {
       title: 'FPX: 27 to 100 SEO Score, Technical Rebuild | Organic Theory',
       description: 'How a full technical SEO rebuild took FPX from a Lighthouse score of 27 to 72, with a perfect 100 SEO score and confirmed crawlability.',
-      canonical: 'https://organictheory.vercel.app/case-studies/fpx',
+      canonical: 'https://organic-theory.vercel.app/case-studies/fpx',
     },
   },
   {
@@ -138,7 +138,7 @@ export const caseStudies: CaseStudy[] = [
     seo: {
       title: 'ICSH: Automated Membership Processing, Zero Manual Entry | Organic Theory',
       description: 'How a fully automated workflow replaced manual membership processing for ICSH - from form submission to CRM record to welcome email, instantly.',
-      canonical: 'https://organictheory.vercel.app/case-studies/icsh',
+      canonical: 'https://organic-theory.vercel.app/case-studies/icsh',
     },
   },
   {
@@ -168,7 +168,7 @@ export const caseStudies: CaseStudy[] = [
     seo: {
       title: 'Content & Social System: B2B Presence Without Ad Spend | Organic Theory',
       description: 'A five-pillar content system built for a B2B platform establishing authority from zero - structured for approval, cadence, and compounding reach.',
-      canonical: 'https://organictheory.vercel.app/case-studies/content-system',
+      canonical: 'https://organic-theory.vercel.app/case-studies/content-system',
     },
   },
 ];

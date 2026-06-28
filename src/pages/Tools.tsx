@@ -841,18 +841,18 @@ export default function Tools() {
         <meta name="description" content="15 free browser-based tools for SEO, content, and marketing. Meta checker, keyword density, AI humanizer, image compressor, UTM builder, and more. No login required." />
         <meta property="og:site_name" content="Organic Theory" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://organictheory.vercel.app/tools" />
+        <meta property="og:url" content="https://organic-theory.vercel.app/tools" />
         <meta property="og:title" content="Free SEO & Marketing Tools | Organic Theory" />
         <meta property="og:description" content="15 free browser-based tools: meta checker, keyword density, AI humanizer, image compressor, UTM builder, JSON formatter, and more. No login required." />
-        <meta property="og:image" content="https://organictheory.vercel.app/og-image.png" />
+        <meta property="og:image" content="https://organic-theory.vercel.app/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Organic Theory - Free SEO and marketing tools. No login." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Free SEO & Marketing Tools | Organic Theory" />
         <meta name="twitter:description" content="15 free browser-based tools for SEO, content, and marketing. No login required." />
-        <meta name="twitter:image" content="https://organictheory.vercel.app/og-image.png" />
-        <link rel="canonical" href="https://organictheory.vercel.app/tools" />
+        <meta name="twitter:image" content="https://organic-theory.vercel.app/og-image.png" />
+        <link rel="canonical" href="https://organic-theory.vercel.app/tools" />
       </Helmet>
 
       <div className="w-full min-h-screen bg-[#09090B] text-[#FAFAFA]">

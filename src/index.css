@@ -33,6 +33,7 @@ html, body {
 /* Hide default cursor on pointer devices — custom cursor replaces it */
 @media (pointer: fine) {
   html, * { cursor: none !important; }
+  input, textarea, select, [contenteditable] { cursor: text !important; }
 }
 
 /* Minimal scrollbar */

@@ -17,8 +17,8 @@ export default function Work() {
         <title>Case Studies | Real Results | Organic Theory</title>
         <meta name="description" content="Real results from real builds. Search visibility from 0 to 63%, Lighthouse SEO score of 100, 1,281 pages deployed. See the work." />
         <meta property="og:title" content="Case Studies | Organic Theory" />
-        <meta property="og:url" content="https://organictheory.vercel.app/case-studies" />
-        <link rel="canonical" href="https://organictheory.vercel.app/case-studies" />
+        <meta property="og:url" content="https://organic-theory.vercel.app/case-studies" />
+        <link rel="canonical" href="https://organic-theory.vercel.app/case-studies" />
       </Helmet>
 
       <div className="w-full min-h-screen bg-[#09090B] text-[#FAFAFA]">

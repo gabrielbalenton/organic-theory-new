@@ -31,10 +31,10 @@ export default function BlogPost() {
     '@type': 'Article',
     headline: post.title,
     description: post.excerpt,
-    author: { '@type': 'Person', name: 'Gabriel Balenton', url: 'https://organictheory.vercel.app' },
-    publisher: { '@type': 'Organization', name: 'Organic Theory', url: 'https://organictheory.vercel.app' },
+    author: { '@type': 'Person', name: 'Gabriel Balenton', url: 'https://organic-theory.vercel.app' },
+    publisher: { '@type': 'Organization', name: 'Organic Theory', url: 'https://organic-theory.vercel.app' },
     datePublished: post.date,
-    url: `https://organictheory.vercel.app/insights/${post.slug}`,
+    url: `https://organic-theory.vercel.app/insights/${post.slug}`,
   };
 
   return (
@@ -44,8 +44,8 @@ export default function BlogPost() {
         <meta name="description" content={post.excerpt} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
-        <meta property="og:url" content={`https://organictheory.vercel.app/insights/${post.slug}`} />
-        <link rel="canonical" href={`https://organictheory.vercel.app/insights/${post.slug}`} />
+        <meta property="og:url" content={`https://organic-theory.vercel.app/insights/${post.slug}`} />
+        <link rel="canonical" href={`https://organic-theory.vercel.app/insights/${post.slug}`} />
         <script type="application/ld+json">{JSON.stringify(schemaArticle)}</script>
       </Helmet>
 

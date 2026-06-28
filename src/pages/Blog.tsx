@@ -15,7 +15,7 @@ export default function Blog() {
       <Helmet>
         <title>Insights | SEO, Automation & Systems | Organic Theory</title>
         <meta name="description" content="Practical insights on search architecture, AI automation, workflow engineering, and content strategy from Organic Theory." />
-        <link rel="canonical" href="https://organictheory.vercel.app/insights" />
+        <link rel="canonical" href="https://organic-theory.vercel.app/insights" />
       </Helmet>
 
       <div className="w-full min-h-screen bg-[#09090B] text-[#FAFAFA]">
