@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { ChevronDown, Copy, Check, Upload } from 'lucide-react';
 import { ScrambleText } from '../components/ScrambleText';
 import { TextReveal } from '../components/TextReveal';
+import SiteAuditTool from '../components/SiteAuditTool';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -870,6 +871,9 @@ export default function Tools() {
             {ALL_TOOLS.length} browser-based utilities for SEO, content, and marketing. Everything runs in your browser - nothing is sent to a server.
           </motion.p>
         </section>
+
+        {/* ── MINI SITE AUDIT ── */}
+        <SiteAuditTool />
 
         {/* ── FREE UTILITY TOOLS ── */}
         <div className="pb-28 px-6 md:px-12 border-t border-[#FAFAFA]/10">
