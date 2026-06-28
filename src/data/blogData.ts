@@ -168,7 +168,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "AI Overviews are reducing clicks for certain queries — but the businesses getting hit hardest built their traffic on thin informational content. The fix isn't to panic. It's to become the source AI cites.",
     category: 'AEO & Content',
     readTime: 6,
-    date: '2025-05-08',
+    date: '2026-05-08',
     sections: [
       {
         body: "Google's AI Overviews rolled out broadly in 2024 and the click-through rate data is in: yes, they reduce clicks for some queries. Specifically the ones where someone types a question and Google can answer it without sending them anywhere. If your traffic strategy relied on those queries, you felt it.",
@@ -201,7 +201,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Everyone's using ChatGPT to write blog posts nobody reads. The real value of AI in business is in operations — routing, sorting, summarising, responding — not content generation.",
     category: 'AI Automation',
     readTime: 5,
-    date: '2025-05-21',
+    date: '2026-05-21',
     sections: [
       {
         body: "Walk into any marketing meeting and someone will bring up AI-generated content. 'We can publish five times a week now.' 'We can fill out every page on the site.' It's the wrong conversation. Not because AI content is inherently bad — it's because content volume was never the constraint.",
@@ -234,7 +234,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "The death-of-SEO takes were wrong. What changed is the type of content that gets rewarded. Authority, clarity, and structure still win — but the tactics on top are new.",
     category: 'AEO & Content',
     readTime: 6,
-    date: '2025-06-03',
+    date: '2026-06-03',
     sections: [
       {
         body: "When ChatGPT launched in late 2022, a wave of content appeared declaring SEO dead. The logic: if people can get answers from an AI directly, why would they search? Two years on, Google is still processing over 8 billion searches a day. SEO isn't dead. But it's genuinely different, and the difference matters.",
@@ -267,7 +267,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Make, n8n, and a few well-placed AI agents handle what used to take hours. Here's what's in the stack, why I chose each tool, and what the honest tradeoffs are.",
     category: 'AI Automation',
     readTime: 7,
-    date: '2025-06-11',
+    date: '2026-06-11',
     sections: [
       {
         body: "I get asked about tooling a lot. What do I actually use? What would I recommend? The honest answer is: it depends on the client and the complexity of the workflow. But there's a core stack I reach for most often, and I'll walk through it here — what each tool does, why it's in the stack, and where it falls short.",
@@ -304,7 +304,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "AI that takes actions — not just answers questions — is moving from hype to real. The businesses that built clean operations now will be the ones that can plug in AI agents effectively later.",
     category: 'AI Automation',
     readTime: 6,
-    date: '2025-06-19',
+    date: '2026-06-19',
     sections: [
       {
         body: "Agentic AI is the next meaningful shift in how businesses interact with artificial intelligence. Not AI that answers a question when you ask it — AI that takes a sequence of actions autonomously to complete a task. Book the appointment. Send the follow-up. Update the CRM. Flag the anomaly. Route the ticket. All without a human initiating each step.",
