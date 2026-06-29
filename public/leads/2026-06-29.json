@@ -30,6 +30,36 @@
       "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-06-29-plumbsmart.html",
       "email_subject": "Your booking link sends visitors away at the worst moment",
       "email_body": "Hi,\n\nI was reviewing PlumbSmart's site and noticed your Book Now button sends visitors to an external ServiceTitan page — breaking the experience right when someone with a burst pipe is ready to call. On mobile, where most emergency searches happen, that redirect causes a lot of people to bail.\n\nI put together a quick page showing the specific fixes and what they'd mean for your lead volume: https://organic-theory.vercel.app/leads/funnels/2026-06-29-plumbsmart.html\n\nWould be happy to walk through it on a 20-minute call if useful.\n\nGabriel Balenton\nOrganic Theory"
+    },
+    {
+      "business_name": "Back To Front Chiropractic",
+      "website": "https://backtofront.com.au",
+      "industry": "Chiropractic / Healthcare",
+      "issues": "Homepage title tag in Google search reads 'Contact phone Number 3393 2201' — no business name or keywords, devastating click-through rate. No meta description on any page. Broken GBP (£) currency display on an Australian clinic site (likely a rogue WooCommerce plugin). No local healthcare schema markup for opening hours or services. Missing image alt text throughout. Navigation duplicated in DOM.",
+      "opportunity": "Fixing the title tag and meta description alone could increase organic click-through by 20–35% without any other changes. Adding LocalBusiness/MedicalBusiness schema unlocks rich results in Google and improves Local Pack visibility. For a clinic with genuine 5-star reviews, this is low-effort, high-return work.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-06-29-back-to-front-chiropractic.html",
+      "email_subject": "Your Google listing title is a phone number — here's what that's costing you",
+      "email_body": "Hi Travis,\n\nI was looking at Back To Front Chiropractic's site and noticed something that stood out straight away: when someone searches for you on Google, your homepage appears with the title \"Contact phone Number 3393 2201\" rather than your clinic name and specialty. That alone tanks your click-through rate and signals to Google that the page isn't properly structured.\n\nYour site also has a currency display bug showing British pounds instead of Australian dollars, which looks broken to new visitors.\n\nI put together a quick page showing what I'd fix and what a realistic result could look like: https://organic-theory.vercel.app/leads/funnels/2026-06-29-back-to-front-chiropractic.html\n\nHappy to walk through it if useful. You can also see my work and past results at https://organic-theory.vercel.app/\n\nGabriel Balenton | Organic Theory Founder"
+    },
+    {
+      "business_name": "ADV Accountants",
+      "website": "https://advaccountants.com.au",
+      "industry": "Accounting / Tax",
+      "issues": "Only 2 pages indexed by Google (homepage and a duplicate /contact-2/ URL) — the rest of the site is invisible to search engines. No meta description on any page. Footer copyright stuck at 2017, signalling an unmaintained site. H1 reads 'Welcome to ADV Partners Chartered Accountants' with no keyword targeting. Multiple competing CTAs with no clear hierarchy. Zero local SEO presence despite having two office locations.",
+      "opportunity": "Fixing crawl/indexation and targeting suburb-specific terms like 'tax accountant Sunshine VIC' and 'accountant Lalor' would put ADV in front of high-intent local searchers — a market with low competition and no ad spend required. Two dedicated location pages plus a corrected sitemap could realistically land them on page one within 90 days.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-06-29-adv-accountants.html",
+      "email_subject": "Google can only find 2 pages of your website",
+      "email_body": "Hi,\n\nI ran a quick index check on advaccountants.com.au and found Google has only discovered two pages of your site — the homepage and a duplicate contact page. Everything else is invisible to search engines, which means people in Sunshine and Lalor searching for an accountant are finding your competitors instead.\n\nI put together a short page showing the specific issues and what I'd do to fix them: https://organic-theory.vercel.app/leads/funnels/2026-06-29-adv-accountants.html\n\nHappy to jump on a quick call if useful. You can also see past results at https://organic-theory.vercel.app/\n\nGabriel Balenton | Organic Theory Founder"
+    },
+    {
+      "business_name": "Marvel Consulting",
+      "website": "https://www.marvelconsulting.com.au",
+      "industry": "Accounting / Tax / Financial Advisory",
+      "issues": "Testimonials section contains live Lorem ipsum placeholder text — visible to every site visitor and actively damaging credibility. No meta description on any page. A 2020 JobKeeper Payment PDF is still publicly indexed, showing outdated government scheme information. 'Book Now' button redirects to an external third-party scheduler rather than an embedded widget. Blog content limited entirely to SMSF topics, missing the much larger small business tax and accounting audience.",
+      "opportunity": "Replacing the Lorem ipsum with 3–5 real client quotes would immediately lift conversion for every visitor. Meta descriptions targeting 'tax accountant West Footscray' and 'small business accountant Melbourne western suburbs' would improve click-through. Michael's strong CPA and mortgage broker credentials deserve a site that communicates them clearly at every stage of the visitor journey.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-06-29-marvel-consulting.html",
+      "email_subject": "Your testimonials section is showing placeholder text to real clients",
+      "email_body": "Hi Michael,\n\nI was looking through the Marvel Consulting website and noticed your testimonials section is currently showing Lorem ipsum placeholder text to every visitor — that's sitting right below your service descriptions where trust signals matter most.\n\nYou also have a 2020 JobKeeper PDF still publicly indexed and a booking flow that sends visitors off-site right when they're ready to commit.\n\nI built a quick page showing what I'd fix and what it could mean for your inbound enquiries: https://organic-theory.vercel.app/leads/funnels/2026-06-29-marvel-consulting.html\n\nHappy to chat through it. You can see my past work at https://organic-theory.vercel.app/\n\nGabriel Balenton | Organic Theory Founder"
     }
   ]
 }
