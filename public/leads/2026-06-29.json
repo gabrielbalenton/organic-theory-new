@@ -1,0 +1,35 @@
+{
+  "date": "2026-06-29",
+  "leads": [
+    {
+      "business_name": "Independence Chiropractic",
+      "website": "https://indichiro.com",
+      "industry": "Chiropractic / Healthcare",
+      "issues": "Live placeholder content ('23 Something' visible in a process section), two 'Book Appointment' CTAs linking to different pages (/appointment vs /contact), no email lead capture form, reviews section promised in header but contains no actual testimonials, duplicate content blocks flagged as potential SEO penalty.",
+      "opportunity": "Fix the booking flow (single embedded widget, one destination) and add a lead magnet for visitors not ready to book. Real patient testimonials and local schema markup would also move the needle on Google 'chiropractor near me' rankings. Expected: 20–40% more new patient bookings within 60 days.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-06-29-independence-chiropractic.html",
+      "email_subject": "Your website has live placeholder text, Dr. David",
+      "email_body": "Hi Dr. David,\n\nI was looking at Independence Chiropractic's site today and noticed a couple of things that are likely costing you new patient bookings. One of your process sections still reads \"23 Something\" — and your two Book Appointment buttons send visitors to different pages, so the flow breaks right when someone's ready to commit.\n\nI put together a quick page showing exactly what I'd fix and what you could realistically expect: https://organic-theory.vercel.app/leads/funnels/2026-06-29-independence-chiropractic.html\n\nHappy to walk through it on a 20-minute call if it's useful — no obligation.\n\nGabriel Balenton\nOrganic Theory"
+    },
+    {
+      "business_name": "Brittle Family Law Group",
+      "website": "https://www.brittle-law.com",
+      "industry": "Family Law",
+      "issues": "Primary 'Request a Consultation' CTA button links to '#' (does nothing when clicked), broken SVG image placeholders throughout including attorney headshots, contact form buried at the very bottom of the page, no LocalBusiness or LegalService schema markup, Video Library referenced in nav but appears to have no content.",
+      "opportunity": "Fix the broken CTA immediately — it's the single highest-impact change. Moving a contact form or Calendly embed above the fold and adding local schema markup would then compound the trust signals already on the page (Super Lawyers, AVVO 10.0, 5-star reviews). Expected: 30–50% more consultation form submissions.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-06-29-brittle-family-law-group.html",
+      "email_subject": "Your main CTA button goes nowhere — here's what I'd fix",
+      "email_body": "Hi,\n\nI came across Brittle Family Law while researching Portland family law firms. Your site has strong credentials and real Google reviews — but your primary consultation button is linked to \"#\", meaning it does nothing when clicked. Your contact form is also buried at the bottom, so potential clients who can't find how to reach you are likely moving on.\n\nI put together a short page showing what I'd change and what the impact could look like: https://organic-theory.vercel.app/leads/funnels/2026-06-29-brittle-family-law-group.html\n\nHappy to walk through it on a quick call if useful — no pitch, just a specific plan.\n\nGabriel Balenton\nOrganic Theory"
+    },
+    {
+      "business_name": "PlumbSmart",
+      "website": "https://itsjustplumbsmart.com",
+      "industry": "Plumbing / HVAC",
+      "issues": "'Book Now' button redirects to an external ServiceTitan page instead of an embedded widget, multiple images failing to load (SVG placeholders visible), contact form only at page bottom with no mid-page or mobile-sticky alternative, 3,000+ five-star reviews buried in footer instead of above the fold, no FAQ schema to capture voice search and featured snippets.",
+      "opportunity": "Embed booking directly on the homepage and surface social proof above the fold. Emergency service customers decide in under 10 seconds — every extra click is a lost job. With an embedded widget and a floating mobile CTA, PlumbSmart would capture leads currently bouncing to simpler competitor pages. Expected: 25–40% more emergency service bookings from mobile traffic.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-06-29-plumbsmart.html",
+      "email_subject": "Your booking link sends visitors away at the worst moment",
+      "email_body": "Hi,\n\nI was reviewing PlumbSmart's site and noticed your Book Now button sends visitors to an external ServiceTitan page — breaking the experience right when someone with a burst pipe is ready to call. On mobile, where most emergency searches happen, that redirect causes a lot of people to bail.\n\nI put together a quick page showing the specific fixes and what they'd mean for your lead volume: https://organic-theory.vercel.app/leads/funnels/2026-06-29-plumbsmart.html\n\nWould be happy to walk through it on a 20-minute call if useful.\n\nGabriel Balenton\nOrganic Theory"
+    }
+  ]
+}
