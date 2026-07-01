@@ -1,0 +1,35 @@
+{
+  "date": "2026-07-01",
+  "leads": [
+    {
+      "business_name": "North Wollongong Physiotherapy",
+      "website": "https://www.northwollongongphysio.com.au/",
+      "industry": "Physiotherapy Clinic",
+      "issues": "Missing meta description on all pages, reducing organic click-through rate. Inconsistent phone numbers across the site (02 4238 7913 vs 02 4244 1493) causing an NAP mismatch that suppresses local search ranking. Vague hero headline 'We Understand' fails to communicate value or convert first-time visitors.",
+      "opportunity": "Fix the phone number NAP inconsistency and write optimized meta descriptions to improve local search ranking and click-through rate simultaneously. Rewrite hero copy to be outcome-focused. Expected result within 60 days: higher position for 'physiotherapy Wollongong' searches and more organic patient calls.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-01-north-wollongong-physiotherapy.html",
+      "email_subject": "Quick find on northwollongongphysio.com.au",
+      "email_body": "Hi,\n\nI was looking at your site today and noticed two different phone numbers appearing in different places. It's the kind of inconsistency Google picks up and can quietly suppress your ranking for terms like \"physio Wollongong.\"\n\nI put together a quick page showing a few specific things I'd improve and what you could expect from fixing them:\n{{FUNNEL_LINK}}\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it might be useful.\n\nGabriel Balenton | Organic Theory Founder"
+    },
+    {
+      "business_name": "SR Family Law",
+      "website": "https://srfamilylaw.com.au/",
+      "industry": "Family Law Firm",
+      "issues": "No meta description set on any page, causing Google to display random text in search results instead of a compelling reason to click. Homepage content is thin and navigation-heavy, limiting organic keyword targeting. Testimonials use initials only, reducing credibility for high-anxiety prospects. Blog exists but is underutilised as a content traffic channel.",
+      "opportunity": "Write optimized meta descriptions for all service pages to immediately improve click-through rate from Google. Build outcome-focused homepage copy and service-specific landing pages targeting high-intent local search terms. Expected result within 60 days: measurably higher CTR and more qualified initial enquiry calls.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-01-sr-family-law.html",
+      "email_subject": "Something I spotted on srfamilylaw.com.au",
+      "email_body": "Hi,\n\nI had a look at your site and noticed there's no meta description set for any of your pages. When someone searches \"family lawyer Gold Coast,\" your result shows random text instead of a clear reason to click. That's clients you're already ranking for but not capturing.\n\nI put together a short page showing what I'd change and what results you could expect:\n{{FUNNEL_LINK}}\n\nYou can also see examples of my work at https://organic-theory.vercel.app\n\nHappy to chat if it's useful.\n\nGabriel Balenton | Organic Theory Founder"
+    },
+    {
+      "business_name": "Numbers Talk",
+      "website": "https://numberstalk.com.au/",
+      "industry": "Accounting & Bookkeeping",
+      "issues": "Stats counter on homepage displays '1 +' instead of actual figures, damaging credibility for first-time visitors. No meta description visible in Google search results. No embedded lead capture form on homepage, only a 'Contact Us' link requiring an extra navigation step. Service copy is generic throughout with phrases like 'We can help you' and 'take care of it'.",
+      "opportunity": "Fix the broken stats counter and embed a consultation form directly on the homepage to convert existing traffic into booked calls without additional ad spend. Add meta descriptions to capture more clicks from organic search. Expected result within 30 days: more homepage visitors take a contact action; within 60 days: increase in first-consultation bookings.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-01-numbers-talk.html",
+      "email_subject": "Something looks off on your Numbers Talk homepage",
+      "email_body": "Hi,\n\nI was checking out numberstalk.com.au and noticed your stats section shows \"1 +\" where your actual numbers should appear. For someone visiting for the first time and deciding whether to trust you with their accounts, it's an easy thing to notice and it can create the wrong impression.\n\nI built a quick page showing what I'd fix and what the outcome could look like:\n{{FUNNEL_LINK}}\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all.\n\nGabriel Balenton | Organic Theory Founder"
+    }
+  ]
+}
