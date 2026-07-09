@@ -50,6 +50,9 @@ export interface PitchData {
   ctaLabel: string;
   ctaTo: string;
   preview?: PreviewConfig;
+  /** OnlineJobs.ph job post URL this pitch was built from. Used by the daily
+   * collector to skip leads that already have a pitch page. */
+  sourceJobUrl?: string;
 }
 
 export const pitches: PitchData[] = [
@@ -75,6 +78,7 @@ export const pitches: PitchData[] = [
   },
   {
     slug: 'aba-therapy-growth',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/growth-marketing-manager-pediatric-healthcare-aba-therapy-1685468',
     clientName: 'The ABA Therapy Practice (CA)',
     problem:
       "You're trying to fill a Fall Social Skills Group and building a 90-day growth system from scratch - Wix SEO, Google Business Profile, landing pages, email nurture, and ad campaigns - all riding on one new hire.",
@@ -106,6 +110,7 @@ export const pitches: PitchData[] = [
   },
   {
     slug: 'holistify-wordpress',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/senior-wordpress-web-developer-1684690',
     clientName: 'The Pet Wellness Brand',
     problem:
       "You're hiring a senior WordPress/Elementor developer to turn your site into an authority - but you're managing two properties, a service brand and a media brand, and vetting portfolios instead of shipping pages.",
@@ -137,6 +142,7 @@ export const pitches: PitchData[] = [
   },
   {
     slug: 'nw-marketing-solutions',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/graphic-designer-marketer-1685038',
     clientName: 'NW Marketing Solutions',
     problem:
       "You're building an in-house marketing team to run paid ads, email, landing pages, and lead funnels across multiple real estate brands at once - a lot to load onto a single new hire.",
@@ -168,6 +174,7 @@ export const pitches: PitchData[] = [
   },
   {
     slug: 'brunet-law',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/digital-marketing-website-all-rounder-for-australian-law-firm-1684850',
     clientName: 'Brunet Law',
     problem:
       "You're hiring one reliable person to own your WordPress site, SEO, social, and email newsletter - a lot of specialties to find in a single long-term hire for a boutique firm.",
@@ -199,6 +206,7 @@ export const pitches: PitchData[] = [
   },
   {
     slug: 'kbeauty-shopify',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/shopify-website-designer-korean-beauty-ecommerce-store-1684486',
     clientName: 'The K-Beauty Shopify Launch',
     problem:
       "You're building a Shopify storefront from scratch for a new K-beauty brand and need someone who can handle visual identity, theme build, and conversion-focused UX all at once.",
@@ -230,6 +238,7 @@ export const pitches: PitchData[] = [
   },
   {
     slug: 'ecommerce-email-designer',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/email-marketing-designer-figma-photoshop-ecommerce-remote-1684629',
     clientName: 'The Growing eCommerce Team',
     problem:
       "You're hiring a dedicated Email Marketing Designer to build high-converting Klaviyo/Omnisend campaigns for multiple eCommerce brands - a specialized, ongoing design need.",
@@ -264,6 +273,7 @@ export const pitches: PitchData[] = [
   },
   {
     slug: 'bertha-maison',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/founder-s-associate-editorial-content-1685157',
     clientName: 'Bertha Maison',
     problem:
       "You're building an editorial lifestyle brand and need someone to execute Shopify uploads, SEO metadata, and content scheduling consistently - without diluting your creative direction.",
@@ -295,6 +305,7 @@ export const pitches: PitchData[] = [
   },
   {
     slug: 'calgary-furniture-seo',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/seo-content-writer-full-time-shopify-ai-assisted-seo-1685431',
     clientName: 'The Calgary Furniture Retailer',
     problem:
       "You're hiring a full-time SEO content writer to build organic growth on Shopify - keyword research, content, on-page SEO, and AI-assisted writing that doesn't read like AI.",
@@ -334,6 +345,7 @@ export const pitches: PitchData[] = [
   },
   {
     slug: 'hair-restoration-brand',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/graphic-designer-1685404',
     clientName: 'The Hair Restoration Brand (AU)',
     problem:
       "You need a shared design resource across your ecommerce and clinic sides - emails, product imagery, infographics, clinic collateral - juggled against a queue of briefs from different specialists.",
@@ -368,6 +380,7 @@ export const pitches: PitchData[] = [
   },
   {
     slug: 'bk-express',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/web-designer-website-develope-1685316',
     clientName: 'B&K Express',
     problem:
       "You're modernizing your online presence and building digital tools for a growing logistics operation, and looking for one web designer to own the whole build.",
@@ -399,6 +412,7 @@ export const pitches: PitchData[] = [
   },
   {
     slug: 'em-digital-group',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/e-commerce-performance-marketer-1675558',
     clientName: 'EM Digital Group',
     problem:
       "You're scaling Google Ads and tracking across multiple European ecommerce brands and need someone who can own analytics, GTM/GA4, and campaign optimization end-to-end.",
@@ -431,6 +445,7 @@ export const pitches: PitchData[] = [
   },
   {
     slug: 'alphax-re-capital',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/content-creation-copywriter-1685335',
     clientName: 'AlphaX RE Capital',
     problem:
       "You're hiring a content and copywriting VA to run social, email, and campaign copy across your real estate portfolio - a broad content operation for one hire to carry.",
@@ -465,6 +480,7 @@ export const pitches: PitchData[] = [
   },
   {
     slug: 'ecommerce-seo-multiplatform',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/experienced-e-commerce-product-seo-specialist-etsy-shopify-temu-tiktok-amazon-ebay-immediate-hire-1464845',
     clientName: 'The Multi-Platform eCommerce Team',
     problem:
       "You're running SEO across five stores on Etsy, Shopify, Temu, TikTok, and Amazon and need product listings optimized and updated continuously across all of them.",
@@ -504,6 +520,7 @@ export const pitches: PitchData[] = [
   },
   {
     slug: 'ecommerce-web-redesign',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/ecommerce-web-designer-project-based-1684976',
     clientName: 'The eCommerce Redesign Project',
     problem:
       "You need your Home, Shop, About, and Contact pages redesigned in Figma for conversion - a scoped project you're currently hiring out to one designer.",
@@ -535,6 +552,7 @@ export const pitches: PitchData[] = [
   },
   {
     slug: 'sewing-craft-retailer',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/ecommerce-graphic-designer-marketing-assistant-remote-full-time-part-time-1684651',
     clientName: 'The Sewing & Craft Retailer (AU)',
     problem:
       "You're growing your online presence across email, social, and Google Ads and need one person to design promotional artwork, banners, and campaign creative across every channel.",
