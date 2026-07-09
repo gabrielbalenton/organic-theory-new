@@ -16,6 +16,8 @@ interface GoogleLead {
   funnel_html: string;
   email_subject: string;
   email_body: string;
+  contact_email?: string;
+  sent_automatically?: boolean;
 }
 
 interface DayLog {
@@ -75,6 +77,11 @@ function GoogleLeadCard({ lead, index }: { lead: GoogleLead; index: number }) {
         <span className="text-[10px] tracking-[0.2em] uppercase border border-[#FAFAFA]/15 px-2.5 py-1 text-[#A1A1AA] shrink-0 hidden sm:block">
           {lead.industry}
         </span>
+        {lead.sent_automatically && (
+          <span className="text-[10px] tracking-[0.2em] uppercase border border-emerald-400/30 px-2.5 py-1 text-emerald-400 shrink-0 hidden sm:block">
+            Sent
+          </span>
+        )}
         {funnelUrl && (
           <a
             href={funnelUrl}
@@ -107,6 +114,16 @@ function GoogleLeadCard({ lead, index }: { lead: GoogleLead; index: number }) {
                 <div>
                   <p className="text-[10px] tracking-[0.25em] uppercase text-[#A1A1AA] font-bold mb-2">Opportunity</p>
                   <p className="text-sm text-[#FAFAFA]/60 leading-relaxed">{lead.opportunity}</p>
+                </div>
+                <div>
+                  <p className="text-[10px] tracking-[0.25em] uppercase text-[#A1A1AA] font-bold mb-2">Send Status</p>
+                  <p className="text-sm text-[#FAFAFA]/60 leading-relaxed">
+                    {lead.sent_automatically
+                      ? `Sent automatically to ${lead.contact_email}.`
+                      : lead.contact_email
+                        ? `Not yet sent — ${lead.contact_email} on file.`
+                        : 'No contact email found — send manually if you find one.'}
+                  </p>
                 </div>
                 {funnelUrl && (
                   <a
