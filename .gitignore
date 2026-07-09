@@ -6,3 +6,6 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Lead-collector working data (scraped job posts, outreach drafts) — local only, not needed by the deployed site
+/data/

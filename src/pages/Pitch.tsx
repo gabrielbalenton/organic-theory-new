@@ -1,0 +1,110 @@
+import { motion } from 'framer-motion';
+import { Link, useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight } from 'lucide-react';
+import { getPitch } from '../data/pitchData';
+import { TextReveal } from '../components/TextReveal';
+import { MagneticButton } from '../components/MagneticButton';
+
+const EASE = [0.22, 1, 0.36, 1] as const;
+
+export default function Pitch() {
+  const { slug } = useParams<{ slug: string }>();
+  const pitch = getPitch(slug);
+
+  if (!pitch) {
+    return (
+      <div className="min-h-screen bg-[#09090B] text-[#FAFAFA] flex items-center justify-center">
+        <div className="text-center">
+          <p className="text-[10px] tracking-[0.3em] uppercase text-[#A1A1AA] mb-4">Pitch not found</p>
+          <Link to="/" className="text-sm opacity-40 hover:opacity-100 transition-opacity">← Back home</Link>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <Helmet>
+        <title>{pitch.clientName} | Organic Theory</title>
+        <meta name="robots" content="noindex" />
+      </Helmet>
+
+      <div className="w-full min-h-screen bg-[#09090B] text-[#FAFAFA]">
+
+        {/* Hero */}
+        <section className="pt-32 pb-16 px-6 md:px-12 max-w-4xl mx-auto">
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-[10px] text-[#A1A1AA] mb-8 font-bold tracking-[0.3em] uppercase"
+          >
+            [ FOR {pitch.clientName.toUpperCase()} ]
+          </motion.p>
+          <TextReveal>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl leading-[1.15] font-display uppercase tracking-tight max-w-2xl">
+              {pitch.problem}
+            </h1>
+          </TextReveal>
+        </section>
+
+        {/* Divider */}
+        <div className="border-t border-[#FAFAFA]/10" />
+
+        {/* Points */}
+        <section className="max-w-4xl mx-auto px-6 md:px-12">
+          {pitch.points.map((point, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: i * 0.08, ease: EASE }}
+              className="grid grid-cols-1 md:grid-cols-12 gap-6 py-12 border-b border-[#FAFAFA]/10"
+            >
+              <div className="md:col-span-1">
+                <span className="text-3xl font-display text-[#FAFAFA]/10 leading-none">0{i + 1}</span>
+              </div>
+              <div className="md:col-span-11">
+                <h2 className="text-lg md:text-xl font-display uppercase tracking-wide mb-3 leading-snug">
+                  {point.heading}
+                </h2>
+                <p className="text-sm leading-relaxed opacity-50 max-w-xl">{point.detail}</p>
+              </div>
+            </motion.div>
+          ))}
+        </section>
+
+        {/* CTA */}
+        <section className="px-6 md:px-12 py-20 max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, ease: EASE }}
+            className="flex flex-col md:flex-row justify-between items-start gap-8 border-t border-[#FAFAFA]/10 pt-12"
+          >
+            <div>
+              <p className="text-[10px] text-[#A1A1AA] mb-3 font-bold tracking-[0.3em] uppercase">[ NEXT STEP ]</p>
+              <h3 className="text-xl md:text-2xl font-display uppercase tracking-wide">Want this fixed?</h3>
+              <p className="text-sm opacity-40 mt-2 max-w-sm leading-relaxed">
+                Start with the audit - see exactly what's costing {pitch.clientName} rankings before we touch anything.
+              </p>
+            </div>
+            <MagneticButton>
+              <Link
+                to={pitch.ctaTo}
+                className="inline-flex items-center gap-4 group border border-[#FAFAFA]/20 px-8 py-4 hover:bg-[#FAFAFA] hover:text-[#09090B] transition-all duration-300 shrink-0"
+              >
+                <span className="text-[10px] tracking-[0.2em] uppercase font-bold group-hover:text-[#09090B] transition-colors duration-300">{pitch.ctaLabel}</span>
+                <ArrowRight size={14} className="group-hover:translate-x-1 group-hover:text-[#09090B] transition-all duration-300" />
+              </Link>
+            </MagneticButton>
+          </motion.div>
+        </section>
+
+      </div>
+    </>
+  );
+}
