@@ -19,6 +19,7 @@ const CoursePlayer = lazy(() => import('./pages/CoursePlayer'));
 const About = lazy(() => import('./pages/About'));
 const Start = lazy(() => import('./pages/Start'));
 const Pipeline = lazy(() => import('./pages/Pipeline'));
+const PipelineJobs = lazy(() => import('./pages/PipelineJobs'));
 const Pitch = lazy(() => import('./pages/Pitch'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
@@ -46,6 +47,7 @@ export default function App() {
             <Route path="courses" element={<Courses />} />
             <Route path="start" element={<Start />} />
             <Route path="pipeline" element={<Pipeline />} />
+            <Route path="pipeline/jobs" element={<PipelineJobs />} />
             <Route path="*" element={<NotFound />} />
           </Route>
           <Route path="/courses/:courseId/learn" element={<CoursePlayer />} />
