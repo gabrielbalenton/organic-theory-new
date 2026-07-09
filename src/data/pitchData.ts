@@ -78,12 +78,12 @@ export const pitches: PitchData[] = [
       {
         heading: 'The 90-day system you\'re hiring for already exists',
         detail:
-          'Local SEO, Google Business Profile optimization, and conversion-focused landing pages is exactly what we build as a packaged engagement - no ramp-up time, no training a new hire on your positioning.',
+          'Local SEO, Google Business Profile optimization, and conversion-focused landing pages is exactly what I build as a packaged engagement - no ramp-up time, no training a new hire on your positioning.',
       },
       {
         heading: 'Email and content run in parallel, not sequentially',
         detail:
-          'We stand up the parent-education email flow and content calendar alongside the SEO work instead of waiting for one hire to get through both.',
+          'I stand up the parent-education email flow and content calendar alongside the SEO work instead of waiting for one hire to get through both.',
       },
     ],
     ctaLabel: 'Skip the Hiring Cycle - Book a Call',
@@ -108,7 +108,7 @@ export const pitches: PitchData[] = [
       {
         heading: 'Elementor builds and technical SEO in one pass',
         detail:
-          'We build and optimize WordPress/Elementor sites for speed and search from day one, so you\'re not paying to discover plugin conflicts after launch.',
+          'I build and optimize WordPress/Elementor sites for speed and search from day one, so you\'re not paying to discover plugin conflicts after launch.',
       },
       {
         heading: 'One team across both properties',
@@ -116,7 +116,7 @@ export const pitches: PitchData[] = [
           'A consistent design system and SEO implementation across your service site and media brand, without coordinating two separate hires.',
       },
     ],
-    ctaLabel: 'See How We\'d Build It',
+    ctaLabel: 'See How I\'d Build It',
     ctaTo: '/contact',
     preview: {
       type: 'website',
@@ -138,12 +138,12 @@ export const pitches: PitchData[] = [
       {
         heading: 'Landing pages and funnels that plug into your ad spend',
         detail:
-          'We build the conversion layer - landing pages, lead funnels, email sequences - so your ad spend has somewhere effective to send traffic, without a hire ramping up on your brand voice first.',
+          'I build the conversion layer - landing pages, lead funnels, email sequences - so your ad spend has somewhere effective to send traffic, without a hire ramping up on your brand voice first.',
       },
       {
         heading: 'SEO and content systems running in the background',
         detail:
-          'While your team focuses on paid and social, we handle the organic side - local SEO, Google Business Profile, structured content - so growth doesn\'t depend on ad spend alone.',
+          'While your team focuses on paid and social, I handle the organic side - local SEO, Google Business Profile, structured content - so growth doesn\'t depend on ad spend alone.',
       },
     ],
     ctaLabel: 'Talk Through Your Funnel',
@@ -168,12 +168,12 @@ export const pitches: PitchData[] = [
       {
         heading: 'WordPress (Kallyas) and on-page SEO, handled as a system',
         detail:
-          'We maintain the site, keep SEO titles/meta and internal linking clean, and handle ongoing page work - the exact scope in your listing - without you managing a single generalist hire.',
+          'I maintain the site, keep SEO titles/meta and internal linking clean, and handle ongoing page work - the exact scope in your listing - without you managing a single generalist hire.',
       },
       {
         heading: 'A content calendar built once, run consistently',
         detail:
-          'We turn your existing content into a structured calendar across web, social, and email, so quality doesn\'t depend on one person\'s bandwidth.',
+          'I turn your existing content into a structured calendar across web, social, and email, so quality doesn\'t depend on one person\'s bandwidth.',
       },
     ],
     ctaLabel: 'Book a 15-Minute Call',
@@ -198,7 +198,7 @@ export const pitches: PitchData[] = [
       {
         heading: 'A full Shopify build, not just a themed template',
         detail:
-          'We design and implement the storefront - homepage, collections, product pages, checkout flow - with SEO-friendly structure and fast load times built in from the start.',
+          'I design and implement the storefront - homepage, collections, product pages, checkout flow - with SEO-friendly structure and fast load times built in from the start.',
       },
       {
         heading: 'Launch-ready without re-hiring for each phase',
@@ -228,7 +228,7 @@ export const pitches: PitchData[] = [
       {
         heading: 'Email campaigns designed and deployed as a service',
         detail:
-          'We design and build mobile-responsive, on-brand email campaigns for eCommerce brands without you needing to manage a dedicated in-house designer\'s workload.',
+          'I design and build mobile-responsive, on-brand email campaigns for eCommerce brands without you needing to manage a dedicated in-house designer\'s workload.',
       },
       {
         heading: 'CRO principles baked into every send',
@@ -261,7 +261,7 @@ export const pitches: PitchData[] = [
       {
         heading: 'Shopify and SEO execution that protects your editorial voice',
         detail:
-          'We handle product/blog uploads, SEO titles, meta descriptions, and alt text to your established style guide - execution only, no reinterpreting your brand.',
+          'I handle product/blog uploads, SEO titles, meta descriptions, and alt text to your established style guide - execution only, no reinterpreting your brand.',
       },
       {
         heading: 'Consistent output across Shopify, Instagram, and Pinterest',
@@ -296,10 +296,10 @@ export const pitches: PitchData[] = [
       {
         heading: 'AI-assisted, human-edited - the balance you\'re hiring for',
         detail:
-          'We use the same AI-productivity approach you described - research-first, human judgment on top - without needing to train and manage a new full-time writer.',
+          'I use the same AI-productivity approach you described - research-first, human judgment on top - without needing to train and manage a new full-time writer.',
       },
     ],
-    ctaLabel: 'See Our SEO Content Process',
+    ctaLabel: 'See My SEO Content Process',
     ctaTo: '/contact',
     preview: {
       type: 'seo',
@@ -337,7 +337,7 @@ export const pitches: PitchData[] = [
           'Retouching, compositing, and ingredient/benefit infographics produced on a predictable turnaround, not queued behind a single part-time designer.',
       },
     ],
-    ctaLabel: 'Review Our Design Process',
+    ctaLabel: 'Review My Design Process',
     ctaTo: '/contact',
     preview: {
       type: 'email',
@@ -362,7 +362,7 @@ export const pitches: PitchData[] = [
       {
         heading: 'A professional, high-performing site built and maintained as a service',
         detail:
-          'We design, build, and maintain the site - landing pages for your transport services, mobile performance, basic SEO - the exact scope in your listing, without a single hire\'s bandwidth as the bottleneck.',
+          'I design, build, and maintain the site - landing pages for your transport services, mobile performance, basic SEO - the exact scope in your listing, without a single hire\'s bandwidth as the bottleneck.',
       },
       {
         heading: 'Ongoing improvements without re-hiring',
@@ -397,10 +397,10 @@ export const pitches: PitchData[] = [
       {
         heading: 'Campaign optimization without the ramp-up of a new hire',
         detail:
-          'We bring existing e-commerce Google Ads and CRO experience across Search, Shopping, and Performance Max instead of learning your stack from zero.',
+          'I bring existing e-commerce Google Ads and CRO experience across Search, Shopping, and Performance Max instead of learning your stack from zero.',
       },
     ],
-    ctaLabel: 'Audit Our Tracking Setup',
+    ctaLabel: 'Audit My Tracking Setup',
     ctaTo: '/contact',
     preview: {
       type: 'dashboard',
@@ -423,7 +423,7 @@ export const pitches: PitchData[] = [
       {
         heading: 'A content system across LinkedIn, Instagram, email, and property marketing',
         detail:
-          'We build the content calendar and produce persuasive copy for listings, buyer/seller education, and lead-gen campaigns as a coordinated system, not a single generalist\'s task list.',
+          'I build the content calendar and produce persuasive copy for listings, buyer/seller education, and lead-gen campaigns as a coordinated system, not a single generalist\'s task list.',
       },
       {
         heading: 'A repurposing pipeline built in',
@@ -431,7 +431,7 @@ export const pitches: PitchData[] = [
           'Long-form content - webinars, articles, listings - gets systematically repurposed into short-form social and email, so nothing you already produce goes unused.',
       },
     ],
-    ctaLabel: 'See Our Content System',
+    ctaLabel: 'See My Content System',
     ctaTo: '/contact',
     preview: {
       type: 'email',
@@ -461,10 +461,10 @@ export const pitches: PitchData[] = [
       {
         heading: 'Built to keep up with algorithm changes',
         detail:
-          'We track Etsy, Amazon, Shopify, TikTok, and Temu SEO changes as part of the engagement, so your listings don\'t quietly lose rank between updates.',
+          'I track Etsy, Amazon, Shopify, TikTok, and Temu SEO changes as part of the engagement, so your listings don\'t quietly lose rank between updates.',
       },
     ],
-    ctaLabel: 'Review Our Listings Process',
+    ctaLabel: 'Review My Listings Process',
     ctaTo: '/contact',
     preview: {
       type: 'seo',
@@ -494,7 +494,7 @@ export const pitches: PitchData[] = [
       {
         heading: 'A conversion-focused redesign, scoped and delivered',
         detail:
-          'We redesign the same four pages you listed - clean, modern, conversion-focused - with UX/UI grounded in ecommerce best practice, not just visual polish.',
+          'I redesign the same four pages you listed - clean, modern, conversion-focused - with UX/UI grounded in ecommerce best practice, not just visual polish.',
       },
       {
         heading: 'Built to hand off cleanly',
@@ -532,7 +532,7 @@ export const pitches: PitchData[] = [
           'Multi-format resizing, competitor price-monitoring support, and CMS uploads handled on the cadence your promotions actually need.',
       },
     ],
-    ctaLabel: 'See Our Creative Process',
+    ctaLabel: 'See My Creative Process',
     ctaTo: '/contact',
     preview: {
       type: 'email',

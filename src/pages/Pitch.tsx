@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import { getPitch } from '../data/pitchData';
 import { TextReveal } from '../components/TextReveal';
 import { MagneticButton } from '../components/MagneticButton';
+import Cursor from '../components/Cursor';
 import { WebsiteMockup } from '../components/mockups/WebsiteMockup';
 import { EmailMockup } from '../components/mockups/EmailMockup';
 import { DashboardMockup } from '../components/mockups/DashboardMockup';
@@ -19,6 +20,7 @@ export default function Pitch() {
   if (!pitch) {
     return (
       <div className="min-h-screen bg-[#09090B] text-[#FAFAFA] flex items-center justify-center">
+        <Cursor />
         <div className="text-center">
           <p className="text-[10px] tracking-[0.3em] uppercase text-[#A1A1AA] mb-4">Pitch not found</p>
           <Link to="/" className="text-sm opacity-40 hover:opacity-100 transition-opacity">← Back home</Link>
@@ -34,6 +36,8 @@ export default function Pitch() {
         <meta name="robots" content="noindex" />
       </Helmet>
 
+      <Cursor />
+
       <div className="w-full min-h-screen bg-[#09090B] text-[#FAFAFA]">
 
         {/* Hero */}
@@ -47,7 +51,7 @@ export default function Pitch() {
             [ FOR {pitch.clientName.toUpperCase()} ]
           </motion.p>
           <TextReveal>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl leading-[1.15] font-display uppercase tracking-tight max-w-2xl">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl leading-[1.35] font-display tracking-tight max-w-2xl normal-case">
               {pitch.problem}
             </h1>
           </TextReveal>
@@ -62,7 +66,7 @@ export default function Pitch() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-[10px] text-[#A1A1AA] mb-6 font-bold tracking-[0.3em] uppercase"
             >
-              [ WHAT WE'D BUILD FOR {pitch.clientName.toUpperCase()} ]
+              [ WHAT I'D BUILD FOR {pitch.clientName.toUpperCase()} ]
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -120,7 +124,7 @@ export default function Pitch() {
               <p className="text-[10px] text-[#A1A1AA] mb-3 font-bold tracking-[0.3em] uppercase">[ NEXT STEP ]</p>
               <h3 className="text-xl md:text-2xl font-display uppercase tracking-wide">Want this fixed?</h3>
               <p className="text-sm opacity-40 mt-2 max-w-sm leading-relaxed">
-                Start with the audit - see exactly what's costing {pitch.clientName} rankings before we touch anything.
+                Start with a short call - I'll walk you through exactly what I'd build before you commit to anything.
               </p>
             </div>
             <MagneticButton>
