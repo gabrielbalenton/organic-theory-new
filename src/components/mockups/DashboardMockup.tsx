@@ -3,9 +3,10 @@ interface DashboardMockupProps {
   stats: { label: string; value: string; delta?: string }[];
   bars: number[];
   accent: string;
+  imageUrl: string;
 }
 
-export function DashboardMockup({ title, stats, bars, accent }: DashboardMockupProps) {
+export function DashboardMockup({ title, stats, bars, accent, imageUrl }: DashboardMockupProps) {
   const max = Math.max(...bars);
   return (
     <div className="rounded-lg overflow-hidden border border-[#FAFAFA]/10 bg-[#FAFAFA] shadow-2xl shadow-black/40">
@@ -17,7 +18,11 @@ export function DashboardMockup({ title, stats, bars, accent }: DashboardMockupP
         </div>
         <div className="flex-1 bg-white rounded px-3 py-1 text-[11px] text-black/40 truncate">{title}</div>
       </div>
-      <div className="px-6 md:px-10 py-8">
+      <div className="relative h-40 md:h-48">
+        <img src={imageUrl} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+        <div className="absolute inset-0" style={{ background: `linear-gradient(180deg, transparent 0%, ${accent}22 100%)` }} />
+      </div>
+      <div className="px-6 md:px-10 py-8 bg-[#FAFAFA]">
         <div className="grid grid-cols-3 gap-4 mb-8">
           {stats.map(s => (
             <div key={s.label} className="border border-black/5 rounded p-4">

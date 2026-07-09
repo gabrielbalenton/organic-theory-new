@@ -6,9 +6,10 @@ interface EmailMockupProps {
   bodyBlocks: { heading: string; body: string }[];
   ctaLabel: string;
   accent: string;
+  imageUrl: string;
 }
 
-export function EmailMockup({ fromName, subject, preheader, bannerText, bodyBlocks, ctaLabel, accent }: EmailMockupProps) {
+export function EmailMockup({ fromName, subject, preheader, bannerText, bodyBlocks, ctaLabel, accent, imageUrl }: EmailMockupProps) {
   return (
     <div className="rounded-lg overflow-hidden border border-[#FAFAFA]/10 bg-[#FAFAFA] shadow-2xl shadow-black/40">
       {/* Inbox header */}
@@ -26,8 +27,10 @@ export function EmailMockup({ fromName, subject, preheader, bannerText, bodyBloc
       </div>
       {/* Email body */}
       <div>
-        <div className="px-6 md:px-10 py-10 text-center" style={{ backgroundColor: accent }}>
-          <p className="text-white text-lg md:text-xl font-bold tracking-wide">{bannerText}</p>
+        <div className="relative h-52 md:h-64 flex items-center justify-center text-center px-6">
+          <img src={imageUrl} alt="" className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+          <div className="absolute inset-0" style={{ background: `linear-gradient(180deg, ${accent}66 0%, ${accent}cc 100%)` }} />
+          <p className="relative z-10 text-white text-lg md:text-2xl font-bold tracking-wide drop-shadow-sm">{bannerText}</p>
         </div>
         <div className="px-6 md:px-10 py-8 space-y-6">
           {bodyBlocks.map((block, i) => (

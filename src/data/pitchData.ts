@@ -13,6 +13,7 @@ export type PreviewConfig =
       subhead: string;
       ctaLabel: string;
       accent: string;
+      imageUrl: string;
     }
   | {
       type: 'email';
@@ -23,6 +24,7 @@ export type PreviewConfig =
       bodyBlocks: { heading: string; body: string }[];
       ctaLabel: string;
       accent: string;
+      imageUrl: string;
     }
   | {
       type: 'dashboard';
@@ -30,12 +32,14 @@ export type PreviewConfig =
       stats: { label: string; value: string; delta?: string }[];
       bars: number[];
       accent: string;
+      imageUrl: string;
     }
   | {
       type: 'seo';
       searchQuery: string;
       results: { url: string; title: string; meta: string; highlighted?: boolean }[];
       accent: string;
+      imageUrl: string;
     };
 
 export interface PitchData {
@@ -97,6 +101,7 @@ export const pitches: PitchData[] = [
       subhead: 'Individualized ABA therapy and social skills groups for children — now enrolling for Fall.',
       ctaLabel: 'Reserve a Spot',
       accent: '#3B82A6',
+      imageUrl: 'https://images.unsplash.com/photo-1532330393533-443990a51d10?auto=format&fit=crop&w=1200&q=80',
     },
   },
   {
@@ -127,6 +132,7 @@ export const pitches: PitchData[] = [
       subhead: 'Trusted guides, vet-reviewed products, and a wellness plan built around your pet.',
       ctaLabel: 'Explore Wellness Plans',
       accent: '#5B8C5A',
+      imageUrl: 'https://images.unsplash.com/photo-1760791510936-eef13da5018b?auto=format&fit=crop&w=1200&q=80',
     },
   },
   {
@@ -157,6 +163,7 @@ export const pitches: PitchData[] = [
       subhead: 'Local expertise, real results — see why buyers and sellers trust the Northwest Home Team.',
       ctaLabel: 'Book a Free Consultation',
       accent: '#1F3A5F',
+      imageUrl: 'https://images.unsplash.com/photo-1572771669538-f302ed3752fc?auto=format&fit=crop&w=1200&q=80',
     },
   },
   {
@@ -187,6 +194,7 @@ export const pitches: PitchData[] = [
       subhead: 'Fixed-fee insolvency, restructuring, and dispute resolution for Brisbane business owners.',
       ctaLabel: 'Book a Consultation',
       accent: '#2B3A55',
+      imageUrl: 'https://images.unsplash.com/photo-1765371514743-45bd8e6c0a28?auto=format&fit=crop&w=1200&q=80',
     },
   },
   {
@@ -217,6 +225,7 @@ export const pitches: PitchData[] = [
       subhead: 'Clean, effective Korean skincare and cosmetics sourced from Seoul\'s best labs.',
       ctaLabel: 'Shop the Edit',
       accent: '#E8A0BF',
+      imageUrl: 'https://images.unsplash.com/photo-1741896135490-4062a3b21abf?auto=format&fit=crop&w=1200&q=80',
     },
   },
   {
@@ -250,6 +259,7 @@ export const pitches: PitchData[] = [
       ],
       ctaLabel: 'Shop Now',
       accent: '#6C5CE7',
+      imageUrl: 'https://images.unsplash.com/photo-1609840112990-4265448268d1?auto=format&fit=crop&w=1200&q=80',
     },
   },
   {
@@ -280,6 +290,7 @@ export const pitches: PitchData[] = [
       subhead: 'Curated pieces and stories inspired by classic European homes.',
       ctaLabel: 'Read the Journal',
       accent: '#C08552',
+      imageUrl: 'https://images.unsplash.com/photo-1762529716272-b316f61502e7?auto=format&fit=crop&w=1200&q=80',
     },
   },
   {
@@ -318,6 +329,7 @@ export const pitches: PitchData[] = [
           highlighted: true,
         },
       ],
+      imageUrl: 'https://images.unsplash.com/photo-1764076327046-fe35f955cba1?auto=format&fit=crop&w=400&q=80',
     },
   },
   {
@@ -351,6 +363,7 @@ export const pitches: PitchData[] = [
       ],
       ctaLabel: 'View Your Plan',
       accent: '#4A7C82',
+      imageUrl: 'https://images.unsplash.com/photo-1758691461957-474a7686e388?auto=format&fit=crop&w=1200&q=80',
     },
   },
   {
@@ -381,6 +394,7 @@ export const pitches: PitchData[] = [
       subhead: 'Wharf cartage, warehousing, and logistics solutions for Melbourne businesses.',
       ctaLabel: 'Get a Quote',
       accent: '#3B5266',
+      imageUrl: 'https://images.unsplash.com/photo-1773126378915-793b5c48fb38?auto=format&fit=crop&w=1200&q=80',
     },
   },
   {
@@ -412,6 +426,7 @@ export const pitches: PitchData[] = [
         { label: 'Tracked Revenue', value: '€48,210', delta: '+22%' },
       ],
       bars: [30, 45, 38, 52, 48, 61, 70],
+      imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
     },
   },
   {
@@ -445,6 +460,7 @@ export const pitches: PitchData[] = [
       ],
       ctaLabel: 'View Listing',
       accent: '#1E5B4F',
+      imageUrl: 'https://images.unsplash.com/photo-1758193431351-68538bf55ec3?auto=format&fit=crop&w=1200&q=80',
     },
   },
   {
@@ -483,6 +499,7 @@ export const pitches: PitchData[] = [
           highlighted: true,
         },
       ],
+      imageUrl: 'https://images.unsplash.com/photo-1630860218787-b73d3426c07c?auto=format&fit=crop&w=400&q=80',
     },
   },
   {
@@ -513,6 +530,7 @@ export const pitches: PitchData[] = [
       subhead: 'A cleaner, faster, conversion-focused storefront built around how your customers actually shop.',
       ctaLabel: 'Shop New Arrivals',
       accent: '#E4572E',
+      imageUrl: 'https://images.unsplash.com/photo-1761090617068-f1b3257d27ad?auto=format&fit=crop&w=1200&q=80',
     },
   },
   {
@@ -546,6 +564,7 @@ export const pitches: PitchData[] = [
       ],
       ctaLabel: 'Shop New Fabric',
       accent: '#C1440E',
+      imageUrl: 'https://images.unsplash.com/photo-1771098206650-81d713e2e2b9?auto=format&fit=crop&w=1200&q=80',
     },
   },
 ];

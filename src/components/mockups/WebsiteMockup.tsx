@@ -6,9 +6,10 @@ interface WebsiteMockupProps {
   subhead: string;
   ctaLabel: string;
   accent: string;
+  imageUrl: string;
 }
 
-export function WebsiteMockup({ url, navItems, eyebrow, headline, subhead, ctaLabel, accent }: WebsiteMockupProps) {
+export function WebsiteMockup({ url, navItems, eyebrow, headline, subhead, ctaLabel, accent, imageUrl }: WebsiteMockupProps) {
   return (
     <div className="rounded-lg overflow-hidden border border-[#FAFAFA]/10 bg-[#FAFAFA] shadow-2xl shadow-black/40">
       {/* Browser chrome */}
@@ -21,7 +22,7 @@ export function WebsiteMockup({ url, navItems, eyebrow, headline, subhead, ctaLa
         <div className="flex-1 bg-white rounded px-3 py-1 text-[11px] text-black/40 truncate">{url}</div>
       </div>
       {/* Nav */}
-      <div className="flex items-center justify-between px-6 md:px-10 py-4 border-b border-black/5">
+      <div className="flex items-center justify-between px-6 md:px-10 py-4 border-b border-black/5 bg-white relative z-10">
         <div className="w-7 h-7 rounded-full" style={{ backgroundColor: accent }} />
         <div className="hidden sm:flex gap-6">
           {navItems.map(item => (
@@ -32,20 +33,26 @@ export function WebsiteMockup({ url, navItems, eyebrow, headline, subhead, ctaLa
           {ctaLabel}
         </div>
       </div>
-      {/* Hero */}
-      <div className="px-6 md:px-10 py-14 md:py-20 text-center">
-        <p className="text-[10px] tracking-[0.3em] uppercase font-bold mb-4" style={{ color: accent }}>{eyebrow}</p>
-        <h3 className="text-2xl md:text-4xl font-bold text-black/90 leading-tight max-w-lg mx-auto mb-4">{headline}</h3>
-        <p className="text-sm md:text-base text-black/50 max-w-md mx-auto mb-8">{subhead}</p>
-        <div className="inline-block text-xs tracking-[0.15em] uppercase px-6 py-3 rounded font-bold" style={{ backgroundColor: accent, color: '#fff' }}>
-          {ctaLabel}
+      {/* Hero with full-bleed photo */}
+      <div className="relative min-h-[340px] md:min-h-[420px] flex items-center justify-center text-center px-6 md:px-10">
+        <img
+          src={imageUrl}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: `linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 100%)` }}
+        />
+        <div className="relative z-10 py-10">
+          <p className="text-[10px] tracking-[0.3em] uppercase font-bold mb-4 text-white/90">{eyebrow}</p>
+          <h3 className="text-2xl md:text-4xl font-bold text-white leading-tight max-w-lg mx-auto mb-4 drop-shadow-sm">{headline}</h3>
+          <p className="text-sm md:text-base text-white/80 max-w-md mx-auto mb-8">{subhead}</p>
+          <div className="inline-block text-xs tracking-[0.15em] uppercase px-6 py-3 rounded font-bold" style={{ backgroundColor: accent, color: '#fff' }}>
+            {ctaLabel}
+          </div>
         </div>
-      </div>
-      {/* Decorative content blocks */}
-      <div className="px-6 md:px-10 pb-10 grid grid-cols-3 gap-3">
-        {[0, 1, 2].map(i => (
-          <div key={i} className="rounded aspect-[4/3]" style={{ backgroundColor: `${accent}1a` }} />
-        ))}
       </div>
     </div>
   );
