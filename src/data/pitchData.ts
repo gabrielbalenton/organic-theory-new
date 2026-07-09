@@ -3,6 +3,41 @@ export interface PitchPoint {
   detail: string;
 }
 
+export type PreviewConfig =
+  | {
+      type: 'website';
+      url: string;
+      navItems: string[];
+      eyebrow: string;
+      headline: string;
+      subhead: string;
+      ctaLabel: string;
+      accent: string;
+    }
+  | {
+      type: 'email';
+      fromName: string;
+      subject: string;
+      preheader: string;
+      bannerText: string;
+      bodyBlocks: { heading: string; body: string }[];
+      ctaLabel: string;
+      accent: string;
+    }
+  | {
+      type: 'dashboard';
+      title: string;
+      stats: { label: string; value: string; delta?: string }[];
+      bars: number[];
+      accent: string;
+    }
+  | {
+      type: 'seo';
+      searchQuery: string;
+      results: { url: string; title: string; meta: string; highlighted?: boolean }[];
+      accent: string;
+    };
+
 export interface PitchData {
   slug: string;
   clientName: string;
@@ -10,6 +45,7 @@ export interface PitchData {
   points: [PitchPoint, PitchPoint];
   ctaLabel: string;
   ctaTo: string;
+  preview?: PreviewConfig;
 }
 
 export const pitches: PitchData[] = [
@@ -52,6 +88,16 @@ export const pitches: PitchData[] = [
     ],
     ctaLabel: 'Skip the Hiring Cycle - Book a Call',
     ctaTo: '/contact',
+    preview: {
+      type: 'website',
+      url: 'yourpractice.com/social-skills-group',
+      navItems: ['Programs', 'About', 'Locations', 'Contact'],
+      eyebrow: 'FALL SOCIAL SKILLS GROUP',
+      headline: 'Help Your Child Build Confidence & Connection',
+      subhead: 'Individualized ABA therapy and social skills groups for children — now enrolling for Fall.',
+      ctaLabel: 'Reserve a Spot',
+      accent: '#3B82A6',
+    },
   },
   {
     slug: 'holistify-wordpress',
@@ -72,6 +118,16 @@ export const pitches: PitchData[] = [
     ],
     ctaLabel: 'See How We\'d Build It',
     ctaTo: '/contact',
+    preview: {
+      type: 'website',
+      url: 'holistify.com',
+      navItems: ['Shop', 'Learn', 'About', 'Vets'],
+      eyebrow: 'PET WELLNESS, SIMPLIFIED',
+      headline: 'Science-Backed Care for a Longer, Healthier Life',
+      subhead: 'Trusted guides, vet-reviewed products, and a wellness plan built around your pet.',
+      ctaLabel: 'Explore Wellness Plans',
+      accent: '#5B8C5A',
+    },
   },
   {
     slug: 'nw-marketing-solutions',
@@ -92,6 +148,16 @@ export const pitches: PitchData[] = [
     ],
     ctaLabel: 'Talk Through Your Funnel',
     ctaTo: '/contact',
+    preview: {
+      type: 'website',
+      url: 'nwhometeam.com/listings',
+      navItems: ['Listings', 'Buyers', 'Sellers', 'Team'],
+      eyebrow: 'FEATURED LISTING',
+      headline: 'Find Your Next Home in the South Puget Sound',
+      subhead: 'Local expertise, real results — see why buyers and sellers trust the Northwest Home Team.',
+      ctaLabel: 'Book a Free Consultation',
+      accent: '#1F3A5F',
+    },
   },
   {
     slug: 'brunet-law',
@@ -112,6 +178,16 @@ export const pitches: PitchData[] = [
     ],
     ctaLabel: 'Book a 15-Minute Call',
     ctaTo: '/contact',
+    preview: {
+      type: 'website',
+      url: 'brunetlaw.com.au',
+      navItems: ['Insolvency', 'Construction', 'Disputes', 'Contact'],
+      eyebrow: 'BRISBANE BUSINESS LAWYERS',
+      headline: 'Clear Advice When Your Business Is Under Pressure',
+      subhead: 'Fixed-fee insolvency, restructuring, and dispute resolution for Brisbane business owners.',
+      ctaLabel: 'Book a Consultation',
+      accent: '#2B3A55',
+    },
   },
   {
     slug: 'kbeauty-shopify',
@@ -132,6 +208,16 @@ export const pitches: PitchData[] = [
     ],
     ctaLabel: 'See a K-Beauty Build Concept',
     ctaTo: '/contact',
+    preview: {
+      type: 'website',
+      url: 'yourkbeautystore.com',
+      navItems: ['Skincare', 'Cosmetics', 'Bestsellers', 'About'],
+      eyebrow: 'K-BEAUTY, CURATED',
+      headline: 'Glass Skin Starts Here',
+      subhead: 'Clean, effective Korean skincare and cosmetics sourced from Seoul\'s best labs.',
+      ctaLabel: 'Shop the Edit',
+      accent: '#E8A0BF',
+    },
   },
   {
     slug: 'ecommerce-email-designer',
@@ -152,6 +238,19 @@ export const pitches: PitchData[] = [
     ],
     ctaLabel: 'Show Me a Sample Campaign',
     ctaTo: '/contact',
+    preview: {
+      type: 'email',
+      fromName: 'Your eCommerce Brand',
+      subject: '✨ New Arrivals Are Here — Shop Before They Sell Out',
+      preheader: 'Limited stock. Free shipping over $50.',
+      bannerText: 'THE NEW COLLECTION HAS LANDED',
+      bodyBlocks: [
+        { heading: 'Handpicked for you', body: 'Curated based on what\'s trending this week.' },
+        { heading: 'Free shipping over $50', body: 'No code needed — it\'s automatically applied at checkout.' },
+      ],
+      ctaLabel: 'Shop Now',
+      accent: '#6C5CE7',
+    },
   },
   {
     slug: 'bertha-maison',
@@ -172,6 +271,16 @@ export const pitches: PitchData[] = [
     ],
     ctaLabel: 'Talk Content Systems',
     ctaTo: '/contact',
+    preview: {
+      type: 'website',
+      url: 'berthamaison.com/journal',
+      navItems: ['Shop', 'Journal', 'Our Story', 'Pinterest'],
+      eyebrow: 'THE BERTHA MAISON JOURNAL',
+      headline: 'Timeless Interiors, Everyday Rituals',
+      subhead: 'Curated pieces and stories inspired by classic European homes.',
+      ctaLabel: 'Read the Journal',
+      accent: '#C08552',
+    },
   },
   {
     slug: 'calgary-furniture-seo',
@@ -192,6 +301,24 @@ export const pitches: PitchData[] = [
     ],
     ctaLabel: 'See Our SEO Content Process',
     ctaTo: '/contact',
+    preview: {
+      type: 'seo',
+      searchQuery: 'modern furniture store calgary',
+      accent: '#8B5E3C',
+      results: [
+        {
+          url: 'competitor-furniture.ca',
+          title: 'Furniture Store | Calgary, AB',
+          meta: 'We sell furniture. Contact us for more information about our products and services.',
+        },
+        {
+          url: 'yourstore.ca › blog › best-furniture-calgary-homes',
+          title: 'Best Furniture for Calgary Homes: 2026 Buying Guide',
+          meta: 'Calgary-specific buying guide covering durability for our climate, delivery timelines, and the 12 pieces our design team recommends most.',
+          highlighted: true,
+        },
+      ],
+    },
   },
   {
     slug: 'hair-restoration-brand',
@@ -212,6 +339,19 @@ export const pitches: PitchData[] = [
     ],
     ctaLabel: 'Review Our Design Process',
     ctaTo: '/contact',
+    preview: {
+      type: 'email',
+      fromName: 'Your Hair Restoration Clinic',
+      subject: 'Your Hair Growth Journey: Month 3 Check-In',
+      preheader: 'See what to expect next, plus a science-backed tip.',
+      bannerText: 'YOU\'RE 3 MONTHS IN — HERE\'S WHAT TO EXPECT',
+      bodyBlocks: [
+        { heading: 'The science behind month 3', body: 'Understand exactly what\'s happening in your follicle cycle right now.' },
+        { heading: 'This week\'s tip', body: 'A simple scalp care habit that improves absorption of your treatment.' },
+      ],
+      ctaLabel: 'View Your Plan',
+      accent: '#4A7C82',
+    },
   },
   {
     slug: 'bk-express',
@@ -232,6 +372,16 @@ export const pitches: PitchData[] = [
     ],
     ctaLabel: 'Get a Site Assessment',
     ctaTo: '/contact',
+    preview: {
+      type: 'website',
+      url: 'bkexpress.com.au',
+      navItems: ['Services', 'Track', 'About', 'Contact'],
+      eyebrow: 'MELBOURNE CONTAINER TRANSPORT',
+      headline: 'Reliable Container Transport, On Time, Every Time',
+      subhead: 'Wharf cartage, warehousing, and logistics solutions for Melbourne businesses.',
+      ctaLabel: 'Get a Quote',
+      accent: '#3B5266',
+    },
   },
   {
     slug: 'em-digital-group',
@@ -252,6 +402,17 @@ export const pitches: PitchData[] = [
     ],
     ctaLabel: 'Audit Our Tracking Setup',
     ctaTo: '/contact',
+    preview: {
+      type: 'dashboard',
+      title: 'app.emdigitalgroup.com/analytics',
+      accent: '#2F80ED',
+      stats: [
+        { label: 'ROAS', value: '4.2x', delta: '+18% MoM' },
+        { label: 'Conversion Rate', value: '3.8%', delta: '+0.6pt' },
+        { label: 'Tracked Revenue', value: '€48,210', delta: '+22%' },
+      ],
+      bars: [30, 45, 38, 52, 48, 61, 70],
+    },
   },
   {
     slug: 'alphax-re-capital',
@@ -272,6 +433,19 @@ export const pitches: PitchData[] = [
     ],
     ctaLabel: 'See Our Content System',
     ctaTo: '/contact',
+    preview: {
+      type: 'email',
+      fromName: 'AlphaX RE Capital',
+      subject: 'New Listing Alert: Sustainable Living in the Bay Area',
+      preheader: 'Plus: 3 things every first-time buyer should know',
+      bannerText: 'BUILDING SUSTAINABLE COMMUNITIES, ONE HOME AT A TIME',
+      bodyBlocks: [
+        { heading: 'This week\'s feature listing', body: 'A closer look at our newest sustainable development and what makes it different.' },
+        { heading: 'Buyer education', body: 'The 3-question checklist we give every first-time buyer before they make an offer.' },
+      ],
+      ctaLabel: 'View Listing',
+      accent: '#1E5B4F',
+    },
   },
   {
     slug: 'ecommerce-seo-multiplatform',
@@ -292,6 +466,24 @@ export const pitches: PitchData[] = [
     ],
     ctaLabel: 'Review Our Listings Process',
     ctaTo: '/contact',
+    preview: {
+      type: 'seo',
+      searchQuery: 'handmade ceramic mug etsy',
+      accent: '#E8871E',
+      results: [
+        {
+          url: 'etsy.com › listing › ceramic-mug-123',
+          title: 'Ceramic Mug',
+          meta: 'Handmade mug. 12 oz. Ships in 3-5 days.',
+        },
+        {
+          url: 'etsy.com › listing › ceramic-mug-456',
+          title: 'Handmade Ceramic Coffee Mug | Speckled Stoneware | Gift for Coffee Lovers | 12oz Microwave Safe',
+          meta: 'Every mug is wheel-thrown and glazed by hand — no two are exactly alike. Free gift wrapping. Ships same day from our Etsy studio.',
+          highlighted: true,
+        },
+      ],
+    },
   },
   {
     slug: 'ecommerce-web-redesign',
@@ -312,6 +504,16 @@ export const pitches: PitchData[] = [
     ],
     ctaLabel: 'See Sample Redesign Concepts',
     ctaTo: '/contact',
+    preview: {
+      type: 'website',
+      url: 'yourstore.com',
+      navItems: ['Shop', 'Collections', 'About', 'Contact'],
+      eyebrow: 'REDESIGN CONCEPT — HOMEPAGE',
+      headline: 'Shop the Collection That Started It All',
+      subhead: 'A cleaner, faster, conversion-focused storefront built around how your customers actually shop.',
+      ctaLabel: 'Shop New Arrivals',
+      accent: '#E4572E',
+    },
   },
   {
     slug: 'sewing-craft-retailer',
@@ -332,6 +534,19 @@ export const pitches: PitchData[] = [
     ],
     ctaLabel: 'See Our Creative Process',
     ctaTo: '/contact',
+    preview: {
+      type: 'email',
+      fromName: 'Your Sewing & Craft Co.',
+      subject: '🧵 New Fabric Arrivals + 15% Off This Week Only',
+      preheader: 'Fresh quilting cottons, notions, and machines back in stock.',
+      bannerText: 'NEW FABRIC DROP IS HERE',
+      bodyBlocks: [
+        { heading: 'Fresh off the loom', body: 'This week\'s new quilting cotton and fabric bundles, back in stock and ready to ship.' },
+        { heading: 'Members save 15%', body: 'Automatically applied at checkout through Sunday — no code needed.' },
+      ],
+      ctaLabel: 'Shop New Fabric',
+      accent: '#C1440E',
+    },
   },
 ];
 

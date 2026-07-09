@@ -5,6 +5,10 @@ import { ArrowRight } from 'lucide-react';
 import { getPitch } from '../data/pitchData';
 import { TextReveal } from '../components/TextReveal';
 import { MagneticButton } from '../components/MagneticButton';
+import { WebsiteMockup } from '../components/mockups/WebsiteMockup';
+import { EmailMockup } from '../components/mockups/EmailMockup';
+import { DashboardMockup } from '../components/mockups/DashboardMockup';
+import { SEOSnippetMockup } from '../components/mockups/SEOSnippetMockup';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -48,6 +52,33 @@ export default function Pitch() {
             </h1>
           </TextReveal>
         </section>
+
+        {/* Preview mockup */}
+        {pitch.preview && (
+          <section className="px-6 md:px-12 pb-16 max-w-4xl mx-auto">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-[10px] text-[#A1A1AA] mb-6 font-bold tracking-[0.3em] uppercase"
+            >
+              [ WHAT WE'D BUILD FOR {pitch.clientName.toUpperCase()} ]
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3, ease: EASE }}
+            >
+              {pitch.preview.type === 'website' && <WebsiteMockup {...pitch.preview} />}
+              {pitch.preview.type === 'email' && <EmailMockup {...pitch.preview} />}
+              {pitch.preview.type === 'dashboard' && <DashboardMockup {...pitch.preview} />}
+              {pitch.preview.type === 'seo' && <SEOSnippetMockup {...pitch.preview} />}
+            </motion.div>
+            <p className="text-xs opacity-30 mt-4 max-w-md">
+              A concept, built from your job post — not a template. The real version is tailored, tested, and yours.
+            </p>
+          </section>
+        )}
 
         {/* Divider */}
         <div className="border-t border-[#FAFAFA]/10" />
