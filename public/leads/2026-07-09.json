@@ -1,0 +1,17 @@
+{
+  "date": "2026-07-09",
+  "leads": [
+    {
+      "business_name": "TEST — Gmail Send Verification",
+      "website": "https://organic-theory.vercel.app",
+      "industry": "Internal Test",
+      "issues": "This is a temporary test entry to verify the automated Gmail send pipeline works end to end. Safe to ignore.",
+      "opportunity": "N/A — test entry, will be removed after verification.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/test-gmail-send.html",
+      "email_subject": "Test: Organic Theory Gmail auto-send is working",
+      "email_body": "This is an automated test email confirming the Gmail auto-send pipeline is wired up correctly end to end.\n\nIf you're reading this in your inbox, the /api/send-outreach-email endpoint successfully authenticated with Gmail and sent this message.\n\nThis test lead will be removed from the repo shortly.",
+      "contact_email": "gabrielbalenton@gmail.com",
+      "sent_automatically": false
+    }
+  ]
+}
