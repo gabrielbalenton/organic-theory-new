@@ -107,12 +107,14 @@ function parseJobDetail(html: string): { title: string; description: string } | 
 }
 
 // Positive service-fit signals, grouped by the service they indicate.
+// Kept tightly scoped to Gabriel's actual competencies: SEO/AEO, AI automations,
+// CRM creation, email marketing, social media marketing, website dev & design.
 const SERVICE_SIGNALS: Record<string, string[]> = {
   'SEO/AEO': ['seo', 'aeo', 'geo', 'search engine optim', 'local seo', 'google business profile', 'backlink', 'keyword research', 'generative engine optim', 'answer engine optim'],
-  'Website design & build': ['wordpress', 'web design', 'website design', 'web developer', 'elementor', 'webflow', 'shopify design', 'landing page design', 'site redesign', 'ui/ux', 'figma'],
-  'CRM & workflow automation': ['gohighlevel', 'go high level', 'crm', 'zapier', 'make.com', 'automation', 'workflow', 'hubspot', 'n8n', 'api integration', 'ai implementation'],
+  'Website design & build': ['wordpress', 'web design', 'website design', 'web developer', 'elementor', 'webflow', 'landing page design', 'site redesign', 'ui/ux', 'figma'],
+  'CRM & workflow automation': ['gohighlevel', 'go high level', 'crm', 'zapier', 'make.com', 'automation', 'workflow', 'hubspot', 'n8n', 'api integration', 'ai implementation', 'ai automation'],
   'Email marketing': ['email marketing', 'klaviyo', 'mailchimp', 'email campaign', 'email flows', 'newsletter', 'email automation'],
-  'Content systems': ['content strategy', 'content system', 'blog content', 'editorial', 'content marketing', 'content calendar'],
+  'Social media marketing': ['social media marketing', 'social media manager', 'social media strategy', 'meta business suite', 'instagram marketing', 'facebook ads', 'social media content'],
 };
 
 // Roles that are a near-certain mismatch even if a keyword happens to match in passing.
@@ -129,6 +131,31 @@ const EXCLUDE_SIGNALS = [
   'recruiter',
   'sales representative',
   'video editor only',
+  // Gabriel doesn't do Shopify/ecommerce-platform work — skip store builds,
+  // marketplace SEO (Etsy/Amazon/Temu/TikTok Shop), and ecommerce ops roles.
+  'shopify',
+  'ecommerce store',
+  'e-commerce store',
+  'online store',
+  'dropshipping',
+  'etsy',
+  'woocommerce',
+  'amazon listing',
+  'product listing',
+  'ecommerce brand',
+  'e-commerce brand',
+];
+
+// Pay-structure phrases that signal an hourly-rate role — Gabriel only takes
+// weekly/bi-weekly/monthly or project-based pay, never hourly.
+const HOURLY_PAY_SIGNALS = [
+  'per hour',
+  '/hr',
+  '/ hr',
+  'hourly rate',
+  'hourly pay',
+  'usd/hour',
+  'usd per hour',
 ];
 
 // Businesses that self-describe as already selling the service we'd pitch —
@@ -187,7 +214,7 @@ function scoreAndTag(post: CollectedPost): { score: number; services: string[] }
     }
   }
 
-  if (EXCLUDE_SIGNALS.some((s) => haystack.includes(s)) && services.length === 0) {
+  if (EXCLUDE_SIGNALS.some((s) => haystack.includes(s))) {
     score -= 10;
   }
 
@@ -196,6 +223,10 @@ function scoreAndTag(post: CollectedPost): { score: number; services: string[] }
   }
 
   if (KNOWN_AGENCY_NAMES.some((s) => haystack.includes(s))) {
+    score -= 10;
+  }
+
+  if (HOURLY_PAY_SIGNALS.some((s) => haystack.includes(s))) {
     score -= 10;
   }
 
