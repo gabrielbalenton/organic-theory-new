@@ -11,7 +11,7 @@
       "email_subject": "Your homepage has no meta description, Austin",
       "email_body": "Hi,\n\nI was looking at ATX Family Dental's site today and noticed Google has nothing to show for you in search results — there's no meta description on your homepage, so when someone searches \"dentist Austin 78704,\" Google just auto-generates a snippet (usually a bad one).\n\nThere's also no schema markup, so you're missing out on the star-rating and \"open now\" badges that corporate chains nearby already show.\n\nI put together a quick page on exactly what I'd fix and why: https://organic-theory.vercel.app/leads/funnels/2026-07-10-atx-family-dental.html\n\nNo pressure either way, just thought it was worth flagging since it's a quick fix with a real upside.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@atxfamilydental.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Ohio Roof Masters",
@@ -23,7 +23,7 @@
       "email_subject": "Your site shows '0 years serving Ohio' right now",
       "email_body": "Hi,\n\nQuick one — I was looking at Ohio Roof Masters' site today and noticed the stat counters on your homepage are showing literal zeros. It should read something like \"7+ years serving Ohio\" and \"50+ years combined experience,\" but right now it just shows \"0 +\" and \"0\" — live, to every visitor.\n\nFor a roofing company, that undercuts the trust signal you're actually going for. I also noticed there's no meta description and your Troy service-area link routes to a generic contact form instead of its own page.\n\nI put together a quick page on exactly what I'd fix and why: https://organic-theory.vercel.app/leads/funnels/2026-07-10-ohio-roof-masters.html\n\nHappy to walk through it if useful, no pressure.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@ohioroofmasters.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Born & Bred Studio",
@@ -35,7 +35,7 @@
       "email_subject": "A few of your portfolio links are broken",
       "email_body": "Hi,\n\nI was browsing Born & Bred Studio's site today — your testimonials are genuinely strong (\"Lisa was an absolute dream to work with from start to finish\") — but a few of the portfolio project links are broken, like the Crouch End Victorian terrace project. A prospective client trying to click through and see the finished work hits a dead end.\n\nI also noticed your footer only lists \"London, UK\" with no full address, which makes it harder for Google to place you in local searches.\n\nI put together a quick page on what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-10-born-and-bred-studio.html\n\nNo pressure, just thought it was worth flagging.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@bornandbredstudio.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Walton's Family Auto Service",
@@ -47,7 +47,7 @@
       "email_subject": "Your site shows two different addresses",
       "email_body": "Hi,\n\nI was looking at Walton's Family Auto Service's site today and noticed your header shows \"101 St. Mary's Street, Garner, NC\" while your footer shows \"101 St. Mary's Street Garner, NC 27529\" — the zip code is missing up top. Small thing, but Google cross-checks this kind of detail for local search, so the inconsistency works against you.\n\nYou've got 50 real years of trust in Garner and the site doesn't quite reflect that yet — no schema markup, no meta description either.\n\nI put together a quick page on what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-10-waltons-family-auto-service.html\n\nNo pressure, just thought it was worth flagging.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "waltonsfamilyautoservice@gmail.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Baker & Spice",
@@ -59,7 +59,7 @@
       "email_subject": "Your homepage is one line — here's what I'd add",
       "email_body": "Hi,\n\nI was looking at Baker & Spice's site today — I saw the Father's Day ordering and daily ordering links, so I know there's real seasonal activity happening. But the homepage copy itself is just \"Welcome to Baker & Spice! We're glad you're here,\" with nothing about what you actually bake or your SW Portland story.\n\nThere's also no meta description, so Google has nothing specific to show for \"bakery SW Portland\" searches.\n\nI put together a quick page on what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-10-baker-and-spice-pdx.html\n\nNo pressure, just thought it was worth flagging.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "hello@bakerandspicepdx.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "McGrath Mullan Solicitors",
@@ -71,7 +71,7 @@
       "email_subject": "Your site's navigation repeats 5 times in the code",
       "email_body": "Hi,\n\nI was looking at McGrath Mullan's site today and noticed the navigation menu is duplicated five separate times in the page source — that's adding real bloat and slowing load time. I also noticed the homepage leans on abstract taglines like \"Justice\" and \"Equality\" without saying which practice areas actually apply to a small business owner's problem, which is exactly who you say you serve.\n\nI put together a quick page on what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-10-mcgrath-mullan-solicitors.html\n\nNo pressure, just thought it was worth flagging.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@mcgrathmullan.ie",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Port Melbourne Physiotherapy & Pilates",
@@ -83,7 +83,7 @@
       "email_subject": "Your main nav links don't actually go anywhere",
       "email_body": "Hi,\n\nI was looking at Port Melbourne Physiotherapy & Pilates' site today and noticed your main navigation items — \"Physiotherapy,\" \"Clinical Pilates\" — use placeholder \"#\" links instead of routing to actual pages. A visitor clicking your main services from the nav bar hits a dead end. I also noticed your cart icon is showing the literal text \"[0]\" instead of a working count.\n\nI put together a quick page on what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-10-port-melbourne-physio.html\n\nNo pressure, just thought it was worth flagging since they're both quick fixes.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@portmelbournephysio.com.au",
-      "sent_automatically": false
+      "sent_automatically": true
     }
   ]
 }
