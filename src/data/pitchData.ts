@@ -274,6 +274,138 @@ export const pitches: PitchData[] = [
       imageUrl: 'https://images.unsplash.com/photo-1758193431351-68538bf55ec3?auto=format&fit=crop&w=1200&q=80',
     },
   },
+  {
+    slug: 'darwin-it-rentals-marketing',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/seo-digital-marketing-specialist-remote-full-time-1670289',
+    clientName: 'The Darwin IT & Rentals Group',
+    problem:
+      "You're running digital marketing across an IT managed services brand and a short-term rental brand at once, and hiring one person to own SEO, content, email, and reporting for both without a training runway.",
+    points: [
+      {
+        heading: 'SEO, content, and email run as one system across both brands',
+        detail:
+          'I handle on-page and local SEO, Google Business Profile, blog/case-study content, and CRM email nurture sequences for both your IT services and rental brands together, not as two separate scattered efforts.',
+      },
+      {
+        heading: 'Plain-English reporting, not just numbers',
+        detail:
+          'Monthly GA4 and Search Console reporting comes with clear recommendations attached, so you always know what to do next instead of just seeing a traffic graph.',
+      },
+    ],
+    ctaLabel: 'See How I\'d Run Both Brands',
+    ctaTo: '/contact',
+    preview: {
+      type: 'dashboard',
+      title: 'reporting.yourbrands.com.au/overview',
+      accent: '#0EA5E9',
+      stats: [
+        { label: 'Organic Traffic', value: '+38%', delta: '+38% QoQ' },
+        { label: 'GBP Leads', value: '112', delta: '+22 this month' },
+        { label: 'Email Booked Meetings', value: '19', delta: '+7 vs last month' },
+      ],
+      bars: [22, 28, 26, 34, 31, 40, 47],
+      imageUrl: 'https://images.unsplash.com/photo-1589051194321-7201ca7194ae?auto=format&fit=crop&w=1200&q=80',
+    },
+  },
+  {
+    slug: 'marketing-communications-partner',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/marketing-communications-partner-part-time-1686089',
+    clientName: 'The Professional Services Firm',
+    problem:
+      "You're hiring a part-time Marketing & Communications Partner to own strategy, brand, website, social, and email all at once - a full marketing department's worth of scope for one part-time hire.",
+    points: [
+      {
+        heading: 'Strategy, brand, and execution as one coordinated engagement',
+        detail:
+          'I run quarterly marketing strategy, website updates, social content calendars, and email automation together, so nothing falls through the gap between "the strategist" and "the person who actually does the work."',
+      },
+      {
+        heading: 'Lead capture campaigns built to compound',
+        detail:
+          'Automated marketing workflows and lead capture campaigns are built once and keep working, instead of resetting to zero every time a part-time hire\'s bandwidth runs out.',
+      },
+    ],
+    ctaLabel: 'See My Approach to This Scope',
+    ctaTo: '/contact',
+    preview: {
+      type: 'website',
+      url: 'yourfirm.com',
+      navItems: ['Services', 'Insights', 'About', 'Contact'],
+      eyebrow: 'PROFESSIONAL SERVICES, REIMAGINED',
+      headline: 'Strategy and Execution, Finally in One Place',
+      subhead: 'Integrated marketing strategy, brand, and campaigns for growing professional services firms.',
+      ctaLabel: 'Book a Consultation',
+      accent: '#334155',
+      imageUrl: 'https://images.unsplash.com/photo-1757405944970-dfca42373629?auto=format&fit=crop&w=1200&q=80',
+    },
+  },
+  {
+    slug: 'dr-c-williams-enterprises',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/digital-marketing-brand-designer-website-brand-experience-required-1686253',
+    clientName: 'Dr. C. Williams Enterprises',
+    problem:
+      "You're building a new GrowthHub365 website plus brand assets across four growing brands, and hiring one creative to own the entire build and visual system from scratch.",
+    points: [
+      {
+        heading: 'A GrowthHub365 build handled end-to-end',
+        detail:
+          'I design and build the new website inside GrowthHub365 - responsive layouts, high-converting landing pages, clean navigation - as one complete build instead of a queue of one-off design requests.',
+      },
+      {
+        heading: 'A brand asset library that scales across all four brands',
+        detail:
+          'Lead magnets, downloadable guides, and promotional materials get built into a consistent, reusable system, so each new brand launch doesn\'t start from a blank page.',
+      },
+    ],
+    ctaLabel: 'See the GrowthHub365 Build Concept',
+    ctaTo: '/contact',
+    preview: {
+      type: 'website',
+      url: 'growthhub365.com',
+      navItems: ['Programs', 'Resources', 'About', 'Connect'],
+      eyebrow: 'YOUR PURPOSE, WITH A PLAN',
+      headline: 'Build the Life Blueprint You Were Meant For',
+      subhead: 'Transformational programs and resources for individuals, families, and leaders ready to grow.',
+      ctaLabel: 'Get Started',
+      accent: '#B45309',
+      imageUrl: 'https://images.unsplash.com/photo-1524758870432-af57e54afa26?auto=format&fit=crop&w=1200&q=80',
+    },
+  },
+  {
+    slug: 'mortgage-email-marketing',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/remote-email-marketing-specialist-email-marketing-social-media-support-1681459',
+    clientName: 'The Remote Mortgage & Financial Services Co.',
+    problem:
+      "You're hiring a dedicated Email Marketing Specialist to build and optimize campaigns for your mortgage and financial services brand, with light social media support layered on top.",
+    points: [
+      {
+        heading: 'Email campaigns built and optimized as a service',
+        detail:
+          'I create, schedule, and continuously optimize your email campaigns - subject line testing, list segmentation, deliverability - without you needing to manage a dedicated in-house specialist\'s day-to-day.',
+      },
+      {
+        heading: 'Email content repurposed into social, not rebuilt from scratch',
+        detail:
+          'Every campaign gets repurposed into Facebook, Instagram, and LinkedIn posts as part of the same workflow, so your social presence stays active without extra hours.',
+      },
+    ],
+    ctaLabel: 'See a Sample Campaign',
+    ctaTo: '/contact',
+    preview: {
+      type: 'email',
+      fromName: 'Your Mortgage & Financial Co.',
+      subject: 'Rates Just Moved — Here\'s What It Means for You',
+      preheader: 'A 2-minute read before you lock in your rate',
+      bannerText: 'YOUR MONTHLY RATE UPDATE',
+      bodyBlocks: [
+        { heading: 'What changed this month', body: 'A plain-English breakdown of the latest rate movement and what it means for buyers right now.' },
+        { heading: 'Ready to talk numbers?', body: 'Book a free 15-minute call to see what you could qualify for today.' },
+      ],
+      ctaLabel: 'Book a Call',
+      accent: '#1D4ED8',
+      imageUrl: 'https://images.unsplash.com/photo-1754039985021-5c50d180d7cd?auto=format&fit=crop&w=1200&q=80',
+    },
+  },
   ];
 
 export function getPitch(slug: string | undefined): PitchData | undefined {
