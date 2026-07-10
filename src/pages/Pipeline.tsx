@@ -35,6 +35,8 @@ interface JobLead {
   has_direct_contact: boolean;
   email_subject: string;
   email_body: string;
+  /** Which platform this job post was sourced from. Absent = legacy OnlineJobs.ph entries. */
+  source?: 'onlinejobs' | 'linkedin';
 }
 
 function GoogleLeadCard({ lead, index }: { lead: GoogleLead; index: number }) {
@@ -199,7 +201,7 @@ function JobLeadCard({ lead, index }: { lead: JobLead; index: number }) {
         <span className={`text-[10px] tracking-[0.2em] uppercase border px-2.5 py-1 shrink-0 hidden sm:block ${
           lead.has_direct_contact ? 'border-[#FAFAFA]/20 text-[#FAFAFA]' : 'border-[#FAFAFA]/10 text-[#A1A1AA]/40'
         }`}>
-          {lead.has_direct_contact ? 'Contact found' : 'Send via OLJ'}
+          {lead.has_direct_contact ? 'Contact found' : lead.source === 'linkedin' ? 'Send via LinkedIn' : 'Send via OLJ'}
         </span>
         <a
           href={lead.pitch_url}
@@ -237,7 +239,9 @@ function JobLeadCard({ lead, index }: { lead: JobLead; index: number }) {
                   {lead.has_direct_contact ? (
                     <p className="text-sm text-[#FAFAFA]/70 leading-relaxed">A direct contact email was found for this business - check data/outreach.json locally.</p>
                   ) : (
-                    <p className="text-sm text-[#FAFAFA]/40 leading-relaxed">No public email found. Send this directly from OnlineJobs.ph as a reply to their post.</p>
+                    <p className="text-sm text-[#FAFAFA]/40 leading-relaxed">
+                      No public email found. Send this directly from {lead.source === 'linkedin' ? 'LinkedIn' : 'OnlineJobs.ph'} as a reply to their post.
+                    </p>
                   )}
                 </div>
                 <a
@@ -335,6 +339,8 @@ export default function Pipeline() {
   }, [activeDate]);
 
   const activelog = logs.find(l => l.date === activeDate);
+  const oljLeads = jobLeads.filter(l => l.source !== 'linkedin');
+  const linkedinLeads = jobLeads.filter(l => l.source === 'linkedin');
   const sendableCount = jobLeads.filter(l => l.has_direct_contact).length;
   const totalLeadsToday = jobLeads.length + (activelog?.leads.length ?? 0);
 
@@ -385,7 +391,7 @@ export default function Pipeline() {
           <h1 className="text-4xl md:text-5xl font-editorial uppercase tracking-tight mb-3">
             Outbound Pipeline
           </h1>
-          <p className="text-sm text-[#A1A1AA]/50">Every lead, one place. Auto-generated every morning at 8 AM from OnlineJobs.ph and Google search.</p>
+          <p className="text-sm text-[#A1A1AA]/50">Every lead, one place. Auto-generated every morning at 8 AM from OnlineJobs.ph, LinkedIn, and Google search.</p>
         </section>
 
         <div className="px-6 md:px-12 max-w-7xl mx-auto pb-28 space-y-20">
@@ -397,8 +403,12 @@ export default function Pipeline() {
               <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/40 mt-0.5">Total leads today</p>
             </div>
             <div>
-              <p className="text-3xl font-display text-[#FAFAFA]">{jobLeads.length}</p>
+              <p className="text-3xl font-display text-[#FAFAFA]">{oljLeads.length}</p>
               <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/40 mt-0.5">From OnlineJobs.ph</p>
+            </div>
+            <div>
+              <p className="text-3xl font-display text-[#FAFAFA]">{linkedinLeads.length}</p>
+              <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/40 mt-0.5">From LinkedIn</p>
             </div>
             <div>
               <p className="text-3xl font-display text-[#FAFAFA]">{activelog?.leads.length ?? 0}</p>
@@ -424,15 +434,44 @@ export default function Pipeline() {
               </div>
             )}
 
-            {!jobsLoading && jobLeads.length === 0 && (
+            {!jobsLoading && oljLeads.length === 0 && (
               <div className="border border-[#FAFAFA]/10 px-8 py-16 text-center">
                 <p className="text-sm text-[#A1A1AA]/40">No OnlineJobs.ph leads yet.</p>
               </div>
             )}
 
-            {jobLeads.length > 0 && (
+            {oljLeads.length > 0 && (
               <div className="space-y-3">
-                {jobLeads.map((lead, i) => (
+                {oljLeads.map((lead, i) => (
+                  <JobLeadCard key={lead.pitch_url} lead={lead} index={i} />
+                ))}
+              </div>
+            )}
+          </section>
+
+          {/* Section: LinkedIn */}
+          <section>
+            <div className="flex items-baseline justify-between mb-6">
+              <h2 className="text-xl font-display uppercase tracking-tight">LinkedIn Leads</h2>
+              <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/40">Send from your LinkedIn account</p>
+            </div>
+
+            {jobsLoading && (
+              <div className="flex items-center gap-3 py-8 text-[#A1A1AA]/40">
+                <div className="w-1 h-1 rounded-full bg-current animate-pulse" />
+                <p className="text-sm">Loading leads...</p>
+              </div>
+            )}
+
+            {!jobsLoading && linkedinLeads.length === 0 && (
+              <div className="border border-[#FAFAFA]/10 px-8 py-16 text-center">
+                <p className="text-sm text-[#A1A1AA]/40">No LinkedIn leads yet.</p>
+              </div>
+            )}
+
+            {linkedinLeads.length > 0 && (
+              <div className="space-y-3">
+                {linkedinLeads.map((lead, i) => (
                   <JobLeadCard key={lead.pitch_url} lead={lead} index={i} />
                 ))}
               </div>
@@ -490,11 +529,22 @@ export default function Pipeline() {
           {/* Actions reminder */}
           <div className="border border-[#FAFAFA]/8 px-6 py-6">
             <p className="text-[10px] tracking-[0.25em] uppercase text-[#A1A1AA] font-bold mb-3">Next steps for each lead</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
                 <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/50 mb-2">OnlineJobs.ph</p>
                 <ol className="space-y-2">
                   {['Open the job post on OnlineJobs.ph and reply as a message', 'Copy the subject + body from the card', 'Paste in the pitch page link (already included in the body)', 'Send — the pitch page is live and ready to view'].map((step, i) => (
+                    <li key={i} className="flex gap-3 text-sm text-[#A1A1AA]/50">
+                      <span className="text-[#FAFAFA]/20 shrink-0">{i + 1}.</span>
+                      {step}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+              <div>
+                <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/50 mb-2">LinkedIn</p>
+                <ol className="space-y-2">
+                  {['Open the job post on LinkedIn and reply/InMail as appropriate', 'Copy the subject + body from the card', 'Paste in the pitch page link (already included in the body)', 'Send — the pitch page is live and ready to view'].map((step, i) => (
                     <li key={i} className="flex gap-3 text-sm text-[#A1A1AA]/50">
                       <span className="text-[#FAFAFA]/20 shrink-0">{i + 1}.</span>
                       {step}
