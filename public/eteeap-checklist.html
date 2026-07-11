@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap">
+</head>
+<body>
+  <title>ETEEAP Checklist &mdash; LPU-Laguna BSBA Marketing Mgmt</title>
+  <style>
+    :root{
+      --ink:#09090B;--paper:#FFFFFF;--gray:#71717A;--gray-soft:#A1A1AA;
+      --line:#E4E4E7;--line-soft:#F1F1F3;--done-bg:#FAFAFA;
+      --ok:#16a34a;--warn:#d97706;--over:#dc2626;
+      --font-display:"Montserrat","Helvetica Neue",Arial,sans-serif;
+      --font-sans:"Inter","Helvetica Neue",Arial,sans-serif;
+      --font-editorial:"Cormorant Garamond",Georgia,serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--paper) !important;color:var(--ink);font-family:var(--font-sans);line-height:1.55;-webkit-font-smoothing:antialiased;padding:0 20px 120px;}
+    .wrap{max-width:860px;margin:0 auto;}
+
+    header{padding:40px 0 28px;border-bottom:1px solid var(--ink);}
+    .eyebrow{font-size:10px;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;color:var(--gray);}
+    h1{font-family:var(--font-display);font-weight:700;font-size:clamp(24px,4.4vw,38px);line-height:1.08;letter-spacing:-0.01em;margin:14px 0 10px;}
+    .sub{font-family:var(--font-editorial);font-size:20px;font-weight:400;color:var(--gray);font-style:italic;}
+    .brandline{margin-top:22px;font-size:9px;font-weight:700;letter-spacing:0.34em;text-transform:uppercase;color:var(--gray-soft);}
+
+    .progress-block{position:sticky;top:0;z-index:20;background:var(--paper);padding:18px 0 16px;border-bottom:1px solid var(--line);}
+    .progress-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px;}
+    .progress-label{font-size:10px;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:var(--gray);}
+    .progress-count{font-family:var(--font-display);font-weight:700;font-size:15px;}
+    .bar{height:3px;background:var(--line);overflow:hidden;}
+    .bar-fill{height:100%;background:var(--ink);width:0%;transition:width .35s ease;}
+
+    .callout{border:1px solid var(--ink);padding:20px 22px;margin:30px 0 6px;}
+    .callout .tag{font-size:9px;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--gray);margin-bottom:8px;}
+    .callout h3{font-family:var(--font-display);font-size:15px;font-weight:600;margin-bottom:8px;}
+    .callout p{font-size:14px;color:#3f3f46;margin-bottom:8px;}
+    .callout p:last-child{margin-bottom:0;}
+    .callout strong{color:var(--ink);}
+    .callout a{color:var(--ink);}
+
+    .section{margin-top:38px;border-top:1px solid var(--line);}
+    .section-head{display:flex;align-items:center;gap:14px;cursor:pointer;padding:22px 4px 18px;user-select:none;}
+    .section-num{font-family:var(--font-display);font-weight:700;font-size:12px;color:var(--gray-soft);min-width:26px;letter-spacing:0.05em;}
+    .section-title{font-family:var(--font-display);font-weight:600;font-size:17px;flex:1;letter-spacing:-0.01em;}
+    .section-meta{font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gray-soft);white-space:nowrap;}
+    .chev{width:16px;height:16px;flex-shrink:0;transition:transform .25s;color:var(--gray-soft);}
+    .section.collapsed .chev{transform:rotate(-90deg);}
+    .section-body{overflow:hidden;transition:max-height .3s ease;}
+    .section.collapsed .section-body{max-height:0 !important;}
+
+    .subgroup{margin:4px 0 20px;padding-left:40px;}
+    .subgroup-title{font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);padding:14px 0 10px;display:flex;align-items:center;gap:8px;}
+    .subgroup-title .pill{font-size:8px;font-weight:700;letter-spacing:0.12em;padding:3px 8px;border:1px solid var(--ink);border-radius:999px;color:var(--ink);}
+    .subgroup-title .pill.notary{background:var(--ink);color:#fff;}
+
+    .item{display:flex;gap:14px;padding:11px 0;border-bottom:1px solid var(--line-soft);align-items:flex-start;}
+    .item:last-child{border-bottom:none;}
+    .reqno{font-family:var(--font-display);font-weight:700;font-size:10px;color:var(--gray-soft);min-width:30px;margin-top:3px;letter-spacing:0.03em;}
+    .box{appearance:none;-webkit-appearance:none;width:19px;height:19px;border:1.5px solid var(--ink);border-radius:3px;flex-shrink:0;cursor:pointer;position:relative;margin-top:2px;transition:background .15s;background:#fff;}
+    .box:checked{background:var(--ink);}
+    .box:checked::after{content:"";position:absolute;left:5.5px;top:2px;width:5px;height:9px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg);}
+    .item-text{flex:1;font-size:14.5px;cursor:pointer;}
+    .item-text .desc{display:block;font-size:12.5px;color:var(--gray);margin-top:3px;line-height:1.5;}
+    .item-text .desc a{color:var(--ink);text-decoration:underline;text-underline-offset:2px;}
+    .item.checked .item-text > span:first-child{text-decoration:line-through;color:var(--gray-soft);}
+    .item.na{opacity:.62;}
+    .na-badge{font-size:8px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;border:1px solid var(--gray-soft);color:var(--gray);border-radius:999px;padding:2px 7px;margin-top:2px;white-space:nowrap;}
+
+    /* date tracker (shared) */
+    .track{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;margin:2px 0 6px 33px;padding:10px 14px;background:var(--done-bg);border:1px solid var(--line);}
+    .track .fld{display:flex;flex-direction:column;gap:4px;}
+    .track label{font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray);}
+    .track input[type=date]{font-family:var(--font-sans);font-size:12px;padding:6px 8px;border:1px solid var(--line);background:#fff;color:var(--ink);}
+    .hint{font-size:11px;font-weight:700;padding-bottom:7px;white-space:nowrap;}
+    .hint.ok{color:var(--ok);}.hint.warn{color:var(--warn);}.hint.over{color:var(--over);}
+
+    details.howto{margin:6px 0 2px 33px;}
+    details.howto summary{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);cursor:pointer;padding:6px 0;list-style:none;}
+    details.howto summary::-webkit-details-marker{display:none;}
+    details.howto summary::before{content:"+ ";color:var(--gray-soft);}
+    details.howto[open] summary::before{content:"\2013 ";}
+    .howto-body{font-size:13px;color:#3f3f46;padding:8px 0 12px;border-left:2px solid var(--line);padding-left:16px;margin:4px 0 6px;}
+    .howto-body ol,.howto-body ul{margin:6px 0 6px 18px;}
+    .howto-body li{margin-bottom:5px;}
+    .howto-body a{color:var(--ink);}
+    .howto-body .tmpl{background:#fff;border:1px solid var(--line);padding:12px 14px;margin-top:10px;font-size:12.5px;font-family:var(--font-sans);white-space:pre-wrap;line-height:1.55;color:var(--ink);}
+    .howto-body strong{color:var(--ink);}
+
+    /* work history builder */
+    .wh-intro{font-size:12.5px;color:var(--gray);margin:0 0 12px;line-height:1.5;}
+    .wh-form{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+    .wh-form input{font-family:var(--font-sans);font-size:13px;padding:10px 12px;border:1px solid var(--line);background:#fff;color:var(--ink);}
+    .wh-form input.c{flex:2;min-width:180px;}
+    .wh-form input.r{flex:1.4;min-width:140px;}
+    .wh-form button{font-family:var(--font-sans);font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;padding:10px 18px;border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;}
+    .wh-form button:hover{opacity:.85;}
+    .wh-empty{font-size:12.5px;color:var(--gray-soft);font-style:italic;padding:2px 0 6px;}
+    .wh-card{border:1px solid var(--line);padding:14px 16px;margin-bottom:12px;}
+    .wh-top{display:flex;align-items:center;gap:8px;margin-bottom:11px;}
+    .wh-num{font-family:var(--font-display);font-weight:700;font-size:11px;color:var(--gray-soft);min-width:22px;}
+    .wh-company{font-family:var(--font-display);font-weight:600;font-size:15px;border:none;border-bottom:1px solid var(--line);padding:3px 0;flex:1;min-width:110px;background:transparent;color:var(--ink);}
+    .wh-role{font-size:13px;color:var(--gray);border:none;border-bottom:1px solid var(--line);padding:3px 0;flex:1;min-width:100px;background:transparent;}
+    .wh-company:focus,.wh-role:focus{outline:none;border-bottom-color:var(--ink);}
+    .wh-del{margin-left:auto;border:none;background:none;color:var(--gray-soft);font-size:20px;cursor:pointer;line-height:1;padding:0 2px;}
+    .wh-del:hover{color:var(--over);}
+    .wh-checks{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:12px;}
+    .wh-checks label{display:flex;align-items:center;gap:9px;font-size:13px;cursor:pointer;font-weight:500;}
+    .wh-checks input:checked + span{text-decoration:line-through;color:var(--gray-soft);}
+    .wh-step{font-size:8px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray-soft);border:1px solid var(--line);border-radius:999px;padding:2px 6px;margin-left:2px;}
+    .wh-emp{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-end;margin-bottom:12px;}
+    .wh-emp .fld{display:flex;flex-direction:column;gap:4px;}
+    .wh-emp .fld label{font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gray);}
+    .wh-emp input[type=month]{font-family:var(--font-sans);font-size:12px;padding:6px 8px;border:1px solid var(--line);background:#fff;color:var(--ink);}
+    .wh-emp input[type=month]:disabled{opacity:.4;}
+    .wh-present{display:flex;flex-direction:row;align-items:center;gap:7px;font-size:12px;color:var(--ink);cursor:pointer;padding-bottom:5px;font-weight:500;}
+    .wh-months{font-family:var(--font-display);font-weight:700;font-size:13px;color:var(--ink);padding-bottom:5px;white-space:nowrap;}
+    .wh-total{margin-top:4px;padding:14px 16px;border:1px solid var(--ink);display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;}
+    .wh-total .lbl{font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);}
+    .wh-total .val{font-family:var(--font-display);font-weight:700;font-size:16px;color:var(--ink);}
+
+    .target-row{display:flex;align-items:center;gap:10px;margin-top:13px;flex-wrap:wrap;}
+    .target-row label{font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);}
+    .target-row input[type=date]{font-family:var(--font-sans);font-size:12px;padding:6px 8px;border:1px solid var(--line);background:#fff;color:var(--ink);}
+    .notes{width:100%;min-height:92px;font-family:var(--font-sans);font-size:13px;padding:12px 14px;border:1px solid var(--line);background:#fff;color:var(--ink);resize:vertical;line-height:1.5;}
+    .notes:focus{outline:none;border-color:var(--ink);}
+
+    .controls{display:flex;gap:10px;flex-wrap:wrap;margin-top:44px;padding-top:26px;border-top:1px solid var(--ink);}
+    button.btn{font-family:var(--font-sans);font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;padding:11px 18px;border:1px solid var(--ink);background:var(--paper);color:var(--ink);cursor:pointer;transition:all .2s;}
+    button.btn:hover{background:var(--ink);color:#fff;}
+    .foot-note{margin-top:26px;font-size:11.5px;color:var(--gray-soft);line-height:1.6;}
+    .foot-note strong{color:var(--gray);}
+
+    @media print{.progress-block,.controls,.chev,details.howto summary,.wh-form,.wh-del{display:none;}.section.collapsed .section-body{max-height:none !important;}.howto-body{display:block;}body{padding:0;}}
+    @media (max-width:600px){.subgroup{padding-left:0;}.item-text{font-size:14px;}.track,details.howto{margin-left:0;}}
+  </style>
+
+  <div class="wrap">
+
+    <header>
+      <div class="eyebrow">LPU-Laguna &middot; ETEEAP &middot; Application Dossier</div>
+      <h1>BSBA &mdash; Major in Marketing Management<br>with Digital Tools &amp; Analytics</h1>
+      <div class="sub">Official requirements checklist &amp; document tracker</div>
+      <div class="brandline">Organic Theory &middot; Strategic Logic. Measurable Growth.</div>
+    </header>
+
+    <div class="progress-block">
+      <div class="progress-head">
+        <span class="progress-label">Overall Completion</span>
+        <span class="progress-count"><span id="pc-done">0</span> / <span id="pc-total">0</span></span>
+      </div>
+      <div class="bar"><div class="bar-fill" id="barFill"></div></div>
+      <div class="target-row">
+        <label for="targetDate">Target submission</label>
+        <input type="date" id="targetDate">
+        <span id="targetHint" class="hint"></span>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="tag">Applicant Snapshot</div>
+      <h3>Gabriel Balenton</h3>
+      <p><strong>School / program:</strong> Lyceum of the Philippines University &ndash; Laguna &mdash; ETEEAP, BSBA Major in Marketing Management with Digital Tools &amp; Analytics.</p>
+      <p><strong>Prior schooling:</strong> Undergraduate, BS Entrepreneurship &mdash; Southville International School and Colleges (SISC). &rarr; You follow the <strong>7.2 Undergraduate</strong> academic-records path.</p>
+      <p><strong>LPU-Laguna contact:</strong> 0917-303-6922 &middot; lpulaguna.edu.ph</p>
+    </div>
+
+    <div class="callout">
+      <div class="tag">Read First &middot; Source</div>
+      <h3>Built from LPU-Laguna's official requirements posters</h3>
+      <p>Every item is numbered to match LPU-Laguna's official <em>List of Requirements</em> (items 1&ndash;11). Items that don't apply to you are greyed as <strong>N/A</strong>. Slow-release documents (PSA, school records, COEs) have a <strong>Requested &rarr; Est. arrival</strong> tracker with a live countdown.</p>
+      <p>Everything saves automatically in this browser. Note: <strong>#11 (Application Form) is completed AFTER your assessment</strong>. Confirm final details with the LPU-Laguna ETEEAP office.</p>
+    </div>
+
+    <div class="callout" id="addr">
+      <div class="tag">Heads-up &middot; Las Piñas IDs vs. Nuvali residence</div>
+      <h3>Get your location-based documents where you live</h3>
+      <p>Your IDs show <strong>Las Piñas</strong> but you live in <strong>Nuvali, Laguna</strong>. This matters for the <strong>Cedula (#4)</strong>, a <strong>Barangay Clearance (#5)</strong>, and the <strong>Notarized Service Record (#6)</strong>. Secure these from your <strong>Nuvali / Sta. Rosa / Calamba</strong> barangay or city hall using proof of residence &mdash; no need to match the Las Piñas ID address. If any office questions it, an optional <strong>notarized Affidavit of "One and the Same Person"</strong> resolves it.</p>
+    </div>
+
+    <div class="callout">
+      <div class="tag">My Notes</div>
+      <h3>Personal scratchpad</h3>
+      <p style="margin-bottom:10px">Jot down whatever the LPU coordinator or SISC registrar tells you &mdash; fees, release dates, names, follow-ups. Saved automatically in this browser.</p>
+      <textarea id="notes" class="notes" placeholder="e.g. Registrar said TOR takes ~2 weeks &middot; coordinator name: ___ &middot; assessment date: ___"></textarea>
+    </div>
+
+    <div id="list"></div>
+
+    <div class="controls">
+      <button class="btn" onclick="window.print()">Print / Save PDF</button>
+      <button class="btn" onclick="exportBackup()">Export Backup</button>
+      <button class="btn" onclick="document.getElementById('importFile').click()">Import Backup</button>
+      <button class="btn" onclick="expandAll()">Expand All</button>
+      <button class="btn" onclick="collapseAll()">Collapse All</button>
+      <button class="btn" onclick="resetAll()">Reset Everything</button>
+      <input type="file" id="importFile" accept="application/json,.json" style="display:none" onchange="importBackup(event)">
+    </div>
+
+    <p class="foot-note">
+      <strong>Disclaimer:</strong> Transcribed from LPU-Laguna ETEEAP requirement posters as a personal preparation aid. Requirement wording, notarization rules, and fees can change &mdash; always confirm the current list with the LPU-Laguna ETEEAP office (0917-303-6922 &middot; lpulaguna.edu.ph). Not an official university document.
+    </p>
+
+  </div>
+
+<script>
+const DATA = [
+  { title:"Personal &amp; Identification", subgroups:[
+    { name:"Reqs 1&ndash;5", items:[
+      {no:"1", t:"1x1 ID picture", d:"Recent, white background. Prepare a few copies."},
+      {no:"2", t:"PSA Birth Certificate (original)", track:true, d:"Order online at <a href='https://www.psaserbilis.com.ph' target='_blank' rel='noopener'>psaserbilis.com.ph</a> or PSA Helpline (02) 8737-1111; 3&ndash;9 working days.", how:`
+        <strong>How to get it:</strong>
+        <ol>
+          <li>Go to <a href='https://www.psaserbilis.com.ph' target='_blank' rel='noopener'>psaserbilis.com.ph</a> (or PSA Helpline 0917/(02) 8737-1111).</li>
+          <li>Order your Birth Certificate on <strong>PSA Security Paper (SECPA)</strong> &mdash; this is the "original" LPU asks for.</li>
+          <li>Pay online; delivered to your Nuvali address in a few working days.</li>
+        </ol>`},
+      {no:"4", t:"Cedula (Community Tax Certificate)", d:"Get it where you reside &mdash; Nuvali/Sta. Rosa or Calamba city/barangay hall.", how:`
+        <strong>How to get it:</strong>
+        <ol>
+          <li>Go to your <strong>barangay hall or city/municipal treasurer's office</strong> in Laguna.</li>
+          <li>Bring any valid ID. State it's for school/ETEEAP requirements.</li>
+          <li>Pay the small fee (often &#8369;30&ndash;100+). Issued same day.</li>
+        </ol>`},
+      {no:"5", t:"Clearance &mdash; ANY ONE of the four", d:"Barangay Clearance <em>or</em> NBI Clearance <em>or</em> Police Clearance <em>or</em> Passport bio page. You only need one.", how:`
+        <strong>Easiest options:</strong>
+        <ul>
+          <li><strong>Passport bio page</strong> &mdash; photocopy the ID/bio page. Zero cost, instant.</li>
+          <li><strong>Barangay Clearance</strong> &mdash; from your Nuvali/Sta. Rosa barangay hall; bring an ID; small fee, same day.</li>
+          <li><strong>NBI Clearance</strong> &mdash; apply at <a href='https://clearance.nbi.gov.ph' target='_blank' rel='noopener'>clearance.nbi.gov.ph</a>.</li>
+          <li><strong>Police Clearance</strong> &mdash; from your local police station / online portal.</li>
+        </ul>`},
+    ]},
+    { name:"Not applicable to you", items:[
+      {no:"3", t:"Marriage Certificate (original)", d:"Required only for <strong>female applicants who are married</strong>. Not applicable to you.", na:true},
+    ]},
+  ]},
+  { title:"Academic Records &mdash; from SISC", subgroups:[
+    { name:"Req 7.2 &middot; Undergraduate path (your path)", items:[
+      {no:"7.2a", t:"Transfer Credential / Honorable Dismissal (original)", track:true, d:"Request from the SISC Registrar. Certifies you are clear to transfer out.", how:`
+        <strong>How to request from SISC Registrar:</strong>
+        <ol>
+          <li>Request a <strong>Transfer Credential / Honorable Dismissal (original)</strong>.</li>
+          <li>Purpose: <em>"For ETEEAP application to LPU-Laguna."</em></li>
+          <li>Settle any account balance first. Pay the fee and ask for the release timeline (log it in the tracker).</li>
+        </ol>`},
+      {no:"7.2b", t:"Official Transcript of Records (original)", track:true, d:"Must carry the remarks: <strong>&ldquo;For Evaluation&rdquo;</strong> AND <strong>&ldquo;Copy for Lyceum of the Philippines University &ndash; Laguna.&rdquo;</strong> Can be processed once enrolled.", how:`
+        <strong>Critical &mdash; request the exact remarks:</strong>
+        <ol>
+          <li>Ask the SISC Registrar for your <strong>Official Transcript of Records (original)</strong>.</li>
+          <li>Request these remarks be printed on it:
+            <ul><li><strong>"For Evaluation"</strong></li><li><strong>"Copy for Lyceum of the Philippines University &ndash; Laguna"</strong></li></ul>
+          </li>
+          <li>LPU says it "can be processed once enrolled" &mdash; ask whether they need it at application or after enrolment.</li>
+          <li>Request it in a sealed registrar's envelope. Log request &amp; ETA in the tracker.</li>
+        </ol>`},
+      {no:"7.2c", t:"Good Moral Certificate (original)", track:true, d:"Request from the SISC Registrar / Guidance Office."},
+    ]},
+    { name:"Not applicable to you", items:[
+      {no:"7.1", t:"High School Graduate path (Form 138, Form 137A, HS Diploma, HS Good Moral)", d:"Applies only to <strong>high-school-graduate</strong> applicants. You're an undergraduate &rarr; use 7.2 above.", na:true},
+    ]},
+  ]},
+  { title:"Employment &amp; Experience", subgroups:[
+    { name:"To be notarized", notary:true, items:[
+      {no:"6", t:"Notarized Service Record (Past and Present)", d:"A record of your full employment history &mdash; all past and present engagements &mdash; signed under oath before a notary. This is LPU's substitute for separate COEs; the per-company COEs below are your backup proof for it.", how:SERVICE_RECORD_HOWTO()},
+    ]},
+    { name:"Work History &mdash; COE Tracker", workHistory:true },
+    { name:"Req 8 &middot; Resume &amp; training proofs", items:[
+      {no:"8", t:"Comprehensive Resume with complete job description details", d:"Not a one-page CV &mdash; include detailed duties for every role, especially marketing, digital tools &amp; analytics. Your competency is assessed on this."},
+      {no:"8", t:"Certificates of trainings &amp; workshops completed (photocopy)", d:"Photocopies of every relevant training/workshop certificate."},
+    ]},
+  ]},
+  { title:"Proficiency &amp; Evidence of Capability", subgroups:[
+    { name:"Reqs 9&ndash;10 &middot; Marketing / Digital Tools &amp; Analytics", items:[
+      {no:"9", t:"Certificates of individual proficiency in your field", d:"e.g. Google Analytics (GA4), Google Ads, Meta Blueprint, HubSpot, SEO. Export the certificate + credential ID."},
+      {no:"10", t:"Other documents / evidence of capability &amp; knowledge", d:"Portfolio, campaign case studies, analytics dashboards, client work (e.g. Organic Theory projects), accreditation/equivalency proof."},
+    ]},
+  ]},
+  { title:"Application Form", subgroups:[
+    { name:"Req 11 &middot; Do this AFTER assessment", items:[
+      {no:"11", t:"Accomplished ETEEAP Application Form (2 copies)", d:"LPU states you complete this <strong>after the assessment</strong> &mdash; book/attend your assessment first, then fill and submit 2 copies."},
+    ]},
+  ]},
+];
+
+function SERVICE_RECORD_HOWTO(){return `
+  <strong>What a Notarized Service Record is:</strong> a single document listing every employer (past &amp; present) &mdash; company, position, inclusive dates &mdash; signed under oath before a notary public.
+  <br><br><strong>How to prepare it:</strong>
+  <ol>
+    <li>Fill in the <strong>Work History tracker below</strong> &mdash; it gives you the exact list to put on the service record.</li>
+    <li><strong>Gather a COE from each employer</strong> as backup proof (track "COE obtained" per company). Use the template below to request them.</li>
+    <li>Have the service-record document drafted (a notary/lawyer can format it).</li>
+    <li><strong>Bring valid IDs to a notary public</strong> (Sta. Rosa, Nuvali, or Calamba). <strong>Do not sign in advance</strong> &mdash; sign in front of the notary.</li>
+    <li>Pay the notarial fee (commonly &#8369;150&ndash;300). Keep the notarized original + photocopies.</li>
+  </ol>
+  <div class="tmpl">Subject: Request for Certificate of Employment
+
+Dear [HR / Manager name],
+
+I hope you're well. I am requesting a Certificate of Employment to
+support a notarized Service Record for my ETEEAP application to
+LPU-Laguna.
+
+  Full name:        Gabriel Balenton
+  Position held:    [your title]
+  Inclusive dates:  [start] &ndash; [end]
+
+If possible, please include a brief description of my duties, on company
+letterhead. I'd appreciate receiving it within a few days. Thank you.
+
+Sincerely,
+Gabriel Balenton
+[contact number] &middot; [email]</div>`;}
+
+/* ---------------- state ---------------- */
+const STORAGE_KEY = "eteeap_lpu_checklist_v2";
+const TRACK_KEY   = "eteeap_lpu_tracks_v2";
+const WH_KEY      = "eteeap_lpu_workhistory_v2";
+let state = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+let tracks = JSON.parse(localStorage.getItem(TRACK_KEY) || "{}");   // id -> {req, eta}
+let workHistory = JSON.parse(localStorage.getItem(WH_KEY) || "[]"); // [{id,company,role,coe,notarized,req,eta}]
+const save=()=>{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));};
+const saveTracks=()=>{localStorage.setItem(TRACK_KEY,JSON.stringify(tracks));};
+const saveWH=()=>{localStorage.setItem(WH_KEY,JSON.stringify(workHistory));};
+function idFor(ci,si,ii){return `c${ci}_s${si}_i${ii}`;}
+let whCategoryIndex = null;
+
+function etaHint(eta){
+  if(!eta) return {cls:'',txt:''};
+  const today=new Date(); today.setHours(0,0,0,0);
+  const d=new Date(eta+'T00:00:00');
+  const diff=Math.round((d-today)/86400000);
+  if(diff>1) return {cls:'ok',txt:`arrives in ${diff} days`};
+  if(diff===1) return {cls:'ok',txt:'arrives tomorrow'};
+  if(diff===0) return {cls:'warn',txt:'expected today'};
+  return {cls:'over',txt:`overdue by ${Math.abs(diff)} day${Math.abs(diff)>1?'s':''}`};
+}
+function trackHTML(id){
+  const t=tracks[id]||{};
+  return `<div class="track" data-track="${id}">
+    <div class="fld"><label>Requested</label><input type="date" class="tk-req" value="${t.req||''}"></div>
+    <div class="fld"><label>Est. arrival</label><input type="date" class="tk-eta" value="${t.eta||''}"></div>
+    <span class="hint"></span>
+  </div>`;
+}
+
+/* ---------------- render ---------------- */
+const listEl = document.getElementById("list");
+DATA.forEach((cat,ci)=>{
+  const sec = document.createElement("section");
+  sec.className = "section";
+  sec.innerHTML = `
+    <div class="section-head">
+      <span class="section-num">${String(ci+1).padStart(2,"0")}</span>
+      <span class="section-title">${cat.title}</span>
+      <span class="section-meta"><span class="sec-done" data-ci="${ci}">0</span>/<span class="sec-tot" data-ci="${ci}">0</span></span>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
+    <div class="section-body"></div>`;
+  sec.querySelector(".section-head").addEventListener("click",()=>toggleSec(sec));
+  const body = sec.querySelector(".section-body");
+
+  cat.subgroups.forEach((sg,si)=>{
+    const sgEl = document.createElement("div");
+    sgEl.className = "subgroup";
+
+    if(sg.workHistory){
+      whCategoryIndex = ci;
+      sgEl.innerHTML = `<div class="subgroup-title">${sg.name}</div>
+        <p class="wh-intro">Add each company you've worked for. Two separate steps are tracked per company: <strong>COE obtained</strong> <span class="wh-step">step 1</span> and <strong>COE notarized</strong> <span class="wh-step">step 2</span>. Log when you requested each COE and its estimated arrival.</p>
+        <div class="wh-form">
+          <input class="c" id="wh-company" placeholder="Company name" autocomplete="off">
+          <input class="r" id="wh-role" placeholder="Your role / position" autocomplete="off">
+          <button id="wh-add">+ Add company</button>
+        </div>
+        <div id="wh-list"></div>
+        <div id="wh-total"></div>`;
+      body.appendChild(sgEl);
+      return;
+    }
+
+    const pill = sg.notary ? `<span class="pill notary">Notarize</span>` : "";
+    sgEl.innerHTML = `<div class="subgroup-title">${sg.name} ${pill}</div>`;
+    sg.items.forEach((it,ii)=>{
+      const id = idFor(ci,si,ii);
+      const item = document.createElement("div");
+      if(it.na){
+        item.className = "item na";
+        item.innerHTML = `<span class="reqno">${it.no||""}</span><span class="na-badge">N/A</span>
+          <span class="item-text"><span>${it.t}</span>${it.d?`<span class="desc">${it.d}</span>`:""}</span>`;
+      } else {
+        const checked = state[id] ? "checked" : "";
+        item.className = "item" + (state[id] ? " checked" : "");
+        item.innerHTML = `<span class="reqno">${it.no||""}</span>
+          <input type="checkbox" class="box" id="${id}" ${checked}>
+          <label class="item-text" for="${id}"><span>${it.t}</span>${it.d?`<span class="desc">${it.d}</span>`:""}</label>`;
+      }
+      sgEl.appendChild(item);
+      if(it.track) sgEl.insertAdjacentHTML("beforeend", trackHTML(id));
+      if(it.how){
+        const det = document.createElement("details");
+        det.className = "howto";
+        det.innerHTML = `<summary>How to request / instructions</summary><div class="howto-body">${it.how}</div>`;
+        sgEl.appendChild(det);
+      }
+    });
+    body.appendChild(sgEl);
+  });
+  listEl.appendChild(sec);
+  requestAnimationFrame(()=>{ body.style.maxHeight = body.scrollHeight + "px"; });
+});
+
+/* ---------------- work history ---------------- */
+function renderWH(){
+  const list = document.getElementById("wh-list");
+  if(!list) return;
+  if(workHistory.length===0){
+    list.innerHTML = `<p class="wh-empty">No companies added yet. Add your first above &mdash; you mentioned 10+, so take your time.</p>`;
+  } else {
+    list.innerHTML = workHistory.map((w,i)=>`
+      <div class="wh-card" data-wid="${w.id}">
+        <div class="wh-top">
+          <span class="wh-num">${String(i+1).padStart(2,"0")}</span>
+          <input class="wh-company" data-f="company" value="${escAttr(w.company)}" placeholder="Company name">
+          <input class="wh-role" data-f="role" value="${escAttr(w.role)}" placeholder="Role / position">
+          <button class="wh-del" title="Remove">&times;</button>
+        </div>
+        <div class="wh-checks">
+          <label><input type="checkbox" class="box wh-coe" ${w.coe?'checked':''}><span>COE obtained <span class="wh-step">step 1</span></span></label>
+          <label><input type="checkbox" class="box wh-not" ${w.notarized?'checked':''}><span>COE notarized <span class="wh-step">step 2</span></span></label>
+        </div>
+        <div class="wh-emp">
+          <div class="fld"><label>Employed from</label><input type="month" class="wh-from" value="${w.from||''}"></div>
+          <div class="fld"><label>To</label><input type="month" class="wh-to" value="${w.to||''}" ${w.present?'disabled':''}></div>
+          <label class="wh-present"><input type="checkbox" class="wh-pres" ${w.present?'checked':''}> Present</label>
+          <span class="wh-months">&mdash;</span>
+        </div>
+        <div class="track">
+          <div class="fld"><label>COE requested</label><input type="date" class="wh-req" value="${w.req||''}"></div>
+          <div class="fld"><label>Est. arrival</label><input type="date" class="wh-eta" value="${w.eta||''}"></div>
+          <span class="hint"></span>
+        </div>
+      </div>`).join("");
+  }
+  refreshHints();
+  updateMonths();
+  refreshMaxHeights();
+}
+function escAttr(s){return (s||"").replace(/"/g,"&quot;");}
+
+function monthsBetween(from,to){
+  if(!from||!to) return null;
+  const [fy,fm]=from.split('-').map(Number);
+  const [ty,tm]=to.split('-').map(Number);
+  if(!fy||!fm||!ty||!tm) return null;
+  const n=(ty*12+tm)-(fy*12+fm)+1;
+  return n>0?n:null;
+}
+function fmtDur(n){
+  if(n==null) return '&mdash;';
+  const y=Math.floor(n/12), m=n%12;
+  let s=n+' mo'+(n>1?'s':'');
+  if(y>0) s+=' ('+y+'y'+(m>0?' '+m+'m':'')+')';
+  return s;
+}
+function nowMonth(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0');}
+function updateMonths(){
+  let total=0, counted=0;
+  document.querySelectorAll('.wh-card').forEach(card=>{
+    const w=workHistory.find(x=>x.id===card.dataset.wid); if(!w) return;
+    const to = w.present ? nowMonth() : w.to;
+    const n=monthsBetween(w.from,to);
+    const span=card.querySelector('.wh-months');
+    if(span) span.innerHTML = (n==null) ? '&mdash;' : fmtDur(n);
+    if(n!=null){total+=n;counted++;}
+  });
+  const el=document.getElementById('wh-total');
+  if(el){
+    el.innerHTML = (workHistory.length===0) ? '' :
+      `<span class="lbl">Total work experience</span><span class="val">${total>0?fmtDur(total):'&mdash;'} <span style="font-weight:400;font-size:11px;color:var(--gray)">&middot; ${counted} of ${workHistory.length} dated</span></span>`;
+  }
+}
+
+function addCompany(){
+  const c=document.getElementById("wh-company"), r=document.getElementById("wh-role");
+  const company=(c.value||"").trim(); if(!company){c.focus();return;}
+  workHistory.push({id:"w"+Date.now()+Math.floor(Math.random()*999),company,role:(r.value||"").trim(),coe:false,notarized:false,req:"",eta:"",from:"",to:"",present:false});
+  saveWH(); c.value="";r.value="";c.focus();
+  renderWH(); updateCounts();
+}
+
+/* ---------------- events ---------------- */
+document.addEventListener("change",(e)=>{
+  const t=e.target;
+  if(t.classList.contains("box") && t.id && !t.closest(".wh-card")){
+    state[t.id]=t.checked; save();
+    t.closest(".item").classList.toggle("checked",t.checked); updateCounts(); return;
+  }
+  const card=t.closest(".wh-card");
+  if(card){
+    const w=workHistory.find(x=>x.id===card.dataset.wid); if(!w) return;
+    if(t.classList.contains("wh-coe")){w.coe=t.checked;saveWH();updateCounts();}
+    else if(t.classList.contains("wh-not")){w.notarized=t.checked;saveWH();updateCounts();}
+    else if(t.classList.contains("wh-req")){w.req=t.value;saveWH();refreshHints();}
+    else if(t.classList.contains("wh-eta")){w.eta=t.value;saveWH();refreshHints();}
+    else if(t.classList.contains("wh-from")){w.from=t.value;saveWH();updateMonths();}
+    else if(t.classList.contains("wh-to")){w.to=t.value;saveWH();updateMonths();}
+    else if(t.classList.contains("wh-pres")){w.present=t.checked;saveWH();const to=card.querySelector('.wh-to');if(to)to.disabled=t.checked;updateMonths();}
+    return;
+  }
+  const trk=t.closest(".track[data-track]");
+  if(trk){
+    const id=trk.dataset.track; tracks[id]=tracks[id]||{};
+    if(t.classList.contains("tk-req"))tracks[id].req=t.value;
+    if(t.classList.contains("tk-eta"))tracks[id].eta=t.value;
+    saveTracks(); refreshHints();
+  }
+});
+document.addEventListener("input",(e)=>{
+  const card=e.target.closest(".wh-card"); if(!card) return;
+  const w=workHistory.find(x=>x.id===card.dataset.wid); if(!w) return;
+  const f=e.target.dataset.f; if(f){w[f]=e.target.value;saveWH();}
+});
+document.addEventListener("click",(e)=>{
+  if(e.target.id==="wh-add"){addCompany();}
+  if(e.target.classList.contains("wh-del")){
+    const card=e.target.closest(".wh-card");
+    workHistory=workHistory.filter(x=>x.id!==card.dataset.wid);
+    saveWH(); renderWH(); updateCounts();
+  }
+});
+document.addEventListener("keydown",(e)=>{
+  if(e.key==="Enter" && (e.target.id==="wh-company"||e.target.id==="wh-role")){e.preventDefault();addCompany();}
+});
+
+function refreshHints(){
+  document.querySelectorAll(".track").forEach(tr=>{
+    let eta="";
+    if(tr.dataset.track){eta=(tracks[tr.dataset.track]||{}).eta||"";}
+    else{const card=tr.closest(".wh-card");const w=card&&workHistory.find(x=>x.id===card.dataset.wid);eta=w?w.eta:"";}
+    const h=etaHint(eta); const el=tr.querySelector(".hint");
+    if(el){el.textContent=h.txt;el.className="hint "+h.cls;}
+  });
+}
+
+/* ---------------- counts ---------------- */
+function updateCounts(){
+  let done=0,total=0;
+  DATA.forEach((cat,ci)=>{
+    let cDone=0,cTot=0;
+    cat.subgroups.forEach((sg,si)=>{
+      if(sg.workHistory) return;
+      sg.items.forEach((it,ii)=>{ if(it.na) return; cTot++; if(state[idFor(ci,si,ii)])cDone++; });
+    });
+    if(ci===whCategoryIndex){
+      workHistory.forEach(w=>{ cTot+=2; if(w.coe)cDone++; if(w.notarized)cDone++; });
+    }
+    const sd=document.querySelector(`.sec-done[data-ci="${ci}"]`);
+    const st=document.querySelector(`.sec-tot[data-ci="${ci}"]`);
+    if(sd)sd.textContent=cDone; if(st)st.textContent=cTot;
+    done+=cDone; total+=cTot;
+  });
+  document.getElementById("pc-done").textContent=done;
+  document.getElementById("pc-total").textContent=total;
+  document.getElementById("barFill").style.width= total? (done/total*100)+"%":"0%";
+}
+
+/* ---------------- layout helpers ---------------- */
+function refreshMaxHeights(){
+  document.querySelectorAll(".section:not(.collapsed) .section-body").forEach(b=>{b.style.maxHeight=b.scrollHeight+"px";});
+}
+function toggleSec(sec){
+  const body=sec.querySelector(".section-body");
+  if(sec.classList.contains("collapsed")){sec.classList.remove("collapsed");body.style.maxHeight=body.scrollHeight+"px";}
+  else{body.style.maxHeight=body.scrollHeight+"px";requestAnimationFrame(()=>{sec.classList.add("collapsed");body.style.maxHeight="0px";});}
+}
+function expandAll(){document.querySelectorAll(".section").forEach(s=>{s.classList.remove("collapsed");const b=s.querySelector(".section-body");b.style.maxHeight=b.scrollHeight+"px";});}
+function collapseAll(){document.querySelectorAll(".section").forEach(s=>{const b=s.querySelector(".section-body");b.style.maxHeight="0px";s.classList.add("collapsed");});}
+function resetAll(){
+  if(!confirm("Clear ALL checkmarks, dates, and your work-history list? This cannot be undone.")) return;
+  state={};tracks={};workHistory=[];
+  localStorage.removeItem(STORAGE_KEY);localStorage.removeItem(TRACK_KEY);localStorage.removeItem(WH_KEY);
+  document.querySelectorAll(".box").forEach(b=>b.checked=false);
+  document.querySelectorAll(".item").forEach(i=>i.classList.remove("checked"));
+  document.querySelectorAll(".track input").forEach(i=>i.value="");
+  localStorage.removeItem(NOTES_KEY);localStorage.removeItem(TARGET_KEY);
+  if(notesEl)notesEl.value="";
+  if(targetEl){targetEl.value="";updateTarget();}
+  renderWH(); updateCounts();
+}
+window.addEventListener("resize",refreshMaxHeights);
+
+/* ---------------- extras: notes, target date, backup/restore ---------------- */
+const NOTES_KEY="eteeap_lpu_notes_v2", TARGET_KEY="eteeap_lpu_target_v2";
+const notesEl=document.getElementById("notes");
+if(notesEl){notesEl.value=localStorage.getItem(NOTES_KEY)||"";notesEl.addEventListener("input",()=>localStorage.setItem(NOTES_KEY,notesEl.value));}
+
+const targetEl=document.getElementById("targetDate");
+function updateTarget(){
+  const el=document.getElementById("targetHint"); if(!el) return;
+  const v=targetEl?targetEl.value:"";
+  if(!v){el.textContent="";el.className="hint";return;}
+  const today=new Date();today.setHours(0,0,0,0);
+  const diff=Math.round((new Date(v+"T00:00:00")-today)/86400000);
+  if(diff>1){el.textContent=diff+" days to go";el.className="hint ok";}
+  else if(diff===1){el.textContent="due tomorrow";el.className="hint warn";}
+  else if(diff===0){el.textContent="due today";el.className="hint warn";}
+  else{el.textContent=Math.abs(diff)+" day"+(Math.abs(diff)>1?"s":"")+" overdue";el.className="hint over";}
+}
+if(targetEl){targetEl.value=localStorage.getItem(TARGET_KEY)||"";targetEl.addEventListener("change",()=>{localStorage.setItem(TARGET_KEY,targetEl.value);updateTarget();});}
+
+function exportBackup(){
+  const data={_app:"eteeap-lpu",_saved:new Date().toISOString(),state,tracks,workHistory,
+    notes:localStorage.getItem(NOTES_KEY)||"",target:localStorage.getItem(TARGET_KEY)||""};
+  const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob);
+  a.download="eteeap-checklist-backup-"+new Date().toISOString().slice(0,10)+".json";
+  document.body.appendChild(a);a.click();a.remove();
+  setTimeout(()=>URL.revokeObjectURL(a.href),1500);
+}
+function importBackup(ev){
+  const f=ev.target.files&&ev.target.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=()=>{
+    try{
+      const d=JSON.parse(r.result);
+      if(!d || (d._app!=="eteeap-lpu" && !Array.isArray(d.workHistory))) throw 0;
+      if(!confirm("Restore this backup? It will replace your current checklist, dates, work history, notes, and target date.")){ev.target.value="";return;}
+      state=d.state||{};tracks=d.tracks||{};workHistory=Array.isArray(d.workHistory)?d.workHistory:[];
+      save();saveTracks();saveWH();
+      if(typeof d.notes==="string"){localStorage.setItem(NOTES_KEY,d.notes);if(notesEl)notesEl.value=d.notes;}
+      if(typeof d.target==="string"){localStorage.setItem(TARGET_KEY,d.target);if(targetEl)targetEl.value=d.target;}
+      document.querySelectorAll(".box").forEach(b=>{if(b.id&&!b.closest(".wh-card")){b.checked=!!state[b.id];const it=b.closest(".item");if(it)it.classList.toggle("checked",b.checked);}});
+      renderWH();updateCounts();refreshHints();updateTarget();
+      alert("Backup restored successfully.");
+    }catch(e){alert("Sorry — that file isn't a valid ETEEAP checklist backup.");}
+    ev.target.value="";
+  };
+  r.readAsText(f);
+}
+
+renderWH();
+updateCounts();
+refreshHints();
+updateTarget();
+</script>
+</body>
+</html>
