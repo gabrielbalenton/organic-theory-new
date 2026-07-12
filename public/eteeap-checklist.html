@@ -505,7 +505,7 @@ document.addEventListener("change",(e)=>{
   const card=t.closest(".wh-card");
   if(card){
     const w=workHistory.find(x=>x.id===card.dataset.wid); if(!w) return;
-    if(t.classList.contains("wh-coe")){w.coe=t.checked;saveWH();updateCounts();}
+    if(t.classList.contains("wh-coe")){w.coe=t.checked;saveWH();updateCounts();refreshHints();}
     else if(t.classList.contains("wh-not")){w.notarized=t.checked;saveWH();updateCounts();}
     else if(t.classList.contains("wh-req")){w.req=t.value;saveWH();refreshHints();}
     else if(t.classList.contains("wh-eta")){w.eta=t.value;saveWH();refreshHints();}
@@ -541,11 +541,16 @@ document.addEventListener("keydown",(e)=>{
 
 function refreshHints(){
   document.querySelectorAll(".track").forEach(tr=>{
-    let eta="";
-    if(tr.dataset.track){eta=(tracks[tr.dataset.track]||{}).eta||"";}
-    else{const card=tr.closest(".wh-card");const w=card&&workHistory.find(x=>x.id===card.dataset.wid);eta=w?w.eta:"";}
-    const h=etaHint(eta); const el=tr.querySelector(".hint");
-    if(el){el.textContent=h.txt;el.className="hint "+h.cls;}
+    const el=tr.querySelector(".hint"); if(!el) return;
+    if(tr.dataset.track){
+      const h=etaHint((tracks[tr.dataset.track]||{}).eta||"");
+      el.textContent=h.txt;el.className="hint "+h.cls;return;
+    }
+    const card=tr.closest(".wh-card");
+    const w=card&&workHistory.find(x=>x.id===card.dataset.wid);
+    if(w&&w.coe){el.textContent="COE received";el.className="hint ok";return;}
+    const h=etaHint(w?w.eta:"");
+    el.textContent=h.txt;el.className="hint "+h.cls;
   });
 }
 
