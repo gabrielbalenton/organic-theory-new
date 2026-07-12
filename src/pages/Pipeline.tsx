@@ -37,6 +37,8 @@ interface JobLead {
   email_body: string;
   /** Which platform this job post was sourced from. Absent = legacy OnlineJobs.ph entries. */
   source?: 'onlinejobs' | 'linkedin';
+  /** YYYY-MM-DD the lead was sourced. Absent on very old entries predating this field. */
+  date_sourced?: string;
 }
 
 function GoogleLeadCard({ lead, index }: { lead: GoogleLead; index: number }) {
@@ -288,9 +290,8 @@ export default function Pipeline() {
   const [dates, setDates] = useState<string[]>([]);
   const [logs, setLogs] = useState<DayLog[]>([]);
   const [googleLoading, setGoogleLoading] = useState(false);
-  const [activeDate, setActiveDate] = useState<string | null>(null);
 
-  // OnlineJobs.ph leads (flat, always current)
+  // OnlineJobs.ph + LinkedIn leads (flat, dated via date_sourced)
   const [jobLeads, setJobLeads] = useState<JobLead[]>([]);
   const [jobsLoading, setJobsLoading] = useState(false);
 
@@ -306,14 +307,19 @@ export default function Pipeline() {
 
   useEffect(() => {
     if (!unlocked) return;
+    setGoogleLoading(true);
     fetch('/leads/index.json')
       .then(r => r.json())
-      .then(data => {
+      .then(async data => {
         const d: string[] = data.dates ?? [];
         setDates(d);
-        if (d.length > 0) setActiveDate(d[0]);
+        const allLogs = await Promise.all(
+          d.map(date => fetch(`/leads/${date}.json`).then(r => r.json()).catch(() => ({ date, leads: [] })))
+        );
+        setLogs(allLogs);
+        setGoogleLoading(false);
       })
-      .catch(() => setDates([]));
+      .catch(() => { setDates([]); setGoogleLoading(false); });
 
     setJobsLoading(true);
     fetch('/pipeline-jobs.json')
@@ -325,24 +331,19 @@ export default function Pipeline() {
       .catch(() => setJobsLoading(false));
   }, [unlocked]);
 
-  useEffect(() => {
-    if (!activeDate) return;
-    if (logs.find(l => l.date === activeDate)) return;
-    setGoogleLoading(true);
-    fetch(`/leads/${activeDate}.json`)
-      .then(r => r.json())
-      .then(data => {
-        setLogs(prev => [...prev, data]);
-        setGoogleLoading(false);
-      })
-      .catch(() => setGoogleLoading(false));
-  }, [activeDate]);
-
-  const activelog = logs.find(l => l.date === activeDate);
   const oljLeads = jobLeads.filter(l => l.source !== 'linkedin');
   const linkedinLeads = jobLeads.filter(l => l.source === 'linkedin');
+  const googleLeads = logs.flatMap(l => l.leads);
   const sendableCount = jobLeads.filter(l => l.has_direct_contact).length;
-  const totalLeadsToday = jobLeads.length + (activelog?.leads.length ?? 0);
+  const totalLeadsToday = jobLeads.length + googleLeads.length;
+
+  // Union of every date any lead was sourced on, newest first. Leads with no
+  // date_sourced (very old entries predating the field) bucket under 'undated'.
+  const allDates = Array.from(new Set([
+    ...dates,
+    ...jobLeads.map(l => l.date_sourced).filter((d): d is string => !!d),
+  ])).sort((a, b) => b.localeCompare(a));
+  const undatedJobLeads = jobLeads.filter(l => !l.date_sourced);
 
   if (!unlocked) {
     return (
@@ -400,7 +401,7 @@ export default function Pipeline() {
           <div className="flex flex-wrap gap-8 pb-10 border-b border-[#FAFAFA]/10">
             <div>
               <p className="text-3xl font-display text-[#FAFAFA]">{totalLeadsToday}</p>
-              <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/40 mt-0.5">Total leads today</p>
+              <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/40 mt-0.5">Total leads</p>
             </div>
             <div>
               <p className="text-3xl font-display text-[#FAFAFA]">{oljLeads.length}</p>
@@ -411,7 +412,7 @@ export default function Pipeline() {
               <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/40 mt-0.5">From LinkedIn</p>
             </div>
             <div>
-              <p className="text-3xl font-display text-[#FAFAFA]">{activelog?.leads.length ?? 0}</p>
+              <p className="text-3xl font-display text-[#FAFAFA]">{googleLeads.length}</p>
               <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/40 mt-0.5">From Google search</p>
             </div>
             <div>
@@ -420,109 +421,89 @@ export default function Pipeline() {
             </div>
           </div>
 
-          {/* Section: OnlineJobs.ph */}
-          <section>
-            <div className="flex items-baseline justify-between mb-6">
-              <h2 className="text-xl font-display uppercase tracking-tight">OnlineJobs.ph Leads</h2>
-              <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/40">Send from your OLJ account</p>
+          {/* By date sourced */}
+          <section className="space-y-16">
+            <div className="flex items-baseline justify-between mb-2 flex-wrap gap-4">
+              <h2 className="text-xl font-display uppercase tracking-tight">By Date Sourced</h2>
+              <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/40">Newest first</p>
             </div>
 
-            {jobsLoading && (
+            {(jobsLoading || googleLoading) && (
               <div className="flex items-center gap-3 py-8 text-[#A1A1AA]/40">
                 <div className="w-1 h-1 rounded-full bg-current animate-pulse" />
                 <p className="text-sm">Loading leads...</p>
               </div>
             )}
 
-            {!jobsLoading && oljLeads.length === 0 && (
-              <div className="border border-[#FAFAFA]/10 px-8 py-16 text-center">
-                <p className="text-sm text-[#A1A1AA]/40">No OnlineJobs.ph leads yet.</p>
-              </div>
-            )}
-
-            {oljLeads.length > 0 && (
-              <div className="space-y-3">
-                {oljLeads.map((lead, i) => (
-                  <JobLeadCard key={lead.pitch_url} lead={lead} index={i} />
-                ))}
-              </div>
-            )}
-          </section>
-
-          {/* Section: LinkedIn */}
-          <section>
-            <div className="flex items-baseline justify-between mb-6">
-              <h2 className="text-xl font-display uppercase tracking-tight">LinkedIn Leads</h2>
-              <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/40">Send from your LinkedIn account</p>
-            </div>
-
-            {jobsLoading && (
-              <div className="flex items-center gap-3 py-8 text-[#A1A1AA]/40">
-                <div className="w-1 h-1 rounded-full bg-current animate-pulse" />
-                <p className="text-sm">Loading leads...</p>
-              </div>
-            )}
-
-            {!jobsLoading && linkedinLeads.length === 0 && (
-              <div className="border border-[#FAFAFA]/10 px-8 py-16 text-center">
-                <p className="text-sm text-[#A1A1AA]/40">No LinkedIn leads yet.</p>
-              </div>
-            )}
-
-            {linkedinLeads.length > 0 && (
-              <div className="space-y-3">
-                {linkedinLeads.map((lead, i) => (
-                  <JobLeadCard key={lead.pitch_url} lead={lead} index={i} />
-                ))}
-              </div>
-            )}
-          </section>
-
-          {/* Section: Google-sourced */}
-          <section>
-            <div className="flex items-baseline justify-between mb-6 flex-wrap gap-4">
-              <h2 className="text-xl font-display uppercase tracking-tight">Google-Sourced Leads</h2>
-              <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/40">Find their email, send from Gmail</p>
-            </div>
-
-            {dates.length === 0 ? (
+            {!jobsLoading && !googleLoading && allDates.length === 0 && undatedJobLeads.length === 0 && (
               <div className="border border-[#FAFAFA]/10 px-8 py-16 text-center">
                 <p className="text-sm text-[#A1A1AA]/40">No leads yet. The agent runs daily at 8 AM — check back tomorrow.</p>
               </div>
-            ) : (
-              <>
-                {/* Date tabs */}
-                <div className="flex gap-0 border-b border-[#FAFAFA]/10 overflow-x-auto mb-8">
-                  {dates.map(date => (
-                    <button
-                      key={date}
-                      onClick={() => setActiveDate(date)}
-                      className={`px-6 py-4 text-[11px] tracking-[0.2em] uppercase font-bold shrink-0 border-b-2 transition-all duration-200 ${
-                        activeDate === date
-                          ? 'border-[#FAFAFA] text-[#FAFAFA]'
-                          : 'border-transparent text-[#A1A1AA]/40 hover:text-[#A1A1AA]'
-                      }`}
-                    >
+            )}
+
+            {!jobsLoading && !googleLoading && allDates.map(date => {
+              const dayOlj = oljLeads.filter(l => l.date_sourced === date);
+              const dayLinkedin = linkedinLeads.filter(l => l.date_sourced === date);
+              const dayGoogle = logs.find(l => l.date === date)?.leads ?? [];
+              return (
+                <div key={date}>
+                  <div className="flex items-baseline gap-4 mb-6 pb-3 border-b border-[#FAFAFA]/15">
+                    <h3 className="text-2xl font-display uppercase tracking-tight text-[#FAFAFA]">
                       {new Date(date + 'T00:00:00').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
-                    </button>
-                  ))}
+                    </h3>
+                    <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/40">
+                      {dayOlj.length + dayLinkedin.length + dayGoogle.length} leads
+                    </p>
+                  </div>
+
+                  <div className="space-y-10">
+                    <div>
+                      <p className="text-[10px] tracking-[0.25em] uppercase font-bold text-[#A1A1AA]/60 mb-3">OLJ ({dayOlj.length})</p>
+                      {dayOlj.length === 0 ? (
+                        <p className="text-xs text-[#A1A1AA]/30 py-2">None sourced this day.</p>
+                      ) : (
+                        <div className="space-y-3">
+                          {dayOlj.map((lead, i) => <JobLeadCard key={lead.pitch_url} lead={lead} index={i} />)}
+                        </div>
+                      )}
+                    </div>
+
+                    <div>
+                      <p className="text-[10px] tracking-[0.25em] uppercase font-bold text-[#A1A1AA]/60 mb-3">LinkedIn ({dayLinkedin.length})</p>
+                      {dayLinkedin.length === 0 ? (
+                        <p className="text-xs text-[#A1A1AA]/30 py-2">None sourced this day.</p>
+                      ) : (
+                        <div className="space-y-3">
+                          {dayLinkedin.map((lead, i) => <JobLeadCard key={lead.pitch_url} lead={lead} index={i} />)}
+                        </div>
+                      )}
+                    </div>
+
+                    <div>
+                      <p className="text-[10px] tracking-[0.25em] uppercase font-bold text-[#A1A1AA]/60 mb-3">Google ({dayGoogle.length})</p>
+                      {dayGoogle.length === 0 ? (
+                        <p className="text-xs text-[#A1A1AA]/30 py-2">None sourced this day.</p>
+                      ) : (
+                        <div className="space-y-3">
+                          {dayGoogle.map((lead, i) => <GoogleLeadCard key={lead.business_name} lead={lead} index={i} />)}
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
+              );
+            })}
 
-                {googleLoading && (
-                  <div className="flex items-center gap-3 py-8 text-[#A1A1AA]/40">
-                    <div className="w-1 h-1 rounded-full bg-current animate-pulse" />
-                    <p className="text-sm">Loading leads...</p>
-                  </div>
-                )}
-
-                {activelog && (
-                  <div className="space-y-3">
-                    {activelog.leads.map((lead, i) => (
-                      <GoogleLeadCard key={lead.business_name} lead={lead} index={i} />
-                    ))}
-                  </div>
-                )}
-              </>
+            {!jobsLoading && undatedJobLeads.length > 0 && (
+              <div>
+                <div className="flex items-baseline gap-4 mb-6 pb-3 border-b border-[#FAFAFA]/15">
+                  <h3 className="text-2xl font-display uppercase tracking-tight text-[#A1A1AA]/60">Undated (legacy)</h3>
+                  <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/40">{undatedJobLeads.length} leads</p>
+                </div>
+                <div className="space-y-3">
+                  {undatedJobLeads.map((lead, i) => <JobLeadCard key={lead.pitch_url} lead={lead} index={i} />)}
+                </div>
+              </div>
             )}
           </section>
 
