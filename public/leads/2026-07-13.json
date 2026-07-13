@@ -1,0 +1,53 @@
+{
+  "date": "2026-07-13",
+  "leads": [
+    {
+      "business_name": "Il Valentino Bakery & Cafe",
+      "website": "https://www.ilvalentino.ie",
+      "industry": "Bakery & Café",
+      "issues": "Homepage, Locations, and Order Online pages all show the literal placeholder title \"Your Site Title\" in Google search results instead of the business name - visible directly in Google's own listing for the site. This is a website-builder default that was never replaced, so every search result for the business shows no real title at all.",
+      "opportunity": "Replacing the placeholder title tags across all pages with real, keyword-rich titles (e.g. \"Il Valentino Bakery & Café | Dublin\") is a same-day fix that immediately restores a professional appearance in search results and recovers click-through rate currently being lost to competitors with proper titles. Expected within 30 days: meaningfully higher click-through from existing search impressions.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-13-il-valentino-bakery-cafe.html",
+      "email_subject": "Your homepage title says 'Your Site Title' on Google",
+      "email_body": "Hi,\n\nI was searching for Dublin bakeries today and noticed something on Il Valentino's listing - your homepage, Locations page, and Order Online page all show up on Google with the title \"Your Site Title\" instead of your actual business name. It looks like a website-builder default that never got replaced.\n\nI put together a quick page showing the fix and what it'd mean for your search visibility:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-13-il-valentino-bakery-cafe.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since it's such a quick fix.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@ilvalentino.ie",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Mackay Sinclair WS",
+      "website": "https://www.mackaysinclair.co.uk",
+      "industry": "Law Firm (Solicitors)",
+      "issues": "Homepage, Contact, and About Us pages all display the literal placeholder title \"Your Site Title\" in Google's own search results, rather than the firm's name - the same unreplaced website-builder default visible across at least three separate pages.",
+      "opportunity": "Replacing the placeholder title tags with real page titles (e.g. \"Mackay Sinclair WS | Solicitors & Estate Agents, Edinburgh\") restores a professional first impression the moment a prospective client searches for a solicitor in Edinburgh, and recovers organic clicks a blank/generic title is currently losing. Expected within 30 days: improved click-through on existing search impressions for local searches like \"solicitor Edinburgh\".",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-13-mackay-sinclair-ws.html",
+      "email_subject": "Your site's Google listing just says 'Your Site Title'",
+      "email_body": "Hi,\n\nI was looking at solicitors in Edinburgh today and noticed Mackay Sinclair's homepage, Contact page, and About Us page all show up on Google with the title \"Your Site Title\" - not the firm's name. It's the kind of thing that quietly undercuts trust before someone even clicks through.\n\nI put together a quick page on the fix:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-13-mackay-sinclair-ws.html\n\nYou can see how I work at https://organic-theory.vercel.app\n\nNo pressure, just thought it was worth flagging.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "enquiries@mackaysinclair.co.uk",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Shine Hair Consultants & Design",
+      "website": "https://wellingtonhairsalon.co.nz",
+      "industry": "Hair Salon",
+      "issues": "Homepage and Contact page both show up on Google with the literal title \"shinehairwellington/salon\" - a raw URL-slug-style string rather than a real business name and description, unlike other Wellington salons in the same search results.",
+      "opportunity": "Replacing the raw slug-style title with a real, benefit-led title (e.g. \"Shine Hair Consultants & Design | Oriental Bay, Wellington\") immediately makes the listing look legitimate next to competitors and recovers clicks currently being lost to a title that reads like a broken URL. Expected within 30 days: better click-through from existing local search impressions.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-13-shine-hair-consultants.html",
+      "email_subject": "Your Google listing shows 'shinehairwellington/salon'",
+      "email_body": "Hi,\n\nI was searching for hair salons in Wellington today and noticed your homepage and Contact page show up on Google with the title \"shinehairwellington/salon\" - basically a raw URL rather than your actual salon name. Next to other Wellington salons with proper titles, it stands out for the wrong reason.\n\nI put together a quick page on the fix:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-13-shine-hair-consultants.html\n\nYou can see how I work at https://organic-theory.vercel.app\n\nNo pressure, just thought it was worth flagging.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "shinehairteam@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "The New Leaf Florist",
+      "website": "https://thenewleaftoronto.com",
+      "industry": "Florist",
+      "issues": "Google's search result for the business shows only the raw name, address, and phone number with no service description at all - unlike other Toronto florists in the same search results, which show a full descriptive snippet about their arrangements and delivery.",
+      "opportunity": "Adding a real meta description that describes your arrangements, delivery area, and what makes New Leaf different gives Google something to show searchers beyond your address - immediately closing the gap with competitors who already have a compelling snippet. Expected within 30 days: better click-through on existing searches like \"florist Toronto\".",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-13-new-leaf-florist.html",
+      "email_subject": "Your Google listing is just an address right now",
+      "email_body": "Hi,\n\nI was looking at florists in Toronto today and noticed your Google search result only shows your address and phone number - no description of what you actually offer. Other florists in the same search have a full line about their arrangements and delivery, which gives searchers a reason to click.\n\nI put together a quick page on the fix:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-13-new-leaf-florist.html\n\nYou can see how I work at https://organic-theory.vercel.app\n\nNo pressure, just thought it was worth flagging.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "newleafflorist@bellnet.ca",
+      "sent_automatically": false
+    }
+  ]
+}

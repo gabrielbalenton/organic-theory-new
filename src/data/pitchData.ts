@@ -406,6 +406,258 @@ export const pitches: PitchData[] = [
       imageUrl: 'https://images.unsplash.com/photo-1754039985021-5c50d180d7cd?auto=format&fit=crop&w=1200&q=80',
     },
   },
+  {
+    slug: 'yw-builders-inc',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/Social-Media-Content-SEO-Specialist-1656912',
+    clientName: 'YW Builders Inc. (SF Bay Area)',
+    problem:
+      "You're hiring one person to lead a website overhaul, run your SEO/AEO strategy, and manage social media across Instagram and LinkedIn for your luxury remodeling brand - three specialties riding on a single new hire.",
+    points: [
+      {
+        heading: 'SEO and AEO built into the website overhaul, not bolted on after',
+        detail:
+          'I rebuild the site with technical SEO and answer-engine optimization from the first page, so search visibility improves alongside the redesign instead of waiting on a second project later.',
+      },
+      {
+        heading: 'A consistent content system across Instagram and LinkedIn',
+        detail:
+          'I run your brand and executive social presence as a standing system - posting cadence, brand voice, engagement - without you managing a single hire\'s daily bandwidth.',
+      },
+    ],
+    ctaLabel: 'See the Website + SEO Plan',
+    ctaTo: '/contact',
+    preview: {
+      type: 'seo',
+      searchQuery: 'luxury home remodeling san francisco bay area',
+      accent: '#5B4636',
+      results: [
+        {
+          url: 'competitor-remodel.com',
+          title: 'Remodeling Contractor | Bay Area',
+          meta: 'We remodel homes. Contact us for a quote.',
+        },
+        {
+          url: 'ywbuilders.com › projects › pacific-heights-remodel',
+          title: 'Pacific Heights Whole-Home Remodel: Before & After',
+          meta: 'A room-by-room look at a full remodel for a Bay Area family, including the design decisions and 14-week timeline.',
+          highlighted: true,
+        },
+      ],
+      imageUrl: 'https://images.unsplash.com/photo-1764076327046-fe35f955cba1?auto=format&fit=crop&w=400&q=80',
+    },
+  },
+  {
+    slug: 'learn-jazz-standards',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/Are-you-our-next-Head-of-Social-Media-Marketing-1624523',
+    clientName: 'Learn Jazz Standards',
+    problem:
+      "You're hiring a Head of Social Media Marketing to turn Instagram and your other channels into a real lead-gen engine for a 7-figure online music education business.",
+    points: [
+      {
+        heading: 'A content calendar and ManyChat funnel running as one system',
+        detail:
+          'I build and run the posting calendar, repurpose your existing lessons into short-form social, and wire up ManyChat funnels so every post has somewhere to send an interested follower.',
+      },
+      {
+        heading: 'Built around lead-gen, not just posting',
+        detail:
+          'Every piece of content is built to turn a follower into an email subscriber or student, not just to grow a follower count.',
+      },
+    ],
+    ctaLabel: 'See My Content + Funnel Plan',
+    ctaTo: '/contact',
+    preview: {
+      type: 'dashboard',
+      title: 'app.learnjazzstandards.com/social-analytics',
+      accent: '#D4A017',
+      stats: [
+        { label: 'Instagram Followers', value: '48.2K', delta: '+12% MoM' },
+        { label: 'ManyChat Opt-ins', value: '1,340', delta: '+31%' },
+        { label: 'Email Subs from Social', value: '620', delta: '+22%' },
+      ],
+      bars: [22, 30, 28, 35, 40, 44, 52],
+      imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+    },
+  },
+  {
+    slug: 'wordpress-funnel-business',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/WordPress-Developer-To-Create-Fast-Sites-1585058',
+    clientName: 'The WordPress Funnel Business',
+    problem:
+      "You're hiring a WordPress developer to build fast, clean sites plus landing pages and funnels - and handle basic on-page SEO - as one full-time role.",
+    points: [
+      {
+        heading: 'Fast WordPress builds with speed and SEO baked in',
+        detail:
+          'I build clean, modern WordPress sites optimized for Core Web Vitals and basic on-page SEO from the first build, not patched in after launch.',
+      },
+      {
+        heading: 'Landing pages and funnels that convert, not just look good',
+        detail:
+          'I design and build the landing pages and funnels your campaigns send traffic to, with UX and site flow considered from the first wireframe.',
+      },
+    ],
+    ctaLabel: 'See a Sample Fast-Site Build',
+    ctaTo: '/contact',
+    preview: {
+      type: 'dashboard',
+      title: 'Core Web Vitals Report',
+      accent: '#2F80ED',
+      stats: [
+        { label: 'Page Load Time', value: '0.8s', delta: '-64%' },
+        { label: 'Lighthouse Score', value: '98', delta: '+41pt' },
+        { label: 'Funnel Conversion Rate', value: '6.2%', delta: '+2.4pt' },
+      ],
+      bars: [40, 55, 50, 68, 72, 80, 88],
+      imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+    },
+  },
+  {
+    slug: 'ai-workflow-automation',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/AI-Automation-Engineer-n8n-Claude-Expert-1609609',
+    clientName: 'The AI Workflow Automation Business',
+    problem:
+      "You're hiring an AI Automation Engineer to build n8n workflows that pull data from your CRM, SQL, and spreadsheets, run it through an LLM, and produce automated reports and internal chatbots.",
+    points: [
+      {
+        heading: 'Multi-step n8n workflows built and maintained as a service',
+        detail:
+          'I design the branching n8n workflows, LLM API integrations, and automated reporting pipeline you described, instead of you managing a single engineer\'s workload and coverage.',
+      },
+      {
+        heading: 'Internal tools that keep working after the build',
+        detail:
+          'Custom internal chatbots and data pipelines get monitored and iterated on, not handed off and left to quietly break when an API changes.',
+      },
+    ],
+    ctaLabel: "Walk Through an Automation I've Built",
+    ctaTo: '/contact',
+    preview: {
+      type: 'dashboard',
+      title: 'Automation Ops Dashboard',
+      accent: '#7C3AED',
+      stats: [
+        { label: 'Workflows Running', value: '14', delta: '+6 this quarter' },
+        { label: 'Manual Hours Saved/Week', value: '22h' },
+        { label: 'Report Accuracy', value: '99.1%', delta: '+3.5pt' },
+      ],
+      bars: [10, 18, 25, 30, 38, 45, 55],
+      imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+    },
+  },
+  {
+    slug: 'homefront-brands',
+    sourceJobUrl: 'https://www.linkedin.com/jobs/view/seo-specialist-at-homefront-brands-3462621334',
+    clientName: 'Homefront Brands',
+    problem:
+      "You're hiring an SEO Specialist to manage keyword research, link building, and performance measurement across multiple home-services brands under one roof.",
+    points: [
+      {
+        heading: 'One SEO system across every brand, not per-brand guesswork',
+        detail:
+          'I run keyword research, link building, and technical SEO as a single coordinated system across your full brand portfolio, so results compound instead of resetting with each new hire.',
+      },
+      {
+        heading: 'Reporting that ties back to franchise-level decisions',
+        detail:
+          'Monthly performance reporting built around what matters to a multi-brand operation - which brand and market is moving, and why - not a generic traffic report.',
+      },
+    ],
+    ctaLabel: 'See My Multi-Brand SEO Approach',
+    ctaTo: '/contact',
+    preview: {
+      type: 'seo',
+      searchQuery: 'home services franchise brands near me',
+      accent: '#3B5266',
+      results: [
+        {
+          url: 'competitor-homeservices.com',
+          title: 'Home Services | Multiple Locations',
+          meta: 'We offer home services in your area. Call today.',
+        },
+        {
+          url: 'homefrontbrands.com › locations › find-a-pro',
+          title: 'Find a Trusted Home Services Pro Near You | Homefront Brands',
+          meta: 'Search by service and zip code to find a vetted, insured professional from one of our home services brands.',
+          highlighted: true,
+        },
+      ],
+      imageUrl: 'https://images.unsplash.com/photo-1630860218787-b73d3426c07c?auto=format&fit=crop&w=400&q=80',
+    },
+  },
+  {
+    slug: 'rqi-partners',
+    sourceJobUrl: 'https://www.linkedin.com/jobs/view/marketing-automation-manager-at-rqi-partners-llc-3811418542',
+    clientName: 'RQI Partners',
+    problem:
+      "You're hiring a Marketing Automation Manager to streamline, automate, and measure marketing tasks and workflows across your resuscitation-training programs.",
+    points: [
+      {
+        heading: 'Marketing workflows automated as a working system',
+        detail:
+          'I build and maintain the automation layer - lead routing, nurture sequences, task triggers - so your team spends time on training content, not manual marketing ops.',
+      },
+      {
+        heading: 'Measurement built in from day one',
+        detail:
+          'Every automated workflow ships with the tracking to show which sequences are actually driving enrollments, not just running quietly in the background.',
+      },
+    ],
+    ctaLabel: 'See My Automation Approach',
+    ctaTo: '/contact',
+    preview: {
+      type: 'dashboard',
+      title: 'Marketing Automation Dashboard',
+      accent: '#C0392B',
+      stats: [
+        { label: 'Workflows Automated', value: '9', delta: '+9 new' },
+        { label: 'Manual Tasks Eliminated', value: '140/mo' },
+        { label: 'Enrollment Attribution Accuracy', value: '94%', delta: '+18pt' },
+      ],
+      bars: [15, 22, 28, 33, 40, 47, 53],
+      imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+    },
+  },
+  {
+    slug: 'cargas-systems',
+    sourceJobUrl: 'https://www.linkedin.com/jobs/view/marketing-automation-specialist-at-cargas-systems-3367050045',
+    clientName: 'Cargas Systems',
+    problem:
+      "You're hiring a Marketing Automation Specialist to plan, manage, and produce marketing assets - email, landing pages, web forms, and social posts - as one role.",
+    points: [
+      {
+        heading: 'Email, landing pages, and social run as one coordinated system',
+        detail:
+          'I plan and produce the email campaigns, landing pages, web forms, and social posts your marketing calendar needs, instead of one hire context-switching across four channels.',
+      },
+      {
+        heading: 'Chat tool monitoring and lead capture, handled consistently',
+        detail:
+          'I keep your on-site chat and lead capture forms monitored and connected to your CRM, so leads don\'t sit unanswered between other priorities.',
+      },
+    ],
+    ctaLabel: 'See My Marketing Systems Approach',
+    ctaTo: '/contact',
+    preview: {
+      type: 'seo',
+      searchQuery: 'ERP software company lancaster pa',
+      accent: '#2F80ED',
+      results: [
+        {
+          url: 'competitor-erp.com',
+          title: 'ERP Software | Business Solutions',
+          meta: 'We provide ERP software. Contact us to learn more.',
+        },
+        {
+          url: 'cargas.com › blog › choosing-erp-software',
+          title: 'How to Choose the Right ERP Software for Your Business',
+          meta: 'A practical framework for evaluating ERP vendors, with the exact questions to ask before you sign a contract.',
+          highlighted: true,
+        },
+      ],
+      imageUrl: 'https://images.unsplash.com/photo-1630860218787-b73d3426c07c?auto=format&fit=crop&w=400&q=80',
+    },
+  },
   ];
 
 export function getPitch(slug: string | undefined): PitchData | undefined {
