@@ -48,6 +48,42 @@
       "email_body": "Hi,\n\nI was looking at florists in Toronto today and noticed your Google search result only shows your address and phone number - no description of what you actually offer. Other florists in the same search have a full line about their arrangements and delivery, which gives searchers a reason to click.\n\nI put together a quick page on the fix:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-13-new-leaf-florist.html\n\nYou can see how I work at https://organic-theory.vercel.app\n\nNo pressure, just thought it was worth flagging.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "newleafflorist@bellnet.ca",
       "sent_automatically": true
+    },
+    {
+      "business_name": "Uncanny Animals",
+      "website": "https://www.uncannyanimals.com.au",
+      "industry": "Pet Grooming (Boutique Dog & Cat Salon)",
+      "issues": "Homepage, About Us, Price Guide, Grooming, Bookings, and FAQ pages all show up in Google with generic titles like \"Uncanny Animals - Excellence in Pet Grooming & Boutique Store!\" or \"[Page Name] - Uncanny Animals\" - not one includes \"Yarraville\" or \"Melbourne\", despite being a walk-in, appointment-based local salon competing for searches like \"dog groomer Yarraville\".",
+      "opportunity": "Adding the suburb to each page title gives Google what it needs to match the salon to nearby local searches without touching a single other part of the already well-loved (4.9-star, 152-review) brand. Expected within 30 days: more inquiries starting from \"near me\" and suburb-specific searches on top of existing repeat/referral traffic.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-13-uncanny-animals.html",
+      "email_subject": "None of your page titles say 'Yarraville'",
+      "email_body": "Hi,\n\nI was looking at pet groomers in Melbourne's Inner West today and noticed something about Uncanny Animals - your homepage and every inner page (About, Price Guide, Grooming, Bookings, FAQ) show up on Google with generic titles that never mention Yarraville or Melbourne. With a 4.9-star rating and fear-free certification, you've already done the hard part - the titles just aren't catching local searches like \"dog groomer Yarraville\".\n\nI put together a quick page showing the fix:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-13-uncanny-animals.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since it's such a quick fix.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "contact@uncannyanimals.com.au",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Inner Self Tattoo Studio",
+      "website": "https://innerselftattoo.com",
+      "industry": "Tattoo & Piercing Studio",
+      "issues": "An old Wix site (innerselftattoo.wixsite.com/blackrock) and a separate subdomain (studio.innerselftattoo.com) are both still indexed alongside the current site, splitting search visibility three ways for one business - and the current site's own inner pages load as raw, unreadable query strings (e.g. index.php?Itemid=234&id=15&option=com_sppagebuilder&view=page) instead of clean URLs.",
+      "opportunity": "Consolidating onto one clean site with readable URLs (301-redirecting the old Wix site and subdomain) puts all search authority behind the site that actually represents the studio today, and makes every page shareable and readable at a glance. Expected within 30 days: search engines stop splitting ranking signals across three competing listings for the same studio.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-13-inner-self-tattoo.html",
+      "email_subject": "Google can't tell which of your sites is the real one",
+      "email_body": "Hi,\n\nI was looking at tattoo studios in Blackrock today and noticed Inner Self has three different web presences showing up in search - your current site, an old Wix site (innerselftattoo.wixsite.com/blackrock), and a subdomain. On top of that, your current site's own pages load as raw query-string URLs rather than clean, readable ones. With a genuine vegan-ink specialty and over a decade in Blackrock, that's a real differentiator getting buried under site fragmentation.\n\nI put together a quick page on the fix:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-13-inner-self-tattoo.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "innerselftattoostudio@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Dismount Bike Shop",
+      "website": "https://dismountbikeshop.com",
+      "industry": "Bike Shop & Coffee Bar",
+      "issues": "The homepage - the single highest-traffic page - is titled \"Dismount Bike Shop - Bikes. Coffee. Supply.\" in Google with no mention of Toronto, even though inner pages like \"Dismount Toronto | About Us\" and \"Dismount Toronto | Gravel & All Road Bikes\" already carry the city in their titles - the homepage is the one inconsistent page, and it's the one that matters most for local search.",
+      "opportunity": "Adding \"Toronto\" (and ideally St. Clair West) to the homepage title brings it in line with the site's own inner pages and closes the single biggest local-SEO gap on the site. Expected within 30 days: better local search matching for \"bike shop Toronto\" type searches, on the page most people land on first.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-13-dismount-bike-shop.html",
+      "email_subject": "Your homepage is the one page that doesn't say 'Toronto'",
+      "email_body": "Hi,\n\nI was looking at bike shops in Toronto today and noticed something about Dismount - your About Us page and your Gravel & All Road Bikes page both say \"Dismount Toronto\" in their titles, but your homepage (the page most people actually land on) is just \"Dismount Bike Shop - Bikes. Coffee. Supply.\" - no city at all. You've already proven the pattern works elsewhere on your own site; it's just missing on the one page that matters most.\n\nI put together a quick page on the fix:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-13-dismount-bike-shop.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since it's such a quick fix.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "online@dismountbikeshop.com",
+      "sent_automatically": false
     }
   ]
 }
