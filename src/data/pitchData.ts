@@ -658,6 +658,90 @@ export const pitches: PitchData[] = [
       imageUrl: 'https://images.unsplash.com/photo-1630860218787-b73d3426c07c?auto=format&fit=crop&w=400&q=80',
     },
   },
+  {
+    slug: 'wonderly-lights',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/local-seo-specialist-google-maps-ai-search-expert-1685178',
+    clientName: 'Wonderly Lights',
+    problem:
+      "You're hiring a Local SEO Specialist to grow your Google Maps rankings and optimize for AI-powered search (AEO) across Northeast Ohio.",
+    points: [
+      {
+        heading: 'Local SEO and AEO built as one strategy, not two',
+        detail:
+          'I develop the Local SEO and Google Business Profile strategy your post describes, while also writing the AEO-formatted content that gets you cited by Google AI Overviews, ChatGPT, and Gemini.',
+      },
+      {
+        heading: 'City and ZIP-level pages that actually rank',
+        detail:
+          'I build the dedicated, keyword-targeted city and ZIP pages your post asks for, so each of your five services can rank on its own instead of competing for one homepage.',
+      },
+    ],
+    ctaLabel: 'See My Local SEO Approach',
+    ctaTo: '/contact',
+  },
+  {
+    slug: 'homecare-agency-website',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/web-designer-needed-for-a-homecare-agency-website-1686524',
+    clientName: 'The Homecare Agency Website Business',
+    problem:
+      "You're hiring a web designer to build a warm, trustworthy, accessible website for a homecare agency that families can reach out to during a stressful time.",
+    points: [
+      {
+        heading: 'A site designed for a stressed visitor, not a portfolio piece',
+        detail:
+          'I design and build clean, accessible pages tuned for seniors and their families - large text, simple navigation, and calm visuals - instead of a template optimized for looks over usability.',
+      },
+      {
+        heading: 'Local SEO built in from the first page',
+        detail:
+          'I set up the local SEO foundation so your agency is findable when someone searches "home care near me," not just a good-looking site with no visibility.',
+      },
+    ],
+    ctaLabel: 'See A Sample Homecare Site',
+    ctaTo: '/contact',
+  },
+  {
+    slug: 'inbound-demo-marketing-business',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/inbound-marketing-expert-1687953',
+    clientName: 'The Inbound Demo Marketing Business',
+    problem:
+      "You're hiring a Marketing Specialist to generate inbound leads and book qualified sales demos through SEO, email marketing, and social media.",
+    points: [
+      {
+        heading: 'SEO, email, and social run as one connected funnel',
+        detail:
+          'I build the organic traffic strategy, email nurture sequences, and social content your post describes as one system aimed at a single outcome - booked demos - instead of three disconnected efforts.',
+      },
+      {
+        heading: 'A clear path from lead to booked demo',
+        detail:
+          'I track and optimize the handoff from inbound lead to sales-ready demo booking, so your sales team gets a steady flow of qualified conversations, not just traffic numbers.',
+      },
+    ],
+    ctaLabel: 'See My Inbound Funnel Approach',
+    ctaTo: '/contact',
+  },
+  {
+    slug: 'marketing-automation-ai-business',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/marketing-automation-and-ai-specialist-1418038',
+    clientName: 'The Marketing Automation & AI Business',
+    problem:
+      "You're hiring a Marketing Automation and AI Specialist to build workflows across your CRM, email, landing pages, and AI tools.",
+    points: [
+      {
+        heading: 'Workflow automation built and monitored, not just shipped',
+        detail:
+          'I design the automation workflows across your CRM, email sequences, and landing pages your post describes, and keep watching them after launch so a broken integration gets caught in hours, not weeks.',
+      },
+      {
+        heading: 'One connected system instead of scattered tools',
+        detail:
+          'CRM integration, marketing automation, and landing pages get built by the same hands and documented clearly, so nothing is a black box only one person understands.',
+      },
+    ],
+    ctaLabel: 'See My Automation Approach',
+    ctaTo: '/contact',
+  },
   ];
 
 export function getPitch(slug: string | undefined): PitchData | undefined {
