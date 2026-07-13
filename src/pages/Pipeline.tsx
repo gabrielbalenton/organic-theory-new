@@ -94,7 +94,7 @@ function GoogleLeadCard({ lead, index }: { lead: GoogleLead; index: number }) {
             onClick={e => e.stopPropagation()}
             className="text-[10px] tracking-[0.2em] uppercase border border-[#FAFAFA]/20 px-3 py-1.5 text-[#FAFAFA] hover:bg-[#FAFAFA]/10 transition-colors shrink-0 hidden sm:flex items-center gap-1.5"
           >
-            Funnel <ExternalLink size={9} />
+            Funnel Page <ExternalLink size={9} />
           </a>
         )}
         {open ? <ChevronUp size={14} className="opacity-40 shrink-0" /> : <ChevronDown size={14} className="opacity-40 shrink-0" />}
