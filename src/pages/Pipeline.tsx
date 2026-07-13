@@ -212,7 +212,7 @@ function JobLeadCard({ lead, index }: { lead: JobLead; index: number }) {
           onClick={e => e.stopPropagation()}
           className="text-[10px] tracking-[0.2em] uppercase border border-[#FAFAFA]/20 px-3 py-1.5 text-[#FAFAFA] hover:bg-[#FAFAFA]/10 transition-colors shrink-0 hidden sm:flex items-center gap-1.5"
         >
-          Pitch Page <ExternalLink size={9} />
+          Funnel Page <ExternalLink size={9} />
         </a>
         {open ? <ChevronUp size={14} className="opacity-40 shrink-0" /> : <ChevronDown size={14} className="opacity-40 shrink-0" />}
       </div>
@@ -252,7 +252,7 @@ function JobLeadCard({ lead, index }: { lead: JobLead; index: number }) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-[10px] tracking-[0.2em] uppercase border border-[#FAFAFA]/20 px-4 py-2.5 text-[#FAFAFA] hover:bg-[#FAFAFA]/5 transition-colors"
                 >
-                  View Pitch Page <ExternalLink size={11} />
+                  View Funnel Page <ExternalLink size={11} />
                 </a>
               </div>
 
@@ -531,7 +531,7 @@ export default function Pipeline() {
               <div>
                 <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/50 mb-2">OnlineJobs.ph</p>
                 <ol className="space-y-2">
-                  {['Open the job post on OnlineJobs.ph and reply as a message', 'Copy the subject + body from the card', 'Paste in the pitch page link (already included in the body)', 'Send — the pitch page is live and ready to view'].map((step, i) => (
+                  {['Open the job post on OnlineJobs.ph and reply as a message', 'Copy the subject + body from the card', 'Paste in the funnel page link (already included in the body)', 'Send — the funnel page is live and ready to view'].map((step, i) => (
                     <li key={i} className="flex gap-3 text-sm text-[#A1A1AA]/50">
                       <span className="text-[#FAFAFA]/20 shrink-0">{i + 1}.</span>
                       {step}
@@ -542,7 +542,7 @@ export default function Pipeline() {
               <div>
                 <p className="text-[10px] tracking-[0.2em] uppercase text-[#A1A1AA]/50 mb-2">LinkedIn</p>
                 <ol className="space-y-2">
-                  {['Open the job post on LinkedIn and reply/InMail as appropriate', 'Copy the subject + body from the card', 'Paste in the pitch page link (already included in the body)', 'Send — the pitch page is live and ready to view'].map((step, i) => (
+                  {['Open the job post on LinkedIn and reply/InMail as appropriate', 'Copy the subject + body from the card', 'Paste in the funnel page link (already included in the body)', 'Send — the funnel page is live and ready to view'].map((step, i) => (
                     <li key={i} className="flex gap-3 text-sm text-[#A1A1AA]/50">
                       <span className="text-[#FAFAFA]/20 shrink-0">{i + 1}.</span>
                       {step}

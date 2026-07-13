@@ -4,19 +4,30 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>ATX Family Dental — Growth Audit | Organic Theory</title>
+<meta name="description" content="A free growth audit for ATX Family Dental — what's holding your site back in search, and exactly what I'd fix first." />
+<link rel="icon" type="image/png" sizes="32x32" href="https://organic-theory.vercel.app/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://organic-theory.vercel.app/apple-touch-icon.png">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="ATX Family Dental — Growth Audit | Organic Theory" />
+<meta property="og:description" content="A free growth audit for ATX Family Dental — what's holding your site back in search, and exactly what I'd fix first." />
+<meta property="og:image" content="https://organic-theory.vercel.app/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ATX Family Dental — Growth Audit | Organic Theory" />
+<meta name="twitter:description" content="A free growth audit for ATX Family Dental — what's holding your site back in search, and exactly what I'd fix first." />
+<meta name="twitter:image" content="https://organic-theory.vercel.app/og-image.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
   :root {
-    --bg: #09090B;
-    --fg: #FAFAFA;
-    --muted: rgba(250,250,250,0.55);
-    --faint: rgba(250,250,250,0.3);
-    --hairline: rgba(250,250,250,0.1);
-    --accent: #38bdf8;
-    --accent-soft: rgba(56,189,248,0.12);
+    --bg: #FFFFFF;
+    --fg: #0A0A0C;
+    --muted: rgba(10,10,12,0.6);
+    --faint: rgba(10,10,12,0.35);
+    --hairline: rgba(10,10,12,0.09);
+    --accent: #0ea5e9;
+    --accent-soft: rgba(14,165,233,0.08);
     --display: 'Montserrat', sans-serif;
     --editorial: 'Cormorant Garamond', Georgia, serif;
   }
@@ -47,7 +58,7 @@
   .display { font-family: var(--display); }
   .eyebrow { font-family: var(--display); font-weight: 700; font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--accent); }
   .accent { color: var(--accent); }
-  .card { background-color: rgba(250,250,250,0.025); border: 1px solid var(--hairline); }
+  .card { background-color: rgba(10,10,12,0.02); border: 1px solid var(--hairline); box-shadow: 0 1px 3px rgba(10,10,12,0.04); }
   .hairline-top { border-top: 1px solid var(--hairline); }
   .btn-primary {
     background-color: var(--fg);
@@ -72,14 +83,14 @@
   }
   .btn-outline:hover { background-color: var(--fg); color: var(--bg); border-color: var(--fg); }
   input, textarea {
-    background-color: rgba(250,250,250,0.03);
+    background-color: rgba(10,10,12,0.02);
     border: 1px solid var(--hairline);
     color: var(--fg);
     font-family: inherit;
     transition: border-color 0.3s;
   }
   input:focus, textarea:focus { outline: none; border-color: var(--accent); }
-  input::placeholder, textarea::placeholder { color: rgba(250,250,250,0.25); }
+  input::placeholder, textarea::placeholder { color: rgba(10,10,12,0.3); }
 
   /* scroll reveal */
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s cubic-bezier(0.22,1,0.36,1), transform 0.9s cubic-bezier(0.22,1,0.36,1); }
@@ -91,21 +102,21 @@
   .ghost-num {
     font-family: var(--editorial);
     font-weight: 300;
-    color: rgba(250,250,250,0.06);
+    color: rgba(10,10,12,0.05);
     line-height: 1;
     -webkit-user-select: none;
     user-select: none;
   }
 
-  ::selection { background: rgba(56,189,248,0.25); color: var(--fg); }
+  ::selection { background: rgba(14,165,233,0.2); color: var(--fg); }
   ::-webkit-scrollbar { width: 3px; }
   ::-webkit-scrollbar-track { background: transparent; }
-  ::-webkit-scrollbar-thumb { background: rgba(250,250,250,0.15); border-radius: 2px; }
+  ::-webkit-scrollbar-thumb { background: rgba(10,10,12,0.15); border-radius: 2px; }
 </style>
 </head>
 <body>
 
-  <header class="sticky top-0 z-50 px-6 md:px-10 py-5 flex items-center justify-between max-w-6xl mx-auto" style="backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background: rgba(9,9,11,0.7); border-bottom: 1px solid var(--hairline);">
+  <header class="sticky top-0 z-50 px-6 md:px-10 py-5 flex items-center justify-between max-w-6xl mx-auto" style="backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background: rgba(255,255,255,0.75); border-bottom: 1px solid var(--hairline);">
     <div class="display text-xs font-bold tracking-[0.25em] uppercase" style="color: var(--faint);">Organic Theory</div>
     <a href="https://calendly.com/gabrielbalenton/30min" target="_blank" rel="noopener" class="btn-primary px-5 py-2.5">Book a Free Call</a>
   </header>
@@ -178,7 +189,7 @@
     <div class="reveal grid md:grid-cols-2 gap-5 mb-14">
       <div>
         <p class="eyebrow mb-3" style="color: var(--faint);">Google — Today</p>
-        <div class="bg-white rounded-2xl p-6 shadow-2xl" style="box-shadow: 0 25px 60px -20px rgba(0,0,0,0.6);">
+        <div class="bg-white rounded-2xl p-6 shadow-2xl" style="box-shadow: 0 20px 45px -18px rgba(10,10,12,0.18);">
           <div class="flex items-center gap-2 mb-1.5">
             <div class="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center text-[9px] text-gray-500">A</div>
             <span class="text-[13px] text-gray-700">atxfamilydental.com</span>
@@ -190,7 +201,7 @@
       </div>
       <div>
         <p class="eyebrow mb-3">Google — After The Fix</p>
-        <div class="bg-white rounded-2xl p-6 shadow-2xl" style="box-shadow: 0 25px 60px -20px rgba(56,189,248,0.25);">
+        <div class="bg-white rounded-2xl p-6 shadow-2xl" style="box-shadow: 0 20px 45px -18px rgba(14,165,233,0.22);">
           <div class="flex items-center gap-2 mb-1.5">
             <div class="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center text-[9px] text-blue-600">A</div>
             <span class="text-[13px] text-gray-700">atxfamilydental.com</span>
@@ -207,7 +218,7 @@
     </div>
 
     <p class="eyebrow reveal mb-4 text-center">Your Homepage, Rebuilt — Scroll To See The Whole Thing</p>
-    <div class="reveal rounded-2xl overflow-hidden" style="box-shadow: 0 40px 100px -30px rgba(0,0,0,0.7); border: 1px solid var(--hairline);">
+    <div class="reveal rounded-2xl overflow-hidden" style="box-shadow: 0 30px 70px -25px rgba(10,10,12,0.22); border: 1px solid var(--hairline);">
       <div class="flex items-center gap-1.5 px-4 py-3" style="background:#151517; border-bottom:1px solid var(--hairline);">
         <span class="w-2.5 h-2.5 rounded-full bg-red-500/60"></span>
         <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/60"></span>
@@ -382,10 +393,33 @@
     </ol>
   </section>
 
+  <section class="relative max-w-3xl mx-auto px-6 pb-24" style="z-index:1;">
+    <p class="eyebrow reveal mb-10">Before You Book — A Few Things</p>
+    <div class="space-y-0">
+      <div class="reveal hairline-top py-6">
+        <h3 class="font-semibold text-base mb-1.5">Do I need to sign a contract?</h3>
+        <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">No. You pay for the work you want done — no retainer required to start, no long-term lock-in.</p>
+      </div>
+      <div class="reveal hairline-top py-6">
+        <h3 class="font-semibold text-base mb-1.5">How long does something like this actually take?</h3>
+        <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">The fixes above are a 2-week turnaround. Bigger rebuilds take longer — I'll give you a real timeline on the call, not a guess.</p>
+      </div>
+      <div class="reveal hairline-top py-6">
+        <h3 class="font-semibold text-base mb-1.5">Do I have to switch hosts or platforms?</h3>
+        <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">No — I can work with what you already have. Migrating platforms is only ever your call, never a requirement to work together.</p>
+      </div>
+      <div class="reveal hairline-top py-6">
+        <h3 class="font-semibold text-base mb-1.5">What if I don't like the direction?</h3>
+        <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">Then we don't proceed. The call is a walkthrough, not a close — you decide afterward, no pressure either way.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="relative max-w-3xl mx-auto px-6 pb-24 text-center" style="z-index:1;">
     <div class="reveal card rounded-3xl p-10 md:p-16">
       <h2 class="editorial text-2xl md:text-3xl mb-4">Want to see exactly what this looks like for your business?</h2>
-      <p class="mb-10 text-sm md:text-base max-w-md mx-auto" style="color: var(--muted);">Book a free 30-minute call with Gabriel. No pitch — just a walkthrough of what I'd do and what you could expect.</p>
+      <p class="mb-6 text-sm md:text-base max-w-md mx-auto" style="color: var(--muted);">Book a free 30-minute call with Gabriel. No pitch — just a walkthrough of what I'd do and what you could expect.</p>
+      <p class="mb-10 text-xs max-w-sm mx-auto" style="color: var(--faint);">I'm a solo consultant, not an agency — I build and deploy everything myself on GitHub and Vercel, so what you see on this page is exactly the kind of work you'd get, no account managers in between. No contract, no retainer required to start.</p>
       <a href="https://calendly.com/gabrielbalenton/30min" target="_blank" rel="noopener" class="btn-primary inline-block px-9 py-4">
         Book a Free Strategy Call →
       </a>
