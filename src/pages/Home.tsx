@@ -749,7 +749,7 @@ export default function Home() {
             },
             {
               q: 'How long until I see results?',
-              a: 'Automation wins are immediate - the system starts working the day it goes live. SEO is slower by nature: most clients see measurable movement in 8-16 weeks depending on domain authority and how many issues need fixing. The Search Architecture audit sets a clear timeline before any work starts.',
+              a: "Automation wins are immediate - the system starts working the day it goes live. SEO is slower by nature, but the bigger problem isn't that it takes months to work - it's that most agencies only report rankings and go quiet while everything else that matters is already moving. I track leading indicators from week one: entity growth, AI citations, branded search demand, topical authority, and conversion improvements on the pages you already have. Revenue may take time. Visibility shouldn't.",
             },
             {
               q: "I've been burned by an SEO agency before. How is this different?",
