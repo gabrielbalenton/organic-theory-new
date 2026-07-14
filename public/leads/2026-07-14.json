@@ -239,7 +239,7 @@
       "email_subject": "Your homepage misspells your own suburb",
       "email_body": "Hi Melissa,\n\nI was looking at dog groomers in Ainslie and noticed something on Wolfys' site - your homepage title tag reads 'Grooming Salon Ainsle' and your meta description says 'located in Ainsle,' both missing the second 'i.' Those are the exact two fields Google shows searchers, so it's quietly working against you for local searches. I also noticed your address is written two different ways between the homepage banner and the Contact page.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-wolfys-pet-stylists.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging - what you've built for anxious and senior dogs is genuinely rare, it just isn't showing up where new visitors actually land.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "wolfyspetstylists@gmail.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Norton Green Garden Centre",
@@ -251,7 +251,7 @@
       "email_subject": "A quick typo on your homepage, plus a buried credential",
       "email_body": "Hi,\n\nI was looking at garden centres around Chilcompton and noticed a small typo on Norton Green's homepage - the deliveries section reads 'at an addtional cost' instead of 'additional.' I also noticed your Horticultural Trades Association membership, which is a real trust signal after 35+ years in business, is buried in a small paragraph near the bottom of the page instead of being a badge near the top - and there isn't a single review or testimonial shown anywhere on the site.\n\nI put together a page showing the fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-norton-green-garden-centre.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging given how much trust and history you actually have to lean on.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@nortongreengardencentre.co.uk",
-      "sent_automatically": false
+      "sent_automatically": true
     }
   ]
 }
