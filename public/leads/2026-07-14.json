@@ -192,6 +192,18 @@
       "email_body": "Hi,\n\nI was looking at bike shops in Excelsior and noticed something on South Lake Cycle's Contact page - your site still has live, unedited 'Business Tagline Lorem Ipsum Dolor' placeholder text under the logo. I also clicked both 'Get Directions' buttons on that page, and they open Google Maps labeled '(Hibu Plumbers)' and '(Eric's Auto Shops)' respectively - leftover names from your website builder template, not South Lake Cycle.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-south-lake-cycle.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought this was worth flagging fast since it's probably confusing new customers trying to find you on the trail.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@southlakecycle.bike",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Northam Law Corporation",
+      "website": "https://northam-law.com/",
+      "industry": "Boutique Law Firm (Business, Real Estate, Family & Employment Law)",
+      "issues": "The homepage's \"What our clients say\" section displays three identical Lorem Ipsum placeholder testimonials, each attributed verbatim to \"John Doe, CEO\" - unedited template copy still live for visitors. Separately, the homepage has no meta description tag at all (confirmed by inspecting the page's head metadata, where the field is simply absent), so Google auto-generates the search snippet. The firm's \"Latest News & Blog\" section also hasn't published anything since March 17, 2026 - about four months of silence going into July.",
+      "opportunity": "Swapping the Lorem Ipsum testimonials for real client quotes (or a neutral placeholder) and writing a real meta description are same-week fixes. Expected within 30 days: a homepage that doesn't undercut its own credibility on first glance, and a proper search snippet for \"Kitsilano business lawyer\" and similar searches. Getting the Insights blog posting again on even a monthly cadence would also give search engines and AI answer tools fresh, citable content instead of a four-month-old trail.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-northam-law-corporation.html",
+      "email_subject": "Your homepage testimonials are still from \"John Doe\"",
+      "email_body": "Hi,\n\nI was looking at boutique law firms in Kitsilano and noticed something on Northam Law's homepage - the \"What our clients say\" section shows three Lorem Ipsum placeholder quotes, all attributed to \"John Doe, CEO.\" It's template copy that never got replaced, and it's the first thing a new visitor sees right where you'd want to build trust. I also checked and there's no meta description tag anywhere in the homepage's HTML, so Google is auto-generating your search snippet instead of showing something you'd actually choose to say.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-northam-law-corporation.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since the actual breadth of what you offer - business, real estate, family law, and wills all under one roof - deserves a homepage that backs it up.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@northam-law.com",
+      "sent_automatically": false
     }
   ]
 }
