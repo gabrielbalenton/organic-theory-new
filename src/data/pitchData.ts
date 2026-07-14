@@ -742,6 +742,90 @@ export const pitches: PitchData[] = [
     ctaLabel: 'See My Automation Approach',
     ctaTo: '/contact',
   },
+  {
+    slug: 'htbpc-foundation',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/digital-marketing-manager-wordpress-seo-ai-nonprofit-1688227',
+    clientName: 'How to Beat Prostate Cancer Foundation',
+    problem:
+      "You're hiring a Digital Marketing Manager to run WordPress, SEO, content, FluentCRM email automation, and social media for a 501(c)(3) prostate cancer nonprofit serving veterans and families.",
+    points: [
+      {
+        heading: 'WordPress, SEO, and email automation run as one system',
+        detail:
+          'I manage the WordPress site, on-page and technical SEO, and FluentCRM email campaigns together, so donor growth and search visibility move in the same direction instead of competing for one hire\'s time.',
+      },
+      {
+        heading: 'Content and fundraising campaigns built to compound',
+        detail:
+          'I build donation landing pages and repurpose educational content across social channels as a standing system, not a from-scratch effort every campaign.',
+      },
+    ],
+    ctaLabel: 'See My Nonprofit Growth Approach',
+    ctaTo: '/contact',
+  },
+  {
+    slug: 'havennexus-family-psychiatry',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/part-time-social-media-seo-meta-ads-digital-marketing-specialist-1687411',
+    clientName: 'HavenNexus Family Psychiatry',
+    problem:
+      "You're hiring a part-time specialist to grow your Instagram/Facebook presence, rebuild your website, and improve your SEO for your Palm Coast, FL psychiatry practice.",
+    points: [
+      {
+        heading: 'A new website and local SEO built together',
+        detail:
+          'I design and build the new site your post describes and set up the local SEO foundation at the same time, so the rebuild and your search visibility launch together.',
+      },
+      {
+        heading: 'Social growth without the ad-spend dependency',
+        detail:
+          'I run the organic Instagram and Facebook content strategy your post asks for, focused on sustainable follower and engagement growth.',
+      },
+    ],
+    ctaLabel: 'See My Approach For Your Practice',
+    ctaTo: '/contact',
+  },
+  {
+    slug: 'ai-automation-engineer-team',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/ai-automation-engineer-1676459',
+    clientName: 'The AI Automation Engineering Team',
+    problem:
+      "You're hiring a third AI Automation Engineer to architect n8n workflows and Claude-powered agents across your marketing and finance automation systems.",
+    points: [
+      {
+        heading: 'n8n + Claude automation delivered as a packaged build',
+        detail:
+          'I design and deploy the same kind of documented, persistent n8n + Claude workflows your post describes, as a standing engagement instead of a new full-time hire.',
+      },
+      {
+        heading: 'Documentation and monitoring built in from day one',
+        detail:
+          'Every workflow ships with the documentation and monitoring your post asks for, so a broken integration gets caught immediately instead of quietly failing.',
+      },
+    ],
+    ctaLabel: 'See My Automation Build Approach',
+    ctaTo: '/contact',
+  },
+  {
+    slug: 'merissa-leigh-salon',
+    sourceJobUrl: 'https://www.linkedin.com/jobs/view/social-media-brand-manager-at-merissa-leigh-salon-4364238034',
+    clientName: 'Merissa Leigh Salon',
+    problem:
+      "You're hiring a part-time Social Media & Brand Manager to run Instagram/TikTok content and protect brand consistency for your luxury Greenwich, CT hair salon.",
+    points: [
+      {
+        heading: 'Social content and brand consistency as one system',
+        detail:
+          'I manage the Instagram/TikTok content calendar and short-form video your post describes while keeping your visual identity and brand voice consistent across every post.',
+      },
+      {
+        heading: 'A homepage that finally says what the job post already knows',
+        detail:
+          'Your own listing describes elevated color, modern styling, and a community-driven brand - none of which appears on your current homepage. I\'d fix that gap alongside the social work.',
+      },
+    ],
+    ctaLabel: 'See My Approach For Your Salon',
+    ctaTo: '/contact',
+  },
   ];
 
 export function getPitch(slug: string | undefined): PitchData | undefined {
