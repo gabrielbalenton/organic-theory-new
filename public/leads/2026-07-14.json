@@ -47,7 +47,7 @@
       "email_subject": "A typo and a missing meta description on your site",
       "email_body": "Hi,\n\nI was looking at bakeries in New Farm and noticed a couple of small things on Bakeologists' homepage - there's no meta description tag at all, so Google is auto-generating your search snippet instead of showing something written for it. I also spotted a typo in your opening paragraph: 'an important park of the local community' should be 'part.'\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-bakeologists.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since both are quick fixes.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "newfarm@thebakeologists.com.au",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Simply Upholstery & Design",
@@ -59,7 +59,7 @@
       "email_subject": "12 of your homepage photos have no alt text",
       "email_body": "Hi,\n\nI was looking at upholstery shops in Fairfax Station and noticed something on Simply Upholstery & Design's homepage - 12 of your 14 photos, including your whole portfolio gallery and the HGTV feature image, have completely empty alt text. Only the logo has any. That means none of that work is showing up in Google Image Search, and it's a real gap for screen-reader visitors too.\n\nI put together a page showing the fix and what it'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-simply-upholstery-design.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging - especially since you've got real HGTV credibility that your search presence isn't reflecting yet.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@simplyupholstery.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Erol's Tailoring and Alterations",
@@ -71,7 +71,7 @@
       "email_subject": "Your 'Explore Our Work' gallery links go nowhere",
       "email_body": "Hi,\n\nI was looking at tailors in Cherry Creek and noticed something on Erol's Tailoring's homepage - every photo under 'Explore Our Work' (9 of them) links to '#', so clicking any of them does nothing. I also noticed two different phone numbers with different area codes on the same page - a 303 Denver number and a 615 Nashville number for WhatsApp.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-erols-tailoring-alterations.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since thirty years of experience and clients like Burberry deserve a portfolio that actually opens.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "erolstailoring@gmail.com",
-      "sent_automatically": false
+      "sent_automatically": true
     }
   ]
 }
