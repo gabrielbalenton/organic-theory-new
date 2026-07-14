@@ -1,0 +1,384 @@
+// FPX Weekly Stocklist — Brevo-ready email HTML template.
+// Placeholder tokens ({{TOKEN}}) are replaced verbatim by src/pages/FPXStocklist.tsx.
+// Do not alter structure/styles here without updating the Compose form to match.
+
+export const FPX_TEMPLATE = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPX Weekly Stocklist</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Lato:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body style="margin:0;padding:0;background-color:#e8e4de;font-family:'Open Sans',Arial,sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#e8e4de;">
+  <tr>
+    <td align="center" style="padding:32px 0;">
+      <table role="presentation" width="620" cellpadding="0" cellspacing="0" border="0" style="max-width:620px;width:100%;background-color:#ffffff;border-radius:4px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,0.10);">
+
+        <!-- HEADER -->
+        <tr>
+          <td style="background-color:#ffffff;padding:20px 32px 18px;border-bottom:3px solid #1a8638;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td>
+                  <a href="https://app.fpx.nz/" style="border:0;display:block;">
+                    <img src="https://img.mailinblue.com/8981968/images/content_library/original/6a3b0ed48b57c4a126fd4f1a_2c2b85a3616578d9.png" alt="FPX Forest Products Exchange" width="130" style="display:block;height:auto;border:0;mix-blend-mode:multiply;">
+                  </a>
+                </td>
+                <td align="right" valign="middle">
+                  <p style="margin:0;font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;">Weekly Stocklist</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- HERO -->
+        <tr>
+          <td style="background-color:#1a8638;padding:36px 32px 32px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td>
+                  <p style="margin:0 0 6px;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.55);font-family:'Lato',Arial,sans-serif;">Weekly Stocklist</p>
+                  <h1 style="margin:0 0 10px;font-family:'Montserrat',Arial,sans-serif;font-size:30px;font-weight:800;color:#ffffff;line-height:1.15;letter-spacing:-0.5px;">Your curated<br>timber selection.</h1>
+                  <p style="margin:0 0 22px;font-size:13px;color:rgba(255,255,255,0.78);font-family:'Open Sans',Arial,sans-serif;line-height:1.65;">Fresh stock. Direct from mill. Updated every week.</p>
+                  <a href="https://app.fpx.nz/" style="display:inline-block;background-color:#ffffff;color:#1a8638;font-family:'Montserrat',Arial,sans-serif;font-size:12px;font-weight:700;padding:10px 24px;border-radius:100px;text-decoration:none;letter-spacing:0.3px;">View All Listings &rarr;</a>
+                </td>
+                <td width="130" align="right" valign="bottom" style="padding-left:16px;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td style="background-color:rgba(255,255,255,0.08);border-radius:6px;padding:14px 16px;text-align:center;">
+                        <p style="margin:0 0 2px;font-size:26px;font-weight:800;color:#ffffff;font-family:'Montserrat',Arial,sans-serif;line-height:1;">3</p>
+                        <p style="margin:0;font-size:10px;color:rgba(255,255,255,0.65);font-family:'Lato',Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;">Featured<br>Lines</p>
+                      </td>
+                    </tr>
+                    <tr><td style="height:8px;"></td></tr>
+                    <tr>
+                      <td style="background-color:rgba(255,255,255,0.08);border-radius:6px;padding:14px 16px;text-align:center;">
+                        <p style="margin:0 0 2px;font-size:26px;font-weight:800;color:#ffffff;font-family:'Montserrat',Arial,sans-serif;line-height:1;">17</p>
+                        <p style="margin:0;font-size:10px;color:rgba(255,255,255,0.65);font-family:'Lato',Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;">Categories<br>Available</p>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- FEATURED STOCK HEADER -->
+        <tr>
+          <td style="padding:28px 32px 6px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td valign="middle">
+                  <h2 style="margin:0;font-family:'Montserrat',Arial,sans-serif;font-size:18px;font-weight:700;color:#111111;letter-spacing:-0.2px;">Featured Stock This Week</h2>
+                </td>
+                <td valign="middle" align="right">
+                  <a href="https://app.fpx.nz/" style="font-size:12px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;text-decoration:none;">See all &rarr;</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- SLOT 1 — BEST SINGLE-PACKET DEAL (GREEN) -->
+        <tr>
+          <td style="padding:16px 32px 0;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-radius:8px;overflow:hidden;border:1px solid #ebebeb;">
+              <tr>
+                <td width="4" style="background-color:#1a8638;padding:0;">&nbsp;</td>
+                <td width="148" valign="top" style="padding:0;background-color:#f7f7f5;">
+                  <a href="{{SLOT1_URL}}" style="display:block;border:0;">
+                    <img src="{{SLOT1_IMAGE_URL}}" alt="{{SLOT1_SIZE}}" width="148" height="155" style="display:block;width:148px;height:155px;object-fit:contain;object-position:center;border:0;padding:12px;box-sizing:border-box;">
+                  </a>
+                </td>
+                <td valign="top" style="padding:16px 18px;border-left:1px solid #ebebeb;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:8px;">
+                    <tr>
+                      <td style="background-color:#1a8638;border-radius:100px;padding:3px 10px;">
+                        <span style="font-size:10px;font-weight:700;color:#ffffff;letter-spacing:1px;text-transform:uppercase;font-family:'Lato',Arial,sans-serif;">Best Single-Packet Deal</span>
+                      </td>
+                    </tr>
+                  </table>
+                  <p style="margin:0 0 2px;font-family:'Montserrat',Arial,sans-serif;font-size:21px;font-weight:800;color:#111111;line-height:1.1;letter-spacing:-0.3px;">{{SLOT1_SIZE}}</p>
+                  <p style="margin:0 0 12px;font-family:'Montserrat',Arial,sans-serif;font-size:14px;font-weight:700;color:#1a8638;line-height:1;">{{SLOT1_GRADE}}</p>
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;border-collapse:collapse;width:100%;">
+                    <tr style="border-bottom:1px solid #f0f0f0;">
+                      <td style="font-size:11px;font-weight:700;color:#888;font-family:'Lato',Arial,sans-serif;padding:4px 10px 4px 0;text-transform:uppercase;letter-spacing:0.5px;white-space:nowrap;">Treatment</td>
+                      <td style="font-size:12px;color:#333;font-family:'Open Sans',Arial,sans-serif;padding:4px 0;">{{SLOT1_TREATMENT}}</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid #f0f0f0;">
+                      <td style="font-size:11px;font-weight:700;color:#888;font-family:'Lato',Arial,sans-serif;padding:4px 10px 4px 0;text-transform:uppercase;letter-spacing:0.5px;white-space:nowrap;">Condition</td>
+                      <td style="font-size:12px;color:#333;font-family:'Open Sans',Arial,sans-serif;padding:4px 0;">{{SLOT1_CONDITION}}</td>
+                    </tr>
+                    <tr>
+                      <td style="font-size:11px;font-weight:700;color:#888;font-family:'Lato',Arial,sans-serif;padding:4px 10px 4px 0;text-transform:uppercase;letter-spacing:0.5px;white-space:nowrap;">Profile</td>
+                      <td style="font-size:12px;color:#333;font-family:'Open Sans',Arial,sans-serif;padding:4px 0;">{{SLOT1_PROFILE}}</td>
+                    </tr>
+                  </table>
+                  <p style="margin:0 0 12px;font-size:11px;color:#888;font-family:'Open Sans',Arial,sans-serif;line-height:1.6;">
+                    📦 {{SLOT1_PCS}} pcs per pack &nbsp;&bull;&nbsp; 🚀 {{SLOT1_DISPATCH}}<br>
+                    Min. order: 1x Packet &nbsp;&bull;&nbsp; {{SLOT1_AVAIL}} available
+                  </p>
+                  <a href="{{SLOT1_URL}}" style="display:inline-block;background-color:#1a8638;color:#ffffff;font-family:'Montserrat',Arial,sans-serif;font-size:11px;font-weight:700;padding:8px 20px;border-radius:100px;text-decoration:none;letter-spacing:0.3px;">View This Listing</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- SLOT 2 — BEST BULK DEAL (BLUE) -->
+        <tr>
+          <td style="padding:10px 32px 0;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-radius:8px;overflow:hidden;border:1px solid #ebebeb;">
+              <tr>
+                <td width="4" style="background-color:#2563a8;padding:0;">&nbsp;</td>
+                <td width="148" valign="top" style="padding:0;background-color:#f7f7f5;">
+                  <a href="{{SLOT2_URL}}" style="display:block;border:0;">
+                    <img src="{{SLOT2_IMAGE_URL}}" alt="{{SLOT2_SIZE}}" width="148" height="155" style="display:block;width:148px;height:155px;object-fit:contain;object-position:center;border:0;padding:12px;box-sizing:border-box;">
+                  </a>
+                </td>
+                <td valign="top" style="padding:16px 18px;border-left:1px solid #ebebeb;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:8px;">
+                    <tr>
+                      <td style="background-color:#2563a8;border-radius:100px;padding:3px 10px;">
+                        <span style="font-size:10px;font-weight:700;color:#ffffff;letter-spacing:1px;text-transform:uppercase;font-family:'Lato',Arial,sans-serif;">Best Bulk Deal</span>
+                      </td>
+                    </tr>
+                  </table>
+                  <p style="margin:0 0 2px;font-family:'Montserrat',Arial,sans-serif;font-size:21px;font-weight:800;color:#111111;line-height:1.1;letter-spacing:-0.3px;">{{SLOT2_SIZE}}</p>
+                  <p style="margin:0 0 12px;font-family:'Montserrat',Arial,sans-serif;font-size:14px;font-weight:700;color:#2563a8;line-height:1;">{{SLOT2_GRADE}}</p>
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;border-collapse:collapse;width:100%;">
+                    <tr style="border-bottom:1px solid #f0f0f0;">
+                      <td style="font-size:11px;font-weight:700;color:#888;font-family:'Lato',Arial,sans-serif;padding:4px 10px 4px 0;text-transform:uppercase;letter-spacing:0.5px;white-space:nowrap;">Treatment</td>
+                      <td style="font-size:12px;color:#333;font-family:'Open Sans',Arial,sans-serif;padding:4px 0;">{{SLOT2_TREATMENT}}</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid #f0f0f0;">
+                      <td style="font-size:11px;font-weight:700;color:#888;font-family:'Lato',Arial,sans-serif;padding:4px 10px 4px 0;text-transform:uppercase;letter-spacing:0.5px;white-space:nowrap;">Condition</td>
+                      <td style="font-size:12px;color:#333;font-family:'Open Sans',Arial,sans-serif;padding:4px 0;">{{SLOT2_CONDITION}}</td>
+                    </tr>
+                    <tr>
+                      <td style="font-size:11px;font-weight:700;color:#888;font-family:'Lato',Arial,sans-serif;padding:4px 10px 4px 0;text-transform:uppercase;letter-spacing:0.5px;white-space:nowrap;">Profile</td>
+                      <td style="font-size:12px;color:#333;font-family:'Open Sans',Arial,sans-serif;padding:4px 0;">{{SLOT2_PROFILE}}</td>
+                    </tr>
+                  </table>
+                  <p style="margin:0 0 12px;font-size:11px;color:#888;font-family:'Open Sans',Arial,sans-serif;line-height:1.6;">
+                    📦 {{SLOT2_PCS}} pcs per pack &nbsp;&bull;&nbsp; 🚀 {{SLOT2_DISPATCH}}<br>
+                    Min. order: {{SLOT2_MOQ}} &nbsp;&bull;&nbsp; {{SLOT2_AVAIL}} available
+                  </p>
+                  <a href="{{SLOT2_URL}}" style="display:inline-block;background-color:#2563a8;color:#ffffff;font-family:'Montserrat',Arial,sans-serif;font-size:11px;font-weight:700;padding:8px 20px;border-radius:100px;text-decoration:none;letter-spacing:0.3px;">View This Listing</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- SLOT 3 — SELLING FAST (ORANGE) -->
+        <tr>
+          <td style="padding:10px 32px 0;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-radius:8px;overflow:hidden;border:1px solid #ebebeb;">
+              <tr>
+                <td width="4" style="background-color:#d97706;padding:0;">&nbsp;</td>
+                <td width="148" valign="top" style="padding:0;background-color:#f7f7f5;">
+                  <a href="{{SLOT3_URL}}" style="display:block;border:0;">
+                    <img src="{{SLOT3_IMAGE_URL}}" alt="{{SLOT3_SIZE}}" width="148" height="155" style="display:block;width:148px;height:155px;object-fit:contain;object-position:center;border:0;padding:12px;box-sizing:border-box;">
+                  </a>
+                </td>
+                <td valign="top" style="padding:16px 18px;border-left:1px solid #ebebeb;">
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:8px;">
+                    <tr>
+                      <td style="background-color:#d97706;border-radius:100px;padding:3px 10px;">
+                        <span style="font-size:10px;font-weight:700;color:#ffffff;letter-spacing:1px;text-transform:uppercase;font-family:'Lato',Arial,sans-serif;">&#9889; Selling Fast</span>
+                      </td>
+                    </tr>
+                  </table>
+                  <p style="margin:0 0 2px;font-family:'Montserrat',Arial,sans-serif;font-size:21px;font-weight:800;color:#111111;line-height:1.1;letter-spacing:-0.3px;">{{SLOT3_SIZE}}</p>
+                  <p style="margin:0 0 12px;font-family:'Montserrat',Arial,sans-serif;font-size:14px;font-weight:700;color:#d97706;line-height:1;">{{SLOT3_GRADE}}</p>
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:10px;border-collapse:collapse;width:100%;">
+                    <tr style="border-bottom:1px solid #f0f0f0;">
+                      <td style="font-size:11px;font-weight:700;color:#888;font-family:'Lato',Arial,sans-serif;padding:4px 10px 4px 0;text-transform:uppercase;letter-spacing:0.5px;white-space:nowrap;">Treatment</td>
+                      <td style="font-size:12px;color:#333;font-family:'Open Sans',Arial,sans-serif;padding:4px 0;">{{SLOT3_TREATMENT}}</td>
+                    </tr>
+                    <tr style="border-bottom:1px solid #f0f0f0;">
+                      <td style="font-size:11px;font-weight:700;color:#888;font-family:'Lato',Arial,sans-serif;padding:4px 10px 4px 0;text-transform:uppercase;letter-spacing:0.5px;white-space:nowrap;">Condition</td>
+                      <td style="font-size:12px;color:#333;font-family:'Open Sans',Arial,sans-serif;padding:4px 0;">{{SLOT3_CONDITION}}</td>
+                    </tr>
+                    <tr>
+                      <td style="font-size:11px;font-weight:700;color:#888;font-family:'Lato',Arial,sans-serif;padding:4px 10px 4px 0;text-transform:uppercase;letter-spacing:0.5px;white-space:nowrap;">Profile</td>
+                      <td style="font-size:12px;color:#333;font-family:'Open Sans',Arial,sans-serif;padding:4px 0;">{{SLOT3_PROFILE}}</td>
+                    </tr>
+                  </table>
+                  <p style="margin:0 0 12px;font-size:11px;color:#d97706;font-family:'Open Sans',Arial,sans-serif;line-height:1.6;font-weight:700;">⚠ {{SLOT3_AVAIL}} — move fast.</p>
+                  <p style="margin:0 0 12px;font-size:11px;color:#888;font-family:'Open Sans',Arial,sans-serif;line-height:1.6;">
+                    📦 {{SLOT3_PCS}} pcs per pack &nbsp;&bull;&nbsp; 🚀 {{SLOT3_DISPATCH}}<br>
+                    Min. order: {{SLOT3_MOQ}}
+                  </p>
+                  <a href="{{SLOT3_URL}}" style="display:inline-block;background-color:#d97706;color:#ffffff;font-family:'Montserrat',Arial,sans-serif;font-size:11px;font-weight:700;padding:8px 20px;border-radius:100px;text-decoration:none;letter-spacing:0.3px;">View This Listing</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- BROWSE BY CATEGORY -->
+        <tr>
+          <td style="padding:32px 32px 0;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:14px;">
+              <tr>
+                <td style="border-top:2px solid #1a8638;width:24px;"></td>
+                <td style="padding:0 12px;"><h2 style="margin:0;font-family:'Montserrat',Arial,sans-serif;font-size:16px;font-weight:700;color:#111111;white-space:nowrap;">Browse by Category</h2></td>
+                <td style="border-top:1px solid #e8e8e8;width:100%;"></td>
+              </tr>
+            </table>
+            <p style="margin:0 0 16px;font-size:12px;color:#999;font-family:'Lato',Arial,sans-serif;">In-stock categories updated weekly. Click to see live listings.</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 32px 8px;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f7f7f5;border-radius:8px;border:1px solid #e8e8e8;overflow:hidden;">
+              <tr><td style="padding:16px 16px 10px;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:7px;"><tr>
+                  <td width="33%" style="padding:0 4px 0 0;"><a href="https://app.fpx.nz/categories-details?recordId=rec51xrJJH8DO88vz" style="display:block;text-decoration:none;background-color:#ffffff;border:1px solid #d4eed9;border-radius:5px;padding:9px 6px;text-align:center;"><span style="font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1.35;display:block;">Treated Timber</span></a></td>
+                  <td width="33%" style="padding:0 4px;"><a href="https://app.fpx.nz/categories-details?recordId=reccjo7MzIHJzpraW" style="display:block;text-decoration:none;background-color:#ffffff;border:1px solid #d4eed9;border-radius:5px;padding:9px 6px;text-align:center;"><span style="font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1.35;display:block;">Scaffold Planks</span></a></td>
+                  <td width="33%" style="padding:0 0 0 4px;"><a href="https://app.fpx.nz/categories-details?recordId=recRkQGH44OakERvd" style="display:block;text-decoration:none;background-color:#ffffff;border:1px solid #d4eed9;border-radius:5px;padding:9px 6px;text-align:center;"><span style="font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1.35;display:block;">Retaining</span></a></td>
+                </tr></table>
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:7px;"><tr>
+                  <td width="33%" style="padding:0 4px 0 0;"><a href="https://app.fpx.nz/categories-details?recordId=rect7xxVm8iikptSe" style="display:block;text-decoration:none;background-color:#ffffff;border:1px solid #d4eed9;border-radius:5px;padding:9px 6px;text-align:center;"><span style="font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1.35;display:block;">Outdoor</span></a></td>
+                  <td width="33%" style="padding:0 4px;"><a href="https://app.fpx.nz/categories-details?recordId=recBZUeJBcYJVJd4d" style="display:block;text-decoration:none;background-color:#ffffff;border:1px solid #d4eed9;border-radius:5px;padding:9px 6px;text-align:center;"><span style="font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1.35;display:block;">Stress Graded</span></a></td>
+                  <td width="33%" style="padding:0 0 0 4px;"><a href="https://app.fpx.nz/categories-details?recordId=rec7uV8ogo92OTqQB" style="display:block;text-decoration:none;background-color:#ffffff;border:1px solid #d4eed9;border-radius:5px;padding:9px 6px;text-align:center;"><span style="font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1.35;display:block;">Sleepers, Squares &amp; Beams</span></a></td>
+                </tr></table>
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:7px;"><tr>
+                  <td width="33%" style="padding:0 4px 0 0;"><a href="https://app.fpx.nz/categories-details?recordId=recG4MIYz2eeKEgZ0" style="display:block;text-decoration:none;background-color:#ffffff;border:1px solid #d4eed9;border-radius:5px;padding:9px 6px;text-align:center;"><span style="font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1.35;display:block;">External Framing</span></a></td>
+                  <td width="33%" style="padding:0 4px;"><a href="https://app.fpx.nz/categories-details?recordId=recR0Rtm3bul50Clo" style="display:block;text-decoration:none;background-color:#ffffff;border:1px solid #d4eed9;border-radius:5px;padding:9px 6px;text-align:center;"><span style="font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1.35;display:block;">Decking</span></a></td>
+                  <td width="33%" style="padding:0 0 0 4px;"><a href="https://app.fpx.nz/categories-details?recordId=recvG6OvANTUEkuAj" style="display:block;text-decoration:none;background-color:#ffffff;border:1px solid #d4eed9;border-radius:5px;padding:9px 6px;text-align:center;"><span style="font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1.35;display:block;">Internal Framing</span></a></td>
+                </tr></table>
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:7px;"><tr>
+                  <td width="33%" style="padding:0 4px 0 0;"><a href="https://app.fpx.nz/categories-details?recordId=rec64FMiy69Ki8x5s" style="display:block;text-decoration:none;background-color:#ffffff;border:1px solid #d4eed9;border-radius:5px;padding:9px 6px;text-align:center;"><span style="font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1.35;display:block;">Rails</span></a></td>
+                  <td width="33%" style="padding:0 4px;"><a href="https://app.fpx.nz/categories-details?recordId=recW5w8HilkoOMDsY" style="display:block;text-decoration:none;background-color:#ffffff;border:1px solid #d4eed9;border-radius:5px;padding:9px 6px;text-align:center;"><span style="font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1.35;display:block;">Screening</span></a></td>
+                  <td width="33%" style="padding:0 0 0 4px;"><a href="https://app.fpx.nz/categories-details?recordId=recP2TX1Y3nrqx5wX" style="display:block;text-decoration:none;background-color:#ffffff;border:1px solid #d4eed9;border-radius:5px;padding:9px 6px;text-align:center;"><span style="font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1.35;display:block;">Posts</span></a></td>
+                </tr></table>
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:7px;"><tr>
+                  <td width="33%" style="padding:0 4px 0 0;"><a href="https://app.fpx.nz/categories-details?recordId=recm7ueQOjxxQbM3F" style="display:block;text-decoration:none;background-color:#ffffff;border:1px solid #d4eed9;border-radius:5px;padding:9px 6px;text-align:center;"><span style="font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1.35;display:block;">Pegs</span></a></td>
+                  <td width="33%" style="padding:0 4px;"><a href="https://app.fpx.nz/categories-details?recordId=recWHi3OzsBKVru42" style="display:block;text-decoration:none;background-color:#ffffff;border:1px solid #d4eed9;border-radius:5px;padding:9px 6px;text-align:center;"><span style="font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1.35;display:block;">Palings</span></a></td>
+                  <td width="33%" style="padding:0 0 0 4px;"><a href="https://app.fpx.nz/categories-details?recordId=recooQcbCktBh8rJA" style="display:block;text-decoration:none;background-color:#ffffff;border:1px solid #d4eed9;border-radius:5px;padding:9px 6px;text-align:center;"><span style="font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1.35;display:block;">Fencing</span></a></td>
+                </tr></table>
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+                  <td width="33%" style="padding:0 4px 0 0;"><a href="https://app.fpx.nz/categories-details?recordId=rec7UIVl2Nlssktk9" style="display:block;text-decoration:none;background-color:#ffffff;border:1px solid #d4eed9;border-radius:5px;padding:9px 6px;text-align:center;"><span style="font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1.35;display:block;">Balustrades</span></a></td>
+                  <td width="33%" style="padding:0 4px;"><a href="https://app.fpx.nz/categories-details?recordId=recQQ4dWwJ3dKKQgn" style="display:block;text-decoration:none;background-color:#ffffff;border:1px solid #d4eed9;border-radius:5px;padding:9px 6px;text-align:center;"><span style="font-size:11px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1.35;display:block;">Ceiling Batten</span></a></td>
+                  <td width="33%" style="padding:0 0 0 4px;"></td>
+                </tr></table>
+              </td></tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- CTA BANNER -->
+        <tr>
+          <td style="padding:20px 32px 0;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#111111;border-radius:8px;overflow:hidden;">
+              <tr>
+                <td style="padding:22px 28px;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td valign="middle">
+                        <p style="margin:0 0 4px;font-family:'Montserrat',Arial,sans-serif;font-size:15px;font-weight:700;color:#ffffff;line-height:1.2;">More stock on FPX</p>
+                        <p style="margin:0;font-size:12px;color:rgba(255,255,255,0.6);font-family:'Open Sans',Arial,sans-serif;">New listings every week across all categories.</p>
+                      </td>
+                      <td align="right" valign="middle" style="padding-left:16px;white-space:nowrap;">
+                        <a href="https://app.fpx.nz/" style="display:inline-block;background-color:#1a8638;color:#ffffff;font-family:'Montserrat',Arial,sans-serif;font-size:12px;font-weight:700;padding:10px 22px;border-radius:100px;text-decoration:none;">Browse All &rarr;</a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- FOOTER -->
+        <tr>
+          <td style="padding:28px 32px 24px;text-align:center;">
+            <a href="https://app.fpx.nz/" style="border:0;display:inline-block;margin-bottom:14px;">
+              <img src="https://img.mailinblue.com/8981968/images/content_library/original/6a3b0ed48b57c4a126fd4f1a_2c2b85a3616578d9.png" alt="FPX Forest Products Exchange" width="100" style="display:block;height:auto;border:0;mix-blend-mode:multiply;">
+            </a>
+            <p style="margin:0 0 12px;font-size:11px;color:#aaa;font-family:'Open Sans',Arial,sans-serif;">Follow us on:</p>
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto 18px;">
+              <tr>
+                <td style="padding:0 5px;"><a href="https://www.facebook.com/profile.php?id=61583101360304" target="_blank" style="display:block;text-decoration:none;"><img src="https://creative-assets.mailinblue.com/editor/social-icons/rounded_bw/facebook_32px.png" width="32" height="32" alt="Facebook" style="display:block;border:0;"></a></td>
+                <td style="padding:0 5px;"><a href="https://www.instagram.com/fpx.nz/" target="_blank" style="display:block;text-decoration:none;"><img src="https://creative-assets.mailinblue.com/editor/social-icons/rounded_bw/instagram_32px.png" width="32" height="32" alt="Instagram" style="display:block;border:0;"></a></td>
+                <td style="padding:0 5px;"><a href="https://www.linkedin.com/company/forest-products-exchange" target="_blank" style="display:block;text-decoration:none;"><img src="https://creative-assets.mailinblue.com/editor/social-icons/rounded_bw/linkedin_32px.png" width="32" height="32" alt="LinkedIn" style="display:block;border:0;"></a></td>
+              </tr>
+            </table>
+            <p style="margin:0;font-size:11px;color:#cccccc;font-family:'Open Sans',Arial,sans-serif;line-height:1.7;">
+              Forest Products Exchange, New Zealand &nbsp;&bull;&nbsp;
+              <a href="https://fpx.nz" style="color:#cccccc;text-decoration:none;">fpx.nz</a>
+            </p>
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>`;
+
+export interface SlotFields {
+  name: string;
+  url: string;
+  imageUrl: string;
+  size: string;
+  grade: string;
+  treatment: string;
+  condition: string;
+  profile: string;
+  pcs: string;
+  minOrder: string;
+  availability: string;
+  dispatch: string;
+}
+
+export function renderFpxTemplate(weekLabel: string, slot1: SlotFields, slot2: SlotFields, slot3: SlotFields): string {
+  const replacements: Record<string, string> = {
+    WEEK_LABEL: weekLabel,
+    SLOT1_URL: slot1.url,
+    SLOT1_IMAGE_URL: slot1.imageUrl,
+    SLOT1_SIZE: slot1.size,
+    SLOT1_GRADE: slot1.grade,
+    SLOT1_TREATMENT: slot1.treatment,
+    SLOT1_CONDITION: slot1.condition,
+    SLOT1_PROFILE: slot1.profile,
+    SLOT1_PCS: slot1.pcs,
+    SLOT1_DISPATCH: slot1.dispatch,
+    SLOT1_AVAIL: slot1.availability,
+    SLOT2_URL: slot2.url,
+    SLOT2_IMAGE_URL: slot2.imageUrl,
+    SLOT2_SIZE: slot2.size,
+    SLOT2_GRADE: slot2.grade,
+    SLOT2_TREATMENT: slot2.treatment,
+    SLOT2_CONDITION: slot2.condition,
+    SLOT2_PROFILE: slot2.profile,
+    SLOT2_PCS: slot2.pcs,
+    SLOT2_DISPATCH: slot2.dispatch,
+    SLOT2_MOQ: slot2.minOrder,
+    SLOT2_AVAIL: slot2.availability,
+    SLOT3_URL: slot3.url,
+    SLOT3_IMAGE_URL: slot3.imageUrl,
+    SLOT3_SIZE: slot3.size,
+    SLOT3_GRADE: slot3.grade,
+    SLOT3_TREATMENT: slot3.treatment,
+    SLOT3_CONDITION: slot3.condition,
+    SLOT3_PROFILE: slot3.profile,
+    SLOT3_PCS: slot3.pcs,
+    SLOT3_DISPATCH: slot3.dispatch,
+    SLOT3_MOQ: slot3.minOrder,
+    SLOT3_AVAIL: slot3.availability,
+  };
+  let html = FPX_TEMPLATE;
+  for (const [token, value] of Object.entries(replacements)) {
+    html = html.split(`{{${token}}}`).join(value ?? '');
+  }
+  return html;
+}
