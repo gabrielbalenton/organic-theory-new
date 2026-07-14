@@ -131,6 +131,7 @@ const s = {
   input: { width: '100%', boxSizing: 'border-box' as const, padding: '8px 10px', fontSize: 13, border: '1px solid #999', background: '#fff', color: '#000', fontFamily: 'inherit' },
   btn: { padding: '10px 20px', fontSize: 13, fontWeight: 700, background: '#000', color: '#fff', border: '1px solid #000', cursor: 'pointer', letterSpacing: '0.3px' } as const,
   btnOutline: { padding: '8px 16px', fontSize: 12, fontWeight: 700, background: '#fff', color: '#000', border: '1px solid #000', cursor: 'pointer', letterSpacing: '0.3px' } as const,
+  btnDanger: { padding: '8px 16px', fontSize: 12, fontWeight: 700, background: '#fff', color: '#a30000', border: '1px solid #a30000', cursor: 'pointer', letterSpacing: '0.3px' } as const,
   warning: { border: '1px solid #000', background: '#fff8dc', padding: '8px 12px', fontSize: 12, marginBottom: 10, fontWeight: 600 } as const,
   toggle: { display: 'flex', gap: 8, marginBottom: 20 } as const,
   textarea: { width: '100%', height: 560, boxSizing: 'border-box' as const, fontFamily: "'SF Mono', Menlo, Consolas, monospace", fontSize: 11, padding: 12, border: '1px solid #000', resize: 'vertical' as const },
@@ -276,6 +277,16 @@ export default function FPXStocklist() {
       setCopyLabel('Copied!');
       setTimeout(() => setCopyLabel('Copy to Clipboard'), 1500);
     });
+  }
+
+  function deleteHistoryEntry(id: string) {
+    const entry = history.find((h) => h.id === id);
+    const label = entry?.weekLabel || 'this entry';
+    if (!window.confirm(`Delete "${label}" from history? This can't be undone.`)) return;
+    const next = history.filter((h) => h.id !== id);
+    setHistory(next);
+    saveHistory(next);
+    if (viewingEntry?.id === id) setViewingEntry(null);
   }
 
   function copyModal() {
@@ -538,9 +549,12 @@ export default function FPXStocklist() {
                     <td style={s.td}>{entry.green.name || '—'}</td>
                     <td style={s.td}>{entry.blue.name || '—'}</td>
                     <td style={s.td}>{entry.orange.name || '—'}</td>
-                    <td style={s.td}>
+                    <td style={{ ...s.td, whiteSpace: 'nowrap' }}>
                       <button style={s.btnOutline} onClick={() => { setViewingEntry(entry); setModalCopyLabel('Copy to Clipboard'); setModalView('code'); }}>
                         View HTML
+                      </button>{' '}
+                      <button style={s.btnDanger} onClick={() => deleteHistoryEntry(entry.id)}>
+                        Delete
                       </button>
                     </td>
                   </tr>
@@ -558,6 +572,7 @@ export default function FPXStocklist() {
               <h2 style={{ margin: 0, fontSize: 15, fontWeight: 700 }}>{viewingEntry.weekLabel} — HTML</h2>
               <div style={{ display: 'flex', gap: 8 }}>
                 <button style={s.btnOutline} onClick={copyModal}>{modalCopyLabel}</button>
+                <button style={s.btnDanger} onClick={() => deleteHistoryEntry(viewingEntry.id)}>Delete</button>
                 <button style={s.btnOutline} onClick={() => setViewingEntry(null)}>Close</button>
               </div>
             </div>
