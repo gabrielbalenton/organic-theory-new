@@ -11,7 +11,7 @@
       "email_subject": "A quick note on your homepage copy",
       "email_body": "Hi,\n\nI was looking at vet clinics in Philadelphia and noticed something on Indy Veterinary Care's homepage - the same list of neighborhoods (Northern Liberties, Fishtown, Old City, etc.) is repeated almost word-for-word across four different paragraphs. It reads a little unnatural to a real visitor, and that kind of repetition can actually work against you in search rankings.\n\nI put together a page showing the fix and what it'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-indy-veterinary-care.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@indyvetcare.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "MPR Landscapes",
@@ -23,7 +23,7 @@
       "email_subject": "Two things I noticed on your homepage",
       "email_body": "Hi,\n\nI was looking at landscaping companies in the GTA and noticed two things on MPR Landscapes' homepage: your main heading and button row are duplicated back-to-back near the top, and the 'What Our Customer Says' section further down has no actual reviews in it - even though you've got a solid HomeStars profile that just isn't showing up there.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-mpr-landscapes.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure, just thought it was worth flagging since both are quick fixes.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@mprlandscapes.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "The Dental Practice",
@@ -35,7 +35,7 @@
       "email_subject": "Your site still shows a 2022 COVID banner",
       "email_body": "Hi,\n\nI was looking at dental practices in Auckland and noticed The Dental Practice's homepage still has a banner about the 'Orange Traffic Light' COVID framework, which New Zealand retired back in 2022 - it makes the site look a bit out of date to a new visitor in 2026. I also came across a leftover duplicate homepage still live at /home-2-1 from the same era.\n\nI put together a page showing both fixes:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-the-dental-practice-nz.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since both are quick cleanups.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@dentalpractice.co.nz",
-      "sent_automatically": false
+      "sent_automatically": true
     }
   ]
 }
