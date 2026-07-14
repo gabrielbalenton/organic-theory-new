@@ -300,6 +300,18 @@
       "email_body": "Hi Belinda,\n\nI was looking at driving schools in Melbourne's western suburbs and noticed Ritchie's whole site, including the Contact page, still runs on unencrypted http:// rather than https:// - modern browsers flag that as 'Not Secure' right in the address bar, which is a rough first impression for a parent deciding whether to hand over their kid's details. I also noticed the footer still reads '© 2012 All Rights Reserved,' fourteen years behind.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-ritchies-driving-school.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought the security warning was worth flagging fast since it's probably costing you bookings before anyone even reads the page.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@ritchiesdrivingschool.com.au",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Little A's Tree Service",
+      "website": "https://littleastreeservice.com/",
+      "industry": "Tree Service / Arborist",
+      "issues": "The homepage prominently states \"Over 130+ 5-Star Reviews\" but there is no Review or AggregateRating schema markup on the page, so none of that reputation shows as star ratings in Google search results. Separately, every one of the 30+ gallery and service photos across the homepage (before/after removals, crew shots, equipment) renders with no alt text at all, making them invisible to Google Image Search and to screen readers. There is also no LocalBusiness/Service schema tying together the nine-county service area, hours, and Greg Cover's ISA Certified Arborist credential listed in the page copy.",
+      "opportunity": "None of this requires new content or new photography - just connecting what already exists (130+ real reviews, 30+ real job photos, a real ISA certification) to markup Google can actually display. Adding Review/AggregateRating schema, descriptive alt text on every image, and LocalBusiness/Service schema is a one-week technical fix that converts an already-earned reputation into visible star ratings and image-search traffic.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-little-as-tree-service.html",
+      "email_subject": "Your 130+ reviews aren't showing up in Google search",
+      "email_body": "Hi,\n\nI was looking at tree services around Greeneville and came across Little A's Tree Service. Genuinely impressive that you've got 130+ 5-star Google reviews after 25 years - but I noticed none of that shows up as star ratings when someone actually searches \"tree service Greeneville TN.\" There's no review schema connecting your reviews to what Google displays, so that trust signal is basically invisible right now. On top of that, the 30+ before/after and crew photos in your gallery have no alt text, so they're not showing up in Google Image search either.\n\nI put together a page showing exactly what I mean and what it'd look like fixed:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-little-as-tree-service.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging given how much you're already leaning on your reputation.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "littleastreeservice.info@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
