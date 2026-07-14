@@ -108,6 +108,42 @@
       "email_body": "Hi,\n\nI was looking at bakeries in Letchworth Garden City and noticed something on The BakeHouse's homepage - your meta description (the text under your listing on Google) is a raw, pipe-separated list of keywords rather than an actual sentence, so it doesn't really sell the shop when someone's scanning search results. I also noticed almost none of your cake and afternoon tea photos have alt text, so they're invisible to Google Image Search too.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-the-bakehouse-lgc.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since both are same-day fixes.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "bakehouselgc@gmail.com",
       "sent_automatically": true
+    },
+    {
+      "business_name": "Local Locksmiths",
+      "website": "https://locallocksmiths.co.nz/",
+      "industry": "Locksmith & Security Services",
+      "issues": "The 'Locksmith Hardware' section of the homepage contains live, unedited Lorem ipsum filler text - the actual sentence a visitor reads is 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.' Separately, three of the five homepage testimonials (Jane of Northcote, Anthea of Pt Chevalier, and Lisa of Three Brothers Ltd) all display the exact same generic placeholder logo graphic instead of a real photo.",
+      "opportunity": "Removing the Lorem ipsum text and swapping the shared placeholder image in the testimonials are both same-week fixes. Expected within 30 days: a more trustworthy first impression for Aucklanders comparing locksmiths, letting 25+ years of real client trust (including Barfoot & Thompson) actually show through.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-local-locksmiths-nz.html",
+      "email_subject": "There's Lorem Ipsum text live on your site",
+      "email_body": "Hi,\n\nI was looking at locksmiths in Auckland and noticed something on Local Locksmiths' homepage - the 'Locksmith Hardware' section still has unedited placeholder text in it: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.' That's Lorem ipsum filler that never got replaced. I also noticed three of your testimonials (Jane, Anthea, and Lisa) all show the exact same generic logo instead of a real photo.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-local-locksmiths-nz.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 25 years of real trust deserves a site that matches it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@locallocksmiths.co.nz",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "The Karate Dojo",
+      "website": "https://thekaratedojo.com/",
+      "industry": "Martial Arts / Karate School",
+      "issues": "The homepage has no meta description tag at all, and the page title is just 'The Karate Dojo' with no location - even though the dojo's own Facebook page is named 'WestColumbiaDojo'. Separately, the footer's Twitter icon links to a malformed double URL ('www.twitter.com/https://twitter.com/TheKarateDojoSC') that 404s, and the class schedule, newsletter, and rank test PDFs all link out over unsecured http:// while the rest of the site runs on https://.",
+      "opportunity": "Writing a real meta description, adding 'West Columbia' to the homepage title, and fixing the broken Twitter link are all same-week fixes. Expected within 30 days: better matching for 'karate West Columbia SC' searches and a working link to the dojo's actual social presence.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-the-karate-dojo-sc.html",
+      "email_subject": "Google has nothing for 'karate West Columbia'",
+      "email_body": "Hi,\n\nI was looking at karate schools in West Columbia and noticed The Karate Dojo's homepage has no meta description at all, and the page title is just 'The Karate Dojo' - no city, even though your own Facebook page is named WestColumbiaDojo. I also found the Twitter icon in your footer links to a broken double URL that 404s, and your schedule/newsletter/rank test PDFs still link out over unsecured http://.\n\nI put together a page showing the fixes:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-the-karate-dojo-sc.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since these are quick fixes.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "Info@TheKarateDojo.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Morgan Heights Cleaners",
+      "website": "https://mhcleaners.ca/",
+      "industry": "Dry Cleaning & Alterations",
+      "issues": "The homepage's meta description is not real copy - it's the site's own button labels concatenated together by Google, reading 'Quality Garment Care Book a Pick Up with us Today!...Dry cleaning is a very delicate service and who knows it better that your own local' and cutting off mid-sentence with a grammar error. Separately, the homepage shows two different Mon-Fri opening times in two places: the top hours widget says 10am, the footer says 9am.",
+      "opportunity": "Writing a real meta description and reconciling the two conflicting opening times are both same-day fixes. Expected within 30 days: a professional search snippet instead of a garbled auto-generated one, and one consistent set of hours a customer can actually trust.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-morgan-heights-cleaners.html",
+      "email_subject": "Your Google listing cuts off mid-sentence",
+      "email_body": "Hi,\n\nI was looking at dry cleaners in South Surrey and noticed Morgan Heights Cleaners' Google listing isn't real copy - it's your homepage's button labels strung together, and it literally cuts off mid-sentence with 'who knows it better that your own local.' I also noticed your hours don't match themselves: the widget near your header says Mon-Fri 10am-7pm, but your footer says 9am-7pm.\n\nI put together a page showing both fixes:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-morgan-heights-cleaners.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since both are quick fixes.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "mhcleaners@telus.net",
+      "sent_automatically": false
     }
   ]
 }
