@@ -168,6 +168,30 @@
       "email_body": "Hi,\n\nI was looking at physio clinics in North Melbourne and noticed a couple of things on FitandWell's homepage - your hero copy reads 'get your problem properly properly with the right treatment,' with 'properly' repeated back to back. I also noticed your header shows a contact email at fitandwellphysio.com.au, but the site itself and every internal link run on fitandwellphysio.com, no '.au' - the two don't match anywhere else on the page.\n\nI put together a page showing both fixes, plus a rewrite that leads with your 29 years of experience and one-on-one session format:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-fitandwell-physiotherapy.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since both are quick fixes.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "hello@fitandwellphysio.com.au",
       "sent_automatically": true
+    },
+    {
+      "business_name": "VIP Grooming Salon",
+      "website": "https://vipgroomgr.com/",
+      "industry": "Pet Grooming (Dog, Cat & Small Mammal Salon)",
+      "issues": "The homepage has no meta description tag anywhere in the raw HTML - confirmed by inspecting the <head>, which contains only a <title> tag reading 'HOME - VIP Grooming Salon' with no location and no description at all. Separately, on the Services page, the 'Check out some of our VIP pets in our GALLERY!' photo link points to the literal address 'http://gallery' - not a real URL, just the word 'gallery' - so clicking it does nothing.",
+      "opportunity": "Writing a real meta description and title tag, and fixing the broken gallery link, are both same-day fixes. Expected within 30 days: a proper search snippet for 'dog groomer Grand Rapids' searches instead of an auto-generated one, and a working portfolio link that actually backs up the salon's medical-grade air purification and Italian spa treatments.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-vip-grooming-salon.html",
+      "email_subject": "Your gallery link on the Services page goes nowhere",
+      "email_body": "Hi,\n\nI was looking at pet groomers in Grand Rapids and noticed a couple of technical things on VIP Grooming Salon's site - there's no meta description tag anywhere in the homepage's HTML, so Google auto-generates your search snippet, and your title tag is just 'HOME - VIP Grooming Salon' with no location. I also checked your Services page and the 'VIP pets in our GALLERY' photo link points to 'http://gallery' - not a real address, so clicking it does nothing.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-vip-grooming-salon.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since your medical-grade air purification and Italian spa products are genuinely rare for a local groomer and deserve to actually show up in search.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "vipgroomgr@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "South Lake Cycle",
+      "website": "https://www.southlakecycle.bike/",
+      "industry": "Bicycle Sales, Service & Rentals",
+      "issues": "Both the homepage and the Contact page display live, unedited placeholder text reading 'Business Tagline Lorem Ipsum Dolor' directly under the logo - template copy that was never replaced. Separately, the Contact page has two different 'Get Directions' buttons for the shop's own address (344 Water Street, Excelsior, MN) - one opens Google Maps labeled '(Hibu Plumbers)' and the other labeled '(Eric's Auto Shops)', both leftover business names from the website builder template rather than South Lake Cycle.",
+      "opportunity": "Replacing the Lorem Ipsum tagline and correcting both map links to show the shop's real name are same-day fixes. Expected within 30 days: a homepage that reads as a real, trusted business rather than an unfinished template, and directions that actually point new customers to South Lake Cycle instead of a plumber or auto shop.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-south-lake-cycle.html",
+      "email_subject": "Your Get Directions button opens as a different business",
+      "email_body": "Hi,\n\nI was looking at bike shops in Excelsior and noticed something on South Lake Cycle's Contact page - your site still has live, unedited 'Business Tagline Lorem Ipsum Dolor' placeholder text under the logo. I also clicked both 'Get Directions' buttons on that page, and they open Google Maps labeled '(Hibu Plumbers)' and '(Eric's Auto Shops)' respectively - leftover names from your website builder template, not South Lake Cycle.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-south-lake-cycle.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought this was worth flagging fast since it's probably confusing new customers trying to find you on the trail.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@southlakecycle.bike",
+      "sent_automatically": false
     }
   ]
 }
