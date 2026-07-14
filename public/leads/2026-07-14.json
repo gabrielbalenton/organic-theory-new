@@ -252,6 +252,30 @@
       "email_body": "Hi,\n\nI was looking at garden centres around Chilcompton and noticed a small typo on Norton Green's homepage - the deliveries section reads 'at an addtional cost' instead of 'additional.' I also noticed your Horticultural Trades Association membership, which is a real trust signal after 35+ years in business, is buried in a small paragraph near the bottom of the page instead of being a badge near the top - and there isn't a single review or testimonial shown anywhere on the site.\n\nI put together a page showing the fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-norton-green-garden-centre.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging given how much trust and history you actually have to lean on.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@nortongreengardencentre.co.uk",
       "sent_automatically": true
+    },
+    {
+      "business_name": "Southside Eyewear Optometrist",
+      "website": "https://southsideeyewearoptometrist.com.au/",
+      "industry": "Optometry & Eye Care Clinic",
+      "issues": "On the Contact page, the 'Email Us' link displays southsideeyewear@yahoo.com as its text, but the underlying mailto link is still 'mailto:info@mydomain.com' - a leftover template placeholder, meaning anyone who clicks it instead of typing the address by hand sends their inquiry into a dead address. Separately, the homepage carries a promotional countdown timer that has expired, visibly showing '00 Days 00 Hours 00 Minutes 00 Seconds' with 'Countdown finished!' beneath it to every visitor.",
+      "opportunity": "Both are same-day fixes - repointing the mailto link to the real inbox and removing the expired countdown widget. Expected immediately: every 'email us' click actually reaches the practice instead of vanishing, and the homepage stops opening with a dead promotion.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-southside-eyewear-optometrist.html",
+      "email_subject": "Your \"email us\" link isn't actually working",
+      "email_body": "Hi,\n\nI was looking at optometrists in Fairfield and went to email Southside Eyewear through your Contact page - the text shows southsideeyewear@yahoo.com, but the actual link behind it still points to mailto:info@mydomain.com, a leftover placeholder from the site template. Anyone who clicks it instead of typing your address manually gets a blank email going nowhere. I also noticed a countdown timer on your homepage that's expired and stuck at 00:00:00:00.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-southside-eyewear-optometrist.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a broken email link was worth flagging fast.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "southsideeyewear@yahoo.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "River Road Nursery",
+      "website": "https://riverroadnursery.co.nz/",
+      "industry": "Plant Nursery & Garden Retail",
+      "issues": "Clicking Login/Register on the site opens a popup that greets returning shoppers with 'Already a Rubnio Customer?' - Rubnio is the name of the WordPress theme the site was built on, never replaced with the business's actual name. Separately, the homepage itself is just a two-slide banner repeating 'THE NURSERY' followed directly by product category tiles ('Indoor Plants (102)', 'New Zealand Native (122)') - there's no written line anywhere on the homepage stating the business is family-owned, based in Tuakau, or a native-plant specialist, and the page's title tag also carries no meta description.",
+      "opportunity": "Rebranding the login popup copy and adding a short 'why us' section to the homepage are both same-week fixes. Expected within 30 days: a homepage that actually states River Road's real differentiators instead of reading as an unfinished theme demo.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-river-road-nursery.html",
+      "email_subject": "Your login popup still says \"Rubnio,\" not River Road",
+      "email_body": "Hi,\n\nI was looking at plant nurseries in the Waikato and clicked Login on River Road's site - the popup that opens says 'Already a Rubnio Customer?' Rubnio is actually the name of the WordPress theme the site runs on, so it looks like that line was never swapped out for your own name. I also noticed the homepage jumps straight from a banner repeating 'THE NURSERY' into product categories, with no line anywhere saying you're family-owned or a native plant specialist.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-river-road-nursery.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought the leftover theme text was worth flagging.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "hello@riverroadnursery.co.nz",
+      "sent_automatically": false
     }
   ]
 }
