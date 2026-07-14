@@ -144,6 +144,30 @@
       "email_body": "Hi,\n\nI was looking at dry cleaners in South Surrey and noticed Morgan Heights Cleaners' Google listing isn't real copy - it's your homepage's button labels strung together, and it literally cuts off mid-sentence with 'who knows it better that your own local.' I also noticed your hours don't match themselves: the widget near your header says Mon-Fri 10am-7pm, but your footer says 9am-7pm.\n\nI put together a page showing both fixes:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-morgan-heights-cleaners.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since both are quick fixes.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "mhcleaners@telus.net",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Five Leaves Bookshop",
+      "website": "https://fiveleavesbookshop.co.uk/",
+      "industry": "Independent Bookshop",
+      "issues": "The homepage has no meta description tag at all - confirmed in the raw HTML, there is no <meta name=\"description\"> anywhere in the <head> - so Google auto-generates a search snippet instead. Separately, the page's own <title> tag crams the shop's full name, address, and phone number into a single 106-character string ('Five Leaves Bookshop - Nottingham's independent bookshop | 14A Long Row, Nottingham NG1 2DH | 0115 8373097'), far past Google's roughly 60-character display limit, so it gets truncated mid-sentence in search results.",
+      "opportunity": "Writing a real meta description and shortening the title tag are both 20-minute fixes. Expected within 30 days: a proper, non-truncated search snippet for 'bookshop Nottingham' searches that can lead with nine years as an Independent Bookshop of the Year finalist, instead of Google guessing from a title built like a phone-book entry.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-five-leaves-bookshop.html",
+      "email_subject": "Your page title is 106 characters long",
+      "email_body": "Hi,\n\nI was looking at independent bookshops in Nottingham and noticed a couple of technical things on Five Leaves' homepage - there's no meta description tag at all, so Google is auto-generating your search snippet. I also checked the page title, and it's 106 characters long (your full name, address, and phone number all crammed into one string), which is well past Google's ~60-character display limit, so it's getting cut off mid-sentence in search results.\n\nGiven you're a nine-time regional finalist for Independent Bookshop of the Year, that's real credibility Google isn't getting a chance to show off. I put together a page showing both fixes:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-five-leaves-bookshop.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since both are quick fixes.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "bookshop@fiveleaves.co.uk",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "FitandWell Physiotherapy",
+      "website": "https://fitandwellphysio.com/",
+      "industry": "Physiotherapy Clinic",
+      "issues": "The homepage's hero copy has a genuine typo - 'get your problem properly properly with the right treatment' repeats the word 'properly' twice in a row, right under the main headline. Separately, the site displays a contact email at a different domain than the one it's hosted on: the header shows 'hello@fitandwellphysio.com.au' (a .com.au address) on every page of a site that lives at fitandwellphysio.com, with no '.au' anywhere else on the site.",
+      "opportunity": "Fixing the duplicated word and reconciling the site's domain with its own contact email are both same-day fixes. Expected within 30 days: copy that reads as reviewed rather than rushed, and one consistent domain identity instead of two conflicting ones for Google - and patients - to sort out.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-fitandwell-physiotherapy.html",
+      "email_subject": "A repeated word and a domain mismatch on your homepage",
+      "email_body": "Hi,\n\nI was looking at physio clinics in North Melbourne and noticed a couple of things on FitandWell's homepage - your hero copy reads 'get your problem properly properly with the right treatment,' with 'properly' repeated back to back. I also noticed your header shows a contact email at fitandwellphysio.com.au, but the site itself and every internal link run on fitandwellphysio.com, no '.au' - the two don't match anywhere else on the page.\n\nI put together a page showing both fixes, plus a rewrite that leads with your 29 years of experience and one-on-one session format:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-fitandwell-physiotherapy.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since both are quick fixes.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "hello@fitandwellphysio.com.au",
+      "sent_automatically": false
     }
   ]
 }
