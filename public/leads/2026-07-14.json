@@ -276,6 +276,30 @@
       "email_body": "Hi,\n\nI was looking at plant nurseries in the Waikato and clicked Login on River Road's site - the popup that opens says 'Already a Rubnio Customer?' Rubnio is actually the name of the WordPress theme the site runs on, so it looks like that line was never swapped out for your own name. I also noticed the homepage jumps straight from a banner repeating 'THE NURSERY' into product categories, with no line anywhere saying you're family-owned or a native plant specialist.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-river-road-nursery.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought the leftover theme text was worth flagging.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "hello@riverroadnursery.co.nz",
       "sent_automatically": true
+    },
+    {
+      "business_name": "Kaw Valley Heating & Cooling",
+      "website": "https://kvhcks.com/",
+      "industry": "HVAC Services (Heating & Cooling)",
+      "issues": "A sitewide banner on the homepage and Contact page reads 'BLACK FRIDAY DEAL: Get $60 off a Nest Thermostat + Installation! The sale ends 11/30, call us to schedule today!' and is still live and clickable in the middle of July, months past its own stated end date. Separately, nearly every image on the homepage - the logo, service icons, and promotional graphics - renders with no alt text at all, confirmed by inspecting the page's markup, which hurts accessibility and means none of it is eligible for Google Image Search.",
+      "opportunity": "Removing the expired promo banner is a same-day fix, and writing real alt text across the service photos is a same-week fix. Expected within 30 days: a homepage that doesn't look abandoned to a new visitor, and photos that become eligible to surface in Google Image Search for 'HVAC Topeka' searches.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-kaw-valley-heating-cooling.html",
+      "email_subject": "Your homepage is still running a Black Friday deal",
+      "email_body": "Hi,\n\nI was looking at HVAC companies in Topeka and noticed something on Kaw Valley's homepage - the top banner still reads 'BLACK FRIDAY DEAL... The sale ends 11/30,' and it's still live and clickable in the middle of July. I also checked the page's markup and found almost none of your photos have alt text, from the logo down to your service photos, which means none of that work shows up in Google Image Search.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-kaw-valley-heating-cooling.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 46 years in business deserves a site that looks looked-after.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "service@kawvalleyhvac.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Ritchie's Driving School",
+      "website": "http://www.ritchies-drivingschool.com.au/",
+      "industry": "Driving School / Driver Training",
+      "issues": "The entire site, including the Contact page where visitors submit their name, email, and a message, still runs on unencrypted http:// rather than https:// - confirmed by the page loading and redirecting to the http:// address with no SSL. Modern browsers flag this as 'Not Secure' directly in the address bar. Separately, the footer on every page, including Contact, still reads '© 2012 All Rights Reserved,' fourteen years out of date.",
+      "opportunity": "Migrating to HTTPS is typically a same-day fix through most hosts and removes the browser security warning right where a parent or new driver is deciding whether to trust the school with their details. Updating the stale copyright year is a five-minute fix. Expected within 30 days: no more 'Not Secure' warning, and a homepage that reads as actively run by a real family business, not a dormant 2012 build.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-ritchies-driving-school.html",
+      "email_subject": "Your site shows \"Not Secure\" in every browser",
+      "email_body": "Hi Belinda,\n\nI was looking at driving schools in Melbourne's western suburbs and noticed Ritchie's whole site, including the Contact page, still runs on unencrypted http:// rather than https:// - modern browsers flag that as 'Not Secure' right in the address bar, which is a rough first impression for a parent deciding whether to hand over their kid's details. I also noticed the footer still reads '© 2012 All Rights Reserved,' fourteen years behind.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-ritchies-driving-school.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought the security warning was worth flagging fast since it's probably costing you bookings before anyone even reads the page.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@ritchiesdrivingschool.com.au",
+      "sent_automatically": false
     }
   ]
 }
