@@ -228,6 +228,30 @@
       "email_body": "Hi,\n\nI was looking at chiropractors in Independence and noticed a couple of things on Jackley Chiropractic's homepage - the welcome paragraph starts in first person ('We are dedicated to...') but switches to third person partway through ('They are here to answer your questions... It is their goal...'), which reads like leftover template copy rather than your own voice. I also checked the 'Text Us' button in your footer, and it's coded to sms:chadjackley@yahoo.com - an email address where a phone number should be, so it doesn't actually open a text message on most phones.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-jackley-chiropractic.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since your reviews show real patient loyalty that the site itself doesn't quite match yet.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "chadjackley@yahoo.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Wolfys Pet Stylists",
+      "website": "https://www.wolfyspetstylist.com/",
+      "industry": "Pet Grooming (Small Dog Specialist Salon)",
+      "issues": "The homepage's page title reads 'Wolfys Pet Stylist | Grooming Salon Ainsle' and the meta description reads 'Wolfys Pet Stylist is a small business located in Ainsle' - both misspell their own suburb, Ainslie, in exactly the two fields Google shows in search results. Separately, the homepage banner describes the location as 'Ainslie Shops, Edgar Street' while the Contact page lists the address as 'The Laneway, 2-3/7 Edgar St' - two different descriptions of the same address (a NAP inconsistency). The site also shows only one testimonial sitewide with no review count or star rating, despite genuine differentiators (anxious/senior dog specialism, puppy intro sessions, hand-stripping) that only appear on the About Us page, not the homepage.",
+      "opportunity": "Fixing the suburb spelling in the title tag and meta description, unifying the address across the homepage and Contact page, and bringing the real differentiators up to the homepage in FAQ-style Q&A format are all fast, low-cost fixes. Expected within 30 days: a stronger local search match for 'dog groomer Ainslie' searches and a homepage that actually shows what makes Wolfys different before a visitor clicks away.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-wolfys-pet-stylists.html",
+      "email_subject": "Your homepage misspells your own suburb",
+      "email_body": "Hi Melissa,\n\nI was looking at dog groomers in Ainslie and noticed something on Wolfys' site - your homepage title tag reads 'Grooming Salon Ainsle' and your meta description says 'located in Ainsle,' both missing the second 'i.' Those are the exact two fields Google shows searchers, so it's quietly working against you for local searches. I also noticed your address is written two different ways between the homepage banner and the Contact page.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-wolfys-pet-stylists.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging - what you've built for anxious and senior dogs is genuinely rare, it just isn't showing up where new visitors actually land.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "wolfyspetstylists@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Norton Green Garden Centre",
+      "website": "https://nortongreengardencentre.co.uk/",
+      "industry": "Garden Centre & Plant Nursery",
+      "issues": "The homepage's 'Small local deliveries' feature copy reads 'we can range some product deliveries at an addtional cost' - a visible typo (addtional) on the homepage of a business trading on 35+ years of trust. The site also shows zero reviews or testimonials anywhere despite the business's genuine Horticultural Trades Association (HTA) membership, which itself is buried in a small paragraph deep in the 'Our plants' section rather than surfaced as a trust badge. Photos across the site also carry raw-filename alt text (e.g. 'photo-seedlings-01', 'photo-compost-2022-01') instead of descriptive alt text.",
+      "opportunity": "Fixing the typo, moving the HTA membership into a visible badge near the top of the homepage, and adding real reviews are all fast, low-cost fixes. Expected within 30 days: a homepage that actually leads with the credentials and 35-year track record that set Norton Green apart from bigger garden chains.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-norton-green-garden-centre.html",
+      "email_subject": "A quick typo on your homepage, plus a buried credential",
+      "email_body": "Hi,\n\nI was looking at garden centres around Chilcompton and noticed a small typo on Norton Green's homepage - the deliveries section reads 'at an addtional cost' instead of 'additional.' I also noticed your Horticultural Trades Association membership, which is a real trust signal after 35+ years in business, is buried in a small paragraph near the bottom of the page instead of being a badge near the top - and there isn't a single review or testimonial shown anywhere on the site.\n\nI put together a page showing the fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-norton-green-garden-centre.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging given how much trust and history you actually have to lean on.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@nortongreengardencentre.co.uk",
+      "sent_automatically": false
     }
   ]
 }
