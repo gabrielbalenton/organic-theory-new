@@ -83,7 +83,7 @@
       "email_subject": "A couple of small things on your site",
       "email_body": "Hi,\n\nI was looking at locksmiths in the Portland area and noticed a couple of things on Southern Maine Locks' homepage - a few photo captions are unedited stock-photo leftovers. Your Lockouts photo's alt text cuts off mid-word ('...Closed up latc'), and your Auto Keys photo's alt text is literally the exported filename ('...car key_edited'). I also noticed your nav calls a section 'Business' while the page itself calls it 'Commercial Locks.'\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-southern-maine-locks.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since both are quick fixes.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "southernmaine.locks@gmail.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Sentinel Pest Control",
@@ -95,7 +95,7 @@
       "email_subject": "Your homepage is emailing leads to a different company",
       "email_body": "Hi,\n\nI was looking at pest control companies in Kitchener-Waterloo and noticed something on Sentinel Pest Control's homepage - the 'Leaders in the Pest Control Industry' section tells visitors to email info@sentinelpestcontrol.com, but that's a completely different, unrelated pest control company based in Springfield, Illinois. Your real address is the .ca one. Anyone clicking that link right now is sending their inquiry to a stranger's inbox instead of yours.\n\nI put together a page showing that fix plus a couple of smaller ones (some photo alt text left in Spanish and cut off mid-word):\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-sentinel-pest-control.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought this one was worth flagging fast given what it's probably costing you in missed leads.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@sentinelpestcontrol.ca",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "The BakeHouse",
@@ -107,7 +107,7 @@
       "email_subject": "Your Google search snippet is a keyword list",
       "email_body": "Hi,\n\nI was looking at bakeries in Letchworth Garden City and noticed something on The BakeHouse's homepage - your meta description (the text under your listing on Google) is a raw, pipe-separated list of keywords rather than an actual sentence, so it doesn't really sell the shop when someone's scanning search results. I also noticed almost none of your cake and afternoon tea photos have alt text, so they're invisible to Google Image Search too.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-the-bakehouse-lgc.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since both are same-day fixes.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "bakehouselgc@gmail.com",
-      "sent_automatically": false
+      "sent_automatically": true
     }
   ]
 }
