@@ -263,7 +263,7 @@
       "email_subject": "Your \"email us\" link isn't actually working",
       "email_body": "Hi,\n\nI was looking at optometrists in Fairfield and went to email Southside Eyewear through your Contact page - the text shows southsideeyewear@yahoo.com, but the actual link behind it still points to mailto:info@mydomain.com, a leftover placeholder from the site template. Anyone who clicks it instead of typing your address manually gets a blank email going nowhere. I also noticed a countdown timer on your homepage that's expired and stuck at 00:00:00:00.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-southside-eyewear-optometrist.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a broken email link was worth flagging fast.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "southsideeyewear@yahoo.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "River Road Nursery",
@@ -275,7 +275,7 @@
       "email_subject": "Your login popup still says \"Rubnio,\" not River Road",
       "email_body": "Hi,\n\nI was looking at plant nurseries in the Waikato and clicked Login on River Road's site - the popup that opens says 'Already a Rubnio Customer?' Rubnio is actually the name of the WordPress theme the site runs on, so it looks like that line was never swapped out for your own name. I also noticed the homepage jumps straight from a banner repeating 'THE NURSERY' into product categories, with no line anywhere saying you're family-owned or a native plant specialist.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-river-road-nursery.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought the leftover theme text was worth flagging.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "hello@riverroadnursery.co.nz",
-      "sent_automatically": false
+      "sent_automatically": true
     }
   ]
 }
