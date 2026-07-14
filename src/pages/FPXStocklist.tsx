@@ -2,6 +2,32 @@ import { useEffect, useMemo, useState } from 'react';
 import { renderFpxTemplate, type SlotFields } from '../data/fpxStocklistTemplate';
 
 const STORAGE_KEY = 'fpx-stocklist-history';
+const SEED_FLAG_KEY = 'fpx-stocklist-seeded-week1-2';
+
+// One-time client-side seed for Week 1 & Week 2, provided by Gabriel
+// directly (already-featured products, backfilled before this tool
+// existed). Runs once per browser on load, guarded by SEED_FLAG_KEY so it
+// never re-adds or duplicates on subsequent visits.
+const SEED_ENTRIES: HistoryEntry[] = [
+  {
+    id: 'seed-week2',
+    weekLabel: 'Week 2',
+    dateSubmitted: new Date().toISOString(),
+    green: { name: '50x25 Merch H3.2 Treated Wet Dressed 4 Sides (4.200m)', url: '' },
+    blue: { name: '150x50 (140x45) SG10 H3.2 Kiln Dried Machine Gauged (5.400m)', url: '' },
+    orange: { name: '75x50 (70x45) SG8 H3.2 Kiln Dried Machine Gauged', url: '' },
+    html: '',
+  },
+  {
+    id: 'seed-week1',
+    weekLabel: 'Week 1',
+    dateSubmitted: new Date().toISOString(),
+    green: { name: '300x50 (290x45) SG8 H1.2 Kiln Dried Machine Gauged (4.800m)', url: '' },
+    blue: { name: '200x50 (190x45) SG8 H1.2 Kiln Dried Machine Gauged (5.400m)', url: '' },
+    orange: { name: '150x50 (140x45) SG12 H3.2 Kiln Dried Machine Gauged (5.400m)', url: '' },
+    html: '',
+  },
+];
 
 type SlotKey = 'green' | 'blue' | 'orange';
 
@@ -173,6 +199,17 @@ export default function FPXStocklist() {
   const [viewingEntry, setViewingEntry] = useState<HistoryEntry | null>(null);
   const [modalCopyLabel, setModalCopyLabel] = useState('Copy to Clipboard');
   const [modalView, setModalView] = useState<'code' | 'preview'>('code');
+
+  useEffect(() => {
+    if (localStorage.getItem(SEED_FLAG_KEY) === '1') return;
+    localStorage.setItem(SEED_FLAG_KEY, '1');
+    setHistory((prev) => {
+      const next = [...SEED_ENTRIES, ...prev];
+      saveHistory(next);
+      return next;
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     if (!weekLabelTouched) setWeekLabel(`Week ${history.length + 1}`);
