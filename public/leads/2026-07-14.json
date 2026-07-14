@@ -312,6 +312,30 @@
       "email_body": "Hi,\n\nI was looking at tree services around Greeneville and came across Little A's Tree Service. Genuinely impressive that you've got 130+ 5-star Google reviews after 25 years - but I noticed none of that shows up as star ratings when someone actually searches \"tree service Greeneville TN.\" There's no review schema connecting your reviews to what Google displays, so that trust signal is basically invisible right now. On top of that, the 30+ before/after and crew photos in your gallery have no alt text, so they're not showing up in Google Image search either.\n\nI put together a page showing exactly what I mean and what it'd look like fixed:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-little-as-tree-service.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging given how much you're already leaning on your reputation.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "littleastreeservice.info@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Butterfly Pool Services",
+      "website": "https://butterflypoolservices.com/",
+      "industry": "Pool Cleaning & Maintenance Services",
+      "issues": "The homepage's entire hero block - headline, phone number, service-area line, and the 'FREE ESTIMATES' call-to-action - renders twice in a row, back-to-back, before the rest of the page loads. Separately, footer navigation links point to inconsistently-slugged pages like /about-1 and /our-packages rather than clean paths, and despite the 'Why Work With Us' section directing visitors to Yelp for reviews, no actual review or testimonial is shown anywhere on the homepage itself.",
+      "opportunity": "Removing the duplicated hero block is a same-day fix. Cleaning up the internal link structure and pulling real Yelp reviews directly onto the homepage are both same-week fixes. Expected within 30 days: a homepage that doesn't repeat itself before a visitor even scrolls, and a trust section that actually shows the reviews it references instead of just linking away.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-butterfly-pool-services.html",
+      "email_subject": "Your homepage's hero section loads twice",
+      "email_body": "Hi,\n\nI was looking at pool services around Cypress and noticed something on Butterfly Pool Services' homepage - the whole top section (headline, phone number, service area, and your 'FREE ESTIMATES' button) renders twice in a row before the rest of the page loads. I also noticed your 'Why Work With Us' section points visitors to Yelp for reviews, but there's no actual review or testimonial shown anywhere on the homepage itself.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-butterfly-pool-services.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 7+ years and CPO/IPSSA/PHTA credentials deserve a homepage that doesn't stutter on load.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "Info@ButterflyPoolServices.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Ruby Oak Floristry",
+      "website": "https://www.rubyoak.com.au/",
+      "industry": "Luxury Florist (Family-Owned)",
+      "issues": "The About Us page's own title tag - what shows in the browser tab and Google search results - has stray code appended to it, literally reading 'About Us | Ruby Oak Floristry | Luxury Florals Deliveredsearch_right [#1505]instagram.' Separately, the homepage's FAQ mentions over 450 five-star Google reviews, but the reviews widget on the page itself renders as a completely empty container. The delivery-suburb footer also has inconsistent linking - several suburbs (e.g. Barrack Point, North Wollongong) are shown as plain unlinked text while neighboring suburbs are clickable.",
+      "opportunity": "Cleaning up the broken title tag, connecting the Google reviews widget so it displays the real 450+ reviews, and fixing the delivery footer so every suburb is actually clickable are all fast, technical fixes. Expected within 30 days: a properly-titled page in search results, a homepage that shows the reputation already earned instead of an empty box, and a delivery-area footer that functions as intended for customers checking if you deliver to them.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-ruby-oak-floristry.html",
+      "email_subject": "Your page title has stray code in it",
+      "email_body": "Hi,\n\nI was looking at florists in Wollongong and noticed a few things on Ruby Oak's About Us page - the browser tab / search result title has stray code appended to it: 'About Us | Ruby Oak Floristry | Luxury Florals Deliveredsearch_right [#1505]instagram.' I also checked your delivery-area footer, and several suburbs like Barrack Point and North Wollongong are listed as plain text instead of clickable links, while their neighbors are. And your FAQ mentions over 450 five-star Google reviews, but the reviews section on the page itself is just an empty box - none actually show.\n\nI put together a page showing the fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-ruby-oak-floristry.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since a 2022 Best Florist award and 450+ reviews deserve a homepage that actually shows them.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "hello@rubyoak.com.au",
+      "sent_automatically": false
     }
   ]
 }
