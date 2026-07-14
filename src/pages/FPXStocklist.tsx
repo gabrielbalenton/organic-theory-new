@@ -23,6 +23,13 @@ interface HistoryEntry {
   html: string;
 }
 
+// Extracts the numeric week (e.g. "Week 4" -> 4) so cooldown can be
+// computed by week distance, not by array position or dates.
+function parseWeekNumber(label: string): number | null {
+  const m = label.match(/(\d+)/);
+  return m ? parseInt(m[1], 10) : null;
+}
+
 const SLOT_META: Record<SlotKey, { title: string; badge: string }> = {
   green: { title: 'Slot 1 — Best Single-Packet Deal', badge: 'Green Badge' },
   blue: { title: 'Slot 2 — Best Bulk Deal', badge: 'Blue Badge' },
@@ -150,6 +157,7 @@ const s = {
 export default function FPXStocklist() {
   const [activeTab, setActiveTab] = useState<'compose' | 'history'>('compose');
   const [history, setHistory] = useState<HistoryEntry[]>(() => loadHistory());
+  const [quickAdd, setQuickAdd] = useState({ weekLabel: '', green: '', blue: '', orange: '' });
   const [weekLabel, setWeekLabel] = useState('');
   const [weekLabelTouched, setWeekLabelTouched] = useState(false);
   const [mode, setMode] = useState<'manual' | 'airtable'>('manual');
@@ -178,18 +186,29 @@ export default function FPXStocklist() {
       .catch(() => setAirtableAvailable(false));
   }, []);
 
-  // Matched by Product Name (normalized), not URL — history entries won't
-  // always have a URL on hand, but the name is always what identifies "did
-  // we already feature this" for Gabriel.
+  // Matched by Product Name (normalized), not URL or date — a product is
+  // blocked from any slot for the 2 weeks immediately following the week
+  // it was featured (e.g. Week 1 -> blocked in Weeks 2 & 3, free again in
+  // Week 4). Distance is computed from the numeric week, not array order,
+  // so out-of-order backfilled entries still cool down correctly. Falls
+  // back to "the 2 most recently added entries" only if either week label
+  // isn't numeric.
   const recentlyFeaturedNames = useMemo(() => {
     const names = new Set<string>();
-    history.slice(0, 2).forEach((entry) => {
+    const currentWeek = parseWeekNumber(weekLabel);
+    history.forEach((entry, idx) => {
+      const entryWeek = parseWeekNumber(entry.weekLabel);
+      const withinCooldown =
+        currentWeek !== null && entryWeek !== null
+          ? currentWeek - entryWeek === 1 || currentWeek - entryWeek === 2
+          : idx < 2; // fallback: most recent 2 entries by insertion order
+      if (!withinCooldown) return;
       [entry.green.name, entry.blue.name, entry.orange.name].forEach((n) => {
         if (n) names.add(n.trim().toLowerCase());
       });
     });
     return names;
-  }, [history]);
+  }, [history, weekLabel]);
 
   function updateSlot(key: SlotKey, patch: Partial<SlotForm>) {
     setSlots((prev) => ({ ...prev, [key]: { ...prev[key], ...patch } }));
@@ -280,6 +299,23 @@ export default function FPXStocklist() {
       setCopyLabel('Copied!');
       setTimeout(() => setCopyLabel('Copy to Clipboard'), 1500);
     });
+  }
+
+  function addQuickHistoryEntry() {
+    if (!quickAdd.weekLabel.trim()) return;
+    const entry: HistoryEntry = {
+      id: `${Date.now()}`,
+      weekLabel: quickAdd.weekLabel.trim(),
+      dateSubmitted: new Date().toISOString(),
+      green: { name: quickAdd.green.trim(), url: '' },
+      blue: { name: quickAdd.blue.trim(), url: '' },
+      orange: { name: quickAdd.orange.trim(), url: '' },
+      html: '',
+    };
+    const next = [entry, ...history];
+    setHistory(next);
+    saveHistory(next);
+    setQuickAdd({ weekLabel: '', green: '', blue: '', orange: '' });
   }
 
   function deleteHistoryEntry(id: string) {
@@ -530,6 +566,39 @@ export default function FPXStocklist() {
 
       {activeTab === 'history' && (
         <div style={{ padding: 32 }}>
+          <div style={{ ...s.slotBox, maxWidth: 620, marginBottom: 28 }}>
+            <p style={s.slotTitle}>Quick Add — backfill a past week</p>
+            <p style={{ fontSize: 12, color: '#666', margin: '0 0 14px' }}>
+              For weeks that happened before you started using this tool, or to record a week without generating its
+              HTML. Just the week label and product names — no dates or URLs needed. This is what the "featured
+              recently" check compares against.
+            </p>
+            <div style={s.field}>
+              <label style={s.label}>Week Label</label>
+              <input
+                style={s.input}
+                value={quickAdd.weekLabel}
+                onChange={(e) => setQuickAdd((q) => ({ ...q, weekLabel: e.target.value }))}
+                placeholder="Week 1"
+              />
+            </div>
+            <div style={s.field}>
+              <label style={s.label}>Green — Best Single-Packet Deal</label>
+              <input style={s.input} value={quickAdd.green} onChange={(e) => setQuickAdd((q) => ({ ...q, green: e.target.value }))} />
+            </div>
+            <div style={s.field}>
+              <label style={s.label}>Blue — Best Bulk Deal</label>
+              <input style={s.input} value={quickAdd.blue} onChange={(e) => setQuickAdd((q) => ({ ...q, blue: e.target.value }))} />
+            </div>
+            <div style={s.field}>
+              <label style={s.label}>Orange — Selling Fast</label>
+              <input style={s.input} value={quickAdd.orange} onChange={(e) => setQuickAdd((q) => ({ ...q, orange: e.target.value }))} />
+            </div>
+            <button style={s.btn} onClick={addQuickHistoryEntry} disabled={!quickAdd.weekLabel.trim()}>
+              Add to History
+            </button>
+          </div>
+
           {history.length === 0 ? (
             <p style={{ fontSize: 13, color: '#666' }}>No submissions yet.</p>
           ) : (
@@ -553,9 +622,13 @@ export default function FPXStocklist() {
                     <td style={s.td}>{entry.blue.name || '—'}</td>
                     <td style={s.td}>{entry.orange.name || '—'}</td>
                     <td style={{ ...s.td, whiteSpace: 'nowrap' }}>
-                      <button style={s.btnOutline} onClick={() => { setViewingEntry(entry); setModalCopyLabel('Copy to Clipboard'); setModalView('code'); }}>
-                        View HTML
-                      </button>{' '}
+                      {entry.html ? (
+                        <button style={s.btnOutline} onClick={() => { setViewingEntry(entry); setModalCopyLabel('Copy to Clipboard'); setModalView('code'); }}>
+                          View HTML
+                        </button>
+                      ) : (
+                        <span style={{ fontSize: 11, color: '#999' }}>No HTML (quick-added)</span>
+                      )}{' '}
                       <button style={s.btnDanger} onClick={() => deleteHistoryEntry(entry.id)}>
                         Delete
                       </button>
