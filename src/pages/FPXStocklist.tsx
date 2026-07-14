@@ -178,14 +178,17 @@ export default function FPXStocklist() {
       .catch(() => setAirtableAvailable(false));
   }, []);
 
-  const recentlyFeaturedUrls = useMemo(() => {
-    const urls = new Set<string>();
+  // Matched by Product Name (normalized), not URL — history entries won't
+  // always have a URL on hand, but the name is always what identifies "did
+  // we already feature this" for Gabriel.
+  const recentlyFeaturedNames = useMemo(() => {
+    const names = new Set<string>();
     history.slice(0, 2).forEach((entry) => {
-      [entry.green.url, entry.blue.url, entry.orange.url].forEach((u) => {
-        if (u) urls.add(u);
+      [entry.green.name, entry.blue.name, entry.orange.name].forEach((n) => {
+        if (n) names.add(n.trim().toLowerCase());
       });
     });
-    return urls;
+    return names;
   }, [history]);
 
   function updateSlot(key: SlotKey, patch: Partial<SlotForm>) {
@@ -369,7 +372,7 @@ export default function FPXStocklist() {
             {SLOT_ORDER.map((key) => {
               const slot = slots[key];
               const meta = SLOT_META[key];
-              const isRecentlyFeatured = Boolean(slot.url) && recentlyFeaturedUrls.has(slot.url);
+              const isRecentlyFeatured = Boolean(slot.name.trim()) && recentlyFeaturedNames.has(slot.name.trim().toLowerCase());
               return (
                 <div key={key} style={s.slotBox}>
                   <p style={s.slotTitle}>
@@ -379,7 +382,7 @@ export default function FPXStocklist() {
 
                   {isRecentlyFeatured && (
                     <div style={s.warning}>
-                      ⚠ This product URL was featured in the last 2 weeks. Only reuse it if something meaningful
+                      ⚠ A product with this name was featured in the last 2 weeks. Only reuse it if something meaningful
                       changed (price drop, restock, very low packets left).
                     </div>
                   )}
