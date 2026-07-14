@@ -34,6 +34,12 @@ html, body {
 @media (pointer: fine) {
   html, * { cursor: none !important; }
   input, textarea, select, [contenteditable] { cursor: text !important; }
+  /* Internal tools (e.g. /fpx/stocklist) render outside Layout, so there's
+     no custom cursor dot to replace the hidden native one — restore it. */
+  .use-native-cursor, .use-native-cursor * { cursor: auto !important; }
+  .use-native-cursor input, .use-native-cursor textarea,
+  .use-native-cursor select, .use-native-cursor [contenteditable] { cursor: text !important; }
+  .use-native-cursor button, .use-native-cursor a { cursor: pointer !important; }
 }
 
 /* Minimal scrollbar */

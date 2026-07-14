@@ -10,6 +10,7 @@ interface SlotForm extends SlotFields {
   discountPct: string;
   fetching: boolean;
   fetchError: string;
+  detailsBlob: string;
 }
 
 interface HistoryEntry {
@@ -48,7 +49,44 @@ function emptySlot(): SlotForm {
     discountPct: '',
     fetching: false,
     fetchError: '',
+    detailsBlob: '',
   };
+}
+
+// Parses a pasted block of product-detail text into structured fields, so
+// the user can paste one blob instead of filling 9 fields one by one.
+// Recognises "Label: value" / "Label - value" / "Label<tab>value" lines
+// (case-insensitive), one field per line, in any order.
+type ParsedDetailKey = 'size' | 'grade' | 'treatment' | 'condition' | 'profile' | 'pcs' | 'minOrder' | 'availability' | 'dispatch';
+
+const DETAIL_FIELD_PATTERNS: Array<{ key: ParsedDetailKey; regexes: RegExp[] }> = [
+  { key: 'minOrder', regexes: [/^min(?:imum)?\.?\s*order(?:\s*quantity)?\s*(?:[:\-–—]|\t)\s*(.+)$/i, /^moq\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
+  { key: 'pcs', regexes: [/^(?:pcs|pieces|qty|quantity)\s*per\s*pack\s*(?:[:\-–—]|\t)\s*(.+)$/i, /^pcs\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
+  { key: 'availability', regexes: [/^availab(?:le|ility)\s*(?:[:\-–—]|\t)\s*(.+)$/i, /^(?:packets?\s*(?:remaining|available)|stock)\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
+  { key: 'dispatch', regexes: [/^dispatch(?:es)?\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
+  { key: 'condition', regexes: [/^condition\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
+  { key: 'treatment', regexes: [/^treatment\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
+  { key: 'profile', regexes: [/^profile\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
+  { key: 'grade', regexes: [/^grade\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
+  { key: 'size', regexes: [/^(?:nominal\s*)?size\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
+];
+
+function parseDetailsBlob(text: string): Partial<Record<ParsedDetailKey, string>> {
+  const result: Partial<Record<ParsedDetailKey, string>> = {};
+  const lines = text.split('\n').map((l) => l.trim()).filter(Boolean);
+  for (const line of lines) {
+    for (const { key, regexes } of DETAIL_FIELD_PATTERNS) {
+      if (result[key]) continue;
+      for (const re of regexes) {
+        const m = line.match(re);
+        if (m) {
+          result[key] = m[1].trim();
+          break;
+        }
+      }
+    }
+  }
+  return result;
 }
 
 function loadHistory(): HistoryEntry[] {
@@ -96,6 +134,10 @@ const s = {
   warning: { border: '1px solid #000', background: '#fff8dc', padding: '8px 12px', fontSize: 12, marginBottom: 10, fontWeight: 600 } as const,
   toggle: { display: 'flex', gap: 8, marginBottom: 20 } as const,
   textarea: { width: '100%', height: 560, boxSizing: 'border-box' as const, fontFamily: "'SF Mono', Menlo, Consolas, monospace", fontSize: 11, padding: 12, border: '1px solid #000', resize: 'vertical' as const },
+  blobTextarea: { width: '100%', height: 140, boxSizing: 'border-box' as const, fontFamily: "'SF Mono', Menlo, Consolas, monospace", fontSize: 12, padding: 10, border: '1px solid #999', resize: 'vertical' as const },
+  parsedPreview: { fontSize: 11, color: '#555', marginTop: 6, lineHeight: 1.6 },
+  outputTabs: { display: 'flex', gap: 8, marginBottom: 8 } as const,
+  iframe: { width: '100%', height: 560, border: '1px solid #000', background: '#fff' },
   table: { width: '100%', borderCollapse: 'collapse' as const, fontSize: 13 },
   th: { textAlign: 'left' as const, borderBottom: '2px solid #000', padding: '8px 10px', fontSize: 11, textTransform: 'uppercase' as const, letterSpacing: '0.3px' },
   td: { borderBottom: '1px solid #ddd', padding: '10px 10px' },
@@ -118,8 +160,10 @@ export default function FPXStocklist() {
   });
   const [generatedHtml, setGeneratedHtml] = useState('');
   const [copyLabel, setCopyLabel] = useState('Copy to Clipboard');
+  const [outputView, setOutputView] = useState<'code' | 'preview'>('code');
   const [viewingEntry, setViewingEntry] = useState<HistoryEntry | null>(null);
   const [modalCopyLabel, setModalCopyLabel] = useState('Copy to Clipboard');
+  const [modalView, setModalView] = useState<'code' | 'preview'>('code');
 
   useEffect(() => {
     if (!weekLabelTouched) setWeekLabel(`Week ${history.length + 1}`);
@@ -145,6 +189,29 @@ export default function FPXStocklist() {
 
   function updateSlot(key: SlotKey, patch: Partial<SlotForm>) {
     setSlots((prev) => ({ ...prev, [key]: { ...prev[key], ...patch } }));
+  }
+
+  function updateDetailsBlob(key: SlotKey, text: string) {
+    const parsed = parseDetailsBlob(text);
+    setSlots((prev) => {
+      const current = prev[key];
+      return {
+        ...prev,
+        [key]: {
+          ...current,
+          detailsBlob: text,
+          size: parsed.size ?? current.size,
+          grade: parsed.grade ?? current.grade,
+          treatment: parsed.treatment ?? current.treatment,
+          condition: parsed.condition ?? current.condition,
+          profile: parsed.profile ?? current.profile,
+          pcs: parsed.pcs ?? current.pcs,
+          minOrder: parsed.minOrder ?? current.minOrder,
+          availability: parsed.availability ?? current.availability,
+          dispatch: parsed.dispatch ?? current.dispatch,
+        },
+      };
+    });
   }
 
   async function fetchFromAirtable(key: SlotKey) {
@@ -187,6 +254,7 @@ export default function FPXStocklist() {
     const html = renderFpxTemplate(weekLabel, slots.green, slots.blue, slots.orange);
     setGeneratedHtml(html);
     setCopyLabel('Copy to Clipboard');
+    setOutputView('code');
 
     const entry: HistoryEntry = {
       id: `${Date.now()}`,
@@ -219,7 +287,7 @@ export default function FPXStocklist() {
   }
 
   return (
-    <div style={s.page}>
+    <div className="use-native-cursor" style={s.page}>
       <div style={s.header}>
         <h1 style={s.title}>FPX Weekly Stocklist Manager</h1>
         <span style={{ fontSize: 12, color: '#666' }}>Internal tool — organic-theory.vercel.app/fpx/stocklist</span>
@@ -344,46 +412,79 @@ export default function FPXStocklist() {
                     <label style={s.label}>Image URL</label>
                     <input style={s.input} value={slot.imageUrl} onChange={(e) => updateSlot(key, { imageUrl: e.target.value })} />
                   </div>
-                  <div style={s.field}>
-                    <label style={s.label}>Size</label>
-                    <input style={s.input} value={slot.size} onChange={(e) => updateSlot(key, { size: e.target.value })} placeholder="300x50 (290x45)" />
-                  </div>
-                  <div style={s.field}>
-                    <label style={s.label}>Grade</label>
-                    <input style={s.input} value={slot.grade} onChange={(e) => updateSlot(key, { grade: e.target.value })} placeholder="SG8" />
-                  </div>
-                  <div style={s.field}>
-                    <label style={s.label}>Treatment</label>
-                    <input style={s.input} value={slot.treatment} onChange={(e) => updateSlot(key, { treatment: e.target.value })} placeholder="H3.2" />
-                  </div>
-                  <div style={s.field}>
-                    <label style={s.label}>Condition</label>
-                    <input style={s.input} value={slot.condition} onChange={(e) => updateSlot(key, { condition: e.target.value })} placeholder="Kiln Dried" />
-                  </div>
-                  <div style={s.field}>
-                    <label style={s.label}>Profile</label>
-                    <input style={s.input} value={slot.profile} onChange={(e) => updateSlot(key, { profile: e.target.value })} placeholder="Machine Gauged" />
-                  </div>
-                  <div style={s.field}>
-                    <label style={s.label}>Pcs per pack</label>
-                    <input style={s.input} value={slot.pcs} onChange={(e) => updateSlot(key, { pcs: e.target.value })} />
-                  </div>
-                  {key !== 'green' && (
+
+                  {mode === 'manual' ? (
                     <div style={s.field}>
-                      <label style={s.label}>Min. order</label>
-                      <input style={s.input} value={slot.minOrder} onChange={(e) => updateSlot(key, { minOrder: e.target.value })} />
+                      <label style={s.label}>
+                        Product Details <span style={{ color: '#888', fontWeight: 400 }}>(paste the whole block — one "Label: value" per line, any order)</span>
+                      </label>
+                      <textarea
+                        style={s.blobTextarea}
+                        value={slot.detailsBlob}
+                        onChange={(e) => updateDetailsBlob(key, e.target.value)}
+                        placeholder={`Size: 300x50 (290x45)\nGrade: SG8\nTreatment: H3.2\nCondition: Kiln Dried\nProfile: Machine Gauged\nPcs per pack: 50${key !== 'green' ? '\nMin. order: 2x Packets' : ''}\nAvailability: 12\nDispatch: Dispatches in 1-3 days`}
+                      />
+                      <div style={s.parsedPreview}>
+                        <strong>Parsed:</strong>{' '}
+                        {[
+                          ['Size', slot.size],
+                          ['Grade', slot.grade],
+                          ['Treatment', slot.treatment],
+                          ['Condition', slot.condition],
+                          ['Profile', slot.profile],
+                          ['Pcs', slot.pcs],
+                          ...(key !== 'green' ? [['Min. order', slot.minOrder]] : []),
+                          ['Availability', slot.availability],
+                          ['Dispatch', slot.dispatch],
+                        ]
+                          .map(([label, value]) => `${label}: ${value || '—'}`)
+                          .join('  ·  ')}
+                      </div>
                     </div>
+                  ) : (
+                    <>
+                      <div style={s.field}>
+                        <label style={s.label}>Size</label>
+                        <input style={s.input} value={slot.size} onChange={(e) => updateSlot(key, { size: e.target.value })} placeholder="300x50 (290x45)" />
+                      </div>
+                      <div style={s.field}>
+                        <label style={s.label}>Grade</label>
+                        <input style={s.input} value={slot.grade} onChange={(e) => updateSlot(key, { grade: e.target.value })} placeholder="SG8" />
+                      </div>
+                      <div style={s.field}>
+                        <label style={s.label}>Treatment</label>
+                        <input style={s.input} value={slot.treatment} onChange={(e) => updateSlot(key, { treatment: e.target.value })} placeholder="H3.2" />
+                      </div>
+                      <div style={s.field}>
+                        <label style={s.label}>Condition</label>
+                        <input style={s.input} value={slot.condition} onChange={(e) => updateSlot(key, { condition: e.target.value })} placeholder="Kiln Dried" />
+                      </div>
+                      <div style={s.field}>
+                        <label style={s.label}>Profile</label>
+                        <input style={s.input} value={slot.profile} onChange={(e) => updateSlot(key, { profile: e.target.value })} placeholder="Machine Gauged" />
+                      </div>
+                      <div style={s.field}>
+                        <label style={s.label}>Pcs per pack</label>
+                        <input style={s.input} value={slot.pcs} onChange={(e) => updateSlot(key, { pcs: e.target.value })} />
+                      </div>
+                      {key !== 'green' && (
+                        <div style={s.field}>
+                          <label style={s.label}>Min. order</label>
+                          <input style={s.input} value={slot.minOrder} onChange={(e) => updateSlot(key, { minOrder: e.target.value })} />
+                        </div>
+                      )}
+                      <div style={s.field}>
+                        <label style={s.label}>
+                          Availability {key === 'orange' && <span style={{ color: '#888', fontWeight: 400 }}>(urgency copy, e.g. "Only 4 packets remaining")</span>}
+                        </label>
+                        <input style={s.input} value={slot.availability} onChange={(e) => updateSlot(key, { availability: e.target.value })} />
+                      </div>
+                      <div style={s.field}>
+                        <label style={s.label}>Dispatch</label>
+                        <input style={s.input} value={slot.dispatch} onChange={(e) => updateSlot(key, { dispatch: e.target.value })} />
+                      </div>
+                    </>
                   )}
-                  <div style={s.field}>
-                    <label style={s.label}>
-                      Availability {key === 'orange' && <span style={{ color: '#888', fontWeight: 400 }}>(urgency copy, e.g. "Only 4 packets remaining")</span>}
-                    </label>
-                    <input style={s.input} value={slot.availability} onChange={(e) => updateSlot(key, { availability: e.target.value })} />
-                  </div>
-                  <div style={s.field}>
-                    <label style={s.label}>Dispatch</label>
-                    <input style={s.input} value={slot.dispatch} onChange={(e) => updateSlot(key, { dispatch: e.target.value })} />
-                  </div>
                 </div>
               );
             })}
@@ -398,7 +499,17 @@ export default function FPXStocklist() {
                 <button style={s.btnOutline} onClick={copyGenerated}>{copyLabel}</button>
               )}
             </div>
-            <textarea style={s.textarea} readOnly value={generatedHtml} placeholder="Generated HTML will appear here after clicking Generate HTML." />
+            {generatedHtml && (
+              <div style={s.outputTabs}>
+                <button style={outputView === 'code' ? s.btn : s.btnOutline} onClick={() => setOutputView('code')}>Code</button>
+                <button style={outputView === 'preview' ? s.btn : s.btnOutline} onClick={() => setOutputView('preview')}>Preview</button>
+              </div>
+            )}
+            {outputView === 'code' || !generatedHtml ? (
+              <textarea style={s.textarea} readOnly value={generatedHtml} placeholder="Generated HTML will appear here after clicking Generate HTML." />
+            ) : (
+              <iframe title="FPX stocklist preview" style={s.iframe} srcDoc={generatedHtml} />
+            )}
           </div>
         </div>
       )}
@@ -428,7 +539,7 @@ export default function FPXStocklist() {
                     <td style={s.td}>{entry.blue.name || '—'}</td>
                     <td style={s.td}>{entry.orange.name || '—'}</td>
                     <td style={s.td}>
-                      <button style={s.btnOutline} onClick={() => { setViewingEntry(entry); setModalCopyLabel('Copy to Clipboard'); }}>
+                      <button style={s.btnOutline} onClick={() => { setViewingEntry(entry); setModalCopyLabel('Copy to Clipboard'); setModalView('code'); }}>
                         View HTML
                       </button>
                     </td>
@@ -450,7 +561,15 @@ export default function FPXStocklist() {
                 <button style={s.btnOutline} onClick={() => setViewingEntry(null)}>Close</button>
               </div>
             </div>
-            <textarea style={{ ...s.textarea, height: 480 }} readOnly value={viewingEntry.html} />
+            <div style={s.outputTabs}>
+              <button style={modalView === 'code' ? s.btn : s.btnOutline} onClick={() => setModalView('code')}>Code</button>
+              <button style={modalView === 'preview' ? s.btn : s.btnOutline} onClick={() => setModalView('preview')}>Preview</button>
+            </div>
+            {modalView === 'code' ? (
+              <textarea style={{ ...s.textarea, height: 480 }} readOnly value={viewingEntry.html} />
+            ) : (
+              <iframe title="FPX stocklist preview" style={{ ...s.iframe, height: 480 }} srcDoc={viewingEntry.html} />
+            )}
           </div>
         </div>
       )}
