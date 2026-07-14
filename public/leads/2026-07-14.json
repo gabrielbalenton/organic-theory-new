@@ -72,6 +72,42 @@
       "email_body": "Hi,\n\nI was looking at tailors in Cherry Creek and noticed something on Erol's Tailoring's homepage - every photo under 'Explore Our Work' (9 of them) links to '#', so clicking any of them does nothing. I also noticed two different phone numbers with different area codes on the same page - a 303 Denver number and a 615 Nashville number for WhatsApp.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-erols-tailoring-alterations.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since thirty years of experience and clients like Burberry deserve a portfolio that actually opens.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "erolstailoring@gmail.com",
       "sent_automatically": true
+    },
+    {
+      "business_name": "Southern Maine Locks",
+      "website": "https://www.southernmainelocks.com/",
+      "industry": "Locksmith Services",
+      "issues": "The alt text behind several homepage photos is unedited stock-photo leftovers rather than real descriptions: the Lockouts photo's alt text is cut off mid-word ('Emergency fire exit door. Closed up latc'), and the Auto Keys photo's alt text is literally the exported filename ('Hand of business man gives the car key_edited'). Separately, the top navigation labels one section 'BUSINESS' while the page itself titles the same section 'Commercial Locks' - the nav and the page content don't agree on the service's name.",
+      "opportunity": "Rewriting alt text on every photo and aligning the nav label with the page's own service name are both same-day fixes. Expected within 30 days: photos become eligible to appear in Google Image Search for 'locksmith Portland Maine,' plus a more coherent first impression for new visitors.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-southern-maine-locks.html",
+      "email_subject": "A couple of small things on your site",
+      "email_body": "Hi,\n\nI was looking at locksmiths in the Portland area and noticed a couple of things on Southern Maine Locks' homepage - a few photo captions are unedited stock-photo leftovers. Your Lockouts photo's alt text cuts off mid-word ('...Closed up latc'), and your Auto Keys photo's alt text is literally the exported filename ('...car key_edited'). I also noticed your nav calls a section 'Business' while the page itself calls it 'Commercial Locks.'\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-southern-maine-locks.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since both are quick fixes.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "southernmaine.locks@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Sentinel Pest Control",
+      "website": "https://www.sentinelpestcontrol.ca/",
+      "industry": "Commercial Pest Control",
+      "issues": "The homepage's 'Leaders in the Pest Control Industry' section tells visitors to 'email us at info@sentinelpestcontrol.com' - but that domain belongs to a completely unrelated pest control company based in Springfield, Illinois (founded 1932), not to Sentinel's real Kitchener-Waterloo business, whose actual address is info@sentinelpestcontrol.ca. Anyone who clicks that link sends their inquiry to a different company entirely. Separately, several pest-photo alt tags are still raw stock captions - one left in Spanish ('Una cucaracha en fondo blanco') and one cut off mid-word ('...parasitic insects of the cimicid famil').",
+      "opportunity": "Correcting the email address is a five-minute fix that stops real leads from disappearing into the wrong inbox. Rewriting the alt text is a same-day cleanup. Expected within 30 days: no more misdirected inquiries, and photos become eligible for Google Image Search in Kitchener-Waterloo pest control searches.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-sentinel-pest-control.html",
+      "email_subject": "Your homepage is emailing leads to a different company",
+      "email_body": "Hi,\n\nI was looking at pest control companies in Kitchener-Waterloo and noticed something on Sentinel Pest Control's homepage - the 'Leaders in the Pest Control Industry' section tells visitors to email info@sentinelpestcontrol.com, but that's a completely different, unrelated pest control company based in Springfield, Illinois. Your real address is the .ca one. Anyone clicking that link right now is sending their inquiry to a stranger's inbox instead of yours.\n\nI put together a page showing that fix plus a couple of smaller ones (some photo alt text left in Spanish and cut off mid-word):\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-sentinel-pest-control.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought this one was worth flagging fast given what it's probably costing you in missed leads.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@sentinelpestcontrol.ca",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "The BakeHouse",
+      "website": "https://www.thebakehouselgc.com/",
+      "industry": "Cake Shop & Afternoon Tea",
+      "issues": "The homepage's meta description - the text Google shows in search results - is a raw, pipe-separated keyword list ('The BakeHouse | Letchworth Garden City|Hertfordshire| The Wynd | Freshly Baked | Scones | Sweet and Savoury | Party Hire | Celebration Cakes') rather than an actual sentence. Separately, nearly every product photo on the homepage - the celebration cakes, the afternoon tea spread, the gallery shots - has no alt text at all, so none of it is eligible to appear in Google Image Search.",
+      "opportunity": "Rewriting the meta description as one real sentence and adding alt text to the product photos are both same-day fixes. Expected within 30 days: a proper search snippet that actually invites a click, plus a real shot at showing up in Google Image Search for 'celebration cakes Letchworth' searches.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-the-bakehouse-lgc.html",
+      "email_subject": "Your Google search snippet is a keyword list",
+      "email_body": "Hi,\n\nI was looking at bakeries in Letchworth Garden City and noticed something on The BakeHouse's homepage - your meta description (the text under your listing on Google) is a raw, pipe-separated list of keywords rather than an actual sentence, so it doesn't really sell the shop when someone's scanning search results. I also noticed almost none of your cake and afternoon tea photos have alt text, so they're invisible to Google Image Search too.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-the-bakehouse-lgc.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since both are same-day fixes.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "bakehouselgc@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
