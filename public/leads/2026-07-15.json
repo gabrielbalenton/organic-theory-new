@@ -84,6 +84,30 @@
       "email_body": "Hi,\n\nI was looking at antiquarian booksellers in Nova Scotia and noticed something on The Odd Book's site - checking your pages' own metadata, the meta description on your homepage is literally the word \"home\", your About Us page's is \"about us\", and your Contact Us page's is \"contact us\". That's the exact text Google can show under your listing, and right now it's showing one-word placeholders. I also noticed none of your page titles mention Wolfville, \"antiquarian\", or \"rare books\", even though you're a member of the Antiquarian Booksellers' Association of Canada and affiliated with the ILAB.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-the-odd-book.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since nearly 50 years in business and real antiquarian credentials deserve a Google listing that says more than \"home\".\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "theoddbook@ns.sympatico.ca",
       "sent_automatically": true
+    },
+    {
+      "business_name": "Bark Avenue Pet Supply",
+      "website": "https://barkavepetsupply.com/",
+      "industry": "Pet Supply Retail & Wellness (3 locations, incl. walk-in veterinary clinic)",
+      "issues": "The official website's homepage and locations page only list two of the business's three real locations - Mesa and Gilbert. The Goodyear location (formerly Petz Place, acquired in 2025) and the walk-in veterinary clinic operating inside it aren't mentioned anywhere on the site, even though both are real, current parts of the business. Separately, the homepage's own title tag reads 'Bark Avenue Pet Supply Mesa' - fine for Mesa searches, but it makes Gilbert and Goodyear customers land on a search result that sounds like the wrong store.",
+      "opportunity": "Adding a Goodyear location page (including the vet clinic) and rewriting the title tag to cover all three cities are both same-week fixes. Expected within 30 days: the business finally shows up for 'pet store Goodyear AZ' and 'vet clinic Goodyear' searches it's currently invisible for, on a site that's been live for years without them.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-15-bark-avenue-pet-supply.html",
+      "email_subject": "Your Goodyear store isn't on your own website",
+      "email_body": "Hi,\n\nI was looking at pet supply stores in the East Valley and noticed something on Bark Avenue's website - it only lists Mesa and Gilbert, with no mention of your Goodyear location or Dr. Ryan's walk-in vet clinic there, even though I saw you acquired that store (formerly Petz Place) back in 2025. Anyone searching 'pet store Goodyear' or 'vet clinic Goodyear' right now would have no way to find you through your own site.\n\nI put together a page showing what a fix would look like, built around your real three locations:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-bark-avenue-pet-supply.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since a store you already own deserves to actually show up in search.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "supply.mesa@barkavepet.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Underwood Hardware & D.I.Y. Ltd",
+      "website": "https://www.underwoodhardware.co.uk/",
+      "industry": "Independent Hardware & DIY Store",
+      "issues": "The homepage's own title tag - the exact text Google shows in search results - reads only 'Welcome to Underwood Hardware & D.I.Y. Ltd,' with no mention of Felixstowe, Suffolk, or even the words 'hardware store' anywhere in it, despite the business having served the town since 1946. The homepage also shows no reviews or testimonials, and the real differentiators mentioned on the site (a rear pick-up point for larger items, nearly 80 years in the same town) aren't worked into the page copy that a first-time visitor actually reads.",
+      "opportunity": "Rewriting the title tag to lead with 'Felixstowe' and 'Hardware Store' is a same-day fix. Expected within 30 days: better matching for 'hardware store Felixstowe' and 'DIY shop Felixstowe' searches - the exact phrases a nearby searcher would type.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-15-underwood-hardware.html",
+      "email_subject": "Your homepage title doesn't say Felixstowe",
+      "email_body": "Hi,\n\nI was looking at hardware stores around Felixstowe and noticed something on Underwood's homepage - your title tag (the text Google shows in search results) just reads 'Welcome to Underwood Hardware & D.I.Y. Ltd,' with no mention of Felixstowe or even 'hardware store' anywhere in it, even though you've been serving the town since 1946.\n\nI put together a page showing that fix and what it would mean for your search visibility:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-underwood-hardware.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since nearly 80 years in the same town deserves a homepage that actually says where you are.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@underwoodhardware.co.uk",
+      "sent_automatically": false
     }
   ]
 }
