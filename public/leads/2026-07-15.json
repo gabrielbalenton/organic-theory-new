@@ -167,7 +167,7 @@
       "email_subject": "Your Google listing has a typo in it",
       "email_body": "Hi,\n\nI was looking at bakeries around Pendleton Square and noticed something on Village Bakery & Cafe's site - I checked your homepage's own metadata, and the description Google can show under your listing literally reads 'a Family run bussiness in Pendleton SC.There is a little something...' - 'bussiness' is a typo, and there's no space after 'SC.' I also noticed your title tag never mentions Pendleton or the square, despite you being on it since 1995.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-village-bakery-cafe.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging fast since it's a five-minute fix with an outsized effect on your search snippet.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "Village.Baker.Cafe@gmail.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Reliable Dry Cleaners",
@@ -179,7 +179,7 @@
       "email_subject": "Your \"Selected Works\" section is empty links",
       "email_body": "Hi Tony,\n\nI was looking at dry cleaners in Walpole and noticed something on Reliable's site - I checked the metadata on your homepage and Contact Us page directly, and neither has a meta description at all, so Google is auto-generating your search snippet. I also found that your 'Selected Works' section, meant to show off your alterations and gown preservation work, is actually five blank links with no photos or labels in the page's own code. Your homepage title also doesn't mention Walpole, even though your own copy says you've served the area for over 30 years.\n\nI put together a page showing all three fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-reliable-dry-cleaners.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 30+ years serving Walpole deserves a site where the portfolio section actually shows something.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "tony@reliabledrycleaners.net",
-      "sent_automatically": false
+      "sent_automatically": true
     }
   ]
 }
