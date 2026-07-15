@@ -156,6 +156,30 @@
       "email_body": "Hi Martyn,\n\nI was looking at record shops in Cheltenham and noticed something on your site - I checked the raw HTML and the entire homepage is built as one fixed-size canvas, minimum 1120px wide and about 9,620px tall, with every element pinned to a hardcoded pixel position. There's no responsive layout underneath, so on a phone it either renders tiny or forces horizontal scrolling. I also found there's no meta description anywhere in your page's head, and almost every photo - shop shots, event flyers, product images - has blank alt text.\n\nI put together a page showing what a fix would look like, built around what's actually true about your shop - the Gloucestershire Live coverage, the Vintage Fair, the real reviews already on your page:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-independent-record-shop.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since most people finding a record shop today are doing it from their phone mid-scroll.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@theindependentrecordshop.co.uk",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Village Bakery & Cafe",
+      "website": "https://www.villagebakeryandcafe.com/",
+      "industry": "Bakery & Cafe (family-run since 1995)",
+      "issues": "The homepage's own meta description - the exact text Google can show searchers - contains a real misspelling, confirmed by inspecting the page's metadata directly: 'The Village Bakery & Cafe is a Family run bussiness in Pendleton SC.There is a little something for everyone.' 'Bussiness' is a typo for 'business,' and there's no space after 'SC.' before 'There' begins. Separately, the page's title tag is just 'Village Bakery & Cafe' - no mention of Pendleton or Pendleton Square anywhere, despite the cafe being a fixture of the historic square since 1995.",
+      "opportunity": "Fixing the typo and spacing in the meta description, and rewriting the title tag to lead with 'Pendleton Square, SC,' are both same-day fixes. Expected within 30 days: a cleaner, typo-free search snippet and better matching for 'bakery Pendleton SC' and 'Pendleton Square brunch' searches.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-15-village-bakery-cafe.html",
+      "email_subject": "Your Google listing has a typo in it",
+      "email_body": "Hi,\n\nI was looking at bakeries around Pendleton Square and noticed something on Village Bakery & Cafe's site - I checked your homepage's own metadata, and the description Google can show under your listing literally reads 'a Family run bussiness in Pendleton SC.There is a little something...' - 'bussiness' is a typo, and there's no space after 'SC.' I also noticed your title tag never mentions Pendleton or the square, despite you being on it since 1995.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-village-bakery-cafe.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging fast since it's a five-minute fix with an outsized effect on your search snippet.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "Village.Baker.Cafe@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Reliable Dry Cleaners",
+      "website": "https://www.reliabledrycleaners.net/",
+      "industry": "Dry Cleaning & Alterations (family-owned, 30+ years)",
+      "issues": "Checking the metadata on both the homepage and the Contact Us page directly, neither has a meta description tag at all - Google has nothing written by the business to show in search results. Separately, the homepage's 'Selected Works' section - introduced as 'Professional cleaning - expert alterations - cobbler services - eco friendly - wedding dress preservation' - is, in the page's own markup, five consecutive link elements with no image, no visible text, and no label, rendering as blank clickable space where sample work should be. The homepage title tag is also just 'Reliable Dry Cleaners,' with no mention of Walpole despite the business's own copy stating it has served 'Walpole and the surrounding area for over 30 years.'",
+      "opportunity": "Writing a real meta description and rewriting the title tag to include 'Walpole, MA' are same-day fixes. Fixing or rebuilding the five broken 'Selected Works' links to show real photos is a same-week fix. Expected within 30 days: a proper search snippet for 'dry cleaners Walpole MA' searches instead of an auto-generated one, and a working portfolio section instead of empty clickable space.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-15-reliable-dry-cleaners.html",
+      "email_subject": "Your \"Selected Works\" section is empty links",
+      "email_body": "Hi Tony,\n\nI was looking at dry cleaners in Walpole and noticed something on Reliable's site - I checked the metadata on your homepage and Contact Us page directly, and neither has a meta description at all, so Google is auto-generating your search snippet. I also found that your 'Selected Works' section, meant to show off your alterations and gown preservation work, is actually five blank links with no photos or labels in the page's own code. Your homepage title also doesn't mention Walpole, even though your own copy says you've served the area for over 30 years.\n\nI put together a page showing all three fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-reliable-dry-cleaners.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 30+ years serving Walpole deserves a site where the portfolio section actually shows something.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "tony@reliabledrycleaners.net",
+      "sent_automatically": false
     }
   ]
 }
