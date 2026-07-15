@@ -71,7 +71,7 @@
       "email_subject": "Half your service photos are literally named \"placeholder\"",
       "email_body": "Hi,\n\nI was looking at plumbers on the Sunshine Coast and noticed something on Wurtulla Plumbing's homepage - checking your image files directly, five of your seven photo slots (Commercial & Industrial Plumbing, Blocked Drain Cleaning, Gas Fitting, Backflow Prevention, and your \"Meet the Team\" section) are all named \"placeholder-services-[service].jpg\" or \"placeholder-meet-the-team.jpg\". Your Residential Plumbing and Hot Water System photos are real, properly-named images, so you clearly have real photography, it just never made it into the other five spots. I also noticed your \"Narangba\" service area link actually opens the North Lakes page instead.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-wurtulla-plumbing.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 30+ years combined experience and 170+ 5-star reviews deserve a homepage with real photos in every spot.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "admin@wurtullaplumbing.com.au",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "The Odd Book",
@@ -83,7 +83,7 @@
       "email_subject": "Your Google listing literally just says \"home\"",
       "email_body": "Hi,\n\nI was looking at antiquarian booksellers in Nova Scotia and noticed something on The Odd Book's site - checking your pages' own metadata, the meta description on your homepage is literally the word \"home\", your About Us page's is \"about us\", and your Contact Us page's is \"contact us\". That's the exact text Google can show under your listing, and right now it's showing one-word placeholders. I also noticed none of your page titles mention Wolfville, \"antiquarian\", or \"rare books\", even though you're a member of the Antiquarian Booksellers' Association of Canada and affiliated with the ILAB.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-the-odd-book.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since nearly 50 years in business and real antiquarian credentials deserve a Google listing that says more than \"home\".\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "theoddbook@ns.sympatico.ca",
-      "sent_automatically": false
+      "sent_automatically": true
     }
   ]
 }
