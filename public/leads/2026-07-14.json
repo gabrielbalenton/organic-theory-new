@@ -179,7 +179,7 @@
       "email_subject": "Your gallery link on the Services page goes nowhere",
       "email_body": "Hi,\n\nI was looking at pet groomers in Grand Rapids and noticed a couple of technical things on VIP Grooming Salon's site - there's no meta description tag anywhere in the homepage's HTML, so Google auto-generates your search snippet, and your title tag is just 'HOME - VIP Grooming Salon' with no location. I also checked your Services page and the 'VIP pets in our GALLERY' photo link points to 'http://gallery' - not a real address, so clicking it does nothing.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-vip-grooming-salon.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since your medical-grade air purification and Italian spa products are genuinely rare for a local groomer and deserve to actually show up in search.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "vipgroomgr@gmail.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "South Lake Cycle",
@@ -191,7 +191,7 @@
       "email_subject": "Your Get Directions button opens as a different business",
       "email_body": "Hi,\n\nI was looking at bike shops in Excelsior and noticed something on South Lake Cycle's Contact page - your site still has live, unedited 'Business Tagline Lorem Ipsum Dolor' placeholder text under the logo. I also clicked both 'Get Directions' buttons on that page, and they open Google Maps labeled '(Hibu Plumbers)' and '(Eric's Auto Shops)' respectively - leftover names from your website builder template, not South Lake Cycle.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-south-lake-cycle.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought this was worth flagging fast since it's probably confusing new customers trying to find you on the trail.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@southlakecycle.bike",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Northam Law Corporation",
@@ -203,7 +203,7 @@
       "email_subject": "Your homepage testimonials are still from \"John Doe\"",
       "email_body": "Hi,\n\nI was looking at boutique law firms in Kitsilano and noticed something on Northam Law's homepage - the \"What our clients say\" section shows three Lorem Ipsum placeholder quotes, all attributed to \"John Doe, CEO.\" It's template copy that never got replaced, and it's the first thing a new visitor sees right where you'd want to build trust. I also checked and there's no meta description tag anywhere in the homepage's HTML, so Google is auto-generating your search snippet instead of showing something you'd actually choose to say.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-northam-law-corporation.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since the actual breadth of what you offer - business, real estate, family law, and wills all under one roof - deserves a homepage that backs it up.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@northam-law.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "St. Paul Yoga Center",
@@ -215,7 +215,7 @@
       "email_subject": "Your homepage title doesn't mention St. Paul",
       "email_body": "Hi,\n\nI was looking at yoga studios in St. Paul and noticed a couple of things on Saint Paul Yoga Center's site - your homepage's title tag (what shows up in a Google search result and browser tab) doesn't mention St. Paul or Minnesota anywhere, just 'Mindful yoga studio with yoga classes from exceptionally experienced yoga instructors.' I also spotted something odd in your testimonials: the review from Sarah W. has stray leftover text stitched right into it - it starts with 'Tesitmonial Wr' and ends mid-word with 'iteup,' sandwiching the actual review.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-st-paul-yoga-center.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since with eight teachers and 197 combined years of experience, your testimonials section deserves to read clean.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "saintpaulyogacenter@hotmail.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Jackley Chiropractic",
@@ -227,7 +227,7 @@
       "email_subject": "Your Text Us button doesn't actually text anyone",
       "email_body": "Hi,\n\nI was looking at chiropractors in Independence and noticed a couple of things on Jackley Chiropractic's homepage - the welcome paragraph starts in first person ('We are dedicated to...') but switches to third person partway through ('They are here to answer your questions... It is their goal...'), which reads like leftover template copy rather than your own voice. I also checked the 'Text Us' button in your footer, and it's coded to sms:chadjackley@yahoo.com - an email address where a phone number should be, so it doesn't actually open a text message on most phones.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-jackley-chiropractic.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since your reviews show real patient loyalty that the site itself doesn't quite match yet.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "chadjackley@yahoo.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Wolfys Pet Stylists",
@@ -287,19 +287,19 @@
       "email_subject": "Your homepage is still running a Black Friday deal",
       "email_body": "Hi,\n\nI was looking at HVAC companies in Topeka and noticed something on Kaw Valley's homepage - the top banner still reads 'BLACK FRIDAY DEAL... The sale ends 11/30,' and it's still live and clickable in the middle of July. I also checked the page's markup and found almost none of your photos have alt text, from the logo down to your service photos, which means none of that work shows up in Google Image Search.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-kaw-valley-heating-cooling.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 46 years in business deserves a site that looks looked-after.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "service@kawvalleyhvac.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Ritchie's Driving School",
       "website": "http://www.ritchies-drivingschool.com.au/",
       "industry": "Driving School / Driver Training",
-      "issues": "The entire site, including the Contact page where visitors submit their name, email, and a message, still runs on unencrypted http:// rather than https:// - confirmed by the page loading and redirecting to the http:// address with no SSL. Modern browsers flag this as 'Not Secure' directly in the address bar. Separately, the footer on every page, including Contact, still reads '© 2012 All Rights Reserved,' fourteen years out of date.",
+      "issues": "The entire site, including the Contact page where visitors submit their name, email, and a message, still runs on unencrypted http:// rather than https:// - confirmed by the page loading and redirecting to the http:// address with no SSL. Modern browsers flag this as 'Not Secure' directly in the address bar. Separately, the footer on every page, including Contact, still reads '\u00a9 2012 All Rights Reserved,' fourteen years out of date.",
       "opportunity": "Migrating to HTTPS is typically a same-day fix through most hosts and removes the browser security warning right where a parent or new driver is deciding whether to trust the school with their details. Updating the stale copyright year is a five-minute fix. Expected within 30 days: no more 'Not Secure' warning, and a homepage that reads as actively run by a real family business, not a dormant 2012 build.",
       "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-14-ritchies-driving-school.html",
       "email_subject": "Your site shows \"Not Secure\" in every browser",
-      "email_body": "Hi Belinda,\n\nI was looking at driving schools in Melbourne's western suburbs and noticed Ritchie's whole site, including the Contact page, still runs on unencrypted http:// rather than https:// - modern browsers flag that as 'Not Secure' right in the address bar, which is a rough first impression for a parent deciding whether to hand over their kid's details. I also noticed the footer still reads '© 2012 All Rights Reserved,' fourteen years behind.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-ritchies-driving-school.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought the security warning was worth flagging fast since it's probably costing you bookings before anyone even reads the page.\n\nGabriel Balenton | Organic Theory Founder",
+      "email_body": "Hi Belinda,\n\nI was looking at driving schools in Melbourne's western suburbs and noticed Ritchie's whole site, including the Contact page, still runs on unencrypted http:// rather than https:// - modern browsers flag that as 'Not Secure' right in the address bar, which is a rough first impression for a parent deciding whether to hand over their kid's details. I also noticed the footer still reads '\u00a9 2012 All Rights Reserved,' fourteen years behind.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-ritchies-driving-school.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought the security warning was worth flagging fast since it's probably costing you bookings before anyone even reads the page.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@ritchiesdrivingschool.com.au",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Little A's Tree Service",
@@ -311,7 +311,7 @@
       "email_subject": "Your 130+ reviews aren't showing up in Google search",
       "email_body": "Hi,\n\nI was looking at tree services around Greeneville and came across Little A's Tree Service. Genuinely impressive that you've got 130+ 5-star Google reviews after 25 years - but I noticed none of that shows up as star ratings when someone actually searches \"tree service Greeneville TN.\" There's no review schema connecting your reviews to what Google displays, so that trust signal is basically invisible right now. On top of that, the 30+ before/after and crew photos in your gallery have no alt text, so they're not showing up in Google Image search either.\n\nI put together a page showing exactly what I mean and what it'd look like fixed:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-little-as-tree-service.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging given how much you're already leaning on your reputation.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "littleastreeservice.info@gmail.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Butterfly Pool Services",
@@ -323,7 +323,7 @@
       "email_subject": "Your homepage's hero section loads twice",
       "email_body": "Hi,\n\nI was looking at pool services around Cypress and noticed something on Butterfly Pool Services' homepage - the whole top section (headline, phone number, service area, and your 'FREE ESTIMATES' button) renders twice in a row before the rest of the page loads. I also noticed your 'Why Work With Us' section points visitors to Yelp for reviews, but there's no actual review or testimonial shown anywhere on the homepage itself.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-butterfly-pool-services.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 7+ years and CPO/IPSSA/PHTA credentials deserve a homepage that doesn't stutter on load.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "Info@ButterflyPoolServices.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Ruby Oak Floristry",
@@ -335,7 +335,7 @@
       "email_subject": "Your page title has stray code in it",
       "email_body": "Hi,\n\nI was looking at florists in Wollongong and noticed a few things on Ruby Oak's About Us page - the browser tab / search result title has stray code appended to it: 'About Us | Ruby Oak Floristry | Luxury Florals Deliveredsearch_right [#1505]instagram.' I also checked your delivery-area footer, and several suburbs like Barrack Point and North Wollongong are listed as plain text instead of clickable links, while their neighbors are. And your FAQ mentions over 450 five-star Google reviews, but the reviews section on the page itself is just an empty box - none actually show.\n\nI put together a page showing the fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-14-ruby-oak-floristry.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since a 2022 Best Florist award and 450+ reviews deserve a homepage that actually shows them.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "hello@rubyoak.com.au",
-      "sent_automatically": false
+      "sent_automatically": true
     }
   ]
 }
