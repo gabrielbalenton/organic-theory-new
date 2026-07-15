@@ -11,7 +11,7 @@
       "email_subject": "Your homepage title just says 'Ohio'",
       "email_body": "Hi,\n\nI was looking at dog groomers around Washington Township and noticed something on W.A.G Studio's homepage - your title tag (the text Google shows in search results) just reads 'Pet groomer | W•A•G Studio | Ohio,' with no mention of Washington Township or Dayton anywhere, even though that's exactly where you are and who you're competing against locally. I also noticed your hero photo - the one linked to your contact email - has alt text that just says 'Untitled.'\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-wag-studio.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since a Best of Dayton runner-up finish and seven groomers on staff deserve a homepage that actually says where you are.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "wagstudio@yahoo.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Alert Locksmiths",
@@ -23,7 +23,7 @@
       "email_subject": "Your site's footer still says 2015",
       "email_body": "Hi,\n\nI was looking at locksmiths in Ellerslie and noticed something on Alert Locksmiths' site - every page's footer still reads 'Copyright 2015 Alert Locksmiths Limited,' which is eleven years out of date and the kind of detail a cautious customer notices before trusting you with a key to their home. I also checked and there's no meta description tag anywhere in the homepage's metadata, so Google is auto-generating your search snippet instead of showing something you'd actually choose to say.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-alert-locksmiths.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 50 real years as a family-owned, MLAA-registered locksmith deserve a site that looks looked-after.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "alert.locks@xtra.co.nz",
-      "sent_automatically": false
+      "sent_automatically": true
     }
   ]
 }
