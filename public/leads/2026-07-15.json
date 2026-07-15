@@ -24,6 +24,42 @@
       "email_body": "Hi,\n\nI was looking at locksmiths in Ellerslie and noticed something on Alert Locksmiths' site - every page's footer still reads 'Copyright 2015 Alert Locksmiths Limited,' which is eleven years out of date and the kind of detail a cautious customer notices before trusting you with a key to their home. I also checked and there's no meta description tag anywhere in the homepage's metadata, so Google is auto-generating your search snippet instead of showing something you'd actually choose to say.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-alert-locksmiths.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 50 real years as a family-owned, MLAA-registered locksmith deserve a site that looks looked-after.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "alert.locks@xtra.co.nz",
       "sent_automatically": true
+    },
+    {
+      "business_name": "Justin Aitken Photography",
+      "website": "https://www.justinaitken.com/",
+      "industry": "Wedding, Family & Commercial Photography",
+      "issues": "Directly under the logo on both the homepage and Contact page sits a live Squarespace error message - 'Summary Block' followed by 'This block is invalid. Please check the block settings and try again.' - visible to every visitor. The same two pages also still show unedited Squarespace placeholder text ('Street Address,' 'City, State, Zip,' 'Photographer,' 'Your Custom Text Here') that was never replaced with real details. Separately, the 'Featured' section on the homepage displays Latin filler text reading 'Aenean eu leo Quam' instead of a real featured wedding or press mention.",
+      "opportunity": "Removing the broken Summary Block, replacing the leftover placeholder text, and swapping the Latin filler for real featured content are all same-day fixes. Expected within 30 days: a homepage that actually reflects a 5-time NZ Wedding Photographer of the Year instead of an unfinished template, with no more visible error message greeting new visitors.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-15-justin-aitken-photography.html",
+      "email_subject": "Your homepage shows \"This block is invalid\"",
+      "email_body": "Hi Justin,\n\nI was looking at wedding photographers in the Bay of Plenty and noticed something on your site - right under your logo, on both the homepage and Contact page, there's a live Squarespace error: 'Summary Block - This block is invalid. Please check the block settings and try again.' I also spotted unedited placeholder text nearby ('Street Address,' 'City, State, Zip,' 'Your Custom Text Here'), and your 'Featured' section shows Latin filler text ('Aenean eu leo Quam') instead of real content.\n\nI put together a page showing all three fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-justin-aitken-photography.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since winning NZ Wedding Photographer of the Year five times deserves a homepage without a visible error message on it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@justinaitken.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Yarra Valley Mobile Car Detailing",
+      "website": "https://www.yarravalleycardetailing.com.au/",
+      "industry": "Mobile Car Detailing",
+      "issues": "On the Contact page, the 'Number' link's visible text reads '03 4050 9179' but the underlying tel: link actually dials a completely different number, '0475 134 060' - confirmed in the page's raw HTML - so anyone tapping it on mobile calls the wrong number. Separately, the homepage has no meta description tag anywhere in the <head> - confirmed by inspecting the raw HTML, where only a bare <title> exists with no location. The Contact page's Saturday hours also contain a typo, reading '7:300 AM - 3:00 PM'.",
+      "opportunity": "Fixing the mismatched phone link is a five-minute fix that stops real calls from reaching the wrong number. Writing a real meta description and correcting the hours typo are same-day fixes. Expected within 30 days: no more misdirected calls, and a proper search snippet for 'mobile car detailing Yarra Valley' searches instead of an auto-generated one.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-15-yarra-valley-car-detailing.html",
+      "email_subject": "Your \"Call Now\" number isn't the one people call",
+      "email_body": "Hi,\n\nI was looking at mobile detailers in the Yarra Valley and noticed something on your Contact page - the 'Number' link displays '03 4050 9179' as its text, but the actual link behind it dials a completely different number, '0475 134 060.' Anyone tapping that on their phone is calling the wrong number. I also checked and there's no meta description anywhere in your homepage's HTML, and your Saturday hours have a typo ('7:300 AM').\n\nI put together a page showing all three fixes and what they'd mean for your business:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-yarra-valley-car-detailing.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought the phone number one was worth flagging fast since it's probably costing you calls right now.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "yarravalleymobilecardetailing1@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Art & Frame Depot",
+      "website": "https://artandframedepot.us/",
+      "industry": "Custom Picture Framing",
+      "issues": "The homepage has no meta description tag anywhere in the <head> - confirmed by inspecting the raw HTML, where the field is simply absent - and the <title> tag is just 'Art and Frame Depot' with no mention of Rockville, MD, despite being a walk-in local shop competing for searches like 'picture framing Rockville.' Separately, the header's navigation menu is completely empty in the page's markup - an HTML comment marking where it should go, followed by nothing - so there are no menu links helping a visitor jump to Services, Gallery, or Contact.",
+      "opportunity": "Writing a real meta description and location-inclusive title tag, and filling in the empty navigation menu, are same-day fixes. Expected within 30 days: better matching for 'picture framing Rockville MD' searches, and visitors able to actually navigate the page instead of scrolling blind.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-15-art-and-frame-depot.html",
+      "email_subject": "Google doesn't know you're in Rockville",
+      "email_body": "Hi,\n\nI was looking at picture framers in Rockville and noticed something on Art & Frame Depot's homepage - there's no meta description tag anywhere in the HTML, and your page title is just 'Art and Frame Depot' with no mention of Rockville at all, even though you're a walk-in shop in Gude Plaza. I also checked your page's code and found the navigation menu is completely empty - there's a spot marked for it but no actual menu links, so visitors can't jump to Services or Gallery.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-art-and-frame-depot.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since your real reviews ('Family run, very patient and helpful') deserve a site that actually shows up for local searches.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "artandframedepot.us@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
