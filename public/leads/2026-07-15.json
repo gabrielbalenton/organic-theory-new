@@ -108,6 +108,30 @@
       "email_body": "Hi,\n\nI was looking at hardware stores around Felixstowe and noticed something on Underwood's homepage - your title tag (the text Google shows in search results) just reads 'Welcome to Underwood Hardware & D.I.Y. Ltd,' with no mention of Felixstowe or even 'hardware store' anywhere in it, even though you've been serving the town since 1946.\n\nI put together a page showing that fix and what it would mean for your search visibility:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-underwood-hardware.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since nearly 80 years in the same town deserves a homepage that actually says where you are.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@underwoodhardware.co.uk",
       "sent_automatically": true
+    },
+    {
+      "business_name": "Need2Read",
+      "website": "http://need2read.com.au/",
+      "industry": "Independent Bookstore",
+      "issues": "The homepage's own title tag reads exactly 'Home - Need2Read' - confirmed by inspecting the page's raw HTML - with no mention of 'bookstore,' 'books,' or 'Warragul' anywhere, despite being a well-regarded family-run independent bookshop on Victoria Street. Separately, the header's navigation menu container is completely empty in the markup on every page checked (homepage and Contact Us) - no links to Contact, Browse, or anywhere else are rendered, so a visitor has no menu to click through on. The homepage itself also renders as almost entirely empty beyond a single welcome sentence and one photo - no featured books, genres, or reasons to shop local before a visitor bounces.",
+      "opportunity": "Rewriting the title tag to lead with 'Need2Read' and 'Bookstore Warragul,' rebuilding the empty navigation menu, and filling out the homepage with real content are same-week fixes. Expected within 30 days: the site actually appears for 'bookstore Warragul' searches, and visitors can navigate past the homepage instead of hitting a dead end.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-15-need2read.html",
+      "email_subject": "Your homepage title just says \"Home - Need2Read\"",
+      "email_body": "Hi,\n\nI was looking at bookstores in Warragul and noticed something on Need2Read's site - your homepage title tag (the exact text Google can show in search results) just reads 'Home - Need2Read,' with no mention of 'bookstore' or 'Warragul' anywhere in it. I also checked your site's code and found the navigation menu is completely empty on every page - no links to Contact or Browse anywhere - and the homepage itself is just one welcome sentence and a photo, nothing else.\n\nI put together a page showing all three fixes and what they'd mean for your shop:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-need2read.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since a family-run, fully independent bookstore deserves a homepage that actually says who you are.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@need2read.com.au",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Lochel's Bakery",
+      "website": "https://www.lochelsbakery.com/",
+      "industry": "Family-Owned Bakery (est. 1942)",
+      "issues": "The homepage's own headline reads 'Family owned and operated for 75 years' directly above a sentence stating the bakery 'was started over 80 years ago in Philadelphia' - two different numbers for the same founding fact in the same homepage section, confirmed by reading the page directly. The About page separately confirms the bakery actually started in 1942, which is 84 years, a third figure. Separately, all four 'What our clients say' testimonials on the homepage are dated May 12, 2017 - over nine years old - while the Instagram and Facebook feeds embedded just below on the same page show posts from days ago in 2026, confirmed by comparing the visible dates.",
+      "opportunity": "Rewriting the founding-story copy to one consistent, verifiable number (84 years, since 1942) and replacing the 2017 testimonials with current reviews are both same-week fixes. Expected within 30 days: a homepage that reads as internally consistent and as active as the bakery's own social media, instead of contradicting itself and looking nine years stale by comparison.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-15-lochels-bakery.html",
+      "email_subject": "Your homepage says both \"75 years\" and \"80 years\"",
+      "email_body": "Hi,\n\nI was looking at bakeries in the Hatboro area and noticed something on Lochel's homepage - one line says 'Family owned and operated for 75 years,' and the very next sentence says you were 'started over 80 years ago in Philadelphia.' Your About page actually says 1942, which would make it 84 years - so that's three different numbers for the same fact across your own site. I also noticed all four of your homepage testimonials are dated May 12, 2017, while your Instagram and Facebook feeds right below them are clearly active with posts from just days ago.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-lochels-bakery.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since three real generations of the Lochel family deserve a homepage that tells one consistent story.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "bakery@lochelsbakery.com",
+      "sent_automatically": false
     }
   ]
 }
