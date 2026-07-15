@@ -826,6 +826,69 @@ export const pitches: PitchData[] = [
     ctaLabel: 'See My Approach For Your Salon',
     ctaTo: '/contact',
   },
+  {
+    slug: 'seo-specialist-atlanta-home-service',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/full-time-seo-specialist-local-seo-gmb-lead-gen-1689245',
+    clientName: 'Atlanta Home-Service Portfolio (Anonymized)',
+    problem:
+      "You're hiring a full-time Local SEO specialist to rank multiple home-service brands organically and in the Google Map pack, optimize for GEO/AEO, and build new lead-gen sites.",
+    points: [
+      {
+        heading: 'Local SEO and GEO/AEO across every brand, in parallel',
+        detail:
+          'I run local SEO, GMB optimization, and AI-answer-engine structure across a multi-brand portfolio as a standing engagement, instead of one hire splitting attention.',
+      },
+      {
+        heading: 'New lead-gen sites built, not just optimized',
+        detail:
+          'I design and ship the new lead-gen sites your post asks for myself, so you never need a second hire just to build what the SEO plan requires.',
+      },
+    ],
+    ctaLabel: 'See My Approach For Your Brands',
+    ctaTo: '/contact',
+  },
+  {
+    slug: 'website-developer-web-design-specialist',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/website-developer-web-design-specialist-1689397',
+    clientName: 'Founder-Led Business (Anonymized)',
+    problem:
+      "You're hiring a part-time Website Developer to build and launch client-facing websites and funnels in Wix, GoDaddy, and GoHighLevel, using AI tools to speed up the process.",
+    points: [
+      {
+        heading: 'Wix, GoDaddy, and GHL builds with SEO built in',
+        detail:
+          'I build the same kind of mobile-responsive, on-brand websites and funnels your post describes, with meta descriptions, alt text, and page structure included by default.',
+      },
+      {
+        heading: 'AI-assisted copy, human-reviewed before it ships',
+        detail:
+          'I use AI tools like Claude to speed up copywriting the same way your post asks for, with a real editing pass on every page before it goes live.',
+      },
+    ],
+    ctaLabel: 'See My Approach For Your Business',
+    ctaTo: '/contact',
+  },
+  {
+    slug: 'atan-ai-development-deployment',
+    sourceJobUrl: 'https://www.onlinejobs.ph/jobseekers/job/ai-development-deployment-specialist-1689298',
+    clientName: "America's Truck Accident Network (ATAN)",
+    problem:
+      "You're hiring an AI Development & Deployment Specialist to build a templated system that publishes MSA landing pages at scale, with automated content handoff, QA, and GitHub-based deployment.",
+    points: [
+      {
+        heading: 'A templated landing page system, deployed the way I deploy my own',
+        detail:
+          'I build the templated page generation, content-to-CMS automation, and QA gate your post describes, using the same GitHub/Vercel deploy pipeline I run for my own work.',
+      },
+      {
+        heading: 'Built to scale territory by territory without a second hire',
+        detail:
+          'The system is designed so one person can publish many territory pages per week with minimal manual work, exactly as your post\'s success criteria describe.',
+      },
+    ],
+    ctaLabel: 'See My Approach For ATAN',
+    ctaTo: '/contact',
+  },
   ];
 
 export function getPitch(slug: string | undefined): PitchData | undefined {

@@ -419,6 +419,54 @@
       "has_direct_contact": false,
       "source": "linkedin",
       "date_sourced": "2026-07-14"
+    },
+    {
+      "business_name": "Atlanta Home-Service Portfolio (Anonymized)",
+      "job_title": "Full-Time SEO Specialist (Local SEO, GMB & Lead Gen)",
+      "job_url": "https://www.onlinejobs.ph/jobseekers/job/full-time-seo-specialist-local-seo-gmb-lead-gen-1689245",
+      "keyword": "seo",
+      "matched_services": [
+        "SEO/AEO",
+        "Website design & build"
+      ],
+      "pitch_url": "https://organic-theory.vercel.app/leads/funnels/2026-07-15-seo-specialist-atlanta-home-service.html",
+      "email_subject": "GEOPRO — Saw your Local SEO Specialist listing",
+      "email_body": "Hi,\n\nGEOPRO — saw your post for a full-time SEO specialist to rank your home-service brands organically, in the Map Pack, and for GEO/AEO, plus build new lead-gen sites. I put together a page showing how I'd approach that as a packaged engagement across your whole portfolio instead of a single full-time hire:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-seo-specialist-atlanta-home-service.html\n\nMore at https://organic-theory.vercel.app\n\nGabriel Balenton | Organic Theory Founder",
+      "has_direct_contact": false,
+      "source": "onlinejobs",
+      "date_sourced": "2026-07-15"
+    },
+    {
+      "business_name": "Founder-Led Business (Anonymized)",
+      "job_title": "Website Developer / Web Design Specialist",
+      "job_url": "https://www.onlinejobs.ph/jobseekers/job/website-developer-web-design-specialist-1689397",
+      "keyword": "seo",
+      "matched_services": [
+        "Website design & build",
+        "SEO/AEO"
+      ],
+      "pitch_url": "https://organic-theory.vercel.app/leads/funnels/2026-07-15-website-developer-web-design-specialist.html",
+      "email_subject": "Saw your Website Developer listing",
+      "email_body": "Hi,\n\nI saw your post for a Website Developer to build and launch client-facing websites and funnels in Wix, GoDaddy, and GoHighLevel using AI tools to speed things up. I put together a page showing how I'd approach that as a packaged engagement instead of a part-time hire:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-website-developer-web-design-specialist.html\n\nMy portfolio and a short self-intro are attached as requested.\n\nMore at https://organic-theory.vercel.app\n\nGabriel Balenton | Organic Theory Founder",
+      "has_direct_contact": false,
+      "source": "onlinejobs",
+      "date_sourced": "2026-07-15"
+    },
+    {
+      "business_name": "America's Truck Accident Network (ATAN)",
+      "job_title": "AI Development & Deployment Specialist",
+      "job_url": "https://www.onlinejobs.ph/jobseekers/job/ai-development-deployment-specialist-1689298",
+      "keyword": "automation",
+      "matched_services": [
+        "AI automations",
+        "Website design & build"
+      ],
+      "pitch_url": "https://organic-theory.vercel.app/leads/funnels/2026-07-15-atan-ai-development-deployment.html",
+      "email_subject": "Saw your AI Development & Deployment Specialist listing",
+      "email_body": "Hi,\n\nI saw your post for an AI Development & Deployment Specialist to build the templated MSA landing page system for ATAN, with automated content handoff, QA, and GitHub-based deployment. I put together a page showing how I'd approach that build as a packaged engagement:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-atan-ai-development-deployment.html\n\nMore at https://organic-theory.vercel.app\n\nGabriel Balenton | Organic Theory Founder",
+      "has_direct_contact": false,
+      "source": "onlinejobs",
+      "date_sourced": "2026-07-15"
     }
   ]
 }
