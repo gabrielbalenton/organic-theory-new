@@ -227,7 +227,7 @@
       "email_subject": "Your footer says {{placeholder_footer_reserve1}}",
       "email_body": "Hi,\n\nI was looking at shoe repair shops around Pittsburgh and came across Al's - 75 years in Bethel Park is genuinely impressive. Noticed something worth flagging though: I checked your homepage, Contact page, and even your 404 page, and all three end with literal unfilled template code showing as plain text at the bottom - things like {{placeholder_dpni}} and seven {{placeholder_footer_reserve}} tags, meant to be filled in by your site builder but never cleaned up. I also found your phone number has a stray space baked into it - \"412- 417-7589\" instead of \"412-417-7589\" - the same way on every page.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-als-shoe-repair.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 75 years of family-owned craftsmanship deserves a site without raw code showing at the bottom.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "alsshoerepair@gmail.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "AshtonHope Shoe Repair",
@@ -239,7 +239,7 @@
       "email_subject": "Is it a \"Heel Fix\" or a \"Hell Fix\"?",
       "email_body": "Hi,\n\nI was looking at shoe repair shops around Raleigh and came across AshtonHope - three generations of craftsmanship is a real differentiator. Noticed something small but worth flagging: on your live Women's pricing list, right between \"Heel\" and \"Heel Cut,\" there's a line that reads \"Hell Fix: $21 - $25\" instead of \"Heel Fix.\" I also found the alt text on both award photos in your Recognition section just shows the raw file names - \"award-for-the-best\" and \"award-for-best-rated\" - rather than real descriptions, and the \"2021\" label above your three-generations story gets reused again for a totally separate photo gallery further down.\n\nI put together a page showing all three fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-ashtonhope-shoe-repair.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since your real reviews are genuinely great and deserve a price list without a typo undercutting the trust.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@ashtonhope.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Redman's Antique Barn",
@@ -251,7 +251,7 @@
       "email_subject": "Your homepage says its own name four times in a row",
       "email_body": "Hi,\n\nI was looking at antique shops around Port Perry and came across Redman's Antique Barn - 30+ years as a family business is a great story. Noticed something worth flagging though: I checked your homepage's own content, and the hero headline \"Redman's Antique Barn - Timeless Antique Collectibles\" repeats four times back-to-back, with the whole block duplicated again further down. I also found three completely different sections - about your inventory, your family's story, and your restoration/appraisal services - all headed identically \"Our Collection,\" instead of headings that match what each one actually says.\n\nI put together a page showing both fixes and what they'd mean for your site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-15-redmans-antique-barn.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 30 years of family history deserves a homepage that reads clearly instead of repeating itself.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "redmansantiquebarn@gmail.com",
-      "sent_automatically": false
+      "sent_automatically": true
     }
   ]
 }
