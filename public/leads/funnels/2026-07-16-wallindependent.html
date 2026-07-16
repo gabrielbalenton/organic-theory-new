@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>WallIndependent — Growth Audit | Organic Theory</title>
+<meta name="description" content="A free growth audit for WallIndependent — what's holding your site back in search, and exactly what I'd fix first." />
+<link rel="icon" type="image/png" sizes="32x32" href="https://organic-theory.vercel.app/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://organic-theory.vercel.app/apple-touch-icon.png">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="WallIndependent — Growth Audit | Organic Theory" />
+<meta property="og:description" content="A free growth audit for WallIndependent — what's holding your site back in search, and exactly what I'd fix first." />
+<meta property="og:image" content="https://organic-theory.vercel.app/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="WallIndependent — Growth Audit | Organic Theory" />
+<meta name="twitter:description" content="A free growth audit for WallIndependent — what's holding your site back in search, and exactly what I'd fix first." />
+<meta name="twitter:image" content="https://organic-theory.vercel.app/og-image.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --bg: #FFFFFF;
+    --fg: #0A0A0C;
+    --muted: rgba(10,10,12,0.6);
+    --faint: rgba(10,10,12,0.35);
+    --hairline: rgba(10,10,12,0.09);
+    --accent: #7c2d12;
+    --accent-soft: rgba(124,45,18,0.08);
+    --display: 'Montserrat', sans-serif;
+    --editorial: 'Cormorant Garamond', Georgia, serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    overflow-x: hidden;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 900px;
+    background: radial-gradient(circle, var(--accent-soft) 0%, transparent 65%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .editorial { font-family: var(--editorial); font-weight: 300; letter-spacing: 0.01em; text-wrap: balance; }
+  .display { font-family: var(--display); }
+  .eyebrow { font-family: var(--display); font-weight: 700; font-size: 10.5px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--accent); }
+  .accent { color: var(--accent); }
+  .card { background-color: rgba(10,10,12,0.02); border: 1px solid var(--hairline); box-shadow: 0 1px 3px rgba(10,10,12,0.04); }
+  .hairline-top { border-top: 1px solid var(--hairline); }
+  .btn-primary {
+    background-color: var(--fg);
+    color: var(--bg);
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), background-color 0.35s;
+  }
+  .btn-primary:hover { transform: translateY(-2px); background-color: var(--accent); color: var(--bg); }
+  .btn-outline {
+    border: 1px solid var(--hairline);
+    color: var(--fg);
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
+  }
+  .btn-outline:hover { background-color: var(--fg); color: var(--bg); border-color: var(--fg); }
+  input, textarea {
+    background-color: rgba(10,10,12,0.02);
+    border: 1px solid var(--hairline);
+    color: var(--fg);
+    font-family: inherit;
+    transition: border-color 0.3s;
+  }
+  input:focus, textarea:focus { outline: none; border-color: var(--accent); }
+  input::placeholder, textarea::placeholder { color: rgba(10,10,12,0.3); }
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s cubic-bezier(0.22,1,0.36,1), transform 0.9s cubic-bezier(0.22,1,0.36,1); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+  .ghost-num {
+    font-family: var(--editorial);
+    font-weight: 300;
+    color: rgba(10,10,12,0.05);
+    line-height: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  ::selection { background: rgba(124,45,18,0.2); color: var(--fg); }
+  ::-webkit-scrollbar { width: 3px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(10,10,12,0.15); border-radius: 2px; }
+</style>
+</head>
+<body>
+
+  <header class="sticky top-0 z-50 px-6 md:px-10 py-5 flex items-center justify-between max-w-6xl mx-auto" style="backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); background: rgba(255,255,255,0.75); border-bottom: 1px solid var(--hairline);">
+    <div class="display text-xs font-bold tracking-[0.25em] uppercase" style="color: var(--faint);">Organic Theory</div>
+    <a href="https://calendly.com/gabrielbalenton/30min" target="_blank" rel="noopener" class="btn-primary px-5 py-2.5">Book a Free Call</a>
+  </header>
+
+  <section class="relative max-w-3xl mx-auto px-6 pt-24 md:pt-32 pb-14 text-center" style="z-index:1;">
+    <div class="reveal">
+      <div class="eyebrow inline-block mb-8">Growth Audit — WallIndependent</div>
+      <h1 class="editorial text-[2.6rem] sm:text-[3.6rem] md:text-[4.2rem] leading-[1.05] mb-8">
+        One of your pages is still called "sample-page"<span class="accent">.</span>
+      </h1>
+      <p class="text-base md:text-lg leading-relaxed max-w-xl mx-auto" style="color: var(--muted);">
+        Your site has real, useful content about violin making living at a default, never-renamed WordPress URL — and duplicate copies of some pages competing against each other in Google.
+      </p>
+    </div>
+  </section>
+
+  <section class="relative max-w-3xl mx-auto px-6 pb-24" style="z-index:1;">
+    <p class="eyebrow reveal mb-10">What I Found On Your Site</p>
+    <div class="space-y-0">
+      <div class="reveal hairline-top py-8 relative overflow-hidden">
+        <span class="ghost-num absolute -top-2 right-0 text-[100px] select-none">01</span>
+        <div class="relative flex items-start gap-5">
+          <div class="text-lg mt-0.5" style="color:#f87171;">✗</div>
+          <div>
+            <h3 class="font-semibold text-lg mb-1.5">A real page still living at "/sample-page/"</h3>
+            <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">Google's index shows your violin-making content at both wallindependent.com/violin-making and wallindependent.com/sample-page/ — the second one is WordPress's default, never-renamed placeholder URL slug, and it's carrying real content instead of being deleted or redirected.</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal hairline-top py-8 relative overflow-hidden">
+        <span class="ghost-num absolute -top-2 right-0 text-[100px] select-none">02</span>
+        <div class="relative flex items-start gap-5">
+          <div class="text-lg mt-0.5" style="color:#f87171;">✗</div>
+          <div>
+            <h3 class="font-semibold text-lg mb-1.5">The same page, indexed twice more</h3>
+            <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">Your "Interesting Fiddle Stuff" content is indexed at both the old wallindependent.com/interesting-fiddle-stuff.html (non-www, static) and the current wallindependent.com/interesting-fiddle-stuff/ — two URLs, one page, both live in Google at once.</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal hairline-top py-8 relative overflow-hidden">
+        <span class="ghost-num absolute -top-2 right-0 text-[100px] select-none">03</span>
+        <div class="relative flex items-start gap-5">
+          <div class="text-lg mt-0.5" style="color:#fbbb24;">⚠</div>
+          <div>
+            <h3 class="font-semibold text-lg mb-1.5">Duplicate content splits your ranking power</h3>
+            <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">When the same content lives at two URLs, Google has to guess which one to rank — and often splits authority between both instead of concentrating it on one, which is a real disadvantage for a one-person shop competing against bigger violin shops for search visibility.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative max-w-5xl mx-auto px-6 pb-24" style="z-index:1;">
+    <div class="reveal text-center mb-12">
+      <div class="eyebrow inline-block mb-6">Sample Work — Not A Template</div>
+      <h2 class="editorial text-3xl md:text-4xl mb-4">Here's what it looks like fixed.</h2>
+      <p class="text-sm md:text-base max-w-xl mx-auto" style="color: var(--muted);">Same content strategy I'd hand you on day one, built from what's actually true about your shop — not a generic mockup.</p>
+    </div>
+
+    <div class="reveal grid md:grid-cols-2 gap-5 mb-14">
+      <div>
+        <p class="eyebrow mb-3" style="color: var(--faint);">Google — Today</p>
+        <div class="bg-white rounded-2xl p-6 shadow-2xl" style="box-shadow: 0 20px 45px -18px rgba(10,10,12,0.18);">
+          <div class="flex items-center gap-2 mb-1.5">
+            <div class="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center text-[9px] text-gray-500">W</div>
+            <span class="text-[13px] text-gray-700">wallindependent.com/sample-page</span>
+          </div>
+          <div class="text-[19px] text-[#1a0dab] leading-snug mb-1">Violin Making – WallIndependent.com</div>
+          <div class="text-[13px] text-[#4d5156] leading-snug">…while a second, separate page — wallindependent.com/violin-making — covers the same topic under a different URL.</div>
+        </div>
+        <p class="text-[11px] mt-3" style="color: var(--faint);">↑ Real content, stuck on a default "sample-page" slug, competing with its own duplicate.</p>
+      </div>
+      <div>
+        <p class="eyebrow mb-3">Google — After The Fix</p>
+        <div class="bg-white rounded-2xl p-6 shadow-2xl" style="box-shadow: 0 20px 45px -18px rgba(124,45,18,0.22);">
+          <div class="flex items-center gap-2 mb-1.5">
+            <div class="w-5 h-5 rounded-full bg-orange-100 flex items-center justify-center text-[9px]" style="color:#7c2d12;">W</div>
+            <span class="text-[13px] text-gray-700">wallindependent.com/violin-making</span>
+          </div>
+          <div class="text-[19px] text-[#1a0dab] leading-snug mb-1">Violin Making &amp; Repair — Hilton, NY | WallIndependent</div>
+          <div class="text-[13px] text-[#4d5156] leading-snug">A small, independent luthier shop by appointment in Hilton, NY. Setup, repair, and restoration of violins and violas.</div>
+        </div>
+        <p class="text-[11px] mt-3 accent">↑ One canonical URL carrying all the ranking signal, with the old slugs redirected into it.</p>
+      </div>
+    </div>
+
+    <p class="eyebrow reveal mb-4 text-center">Your Homepage, Rebuilt — Scroll To See The Whole Thing</p>
+    <div class="reveal rounded-2xl overflow-hidden" style="box-shadow: 0 30px 70px -25px rgba(10,10,12,0.22); border: 1px solid var(--hairline);">
+      <div class="flex items-center gap-1.5 px-4 py-3" style="background:#151517; border-bottom:1px solid var(--hairline);">
+        <span class="w-2.5 h-2.5 rounded-full bg-red-500/60"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/60"></span>
+        <span class="w-2.5 h-2.5 rounded-full bg-green-500/60"></span>
+        <span class="ml-3 text-[11px]" style="color: var(--faint);">wallindependent.com</span>
+        <span class="ml-auto text-[10px] flex items-center gap-1 pr-1" style="color: rgba(250,250,250,0.2);">scroll ↓</span>
+      </div>
+      <div style="height:640px; overflow-y:auto; scroll-behavior:smooth; background:#fff; color:#1a1a1c; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
+
+        <div class="flex items-center justify-between px-6 py-4 sticky top-0 z-10" style="background:rgba(255,255,255,0.85); backdrop-filter: blur(10px); border-bottom:1px solid #eee;">
+          <span class="font-bold text-sm tracking-tight" style="color:#5a2210; font-family: Georgia, serif;">WallIndependent</span>
+          <div class="hidden sm:flex gap-6 text-[11px] font-semibold uppercase tracking-wide" style="color:#666;">
+            <span>Repairs</span><span>Violin Making</span><span>About</span><span>Contact</span>
+          </div>
+          <span class="text-[11px] font-bold px-4 py-2 rounded-full" style="background:#5a2210; color:#fff;">Book an Appointment</span>
+        </div>
+
+        <div class="relative" style="min-height:420px;">
+          <img src="https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?auto=format&fit=crop&w=1400&q=80" alt="" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(124,45,18,0.25) 0%, rgba(10,10,12,0.78) 100%);"></div>
+          <div class="relative z-[1] flex flex-col items-center justify-center text-center px-6" style="min-height:420px;">
+            <div class="text-[11px] font-bold uppercase tracking-[0.25em] mb-4" style="color:rgba(255,255,255,0.85);">Hilton, NY</div>
+            <h3 class="text-3xl md:text-4xl mb-4 leading-[1.1] max-w-md" style="color:#fff; font-family: Georgia, serif; font-weight:400;">A trained luthier's independent violin &amp; viola shop</h3>
+            <p class="text-sm mb-6 max-w-xs" style="color:rgba(255,255,255,0.85);">Set-up, repair, and restoration — by appointment, on your instrument's own schedule, not a factory queue.</p>
+            <span class="inline-block px-7 py-3 rounded-full text-sm font-bold transition-transform" style="background:#fff; color:#5a2210;">Book an Appointment</span>
+          </div>
+        </div>
+
+        <div class="px-6 py-14" style="background:#fbfaf7;">
+          <p class="text-center text-[11px] font-bold uppercase tracking-[0.2em] mb-8" style="color:#a89f8f;">Why players trust WallIndependent</p>
+          <div class="grid sm:grid-cols-3 gap-5">
+            <div class="rounded-2xl overflow-hidden" style="background:#fff; box-shadow: 0 12px 30px -12px rgba(0,0,0,0.12);">
+              <div style="height:130px; background-image:url('https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?auto=format&fit=crop&w=500&q=80'); background-size:cover; background-position:center;"></div>
+              <div class="p-5 text-center">
+                <div class="font-bold text-sm mb-1.5">A trained luthier, not a shop tech</div>
+                <div class="text-xs leading-relaxed" style="color:#8a8a8a;">Every repair and restoration is handled personally, start to finish.</div>
+              </div>
+            </div>
+            <div class="rounded-2xl overflow-hidden" style="background:#fff; box-shadow: 0 12px 30px -12px rgba(0,0,0,0.12);">
+              <div style="height:130px; background-image:url('https://images.unsplash.com/photo-KrPulSdUetk?auto=format&fit=crop&w=500&q=80'); background-size:cover; background-position:center;"></div>
+              <div class="p-5 text-center">
+                <div class="font-bold text-sm mb-1.5">Real technical depth, shared freely</div>
+                <div class="text-xs leading-relaxed" style="color:#8a8a8a;">Detailed write-ups on common repairs — open glue joints, worn pegs, poorly fitted bridges — show the craft, not just a price list.</div>
+              </div>
+            </div>
+            <div class="rounded-2xl overflow-hidden" style="background:#fff; box-shadow: 0 12px 30px -12px rgba(0,0,0,0.12);">
+              <div style="height:130px; background-image:url('https://images.unsplash.com/photo-1587582423116-ec07293f0395?auto=format&fit=crop&w=500&q=80'); background-size:cover; background-position:center;"></div>
+              <div class="p-5 text-center">
+                <div class="font-bold text-sm mb-1.5">By appointment, unhurried</div>
+                <div class="text-xs leading-relaxed" style="color:#8a8a8a;">No walk-in factory queue — your instrument gets the attention a small shop can give it.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2" style="align-items:stretch;">
+          <div style="min-height:320px; background-image:url('https://images.unsplash.com/photo-KrPulSdUetk?auto=format&fit=crop&w=900&q=80'); background-size:cover; background-position:center;"></div>
+          <div class="px-10 py-14 flex flex-col justify-center" style="background:#fff;">
+            <p class="text-[11px] font-bold uppercase tracking-[0.2em] mb-4" style="color:#a89f8f;">Services</p>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="rounded-xl px-4 py-3.5 text-sm font-semibold text-center" style="background:#faf0ea; color:#5a2210;">Setup &amp; Adjustment</div>
+              <div class="rounded-xl px-4 py-3.5 text-sm font-semibold text-center" style="background:#faf0ea; color:#5a2210;">Repair &amp; Restoration</div>
+              <div class="rounded-xl px-4 py-3.5 text-sm font-semibold text-center" style="background:#faf0ea; color:#5a2210;">Violin Making</div>
+              <div class="rounded-xl px-4 py-3.5 text-sm font-semibold text-center" style="background:#faf0ea; color:#5a2210;">Luthier Lights™</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="px-6 py-14" style="background:#fbfaf7;">
+          <p class="text-center text-[11px] font-bold uppercase tracking-[0.2em] mb-8" style="color:#a89f8f;">What musicians say <span style="color:#c00;">*</span></p>
+          <div class="grid sm:grid-cols-3 gap-5">
+            <div class="rounded-2xl p-5" style="background:#fff; box-shadow: 0 12px 30px -12px rgba(0,0,0,0.1);">
+              <div style="color:#fbbc04;" class="text-xs mb-3">★★★★★</div>
+              <p class="text-xs italic leading-relaxed" style="color:#666;">"Placeholder — real reviews get pulled in via schema once you connect your Google Business Profile."</p>
+            </div>
+            <div class="rounded-2xl p-5" style="background:#fff; box-shadow: 0 12px 30px -12px rgba(0,0,0,0.1);">
+              <div style="color:#fbbc04;" class="text-xs mb-3">★★★★★</div>
+              <p class="text-xs italic leading-relaxed" style="color:#666;">"Placeholder — same layout, your actual customer reviews would show here."</p>
+            </div>
+            <div class="rounded-2xl p-5" style="background:#fff; box-shadow: 0 12px 30px -12px rgba(0,0,0,0.1);">
+              <div style="color:#fbbc04;" class="text-xs mb-3">★★★★★</div>
+              <p class="text-xs italic leading-relaxed" style="color:#666;">"Placeholder — this section is what makes the trust case for a new visitor."</p>
+            </div>
+          </div>
+          <p class="text-center text-[10px] mt-4" style="color:#b0b0b0;">* Illustrative layout only — I never fabricate real reviews. Yours would populate this automatically.</p>
+        </div>
+
+        <div class="px-6 py-14" style="background:#0b1220;">
+          <div class="text-center mb-3">
+            <span class="text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full" style="background:rgba(56,189,248,0.15); color:#38bdf8;">Beyond the website — if you ever want it</span>
+          </div>
+          <p class="text-center font-bold text-lg mt-4 mb-2" style="color:#fff;">Never miss a booking request again</p>
+          <p class="text-center text-xs mb-8" style="color:rgba(255,255,255,0.5); max-width:26rem; margin-left:auto; margin-right:auto;">Two add-ons I can bolt onto this same site whenever you're ready — not part of the base build, just showing you what's possible.</p>
+
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div class="rounded-2xl p-5" style="background:#111a2e; border:1px solid #1e293b;">
+              <p class="text-[10px] font-bold uppercase tracking-[0.2em] mb-4" style="color:#38bdf8;">AI Front Desk Assistant</p>
+              <div class="rounded-2xl rounded-bl-sm p-3.5" style="background:#5a2210; max-width:220px;">
+                <p class="text-[11px]" style="color:#fff;">My bridge is warped — do you take appointments this week?</p>
+              </div>
+              <div class="rounded-2xl rounded-br-sm p-3.5 mt-2.5 ml-auto" style="background:#fff; max-width:240px;">
+                <p class="text-[11px]" style="color:#1a1a1c;">I have Thursday afternoon open — bring it by and I can take a look while you wait. Want me to hold that slot?</p>
+              </div>
+              <p class="text-[10px] mt-4" style="color:rgba(255,255,255,0.4);">Answers, books, and reminds customers 24/7 — even while you're heads-down on a repair.</p>
+            </div>
+
+            <div class="rounded-2xl p-5" style="background:#111a2e; border:1px solid #1e293b;">
+              <p class="text-[10px] font-bold uppercase tracking-[0.2em] mb-4" style="color:#38bdf8;">Repair &amp; Booking Pipeline (CRM)</p>
+              <div class="flex justify-between text-[9px] font-bold uppercase mb-2.5" style="color:rgba(255,255,255,0.4);">
+                <span>New Inquiry</span><span>Booked</span><span>Ready</span>
+              </div>
+              <div class="grid grid-cols-3 gap-1.5 mb-4">
+                <div class="rounded-lg p-2" style="background:#1a2540;"><div class="rounded" style="background:rgba(56,189,248,0.5); height:5px; width:100%; margin-bottom:4px;"></div><div class="rounded" style="background:rgba(56,189,248,0.5); height:5px; width:70%;"></div></div>
+                <div class="rounded-lg p-2" style="background:#1a2540;"><div class="rounded" style="background:rgba(56,189,248,0.5); height:5px; width:100%;"></div></div>
+                <div class="rounded-lg p-2" style="background:#1a2540;"><div class="rounded" style="background:#4ade80; height:5px; width:100%; margin-bottom:4px;"></div><div class="rounded" style="background:#4ade80; height:5px; width:60%;"></div></div>
+              </div>
+              <p class="text-lg font-extrabold" style="color:#fff;">4 new inquiries <span style="color:#4ade80; font-size:11px; font-weight:700;">this week</span></p>
+              <p class="text-[10px] mt-1.5" style="color:rgba(255,255,255,0.4);">3 auto-scheduled by the AI assistant above, zero missed follow-ups.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative px-6 py-16 text-center" style="min-height:220px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+          <img src="https://images.unsplash.com/photo-1587582423116-ec07293f0395?auto=format&fit=crop&w=1400&q=80" alt="" class="absolute inset-0 w-full h-full object-cover" style="opacity:0.22;" />
+          <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(90,34,16,0.92) 0%, rgba(15,8,4,0.97) 100%);"></div>
+          <div class="relative z-[1]">
+            <div class="font-bold text-xl mb-2.5" style="color:#fff; font-family: Georgia, serif;">Ready when you are</div>
+            <p class="text-xs mb-6" style="color:rgba(255,255,255,0.8);">250 Moul Rd, Hilton, NY · By appointment</p>
+            <span class="inline-block px-7 py-3 rounded-full text-sm font-bold" style="background:#fff; color:#5a2210;">Book an Appointment</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <p class="reveal text-xs mt-4 leading-relaxed max-w-2xl mx-auto text-center" style="color: var(--faint);">This is a real draft, not a mockup template — the copy, services, and address are pulled from what's actually true about your shop. Only "what musicians say" and the AI/CRM panel are illustrative (clearly marked) — everything else is what I'd actually ship. The AI assistant and pipeline are optional add-ons, not part of the base site.</p>
+  </section>
+
+  <section class="relative max-w-3xl mx-auto px-6 pb-24" style="z-index:1;">
+    <div class="reveal card rounded-3xl p-10 md:p-14">
+      <p class="eyebrow mb-5">The Single Biggest Opportunity</p>
+      <h2 class="editorial text-2xl md:text-3xl mb-6 leading-snug">Delete the leftover "sample-page" slug and 301-redirect every duplicate into one canonical page.</h2>
+      <p class="leading-relaxed mb-10 text-sm md:text-base" style="color: var(--muted);">You've got real, substantive content about violin making and repair — it just needs to live at one address instead of two, with the default WordPress placeholder slug cleaned up entirely. That's a quick technical fix that stops your own pages from competing with each other in search.</p>
+      <div class="grid sm:grid-cols-3 gap-5 text-center">
+        <div class="hairline-top pt-5">
+          <div class="editorial text-4xl accent mb-1" style="font-weight:400;">2</div>
+          <div class="text-xs" style="color: var(--faint);">pages duplicated across old &amp; new URLs</div>
+        </div>
+        <div class="hairline-top pt-5">
+          <div class="editorial text-4xl accent mb-1" style="font-weight:400;">1</div>
+          <div class="text-xs" style="color: var(--faint);">leftover default "sample-page" slug</div>
+        </div>
+        <div class="hairline-top pt-5">
+          <div class="editorial text-4xl accent mb-1" style="font-weight:400;">1 wk</div>
+          <div class="text-xs" style="color: var(--faint);">to consolidate and redirect</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative max-w-3xl mx-auto px-6 pb-24" style="z-index:1;">
+    <p class="eyebrow reveal mb-10">What I'd Fix In The First 2 Weeks</p>
+    <ol class="space-y-0">
+      <li class="reveal hairline-top py-5 flex gap-5 items-baseline"><span class="editorial accent text-2xl" style="font-weight:400;">01</span><span class="text-sm md:text-base leading-relaxed" style="color: var(--muted);">301-redirect /sample-page/ into /violin-making, and the old .html interesting-fiddle-stuff page into its current URL.</span></li>
+      <li class="reveal hairline-top py-5 flex gap-5 items-baseline"><span class="editorial accent text-2xl" style="font-weight:400;">02</span><span class="text-sm md:text-base leading-relaxed" style="color: var(--muted);">Add LocalBusiness schema markup so Google can show hours-by-appointment and rich results.</span></li>
+      <li class="reveal hairline-top py-5 flex gap-5 items-baseline"><span class="editorial accent text-2xl" style="font-weight:400;">03</span><span class="text-sm md:text-base leading-relaxed" style="color: var(--muted);">Rewrite page titles around "violin repair Hilton NY" and "luthier Rochester NY" instead of generic slugs.</span></li>
+      <li class="reveal hairline-top py-5 flex gap-5 items-baseline"><span class="editorial accent text-2xl" style="font-weight:400;">04</span><span class="text-sm md:text-base leading-relaxed" style="color: var(--muted);">Pull in and display real Google reviews on the homepage.</span></li>
+      <li class="reveal hairline-top py-5 flex gap-5 items-baseline"><span class="editorial accent text-2xl" style="font-weight:400;">05</span><span class="text-sm md:text-base leading-relaxed" style="color: var(--muted);">Submit a fresh XML sitemap so Google recrawls the consolidated structure quickly.</span></li>
+    </ol>
+  </section>
+
+  <section class="relative max-w-3xl mx-auto px-6 pb-24" style="z-index:1;">
+    <p class="eyebrow reveal mb-10">Before You Book — A Few Things</p>
+    <div class="space-y-0">
+      <div class="reveal hairline-top py-6">
+        <h3 class="font-semibold text-base mb-1.5">Do I need to sign a contract?</h3>
+        <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">No. You pay for the work you want done — no retainer required to start, no long-term lock-in.</p>
+      </div>
+      <div class="reveal hairline-top py-6">
+        <h3 class="font-semibold text-base mb-1.5">How long does something like this actually take?</h3>
+        <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">The fixes above are a 2-week turnaround. Bigger rebuilds take longer — I'll give you a real timeline on the call, not a guess.</p>
+      </div>
+      <div class="reveal hairline-top py-6">
+        <h3 class="font-semibold text-base mb-1.5">Do I have to switch hosts or platforms?</h3>
+        <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">No — I can work with what you already have. Migrating platforms is only ever your call, never a requirement to work together.</p>
+      </div>
+      <div class="reveal hairline-top py-6">
+        <h3 class="font-semibold text-base mb-1.5">What if I don't like the direction?</h3>
+        <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">Then we don't proceed. The call is a walkthrough, not a close — you decide afterward, no pressure either way.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative max-w-3xl mx-auto px-6 pb-24 text-center" style="z-index:1;">
+    <div class="reveal card rounded-3xl p-10 md:p-16">
+      <h2 class="editorial text-2xl md:text-3xl mb-4">Want to see exactly what this looks like for your shop?</h2>
+      <p class="mb-6 text-sm md:text-base max-w-md mx-auto" style="color: var(--muted);">Book a free 30-minute call with Gabriel. No pitch — just a walkthrough of what I'd do and what you could expect.</p>
+      <p class="mb-10 text-xs max-w-sm mx-auto" style="color: var(--faint);">I'm a solo consultant, not an agency — I build and deploy everything myself on GitHub and Vercel, so what you see on this page is exactly the kind of work you'd get, no account managers in between. No contract, no retainer required to start.</p>
+      <a href="https://calendly.com/gabrielbalenton/30min" target="_blank" rel="noopener" class="btn-primary inline-block px-9 py-4">
+        Book a Free Strategy Call →
+      </a>
+    </div>
+  </section>
+
+  <section class="relative max-w-3xl mx-auto px-6 pb-24" style="z-index:1;">
+    <p class="eyebrow reveal mb-10">Or Send A Message</p>
+    <form class="reveal space-y-5" onsubmit="return false;">
+      <div>
+        <label class="block text-xs mb-2" style="color: var(--faint);">Your name</label>
+        <input type="text" placeholder="Your name" class="w-full rounded-lg px-4 py-3.5 text-sm" />
+      </div>
+      <div>
+        <label class="block text-xs mb-2" style="color: var(--faint);">Email address</label>
+        <input type="email" placeholder="wallindependent@rochester.rr.com" class="w-full rounded-lg px-4 py-3.5 text-sm" />
+      </div>
+      <div>
+        <label class="block text-xs mb-2" style="color: var(--faint);">Message</label>
+        <textarea rows="4" placeholder="I'd like to learn more about..." class="w-full rounded-lg px-4 py-3.5 text-sm"></textarea>
+      </div>
+      <button type="submit" class="btn-outline w-full py-4 rounded-lg">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="relative hairline-top px-6 py-8 text-center text-xs max-w-6xl mx-auto" style="color: var(--faint); z-index:1;">
+    This audit was prepared by <strong style="color: var(--muted);">Gabriel Balenton</strong> at Organic Theory.
+    <a href="https://organic-theory.vercel.app" class="accent hover:opacity-80 ml-1">organic-theory.vercel.app</a>
+  </footer>
+
+  <script>
+    (function() {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) { els.forEach(function(e){ e.classList.add('in'); }); return; }
+      var io = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+      els.forEach(function(e) { io.observe(e); });
+    })();
+  </script>
+
+</body>
+</html>

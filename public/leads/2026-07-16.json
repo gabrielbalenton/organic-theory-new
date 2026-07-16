@@ -60,6 +60,30 @@
       "email_body": "Hi,\n\nI was looking at antique clock restorers in the MetroWest area and noticed something on Hills Antique Clocks' site - Google's index shows two separate, live contact pages: the old contactus.html and a newer index.php/contact-2/. The same thing shows up elsewhere too - old static pages like Tallclocks.html and Recentrestoration.html sit next to a completely different index.php-based structure, which looks like a leftover from a past site migration that never got fully cleaned up.\n\nI put together a page showing what a consolidated site would look like, along with the rest of your site rebuilt around your real credentials:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-hills-antique-clocks.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since a \"Best Antique Store\" award and clients like the Boston Old North Church deserve one clean site instead of two competing versions.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "hillsclockrepair@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "WallIndependent",
+      "website": "https://wallindependent.com/",
+      "industry": "Violin & Viola Repair, Restoration & Making (Luthier)",
+      "issues": "Google's index shows your violin-making content living at two separate URLs at once: wallindependent.com/violin-making and wallindependent.com/sample-page/ - the second is WordPress's default, never-renamed placeholder slug, still carrying real content instead of being deleted or redirected. The same duplication shows up again with your 'Interesting Fiddle Stuff' content, indexed at both the old wallindependent.com/interesting-fiddle-stuff.html (non-www, static) and the current wallindependent.com/interesting-fiddle-stuff/.",
+      "opportunity": "Redirecting the leftover /sample-page/ and the old .html URL into their current canonical pages is roughly a one-week fix. Expected within 30 days: one page per topic instead of two competing for the same ranking signal, and a site that no longer has a page still labeled with WordPress's out-of-the-box placeholder name.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-wallindependent.html",
+      "email_subject": "One of your pages is still called \"sample-page\"",
+      "email_body": "Hi,\n\nI was looking at independent violin repair shops around Rochester and found WallIndependent - I noticed something on your site though. Google's index shows your violin-making content at two different URLs: wallindependent.com/violin-making and wallindependent.com/sample-page/ - that second one is WordPress's default placeholder slug, still live with real content instead of being renamed or redirected. The same thing happens with your \"Interesting Fiddle Stuff\" page, indexed at both an old .html URL and the current one.\n\nI put together a page showing what a consolidated site would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-wallindependent.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since real technical write-ups on repairs deserve one clean URL instead of splitting search credit with a leftover default page.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "wallindependent@rochester.rr.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Chicago Knife Center",
+      "website": "https://chicagoknifecenter.com/",
+      "industry": "Professional Knife & Equipment Sharpening / Restoration",
+      "issues": "A direct search of everything Google has indexed for chicagoknifecenter.com - and separate targeted searches for your restoration services and West Fulton Market location - return only your homepage. None of your other real, specific offerings (three named restoration finishes: Standard, Fine Finish, Collector's Finish; commercial kitchen accounts across Chicago's culinary district) are surfacing as their own indexed pages that could rank independently.",
+      "opportunity": "Building dedicated pages for sharpening, restoration, and commercial kitchen accounts - each targeting its own search terms - is roughly a 2-week build. Expected within 30 days: separate pages that can each rank for their own searches (\"knife restoration Chicago,\" \"commercial kitchen sharpening West Fulton Market\") instead of every service competing for the same single homepage slot.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-chicago-knife-center.html",
+      "email_subject": "Google only has one page of yours indexed",
+      "email_body": "Hi Nicholas,\n\nI was looking at knife sharpening services in West Fulton Market and found Chicago Knife Center. One thing I noticed - a search of everything Google has indexed for your site turns up only your homepage. Your restoration finishes (Standard, Fine Finish, Collector's Finish) and your commercial kitchen account work don't have their own pages, so there's nothing specific for a search like \"knife restoration Chicago\" or \"commercial kitchen sharpening\" to match against.\n\nI put together a page showing what dedicated service pages would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-chicago-knife-center.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since three real restoration tiers and commercial kitchen partnerships across Chicago deserve pages of their own.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "sharpen@chicagoknifecenter.com",
+      "sent_automatically": false
     }
   ]
 }
