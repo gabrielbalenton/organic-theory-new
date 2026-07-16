@@ -204,6 +204,42 @@
       "email_body": "Hi,\n\nI came across Taylors of Bruton while looking into independent bakeries in Somerset - three generations, since 1945, vans still out delivering six days a week, that's the real thing. One thing I noticed on your site: there's still a live, indexed page titled \"Retailers During the Coronavirus Pandemic\" from what looks like 2020/2021, sitting right alongside your current pages. There's also an old, undated newsletter post (\"Back to some markets from today!!\") with no publish date visible - together they make an 80-year-old, very-much-active bakery look like the website's been left alone since the pandemic.\n\nI put together a page showing what a refreshed version could look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-taylors-of-bruton.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought seven decades of craft baking deserved a website that looks as current as the vans on the road.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@taylorsofbruton.co.uk",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Rainbow Upholstery",
+      "website": "https://www.rainbow-upholstery.com/",
+      "industry": "Custom Furniture Upholstery & Reupholstery",
+      "issues": "Google's index shows two entirely separate, live domains for the same shop - rainbow-upholstery.com and rainbowonwest.com - both carrying the exact same title, word for word: \"Furniture Upholstery | Wake Forest, NC | 919-829-1332.\" On top of that, the site's own service pages for Wake Forest, Raleigh, Durham, and Morrisville all follow the same templated title pattern with only the city swapped in (e.g. \"Upholstery Services | Wake Forest, NC | 919-829-1332\" vs \"Custom Upholstery | Raleigh, NC | Rainbow Upholstery\"), reading as auto-generated rather than written for each area.",
+      "opportunity": "Picking one canonical domain and 301-redirecting the other, then rewriting the four city pages with real, distinct local content, is roughly a 1-2 week fix. Expected within 30 days: all the ranking signal for \"upholstery Wake Forest\" and similar searches consolidated on one domain instead of split across two competing URLs, and city pages that read as genuinely local instead of a swapped-in city name.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-rainbow-upholstery.html",
+      "email_subject": "You've got two websites for the same shop",
+      "email_body": "Hi,\n\nI was looking at upholstery shops around Wake Forest and came across Rainbow Upholstery - 40+ years in the same family is a great story. One thing I noticed though: Google's index shows two separate, live websites for the shop - rainbow-upholstery.com and rainbowonwest.com - both carrying the identical title \"Furniture Upholstery | Wake Forest, NC | 919-829-1332.\" Same business, two competing listings. I also noticed the Wake Forest, Raleigh, Durham, and Morrisville pages all use the same templated title with just the city swapped in.\n\nI put together a page showing what a consolidated site would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-rainbow-upholstery.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 40+ years as the Triangle's oldest custom shop deserves one site collecting all the credit instead of two splitting it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "quotes@rainbowonwest.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Dakota Awards & Engraving",
+      "website": "https://www.dakotaawardsandengraving.com/",
+      "industry": "Custom Trophies, Awards & Engraving",
+      "issues": "Google has two completely separate, live websites indexed under the \"Dakota Awards & Engraving\" name: dakotaawardsandengraving.com, the current templated marketing site, and dakotaawards.com, an entirely different, older shopping-cart-style catalog with URLs like /awards/sales-awards/svzsPC7LFt20r1/. Separately, the current site's own city pages for Burnsville, Farmington, Cottage Grove, and Shakopee all carry the identical title pattern \"Trophy and Award Shop | [City], MN | 651-322-1000,\" differing only by city name.",
+      "opportunity": "Migrating the old catalog's products into the current site and redirecting the legacy domain, then rewriting the four city pages with real local content, is roughly a 2-3 week fix given the catalog migration. Expected within 30 days: one authoritative site collecting the search credit that's currently split across two disconnected domains, and city pages that read as locally written instead of templated.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-dakota-awards-engraving.html",
+      "email_subject": "Your trophy shop has two different websites",
+      "email_body": "Hi,\n\nI was looking at trophy and engraving shops around Rosemount and found Dakota Awards & Engraving - 20+ years in Dakota County is a real trust signal. One thing I noticed: Google has two completely separate, live websites under your name - dakotaawardsandengraving.com, your current site, and dakotaawards.com, an entirely different older catalog site with cart-style URLs. Same business, two disconnected sites splitting your search authority. I also noticed your Burnsville, Farmington, Cottage Grove, and Shakopee pages all use the identical title pattern with just the city swapped.\n\nI put together a page showing what a consolidated site would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-dakota-awards-engraving.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since two decades serving Dakota County deserves one site instead of two competing for the same searches.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "awards@dakotaawards.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Monograms by Jane",
+      "website": "https://monogramsbyjane.com/",
+      "industry": "Custom Embroidery, Monogramming & Patches",
+      "issues": "Google's index shows the homepage title as literally \"Home - Monograms by Jane\" - no mention of embroidery, monogramming, patches, or Colorado Springs anywhere in it. That's notable because the site's own Services page is indexed with a proper keyword-rich title, \"Services We Offer - Monograms by Jane-Custom Embroidery for Colorado Springs area,\" proving the pattern already exists on the site - it's just missing from the homepage, the single page most likely to get the click on a brand-name search.",
+      "opportunity": "Rewriting just the homepage title tag and meta description to match the keyword pattern already used correctly on the Services page is a same-day fix. Expected within 30 days: homepage results for \"embroidery Colorado Springs\" and \"monogramming Colorado Springs\" that actually surface service and location, consistent with how the rest of the site already ranks.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-monograms-by-jane.html",
+      "email_subject": "Your homepage title just says \"Home\"",
+      "email_body": "Hi Jane,\n\nI was looking at embroidery shops around Colorado Springs and found Monograms by Jane - 40+ years in business is a real differentiator. One thing I noticed: Google's index shows your homepage title as literally \"Home - Monograms by Jane,\" with no mention of embroidery, monogramming, or Colorado Springs. What's interesting is your own Services page already has a proper title - \"Services We Offer - Monograms by Jane-Custom Embroidery for Colorado Springs area\" - so the pattern's already there, it's just missing from the page most people will actually click on first.\n\nI put together a page showing the fix:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-monograms-by-jane.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 40+ years serving Colorado Springs deserves a homepage title that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@monogramsbyjane.com",
+      "sent_automatically": false
     }
   ]
 }
