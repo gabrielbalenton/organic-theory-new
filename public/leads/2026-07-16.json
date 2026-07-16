@@ -108,6 +108,18 @@
       "email_body": "Hi,\n\nI was looking at wedding florists around Sligo and found Feehily's - 45 years trading in Carraroe since 1981 is a genuinely rare credential. One thing I noticed though: Google still has two pandemic-era posts indexed and live on your site - a 'Coronavirus (COVID-19) Update' page from 2020 referencing HSE/WHO guidance, and a separate 'delivering throughout lockdown' post - both still reachable six years later, right in the same news section a bride might browse before booking.\n\nI put together a page showing what it'd look like with those retired and your wedding/funeral pages leading instead:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-feehilys-florist.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 45 years of trust deserves a homepage that reads current in 2026.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@feehilys.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "City Locksmiths",
+      "website": "https://citylocksmiths.co.nz/",
+      "industry": "Locksmith Services (Residential, Commercial, Automotive)",
+      "issues": "Google has two separate, fully live and indexed websites for the same business: the current citylocksmiths.co.nz and an older WordPress site at citylocks.co.nz, both titled 'City Locksmiths,' both claiming the same 16 St Marks Road address and the same 'since 1959' history, and both still being crawled today. The two sites also list different phone numbers - citylocks.co.nz shows 09 524 0718 while the newer site's contact channel is 0800 80 30 10 - so a search for the business can land a customer on either domain with a different number to call, splitting both search authority and NAP consistency.",
+      "opportunity": "Picking one canonical domain and 301-redirecting the other (or unpublishing the old citylocks.co.nz entirely) is roughly a one-week fix. Expected within 30 days: one consistent domain and phone number for '65+ years' of Auckland locksmith history to rank under, instead of two competing sites splitting the same search credit and confusing which number to call.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-city-locksmiths.html",
+      "email_subject": "You actually have two City Locksmiths websites live",
+      "email_body": "Hi,\n\nI was looking at locksmiths around Auckland and noticed something about City Locksmiths - Google has two separate, fully indexed websites for the business right now: citylocksmiths.co.nz and an older site at citylocks.co.nz. Both say 'City Locksmiths,' both list 16 St Marks Road and the same history since 1959, but they show different phone numbers - 09 524 0718 on the old site versus 0800 80 30 10 on the newer one - so depending which one someone lands on from search, they might call a different number.\n\nI put together a page showing what a single consolidated site would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-city-locksmiths.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 65+ years as one of Auckland's largest private locksmiths deserves one clean site instead of two splitting the credit.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "theteam@citylocksmiths.co.nz",
+      "sent_automatically": false
     }
   ]
 }
