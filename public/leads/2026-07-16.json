@@ -240,6 +240,30 @@
       "email_body": "Hi Jane,\n\nI was looking at embroidery shops around Colorado Springs and found Monograms by Jane - 40+ years in business is a real differentiator. One thing I noticed: Google's index shows your homepage title as literally \"Home - Monograms by Jane,\" with no mention of embroidery, monogramming, or Colorado Springs. What's interesting is your own Services page already has a proper title - \"Services We Offer - Monograms by Jane-Custom Embroidery for Colorado Springs area\" - so the pattern's already there, it's just missing from the page most people will actually click on first.\n\nI put together a page showing the fix:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-monograms-by-jane.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 40+ years serving Colorado Springs deserves a homepage title that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@monogramsbyjane.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Heather Norman Hats",
+      "website": "https://heathernorman.co.uk/",
+      "industry": "Bespoke Millinery",
+      "issues": "Google has two live, separately indexed versions of the site: the current heathernorman.co.uk with clean URLs (/about/, /reviews/) and an older www.heathernorman.co.uk with legacy .html URLs (/about.html, /reviews.html) that's still fully crawled and indexed alongside it. External review sites split the same way — the Trustpilot listing points at the www/.html version while the current site lives at the clean non-www address — so ranking signal, links, and reviews are split across two competing versions of the same business instead of consolidated behind one.",
+      "opportunity": "A one-time 301 redirect from every old www/.html URL to its current equivalent, plus setting the canonical domain in Search Console, consolidates all of that split signal onto a single site. It's a redirect and configuration fix, not a content rewrite — realistic to implement within a week, with ranking and review consolidation showing up over the following month as Google re-crawls.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-heather-norman-hats.html",
+      "email_subject": "Two versions of heathernorman.co.uk are both live",
+      "email_body": "Hi Heather,\n\nI was looking into bespoke milliners in the Cotswolds and came across your work — lovely stuff. While I was there I noticed something worth flagging: Google actually has two separate versions of your site indexed right now. Your current site (heathernorman.co.uk/about/) and an older version (www.heathernorman.co.uk/about.html) are both still live and crawlable, and your Trustpilot listing even points at the old www version while your real site lives at the clean address. That splits your search ranking and your reviews across two competing URLs instead of one.\n\nIt's a quick fix — a set of redirects from the old pages to the new ones, plus telling Google which domain is canonical — and I put together a page showing exactly what I mean and what it'd look like sorted:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-heather-norman-hats.html\n\nYou can see how I work at https://organic-theory.vercel.app\n\nNo pressure at all — just thought it was worth pointing out for a business built on this much craft.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "Heather1norman@icloud.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Barker's Taxidermy Studio",
+      "website": "https://www.barkerstaxidermy.com/",
+      "industry": "Taxidermy & Wildlife Mounting",
+      "issues": "A site search of barkerstaxidermy.com turns up only two indexed pages — the homepage and a single services page — for a business that's been family-run in Lafayette since 1984. There's no gallery of finished mounts, no history/about page telling the founding story, and no additional Acadiana-area content, despite decades of work and reputation to draw on.",
+      "opportunity": "Building out a gallery page (organized by species) and a history/about page gives Google far more real, Lafayette-specific content to index and rank on for searches like \"taxidermist Lafayette LA,\" while also giving a first-time customer visual proof of quality before they hand over a trophy. Realistic 3-4 week build, no redesign required.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-barkers-taxidermy-studio.html",
+      "email_subject": "Your site only has 2 pages indexed on Google",
+      "email_body": "Hi Henry,\n\nI was looking at taxidermists around Lafayette and came across Barker's — forty years in business is no small thing. I checked how your site shows up on Google though, and right now only two pages are indexed: your homepage and the services page. There's no gallery of past mounts and no page telling the story of the studio since 1984, so Google (and a new customer sizing you up) doesn't have much to go on beyond one thin page.\n\nI put together a page showing what a gallery + history page build would look like and why it matters for search:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-barkers-taxidermy-studio.html\n\nYou can see how I work at https://organic-theory.vercel.app\n\nNo pressure at all — just thought forty years of work deserved more than two pages online.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "nchristlieb@hotmail.com",
+      "sent_automatically": false
     }
   ]
 }
