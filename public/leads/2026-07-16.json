@@ -1,0 +1,41 @@
+{
+  "date": "2026-07-16",
+  "leads": [
+    {
+      "business_name": "Hills Chimney Sweep",
+      "website": "https://www.hillschimneysweep.com.au/",
+      "industry": "Chimney Sweep & Flue Cleaning",
+      "issues": "The homepage's before/after proof section shows two photos labelled 'BEFORE' in a row and only one labelled 'AFTER,' so a visitor never actually sees a matched pair. Separately, image alt text across the site is just raw camera export file names ('IMG_7018_edited.png,' 'IMG_7013.HEIC,' 'IMG_6958.HEIC'), and the logo's alt text literally reads 'Untitled.' There's also no street address or LocalBusiness schema anywhere on the page, only a passing mention of being based in Bridgewater plus a list of the seven Adelaide Hills suburbs served.",
+      "opportunity": "Fixing the before/after layout into a real matched pair, replacing the file-name alt text with descriptive keyworded text, and adding full NAP + LocalBusiness schema for Bridgewater and the Hills suburbs are all same-week fixes. Expected within 30 days: better matching for 'chimney sweep Adelaide Hills' and 'chimney sweep Bridgewater' searches, plus a before/after section that actually builds trust with someone about to let a stranger into their roof space.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-hills-chimney-sweep.html",
+      "email_subject": "Your before/after photos on hillschimneysweep.com.au",
+      "email_body": "Hi,\n\nI was looking at chimney sweeps around the Adelaide Hills and landed on Hills Chimney Sweep's site. A couple things jumped out - your before/after section on the homepage has two 'BEFORE' photos and only one 'AFTER,' so it's hard to actually see the transformation you're pitching. I also noticed the photo alt text across the site is just the raw camera filenames (things like 'IMG_7018_edited.png' and 'IMG_6958.HEIC') instead of real descriptions, and your logo's alt text is literally 'Untitled' - that's invisible to Google Image Search and screen readers.\n\nI put together a page showing the fix and what it'd look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-hills-chimney-sweep.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging for a business covering as much of the Hills as you do.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "thehillssweep@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Dynamic Dance Company Inc.",
+      "website": "https://dynamicdancecompanyinc.com/",
+      "industry": "Dance Studio (Ballet, Jazz, Hip Hop, Acro)",
+      "issues": "The homepage's footer 'email us' link is coded as mailto:905-727-3535/dynamicdancecompanyinc@gmail.com - the phone number is jammed directly into the email address, so most phones and browsers can't open a valid compose window from it. The hero copy also repeats 'Welcome to Dynamic Dance Company Inc.' three times in a row as one run-on headline, and the entire welcome block (headline, 'Top choice dance school 2026' line, and CTA) appears twice down the page. On top of that, the homepage's meta description - the exact text Google shows in search results - contains a typo: 'offering recreational and competitive dances classes for ages 3 and up' instead of 'dance classes.'",
+      "opportunity": "Fixing the broken mailto link, removing the duplicated welcome block, and correcting the meta description typo are all same-week fixes. Expected within 30 days: parents who try to email from the footer actually reach the studio instead of hitting a dead link, and a homepage that leads with the real 'Top Choice Dance School 2026' win instead of repeated placeholder-style copy.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-dynamic-dance-company.html",
+      "email_subject": "Your footer email link is actually broken",
+      "email_body": "Hi,\n\nI was checking out dance studios around Aurora and came across Dynamic Dance Company - congrats on the Top Choice 2026 badge on your homepage. Two things I noticed while I was there: the footer's 'email us' link is actually broken - it's coded as mailto:905-727-3535/dynamicdancecompanyinc@gmail.com, so your phone number gets jammed into the email address and most phones/browsers can't open a compose window from it. Separately, the meta description Google shows for your homepage has a small typo - 'offering recreational and competitive dances classes for ages 3 and up' instead of 'dance classes.'\n\nI put together a page showing both fixes:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-dynamic-dance-company.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all - just didn't want a parent trying to email you from the footer to hit a dead end.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "dynamicdancecompanyinc@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Wendy & Tom Workshop",
+      "website": "https://wendytomworkshop.co.nz/",
+      "industry": "Bridal & Suit Tailoring / Alterations",
+      "issues": "The header displays the email 'wendytomworkshop@gmail.com' as clickable text, but the mailto link underneath it actually opens a compose window to a completely different address, 'info@wendytomworkshop.co.nz' - the two contact details on the site's own header disagree with each other. The homepage also still has a 'Contactless Services' section reading 'We are experiencing the NEW NORMAL. After the events of the last few weeks...' - leftover COVID-2020 copy still live on the site. On top of that, the homepage's hero slider text renders broken, repeating 'Wendy & Tom [BOOK AN APPOINTMENT] Wendy [BOOK AN APPOINTMENT] & Tom' several times instead of a clean headline.",
+      "opportunity": "Fixing the mismatched header mailto link, retiring the 2020 COVID copy, and fixing the broken slider text are all same-week fixes. Expected within 30 days: no more confusion between two different contact emails for a business built on bridal trust, and a homepage that reads current in 2026 instead of stuck six years in the past - while actually leading with the designer client list (Trelise Cooper, Astra Bridal) that's the real trust signal here.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-wendy-and-tom-workshop.html",
+      "email_subject": "Two different emails on your homepage",
+      "email_body": "Hi,\n\nI was looking at alterations specialists in Newmarket and found Wendy & Tom's site - working with names like Trelise Cooper and Astra Bridal is a great trust signal to have upfront. One thing I noticed: the email link in your header shows 'wendytomworkshop@gmail.com' but it's actually coded to open a compose window to a different address, 'info@wendytomworkshop.co.nz' - so the two don't match, which could send a bride's message somewhere you're not expecting. I also noticed the homepage still has a 'Contactless Services' section talking about 'the new normal' from the pandemic, which reads a bit dated in 2026.\n\nI put together a page on both fixes:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-wendy-and-tom-workshop.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure - just thought a bridal alterations business should have its contact details airtight.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "wendytomworkshop@gmail.com",
+      "sent_automatically": false
+    }
+  ]
+}
