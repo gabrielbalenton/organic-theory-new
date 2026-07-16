@@ -144,6 +144,30 @@
       "email_body": "Hi,\n\nI was looking at saddlers and country stores around the Top End and found The Top Saddlery - family owned since 1991, with your own saddler handcrafting Fender and Western saddles on site, is a real point of difference. One thing I noticed though: your homepage title reads \"The Top Saddlery | Country Clothing, Accessories & Horse Gear\" and your about page title is \"Welcome to The Top Saddlery and Bush Boutique\" - neither one mentions Katherine, NT, or the Top End, even though Visit Katherine's own tourism site sends people your way. A few of your product pages, like \"Products\" and \"Homewares,\" are also still on Shopify's generic default title instead of describing what's actually sold.\n\nI put together a page showing what it'd look like fixed, with your handcrafted-saddle story actually surfacing:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-top-saddlery.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a shop with a 4.6-star average across 64 reviews deserves search results that actually show it.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@topsaddlery.com.au",
       "sent_automatically": false
+    },
+    {
+      "business_name": "St. Kilian's Cheese Shop & Market",
+      "website": "https://stkilianscheeseshop.com/",
+      "industry": "Specialty Cheese Shop & Market",
+      "issues": "A direct Google search of everything indexed for the shop shows two separate, fully live domains: the current stkilianscheeseshop.com (a Shopify store) and an older WordPress installation at wp.stkilianscheeseshop.com, both titled 'St. Kilian's Cheese Shop & Market.' The old subdomain is still crawlable and still shows content indexed as recent as a May 2016 post, meaning it was never taken down or redirected when the shop moved to Shopify.",
+      "opportunity": "301-redirecting the old wp. subdomain into the current Shopify store is roughly a one-week fix. Expected within 30 days: the ranking signal built since 2001 consolidated onto one domain instead of splitting between a working online store and a decade-old WordPress leftover, and no chance of a customer landing on a version of the site that can't actually take an order.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-st-kilians-cheese-shop.html",
+      "email_subject": "You have two St. Kilian's websites still live",
+      "email_body": "Hi,\n\nI was looking at specialty cheese shops in the Denver Highlands and found St. Kilian's - 20+ years on Lowell Blvd is a rare thing these days. One thing I noticed though: Google has two separate, fully live and indexed websites for the shop - your current Shopify store at stkilianscheeseshop.com, and an older WordPress site at wp.stkilianscheeseshop.com that's still showing content going back to at least 2016. Both are titled \"St. Kilian's Cheese Shop & Market,\" so whatever ranking credit either one builds doesn't help the other.\n\nI put together a page showing what a consolidated site would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-st-kilians-cheese-shop.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since a shop with 78 reviews and two decades in the Highlands deserves one clean site instead of two splitting the credit.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "cheese@stkilianscheeseshop.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Aardvark Letterpress",
+      "website": "https://www.aardvarkletterpress.com/",
+      "industry": "Letterpress Printing (Wedding Invitations, Stationery, Fine Art)",
+      "issues": "Checking Google's index for aardvarkletterpress.com, most of the site's indexed pages - Our Team, FAQ, The Process, Weddings, Art, History, and Contact - all show as insecure http:// URLs, while only the homepage and the Services/Gallery page are indexed as https://. That's a site that never fully completed its move to HTTPS, so a browser can show a 'Not Secure' warning on most of the pages a couple or corporate client would actually click into before booking.",
+      "opportunity": "Forcing a site-wide HTTPS redirect and updating internal links is close to a same-week fix once hosting access is confirmed. Expected within 30 days: no more 'Not Secure' warnings on the Weddings, History, and Team pages that matter most to a new visitor, and a consistent HTTPS ranking signal across the whole site instead of just two pages.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-aardvark-letterpress.html",
+      "email_subject": "Most of your site loads as \"Not Secure\"",
+      "email_body": "Hi,\n\nI was looking at letterpress printers in LA and found Aardvark - three generations since 1968, with your grandson Enzo now on the team, is a genuinely rare story in this trade. One thing I noticed though: checking Google's index, most of your pages - Our Team, FAQ, The Process, Weddings, Art, History, Contact - are all indexed as insecure http:// links, while only your homepage and one services page load over https://. That means a browser can flag most of the pages a couple or corporate client would click through to as \"Not Secure,\" and Google can't credit the whole site with the same ranking signal it gives fully-secured sites.\n\nI put together a page showing what a fully-secured site would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-aardvark-letterpress.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a shop voted \"Best in Los Angeles\" with 89 Yelp reviews deserves a site that doesn't scare off half its visitors with a security warning.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@aardvarkletterpress.com",
+      "sent_automatically": false
     }
   ]
 }
