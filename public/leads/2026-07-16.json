@@ -36,6 +36,30 @@
       "email_body": "Hi,\n\nI was looking at alterations specialists in Newmarket and found Wendy & Tom's site - working with names like Trelise Cooper and Astra Bridal is a great trust signal to have upfront. One thing I noticed: the email link in your header shows 'wendytomworkshop@gmail.com' but it's actually coded to open a compose window to a different address, 'info@wendytomworkshop.co.nz' - so the two don't match, which could send a bride's message somewhere you're not expecting. I also noticed the homepage still has a 'Contactless Services' section talking about 'the new normal' from the pandemic, which reads a bit dated in 2026.\n\nI put together a page on both fixes:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-wendy-and-tom-workshop.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure - just thought a bridal alterations business should have its contact details airtight.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "wendytomworkshop@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Christman Music",
+      "website": "https://christmanmusic.com/",
+      "industry": "Musical Instrument Repair & Sales (Brass & Woodwind)",
+      "issues": "Checking Google's own index of the site, six separate pages - the homepage, Contact, About, About Craig, Repairs, and shop-online-accessories - all carry the exact same ~160-character title tag verbatim: 'Naples and Collier County's Finest Music Store for Musical Instrument Repairs, New & Used Band Instruments, Rentals, Accessories, Lessons, and Print Music.' That's roughly 2.5x longer than the ~60 characters Google actually displays, so it's truncated mid-sentence in every search result no matter which page ranks, and none of Craig's real credentials (University of Miami/FIU repair work, Naples Philharmonic soloist) ever make it into a title searchers can see.",
+      "opportunity": "Splitting that one repeated string into six page-specific, under-60-character titles is a same-day fix. Expected within 30 days: search results that actually differ by page, full (non-truncated) snippets, and titles that can finally surface the University of Miami/FIU and Naples Philharmonic credentials that set Craig apart from big-box music stores.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-christman-music.html",
+      "email_subject": "Your Contact page and homepage have the identical title",
+      "email_body": "Hi Craig,\n\nI was looking at instrument repair shops in Naples and noticed something on Christman Music's site - checking Google's index, your homepage, Contact page, About page, About Craig page, Repairs page, and shop page all carry the exact same title, word for word: \"Naples and Collier County's Finest Music Store for Musical Instrument Repairs, New & Used Band Instruments, Rentals, Accessories, Lessons, and Print Music.\" It's also about 2.5x longer than what Google actually shows, so it gets cut off mid-sentence in every result.\n\nI put together a page showing what page-specific titles would look like, along with the rest of your site rebuilt around your real credentials:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-christman-music.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since repairing instruments for University of Miami and FIU faculty deserves search results that actually say so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "christmanmusic@icloud.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Hills Antique Clocks",
+      "website": "https://www.hillsantiqueclockrepair.com/",
+      "industry": "Antique Clock Repair, Restoration & Sales",
+      "issues": "Google's index shows two separate, live contact pages for the same business: the old, non-www static hillsantiqueclockrepair.com/contactus.html and the newer hillsantiqueclockrepair.com/index.php/contact-2/. The same pattern repeats elsewhere - old static pages (Recentrestoration.html, Tallclocks.html) sit alongside a completely separate index.php/repairs/ and index.php/about-us/ structure, meaning two different site architectures from a past migration are both still crawlable and indexed at once.",
+      "opportunity": "Picking one canonical URL structure and 301-redirecting the leftover static .html pages into it is roughly a one-week fix. Expected within 30 days: search authority that's no longer split between duplicate pages, a cleaner crawl for Google, and visitors landing on one consistent page instead of whichever old or new version happens to be linked.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-hills-antique-clocks.html",
+      "email_subject": "Google has two different \"contact\" pages for your shop",
+      "email_body": "Hi,\n\nI was looking at antique clock restorers in the MetroWest area and noticed something on Hills Antique Clocks' site - Google's index shows two separate, live contact pages: the old contactus.html and a newer index.php/contact-2/. The same thing shows up elsewhere too - old static pages like Tallclocks.html and Recentrestoration.html sit next to a completely different index.php-based structure, which looks like a leftover from a past site migration that never got fully cleaned up.\n\nI put together a page showing what a consolidated site would look like, along with the rest of your site rebuilt around your real credentials:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-hills-antique-clocks.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since a \"Best Antique Store\" award and clients like the Boston Old North Church deserve one clean site instead of two competing versions.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "hillsclockrepair@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
