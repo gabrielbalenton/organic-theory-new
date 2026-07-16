@@ -84,6 +84,30 @@
       "email_body": "Hi Nicholas,\n\nI was looking at knife sharpening services in West Fulton Market and found Chicago Knife Center. One thing I noticed - a search of everything Google has indexed for your site turns up only your homepage. Your restoration finishes (Standard, Fine Finish, Collector's Finish) and your commercial kitchen account work don't have their own pages, so there's nothing specific for a search like \"knife restoration Chicago\" or \"commercial kitchen sharpening\" to match against.\n\nI put together a page showing what dedicated service pages would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-chicago-knife-center.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since three real restoration tiers and commercial kitchen partnerships across Chicago deserve pages of their own.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "sharpen@chicagoknifecenter.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "The Picture Framer Glasgow",
+      "website": "https://pictureframerglasgow.com/",
+      "industry": "Bespoke Picture Framing (Guild Commended)",
+      "issues": "Google's index shows two separate, live pages carrying almost word-for-word the same content: pictureframerglasgow.com/our-services/bespoke-framing and pictureframerglasgow.com/pages/bespoke-framing. Both describe the same five Fine Art Trade Guild framing levels (Museum, Conservation, Commended, Budget, Minimum) and the same bio for in-house framers Lorna and Archie - a legacy 'our-services' section sitting alongside a newer Shopify 'pages' structure, both still crawlable and indexed at once.",
+      "opportunity": "Picking one canonical URL and 301-redirecting the other is roughly a one-week fix. Expected within 30 days: all the ranking signal for 'bespoke picture framing Glasgow' consolidated on a single page instead of split between two, and Lorna and Archie's 25+ years of Guild Commended credentials surfacing clearly instead of being duplicated across competing URLs.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-picture-framer-glasgow.html",
+      "email_subject": "Two pages on your site say the same thing",
+      "email_body": "Hi,\n\nI was looking at bespoke framers in Glasgow and found The Picture Framer - great to see Lorna and Archie's Guild Commended credentials front and centre. One thing I noticed though: Google's index shows two separate, live pages with almost identical content - pictureframerglasgow.com/our-services/bespoke-framing and pictureframerglasgow.com/pages/bespoke-framing both describe the same five Fine Art Trade Guild framing levels and the same framer bios, word for word.\n\nI put together a page showing what a consolidated site would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-picture-framer-glasgow.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 25+ years of Guild Commended framing deserves one clean page instead of two splitting the credit.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@pictureframer-glasgow.co.uk",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Feehily's Florist",
+      "website": "https://www.feehilysflorist.com/",
+      "industry": "Florist (Weddings, Funerals, Corporate)",
+      "issues": "Two pandemic-era news posts are still live and indexed on the site in 2026: feehilysflorist.com/news-111, a 'Coronavirus (COVID-19) Update - Florists Still Delivering' page referencing HSE and WHO guidance and door-drop deliveries, and a separate feehilysflorist.com/news-124, 'Feehilys Florist delivering flowers and gifts throughout lockdown' - both dated 2020 content still crawlable six years later, sitting in the same news archive as the wedding and funeral pages a prospective client would browse.",
+      "opportunity": "Unpublishing or 301-redirecting both posts is a same-day fix. Expected within 30 days: a news archive that no longer contradicts the shop's 45 years of trading (since 1981) with leftover 2020 lockdown copy, and search results that lead with the wedding/funeral/corporate pages that actually earn bookings instead of a stale pandemic update.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-feehilys-florist.html",
+      "email_subject": "Your site still has a 2020 lockdown update live",
+      "email_body": "Hi,\n\nI was looking at wedding florists around Sligo and found Feehily's - 45 years trading in Carraroe since 1981 is a genuinely rare credential. One thing I noticed though: Google still has two pandemic-era posts indexed and live on your site - a 'Coronavirus (COVID-19) Update' page from 2020 referencing HSE/WHO guidance, and a separate 'delivering throughout lockdown' post - both still reachable six years later, right in the same news section a bride might browse before booking.\n\nI put together a page showing what it'd look like with those retired and your wedding/funeral pages leading instead:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-feehilys-florist.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 45 years of trust deserves a homepage that reads current in 2026.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@feehilys.com",
+      "sent_automatically": false
     }
   ]
 }
