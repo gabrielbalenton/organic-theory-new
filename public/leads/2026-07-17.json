@@ -1,0 +1,17 @@
+{
+  "date": "2026-07-17",
+  "leads": [
+    {
+      "business_name": "Ace Typewriter & Equipment Co",
+      "website": "https://acetypewriter.com/",
+      "industry": "Typewriter Sales, Service & Repair",
+      "issues": "A site search of everything Google has indexed for acetypewriter.com turns up only two pages: the homepage and a single blog post (\"Keyboard Deconstructed\"). There's no separately indexed About/History page telling the story of a shop that's been running continuously since 1961, and no dedicated Repair Services page describing what a manual typewriter evaluation or ink ribbon replacement actually involves — despite the homepage covering both topics. That leaves Google almost nothing specific to match against searches like \"typewriter repair Portland\" or \"manual typewriter service\" beyond one general-purpose homepage.",
+      "opportunity": "Splitting the homepage's existing About and Repair Services content into their own dedicated, indexable pages is a same-week fix that requires no new copywriting — just structuring what's already true about the shop. Expected within 30 days: separate pages that can each rank for their own searches (\"typewriter repair Portland,\" \"typewriter evaluation,\" \"buy manual typewriter Portland\") instead of 65 years of continuous operation competing for space on one thin homepage.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-17-ace-typewriter.html",
+      "email_subject": "Google only has 2 pages of yours indexed",
+      "email_body": "Hi,\n\nI was looking into typewriter shops around Portland and came across Ace Typewriter - 65 years in business since 1961 is a rare thing to find intact these days. I checked how the site shows up on Google though, and right now only two pages are indexed: your homepage and one blog post. There's no separate page for your history, and no dedicated page for what a repair evaluation or ribbon replacement actually involves - even though the homepage already covers both, just not in a form Google can index and rank on its own.\n\nI put together a page showing what dedicated About and Repair Services pages would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-17-ace-typewriter.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 65 years of keeping manual typewriters running deserved more than two pages online.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "acetypewriter@gmail.com",
+      "sent_automatically": false
+    }
+  ]
+}
