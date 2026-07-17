@@ -168,6 +168,30 @@
       "email_body": "Hi Doug,\n\nI came across Independent Overhead Doors while looking at family-run garage door companies in Arlington — 21 years and an A+ BBB rating is a real track record. I checked how the site shows up on Google though, and your homepage is the one page where the phone number in the title doesn't match itself: it reads \"817-6805169\" (no dash between 680 and 5169), while every other page on the site — About, Garage Door Openers, New Garage Doors, even Special Offers — correctly reads \"817-680-5169.\" It's a small thing, but the homepage is usually the first thing someone sees before they call.\n\nI put together a page showing what a consistent, fixed version could look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-17-independent-overhead-doors.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure either way — just thought 21 years of honest work deserved a homepage that reads as cleanly as the rest of the site.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "iodoors@sbcglobal.net",
       "sent_automatically": false
+    },
+    {
+      "business_name": "VA Shoe Clinic",
+      "website": "https://www.vashoeclinic.com/",
+      "industry": "Shoe, Boot & Leather Repair",
+      "issues": "Google indexes the homepage title as \"VA Shoe Clinic | Home | Tappahannock & Fredericksburg\" and the Contact Us page the same way — both omit Kilmarnock, the third of their three Virginia shops. Every other indexed page (Our Services, Shop, Our Brands) correctly reads \"Tappahannock, Kilmarnock, Fredericksburg.\" So the two pages a new customer is most likely to land on from a search don't mention the location closest to them.",
+      "opportunity": "This is a title-tag fix, not a rebuild — the correct three-location wording is already right on three other pages, it just needs to be copied onto the homepage and Contact Us page. Also a real opportunity to pull the 15 Yelp reviews (44 total across directories, 3.8 stars) onto the site itself, where they'd actually influence a visitor's decision.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-17-va-shoe-clinic.html",
+      "email_subject": "Kilmarnock is missing from your homepage title",
+      "email_body": "Hi there,\n\nI came across VA Shoe Clinic while looking at independent shoe repair shops in Virginia — three shops and over a decade in business is a real track record. I checked how the site shows up on Google though, and noticed your homepage and Contact Us page are titled \"Tappahannock & Fredericksburg\" only, leaving out Kilmarnock — even though your Our Services, Shop, and Our Brands pages all correctly list all three towns. Anyone searching \"shoe repair Kilmarnock\" is less likely to see your two most important pages at all.\n\nI put together a page showing what a consistent, fixed version could look like, plus a way to get your real Yelp reviews showing on your own site:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-17-va-shoe-clinic.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure either way — just thought three shops' worth of reputation deserved a homepage that mentions all three.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@vashoeclinic.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Master Framing",
+      "website": "https://masterframing.com.au/",
+      "industry": "Custom Picture Framing",
+      "issues": "Master Framing built a location-page strategy covering suburbs like Rose Bay, North Sydney, Double Bay, and Crows Nest — but the pages read as the same paragraph with the suburb name swapped in (each says some version of \"pickup and delivery to [suburb] and surrounding areas, plus courier delivery options\"), which is exactly the kind of near-duplicate content Google can choose to rank only one or two copies of. There's also a separate \"Locations\" page competing with the \"Areas We Serve\" page for the same search intent, and their strongest trust signal — family-owned in Bellevue Hill since 2000 — is on the About page instead of the homepage.",
+      "opportunity": "The location-page idea is already right; it just needs unique copy per suburb so Google treats each as its own page instead of a duplicate. Combined with leading the homepage with 25 years of family ownership, this plays directly against the big online framing chains on the trust angle they can't match.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-17-master-framing.html",
+      "email_subject": "Your Rose Bay and North Sydney pages read the same",
+      "email_body": "Hi there,\n\nI came across Master Framing while looking at independent custom framers around Sydney — family-owned in Bellevue Hill since 2000 is a real story. I checked how your suburb pages show up on Google though, and noticed the Rose Bay, North Sydney, and Double Bay pages all use close to the same sentence (\"pickup and delivery to [suburb] and surrounding areas, plus courier delivery options\") with just the suburb swapped in. Google tends to treat pages like that as duplicates and only rank one or two of them, which undercuts the whole idea of having a page per suburb.\n\nI put together a page showing what a fixed version could look like, leading with your 25 years instead of burying it on the About page:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-17-master-framing.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure either way — just thought 25 years of family craftsmanship deserved suburb pages that don't cancel each other out in search.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "framers@masterframing.com.au",
+      "sent_automatically": false
     }
   ]
 }
