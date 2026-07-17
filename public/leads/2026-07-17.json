@@ -12,6 +12,18 @@
       "email_body": "Hi,\n\nI was looking into typewriter shops around Portland and came across Ace Typewriter - 65 years in business since 1961 is a rare thing to find intact these days. I checked how the site shows up on Google though, and right now only two pages are indexed: your homepage and one blog post. There's no separate page for your history, and no dedicated page for what a repair evaluation or ribbon replacement actually involves - even though the homepage already covers both, just not in a form Google can index and rank on its own.\n\nI put together a page showing what dedicated About and Repair Services pages would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-17-ace-typewriter.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 65 years of keeping manual typewriters running deserved more than two pages online.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "acetypewriter@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Peculiar Knife Sharpening Service",
+      "website": "https://www.peculiarknifesharpening.com/",
+      "industry": "Knife & Blade Sharpening (mobile pickup/delivery)",
+      "issues": "A full Google index check for peculiarknifesharpening.com turns up only 2 pages: the homepage and an About page. There's no dedicated Pricing page, even though \"how much does knife sharpening cost\" is one of the first things a prospective customer searches before booking a pickup. There's also no page targeting Kansas City-specific search terms, despite the business explicitly serving the whole KC Metro on a pickup-and-delivery model.",
+      "opportunity": "Splitting out a Pricing page and a KC Metro service-area page from what Cliff already offers (kitchen, shop, and property tool sharpening with pickup/delivery) is a same-week fix requiring no new service to build — just structuring what's already true about the business so Google has something to match \"knife sharpening pricing\" and \"knife sharpening Kansas City\" against, instead of one general homepage doing all the work.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-17-peculiar-knife-sharpening.html",
+      "email_subject": "Your site's only showing Google 2 pages",
+      "email_body": "Hi Cliff,\n\nI came across Peculiar Knife Sharpening while looking into pickup-and-delivery sharpening services around the KC Metro — owner-operated, personal service is a rare thing to find in this trade these days. I checked how the site shows up on Google though, and right now only 2 pages are indexed: your homepage and the About page. There's no pricing page, so anyone searching \"how much does knife sharpening cost\" has nothing of yours to land on, and no page built around \"Kansas City\" search terms either even though that's your whole service area.\n\nI put together a page showing what a dedicated Pricing page and KC Metro service-area page would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-17-peculiar-knife-sharpening.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a real pickup-and-delivery service deserved more than two pages online.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "cliff@peculiarknifesharpening.com",
+      "sent_automatically": false
     }
   ]
 }
