@@ -156,6 +156,18 @@
       "email_body": "Hi Jeremy,\n\nI came across Furniture Plus & The Stripping Workshop while looking into furniture restoration shops in Worcester - 150 combined years of experience across your team is a rare thing to find in one shop. I checked how the site shows up on Google though, and your Locations/Hours page is indexed under the title \"Furnitureplusrepair\" - no spaces, no service, no location, just the domain run together. Separately, an old WordPress version of your site is still fully indexed with its own Home and Contact pages, a completely different address competing with your current site.\n\nI put together a page showing what fixed titles and a consolidated domain would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-17-furniture-plus.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure either way, just thought 150 years of combined restoration experience deserved page titles that actually say so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@furnitureplusrepair.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Independent Overhead Doors",
+      "website": "https://independentoverheaddoors.com/",
+      "industry": "Garage Door Sales, Installation & Repair",
+      "issues": "Google's indexed title for the homepage reads \"Independent Overhead Doors | Garage Door Repair | 817-6805169\" — missing the dash between 680 and 5169. Every other indexed page (About, Garage Door Openers, New Garage Doors, Special Offers, Commercial Overhead Door Repair) correctly reads \"817-680-5169.\" Separately, the About page — where the strongest story lives — is indexed under the generic title \"About Independent Overhead Doors | 817-680-5169,\" the same templated pattern as every service page, with no mention that Doug and Becky Holloway founded the company in 2004, run it on Christian values, or that it holds an A+ BBB rating.",
+      "opportunity": "Both fixes are title rewrites, not a rebuild — the correctly formatted number is already right on every other page, and the 21-year, family-run, A+ BBB story is already true and already showing up in Yelp and Nextdoor reviews. Expected within 2-3 weeks: one homepage that doesn't contradict itself on the phone number, and an About page that actually leads with 21 years of trust instead of hiding it behind a generic title.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-17-independent-overhead-doors.html",
+      "email_subject": "Your homepage title reads 817-6805169, not 817-680-5169",
+      "email_body": "Hi Doug,\n\nI came across Independent Overhead Doors while looking at family-run garage door companies in Arlington — 21 years and an A+ BBB rating is a real track record. I checked how the site shows up on Google though, and your homepage is the one page where the phone number in the title doesn't match itself: it reads \"817-6805169\" (no dash between 680 and 5169), while every other page on the site — About, Garage Door Openers, New Garage Doors, even Special Offers — correctly reads \"817-680-5169.\" It's a small thing, but the homepage is usually the first thing someone sees before they call.\n\nI put together a page showing what a consistent, fixed version could look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-17-independent-overhead-doors.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure either way — just thought 21 years of honest work deserved a homepage that reads as cleanly as the rest of the site.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "iodoors@sbcglobal.net",
+      "sent_automatically": false
     }
   ]
 }
