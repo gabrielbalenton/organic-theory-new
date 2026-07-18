@@ -84,6 +84,42 @@
       "email_body": "Hi,\n\nI was looking at bookbinders around Melbourne and came across Ariad Bookbinding - 25+ years and one of Australia's respected independent binderies is real, rare expertise. I checked how your site shows up on Google though, and your homepage's indexed title is literally \"Ariadbookbinding\" - no space between the two words. The same squished prefix shows up on your Contact and Products pages too.\n\nI put together a page showing the fix: https://organic-theory.vercel.app/leads/funnels/2026-07-18-ariad-bookbinding.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 25+ years of real craft deserved a title that actually spells your own name right.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@ariadbookbinding.com.au",
       "sent_automatically": false
+    },
+    {
+      "business_name": "HIBLER Taxidermy, Inc.",
+      "website": "https://www.hiblertaxidermy.com/",
+      "industry": "Taxidermy Studio & Wild Game Processing (Family Owned)",
+      "issues": "Google's index shows HIBLER Taxidermy's real homepage properly titled \"HIBLER Taxidermy, Inc. – Family owned & Operated since 1963,\" but it also shows a second, separate indexed page at hiblertaxidermy.com/home/hiblertaxidermy/ with the title just \"hiblertaxidermy\" — all lowercase, no punctuation, nothing that reads as a real business name. That's a duplicate copy of the homepage sitting under a nested URL, competing against the real homepage in Google's index instead of one authoritative page building all the ranking signal.",
+      "opportunity": "A single 301 redirect from the duplicate nested URL to the real homepage, plus a self-referencing canonical tag, consolidates 63 years of family-owned reputation onto one authoritative page — a same-week fix requiring no new content or design work.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-18-hibler-taxidermy.html",
+      "email_subject": "Google is showing a second, broken copy of your homepage",
+      "email_body": "Hi,\n\nI was looking into taxidermy studios in South Texas and came across HIBLER Taxidermy — family owned and operated since 1963 is a real, rare kind of trust to build with hunters. I checked how your site shows up on Google though, and found something odd: alongside your real, properly-titled homepage, there's a second indexed page at hiblertaxidermy.com/home/hiblertaxidermy/ with the title just \"hiblertaxidermy\" — all lowercase, no punctuation. It's a duplicate of your homepage sitting under a different URL, splitting the ranking signal your real site should be building on its own.\n\nI put together a page showing the fix: https://organic-theory.vercel.app/leads/funnels/2026-07-18-hibler-taxidermy.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 63 years of real craft deserved one clean homepage instead of a broken duplicate sitting next to it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "hibler.secretary@sbcglobal.net",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Canal Bait and Tackle",
+      "website": "https://www.canalbaitandtackle.com/",
+      "industry": "Fishing Tackle & Bait Shop (Family Owned)",
+      "issues": "Google's index shows two separate pages both titled \"Canal Tackle® - Canal Bait and Tackle\" live at once: canalbaitandtackle.com/canal-tackle/ and canalbaitandtackle.com/canal-tackle-1/ — the same product line indexed twice under different URLs, almost certainly a leftover from a past reorganization that never got redirected. Separately, blog.canalbaitandtackle.com is still indexed with posts from 2011 (e.g. \"Deadliness of a Heavy Shad\"), a disconnected subdomain that hasn't been folded into the current storefront in 15 years.",
+      "opportunity": "Redirecting the duplicate /canal-tackle-1/ page into /canal-tackle/ is a same-day fix. Migrating the still-relevant posts from the abandoned 2011 blog subdomain onto the main domain, and building a dedicated page around Bruce Miller's custom rod-building reputation, is a 2-3 week job that reclaims 15 years of orphaned content instead of leaving it stranded on a subdomain nobody maintains.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-18-canal-bait-and-tackle.html",
+      "email_subject": "Google has two \"Canal Tackle\" pages fighting each other",
+      "email_body": "Hi,\n\nI was looking at tackle shops around the Cape Cod Canal and came across Canal Bait and Tackle — 30 years family-run at the Sagamore Bridge since 1995, and Bruce being a master rod builder is a genuinely rare credential. I checked how your site shows up on Google though, and found two separate pages both titled \"Canal Tackle®\" live at once: /canal-tackle/ and /canal-tackle-1/ — same product, splitting your ranking signal. I also noticed blog.canalbaitandtackle.com is still indexed with posts from 2011, sitting on a disconnected subdomain that's never been folded into your current site.\n\nI put together a page showing the fix: https://organic-theory.vercel.app/leads/funnels/2026-07-18-canal-bait-and-tackle.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 30 years of real local trust deserved one clean page instead of two competing against each other.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "canalbait@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Cedar Valley Cheese Store",
+      "website": "https://cedarvalleycheesestore.com/",
+      "industry": "Specialty Cheese Shop & Factory Store (Family Owned)",
+      "issues": "Google's index shows cedarvalleycheesestore.com/contact-us/ with the title \"Organic Cheese in Belgium, WI | Cedar Valley Cheese Store\" — a title describing a product category, not a way to reach the business, suggesting every page gets the same \"[Category] in Belgium, WI\" title template regardless of actual content. Separately, Google indexes three different shopping paths at once: /shop-all/, /online-cheese-store/gift-boxes/, and a fully separate store.cedarvalleycheesestore.com subdomain — with no single one established as the canonical place to buy.",
+      "opportunity": "Rewriting the Contact page title (and auditing the rest for the same category-template mismatch) is a same-day fix. Picking one canonical shopping path between the two on-domain shop pages and the separate subdomain is a 2-3 week consolidation that turns a confusing three-way footprint into one clear path to purchase.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-18-cedar-valley-cheese-store.html",
+      "email_subject": "Your Contact page is indexed under the title \"Organic Cheese\"",
+      "email_body": "Hi,\n\nI was looking at specialty cheese shops in Wisconsin and came across Cedar Valley — 79 years in Belgium, WI since 1947 and five Wisconsin State Fair Seals of Excellence for your string cheese is real, checkable proof. I checked how your site shows up on Google though, and your Contact Us page is indexed with the title \"Organic Cheese in Belgium, WI\" — nothing about actually contacting you. It looks like every page might be getting the same category-style title regardless of what's on it. I also noticed three different shopping paths indexed at once: two pages on your main site plus a fully separate store subdomain.\n\nI put together a page showing the fixes: https://organic-theory.vercel.app/leads/funnels/2026-07-18-cedar-valley-cheese-store.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 79 years and five real State Fair awards deserved a Contact page that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "i8curds@cedarvalleycheesestore.com",
+      "sent_automatically": false
     }
   ]
 }
