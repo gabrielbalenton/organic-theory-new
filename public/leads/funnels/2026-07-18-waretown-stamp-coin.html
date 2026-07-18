@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ATX Family Dental — Growth Audit | Organic Theory</title>
-<meta name="description" content="A free growth audit for ATX Family Dental — what's holding your site back in search, and exactly what I'd fix first." />
+<title>Waretown Stamp & Coin — Growth Audit | Organic Theory</title>
+<meta name="description" content="A free growth audit for Waretown Stamp & Coin — what's holding your site back in search, and exactly what I'd fix first." />
 <link rel="icon" type="image/png" sizes="32x32" href="https://organic-theory.vercel.app/favicon-32x32.png">
 <link rel="apple-touch-icon" href="https://organic-theory.vercel.app/apple-touch-icon.png">
 <meta property="og:type" content="website" />
-<meta property="og:title" content="ATX Family Dental — Growth Audit | Organic Theory" />
-<meta property="og:description" content="A free growth audit for ATX Family Dental — what's holding your site back in search, and exactly what I'd fix first." />
+<meta property="og:title" content="Waretown Stamp & Coin — Growth Audit | Organic Theory" />
+<meta property="og:description" content="A free growth audit for Waretown Stamp & Coin — what's holding your site back in search, and exactly what I'd fix first." />
 <meta property="og:image" content="https://organic-theory.vercel.app/og-image.png" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="ATX Family Dental — Growth Audit | Organic Theory" />
-<meta name="twitter:description" content="A free growth audit for ATX Family Dental — what's holding your site back in search, and exactly what I'd fix first." />
+<meta name="twitter:title" content="Waretown Stamp & Coin — Growth Audit | Organic Theory" />
+<meta name="twitter:description" content="A free growth audit for Waretown Stamp & Coin — what's holding your site back in search, and exactly what I'd fix first." />
 <meta name="twitter:image" content="https://organic-theory.vercel.app/og-image.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +26,8 @@
     --muted: rgba(10,10,12,0.6);
     --faint: rgba(10,10,12,0.35);
     --hairline: rgba(10,10,12,0.09);
-    --accent: #0ea5e9;
-    --accent-soft: rgba(14,165,233,0.08);
+    --accent: #8A6D23;
+    --accent-soft: rgba(138,109,35,0.08);
     --display: 'Montserrat', sans-serif;
     --editorial: 'Cormorant Garamond', Georgia, serif;
   }
@@ -41,7 +41,6 @@
     position: relative;
     overflow-x: hidden;
   }
-  /* ambient glow */
   body::before {
     content: "";
     position: fixed;
@@ -92,7 +91,6 @@
   input:focus, textarea:focus { outline: none; border-color: var(--accent); }
   input::placeholder, textarea::placeholder { color: rgba(10,10,12,0.3); }
 
-  /* scroll reveal */
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s cubic-bezier(0.22,1,0.36,1), transform 0.9s cubic-bezier(0.22,1,0.36,1); }
   .reveal.in { opacity: 1; transform: translateY(0); }
   @media (prefers-reduced-motion: reduce) {
@@ -108,7 +106,7 @@
     user-select: none;
   }
 
-  ::selection { background: rgba(14,165,233,0.2); color: var(--fg); }
+  ::selection { background: rgba(138,109,35,0.2); color: var(--fg); }
   ::-webkit-scrollbar { width: 3px; }
   ::-webkit-scrollbar-track { background: transparent; }
   ::-webkit-scrollbar-thumb { background: rgba(10,10,12,0.15); border-radius: 2px; }
@@ -123,12 +121,12 @@
 
   <section class="relative max-w-3xl mx-auto px-6 pt-24 md:pt-32 pb-14 text-center" style="z-index:1;">
     <div class="reveal">
-      <div class="eyebrow inline-block mb-8">Growth Audit — ATX Family Dental</div>
+      <div class="eyebrow inline-block mb-8">Growth Audit — Waretown Stamp & Coin</div>
       <h1 class="editorial text-[2.6rem] sm:text-[3.6rem] md:text-[4.2rem] leading-[1.05] mb-8">
-        Your site reads like every other dentist in Austin<span class="accent">.</span>
+        Google is showing your business name with the last letter cut off<span class="accent">.</span>
       </h1>
       <p class="text-base md:text-lg leading-relaxed max-w-xl mx-auto" style="color: var(--muted);">
-        ATX Family Dental has real differentiators as an independent practice on S. 1st Street — but your homepage doesn't say any of them, and Google has nothing to index that would put you ahead of the corporate chains.
+        42 years serving Ocean County — since 1984 — and right now two of your own indexed pages read "Waretown Stamp & Coi" in search results. Not a typo you made, a template bug that's live in Google today.
       </p>
     </div>
   </section>
@@ -141,18 +139,18 @@
         <div class="relative flex items-start gap-5">
           <div class="text-lg mt-0.5" style="color:#f87171;">✗</div>
           <div>
-            <h3 class="font-semibold text-lg mb-1.5">No meta description on your homepage</h3>
-            <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">When someone searches "dentist Austin 78704," Google has nothing specific to show in the results snippet — it auto-generates one, usually poorly. That directly hurts your click-through rate before a visitor ever reaches your site.</p>
+            <h3 class="font-semibold text-lg mb-1.5">Your business name is cut off mid-word on two indexed pages</h3>
+            <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">Google's own index shows your "All Products" page titled "All Products | Waretown Stamp & Coi" and your "$100 Coin Grab Bag" product page titled "$100 Coin Grab Bag! | Waretown Stamp & Coi" — both missing the final "n" in "Coin." Your homepage title is fine, so this looks like a character-limit truncation bug in your store template that's clipping the site name mid-word on every inner page instead of just shortening it cleanly.</p>
           </div>
         </div>
       </div>
       <div class="reveal hairline-top py-8 relative overflow-hidden">
         <span class="ghost-num absolute -top-2 right-0 text-[100px] select-none">02</span>
         <div class="relative flex items-start gap-5">
-          <div class="text-lg mt-0.5" style="color:#f87171;">✗</div>
+          <div class="text-lg mt-0.5" style="color:#fbbf24;">⚠</div>
           <div>
-            <h3 class="font-semibold text-lg mb-1.5">No schema markup for your practice</h3>
-            <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">There's no structured data telling Google you're a dental practice with a specific address, hours, and services. You're invisible to rich results (star ratings, hours, "open now" badges) that corporate chains like Aspen Dental already show.</p>
+            <h3 class="font-semibold text-lg mb-1.5">Only 3 pages of your site are indexed by Google</h3>
+            <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">A full site search turns up just your homepage, one "All Products" category page, and a single product listing. There's no dedicated, indexable page for buying gold and silver, coin appraisal, or stamp collecting — the core things a customer in Ocean County would actually search for — so 42 years of real experience is riding on three thin pages.</p>
           </div>
         </div>
       </div>
@@ -161,18 +159,8 @@
         <div class="relative flex items-start gap-5">
           <div class="text-lg mt-0.5" style="color:#fbbf24;">⚠</div>
           <div>
-            <h3 class="font-semibold text-lg mb-1.5">Homepage copy doesn't say what makes you different</h3>
-            <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">The main line is "A healthy mouth is the cornerstone of overall physical wellness" — true, but generic. It could be any dental site in the country. Nothing tells a South Austin parent why to pick you over the practice two blocks away.</p>
-          </div>
-        </div>
-      </div>
-      <div class="reveal hairline-top py-8 relative overflow-hidden">
-        <span class="ghost-num absolute -top-2 right-0 text-[100px] select-none">04</span>
-        <div class="relative flex items-start gap-5">
-          <div class="text-lg mt-0.5" style="color:#fbbf24;">⚠</div>
-          <div>
-            <h3 class="font-semibold text-lg mb-1.5">No reviews or testimonials on the homepage</h3>
-            <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">As an independent practice, patient trust is your biggest asset against the corporate chains — but there's no social proof shown where new visitors actually land.</p>
+            <h3 class="font-semibold text-lg mb-1.5">"Waretown" and "Ocean County" don't appear in your product page titles</h3>
+            <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">Your homepage title does the location work correctly ("542 Route 9 c, Waretown, NJ, USA"), but the category and product titles that are actually indexed drop it entirely — so someone searching "coin dealer Waretown NJ" has a much thinner page competing for that search than they should.</p>
           </div>
         </div>
       </div>
@@ -191,29 +179,29 @@
         <p class="eyebrow mb-3" style="color: var(--faint);">Google — Today</p>
         <div class="bg-white rounded-2xl p-6 shadow-2xl" style="box-shadow: 0 20px 45px -18px rgba(10,10,12,0.18);">
           <div class="flex items-center gap-2 mb-1.5">
-            <div class="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center text-[9px] text-gray-500">A</div>
-            <span class="text-[13px] text-gray-700">atxfamilydental.com</span>
+            <div class="w-5 h-5 rounded-full bg-gray-200 flex items-center justify-center text-[9px] text-gray-500">W</div>
+            <span class="text-[13px] text-gray-700">waretowncoin.com</span>
           </div>
-          <div class="text-[19px] text-[#1a0dab] leading-snug mb-1">ATX Family Dental</div>
-          <div class="text-[13px] text-[#4d5156] leading-snug">A healthy mouth is the cornerstone of overall physical wellness. We are committed to providing quality dental care for the whole family in a comfortable...</div>
+          <div class="text-[19px] text-[#1a0dab] leading-snug mb-1">All Products | Waretown Stamp & Coi</div>
+          <div class="text-[13px] text-[#4d5156] leading-snug">Buying and selling coins, stamps, gold, silver, and collectibles in Ocean County since 1984.</div>
         </div>
-        <p class="text-[11px] mt-3" style="color: var(--faint);">↑ Auto-generated by Google. No rating, no hours, nothing that sets you apart.</p>
+        <p class="text-[11px] mt-3" style="color: var(--faint);">↑ Your real indexed title right now — cut off before the "n."</p>
       </div>
       <div>
         <p class="eyebrow mb-3">Google — After The Fix</p>
-        <div class="bg-white rounded-2xl p-6 shadow-2xl" style="box-shadow: 0 20px 45px -18px rgba(14,165,233,0.22);">
+        <div class="bg-white rounded-2xl p-6 shadow-2xl" style="box-shadow: 0 20px 45px -18px rgba(138,109,35,0.22);">
           <div class="flex items-center gap-2 mb-1.5">
-            <div class="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center text-[9px] text-blue-600">A</div>
-            <span class="text-[13px] text-gray-700">atxfamilydental.com</span>
+            <div class="w-5 h-5 rounded-full bg-yellow-100 flex items-center justify-center text-[9px]" style="color:#8A6D23;">W</div>
+            <span class="text-[13px] text-gray-700">waretowncoin.com</span>
           </div>
-          <div class="text-[19px] text-[#1a0dab] leading-snug mb-1">ATX Family Dental — South Austin Dentist, 78704</div>
+          <div class="text-[19px] text-[#1a0dab] leading-snug mb-1">Buy Gold, Silver & Coins — Waretown Stamp & Coin, Ocean County NJ</div>
           <div class="flex items-center gap-1 mb-1">
             <span class="text-[#fbbc04] text-[13px]">★★★★★</span>
-            <span class="text-[12px] text-gray-500">4.9 (128) · Open until 5:30 PM</span>
+            <span class="text-[12px] text-gray-500">Serving Ocean County since 1984</span>
           </div>
-          <div class="text-[13px] text-[#4d5156] leading-snug">Independent family dentistry on S. 1st Street. Same-week appointments, gentle care for kids and adults, and a team that actually remembers your name.</div>
+          <div class="text-[13px] text-[#4d5156] leading-snug">Family-run coin, stamp, gold and silver dealer at 542 Route 9, Waretown. Free appraisals, walk-ins welcome Wed-Sat.</div>
         </div>
-        <p class="text-[11px] mt-3 accent">↑ Targets "dentist South Austin 78704" and pulls your real reviews in via schema.</p>
+        <p class="text-[11px] mt-3 accent">↑ A complete, un-truncated title that finally targets "coin dealer Waretown NJ."</p>
       </div>
     </div>
 
@@ -223,88 +211,88 @@
         <span class="w-2.5 h-2.5 rounded-full bg-red-500/60"></span>
         <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/60"></span>
         <span class="w-2.5 h-2.5 rounded-full bg-green-500/60"></span>
-        <span class="ml-3 text-[11px]" style="color: var(--faint);">atxfamilydental.com</span>
+        <span class="ml-3 text-[11px]" style="color: var(--faint);">waretowncoin.com</span>
         <span class="ml-auto text-[10px] flex items-center gap-1 pr-1" style="color: rgba(250,250,250,0.2);">scroll ↓</span>
       </div>
       <div style="height:640px; overflow-y:auto; scroll-behavior:smooth; background:#fff; color:#1a1a1c; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;">
 
         <div class="flex items-center justify-between px-6 py-4 sticky top-0 z-10" style="background:rgba(255,255,255,0.85); backdrop-filter: blur(10px); border-bottom:1px solid #eee;">
-          <span class="font-bold text-sm tracking-tight" style="color:#0d9488; font-family: Georgia, serif;">ATX Family Dental</span>
+          <span class="font-bold text-sm tracking-tight" style="color:#8A6D23; font-family: Georgia, serif;">Waretown Stamp & Coin</span>
           <div class="hidden sm:flex gap-6 text-[11px] font-semibold uppercase tracking-wide" style="color:#666;">
-            <span>Services</span><span>About</span><span>Reviews</span><span>Contact</span>
+            <span>Buy Gold</span><span>Coins</span><span>Stamps</span><span>Contact</span>
           </div>
-          <span class="text-[11px] font-bold px-4 py-2 rounded-full" style="background:#0d9488; color:#fff;">Book Now</span>
+          <span class="text-[11px] font-bold px-4 py-2 rounded-full" style="background:#8A6D23; color:#fff;">Visit Us</span>
         </div>
 
         <div class="relative" style="min-height:420px;">
-          <img src="https://images.unsplash.com/photo-1677026010083-78ec7f1b84ed?auto=format&fit=crop&w=1400&q=80" alt="" class="absolute inset-0 w-full h-full object-cover" />
-          <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(13,148,136,0.2) 0%, rgba(5,20,18,0.75) 100%);"></div>
+          <img src="https://images.unsplash.com/photo-1587582423116-ec07293f0395?auto=format&fit=crop&w=1400&q=80" alt="" class="absolute inset-0 w-full h-full object-cover" />
+          <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(138,109,35,0.2) 0%, rgba(20,16,5,0.78) 100%);"></div>
           <div class="relative z-[1] flex flex-col items-center justify-center text-center px-6" style="min-height:420px;">
-            <div class="text-[11px] font-bold uppercase tracking-[0.25em] mb-4" style="color:rgba(255,255,255,0.85);">South Austin, 78704</div>
-            <h3 class="text-3xl md:text-4xl mb-4 leading-[1.1] max-w-md" style="color:#fff; font-family: Georgia, serif; font-weight:400;">South Austin's independent, family-first dental practice</h3>
-            <p class="text-sm mb-6 max-w-xs" style="color:rgba(255,255,255,0.85);">Same dentist every visit. Same-week appointments. No corporate scripts.</p>
+            <div class="text-[11px] font-bold uppercase tracking-[0.25em] mb-4" style="color:rgba(255,255,255,0.85);">Waretown, Ocean County, NJ</div>
+            <h3 class="text-3xl md:text-4xl mb-4 leading-[1.1] max-w-md" style="color:#fff; font-family: Georgia, serif; font-weight:400;">Ocean County's local coin, stamp, gold & silver dealer since 1984</h3>
+            <p class="text-sm mb-6 max-w-xs" style="color:rgba(255,255,255,0.85);">Free appraisals, honest offers, and a shop counter that isn't a call center.</p>
             <div class="flex items-center gap-2 mb-6">
               <span style="color:#fbbc04;" class="text-sm">★★★★★</span>
-              <span class="text-xs" style="color:rgba(255,255,255,0.8);">4.9 from 128 South Austin families</span>
+              <span class="text-xs" style="color:rgba(255,255,255,0.8);">42 years of local trust on Route 9</span>
             </div>
-            <span class="inline-block px-7 py-3 rounded-full text-sm font-bold transition-transform" style="background:#fff; color:#0d9488;">Book Your Visit</span>
+            <span class="inline-block px-7 py-3 rounded-full text-sm font-bold transition-transform" style="background:#fff; color:#8A6D23;">Get A Free Appraisal</span>
           </div>
         </div>
 
         <div class="px-6 py-14" style="background:#fbfaf7;">
-          <p class="text-center text-[11px] font-bold uppercase tracking-[0.2em] mb-8" style="color:#a89f8f;">Why South Austin families choose us</p>
+          <p class="text-center text-[11px] font-bold uppercase tracking-[0.2em] mb-8" style="color:#a89f8f;">Why Ocean County chooses us</p>
           <div class="grid sm:grid-cols-3 gap-5">
             <div class="rounded-2xl overflow-hidden" style="background:#fff; box-shadow: 0 12px 30px -12px rgba(0,0,0,0.12);">
-              <div style="height:130px; background-image:url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=500&q=80'); background-size:cover; background-position:center;"></div>
+              <div style="height:130px; background-image:url('https://images.unsplash.com/photo-85ZaYvfwdpw?auto=format&fit=crop&w=500&q=80'); background-size:cover; background-position:center;"></div>
               <div class="p-5 text-center">
-                <div class="font-bold text-sm mb-1.5">Same dentist, every visit</div>
-                <div class="text-xs leading-relaxed" style="color:#8a8a8a;">No rotating staff — you see the same face each appointment.</div>
+                <div class="font-bold text-sm mb-1.5">42 years, one location</div>
+                <div class="text-xs leading-relaxed" style="color:#8a8a8a;">Serving Ocean County from the same Route 9 shop since 1984 — not a chain, not a pop-up.</div>
               </div>
             </div>
             <div class="rounded-2xl overflow-hidden" style="background:#fff; box-shadow: 0 12px 30px -12px rgba(0,0,0,0.12);">
-              <div style="height:130px; background-image:url('https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&w=500&q=80'); background-size:cover; background-position:center;"></div>
+              <div style="height:130px; background-image:url('https://images.unsplash.com/photo-KrPulSdUetk?auto=format&fit=crop&w=500&q=80'); background-size:cover; background-position:center;"></div>
               <div class="p-5 text-center">
-                <div class="font-bold text-sm mb-1.5">Same-week appointments</div>
-                <div class="text-xs leading-relaxed" style="color:#8a8a8a;">Toothache today, seen this week — not next month.</div>
+                <div class="font-bold text-sm mb-1.5">Free, no-pressure appraisals</div>
+                <div class="text-xs leading-relaxed" style="color:#8a8a8a;">Bring in coins, stamps, gold or silver — walk out with an honest number, no obligation.</div>
               </div>
             </div>
             <div class="rounded-2xl overflow-hidden" style="background:#fff; box-shadow: 0 12px 30px -12px rgba(0,0,0,0.12);">
-              <div style="height:130px; background-image:url('https://images.unsplash.com/photo-1662837625421-5fd8ed6131a0?auto=format&fit=crop&w=500&q=80'); background-size:cover; background-position:center;"></div>
+              <div style="height:130px; background-image:url('https://images.unsplash.com/photo-1587582423116-ec07293f0395?auto=format&fit=crop&w=500&q=80&sat=-30'); background-size:cover; background-position:center;"></div>
               <div class="p-5 text-center">
-                <div class="font-bold text-sm mb-1.5">Gentle care, all ages</div>
-                <div class="text-xs leading-relaxed" style="color:#8a8a8a;">From a toddler's first checkup to a grandparent's crown.</div>
+                <div class="font-bold text-sm mb-1.5">Real collector, not a broker</div>
+                <div class="text-xs leading-relaxed" style="color:#8a8a8a;">Decades of hands-on philatelic and numismatic experience behind the counter.</div>
               </div>
             </div>
           </div>
         </div>
 
         <div class="grid sm:grid-cols-2" style="align-items:stretch;">
-          <div style="min-height:320px; background-image:url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80'); background-size:cover; background-position:center;"></div>
+          <div style="min-height:320px; background-image:url('https://images.unsplash.com/photo-KrPulSdUetk?auto=format&fit=crop&w=900&q=80'); background-size:cover; background-position:center;"></div>
           <div class="px-10 py-14 flex flex-col justify-center" style="background:#fff;">
             <p class="text-[11px] font-bold uppercase tracking-[0.2em] mb-4" style="color:#a89f8f;">Services</p>
             <div class="grid grid-cols-2 gap-3">
-              <div class="rounded-xl px-4 py-3.5 text-sm font-semibold text-center" style="background:#f0fdfa; color:#0d9488;">General Dentistry</div>
-              <div class="rounded-xl px-4 py-3.5 text-sm font-semibold text-center" style="background:#f0fdfa; color:#0d9488;">Pediatric Care</div>
-              <div class="rounded-xl px-4 py-3.5 text-sm font-semibold text-center" style="background:#f0fdfa; color:#0d9488;">Cosmetic Dentistry</div>
-              <div class="rounded-xl px-4 py-3.5 text-sm font-semibold text-center" style="background:#f0fdfa; color:#0d9488;">Emergency Care</div>
+              <div class="rounded-xl px-4 py-3.5 text-sm font-semibold text-center" style="background:#fdf6e3; color:#8A6D23;">Coin Appraisal</div>
+              <div class="rounded-xl px-4 py-3.5 text-sm font-semibold text-center" style="background:#fdf6e3; color:#8A6D23;">Stamp Collecting</div>
+              <div class="rounded-xl px-4 py-3.5 text-sm font-semibold text-center" style="background:#fdf6e3; color:#8A6D23;">Buy Gold & Silver</div>
+              <div class="rounded-xl px-4 py-3.5 text-sm font-semibold text-center" style="background:#fdf6e3; color:#8A6D23;">Jewelry Buying</div>
             </div>
           </div>
         </div>
 
         <div class="px-6 py-14" style="background:#fbfaf7;">
-          <p class="text-center text-[11px] font-bold uppercase tracking-[0.2em] mb-8" style="color:#a89f8f;">What patients say <span style="color:#c00;">*</span></p>
+          <p class="text-center text-[11px] font-bold uppercase tracking-[0.2em] mb-8" style="color:#a89f8f;">What customers say <span style="color:#c00;">*</span></p>
           <div class="grid sm:grid-cols-3 gap-5">
             <div class="rounded-2xl p-5" style="background:#fff; box-shadow: 0 12px 30px -12px rgba(0,0,0,0.1);">
               <div style="color:#fbbc04;" class="text-xs mb-3">★★★★★</div>
-              <p class="text-xs italic leading-relaxed" style="color:#666;">"Placeholder — real reviews get pulled in via schema once you connect your Google Business Profile."</p>
+              <p class="text-xs italic leading-relaxed" style="color:#666;">"Placeholder — real reviews get pulled in from your Google Business Profile once connected."</p>
             </div>
             <div class="rounded-2xl p-5" style="background:#fff; box-shadow: 0 12px 30px -12px rgba(0,0,0,0.1);">
               <div style="color:#fbbc04;" class="text-xs mb-3">★★★★★</div>
-              <p class="text-xs italic leading-relaxed" style="color:#666;">"Placeholder — same layout, your actual patient reviews would show here."</p>
+              <p class="text-xs italic leading-relaxed" style="color:#666;">"Placeholder — same layout, your actual customer reviews would show here."</p>
             </div>
             <div class="rounded-2xl p-5" style="background:#fff; box-shadow: 0 12px 30px -12px rgba(0,0,0,0.1);">
               <div style="color:#fbbc04;" class="text-xs mb-3">★★★★★</div>
-              <p class="text-xs italic leading-relaxed" style="color:#666;">"Placeholder — this section is what makes the trust case for a new visitor."</p>
+              <p class="text-xs italic leading-relaxed" style="color:#666;">"Placeholder — this section is what builds trust for a first-time visitor."</p>
             </div>
           </div>
           <p class="text-center text-[10px] mt-4" style="color:#b0b0b0;">* Illustrative layout only — I never fabricate real reviews. Yours would populate this automatically.</p>
@@ -312,70 +300,70 @@
 
         <div class="px-6 py-14" style="background:#0b1220;">
           <div class="text-center mb-3">
-            <span class="text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full" style="background:rgba(56,189,248,0.15); color:#38bdf8;">Beyond the website — if you ever want it</span>
+            <span class="text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded-full" style="background:rgba(202,164,66,0.15); color:#e0bf5f;">Beyond the website — if you ever want it</span>
           </div>
-          <p class="text-center font-bold text-lg mt-4 mb-2" style="color:#fff;">Never miss a lead again</p>
+          <p class="text-center font-bold text-lg mt-4 mb-2" style="color:#fff;">Never miss an appraisal request</p>
           <p class="text-center text-xs mb-8" style="color:rgba(255,255,255,0.5); max-width:26rem; margin-left:auto; margin-right:auto;">Two add-ons I can bolt onto this same site whenever you're ready — not part of the base build, just showing you what's possible.</p>
 
           <div class="grid sm:grid-cols-2 gap-5">
             <div class="rounded-2xl p-5" style="background:#111a2e; border:1px solid #1e293b;">
-              <p class="text-[10px] font-bold uppercase tracking-[0.2em] mb-4" style="color:#38bdf8;">AI Front Desk Assistant</p>
-              <div class="rounded-2xl rounded-bl-sm p-3.5" style="background:#0d9488; max-width:220px;">
-                <p class="text-[11px]" style="color:#fff;">Hi! Do you take walk-ins for a chipped tooth?</p>
+              <p class="text-[10px] font-bold uppercase tracking-[0.2em] mb-4" style="color:#e0bf5f;">AI Front Desk Assistant</p>
+              <div class="rounded-2xl rounded-bl-sm p-3.5" style="background:#8A6D23; max-width:220px;">
+                <p class="text-[11px]" style="color:#fff;">Do you buy old silver dollars? What's my grandfather's coin collection worth?</p>
               </div>
               <div class="rounded-2xl rounded-br-sm p-3.5 mt-2.5 ml-auto" style="background:#fff; max-width:240px;">
-                <p class="text-[11px]" style="color:#1a1a1c;">I can get you seen today. I have 2:30 or 4:15 open — which works better? I'll text a confirmation right after.</p>
+                <p class="text-[11px]" style="color:#1a1a1c;">Yes — free walk-in appraisals Wed-Sat. Bring the collection in, or send photos and I'll get you a ballpark today.</p>
               </div>
-              <p class="text-[10px] mt-4" style="color:rgba(255,255,255,0.4);">Answers, books, and reminds patients 24/7 — even when the front desk is on the other line.</p>
+              <p class="text-[10px] mt-4" style="color:rgba(255,255,255,0.4);">Answers, books, and reminds customers 24/7 — even when the counter is busy.</p>
             </div>
 
             <div class="rounded-2xl p-5" style="background:#111a2e; border:1px solid #1e293b;">
-              <p class="text-[10px] font-bold uppercase tracking-[0.2em] mb-4" style="color:#38bdf8;">Lead &amp; Patient Pipeline (CRM)</p>
+              <p class="text-[10px] font-bold uppercase tracking-[0.2em] mb-4" style="color:#e0bf5f;">Lead & Appraisal Pipeline (CRM)</p>
               <div class="flex justify-between text-[9px] font-bold uppercase mb-2.5" style="color:rgba(255,255,255,0.4);">
-                <span>New Inquiry</span><span>Scheduled</span><span>Confirmed</span>
+                <span>New Inquiry</span><span>Appraisal Set</span><span>Purchased</span>
               </div>
               <div class="grid grid-cols-3 gap-1.5 mb-4">
-                <div class="rounded-lg p-2" style="background:#1a2540;"><div class="rounded" style="background:rgba(56,189,248,0.5); height:5px; width:100%; margin-bottom:4px;"></div><div class="rounded" style="background:rgba(56,189,248,0.5); height:5px; width:70%;"></div></div>
-                <div class="rounded-lg p-2" style="background:#1a2540;"><div class="rounded" style="background:rgba(56,189,248,0.5); height:5px; width:100%;"></div></div>
+                <div class="rounded-lg p-2" style="background:#1a2540;"><div class="rounded" style="background:rgba(224,191,95,0.5); height:5px; width:100%; margin-bottom:4px;"></div><div class="rounded" style="background:rgba(224,191,95,0.5); height:5px; width:70%;"></div></div>
+                <div class="rounded-lg p-2" style="background:#1a2540;"><div class="rounded" style="background:rgba(224,191,95,0.5); height:5px; width:100%;"></div></div>
                 <div class="rounded-lg p-2" style="background:#1a2540;"><div class="rounded" style="background:#4ade80; height:5px; width:100%; margin-bottom:4px;"></div><div class="rounded" style="background:#4ade80; height:5px; width:60%;"></div></div>
               </div>
-              <p class="text-lg font-extrabold" style="color:#fff;">12 new inquiries <span style="color:#4ade80; font-size:11px; font-weight:700;">this week</span></p>
-              <p class="text-[10px] mt-1.5" style="color:rgba(255,255,255,0.4);">9 auto-scheduled by the AI assistant above, zero missed follow-ups.</p>
+              <p class="text-lg font-extrabold" style="color:#fff;">8 new inquiries <span style="color:#4ade80; font-size:11px; font-weight:700;">this week</span></p>
+              <p class="text-[10px] mt-1.5" style="color:rgba(255,255,255,0.4);">6 auto-scheduled by the AI assistant above, zero missed follow-ups.</p>
             </div>
           </div>
         </div>
 
         <div class="relative px-6 py-16 text-center" style="min-height:220px; display:flex; flex-direction:column; align-items:center; justify-content:center;">
-          <img src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&w=1400&q=80" alt="" class="absolute inset-0 w-full h-full object-cover" style="opacity:0.22;" />
-          <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(13,148,136,0.92) 0%, rgba(6,30,27,0.97) 100%);"></div>
+          <img src="https://images.unsplash.com/photo-85ZaYvfwdpw?auto=format&fit=crop&w=1400&q=80" alt="" class="absolute inset-0 w-full h-full object-cover" style="opacity:0.2;" />
+          <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(138,109,35,0.92) 0%, rgba(20,16,5,0.97) 100%);"></div>
           <div class="relative z-[1]">
             <div class="font-bold text-xl mb-2.5" style="color:#fff; font-family: Georgia, serif;">Ready when you are</div>
-            <p class="text-xs mb-6" style="color:rgba(255,255,255,0.8);">101 S. 1st St, Austin, TX · Open until 5:30 PM today</p>
-            <span class="inline-block px-7 py-3 rounded-full text-sm font-bold" style="background:#fff; color:#0d9488;">Book Your Visit</span>
+            <p class="text-xs mb-6" style="color:rgba(255,255,255,0.8);">542 Route 9, Waretown, NJ 08758 · (609) 693-1800</p>
+            <span class="inline-block px-7 py-3 rounded-full text-sm font-bold" style="background:#fff; color:#8A6D23;">Get A Free Appraisal</span>
           </div>
         </div>
 
       </div>
     </div>
-    <p class="reveal text-xs mt-4 leading-relaxed max-w-2xl mx-auto text-center" style="color: var(--faint);">This is a real draft, not a mockup template — the copy, differentiators, and address are pulled from what's actually true about your practice. Only "what patients say" and the AI/CRM panel are illustrative (clearly marked) — everything else is what I'd actually ship. The AI assistant and lead pipeline are optional add-ons, not part of the base site.</p>
+    <p class="reveal text-xs mt-4 leading-relaxed max-w-2xl mx-auto text-center" style="color: var(--faint);">This is a real draft, not a mockup template — the copy, differentiators, and address are pulled from what's actually true about your shop. Only "what customers say" and the AI/CRM panel are illustrative (clearly marked) — everything else is what I'd actually ship. The AI assistant and lead pipeline are optional add-ons, not part of the base site.</p>
   </section>
 
   <section class="relative max-w-3xl mx-auto px-6 pb-24" style="z-index:1;">
     <div class="reveal card rounded-3xl p-10 md:p-14">
       <p class="eyebrow mb-5">The Single Biggest Opportunity</p>
-      <h2 class="editorial text-2xl md:text-3xl mb-6 leading-snug">Add schema markup and real reviews, and rewrite the homepage around what's actually true about ATX Family Dental.</h2>
-      <p class="leading-relaxed mb-10 text-sm md:text-base" style="color: var(--muted);">Independent practices win on trust and personal care — right now your site doesn't make that case anywhere. Fixing the technical SEO gap plus the messaging gap together is what moves you up past the corporate chains in local search.</p>
+      <h2 class="editorial text-2xl md:text-3xl mb-6 leading-snug">Fix the truncated title bug, then give your core services their own pages.</h2>
+      <p class="leading-relaxed mb-10 text-sm md:text-base" style="color: var(--muted);">42 years of local trust is real proof — right now it's riding on three thin, partly broken pages. Fixing the title truncation and building dedicated pages for gold buying, coin appraisal, and stamp collecting turns a 3-page footprint into one that can actually compete for Ocean County searches.</p>
       <div class="grid sm:grid-cols-3 gap-5 text-center">
         <div class="hairline-top pt-5">
-          <div class="editorial text-4xl accent mb-1" style="font-weight:400;">+25-35%</div>
-          <div class="text-xs" style="color: var(--faint);">more "dentist near me" clicks</div>
+          <div class="editorial text-4xl accent mb-1" style="font-weight:400;">2</div>
+          <div class="text-xs" style="color: var(--faint);">broken titles fixed same-day</div>
         </div>
         <div class="hairline-top pt-5">
-          <div class="editorial text-4xl accent mb-1" style="font-weight:400;">100</div>
-          <div class="text-xs" style="color: var(--faint);">Lighthouse SEO score achievable</div>
+          <div class="editorial text-4xl accent mb-1" style="font-weight:400;">3+</div>
+          <div class="text-xs" style="color: var(--faint);">new indexable service pages</div>
         </div>
         <div class="hairline-top pt-5">
-          <div class="editorial text-4xl accent mb-1" style="font-weight:400;">2 wks</div>
+          <div class="editorial text-4xl accent mb-1" style="font-weight:400;">2-3 wks</div>
           <div class="text-xs" style="color: var(--faint);">to implement both fixes</div>
         </div>
       </div>
@@ -383,13 +371,13 @@
   </section>
 
   <section class="relative max-w-3xl mx-auto px-6 pb-24" style="z-index:1;">
-    <p class="eyebrow reveal mb-10">What I'd Fix In The First 2 Weeks</p>
+    <p class="eyebrow reveal mb-10">What I'd Fix In The First 2-3 Weeks</p>
     <ol class="space-y-0">
-      <li class="reveal hairline-top py-5 flex gap-5 items-baseline"><span class="editorial accent text-2xl" style="font-weight:400;">01</span><span class="text-sm md:text-base leading-relaxed" style="color: var(--muted);">Write a real meta description targeting "dentist South Austin 78704."</span></li>
-      <li class="reveal hairline-top py-5 flex gap-5 items-baseline"><span class="editorial accent text-2xl" style="font-weight:400;">02</span><span class="text-sm md:text-base leading-relaxed" style="color: var(--muted);">Add LocalBusiness + Dentist schema markup so Google can show hours, ratings, and rich results.</span></li>
-      <li class="reveal hairline-top py-5 flex gap-5 items-baseline"><span class="editorial accent text-2xl" style="font-weight:400;">03</span><span class="text-sm md:text-base leading-relaxed" style="color: var(--muted);">Rewrite the homepage hero around your actual differentiators — independent, personalized, S. 1st Street location.</span></li>
-      <li class="reveal hairline-top py-5 flex gap-5 items-baseline"><span class="editorial accent text-2xl" style="font-weight:400;">04</span><span class="text-sm md:text-base leading-relaxed" style="color: var(--muted);">Pull in and display real Google reviews on the homepage.</span></li>
-      <li class="reveal hairline-top py-5 flex gap-5 items-baseline"><span class="editorial accent text-2xl" style="font-weight:400;">05</span><span class="text-sm md:text-base leading-relaxed" style="color: var(--muted);">Add descriptive alt text to every banner and team image.</span></li>
+      <li class="reveal hairline-top py-5 flex gap-5 items-baseline"><span class="editorial accent text-2xl" style="font-weight:400;">01</span><span class="text-sm md:text-base leading-relaxed" style="color: var(--muted);">Fix the title-tag truncation so "Waretown Stamp & Coin" stops getting cut off mid-word.</span></li>
+      <li class="reveal hairline-top py-5 flex gap-5 items-baseline"><span class="editorial accent text-2xl" style="font-weight:400;">02</span><span class="text-sm md:text-base leading-relaxed" style="color: var(--muted);">Build a dedicated "Buy Gold & Silver" page targeting "sell gold Ocean County NJ."</span></li>
+      <li class="reveal hairline-top py-5 flex gap-5 items-baseline"><span class="editorial accent text-2xl" style="font-weight:400;">03</span><span class="text-sm md:text-base leading-relaxed" style="color: var(--muted);">Build a dedicated Coin Appraisal page targeting "coin appraisal Waretown NJ."</span></li>
+      <li class="reveal hairline-top py-5 flex gap-5 items-baseline"><span class="editorial accent text-2xl" style="font-weight:400;">04</span><span class="text-sm md:text-base leading-relaxed" style="color: var(--muted);">Add "Waretown" and "Ocean County" back into every product and category title.</span></li>
+      <li class="reveal hairline-top py-5 flex gap-5 items-baseline"><span class="editorial accent text-2xl" style="font-weight:400;">05</span><span class="text-sm md:text-base leading-relaxed" style="color: var(--muted);">Add LocalBusiness schema so Google can show your hours and address as rich results.</span></li>
     </ol>
   </section>
 
@@ -402,7 +390,7 @@
       </div>
       <div class="reveal hairline-top py-6">
         <h3 class="font-semibold text-base mb-1.5">How long does something like this actually take?</h3>
-        <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">The fixes above are a 2-week turnaround. Bigger rebuilds take longer — I'll give you a real timeline on the call, not a guess.</p>
+        <p class="text-sm leading-relaxed max-w-md" style="color: var(--muted);">The title fix is same-day. The new service pages are a 2-3 week turnaround — I'll give you a real timeline on the call, not a guess.</p>
       </div>
       <div class="reveal hairline-top py-6">
         <h3 class="font-semibold text-base mb-1.5">Do I have to switch hosts or platforms?</h3>
@@ -417,7 +405,7 @@
 
   <section class="relative max-w-3xl mx-auto px-6 pb-24 text-center" style="z-index:1;">
     <div class="reveal card rounded-3xl p-10 md:p-16">
-      <h2 class="editorial text-2xl md:text-3xl mb-4">Want to see exactly what this looks like for your business?</h2>
+      <h2 class="editorial text-2xl md:text-3xl mb-4">Want to see exactly what this looks like for your shop?</h2>
       <p class="mb-6 text-sm md:text-base max-w-md mx-auto" style="color: var(--muted);">Book a free 30-minute call with Gabriel. No pitch — just a walkthrough of what I'd do and what you could expect.</p>
       <p class="mb-10 text-xs max-w-sm mx-auto" style="color: var(--faint);">I'm a solo consultant, not an agency — I build and deploy everything myself on GitHub and Vercel, so what you see on this page is exactly the kind of work you'd get, no account managers in between. No contract, no retainer required to start.</p>
       <a href="https://calendly.com/gabrielbalenton/30min" target="_blank" rel="noopener" class="btn-primary inline-block px-9 py-4">
@@ -435,7 +423,7 @@
       </div>
       <div>
         <label class="block text-xs mb-2" style="color: var(--faint);">Email address</label>
-        <input type="email" placeholder="info@atxfamilydental.com" class="w-full rounded-lg px-4 py-3.5 text-sm" />
+        <input type="email" placeholder="coins@waretowncoin.com" class="w-full rounded-lg px-4 py-3.5 text-sm" />
       </div>
       <div>
         <label class="block text-xs mb-2" style="color: var(--faint);">Message</label>

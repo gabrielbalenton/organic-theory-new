@@ -1,0 +1,17 @@
+{
+  "date": "2026-07-18",
+  "leads": [
+    {
+      "business_name": "Waretown Stamp & Coin",
+      "website": "https://www.waretowncoin.com/",
+      "industry": "Coin, Stamp & Precious Metals Dealer",
+      "issues": "Google's index of waretowncoin.com shows the business name literally truncated mid-word on two indexed pages: the \"All Products\" category page is titled \"All Products | Waretown Stamp & Coi\" and the \"$100 Coin Grab Bag\" product page is titled \"$100 Coin Grab Bag! | Waretown Stamp & Coi\" — both missing the final \"n\" in \"Coin.\" The homepage title is unaffected, which points to a character-limit truncation bug in the store template that only clips inner pages. Separately, only 3 pages of the entire site are indexed at all: the homepage, that one category page, and a single product listing — despite the business buying and selling gold, silver, coins, and stamps and having served Ocean County since 1984. There's no dedicated, indexable page for gold/silver buying or coin appraisal, the two things a searcher would actually type in.",
+      "opportunity": "Fixing the title-truncation bug is a same-day template fix, and building dedicated pages for gold/silver buying and coin appraisal (instead of leaving Google with 3 thin pages) is a 2-3 week job that needs no new expertise — 42 years of real local experience already exists, it just isn't structured into pages Google can match against \"sell gold Ocean County NJ\" or \"coin appraisal Waretown.\"",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-18-waretown-stamp-coin.html",
+      "email_subject": "Your site's title cuts off before the \"n\" in \"Coin\"",
+      "email_body": "Hi,\n\nI came across Waretown Stamp & Coin while looking into local coin and collectibles dealers in Ocean County - 42 years on Route 9 since 1984 is a real track record. I checked how a couple of your pages show up on Google though, and noticed your business name is literally cut off: your \"All Products\" page and your \"$100 Coin Grab Bag\" product page both show the title \"Waretown Stamp & Coi\" - missing the final \"n.\" Your homepage title is fine, so it looks like a character-limit bug in your store template that's only clipping the inner pages.\n\nSeparately, only 3 pages of your whole site are indexed by Google at all - the homepage, one category page, and that single product listing. There's no dedicated page for buying gold and silver or coin appraisal, which are probably the two things most people search for before they walk in.\n\nI put together a page showing what a fixed, more complete version could look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-18-waretown-stamp-coin.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure either way, just thought 42 years of real local trust deserved a site that doesn't cut its own name off.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "coins@waretowncoin.com",
+      "sent_automatically": false
+    }
+  ]
+}
