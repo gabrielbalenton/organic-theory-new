@@ -288,6 +288,54 @@
       "email_body": "Hi,\n\nI was looking into wig and hair loss specialists around Bromsgrove and came across Wills Wigs - 35+ years of NHS-approved, family-run care is a real, rare kind of trust. I checked how the site shows up on Google though, and found an old page still indexed at willswigs.co.uk/index.php/wigs - a leftover from a previous version of your site, on a completely different URL structure than your current one, titled \"Wigs on the Go: Keeping Your Wig Glamourous this Festive Season.\" It's live right alongside your current site, splitting whatever ranking signal you've built between two different platforms.\n\nI put together a page showing the fix:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-18-wills-wigs.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 35+ years of NHS-approved care deserved one clean site instead of an old one still competing with it.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@willswigs.co.uk",
       "sent_automatically": false
+    },
+    {
+      "business_name": "JF Antique Radio and Tube Amplifier Repair",
+      "website": "https://www.jfradiorepair.com/",
+      "industry": "Antique Radio & Tube Amplifier Repair (Sole Proprietor)",
+      "issues": "Checking Google's index directly (site: search), an old, insecure page is still indexed at http://www.jfradiorepair.com/Disturbance.html covering radio interference and noise troubleshooting -- the exact same topic already covered by the current, secure page at /radio-disturbances-1. Separately, a page titled \"Amplifier Service\" is indexed at the URL /services-copy, sitting alongside the real /services page -- the literal \"-copy\" suffix left in the URL from when the page was duplicated and never renamed or removed.",
+      "opportunity": "Redirecting the old insecure /Disturbance.html page into its current replacement, and removing or redirecting the leftover /services-copy page, consolidates 40+ years and 2,200+ repaired tube radios and amplifiers of reputation onto one clean set of URLs instead of splitting search visibility across duplicates -- a same-week fix.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-18-jf-radio-repair.html",
+      "email_subject": "Google still has your old Disturbance.html page indexed",
+      "email_body": "Hi,\n\nI was looking into tube radio and amplifier repair around Metro Atlanta and came across JF Antique Radio and Tube Amplifier Repair - 40+ years and 2,200+ units repaired is real, rare expertise. I checked how the site shows up on Google though, and found an old, insecure page still indexed at Disturbance.html covering radio interference, right alongside your current page on the same topic. I also noticed a page called \"Amplifier Service\" indexed at /services-copy - the leftover \"-copy\" from when it was duplicated, never renamed.\n\nI put together a page showing the fixes:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-18-jf-radio-repair.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 2,200+ real repairs deserved one clean, consistent site instead of duplicate pages splitting things up.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "jfradio@aol.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Camden Antique Radio Service",
+      "website": "http://www.camdenantiqueradioservice.com/",
+      "industry": "Antique Radio Repair (Home & Auto Vacuum Tube Radios)",
+      "issues": "Checking Google's index directly (site: search), every single page indexed for this business loads over plain http:// -- there is no https version anywhere on the site, so every visitor's browser can flag it as \"Not Secure.\" On top of that, the address itself is inconsistent: the homepage is indexed as http://www.camdenantiqueradioservice.com/ (with www), while inner pages like the schematics, shipping, and repair-bench pages are indexed as http://camdenantiqueradioservice.com/... (without www) -- two different address versions for the same business splitting whatever ranking signal either one earns.",
+      "opportunity": "Installing an SSL certificate and forcing https, then adding one consistent redirect so every page resolves to a single address, removes the \"Not Secure\" warning that scares off first-time visitors before they ever read about the repair guarantee -- a same-week fix that also consolidates the split ranking signal onto one address.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-18-camden-antique-radio-service.html",
+      "email_subject": "Your whole site is running without HTTPS",
+      "email_body": "Hi,\n\nI was looking into antique radio repair near Indianapolis and came across Camden Antique Radio Service - expert, guaranteed repair on home and auto vacuum tube radios is a real specialty. I checked how the site shows up on Google though, and every single indexed page loads over plain http:// - there's no secure version at all, so browsers can flag it \"Not Secure.\" I also noticed your homepage is indexed with \"www\" while inner pages like the schematics and shipping pages are indexed without it - two different addresses splitting your own ranking signal.\n\nI put together a page showing the fix:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-18-camden-antique-radio-service.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a real repair guarantee deserved a secure, consistent site to back it up.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "scott@camdenantiqueradioservice.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "In Stitches",
+      "website": "https://www.institches.co.nz/",
+      "industry": "Sewing Machine & Overlocker Repair (Trade Certified)",
+      "issues": "Checking Google's index directly (site: search), the page for \"Domestic Sewing Machines\" is indexed at institches.co.nz/copy-of-industrial-machines -- the URL itself still carries the internal \"copy-of-\" naming the site builder assigns when a page is duplicated, meaning it was cloned from the Industrial Sewing Machines page and never renamed before going live. The content is genuine and correct; it's the raw \"copy-of-\" slug showing up in search results and shared links.",
+      "opportunity": "Renaming the page slug to something like /domestic-sewing-machines and adding a 301 redirect from the old address preserves whatever ranking it's already built while presenting a clean, professional URL to anyone who sees it in search results or shares the link -- a same-week fix for a trade-certified business built on precision.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-18-in-stitches-sewing.html",
+      "email_subject": "One of your pages is literally named \"copy of\"",
+      "email_body": "Hi,\n\nI was looking into sewing machine repair around Nelson and Motueka and came across In Stitches - trade certified repair across Nelson, Tasman, Golden Bay, Marlborough and the West Coast is real, specialist trust. I checked how the site shows up on Google though, and found your Domestic Sewing Machines page indexed at the URL /copy-of-industrial-machines - the internal draft name left over from when it was cloned from your Industrial Sewing Machines page, never renamed.\n\nI put together a page showing the fix:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-18-in-stitches-sewing.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a trade-certified business deserved a clean URL instead of a leftover draft name on a core page.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@institches.co.nz",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "CMC Boat Builders",
+      "website": "https://cmcboatbuilders.com/",
+      "industry": "Traditional Wooden Boat Building & Restoration (Sole Proprietor)",
+      "issues": "Checking Google's index directly (site: search), several pages are indexed at cmcboatbuilders.com/wp-admin/XX5y0t.php with titles completely unrelated to boat building -- \"Nicelabel jobs,\" \"Teamviewer blacklist,\" \"Australian taxation guide book.\" This is a classic pattern of a compromised WordPress installation being used to inject and index spam content, alongside the real, legitimate boat building and gallery pages.",
+      "opportunity": "Cleaning the injected files, resetting WordPress admin credentials, updating core and plugins, and requesting a security review in Google Search Console removes the spam pages from the index before Google flags the site with a \"may be hacked\" warning -- protecting a City & Guilds-trained, one-person boatbuilding practice whose reputation depends entirely on trust. More urgent than typical SEO cleanup, and a same-week fix.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-18-cmc-boat-builders.html",
+      "email_subject": "Google has spam pages indexed on your site",
+      "email_body": "Hi,\n\nI was looking into traditional wooden boat builders around Tipperary and came across CMC Boat Builders - City & Guilds trained at The Boatbuilding Academy, serving Tipperary, Dublin, Cork and the Shannon Region is real craftsmanship. I checked how the site shows up on Google though, and found several spam pages indexed at wp-admin/XX5y0t.php with titles like \"Teamviewer blacklist\" and \"Australian taxation guide book\" - completely unrelated to boat building, and a strong sign the WordPress install has been compromised.\n\nI put together a page showing what I found and the fix:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-18-cmc-boat-builders.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nThis one's worth a look sooner rather than later - if Google flags it as hacked before it's cleaned up, that warning shows right in search results. No pressure either way.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "boatbuilderchris@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
