@@ -120,6 +120,30 @@
       "email_body": "Hi Paula,\n\nI came across Old Bexley Soap & Candle Co. while looking at UK soap-making studios - Guild-registered, 10+ years of experience, and Highly Commended at the Bexley Business Excellence Awards is real, hard-won credibility. I checked how the courses show up on Google though, and noticed that four separate pages on your own site - /thecourses, /all-courses, /soap-making-for-beginners, and /thecourses/p/beginners-soap-making-course - are all independently indexed and built around the exact same search: a beginners soap-making course in London. They're competing against each other instead of one strong page absorbing all that relevance.\n\nI put together a page showing what a consolidated version could look like, with the award and Guild membership surfaced up front:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-19-old-bexley-soap-candle.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all - consolidating those pages is a same-week fix. Happy to talk specifics if it's useful.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "paula@oldbexleysoap.co.uk",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Luthier On Call LLC",
+      "website": "https://luthieroncall.com/",
+      "industry": "Violin, Viola & Cello Repair and Restoration",
+      "issues": "Google's index of luthieroncall.com shows a consistent title pattern across every page — \"Shop - Luthier On Call,\" \"Repairs & Services - Luthier On Call,\" \"Bows - Luthier On Call,\" \"Contact - Luthier On Call\" — except for the homepage itself, which is indexed as \"Violin Family Restoration & Repair. Luthier on Call LLC,\" a run-on title splicing two clauses together with a period instead of a proper separator. It's also the only indexed title on the site that omits the Pompano Beach, FL location, despite the homepage almost certainly carrying the most search traffic of any page.",
+      "opportunity": "Rewriting the homepage title to match the clean pattern already used on every other page, with Pompano Beach, FL added explicitly, is a same-day fix that needs no new content — the format already exists everywhere else on the site.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-19-luthier-on-call.html",
+      "email_subject": "Your homepage title breaks the pattern every other page follows",
+      "email_body": "Hi,\n\nI came across Luthier On Call while looking into violin family repair specialists - restoring instruments centuries old is real, rare expertise. I checked how the site shows up on Google though, and noticed something odd: every page follows a clean pattern (\"Shop - Luthier On Call,\" \"Repairs & Services - Luthier On Call,\" \"Contact - Luthier On Call\") except the homepage itself, which is indexed as \"Violin Family Restoration & Repair. Luthier on Call LLC\" - a run-on title with a period where a separator should be, and no mention of Pompano Beach.\n\nI put together a page showing what a consistent version could look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-19-luthier-on-call.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all - it's a same-day fix. Happy to walk through it if useful.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "violinluthier21@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Karen Morris Millinery",
+      "website": "https://www.kmhats.com/",
+      "industry": "Custom Millinery / Handmade Hats (Roseville, MN)",
+      "issues": "Google has kmhats.com/home indexed with the title \"The Kentucky Derby Party.\" - no mention of Karen Morris, millinery, or hats anywhere in it, sitting separately from the real homepage (kmhats.com/, titled \"Karen Morris Millinery | Elevate Your Style Today\"). Anyone landing on that result from search would have no way of knowing it's the milliner's own site. Separately, none of the site's indexed titles - including \"Classes | Learn Hat-Making Today - Sign Up Now\" and \"All Summer Hats | Shop Elegant Summer Hats Today\" - mention Roseville or the Twin Cities, leaving no obvious page to catch a local \"milliner near me\" or \"custom hats Minneapolis\" search.",
+      "opportunity": "Redirecting or noindexing the off-brand /home page into the real homepage is a same-day fix. Adding \"Roseville, MN\" into the About and Contact titles is an easy follow-up that gives local search an actual page to land on. Expected within 30 days: no unbranded duplicate page competing in search, and a real shot at local milliner searches instead of only broad national ones.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-19-karen-morris-millinery.html",
+      "email_subject": "One of your own pages is indexed as 'The Kentucky Derby Party.'",
+      "email_body": "Hi Karen,\n\nI came across your millinery studio while looking into custom hatmakers - handmade since 2011, with a real practice around Quality, Simplicity and Elegance, stood out. I checked how the site shows up on Google though, and one of your pages (kmhats.com/home) is indexed with the title \"The Kentucky Derby Party.\" - no mention of your name, your hats, or Roseville anywhere in it, sitting right next to your real homepage. On top of that, none of your indexed pages mention Roseville or the Twin Cities, so a local search has no obvious page to land on.\n\nI put together a page showing what a consolidated, locally-anchored version could look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-19-karen-morris-millinery.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all - it's a same-day fix. Happy to talk specifics if useful.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@kmhats.com",
+      "sent_automatically": false
     }
   ]
 }
