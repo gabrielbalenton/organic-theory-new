@@ -60,6 +60,42 @@
       "email_body": "Hi,\n\nI came across Off The Wall while looking into custom framing shops in Toronto - family-owned on Queen West since 1993, with museum-quality archival framing, is real, rare longevity for an independent framer. I checked how the site shows up on Google though, and your Print Gallery page - the one with your lithographs, silkscreens, vintage posters and original prints - is indexed with the title \"Off The Wall | Custom Framing Toronto | Contact Us,\" the exact same trailing pattern as your actual Contact page. Anyone searching for original art sees what looks like a contact form instead of a gallery.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-off-the-wall-framing.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 30+ years of real framing work deserved a gallery page that actually reads like one.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "mail@offthewallarttoronto.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "My Buddy's Bike Shop",
+      "website": "https://mybuddysbikeshop.com/",
+      "industry": "Bicycle Sales & Repair (Livermore / East Bay, CA)",
+      "issues": "Several of your indexed pages sit under an unexplained \"/us/\" prefix - mybuddysbikeshop.com/us/service and mybuddysbikeshop.com/us/bikes-trinity-advanced-pro - while your other pages use clean paths like /new-bikes/ and /contact-us/, a sign of a multi-region site structure leaking into URLs that were never meant to be region-specific. Separately, your Trinity Advanced Pro bike page is indexed under the generic title \"My Buddy's Bike Shop\" instead of naming the actual bike - anyone searching for that specific model by name has no way to know this page is about it.",
+      "opportunity": "Standardizing on one clean URL structure without the \"/us/\" prefix, and giving each bike model page its own descriptive title, are both fixable without touching your actual repair or sales workflow. Expected within 30 days: a consistent URL structure and titles that actually match what a rider searches for by model name.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-my-buddys-bike-shop.html",
+      "email_subject": "Some of your pages have an odd '/us/' in the URL",
+      "email_body": "Hi,\n\nI was looking into local bike shops in the East Bay and came across My Buddy's Bike Shop. I checked how the site shows up on Google though, and noticed a few pages - like your Service page and your Trinity Advanced Pro listing - sit under an unexplained \"/us/\" in the URL (mybuddysbikeshop.com/us/service), while pages like /new-bikes/ and /contact-us/ don't have that prefix at all. That kind of split usually comes from a multi-region site setup leaking into URLs that don't need it. On top of that, the Trinity Advanced Pro page is indexed under the plain title \"My Buddy's Bike Shop\" instead of naming the bike itself, so a search for that model wouldn't find it.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-my-buddys-bike-shop.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a shop your riders trust deserved URLs and titles that actually match what people search for.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "mybuddysbikeshop@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Family Chimney Sweeps LLC",
+      "website": "https://familychimneysweeps.com/",
+      "industry": "Chimney Sweeping, Inspection, Repair & Masonry (Family-Owned, St. Joseph, MI)",
+      "issues": "Every page Google has indexed for familychimneysweeps.com beyond the homepage is a product for sale in your online store - fireplace tools, wood holders, creosote-cleaning fire logs, hearth centers, even outdoor griddles - not a description of your actual chimney sweeping, inspection, repair, or masonry services. A search for your business surfaces your gift-shop inventory before it surfaces the licensed work you're actually known for.",
+      "opportunity": "Building dedicated, indexable pages for chimney sweeping, inspection, repair, and masonry - work that's already described on your homepage, just needs pages of its own - would give Google real service content to match against local searches like \"chimney sweep St. Joseph MI,\" instead of only product listings. This is a short build, not a redesign.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-family-chimney-sweeps.html",
+      "email_subject": "Your online store is what's showing up on Google, not your chimney services",
+      "email_body": "Hi Jeremiah and Dave,\n\nI was looking into licensed chimney sweeps around St. Joseph and came across Family Chimney Sweeps. I checked how the site shows up on Google though, and every page indexed beyond your homepage is a product from your online store - fireplace tools, wood holders, creosote-cleaning logs, even griddles - not a page describing your actual sweeping, inspection, repair, or masonry work. Anyone searching for a chimney sweep sees your gift shop before they see the licensed service you're actually known for.\n\nI put together a page showing what dedicated service pages could look like: https://organic-theory.vercel.app/leads/funnels/2026-07-20-family-chimney-sweeps.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a licensed, family-run chimney business deserved search results that lead with the actual service.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "Info@FamilyChimneySweeps.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Tacoma Glassblowing Studio",
+      "website": "https://tacomaglassblowing.com/",
+      "industry": "Glassblowing Studio, Classes & Glass Art (Family-Owned, Tacoma, WA)",
+      "issues": "Google has a leftover draft page indexed directly - tacomaglassblowing.com/glassblowing-copy/, titled simply \"glassblowing-copy - Tacoma Glassblowing Studio\" - a raw \"-copy\" duplicate of another page on the site that was never renamed or removed, sitting right alongside your real pages in search results. Separately, your Contacts page is indexed on the www version of your domain (www.tacomaglassblowing.com/contacts-us/) while every other page - Home, About, Events, Specialty Workshop, Online Booking, Pumpkin Patch - is indexed on the non-www version, splitting that one page off from the rest of your site.",
+      "opportunity": "Deleting or redirecting the \"-copy\" page and forcing the Contacts page onto the same domain version as the rest of your site are both same-day fixes needing no new content. Expected immediately: no more leftover draft page competing with your real pages in search, for a studio known well enough to run the Northwest's own glass pumpkin patch each fall.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-tacoma-glassblowing-studio.html",
+      "email_subject": "Google has a leftover 'copy' page of yours indexed",
+      "email_body": "Hi Mark and Jeannine,\n\nI came across Tacoma Glassblowing Studio while looking into glass art studios in the Pacific Northwest - the Northwest Glass Pumpkin Patch, with 2,000+ hand-blown pumpkins each fall, is a genuinely well-known event. I checked how the site shows up on Google though, and found a leftover draft page still indexed: tacomaglassblowing.com/glassblowing-copy/, titled just \"glassblowing-copy\" - a raw duplicate of another page that never got renamed or removed. Your Contacts page is also indexed on a different domain version (www vs. non-www) than the rest of your site, splitting it off on its own.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-tacoma-glassblowing-studio.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a studio behind an event that big deserved a search presence without a leftover draft page in it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "Tgsglass@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
