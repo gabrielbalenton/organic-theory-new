@@ -580,54 +580,26 @@ export default function FPXStocklist() {
                     <label style={s.label}>Image URL</label>
                     <input style={s.input} value={slot.imageUrl} onChange={(e) => updateSlot(key, { imageUrl: e.target.value })} />
                   </div>
-                  <div style={s.field}>
-                    <label style={s.label}>Category</label>
-                    <input style={s.input} value={slot.category} onChange={(e) => updateSlot(key, { category: e.target.value })} placeholder="Treated Timber" />
-                  </div>
-                  <div style={s.field}>
-                    <label style={s.label}>% Savings</label>
-                    <input style={s.input} value={slot.savingsPct} onChange={(e) => updateSlot(key, { savingsPct: e.target.value })} placeholder="15%" />
-                  </div>
-                  <div style={s.field}>
-                    <label style={s.label}>Price</label>
-                    <input style={s.input} value={slot.price} onChange={(e) => updateSlot(key, { price: e.target.value })} placeholder="$45.00 / packet" />
-                  </div>
-                  <div style={s.field}>
-                    <label style={s.label}>Length</label>
-                    <input style={s.input} value={slot.length} onChange={(e) => updateSlot(key, { length: e.target.value })} placeholder="4.200m" />
-                  </div>
-                  {key === 'orange' && (
-                    <>
-                      <div style={s.field}>
-                        <label style={s.label}>Qty Available <span style={{ color: '#888', fontWeight: 400 }}>(number in stock — used to decide if this deal shows at all)</span></label>
-                        <input style={s.input} value={slot.qtyAvailable} onChange={(e) => updateSlot(key, { qtyAvailable: e.target.value })} placeholder="4" />
+                  {key === 'orange' && (() => {
+                    const qty = parseInt(slot.qtyAvailable || slot.availability, 10);
+                    const moq = parseInt(slot.minOrderQty || slot.minOrder, 10);
+                    return !Number.isNaN(qty) && !Number.isNaN(moq) && qty < moq ? (
+                      <div style={s.warning}>
+                        ⚠ Qty available ({qty}) is below min order qty ({moq}) — this deal will be left out of the generated email.
                       </div>
-                      <div style={s.field}>
-                        <label style={s.label}>Min Order Qty <span style={{ color: '#888', fontWeight: 400 }}>(number — leave blank to parse from Min. order)</span></label>
-                        <input style={s.input} value={slot.minOrderQty} onChange={(e) => updateSlot(key, { minOrderQty: e.target.value })} placeholder="2" />
-                      </div>
-                      {(() => {
-                        const qty = parseInt(slot.qtyAvailable, 10);
-                        const moq = parseInt(slot.minOrderQty || slot.minOrder, 10);
-                        return !Number.isNaN(qty) && !Number.isNaN(moq) && qty < moq ? (
-                          <div style={s.warning}>
-                            ⚠ Qty available ({qty}) is below min order qty ({moq}) — this deal will be left out of the generated email.
-                          </div>
-                        ) : null;
-                      })()}
-                    </>
-                  )}
+                    ) : null;
+                  })()}
 
                   {mode === 'manual' ? (
                     <div style={s.field}>
                       <label style={s.label}>
-                        Product Details <span style={{ color: '#888', fontWeight: 400 }}>(paste the whole block — one "Label: value" per line, any order)</span>
+                        Product Details <span style={{ color: '#888', fontWeight: 400 }}>(paste the whole block — one "Label: value" per line, any order. Add "Category: ..." and "Savings: ...%" lines here too if you have them — the site doesn't show either, so nothing parses them unless you type them in.)</span>
                       </label>
                       <textarea
                         style={s.blobTextarea}
                         value={slot.detailsBlob}
                         onChange={(e) => updateDetailsBlob(key, e.target.value)}
-                        placeholder={`Size: 300x50 (290x45)\nGrade: SG8\nTreatment: H3.2\nCondition: Kiln Dried\nProfile: Machine Gauged\nPcs per pack: 50${key !== 'green' ? '\nMin. order: 2x Packets' : ''}\nAvailability: 12\nDispatch: Dispatches in 1-3 days`}
+                        placeholder={`Size: 300x50 (290x45)\nGrade: SG8\nTreatment: H3.2\nCondition: Kiln Dried\nProfile: Machine Gauged\nPcs per pack: 50${key !== 'green' ? '\nMin. order: 2x Packets' : ''}\nAvailability: 12\nDispatch: Dispatches in 1-3 days\nCategory: Treated Timber\nSavings: 15%\nPrice: $45.00/packet\nLength: 4.200m`}
                       />
                       <div style={s.parsedPreview}>
                         <strong>Parsed:</strong>{' '}
@@ -641,6 +613,10 @@ export default function FPXStocklist() {
                           ...(key !== 'green' ? [['Min. order', slot.minOrder]] : []),
                           ['Availability', slot.availability],
                           ['Dispatch', slot.dispatch],
+                          ['Category', slot.category],
+                          ['Savings', slot.savingsPct],
+                          ['Price', slot.price],
+                          ['Length', slot.length],
                         ]
                           .map(([label, value]) => `${label}: ${value || '—'}`)
                           .join('  ·  ')}
