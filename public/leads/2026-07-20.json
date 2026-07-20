@@ -96,6 +96,18 @@
       "email_body": "Hi Mark and Jeannine,\n\nI came across Tacoma Glassblowing Studio while looking into glass art studios in the Pacific Northwest - the Northwest Glass Pumpkin Patch, with 2,000+ hand-blown pumpkins each fall, is a genuinely well-known event. I checked how the site shows up on Google though, and found a leftover draft page still indexed: tacomaglassblowing.com/glassblowing-copy/, titled just \"glassblowing-copy\" - a raw duplicate of another page that never got renamed or removed. Your Contacts page is also indexed on a different domain version (www vs. non-www) than the rest of your site, splitting it off on its own.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-tacoma-glassblowing-studio.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a studio behind an event that big deserved a search presence without a leftover draft page in it.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "Tgsglass@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Blown Studios",
+      "website": "https://blownstudios.com/",
+      "industry": "Glassblowing Studio, Classes & Custom Glass Art (Solo Operator, Savannah, GA)",
+      "issues": "Google has your pricing/options page indexed as \"Our Menu - Blown Studios\" (blownstudios.com/our-menu/) and your booking page indexed as \"Reservations - Blown Studios\" (blownstudios.com/reservations/) - both leftover restaurant-template terms never renamed for a glassblowing studio. Separately, none of your indexed page titles (Home, Our Menu, FAQ, About Us, Reservations) mention \"Savannah\" or \"Savannah, GA\" anywhere, despite that being your actual market for anyone searching for a local glassblowing experience.",
+      "opportunity": "Renaming the \"Our Menu\" and \"Reservations\" page titles to actually describe pricing/experiences and booking, and adding \"Savannah, GA\" across every indexed title, are same-day fixes needing no new content. Expected immediately: titles that actually describe what a 20-year glassblower and former Disney artist offers, instead of leftover restaurant-template language.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-blown-studios.html",
+      "email_subject": "Your pricing page is called \"Our Menu\" on Google",
+      "email_body": "Hi Brandon,\n\nI came across Blown Studios while looking into glass art studios in Savannah - 20+ years of experience, including five years as Disney's own glassblower, is a real, rare background. I checked how the site shows up on Google though, and your pricing/options page is indexed as \"Our Menu - Blown Studios,\" and your booking page as \"Reservations - Blown Studios\" - both restaurant-template terms that were never updated for a glassblowing studio. I also noticed none of your indexed page titles mention Savannah at all, even though that's clearly your market.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-blown-studios.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a studio with your background deserved page titles that actually describe it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "brandon@blownstudios.com",
+      "sent_automatically": false
     }
   ]
 }
