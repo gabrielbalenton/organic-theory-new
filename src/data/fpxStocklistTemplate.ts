@@ -393,7 +393,7 @@ function parseLeadingInt(text: string): number | null {
 }
 
 export function renderFpxTemplate(weekLabel: string, slot1: SlotFields, slot2: SlotFields, slot3: SlotFields): string {
-  const qtyAvailable = parseLeadingInt(slot3.qtyAvailable);
+  const qtyAvailable = parseLeadingInt(slot3.qtyAvailable) ?? parseLeadingInt(slot3.availability);
   const minOrderQty = parseLeadingInt(slot3.minOrderQty) ?? parseLeadingInt(slot3.minOrder);
   // If we know both numbers and the deal doesn't clear the min order, don't feature it.
   const showSlot3 = !(qtyAvailable !== null && minOrderQty !== null && qtyAvailable < minOrderQty);

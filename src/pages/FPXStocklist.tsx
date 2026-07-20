@@ -92,17 +92,28 @@ function emptySlot(): SlotForm {
 
 // Parses a pasted block of product-detail text into structured fields, so
 // the user can paste one blob instead of filling 9 fields one by one.
-// Recognises "Label: value" / "Label - value" / "Label<tab>value" lines
-// (case-insensitive), one field per line, in any order.
+// Handles TWO different shapes seen in practice:
+//  1. "Label: value" / "Label - value" / "Label<tab>value" on one line
+//     (case-insensitive), one field per line, in any order.
+//  2. The FPX site's own "Specification" section, copy-pasted as-is, where
+//     the label sits alone on its own line and the value is the NEXT
+//     non-blank line (e.g. "Grade" \n\n "SG12").
 type ParsedDetailKey = 'size' | 'grade' | 'treatment' | 'condition' | 'profile' | 'pcs' | 'minOrder' | 'availability' | 'dispatch' | 'category' | 'savingsPct' | 'price' | 'length' | 'qtyAvailable' | 'minOrderQty';
 
-const DETAIL_FIELD_PATTERNS: Array<{ key: ParsedDetailKey; regexes: RegExp[] }> = [
+const SAME_LINE_PATTERNS: Array<{ key: ParsedDetailKey; regexes: RegExp[] }> = [
   { key: 'minOrderQty', regexes: [/^min(?:imum)?\.?\s*order\s*qty\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
   { key: 'minOrder', regexes: [/^min(?:imum)?\.?\s*order(?:\s*quantity)?\s*(?:[:\-–—]|\t)\s*(.+)$/i, /^moq\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
-  { key: 'pcs', regexes: [/^(?:pcs|pieces|qty|quantity)\s*per\s*pack\s*(?:[:\-–—]|\t)\s*(.+)$/i, /^pcs\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
+  { key: 'pcs', regexes: [
+    /^(?:pcs|pieces|qty|quantity)\s*per\s*pack\s*(?:[:\-–—]|\t)\s*(.+)$/i,
+    /^pcs\s*(?:[:\-–—]|\t)\s*(.+)$/i,
+    /^([\d,]+)\s*(?:pcs|pieces)\s*per\s*pack\b/i, // "120 pcs per pack" — number comes first, no label
+  ] },
   { key: 'qtyAvailable', regexes: [/^qty\s*available\s*(?:[:\-–—]|\t)\s*(.+)$/i, /^quantity\s*available\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
   { key: 'availability', regexes: [/^availab(?:le|ility)\s*(?:[:\-–—]|\t)\s*(.+)$/i, /^(?:packets?\s*(?:remaining|available)|stock)\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
-  { key: 'dispatch', regexes: [/^dispatch(?:es)?\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
+  { key: 'dispatch', regexes: [
+    /^dispatch(?:es)?\s*(?:[:\-–—]|\t)\s*(.+)$/i,
+    /^(dispatch(?:es)?\s+in\s+.+)$/i, // "Dispatches in 1-3 days" — no colon
+  ] },
   { key: 'condition', regexes: [/^condition\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
   { key: 'treatment', regexes: [/^treatment\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
   { key: 'profile', regexes: [/^profile\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
@@ -114,11 +125,28 @@ const DETAIL_FIELD_PATTERNS: Array<{ key: ParsedDetailKey; regexes: RegExp[] }> 
   { key: 'length', regexes: [/^length\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
 ];
 
+// Label sits alone on its own line, value is the NEXT non-blank line.
+const NEXT_LINE_LABELS: Array<{ key: ParsedDetailKey; labels: string[] }> = [
+  { key: 'grade', labels: ['grade'] },
+  { key: 'treatment', labels: ['treatment'] },
+  { key: 'condition', labels: ['condition'] },
+  { key: 'profile', labels: ['profile'] },
+];
+const WIDTH_LABELS = ['nominal width (mm)', 'width (mm)', 'nominal width', 'width'];
+const THICKNESS_LABELS = ['nominal thickness (mm)', 'thickness (mm)', 'nominal thickness', 'thickness'];
+
+// Strips a leading pictographic glyph (📦, 🚀, ⚠, etc.) so "📦 120 pcs per
+// pack" matches the same patterns as a plain text line.
+function stripLeadingEmoji(line: string): string {
+  return line.replace(/^[\u{1F000}-\u{1FFFF}\u{2190}-\u{2BFF}\u{2600}-\u{27BF}]\s*/u, '').trim();
+}
+
 function parseDetailsBlob(text: string): Partial<Record<ParsedDetailKey, string>> {
   const result: Partial<Record<ParsedDetailKey, string>> = {};
-  const lines = text.split('\n').map((l) => l.trim()).filter(Boolean);
+  const lines = text.split('\n').map((l) => stripLeadingEmoji(l.trim())).filter(Boolean);
+
   for (const line of lines) {
-    for (const { key, regexes } of DETAIL_FIELD_PATTERNS) {
+    for (const { key, regexes } of SAME_LINE_PATTERNS) {
       if (result[key]) continue;
       for (const re of regexes) {
         const m = line.match(re);
@@ -129,6 +157,43 @@ function parseDetailsBlob(text: string): Partial<Record<ParsedDetailKey, string>
       }
     }
   }
+
+  for (let i = 0; i < lines.length; i++) {
+    const lower = lines[i].toLowerCase();
+    for (const { key, labels } of NEXT_LINE_LABELS) {
+      if (result[key]) continue;
+      if (labels.includes(lower) && lines[i + 1]) {
+        result[key] = lines[i + 1];
+      }
+    }
+  }
+
+  if (!result.size) {
+    let width = '';
+    let thickness = '';
+    for (let i = 0; i < lines.length; i++) {
+      const lower = lines[i].toLowerCase();
+      if (!width && WIDTH_LABELS.includes(lower) && lines[i + 1]) width = lines[i + 1];
+      if (!thickness && THICKNESS_LABELS.includes(lower) && lines[i + 1]) thickness = lines[i + 1];
+    }
+    if (width && thickness) result.size = `${width}x${thickness}`;
+  }
+
+  if (!result.length) {
+    for (const line of lines) {
+      const m = line.match(/\((\d+(?:\.\d+)?)\s*m\)/i);
+      if (m) {
+        result.length = `${m[1]}m`;
+        break;
+      }
+    }
+  }
+
+  if (!result.price) {
+    const priceLine = lines.find((l) => /^\$[\d,.]+/.test(l));
+    if (priceLine) result.price = priceLine;
+  }
+
   return result;
 }
 
