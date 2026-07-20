@@ -13,16 +13,19 @@ function isValidEmail(email: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+// Widened 2026-07-20 from 2 days to 30 to clear a backlog that piled up
+// while Gmail auth was broken (2026-07-15 to 2026-07-20). Still bounds the
+// replay window for this deliberately-unauthenticated endpoint — authorization
+// instead comes from requiring the lead to already exist in the live public
+// JSON, which only happens after a successful git push to this repo.
+const MAX_LOOKBACK_DAYS = 30;
+
 function isRecentDate(date: string): boolean {
-  // Only allow sends for today or yesterday (UTC) — bounds the replay window
-  // for this deliberately-unauthenticated endpoint. Authorization instead
-  // comes from requiring the lead to already exist in the live public JSON,
-  // which only happens after a successful git push to this repo.
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return false;
   const now = new Date();
+  const cutoff = new Date(now.getTime() - MAX_LOOKBACK_DAYS * 86400000).toISOString().slice(0, 10);
   const today = now.toISOString().slice(0, 10);
-  const yesterday = new Date(now.getTime() - 86400000).toISOString().slice(0, 10);
-  return date === today || date === yesterday;
+  return date >= cutoff && date <= today;
 }
 
 function buildRawMessage(to: string, subject: string, body: string): string {
