@@ -36,6 +36,30 @@
       "email_body": "Hi Dana,\n\nI came across Shuttle Press & Bindery while looking into New England letterpress studios - three generations of family tradition, working from a Kelsey Company press you acquired in 2021, is a real, rare story. I checked how the site shows up on Google though, and one of your product pages (shuttlepressbindery.com/product-page/i-m-a-product-5) is indexed under the literal title \"I'm a product\" - the default placeholder text from the site builder, never renamed. I also noticed your Book Repair page doesn't mention Stonington by name, and isn't linked to the heirloom-press story on your History page.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-shuttle-press-bindery.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought three generations of real craft deserved a product page with an actual name.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "shuttlepressbindery@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "NC Classic Restorations",
+      "website": "https://ncclassicrestorations.com/",
+      "industry": "Classic & Antique Automobile Restoration (Family-Run, Fuquay-Varina, NC)",
+      "issues": "Google's indexed homepage sits on the non-www version of the domain (ncclassicrestorations.com) under the generic title \"Home page for classic restorations\" — no mention of the business name anywhere in it — while every other indexed page (About, Gallery, Contact) sits on the www version with real branded titles like \"About our services - NC Classic Restoration\" and \"gallery of work - NC Classic Restoration.\" The Contact page itself carries a typo in its indexed title: \"Find uss - NC Classic Restoration\" — an extra \"s\" that's been sitting live in search results.",
+      "opportunity": "Forcing a single canonical domain (redirecting non-www to www, or vice versa) and rewriting the homepage title to lead with the business name are both same-day fixes needing no new content. Fixing the \"Find uss\" typo takes five minutes. Expected within 30 days: one consolidated domain showing a real business name on every indexed page, for a shop that's restored roughly a thousand vehicles — Model Ts to late-model Corvettes — since 1994.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-nc-classic-restorations.html",
+      "email_subject": "Your homepage title doesn't mention your business name",
+      "email_body": "Hi Dan and Connie,\n\nI was looking into classic car restoration shops in the Raleigh area and came across NC Classic Restorations - restoring roughly a thousand vehicles since 1994, from Model Ts to late-model Corvettes, is a real track record. I checked how the site shows up on Google though, and your homepage (on the non-www version of your domain) is indexed with the generic title \"Home page for classic restorations\" - no mention of NC Classic Restorations anywhere in it - while your About, Gallery, and Contact pages are indexed on the www version with real branded titles. Your Contact page title also has a small typo that's been sitting live in search results: \"Find uss\" instead of \"Find us.\"\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-nc-classic-restorations.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought thirty years of real restoration work deserved a homepage that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "ncclassicrestorations@yahoo.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Off The Wall Art & Framing",
+      "website": "https://www.offthewallarttoronto.com/",
+      "industry": "Custom Picture Framing & Print Gallery (Family-Owned Since 1993, Queen St W, Toronto)",
+      "issues": "Google has your Print Gallery page - the one showcasing lithographs, silkscreens, vintage posters and original prints - indexed under the title \"Off The Wall | Custom Framing Toronto | Contact Us,\" the exact same trailing pattern as your actual Contact page (\"Contact Off The Wall | Custom Framing Toronto\"). Anyone searching for prints or original artwork sees a result that looks like a contact form, not a gallery.",
+      "opportunity": "Rewriting the Print Gallery page's title to actually describe what's there - lithographs, silkscreens, vintage posters - is a same-day fix needing no new content. Expected immediately: a search result that actually invites a click from someone looking for original art, not one that reads like a duplicate of your contact page, for a framing shop with 30+ years of museum-quality archival work behind it.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-off-the-wall-framing.html",
+      "email_subject": "Your Print Gallery page is titled like it's your Contact page",
+      "email_body": "Hi,\n\nI came across Off The Wall while looking into custom framing shops in Toronto - family-owned on Queen West since 1993, with museum-quality archival framing, is real, rare longevity for an independent framer. I checked how the site shows up on Google though, and your Print Gallery page - the one with your lithographs, silkscreens, vintage posters and original prints - is indexed with the title \"Off The Wall | Custom Framing Toronto | Contact Us,\" the exact same trailing pattern as your actual Contact page. Anyone searching for original art sees what looks like a contact form instead of a gallery.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-off-the-wall-framing.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 30+ years of real framing work deserved a gallery page that actually reads like one.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "mail@offthewallarttoronto.com",
+      "sent_automatically": false
     }
   ]
 }
