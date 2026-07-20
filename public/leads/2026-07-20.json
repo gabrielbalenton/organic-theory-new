@@ -144,6 +144,42 @@
       "email_body": "Hi,\n\nI came across The Naked Candle Co while looking into candle makers in Manchester - hand-poured in small batches, sustainable soy wax, fully compostable packaging, is a real, considered setup. I checked how the site shows up on Google though, and your homepage and your /shop page are indexed under almost the same title (\"Home - Small Batch - Manchester Candle Company\", with just \"- TheNakedCandleCo\" tacked onto the shop version) - two pages splitting the same search intent instead of each doing its own job. I also noticed three slightly different versions of your brand name across indexed titles.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-naked-candle-co.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a genuinely small-batch, family-run studio deserved a shop page with its own title.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "hello@thenakedcandleco.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Quilts on the Corner",
+      "website": "https://www.quiltsonthecorner.com/",
+      "industry": "Longarm Quilting, Fabric & Yarn Shop (Family-Owned, Sandy, UT)",
+      "issues": "Every core page on the site — Home, Shop, Contact, Location & Hours, QOTC Team — is indexed on www.quiltsonthecorner.com, but the About Us page is indexed on the non-www host (quiltsonthecorner.com/about-us) under the title \"Utah | Quilts on the Corner | Sandy, UT 84070\" instead of anything that identifies it as an About page. Separately, an old site-launch announcement — \"Welcome to Quilts on the Corners New Site\" — is still indexed today, sitting alongside the shop's real navigation pages.",
+      "opportunity": "Redirecting the About Us page onto the same www host as the rest of the site and rewriting its title to introduce Renae & Mike Haddadin is a same-day fix. Retiring or redirecting the stale launch-announcement page is a five-minute follow-up. Expected within 30 days: one consistent domain and an About page that actually introduces the people behind 15,000+ patterns and INNOVA longarm training, instead of a stray host and a stale post.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-quilts-on-the-corner.html",
+      "email_subject": "Your About Us page is on a different address than the rest of your site",
+      "email_body": "Hi Renae and Mike,\n\nI was looking into longarm quilting shops in the Salt Lake area and came across Quilts on the Corner - INNOVA longarm services, a companion yarn shop next door, and over 15,000 patterns is a lot of range for one corner. I checked how the site shows up on Google though, and your About Us page is indexed on a different address than the rest of your site (quiltsonthecorner.com instead of www.quiltsonthecorner.com) under the title \"Utah\" instead of anything that actually introduces you two. I also noticed an old \"Welcome to Quilts on the Corners New Site\" announcement is still indexed, sitting next to your real pages.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-quilts-on-the-corner.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a shop with that much range deserved an About page that's actually on the right address.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "quiltsonthecorner@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "E-Tech Repair & Solutions",
+      "website": "https://etechrepairs.com/",
+      "industry": "Smartphone, Tablet & Device Repair (Family-Owned, West Linn OR & Vancouver WA)",
+      "issues": "Only two pages of etechrepairs.com are indexed by Google — the homepage and the contact page. Despite running two physical storefronts (West Linn, OR and Vancouver, WA) and offering distinct services (screen replacement, battery replacement, charging-port repair, data recovery, SSD upgrades), neither city name nor any individual repair appears in an indexed page title, leaving nothing for a local, service-specific search to match against.",
+      "opportunity": "Building a dedicated page for each location and for each core repair service would give Google real content to match against local searches in both markets, instead of relying on a single homepage and contact page. This is new page structure, not a redesign — the services and the 60-day warranty story already exist. Expected within 30 days: dedicated, indexed pages for both cities and the top repair services.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-etech-repair.html",
+      "email_subject": "Google only has two pages of yours indexed — for two store locations",
+      "email_body": "Hi,\n\nI was looking into phone and electronics repair shops in the Portland/Vancouver area and came across E-Tech Repair & Solutions - running two locations, West Linn and Vancouver, with a real 60-day warranty on repairs, is solid. I checked how the site shows up on Google though, and only two pages are indexed - your homepage and your contact page. Nothing for either location by name, and nothing for the specific repairs you actually do (screens, batteries, charging ports, data recovery, SSD upgrades) - so someone searching \"iPhone screen repair Vancouver WA\" has no page built for that search to land on.\n\nI put together a page showing what dedicated location and service pages could look like: https://organic-theory.vercel.app/leads/funnels/2026-07-20-etech-repair.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought two real storefronts deserved more than two indexed pages between them.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "support@etechrepairs.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "MC Kennel",
+      "website": "https://mcdogkennel.com/",
+      "industry": "Dog Boarding & Grooming (Family-Owned, Lewisburg, OH)",
+      "issues": "The Grooming page on mcdogkennel.com is indexed under the title \"We are pleased to offer both Exit Baths and Grooming!\" — the literal marketing sentence from the page, rather than a title naming the service or the town. Separately, only four pages are indexed sitewide (Home, a breed/temperament FAQ, Grooming, Reservations), with no dedicated About or facility page, and no indexed page title mentions Lewisburg, Ohio by name.",
+      "opportunity": "Rewriting the Grooming page's title to name the service and Lewisburg, OH is a same-day fix needing no new content. Building a dedicated About/facility page describing the 10 indoor/outdoor kennels and 7 indoor-only suites is a short follow-up. Expected within 30 days: a grooming page a local searcher can actually find, and a facility page that reflects the real setup.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-mc-kennel.html",
+      "email_subject": "Your Grooming page's Google title is a full sentence, not a title",
+      "email_body": "Hi,\n\nI was looking into dog boarding kennels in the Lewisburg area and came across MC Kennel - 10 indoor/outdoor kennels plus 7 indoor-only suites, potty breaks five times a day, and no breed restrictions is a real setup. I checked how the site shows up on Google though, and your Grooming page is indexed under the title \"We are pleased to offer both Exit Baths and Grooming!\" - the actual marketing copy from the page, not a title naming the service or Lewisburg. I also noticed there's no dedicated About or facility page indexed describing the kennel setup itself.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-mc-kennel.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a facility with that much real detail deserved a grooming page people could actually find.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "mcdogkennels@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
