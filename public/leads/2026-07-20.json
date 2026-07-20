@@ -216,6 +216,18 @@
       "email_body": "Hi there,\n\nI was looking into NYC-area bookbinders and came across FineBinding.com — 20 years of in-house bookbinding and leather restoration, with a client list that includes Merrill Lynch, Condé Nast and Carnegie Hall, is a serious credibility story. I checked how the site shows up on Google though, and your Contact page title actually cuts off mid-sentence: \"CALL FineBinding.com for More Information About Our Bookbinding Services at .\" — looks like a phone number placeholder never got filled in. I also noticed a few pages still list your old Manhattan address (42 West 38th Street), while BBB, Yelp and Yahoo Local all show your current Brooklyn address (41 Varick Ave) — that kind of mismatch works against you in local search.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-finebinding.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a bindery with that kind of client list deserved a search presence that matches it.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "inquiries@finebinding.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Olsen Violins",
+      "website": "https://olsenviolins.com/",
+      "industry": "Violin, Viola & Cello Sales, Repair and Rentals (Ballard, Seattle, WA)",
+      "issues": "Two WordPress media-attachment pages are indexed by Google under raw internal filenames instead of real content: olsenviolins.com/home/olsen__bkg_home/ (titled \"Olsen__bkg_home - Olsen Violins\") and olsenviolins.com/contact/olsen__bkg_contact/ (titled \"Olsen__bkg_contact - Olsen Violins\"). These appear to be auto-generated attachment pages for background photos and have been sitting in the index since at least 2015, showing up alongside the shop's real Home, About, Rentals and Contact pages in a site: search.",
+      "opportunity": "Noindexing or deleting these two attachment pages, and setting WordPress media attachments to noindex by default going forward, is a same-week fix. For a 26-year-old full-service violin shop (est. 1999) with strong customer reviews, cleaning this up means every indexed result for the business is an actual page of content instead of a stray image filename.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-olsen-violins.html",
+      "email_subject": "Two background-image files are indexed as pages on your site",
+      "email_body": "Hi Sten,\n\nI was looking into violin shops in the Seattle area and Olsen Violins stood out - 26 years in Ballard as a full-service shop covering sales, repairs, rentals and bow rehairs is real staying power. I checked how the site shows up on Google though, and there are two background-image attachment pages indexed under raw filenames instead of real content: \"Olsen__bkg_home\" and \"Olsen__bkg_contact\" (olsenviolins.com/home/olsen__bkg_home/ and /contact/olsen__bkg_contact/). They look like leftover WordPress media pages that have been sitting in the index since around 2015, showing up right alongside your actual Home and Contact pages.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-olsen-violins.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a shop with that much history deserved a search index with nothing but real pages in it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "stenolsen@olsenviolins.com",
+      "sent_automatically": false
     }
   ]
 }
