@@ -33,7 +33,6 @@ type SlotKey = 'green' | 'blue' | 'orange';
 
 interface SlotForm extends SlotFields {
   recordId: string;
-  discountPct: string;
   fetching: boolean;
   fetchError: string;
   detailsBlob: string;
@@ -78,8 +77,13 @@ function emptySlot(): SlotForm {
     minOrder: '',
     availability: '',
     dispatch: 'Dispatches in 1-3 days',
+    category: '',
+    savingsPct: '',
+    price: '',
+    length: '',
+    qtyAvailable: '',
+    minOrderQty: '',
     recordId: '',
-    discountPct: '',
     fetching: false,
     fetchError: '',
     detailsBlob: '',
@@ -90,11 +94,13 @@ function emptySlot(): SlotForm {
 // the user can paste one blob instead of filling 9 fields one by one.
 // Recognises "Label: value" / "Label - value" / "Label<tab>value" lines
 // (case-insensitive), one field per line, in any order.
-type ParsedDetailKey = 'size' | 'grade' | 'treatment' | 'condition' | 'profile' | 'pcs' | 'minOrder' | 'availability' | 'dispatch';
+type ParsedDetailKey = 'size' | 'grade' | 'treatment' | 'condition' | 'profile' | 'pcs' | 'minOrder' | 'availability' | 'dispatch' | 'category' | 'savingsPct' | 'price' | 'length' | 'qtyAvailable' | 'minOrderQty';
 
 const DETAIL_FIELD_PATTERNS: Array<{ key: ParsedDetailKey; regexes: RegExp[] }> = [
+  { key: 'minOrderQty', regexes: [/^min(?:imum)?\.?\s*order\s*qty\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
   { key: 'minOrder', regexes: [/^min(?:imum)?\.?\s*order(?:\s*quantity)?\s*(?:[:\-–—]|\t)\s*(.+)$/i, /^moq\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
   { key: 'pcs', regexes: [/^(?:pcs|pieces|qty|quantity)\s*per\s*pack\s*(?:[:\-–—]|\t)\s*(.+)$/i, /^pcs\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
+  { key: 'qtyAvailable', regexes: [/^qty\s*available\s*(?:[:\-–—]|\t)\s*(.+)$/i, /^quantity\s*available\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
   { key: 'availability', regexes: [/^availab(?:le|ility)\s*(?:[:\-–—]|\t)\s*(.+)$/i, /^(?:packets?\s*(?:remaining|available)|stock)\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
   { key: 'dispatch', regexes: [/^dispatch(?:es)?\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
   { key: 'condition', regexes: [/^condition\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
@@ -102,6 +108,10 @@ const DETAIL_FIELD_PATTERNS: Array<{ key: ParsedDetailKey; regexes: RegExp[] }> 
   { key: 'profile', regexes: [/^profile\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
   { key: 'grade', regexes: [/^grade\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
   { key: 'size', regexes: [/^(?:nominal\s*)?size\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
+  { key: 'category', regexes: [/^categor(?:y|ies)\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
+  { key: 'savingsPct', regexes: [/^(?:%\s*)?savings?\s*(?:[:\-–—]|\t)\s*(.+)$/i, /^%\s*discount\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
+  { key: 'price', regexes: [/^price\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
+  { key: 'length', regexes: [/^length\s*(?:[:\-–—]|\t)\s*(.+)$/i] },
 ];
 
 function parseDetailsBlob(text: string): Partial<Record<ParsedDetailKey, string>> {
@@ -269,6 +279,12 @@ export default function FPXStocklist() {
           minOrder: parsed.minOrder ?? current.minOrder,
           availability: parsed.availability ?? current.availability,
           dispatch: parsed.dispatch ?? current.dispatch,
+          category: parsed.category ?? current.category,
+          savingsPct: parsed.savingsPct ?? current.savingsPct,
+          price: parsed.price ?? current.price,
+          length: parsed.length ?? current.length,
+          qtyAvailable: parsed.qtyAvailable ?? current.qtyAvailable,
+          minOrderQty: parsed.minOrderQty ?? current.minOrderQty,
         },
       };
     });
@@ -303,7 +319,7 @@ export default function FPXStocklist() {
         pcs: data.pcs ?? '',
         availability: data.availability ?? '',
         minOrder: data.minOrder ?? '',
-        discountPct: data.discountPct ?? '',
+        savingsPct: data.discountPct ?? '',
       });
     } catch (err) {
       updateSlot(key, { fetching: false, fetchError: err instanceof Error ? err.message : 'Lookup failed' });
@@ -483,8 +499,8 @@ export default function FPXStocklist() {
                   {mode === 'airtable' && slot.fetchError && (
                     <div style={{ ...s.warning, background: '#fdecec' }}>{slot.fetchError}</div>
                   )}
-                  {mode === 'airtable' && slot.discountPct && (
-                    <p style={{ fontSize: 11, color: '#666', margin: '0 0 10px' }}>% Discount: {slot.discountPct}</p>
+                  {mode === 'airtable' && slot.savingsPct && (
+                    <p style={{ fontSize: 11, color: '#666', margin: '0 0 10px' }}>% Discount: {slot.savingsPct}</p>
                   )}
 
                   <div style={s.field}>
@@ -499,6 +515,43 @@ export default function FPXStocklist() {
                     <label style={s.label}>Image URL</label>
                     <input style={s.input} value={slot.imageUrl} onChange={(e) => updateSlot(key, { imageUrl: e.target.value })} />
                   </div>
+                  <div style={s.field}>
+                    <label style={s.label}>Category</label>
+                    <input style={s.input} value={slot.category} onChange={(e) => updateSlot(key, { category: e.target.value })} placeholder="Treated Timber" />
+                  </div>
+                  <div style={s.field}>
+                    <label style={s.label}>% Savings</label>
+                    <input style={s.input} value={slot.savingsPct} onChange={(e) => updateSlot(key, { savingsPct: e.target.value })} placeholder="15%" />
+                  </div>
+                  <div style={s.field}>
+                    <label style={s.label}>Price</label>
+                    <input style={s.input} value={slot.price} onChange={(e) => updateSlot(key, { price: e.target.value })} placeholder="$45.00 / packet" />
+                  </div>
+                  <div style={s.field}>
+                    <label style={s.label}>Length</label>
+                    <input style={s.input} value={slot.length} onChange={(e) => updateSlot(key, { length: e.target.value })} placeholder="4.200m" />
+                  </div>
+                  {key === 'orange' && (
+                    <>
+                      <div style={s.field}>
+                        <label style={s.label}>Qty Available <span style={{ color: '#888', fontWeight: 400 }}>(number in stock — used to decide if this deal shows at all)</span></label>
+                        <input style={s.input} value={slot.qtyAvailable} onChange={(e) => updateSlot(key, { qtyAvailable: e.target.value })} placeholder="4" />
+                      </div>
+                      <div style={s.field}>
+                        <label style={s.label}>Min Order Qty <span style={{ color: '#888', fontWeight: 400 }}>(number — leave blank to parse from Min. order)</span></label>
+                        <input style={s.input} value={slot.minOrderQty} onChange={(e) => updateSlot(key, { minOrderQty: e.target.value })} placeholder="2" />
+                      </div>
+                      {(() => {
+                        const qty = parseInt(slot.qtyAvailable, 10);
+                        const moq = parseInt(slot.minOrderQty || slot.minOrder, 10);
+                        return !Number.isNaN(qty) && !Number.isNaN(moq) && qty < moq ? (
+                          <div style={s.warning}>
+                            ⚠ Qty available ({qty}) is below min order qty ({moq}) — this deal will be left out of the generated email.
+                          </div>
+                        ) : null;
+                      })()}
+                    </>
+                  )}
 
                   {mode === 'manual' ? (
                     <div style={s.field}>
