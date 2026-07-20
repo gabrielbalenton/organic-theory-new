@@ -228,6 +228,54 @@
       "email_body": "Hi Sten,\n\nI was looking into violin shops in the Seattle area and Olsen Violins stood out - 26 years in Ballard as a full-service shop covering sales, repairs, rentals and bow rehairs is real staying power. I checked how the site shows up on Google though, and there are two background-image attachment pages indexed under raw filenames instead of real content: \"Olsen__bkg_home\" and \"Olsen__bkg_contact\" (olsenviolins.com/home/olsen__bkg_home/ and /contact/olsen__bkg_contact/). They look like leftover WordPress media pages that have been sitting in the index since around 2015, showing up right alongside your actual Home and Contact pages.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-olsen-violins.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a shop with that much history deserved a search index with nothing but real pages in it.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "stenolsen@olsenviolins.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Alex's Watch & Clock Repair",
+      "website": "https://www.alexswatchrepair.com/",
+      "industry": "Watch & Clock Repair (Appointment-Only Shop, Seattle, WA)",
+      "issues": "A \"site:alexswatchrepair.com\" search returns exactly one indexed result — the homepage. No dedicated page for watch repair, clock repair, or antique restoration is indexed on its own, despite the shop carrying 41 reviews on Yelp and years of appointment-only work in Seattle. Every service is competing for visibility on a single URL instead of each having its own shot at ranking for the searches that match it.",
+      "opportunity": "Building out dedicated, individually-indexed pages for watch repair, clock repair, and antique/vintage restoration is a same-week fix. With 41 five-star reviews already backing up the reputation, the missing piece is search visibility that matches it — separate pages mean separate chances to show up for \"watch repair Seattle\" and \"clock repair Seattle\" instead of one page trying to cover everything at once.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-alexs-watch-clock-repair.html",
+      "email_subject": "Google only has one page of your site indexed",
+      "email_body": "Hi Alex,\n\nI was looking at watch and clock repair shops in Seattle and came across yours — 41 reviews on Yelp is a real track record for an appointment-only shop. I checked how the site shows up in Google search though, and a \"site:alexswatchrepair.com\" search turns up exactly one result: your homepage. No separate page exists for watch repair, clock repair, or restoration, which means each of those services is invisible to a search built specifically around it.\n\nI put together a quick audit showing exactly what I mean and what I'd build instead: https://organic-theory.vercel.app/leads/funnels/2026-07-20-alexs-watch-clock-repair.html\n\nNo pitch, just wanted to flag it since it seems like an easy, same-week fix that could put those 41 reviews in front of a lot more of the right searches. Happy to talk through it if useful.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "alexwatchrepair@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Four Corners Framed Art",
+      "website": "https://fourcornersframedart.com/",
+      "industry": "Custom Framing & Art Gallery (Family-Owned, Independence, MO)",
+      "issues": "A \"site:fourcornersframedart.com\" search only returns the homepage and the /gallery/ page — the shop's /about/ and /contact/ pages both exist and are live on the site, but neither appears in Google's index of the domain. Pages that are crawled but not indexed can't show up for the searches they're built to answer, including someone searching for the shop's hours or address directly.",
+      "opportunity": "Strengthening internal links to the About and Contact pages, giving each a unique title and meta description, and resubmitting the sitemap in Search Console is same-week work. Once indexed, the Contact page can start catching ready-to-visit searches like \"custom framing hours Independence MO\" that a 25+ year family framing business should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-four-corners-framed-art.html",
+      "email_subject": "Your About and Contact pages aren't showing up in Google",
+      "email_body": "Hi there,\n\nI came across Four Corners while looking into custom framing shops around Independence — 25+ years family-owned with a working gallery attached is a great combination. I checked how the site shows up in Google search though, and a \"site:fourcornersframedart.com\" search only surfaces your homepage and gallery page. Your About and Contact pages are both live on the site — I found them directly — but neither one is indexed, which means someone searching for your hours or address can't find that page through Google.\n\nI put together a quick audit showing exactly what I mean and what I'd fix first: https://organic-theory.vercel.app/leads/funnels/2026-07-20-four-corners-framed-art.html\n\nNo pitch, just wanted to flag it since it looks like a same-week fix. Happy to talk through it if useful.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "fourcornersframedart@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "NETO Chocolate",
+      "website": "https://www.netochocolate.com/",
+      "industry": "Kosher Artisan Chocolatier (Family-Owned, New York, NY)",
+      "issues": "Google has two separate URLs indexed, both titled \"Contact Us\" — netochocolate.com/pages/contact-us and netochocolate.com/pages/contact-us-1. The \"-1\" suffix is a common sign of a duplicated or draft page that was never removed, meaning search authority for the shop's contact information is split between two competing pages instead of consolidated on one.",
+      "opportunity": "Identifying which contact page is current, 301-redirecting the duplicate into it, and updating any internal links pointing at the old one is a same-week fix. For a family-run kosher chocolatier that depends on repeat and gift-order customers finding one clear way to reach the shop, consolidating to a single Contact page removes any chance a customer lands on a stale version.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-neto-chocolate.html",
+      "email_subject": "Your site has two different \"Contact Us\" pages indexed",
+      "email_body": "Hi there,\n\nI was looking into small kosher chocolatiers and came across NETO — family-owned, small-batch, sourcing from fairly-traded farms is a real story to tell. I checked how the site shows up in Google search though, and there are two separate URLs indexed, both titled \"Contact Us\": netochocolate.com/pages/contact-us and netochocolate.com/pages/contact-us-1. The \"-1\" is usually a sign one of these is a leftover duplicate that never got cleaned up, which splits the page's authority between two competing versions instead of one clear one.\n\nI put together a quick audit showing exactly what I mean and what I'd fix first: https://organic-theory.vercel.app/leads/funnels/2026-07-20-neto-chocolate.html\n\nNo pitch, just wanted to flag it since it looks like a quick, same-week fix. Happy to talk through it if useful.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@netochocolate.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Allen White Surfboards",
+      "website": "https://www.handcarvedsurfboards.com/",
+      "industry": "Custom Surfboard Shaping (Solo Craftsman, Cocoa Beach, FL)",
+      "issues": "The site's reviews page is indexed at handcarvedsurfboards.com/rave-reviews/j31m6ffubvu0v3hgsdh3t8e3qwocwl-rhd4k — a long, auto-generated hash string instead of a clean, readable URL. This is a leftover artifact from how the page was created, not an intentional address, and it shows up looking like a broken or spammy link directly alongside the shop's clean homepage and Contact page results.",
+      "opportunity": "Renaming the page to a clean URL like /reviews and 301-redirecting the old hash address is a same-week fix. It won't change rankings on its own, but it removes a search result that looks untrustworthy next to decades of real East Coast shaping reputation — the kind of detail that affects whether someone clicks through at all.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-allen-white-surfboards.html",
+      "email_subject": "One of your pages is indexed under a random string, not a name",
+      "email_body": "Hi Allen,\n\nI was looking into East Coast surfboard shapers and came across your site — hand-shaping since the 1980s is a real story most shops can't tell. I checked how the site shows up in Google search though, and your reviews page is indexed at a URL ending in a long random string (/rave-reviews/j31m6ffubvu0v3hgsdh3t8e3qwocwl-rhd4k) instead of something clean like /reviews. It's a leftover from how the page got created, but it shows up looking like a broken or spammy link right next to your homepage and Contact page in search.\n\nI put together a quick audit showing exactly what I mean and what I'd fix first: https://organic-theory.vercel.app/leads/funnels/2026-07-20-allen-white-surfboards.html\n\nNo pitch, just wanted to flag it since it's a quick, same-week fix. Happy to talk through it if useful.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "allenwhite6675@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
