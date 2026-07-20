@@ -1,0 +1,41 @@
+{
+  "date": "2026-07-20",
+  "leads": [
+    {
+      "business_name": "Anything That Moves Taxidermy",
+      "website": "https://anythingthatmovestaxidermy.com/",
+      "industry": "Wildlife Taxidermy (Family-Owned Studio, Howell, MI)",
+      "issues": "Google has a full second copy of the site indexed on a \"mail.\" subdomain — mail.anythingthatmovestaxidermy.com carries its own indexed homepage, Contact Us, and Events pages, separate from the real domain, splitting search authority and visibility between two indexed properties for the same business. Separately, most service pages use clean paths (/gallery/, /large-game-taxidermy/, /rugs/), but small-game-taxidermy-brighton-mi.html and cwd.html still sit on old, hyphenated \".html\" slugs — a leftover structure from an earlier version of the site that never got folded into the current one.",
+      "opportunity": "Noindexing the mail. subdomain and 301-redirecting its pages into the real domain is a same-week fix consolidating all search authority behind one property. Migrating the two legacy .html pages onto the current clean URL pattern is a short follow-up. Expected within 30 days: one indexed site instead of two, for a family-owned Howell, MI studio covering whitetail deer, large/small game, birds, fish, and rugs.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-anything-that-moves-taxidermy.html",
+      "email_subject": "Google is indexing your site under two different addresses",
+      "email_body": "Hi Thomas,\n\nI was looking into taxidermists in southeast Michigan and came across Anything That Moves - family-owned, appointment-only, covering everything from whitetail deer to birds, fish and rugs is a real range for a one-shop operation. I checked how the site shows up on Google though, and there's a full second copy of your site indexed on a \"mail.\" subdomain (mail.anythingthatmovestaxidermy.com) - its own homepage, Contact Us, and Events pages, separate from your real domain. On top of that, a couple of your pages (small-game-taxidermy-brighton-mi.html, cwd.html) still sit on old hyphenated URLs while the rest of the site uses clean paths.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-anything-that-moves-taxidermy.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a family-owned studio with that much range deserved one consolidated site instead of two indexed copies.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "AnythingThatMoves@mac.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Hulme & Sweeney Piano Service",
+      "website": "https://hulmesweeneypianoservice.com/",
+      "industry": "Piano Tuning, Repair & Restoration (Bloomfield, CT)",
+      "issues": "Most of the site is indexed cleanly on the secure, non-www hulmesweeneypianoservice.com, but the gallery972.html piano listing is indexed on http://www.hulmesweeneypianoservice.com — the insecure, www-prefixed version, a mismatch on both protocol and host versus the rest of the site. Separately, individual piano listings are indexed one instrument at a time with no consistent title pattern tying them to tuning, repair, or restoration searches, and no indexed page yet reflects the shop's move to a service-only business as the retail showroom closes.",
+      "opportunity": "Forcing a sitewide redirect to https and the canonical host fixes the mismatched page same-day. Building dedicated Tuning, Repair, and Restoration pages ahead of the showroom closing is a short follow-up needing no new expertise - the 55-year track record already exists, it just isn't structured for service-first search yet. Expected within 30 days: a fully secure, consistently-indexed site anchored around service instead of retail.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-hulme-sweeney-piano.html",
+      "email_subject": "One of your pages is indexed insecure, on the wrong address",
+      "email_body": "Hi Tony and Randy,\n\nI was looking into piano technicians in the Hartford area and came across Hulme & Sweeney - 55 years combined experience and a shop that's about to go fully service-focused as the retail showroom closes is a real transition worth getting right online. I checked how the site shows up on Google though, and most pages are indexed cleanly on the secure, non-www domain, but your gallery972.html piano listing is indexed on the insecure http://www. version - a mismatch versus the rest of the site. I also noticed individual piano listings are indexed one at a time with no page yet built around tuning, repair or restoration specifically, which is exactly what searches will shift toward once the showroom closes.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-hulme-sweeney-piano.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 55 years of real expertise deserved a secure, service-first site as you make this shift.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@hulmesweeneypianoservice.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Shuttle Press & Bindery",
+      "website": "https://www.shuttlepressbindery.com/",
+      "industry": "Letterpress Printing, Bookbinding & Book Repair (Stonington, CT)",
+      "issues": "Google has shuttlepressbindery.com/product-page/i-m-a-product-5 indexed under the literal title \"I'm a product\" — the unedited default placeholder text from the site builder, sitting live in search results instead of a real product name. Separately, the site's History page covers a genuine three-generation letterpress tradition and an heirloom Kelsey Company press acquired in 2021, but that story isn't linked from or reflected in the Book Repair service page's title, and none of the indexed pages (Shop, History, Book Repair) mention \"Stonington, CT\" by name.",
+      "opportunity": "Renaming or noindexing the placeholder product page is a same-day fix. Rewriting the Book Repair page title to include Stonington, CT, and linking it to the History page's heirloom-press story, is a short follow-up needing no new content - the craftsmanship and lineage already exist, they just aren't structured for search yet. Expected within 30 days: a real product title instead of a template placeholder, and a Book Repair page a local searcher can actually find.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-shuttle-press-bindery.html",
+      "email_subject": "One of your product pages is indexed as \"I'm a product\"",
+      "email_body": "Hi Dana,\n\nI came across Shuttle Press & Bindery while looking into New England letterpress studios - three generations of family tradition, working from a Kelsey Company press you acquired in 2021, is a real, rare story. I checked how the site shows up on Google though, and one of your product pages (shuttlepressbindery.com/product-page/i-m-a-product-5) is indexed under the literal title \"I'm a product\" - the default placeholder text from the site builder, never renamed. I also noticed your Book Repair page doesn't mention Stonington by name, and isn't linked to the heirloom-press story on your History page.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-shuttle-press-bindery.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought three generations of real craft deserved a product page with an actual name.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "shuttlepressbindery@gmail.com",
+      "sent_automatically": false
+    }
+  ]
+}
