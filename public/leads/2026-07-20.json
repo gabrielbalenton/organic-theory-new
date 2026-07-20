@@ -276,6 +276,42 @@
       "email_body": "Hi Allen,\n\nI was looking into East Coast surfboard shapers and came across your site — hand-shaping since the 1980s is a real story most shops can't tell. I checked how the site shows up in Google search though, and your reviews page is indexed at a URL ending in a long random string (/rave-reviews/j31m6ffubvu0v3hgsdh3t8e3qwocwl-rhd4k) instead of something clean like /reviews. It's a leftover from how the page got created, but it shows up looking like a broken or spammy link right next to your homepage and Contact page in search.\n\nI put together a quick audit showing exactly what I mean and what I'd fix first: https://organic-theory.vercel.app/leads/funnels/2026-07-20-allen-white-surfboards.html\n\nNo pitch, just wanted to flag it since it's a quick, same-week fix. Happy to talk through it if useful.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "allenwhite6675@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Waipawa Clock Shop",
+      "website": "https://www.waipawaclockshop.com/",
+      "industry": "Clock & Watch Sales, Service & Restoration (Waipawa, Central Hawke's Bay, NZ)",
+      "issues": "Google has your Watches page indexed under the plain title \"Watches | theclockshop\" — dropping your shop's name and location entirely. Every other indexed page carries the full branded pattern: Home is \"Clock Restoration | Waipawa Clock Shop | New Zealand,\" About is \"About | Waipawa Clock Shop | New Zealand,\" Clocks and Gents follow the same pattern. Watches is the one page that doesn't. Separately, individual product listings (e.g. \"3201-01 Boccia Titanium\") are indexed by numeric SKU rather than a searchable product name.",
+      "opportunity": "Rewriting the Watches page title to match the consistent branded pattern used on every other page is a same-day fix needing no new content. Expected immediately: a search result for watches that actually carries the Waipawa Clock Shop name, consistent with the rest of the site.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-waipawa-clock-shop.html",
+      "email_subject": "Your Watches page dropped your shop's name from the title",
+      "email_body": "Hi,\n\nI was looking into clock and watch shops in Central Hawke's Bay and came across Waipawa Clock Shop - selling and restoring everything from grandfather clocks to cuckoo clocks and Boccia watches is a solid range for a small-town shop. I checked how the site shows up on Google though, and your Watches page is indexed under the plain title \"Watches | theclockshop\" - dropping your shop's actual name, while every other page (Home, About, Clocks, Gents) carries the full \"Waipawa Clock Shop | New Zealand\" branding. Anyone searching for watches specifically sees a stripped-down result that doesn't even say who you are.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-waipawa-clock-shop.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a shop with that much range deserved a Watches page that actually carries your name.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "waipawaclockshop@xtra.co.nz",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Oakside Saddlery",
+      "website": "https://oaksidesaddlery.co.uk/",
+      "industry": "Handmade English Leatherwork & Saddlery (Minster, Kent)",
+      "issues": "Google has this business fully indexed under two separate domains: oaksidesaddlery.co.uk (belts, wallets, tablet sleeves, camera straps, buckles — roughly a dozen indexed pages) and oaksidesaddlery.uk (watch straps, nameplates, horse bridles, dog collars, a blog — its own separate dozen indexed pages), each with its own homepage. Separately, one indexed result on the .co.uk domain is a raw login/session URL — oaksidesaddlery.co.uk/store.php#!/~/signIn/returnUrl=!/~/orders/offset=0 — rather than a real product or category page.",
+      "opportunity": "Picking one canonical domain and 301-redirecting the other into it consolidates search authority currently split between two indexed properties for the same shop. Cleaning up the exposed login-redirect URL is a same-day fix. Expected within 30 days: one indexed domain showing the shop's full handmade range instead of two half-stocked-looking properties.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-oakside-saddlery.html",
+      "email_subject": "Google has your shop indexed under two different domains",
+      "email_body": "Hi,\n\nI came across Oakside Saddlery while looking into traditional English leatherworkers in Kent - handmade belts, bridles, dog collars and camera straps all cut and stitched by hand is real range for a one-person workshop. I checked how the site shows up on Google though, and found your business fully indexed under two separate domains - oaksidesaddlery.co.uk and oaksidesaddlery.uk - each with its own homepage and around a dozen indexed pages, split between different parts of your range (belts and wallets on one, watch straps and bridles on the other). I also noticed one indexed page on the .co.uk domain is a raw login/session URL instead of a clean product page.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-oakside-saddlery.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought real hand-stitched craftsmanship deserved one consolidated shop online instead of two split ones.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "oaksidesaddlery@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Frank Baines Saddlery",
+      "website": "https://www.frankbaines.com/",
+      "industry": "Handmade Dressage, Show Jumping & Eventing Saddles (Family-Run, Walsall, England)",
+      "issues": "Google has frankbaines.com/shop/ indexed under the title \"Coleman Baines Shop - Frank Baines Saddlery\" — a different, unexplained company name sitting directly in the title of the shop's own product page. Separately, two different Contact pages are indexed for the same business with no shared title pattern: frankbaines.com/contact-us/ as \"Contact Us Questions\" and frankbaines.com/who-are-we/contact-us/ as \"Contact Us - Frank Baines Saddlery.\" A customer Login page (frankbaines.com/login/) is also indexed alongside the product pages.",
+      "opportunity": "Correcting the Shop page title to actually say Frank Baines, and consolidating to one indexed Contact page, are both same-day fixes needing no new content. Noindexing the Login page is a five-minute follow-up. Expected immediately: a Shop page that carries the right company name, and one findable Contact page instead of two competing ones, for a saddlery that's exported handmade saddles worldwide since starting in the founder's kitchen after a factory fire.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-20-frank-baines-saddlery.html",
+      "email_subject": "Your Shop page title says \"Coleman Baines,\" not Frank Baines",
+      "email_body": "Hi,\n\nI came across Frank Baines Saddlery while looking into British saddle makers - starting from a kitchen after a factory fire and ending up exporting handmade dressage and show saddles worldwide is a real story. I checked how the site shows up on Google though, and found two separate Contact pages indexed - one titled \"Contact Us Questions\" and another titled \"Contact Us - Frank Baines Saddlery\" - with no consistent pattern tying them together. I also noticed your Shop page is indexed under the title \"Coleman Baines Shop - Frank Baines Saddlery\" - a different name sitting right in your own product page's title.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-20-frank-baines-saddlery.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a saddlery with that kind of story deserved a Shop page with its own name on it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "enquiries@frankbaines.com",
+      "sent_automatically": false
     }
   ]
 }
