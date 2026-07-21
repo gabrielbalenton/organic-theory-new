@@ -72,6 +72,30 @@
       "email_body": "Hi,\n\nI was looking into small family-run wineries in Connecticut and came across Stappa Vineyard - three sisters bringing their parents' vineyard dream to life on a historic Orange estate is a genuinely good story. I checked how the site shows up on Google though, and your homepage is indexed under the title \"Home - stappavineyard.com\" - no business name, no \"winery,\" no \"Orange, CT\" anywhere in it. The same pattern repeats on your Contact Us, Calendar, About Us, and Shop Our Wines pages - each just a generic page name plus the bare domain, nothing for Google to match a local wine search against. Even your Chambourcin and Sparkling White Wine pages are titled the same thin way.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-21-stappa-vineyard.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a family estate with a story this good deserved search results that actually say who you are.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@stappavineyard.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Imagination Pottery Studio",
+      "website": "https://www.imaginationpotterystudio.com/",
+      "industry": "Paint-Your-Own Pottery Studio, Family-Owned (Wentzville, MO)",
+      "issues": "A search for the studio's signature animal-painting events - \"Painting with Piglets & Goats,\" \"Painting with Lambs & Goats,\" \"Painting with Puppies & Kittens\" - turns up every one of those event pages indexed on the raw imagination-pottery.myshopify.com subdomain instead of the studio's own imaginationpotterystudio.com domain. The homepage (indexed there as \"Pottery To-Go with Imagination Pottery\") and the Contact Us page are indexed on the same unbranded subdomain, running as a second storefront in parallel to the real site.",
+      "opportunity": "Setting imaginationpotterystudio.com as the primary domain in Shopify's settings and redirecting the raw myshopify.com subdomain is a same-day fix that consolidates search visibility - including for the animal-painting events, the studio's most distinctive draw since Michael and Megan Kumbera took it over in 2015 - behind one branded address instead of two.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-21-imagination-pottery-studio.html",
+      "email_subject": "Half your event pages are on a raw myshopify.com address",
+      "email_body": "Hi Michael and Megan,\n\nI was looking into family-run paint-your-own pottery studios and came across Imagination Pottery - the animal-painting events (piglets and goats, puppies and kittens) are a genuinely fun, distinctive draw I haven't seen many studios offer. I checked how the site shows up on Google though, and those very event pages - along with your homepage and Contact Us page - are indexed on the raw imagination-pottery.myshopify.com subdomain instead of imaginationpotterystudio.com. It reads as a second, unbranded storefront running in parallel to your real site, splitting search visibility between two addresses for the same events.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-21-imagination-pottery-studio.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought events this fun deserved one consolidated address to be found by.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@imaginationpotterystudio.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Patsy's Embroidery Digitizing",
+      "website": "https://www.patsysemb.com/",
+      "industry": "Embroidery Digitizing & Custom Embroidery Services, Family-Owned Since the 1990s (Los Angeles, CA)",
+      "issues": "Two separate domains are indexed for the same shop at 2826 S Vermont Ave: patsysemb.com (the current site, with Contact, Place an Order, and Our Work pages indexed) and patsysembroidery.net (a second, separate \"Welcome to Patsy's Embroidery\" site with its own indexed Contact Us page). Business directories and listing sites reference the two domains interchangeably for the same address and phone number, so a customer clicking through has no consistent way to land on the current site.",
+      "opportunity": "301-redirecting patsysembroidery.net into patsysemb.com and cleaning up the directory listings to point at one domain is same-week cleanup work for a family shop that's been hand-digitizing embroidery since a small East LA garage in the 90s - it consolidates decades of scattered reviews and mentions behind a single address instead of two.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-21-patsys-embroidery-digitizing.html",
+      "email_subject": "Google has two different websites indexed for your shop",
+      "email_body": "Hi Raul,\n\nI was looking into family-run embroidery digitizing shops and came across Patsy's - hand-digitizing every design since a small garage in East LA in the 90s is real, established craft. I checked how the shop shows up on Google though, and there are two separate domains indexed for the same business at 2826 S Vermont Ave: patsysemb.com (your current site) and patsysembroidery.net (a second \"Welcome to Patsy's Embroidery\" site with its own Contact Us page). Directory listings reference both interchangeably, so anyone clicking through from a directory has no consistent way to land on the site you actually keep current.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-21-patsys-embroidery-digitizing.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 30 years of real craft deserved one consolidated address instead of two.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "raul@patsysembroidery.net",
+      "sent_automatically": false
     }
   ]
 }
