@@ -11,7 +11,7 @@
       "email_subject": "Your before/after photos on hillschimneysweep.com.au",
       "email_body": "Hi,\n\nI was looking at chimney sweeps around the Adelaide Hills and landed on Hills Chimney Sweep's site. A couple things jumped out - your before/after section on the homepage has two 'BEFORE' photos and only one 'AFTER,' so it's hard to actually see the transformation you're pitching. I also noticed the photo alt text across the site is just the raw camera filenames (things like 'IMG_7018_edited.png' and 'IMG_6958.HEIC') instead of real descriptions, and your logo's alt text is literally 'Untitled' - that's invisible to Google Image Search and screen readers.\n\nI put together a page showing the fix and what it'd look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-hills-chimney-sweep.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging for a business covering as much of the Hills as you do.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "thehillssweep@gmail.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Dynamic Dance Company Inc.",
@@ -23,7 +23,7 @@
       "email_subject": "Your footer email link is actually broken",
       "email_body": "Hi,\n\nI was checking out dance studios around Aurora and came across Dynamic Dance Company - congrats on the Top Choice 2026 badge on your homepage. Two things I noticed while I was there: the footer's 'email us' link is actually broken - it's coded as mailto:905-727-3535/dynamicdancecompanyinc@gmail.com, so your phone number gets jammed into the email address and most phones/browsers can't open a compose window from it. Separately, the meta description Google shows for your homepage has a small typo - 'offering recreational and competitive dances classes for ages 3 and up' instead of 'dance classes.'\n\nI put together a page showing both fixes:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-dynamic-dance-company.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all - just didn't want a parent trying to email you from the footer to hit a dead end.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "dynamicdancecompanyinc@gmail.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Wendy & Tom Workshop",
@@ -35,7 +35,7 @@
       "email_subject": "Two different emails on your homepage",
       "email_body": "Hi,\n\nI was looking at alterations specialists in Newmarket and found Wendy & Tom's site - working with names like Trelise Cooper and Astra Bridal is a great trust signal to have upfront. One thing I noticed: the email link in your header shows 'wendytomworkshop@gmail.com' but it's actually coded to open a compose window to a different address, 'info@wendytomworkshop.co.nz' - so the two don't match, which could send a bride's message somewhere you're not expecting. I also noticed the homepage still has a 'Contactless Services' section talking about 'the new normal' from the pandemic, which reads a bit dated in 2026.\n\nI put together a page on both fixes:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-wendy-and-tom-workshop.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure - just thought a bridal alterations business should have its contact details airtight.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "wendytomworkshop@gmail.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Christman Music",
@@ -47,7 +47,7 @@
       "email_subject": "Your Contact page and homepage have the identical title",
       "email_body": "Hi Craig,\n\nI was looking at instrument repair shops in Naples and noticed something on Christman Music's site - checking Google's index, your homepage, Contact page, About page, About Craig page, Repairs page, and shop page all carry the exact same title, word for word: \"Naples and Collier County's Finest Music Store for Musical Instrument Repairs, New & Used Band Instruments, Rentals, Accessories, Lessons, and Print Music.\" It's also about 2.5x longer than what Google actually shows, so it gets cut off mid-sentence in every result.\n\nI put together a page showing what page-specific titles would look like, along with the rest of your site rebuilt around your real credentials:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-christman-music.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since repairing instruments for University of Miami and FIU faculty deserves search results that actually say so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "christmanmusic@icloud.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Hills Antique Clocks",
@@ -59,7 +59,7 @@
       "email_subject": "Google has two different \"contact\" pages for your shop",
       "email_body": "Hi,\n\nI was looking at antique clock restorers in the MetroWest area and noticed something on Hills Antique Clocks' site - Google's index shows two separate, live contact pages: the old contactus.html and a newer index.php/contact-2/. The same thing shows up elsewhere too - old static pages like Tallclocks.html and Recentrestoration.html sit next to a completely different index.php-based structure, which looks like a leftover from a past site migration that never got fully cleaned up.\n\nI put together a page showing what a consolidated site would look like, along with the rest of your site rebuilt around your real credentials:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-hills-antique-clocks.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since a \"Best Antique Store\" award and clients like the Boston Old North Church deserve one clean site instead of two competing versions.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "hillsclockrepair@gmail.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "WallIndependent",
@@ -71,7 +71,7 @@
       "email_subject": "One of your pages is still called \"sample-page\"",
       "email_body": "Hi,\n\nI was looking at independent violin repair shops around Rochester and found WallIndependent - I noticed something on your site though. Google's index shows your violin-making content at two different URLs: wallindependent.com/violin-making and wallindependent.com/sample-page/ - that second one is WordPress's default placeholder slug, still live with real content instead of being renamed or redirected. The same thing happens with your \"Interesting Fiddle Stuff\" page, indexed at both an old .html URL and the current one.\n\nI put together a page showing what a consolidated site would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-wallindependent.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since real technical write-ups on repairs deserve one clean URL instead of splitting search credit with a leftover default page.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "wallindependent@rochester.rr.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Chicago Knife Center",
@@ -83,7 +83,7 @@
       "email_subject": "Google only has one page of yours indexed",
       "email_body": "Hi Nicholas,\n\nI was looking at knife sharpening services in West Fulton Market and found Chicago Knife Center. One thing I noticed - a search of everything Google has indexed for your site turns up only your homepage. Your restoration finishes (Standard, Fine Finish, Collector's Finish) and your commercial kitchen account work don't have their own pages, so there's nothing specific for a search like \"knife restoration Chicago\" or \"commercial kitchen sharpening\" to match against.\n\nI put together a page showing what dedicated service pages would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-chicago-knife-center.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since three real restoration tiers and commercial kitchen partnerships across Chicago deserve pages of their own.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "sharpen@chicagoknifecenter.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "The Picture Framer Glasgow",
@@ -95,7 +95,7 @@
       "email_subject": "Two pages on your site say the same thing",
       "email_body": "Hi,\n\nI was looking at bespoke framers in Glasgow and found The Picture Framer - great to see Lorna and Archie's Guild Commended credentials front and centre. One thing I noticed though: Google's index shows two separate, live pages with almost identical content - pictureframerglasgow.com/our-services/bespoke-framing and pictureframerglasgow.com/pages/bespoke-framing both describe the same five Fine Art Trade Guild framing levels and the same framer bios, word for word.\n\nI put together a page showing what a consolidated site would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-picture-framer-glasgow.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 25+ years of Guild Commended framing deserves one clean page instead of two splitting the credit.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@pictureframer-glasgow.co.uk",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Feehily's Florist",
@@ -107,7 +107,7 @@
       "email_subject": "Your site still has a 2020 lockdown update live",
       "email_body": "Hi,\n\nI was looking at wedding florists around Sligo and found Feehily's - 45 years trading in Carraroe since 1981 is a genuinely rare credential. One thing I noticed though: Google still has two pandemic-era posts indexed and live on your site - a 'Coronavirus (COVID-19) Update' page from 2020 referencing HSE/WHO guidance, and a separate 'delivering throughout lockdown' post - both still reachable six years later, right in the same news section a bride might browse before booking.\n\nI put together a page showing what it'd look like with those retired and your wedding/funeral pages leading instead:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-feehilys-florist.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 45 years of trust deserves a homepage that reads current in 2026.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@feehilys.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "City Locksmiths",
@@ -119,7 +119,7 @@
       "email_subject": "You actually have two City Locksmiths websites live",
       "email_body": "Hi,\n\nI was looking at locksmiths around Auckland and noticed something about City Locksmiths - Google has two separate, fully indexed websites for the business right now: citylocksmiths.co.nz and an older site at citylocks.co.nz. Both say 'City Locksmiths,' both list 16 St Marks Road and the same history since 1959, but they show different phone numbers - 09 524 0718 on the old site versus 0800 80 30 10 on the newer one - so depending which one someone lands on from search, they might call a different number.\n\nI put together a page showing what a single consolidated site would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-city-locksmiths.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 65+ years as one of Auckland's largest private locksmiths deserves one clean site instead of two splitting the credit.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "theteam@citylocksmiths.co.nz",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Knightwick Butchers",
@@ -131,7 +131,7 @@
       "email_subject": "Your site never actually says \"Worcestershire\"",
       "email_body": "Hi,\n\nI was looking at independent butchers around Worcestershire and found Knightwick Butchers - father-and-son shop since 1995, supplying Michelin and Rosette-awarded restaurants, is a genuinely great story. One thing I noticed though: every page on your site, including the homepage, carries a generic title like \"Knightwick Butchers | Home\" with no mention of \"Worcester\" or \"Worcestershire\" anywhere - so someone searching \"butcher Worcestershire\" has nothing in your titles to match against. I also noticed Google has two separate live pages for your about section (/about-us and /about) splitting whatever ranking credit either could build on its own.\n\nI put together a page showing what it'd look like fixed, with your farm partnership and restaurant clients actually surfacing:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-knightwick-butchers.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a shop with a 4.7-star average across 78 reviews deserves search results that actually show it.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@knightwickbutchers.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "The Top Saddlery",
@@ -143,7 +143,7 @@
       "email_subject": "Your site never actually says \"Katherine\"",
       "email_body": "Hi,\n\nI was looking at saddlers and country stores around the Top End and found The Top Saddlery - family owned since 1991, with your own saddler handcrafting Fender and Western saddles on site, is a real point of difference. One thing I noticed though: your homepage title reads \"The Top Saddlery | Country Clothing, Accessories & Horse Gear\" and your about page title is \"Welcome to The Top Saddlery and Bush Boutique\" - neither one mentions Katherine, NT, or the Top End, even though Visit Katherine's own tourism site sends people your way. A few of your product pages, like \"Products\" and \"Homewares,\" are also still on Shopify's generic default title instead of describing what's actually sold.\n\nI put together a page showing what it'd look like fixed, with your handcrafted-saddle story actually surfacing:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-top-saddlery.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a shop with a 4.6-star average across 64 reviews deserves search results that actually show it.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@topsaddlery.com.au",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "St. Kilian's Cheese Shop & Market",
@@ -155,7 +155,7 @@
       "email_subject": "You have two St. Kilian's websites still live",
       "email_body": "Hi,\n\nI was looking at specialty cheese shops in the Denver Highlands and found St. Kilian's - 20+ years on Lowell Blvd is a rare thing these days. One thing I noticed though: Google has two separate, fully live and indexed websites for the shop - your current Shopify store at stkilianscheeseshop.com, and an older WordPress site at wp.stkilianscheeseshop.com that's still showing content going back to at least 2016. Both are titled \"St. Kilian's Cheese Shop & Market,\" so whatever ranking credit either one builds doesn't help the other.\n\nI put together a page showing what a consolidated site would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-st-kilians-cheese-shop.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since a shop with 78 reviews and two decades in the Highlands deserves one clean site instead of two splitting the credit.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "cheese@stkilianscheeseshop.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Aardvark Letterpress",
@@ -167,7 +167,7 @@
       "email_subject": "Most of your site loads as \"Not Secure\"",
       "email_body": "Hi,\n\nI was looking at letterpress printers in LA and found Aardvark - three generations since 1968, with your grandson Enzo now on the team, is a genuinely rare story in this trade. One thing I noticed though: checking Google's index, most of your pages - Our Team, FAQ, The Process, Weddings, Art, History, Contact - are all indexed as insecure http:// links, while only your homepage and one services page load over https://. That means a browser can flag most of the pages a couple or corporate client would click through to as \"Not Secure,\" and Google can't credit the whole site with the same ranking signal it gives fully-secured sites.\n\nI put together a page showing what a fully-secured site would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-aardvark-letterpress.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a shop voted \"Best in Los Angeles\" with 89 Yelp reviews deserves a site that doesn't scare off half its visitors with a security warning.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@aardvarkletterpress.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Grimm Book Bindery",
@@ -179,7 +179,7 @@
       "email_subject": "Your homepage title ends in a stray \"#\"",
       "email_body": "Hi,\n\nI was looking into book restoration studios and came across Grimm Book Bindery - 1854 to now, still in the family, is about as rare a credential as it gets. One thing I noticed though: checking Google's index, your homepage's title tag actually shows up as \"Home - Grimm Book Bindery #\" - there's a stray # character in the exact text that appears as your blue link in search results, and no mention of Madison or what you actually do. I also saw your own FAQ page mentions the downloadable order-form pricing \"may be off by a few dollars per item\" because of office staff shortages - worth a look since customers may be filling those in with old numbers.\n\nI put together a page showing what a fixed title (and the rest of the site) could look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-grimm-book-bindery.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 170+ years in one family deserved a search result that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@grimmbindery.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Davis Lock & Safe",
@@ -191,7 +191,7 @@
       "email_subject": "Two of your pages are competing for the same search",
       "email_body": "Hi,\n\nI was looking at Portland-area locksmiths and came across Davis Lock & Safe - 45+ years, three generations, still family run, that's a real trust signal for this kind of work. One thing I noticed digging into your site: you've actually got two separate pages both trying to rank for \"Portland locksmith\" - /locksmith-portland/ and /portland-locksmith/ - with nearly identical titles. There's also an older set of service pages (/services, /services/residential) still indexed alongside newer ones covering the same ground, which looks like a leftover from a past redesign that never got fully cleaned up. Right now Google has to pick between your own pages instead of ranking one strong one.\n\nI put together a page showing what a consolidated version could look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-davis-lock-safe.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought three generations of Portland trust deserved one strong page instead of several competing ones.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "contact@davislock.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Taylors of Bruton",
@@ -203,7 +203,7 @@
       "email_subject": "Your site still has a \"coronavirus retailers\" page live",
       "email_body": "Hi,\n\nI came across Taylors of Bruton while looking into independent bakeries in Somerset - three generations, since 1945, vans still out delivering six days a week, that's the real thing. One thing I noticed on your site: there's still a live, indexed page titled \"Retailers During the Coronavirus Pandemic\" from what looks like 2020/2021, sitting right alongside your current pages. There's also an old, undated newsletter post (\"Back to some markets from today!!\") with no publish date visible - together they make an 80-year-old, very-much-active bakery look like the website's been left alone since the pandemic.\n\nI put together a page showing what a refreshed version could look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-taylors-of-bruton.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought seven decades of craft baking deserved a website that looks as current as the vans on the road.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@taylorsofbruton.co.uk",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Rainbow Upholstery",
@@ -215,7 +215,7 @@
       "email_subject": "You've got two websites for the same shop",
       "email_body": "Hi,\n\nI was looking at upholstery shops around Wake Forest and came across Rainbow Upholstery - 40+ years in the same family is a great story. One thing I noticed though: Google's index shows two separate, live websites for the shop - rainbow-upholstery.com and rainbowonwest.com - both carrying the identical title \"Furniture Upholstery | Wake Forest, NC | 919-829-1332.\" Same business, two competing listings. I also noticed the Wake Forest, Raleigh, Durham, and Morrisville pages all use the same templated title with just the city swapped in.\n\nI put together a page showing what a consolidated site would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-rainbow-upholstery.html\n\nYou can also see how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 40+ years as the Triangle's oldest custom shop deserves one site collecting all the credit instead of two splitting it.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "quotes@rainbowonwest.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Dakota Awards & Engraving",
@@ -227,7 +227,7 @@
       "email_subject": "Your trophy shop has two different websites",
       "email_body": "Hi,\n\nI was looking at trophy and engraving shops around Rosemount and found Dakota Awards & Engraving - 20+ years in Dakota County is a real trust signal. One thing I noticed: Google has two completely separate, live websites under your name - dakotaawardsandengraving.com, your current site, and dakotaawards.com, an entirely different older catalog site with cart-style URLs. Same business, two disconnected sites splitting your search authority. I also noticed your Burnsville, Farmington, Cottage Grove, and Shakopee pages all use the identical title pattern with just the city swapped.\n\nI put together a page showing what a consolidated site would look like:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-dakota-awards-engraving.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since two decades serving Dakota County deserves one site instead of two competing for the same searches.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "awards@dakotaawards.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Monograms by Jane",
@@ -239,31 +239,31 @@
       "email_subject": "Your homepage title just says \"Home\"",
       "email_body": "Hi Jane,\n\nI was looking at embroidery shops around Colorado Springs and found Monograms by Jane - 40+ years in business is a real differentiator. One thing I noticed: Google's index shows your homepage title as literally \"Home - Monograms by Jane,\" with no mention of embroidery, monogramming, or Colorado Springs. What's interesting is your own Services page already has a proper title - \"Services We Offer - Monograms by Jane-Custom Embroidery for Colorado Springs area\" - so the pattern's already there, it's just missing from the page most people will actually click on first.\n\nI put together a page showing the fix:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-monograms-by-jane.html\n\nMore at https://organic-theory.vercel.app\n\nNo pressure at all, just thought it was worth flagging since 40+ years serving Colorado Springs deserves a homepage title that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@monogramsbyjane.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Heather Norman Hats",
       "website": "https://heathernorman.co.uk/",
       "industry": "Bespoke Millinery",
-      "issues": "Google has two live, separately indexed versions of the site: the current heathernorman.co.uk with clean URLs (/about/, /reviews/) and an older www.heathernorman.co.uk with legacy .html URLs (/about.html, /reviews.html) that's still fully crawled and indexed alongside it. External review sites split the same way — the Trustpilot listing points at the www/.html version while the current site lives at the clean non-www address — so ranking signal, links, and reviews are split across two competing versions of the same business instead of consolidated behind one.",
-      "opportunity": "A one-time 301 redirect from every old www/.html URL to its current equivalent, plus setting the canonical domain in Search Console, consolidates all of that split signal onto a single site. It's a redirect and configuration fix, not a content rewrite — realistic to implement within a week, with ranking and review consolidation showing up over the following month as Google re-crawls.",
+      "issues": "Google has two live, separately indexed versions of the site: the current heathernorman.co.uk with clean URLs (/about/, /reviews/) and an older www.heathernorman.co.uk with legacy .html URLs (/about.html, /reviews.html) that's still fully crawled and indexed alongside it. External review sites split the same way \u2014 the Trustpilot listing points at the www/.html version while the current site lives at the clean non-www address \u2014 so ranking signal, links, and reviews are split across two competing versions of the same business instead of consolidated behind one.",
+      "opportunity": "A one-time 301 redirect from every old www/.html URL to its current equivalent, plus setting the canonical domain in Search Console, consolidates all of that split signal onto a single site. It's a redirect and configuration fix, not a content rewrite \u2014 realistic to implement within a week, with ranking and review consolidation showing up over the following month as Google re-crawls.",
       "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-heather-norman-hats.html",
       "email_subject": "Two versions of heathernorman.co.uk are both live",
-      "email_body": "Hi Heather,\n\nI was looking into bespoke milliners in the Cotswolds and came across your work — lovely stuff. While I was there I noticed something worth flagging: Google actually has two separate versions of your site indexed right now. Your current site (heathernorman.co.uk/about/) and an older version (www.heathernorman.co.uk/about.html) are both still live and crawlable, and your Trustpilot listing even points at the old www version while your real site lives at the clean address. That splits your search ranking and your reviews across two competing URLs instead of one.\n\nIt's a quick fix — a set of redirects from the old pages to the new ones, plus telling Google which domain is canonical — and I put together a page showing exactly what I mean and what it'd look like sorted:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-heather-norman-hats.html\n\nYou can see how I work at https://organic-theory.vercel.app\n\nNo pressure at all — just thought it was worth pointing out for a business built on this much craft.\n\nGabriel Balenton | Organic Theory Founder",
+      "email_body": "Hi Heather,\n\nI was looking into bespoke milliners in the Cotswolds and came across your work \u2014 lovely stuff. While I was there I noticed something worth flagging: Google actually has two separate versions of your site indexed right now. Your current site (heathernorman.co.uk/about/) and an older version (www.heathernorman.co.uk/about.html) are both still live and crawlable, and your Trustpilot listing even points at the old www version while your real site lives at the clean address. That splits your search ranking and your reviews across two competing URLs instead of one.\n\nIt's a quick fix \u2014 a set of redirects from the old pages to the new ones, plus telling Google which domain is canonical \u2014 and I put together a page showing exactly what I mean and what it'd look like sorted:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-heather-norman-hats.html\n\nYou can see how I work at https://organic-theory.vercel.app\n\nNo pressure at all \u2014 just thought it was worth pointing out for a business built on this much craft.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "Heather1norman@icloud.com",
-      "sent_automatically": false
+      "sent_automatically": true
     },
     {
       "business_name": "Barker's Taxidermy Studio",
       "website": "https://www.barkerstaxidermy.com/",
       "industry": "Taxidermy & Wildlife Mounting",
-      "issues": "A site search of barkerstaxidermy.com turns up only two indexed pages — the homepage and a single services page — for a business that's been family-run in Lafayette since 1984. There's no gallery of finished mounts, no history/about page telling the founding story, and no additional Acadiana-area content, despite decades of work and reputation to draw on.",
+      "issues": "A site search of barkerstaxidermy.com turns up only two indexed pages \u2014 the homepage and a single services page \u2014 for a business that's been family-run in Lafayette since 1984. There's no gallery of finished mounts, no history/about page telling the founding story, and no additional Acadiana-area content, despite decades of work and reputation to draw on.",
       "opportunity": "Building out a gallery page (organized by species) and a history/about page gives Google far more real, Lafayette-specific content to index and rank on for searches like \"taxidermist Lafayette LA,\" while also giving a first-time customer visual proof of quality before they hand over a trophy. Realistic 3-4 week build, no redesign required.",
       "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-16-barkers-taxidermy-studio.html",
       "email_subject": "Your site only has 2 pages indexed on Google",
-      "email_body": "Hi Henry,\n\nI was looking at taxidermists around Lafayette and came across Barker's — forty years in business is no small thing. I checked how your site shows up on Google though, and right now only two pages are indexed: your homepage and the services page. There's no gallery of past mounts and no page telling the story of the studio since 1984, so Google (and a new customer sizing you up) doesn't have much to go on beyond one thin page.\n\nI put together a page showing what a gallery + history page build would look like and why it matters for search:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-barkers-taxidermy-studio.html\n\nYou can see how I work at https://organic-theory.vercel.app\n\nNo pressure at all — just thought forty years of work deserved more than two pages online.\n\nGabriel Balenton | Organic Theory Founder",
+      "email_body": "Hi Henry,\n\nI was looking at taxidermists around Lafayette and came across Barker's \u2014 forty years in business is no small thing. I checked how your site shows up on Google though, and right now only two pages are indexed: your homepage and the services page. There's no gallery of past mounts and no page telling the story of the studio since 1984, so Google (and a new customer sizing you up) doesn't have much to go on beyond one thin page.\n\nI put together a page showing what a gallery + history page build would look like and why it matters for search:\nhttps://organic-theory.vercel.app/leads/funnels/2026-07-16-barkers-taxidermy-studio.html\n\nYou can see how I work at https://organic-theory.vercel.app\n\nNo pressure at all \u2014 just thought forty years of work deserved more than two pages online.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "nchristlieb@hotmail.com",
-      "sent_automatically": false
+      "sent_automatically": true
     }
   ]
 }
