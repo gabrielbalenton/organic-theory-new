@@ -2,6 +2,18 @@
   "date": "2026-07-21",
   "leads": [
     {
+      "business_name": "Howard Needham Violins",
+      "website": "https://www.howardneedham.com/",
+      "industry": "Custom Violin/Viola/Cello Maker & Luthier (Solo Workshop, Silver Spring, MD)",
+      "issues": "howardneedham.com/a-different-approach/ is indexed under the title \"18th Century Italian Instrument Maker in Washington, DC\" - but the site's own Contact page, phone listing, and every directory entry for the business place the workshop at 10108 Day Ave, Silver Spring, Maryland, not Washington, DC. Separately, the Repairs page is indexed twice under two different URL structures - howardneedham.com/repairs.html and www.howardneedham.com/repairs/ - both showing the same repair content as separate results, most likely a leftover from a site redesign that changed the URL format without redirecting the old one. On top of that, there are two separate Yelp listings for the business: an older one marked \"CLOSED - Updated July 2025\" sitting alongside a newer, active listing.",
+      "opportunity": "Correcting the location on the mistitled page, consolidating the duplicate Repairs URLs with a redirect or canonical tag, and getting the outdated \"Closed\" Yelp listing merged or removed is a coordinated, same-week cleanup for a solo luthier whose instrument outscored nearly 100 others - including several 18th-century Cremonese violins - in a 2007 blind comparison, beaten only by a Guadagnini.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-21-howard-needham-violins.html",
+      "email_subject": "Your workshop page says Washington, DC — but you're in Silver Spring",
+      "email_body": "Hi Howard,\n\nI was looking into custom violin makers and came across your workshop — someone who's been building since 1975, and whose instrument held its own against a Stradivarius in a 2007 blind comparison, is exactly the kind of story that should be easy to find. I checked how your site shows up on Google though, and found a few things worth a look. Your \"A Different Approach\" page is indexed with the title \"18th Century Italian Instrument Maker in Washington, DC\" — but your Contact page and every directory listing I found place the workshop in Silver Spring, Maryland, so anyone searching by location could get thrown off. Separately, your Repairs page is indexed twice, once at /repairs.html and again at /repairs/, splitting whatever search credit that page earns between two URLs instead of one. And on Yelp, there are two listings for the business — the older one is marked \"Closed\" as of last July, sitting right next to a newer one that's active, which could make someone assume you've stopped taking repairs.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-21-howard-needham-violins.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a workshop with a résumé like yours deserved a cleaner search presence.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "howard@howardneedham.com",
+      "sent_automatically": false
+    },
+    {
       "business_name": "Old West Iron",
       "website": "https://oldwestiron.com/",
       "industry": "Hand-Forged Wrought Iron Hardware (Family-Owned, Veteran-Powered Forge, Felt, ID)",
