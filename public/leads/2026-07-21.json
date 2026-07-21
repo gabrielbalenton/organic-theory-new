@@ -1,0 +1,29 @@
+{
+  "date": "2026-07-21",
+  "leads": [
+    {
+      "business_name": "Old West Iron",
+      "website": "https://oldwestiron.com/",
+      "industry": "Hand-Forged Wrought Iron Hardware (Family-Owned, Veteran-Powered Forge, Felt, ID)",
+      "issues": "oldwestiron.com/collections/frontpage - the collection page effectively acting as the homepage - is indexed in Google under the title \"página de inicio – Old West Iron\" (Spanish for \"home page\"), even though the URL isn't under a /es/ locale path. Separately, French-language versions of product pages (oldwestiron.com/fr/collections/handrail, oldwestiron.com/fr/collections/mirrors) are indexed as their own separate results alongside the English handrail and mirror collections, splitting search visibility for the same products across two language versions of the same page. On top of that, the site's own Contact Us page lists the shop's address as 5511 W 10500 N, Felt, ID, while its BBB profile, LinkedIn page, and ZoomInfo listing all show 5503 W 10500 N - an inconsistent local citation across the web.",
+      "opportunity": "Fixing the canonical/hreflang setup so the homepage collection indexes in English, resolving the French-language duplicate pages, and correcting the address to match across the site's own Contact page and its BBB/LinkedIn/ZoomInfo listings is a coordinated, same-week cleanup for a veteran-powered family forge that already ships hand-forged hardware nationwide.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-21-old-west-iron.html",
+      "email_subject": "Your homepage is showing up in Spanish on Google",
+      "email_body": "Hi Lisa,\n\nI was looking into hand-forged ironwork shops and came across Old West Iron - veteran-powered, family-run, and genuinely historically-researched designs is a rare combination for a hardware shop. I checked how the site shows up on Google though, and found oldwestiron.com/collections/frontpage (the page doing the job of your homepage) is indexed under the title \"página de inicio – Old West Iron\" - Spanish for \"home page\" - even though it isn't on a /es/ address. Your /fr/ French handrail and mirror pages are also indexed as separate results right next to the English versions of the same products. One more thing while I was checking your listings: your own Contact Us page lists 5511 W 10500 N, but your BBB and LinkedIn profiles both say 5503 W 10500 N - worth getting that consistent.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-21-old-west-iron.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a forge putting out work this specific deserved a cleaner search presence.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "office@oldwestiron.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Fosgate Family Electric Company",
+      "website": "https://fosgateelectric.com/",
+      "industry": "Residential Electrician (Family-Owned, Jackson/Brooklyn, MI)",
+      "issues": "The homepage title tag is simply \"Fosgate Family Electrical Company: Electricians\" - no county, city, or specific service keyword, despite the business serving six named Michigan counties (Jackson, Ingham, Eaton, Hillsdale, Lenawee, Washtenaw). Only two pages of the site appear indexed by Google at all - the homepage and a single \"Home Electric Evaluation\" page - even though the homepage itself lists several distinct services (panel replacements/service upgrades, lighting and ceiling fan installation, outlet and switch installation, smoke/CO detector installation, exterior and security lighting), none of which has its own indexed page to rank for a specific search.",
+      "opportunity": "Rewriting the homepage title to include a location and lead service, then building out dedicated indexed pages for panel upgrades, lighting/ceiling fan installation, and smoke/CO detector installation, would give a six-county residential electrician actual pages to rank for the specific local searches homeowners are running, instead of relying on two generic pages.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-21-fosgate-family-electric.html",
+      "email_subject": "Google only has two of your pages to work with",
+      "email_body": "Hi,\n\nI was looking at family-owned electricians in southern Michigan and came across Fosgate Family Electric - covering panel upgrades, lighting, outlets and safety devices across six counties is a lot of ground for one site to represent. I checked how the site shows up on Google though, and only two pages are indexed at all: your homepage and the \"Home Electric Evaluation\" page. None of your other services - panel upgrades, ceiling fan installation, smoke/CO detectors - has its own page. On top of that, your homepage title tag just reads \"Fosgate Family Electrical Company: Electricians,\" with no county or city in it, even though you list Jackson, Ingham, Eaton, Hillsdale, Lenawee, and Washtenaw as your service area.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-21-fosgate-family-electric.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a business covering that much ground deserved more than two pages for Google to find you by.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "FosgateFamilyElectricCompany@gmail.com",
+      "sent_automatically": false
+    }
+  ]
+}
