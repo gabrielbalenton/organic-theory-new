@@ -240,6 +240,42 @@
       "email_body": "Hi,\n\nI was looking into family-owned loose leaf tea companies and came across TEAinTEXAS - hand-blending award-winning artisan teas in Cypress since 2010 is real, established craft. I checked how the site shows up on Google though, and there are two separate \"Contact Us\" pages indexed for the same shop: /pages/contact-us and /pages/contact-us-1, each with a slightly different title. Your homepage is indexed twice too - the root address carries a good title, but /pages/frontpage is indexed separately under the generic title \"Welcome - TEAinTEXAS,\" with no mention of Cypress or loose leaf tea. Even your Yellow Rose of Texas Tea product page has \"TEAinTEXAS\" stapled onto its title twice.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-21-teaintexas.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 15 years of real blending deserved one consolidated search presence instead of duplicates.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "teaintexas@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Pinnell Custom Leather",
+      "website": "https://www.pinnellcustomleather.com/",
+      "industry": "Custom Handmade Leather Goods (Family-Owned Since 1974, Crozet, VA)",
+      "issues": "pinnellcustomleather.com is indexed on Google under the generic homepage title \"Pinnell Custom Leather Home\" - no mention of Crozet, Virginia, handcrafted leather, or the shop's 1974 founding, even though the site's own About and Contact pages carry that story. Separately, there are two distinct, currently-active Facebook business pages for Pinnell Custom Leather - one with 4,493 likes and 141 check-ins, another with 4,545 likes and 147 check-ins - splitting reviews, check-ins, and customer messages across two listings instead of one.",
+      "opportunity": "Rewriting the homepage title to lead with the business name, craft, location, and founding year, and consolidating the two active Facebook pages into one, is a same-week fix for a 51-year-old family leather workshop known for custom bags, belts, and equestrian buckles.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-21-pinnell-custom-leather.html",
+      "email_subject": "Your homepage title just says \"Home\" — after 51 years",
+      "email_body": "Hi Charles,\n\nI came across Pinnell Custom Leather while looking into custom leatherworkers - a family shop that's been hand-tooling bags, belts, and equestrian buckles in Crozet since 1974 is exactly the kind of story that should be easy to find online. I checked how the site shows up on Google though, and your homepage is indexed under the title \"Pinnell Custom Leather Home\" - nothing about the craft, Crozet, or the 51 years behind it, even though your own About page tells that story well. Separately, I found two different active Facebook pages for the business - one with about 4,500 likes, another with a similar count - splitting your reviews and check-ins across two listings instead of building one strong page.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-21-pinnell-custom-leather.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a workshop with 51 years of craft behind it deserved a search presence that shows it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@pinnellcustomleather.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "A Wild Soap Bar",
+      "website": "https://awildsoapbar.com/",
+      "industry": "Handmade Natural Soap & Body Care (Family-Owned Since 1995, Manor, TX)",
+      "issues": "Two pages from an old, retired e-commerce platform are still indexed on Google under the www.awildsoapbar.com domain: www.awildsoapbar.com/store/pg/12-stores.aspx (titled \"STORES\") and www.awildsoapbar.com/store/pg/6-policies.aspx (titled \"RETAIL POLICIES\"). Both use an old AmeriCommerce-platform URL structure (/store/pg/#-name.aspx) that doesn't match the site's current, modern page structure (e.g. awildsoapbar.com/pages/contact) - a clear leftover from a prior site redesign that was never fully retired from Google's index, likely showing an outdated store list and policies next to the current site.",
+      "opportunity": "Noindexing or redirecting the leftover AmeriCommerce-platform pages so only the current site is indexed is a same-week cleanup for a 30-year-old, family-run natural soap company that ships nationwide and sells into retail stores.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-21-a-wild-soap-bar.html",
+      "email_subject": "An old version of your site is still showing up on Google",
+      "email_body": "Hi there,\n\nI was looking into natural soap makers and came across A Wild Soap Bar - 30 years of cold-process, organic soap is a rare thing to still find family-run. I checked how the site shows up on Google though, and found two pages still indexed from what looks like an old, retired version of your online store: www.awildsoapbar.com/store/pg/12-stores.aspx (titled \"STORES\") and www.awildsoapbar.com/store/pg/6-policies.aspx (titled \"RETAIL POLICIES\"). Both sit on an old e-commerce platform's URL structure, completely different from your current site, so they're most likely leftover from a redesign and could be showing an outdated store list or policies to anyone who lands on them from search.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-21-a-wild-soap-bar.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a 30-year-old soap company deserved a search presence that only shows the current site.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@awildsoapbar.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "KS Woodcraft",
+      "website": "https://kswoodcraft.com/",
+      "industry": "Custom Handmade Hardwood Furniture (Family-Owned, McKinney, TX)",
+      "issues": "KS Woodcraft's Yelp listing - the one with its actual reviews and shop photos - places the business at 1513 S Tennessee St #117, McKinney, TX. But its Foursquare and Chamber of Commerce listings both show 110 N Tennessee St instead - a different street direction and number entirely. Business hours are also inconsistent across listings: Yelp shows Monday-Saturday hours, while the Chamber of Commerce listing shows Wednesday-Saturday only with different daily hours.",
+      "opportunity": "Correcting the Foursquare and Chamber of Commerce listings to match the address and hours on Yelp and the site itself is a same-week local-citation cleanup for a family-owned McKinney furniture shop that hand-builds hardwood tables and desks to order.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-21-ks-woodcraft.html",
+      "email_subject": "Two directories list the wrong street for your shop",
+      "email_body": "Hi Kenneth,\n\nI was looking into custom furniture makers and came across KS Woodcraft - hand-built hardwood tables and desks made locally in McKinney is exactly the kind of craft that should be easy for a customer to find and visit. I checked your listings across the web though, and found your Foursquare and Chamber of Commerce pages both show 110 N Tennessee St, while your Yelp listing - the one with your actual reviews and shop photos - places you at 1513 S Tennessee St. That's a different street entirely, not just a suite number off. The hours don't match either - Yelp shows Monday-Saturday, the Chamber listing shows Wednesday-Saturday with different times each day.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-21-ks-woodcraft.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a shop building furniture this solid deserved directories that actually point people to the right door.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@kswoodcraft.com",
+      "sent_automatically": false
     }
   ]
 }
