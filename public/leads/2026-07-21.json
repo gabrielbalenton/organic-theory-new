@@ -24,6 +24,42 @@
       "email_body": "Hi,\n\nI was looking at family-owned electricians in southern Michigan and came across Fosgate Family Electric - covering panel upgrades, lighting, outlets and safety devices across six counties is a lot of ground for one site to represent. I checked how the site shows up on Google though, and only two pages are indexed at all: your homepage and the \"Home Electric Evaluation\" page. None of your other services - panel upgrades, ceiling fan installation, smoke/CO detectors - has its own page. On top of that, your homepage title tag just reads \"Fosgate Family Electrical Company: Electricians,\" with no county or city in it, even though you list Jackson, Ingham, Eaton, Hillsdale, Lenawee, and Washtenaw as your service area.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-21-fosgate-family-electric.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a business covering that much ground deserved more than two pages for Google to find you by.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "FosgateFamilyElectricCompany@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "McAllen Stained Glass",
+      "website": "https://www.mcallenstainedglass.com/",
+      "industry": "Stained Glass & Fused Glass Studio, Private Classes (McAllen, TX)",
+      "issues": "A site-restricted Google search shows the homepage and six product pages (Bowls, Gallery 3, Christmas Trees, Small Trays, Name Plaque, Mini Tiffany) all indexed under the literal, unedited placeholder title \"Your Site Title\" - the theme default that was never replaced. Separately, a wp-admin plugins URL is indexed alongside the real pages, and none of the product page titles mention McAllen or the Rio Grande Valley.",
+      "opportunity": "Replacing the placeholder title on the homepage and all six product pages with real, descriptive titles is a same-day fix that immediately restores a professional appearance in search results. Blocking the wp-admin page from indexing is a five-minute follow-up. Expected within 30 days: seven real page titles instead of a theme default, for a studio offering private, appointment-based stained and fused glass classes in the Valley.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-21-mcallen-stained-glass.html",
+      "email_subject": "Six of your pages say \"Your Site Title\" on Google",
+      "email_body": "Hi,\n\nI was looking into stained glass studios in the Rio Grande Valley and came across McAllen Stained Glass - private, two-hour classes where you can cast a name plaque or fuse your own bowl is a nice, hands-on offering. I checked how the site shows up on Google though, and your homepage plus six product pages (Bowls, Gallery 3, Christmas Trees, Small Trays, Name Plaque, Mini Tiffany) are all indexed under the literal title \"Your Site Title\" - the theme's default text, never replaced. I also noticed a wp-admin page is indexed alongside your real pages.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-21-mcallen-stained-glass.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a hands-on local studio deserved search results that actually say who you are.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "mcallenstainedglass@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Frederick Williamson Bowls",
+      "website": "https://wp.fredwilliamson.com/",
+      "industry": "Hand-Turned Wood Bowls & Sculpture, Solo Woodturner Since 1971 (Crozet, VA)",
+      "issues": "Google has three separate domains indexed for the same body of work: fredwilliamson.com (the retired original site, still indexed with its old /Pages-Main/ URLs like About-Artist.html and Ordering.html), frederickwilliamson.com (a second, older domain, still indexed with pages like a Monticello Trees writeup), and wp.fredwilliamson.com (the current site). The current site also sits on an unusual \"wp.\" subdomain rather than a primary domain, which reads as a leftover staging address.",
+      "opportunity": "301-redirecting the two retired domains into one permanent, primary address consolidates all search authority behind a single site - a same-week fix. For a 55-year woodturning practice that includes architectural lathe work for Monticello since 1995, having three competing indexed listings undersells work with that kind of credibility. Expected within 30 days: one consolidated domain instead of three fragmented listings.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-21-frederick-williamson-bowls.html",
+      "email_subject": "Google has three different websites indexed for your work",
+      "email_body": "Hi Fred,\n\nI came across your bowls while looking into wood turners with real, singular craft - turning straight from the log since 1971, plus architectural lathe work for Monticello since 1995, is a genuinely rare combination. I checked how your site shows up on Google though, and there are three separate domains indexed for the same work: fredwilliamson.com (the retired original site), frederickwilliamson.com (a second older domain, still indexed with a Monticello writeup), and wp.fredwilliamson.com (your current site, on what reads like a leftover staging subdomain). Anyone who bookmarked or shared either of the first two years ago is landing on a page that isn't your live site, with no redirect pointing them to the current one.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-21-frederick-williamson-bowls.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 55 years of real craft deserved one consolidated address instead of three.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "fredwilliamsonwood@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "The Taxidermy Studio",
+      "website": "https://www.thetaxidermystudio.net/",
+      "industry": "Full-Phase Taxidermy, 25+ Years Experience (Taylor, PA)",
+      "issues": "A site-restricted Google search shows the homepage - the single highest-traffic page - indexed under the raw title \"Thetaxidermystudio,\" one squashed word with no spaces, no mention of Taylor, PA, and no description of the work. Gallery pages (White Tail, Bears, Small Mammals, Elk & Carribou & Moose, Musk Ox) are indexed with just the animal name and no business name or location attached to any of them.",
+      "opportunity": "Rewriting the homepage title to name the business, \"taxidermy,\" and Taylor, PA is a same-day fix. Standardizing the gallery page titles to include the species, business name, and location is a short follow-up. Expected within 30 days: a homepage title that actually reads as a business, and gallery pages that can compete for species- and location-specific searches, for a shop with 25+ years of full-phase experience.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-21-the-taxidermy-studio.html",
+      "email_subject": "Your homepage's Google title is just \"Thetaxidermystudio\"",
+      "email_body": "Hi,\n\nI was looking into taxidermists in the Scranton area and came across The Taxidermy Studio - 25+ years of full-phase work, right behind Lonesome Rd Archery in Taylor, is real, established experience. I checked how the site shows up on Google though, and your homepage - the page most people land on first - is indexed under the title \"Thetaxidermystudio,\" one squashed word with no location and no description. Your gallery pages (White Tail, Bears, Elk & Carribou & Moose, and more) are titled the same thin way, just an animal name with no business name or location attached.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-21-the-taxidermy-studio.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 25 years of real experience deserved a homepage that actually reads like one.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "wolf4654@outlook.com",
+      "sent_automatically": false
     }
   ]
 }
