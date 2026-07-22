@@ -228,6 +228,18 @@
       "email_body": "Hi,\n\nI was looking into lawn care companies around Youngsville and came across Pristine - locally owned since 2013, growing from lawn mowing into full hardscaping (patios, walkways, retaining walls) and irrigation design, is real range for a local outfit. I checked how the site shows up on Google though, and your homepage - the page most people land on first - is indexed under the title \"Pristine Lawn & Landscaping – Just another WordPress site.\" That trailing phrase is just the default WordPress tagline, never replaced, so nothing about Youngsville, lawn care, or landscaping shows up in the one line Google gives searchers.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-pristine-lawn-landscaping.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought over a decade in Youngsville deserved a homepage title that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "pristinelawncarela@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Notable Landscaping",
+      "website": "https://notablelandscaping.com/",
+      "industry": "Lawn Care, Landscaping & Pressure Washing (East Orlando, FL)",
+      "issues": "Google's index shows six separate pages on notablelandscaping.com - the homepage, Contact, FAQ, Gallery, About Us, and Team - every one of them titled with \"- Just another WordPress site\" tacked onto the end. That's the unedited default WordPress theme tagline, never replaced under Settings, and it's sitewide rather than a one-off homepage mistake. None of the business's actual services (lawn care, landscaping, pressure washing, irrigation) or its location (East Orlando, FL) appear in any of those titles.",
+      "opportunity": "Because the placeholder text is coming from one sitewide WordPress tagline setting rather than six separately-written titles, clearing that single field fixes all six indexed pages at once - a same-day change for a landscaping company with 9 years in East Orlando and strong word-of-mouth reviews, whose search presence currently says nothing about what it does or where.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-22-notable-landscaping.html",
+      "email_subject": "Every page on your site says \"Just another WordPress site\"",
+      "email_body": "Hi Notable Landscaping team,\n\nI was looking up landscapers in East Orlando and noticed something on your site worth a two-minute fix: right now, Google shows all six of your indexed pages - the homepage, Contact, FAQ, Gallery, About Us, and Team - titled with \"Just another WordPress site\" tacked on the end. That's the leftover default WordPress tagline, and it's sitewide, not just on one page, so none of your titles currently say lawn care, landscaping, or East Orlando anywhere.\n\nThe fix is genuinely simple - it's one setting in WordPress, not six separate edits - but I put together a full mockup of what your search listing and homepage could look like once it's cleaned up, plus a couple of add-ons for later if you're ever curious: https://organic-theory.vercel.app/leads/funnels/2026-07-22-notable-landscaping.html\n\nNo pitch, just wanted you to see it since nine years in business deserves better than a placeholder title. Happy to jump on a quick call if useful, or you can just take the fix and run with it yourself.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "notablelandscaping@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
