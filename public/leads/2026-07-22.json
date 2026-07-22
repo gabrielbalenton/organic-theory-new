@@ -1,0 +1,29 @@
+{
+  "date": "2026-07-22",
+  "leads": [
+    {
+      "business_name": "Sheiks Bakery & Roti Cafe",
+      "website": "https://sheiksbakery.com/",
+      "industry": "Guyanese Bakery & Roti Cafe, Family-Owned 15+ Years (Pembroke Pines, FL)",
+      "issues": "A Google search shows the homepage - the single highest-traffic page on the site - indexed under the title \"Sheiks Bakery & Roti Cafe – Just another WordPress site,\" the unedited default tagline every new WordPress install ships with, never replaced with the city or what the business actually is. Separately, a reusable theme footer widget is indexed as its own standalone page at sheiksbakery.com/footer/, showing up in search results alongside the site's real pages (Contact, About Us, Shop) instead of staying in the background where it belongs.",
+      "opportunity": "Rewriting the homepage title to lead with the business name and \"Pembroke Pines, FL,\" and noindexing the leftover /footer/ page, is same-day cleanup for a family bakery carrying Guyanese recipes passed down for over 50 years and 15+ years at its current University Drive location - a real story currently invisible in the one line Google shows searchers first.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-22-sheiks-bakery-roti-cafe.html",
+      "email_subject": "Google shows your homepage as \"Just another WordPress site\"",
+      "email_body": "Hi,\n\nI was looking into Caribbean bakeries in the Pembroke Pines area and came across Sheiks Bakery & Roti Cafe - 15+ years at your University Drive spot, carrying recipes the family's been baking for over 50 years, is a genuinely good story. I checked how the site shows up on Google though, and your homepage - the page most people land on first - is indexed under the title \"Sheiks Bakery & Roti Cafe – Just another WordPress site.\" That trailing phrase is just the default WordPress tagline, never replaced, so nothing about Pembroke Pines, roti, or Guyanese baking shows up in the one line Google gives searchers. I also noticed your site's footer widget is indexed as its own separate page, sitting in results next to your real Contact and Shop pages.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-sheiks-bakery-roti-cafe.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 50 years of real family recipes deserved a homepage title that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@sheiksbakery.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Shear Magic Salon",
+      "website": "https://shearmagicsalonkingsburg.com/",
+      "industry": "Family Hair Salon (Kingsburg, CA)",
+      "issues": "A Google search shows the homepage indexed under the title \"Shear Magic Salon – Just another WordPress site,\" the unedited default WordPress tagline, never replaced with \"Kingsburg, CA\" or \"hair salon.\" Separately, a site-restricted search turns up a thin, mostly-empty post at shearmagicsalonkingsburg.com/barber-blog-post-8/, indexed alongside the salon's real Services, Tanning, Specials, and Contact pages.",
+      "opportunity": "Rewriting the homepage title to lead with the business name and \"Kingsburg, CA,\" and fleshing out or noindexing the thin blog post, is same-day cleanup for a family-run salon on Sierra St offering cuts, color, waxing, and spray tans - a local fixture currently invisible in the one line Google shows searchers first.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-22-shear-magic-salon.html",
+      "email_subject": "Google shows your homepage as \"Just another WordPress site\"",
+      "email_body": "Hi,\n\nI was looking into family-owned hair salons in the Kingsburg area and came across Shear Magic Salon - cuts, color, waxing, and spray tans all under one roof on Sierra St is a real, well-rounded local shop. I checked how the site shows up on Google though, and your homepage is indexed under the title \"Shear Magic Salon – Just another WordPress site.\" That trailing phrase is just the default WordPress tagline, never replaced, so nothing about Kingsburg or hair salon services shows up in the one line Google gives searchers. I also found a mostly-empty post at /barber-blog-post-8/ indexed right alongside your real Services and Contact pages.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-shear-magic-salon.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a real family salon deserved a homepage title that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "shearmagic347@att.net",
+      "sent_automatically": false
+    }
+  ]
+}
