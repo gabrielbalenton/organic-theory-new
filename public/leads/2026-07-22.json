@@ -84,6 +84,30 @@
       "email_body": "Hi Jack,\n\nI was looking into locksmiths around Portlaoise and came across Nolan Locksmiths - 41+ years covering residential, commercial, automotive, and safe work across Laois, Kildare, Carlow, and Kilkenny is serious, established coverage. I checked how the site shows up on Google though, and your About Us page - the one page that actually tells someone who you are - is indexed at the insecure http://www.jacknolan.ie/about-us/, while every other page on your site (Contact, Key Cutting, Automotive) correctly shows as https://.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-nolan-locksmiths.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 41 years in business deserved an About page that doesn't flag as \"not secure.\"\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "info@jacknolan.ie",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Comfort HVAC",
+      "website": "https://www.comforthvac.net/",
+      "industry": "HVAC — Heating & Cooling, Family-Owned (Central Illinois — Peoria, Bloomington, Champaign, Decatur)",
+      "issues": "The homepage - the single highest-traffic page on the site - is indexed on Google under the title \"Comfort HVAC | Heating & Cooling | Peoria, Decatur, Champaign | Just another WordPress site,\" the unedited default WordPress tagline stapled onto an otherwise solid title. The About, Contact, and Services pages all carry clean, correctly-written titles, so the leftover tagline is isolated to the homepage - the page most searchers land on first.",
+      "opportunity": "Rewriting the homepage title to drop the leftover WordPress tagline is same-day cleanup for a family-owned HVAC company covering four Central Illinois cities and doing custom sheet metal ductwork in-house - a business whose most important search listing currently reads like an unfinished setup.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-22-comfort-hvac.html",
+      "email_subject": "Google shows your homepage as \"Just another WordPress site\"",
+      "email_body": "Hi,\n\nI was looking into HVAC companies around Central Illinois and came across Comfort HVAC - covering Peoria, Bloomington, Champaign, and Decatur, plus doing custom sheet metal ductwork in-house, is real, well-rounded capability. I checked how the site shows up on Google though, and your homepage - the page most people land on first - is indexed under the title \"Comfort HVAC | Heating & Cooling | Peoria, Decatur, Champaign | Just another WordPress site.\" That trailing phrase is just the default WordPress tagline, never replaced. Your About, Contact, and Services pages all have clean titles, so it's really just the one page.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-comfort-hvac.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a company covering four cities deserved a homepage title that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@comforthvac.net",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Abington Auto Tops",
+      "website": "https://abingtontopshop.com/",
+      "industry": "Auto Upholstery & Convertible Tops, Family-Owned 25+ Years (Abington, PA)",
+      "issues": "Every indexed page on the site - homepage, About, Services, Contact Us, Make an Appointment, and Project Gallery - spells the business name \"Abbington\" with two Bs, while the town itself, and every third-party listing (Yelp, Google), spell it \"Abington\" with one B. Separately, the homepage title still ends in \"Just another WordPress site,\" the unedited default WordPress tagline never replaced.",
+      "opportunity": "Correcting the spelling to match the town and every other listing, and dropping the leftover WordPress tagline, is same-week cleanup for a family-owned shop that's done custom tops and upholstery in Abington for 25+ years - closing a gap between how the business is known locally and how its own site presents it.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-22-abington-auto-tops.html",
+      "email_subject": "Your own site spells your name differently than everyone else does",
+      "email_body": "Hi,\n\nI was looking into auto upholstery shops around Abington and came across Abington Auto Tops - 25+ years of custom convertible tops and upholstery, family owned, is real local trust. I checked how the site shows up on Google though, and every page - homepage, About, Services, Contact, even Make an Appointment - spells the business name \"Abbington\" with two Bs. The town, and your own Yelp and Google listings, spell it \"Abington\" with one B. On top of that, your homepage title still ends in \"Just another WordPress site,\" the default WordPress tagline, never replaced.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-abington-auto-tops.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 25 years in Abington deserved a site that spells it the same way the town does.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "abingtonatops@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
