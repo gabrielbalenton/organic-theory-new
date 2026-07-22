@@ -264,6 +264,18 @@
       "email_body": "Hi,\n\nI was looking into independent bookstores in the Anacortes/Skagit area and came across Watermark - 35+ years serving the community, and it's great to see Brandy carrying that on since 2018. I checked how a couple of your pages show up on Google though, and your actual Book Club page is indexed under the title \"General 2 — Watermark Book Company,\" and your blog page shows as \"Blog 3 — Watermark Book Company.\" Both look like leftover placeholder names from when those pages were set up, never renamed to say what's actually on them - so someone searching for your book club currently sees \"General 2\" instead of anything about a book club.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-watermark-book-company.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a bookstore that's been part of the neighborhood for 35 years deserved page titles that actually say what's on them.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "watermarkbookcompany@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "925 Dance Collective",
+      "website": "https://925dancecollective.com/",
+      "industry": "Dance Studio — Ballet, Jazz, Hip Hop, Contemporary & Adult Fitness, Newly Opened Feb 2026 (Lafayette, CA)",
+      "issues": "Google's index shows a site-wide title-tag bug: the About Us page is indexed as \"About Us | 925 Dance Collective | 925 Dance Collective,\" the Studio Schedule page as \"Studio Schedule | 925 Dance Collective | 925 Dance Collective,\" and the Summer 2026 Classes page the same way — the studio's own name stapled onto the end of the title twice. The homepage and the Summer Camps page don't have the duplication, so it's an inconsistent template issue rather than a single typo, and it's live on several of the pages a new client would actually click through to check class times.",
+      "opportunity": "Fixing the page-title template so the studio name only appears once is a same-day cleanup for a brand-new studio (opened February 2026) whose founders are actively building search visibility from zero — right now several of its own schedule and about pages read as visibly broken in search results before a prospective family ever clicks through.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-22-925-dance-collective.html",
+      "email_subject": "Your Studio Schedule page's title repeats your name twice",
+      "email_body": "Hi,\n\nI saw the write-up on 925 Dance Collective opening in Lafayette earlier this year - a training hub built around technique and a more holistic, body-aware approach is a distinct angle in a pretty crowded dance-studio market. I checked how a few of your pages show up on Google though, and your About Us page is indexed as \"About Us | 925 Dance Collective | 925 Dance Collective,\" and your Studio Schedule and Summer 2026 Classes pages carry the same issue - the studio name stapled on twice. Your homepage and Summer Camps page don't have it, so it looks like a template setting that's just inconsistent across page types rather than one typo.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-925-dance-collective.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a brand-new studio building its search presence from scratch deserved page titles that don't look broken right out of the gate.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@925dancecollective.com",
+      "sent_automatically": false
     }
   ]
 }
