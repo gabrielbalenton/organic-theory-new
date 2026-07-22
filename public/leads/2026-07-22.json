@@ -240,6 +240,30 @@
       "email_body": "Hi Notable Landscaping team,\n\nI was looking up landscapers in East Orlando and noticed something on your site worth a two-minute fix: right now, Google shows all six of your indexed pages - the homepage, Contact, FAQ, Gallery, About Us, and Team - titled with \"Just another WordPress site\" tacked on the end. That's the leftover default WordPress tagline, and it's sitewide, not just on one page, so none of your titles currently say lawn care, landscaping, or East Orlando anywhere.\n\nThe fix is genuinely simple - it's one setting in WordPress, not six separate edits - but I put together a full mockup of what your search listing and homepage could look like once it's cleaned up, plus a couple of add-ons for later if you're ever curious: https://organic-theory.vercel.app/leads/funnels/2026-07-22-notable-landscaping.html\n\nNo pitch, just wanted you to see it since nine years in business deserves better than a placeholder title. Happy to jump on a quick call if useful, or you can just take the fix and run with it yourself.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "notablelandscaping@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "R Pools LLC",
+      "website": "https://www.rpoolsllc.com/",
+      "industry": "Residential Pool Cleaning, Maintenance & Renovation, Family-Run 25+ Years (Spring / North Houston, TX)",
+      "issues": "Google has two separate pages indexed for the same Tomball service area: an old page at rpoolsllc.com/tomball.html, still served over plain unsecured http:// (not https://), sitting in results right alongside a newer page at rpoolsllc.com/service-areas/tomball-tx covering the identical city and services. Both are titled almost identically around \"Tomball Pool Cleaning, Maintenance & Renovation,\" so instead of one strong result, ranking signal is split across two competing, overlapping URLs - one of which isn't even secure.",
+      "opportunity": "301-redirecting the old flat URLs (tomball.html and any siblings from the same earlier site structure) to their new /service-areas/ equivalents, and forcing https:// site-wide, consolidates two competing pages into one canonical, secure result - straightforward cleanup left over from a past site redesign that never got fully redirected, for a family pool company with 25 years serving North Houston.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-22-r-pools.html",
+      "email_subject": "Google's showing two different pages for your Tomball service",
+      "email_body": "Hi,\n\nI was looking into pool service companies around North Houston and came across R Pools - 25 years family-run out of Spring is the kind of track record that's hard to fake. I checked how your Tomball page shows up on Google though, and there are actually two separate indexed pages for it: an old one at rpoolsllc.com/tomball.html, still served over plain unsecured http://, sitting right next to your newer rpoolsllc.com/service-areas/tomball-tx page covering the same city and services. Google's splitting ranking credit between the two instead of sending it all to the page you'd actually want a Tomball homeowner to land on.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-r-pools.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 25 years of honest pool work deserved one clean page pointing Tomball searches in the right direction.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "rpoolsllc@hotmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Watermark Book Company",
+      "website": "https://www.watermarkbookcompany.com/",
+      "industry": "Independent Bookstore, Community Fixture 35+ Years (Anacortes, WA)",
+      "issues": "Two indexed pages carry unedited default page-builder titles instead of real ones: the bookstore's actual Book Club page (/book-club) shows up on Google as \"General 2 — Watermark Book Company,\" and the blog index (/blog-3-1) shows up as \"Blog 3 — Watermark Book Company.\" Both look like leftover placeholder names from duplicating a page template that were never renamed, so neither search result tells a searcher what's actually on the page.",
+      "opportunity": "Renaming those two page titles to something real - \"Book Club\" and \"Blog\" - is a few minutes of work per page, but it's the difference between a Book Club search landing on a page that says \"General 2\" versus one that actually says Book Club, for a bookstore that's been part of the Anacortes community for 35+ years under new owner Brandy Bowen since 2018.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-22-watermark-book-company.html",
+      "email_subject": "Your Book Club page shows up on Google as \"General 2\"",
+      "email_body": "Hi,\n\nI was looking into independent bookstores in the Anacortes/Skagit area and came across Watermark - 35+ years serving the community, and it's great to see Brandy carrying that on since 2018. I checked how a couple of your pages show up on Google though, and your actual Book Club page is indexed under the title \"General 2 — Watermark Book Company,\" and your blog page shows as \"Blog 3 — Watermark Book Company.\" Both look like leftover placeholder names from when those pages were set up, never renamed to say what's actually on them - so someone searching for your book club currently sees \"General 2\" instead of anything about a book club.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-watermark-book-company.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a bookstore that's been part of the neighborhood for 35 years deserved page titles that actually say what's on them.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "watermarkbookcompany@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
