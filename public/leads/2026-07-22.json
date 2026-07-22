@@ -156,6 +156,30 @@
       "email_body": "Hi,\n\nI was looking into jewelers around Plattsburgh and came across Payson & Stoughton - family-owned since 1933 and a Jewelers of America member, that's over 90 years of local trust. I checked how the site shows up on Google though, and your homepage - the page most people land on first - is indexed under the title \"plattsburghjeweler.com – Just another WordPress site.\" That's not a tagline stapled onto a real title, it's the entire listing - no mention of your name, \"diamonds,\" or \"Plattsburgh\" anywhere in it. I also noticed your Location, About Us, and Services pages sit on a raw \"/index.php/\" web address instead of a clean one.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-payson-stoughton-jewelers.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 90+ years in Plattsburgh deserved a homepage title that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "cpayson@plattsburghjeweler.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Hometown Potters",
+      "website": "https://hometownpotters.wixsite.com/home",
+      "industry": "Pottery & Clay Studio — Classes, Workshops & Handmade Ceramics (Lewistown, PA)",
+      "issues": "The homepage is hosted on a free hometownpotters.wixsite.com/home address rather than a domain of the studio's own, and Google has indexed the page under the title \"Clay | Hometown Potters | United States\" — the generic country-level placeholder Wix fills in automatically when no real title is set. That's the one line a searcher sees before ever clicking through, and it says nothing about Lewistown, Central PA, pottery classes, or clay — just \"United States.\"",
+      "opportunity": "Registering a real domain and rewriting that title to lead with \"Hometown Potters\" and \"Lewistown, PA\" turns the one line Google shows searchers into an actual local pitch, instead of a placeholder that could describe a studio anywhere in the country — a real opportunity for a hands-on studio that just moved into its Valley Street space and relies on nearby customers finding it first.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-22-hometown-potters.html",
+      "email_subject": "Google lists Hometown Potters as being in \"United States\"",
+      "email_body": "Hi,\n\nI was looking at pottery studios around Central PA and came across Hometown Potters. I checked how the site shows up on Google, though, and your homepage is indexed under the title \"Clay | Hometown Potters | United States\" — that's Wix's automatic placeholder when no one's set a real title, and it's the one line people see before they ever click through. Nothing in it mentions Lewistown, Central PA, or even pottery classes.\n\nI also noticed the studio's still running on a free hometownpotters.wixsite.com address rather than a domain of its own, which is worth having if you want people to trust and remember it.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-hometown-potters.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all — just thought a studio that just moved into its Valley Street space deserved a homepage that says where it actually is.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "hometownpotters@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Bike Labs",
+      "website": "https://bikelabstexas.com/",
+      "industry": "Bicycle Sales, Repair & Fitting Shop, Est. 2021 (Mansfield, TX)",
+      "issues": "bikelabstexas.com's homepage is indexed by Google under the title \"bikelabstexas.com | Repairs, sales, bicycle fits, & chaos.\" — leading with the raw domain name instead of the business name, with no mention of \"Bike Labs,\" \"Mansfield,\" or \"bicycle shop\" anywhere in the one line searchers see first. Separately, an old, abandoned site on a free bikelabstx.wixsite.com address is still indexed and shows up in search results right alongside the real site for \"Bike Labs Mansfield\" — splitting search visibility between two competing listings for the same shop.",
+      "opportunity": "Rewriting the homepage title to lead with \"Bike Labs\" and \"Mansfield, TX,\" and redirecting or removing the old Wix listing from Google's index, consolidates search visibility onto the one site that's actually current — same-week cleanup for a shop that's built a local following since 2021 on repairs, sales, and bike fits.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-22-bike-labs.html",
+      "email_subject": "Your homepage's Google title is just your domain name",
+      "email_body": "Hi,\n\nI was looking at bike shops around Mansfield and came across Bike Labs. I checked how bikelabstexas.com shows up on Google, though, and the homepage is indexed under the title \"bikelabstexas.com | Repairs, sales, bicycle fits, & chaos.\" — that's leading with the raw domain name instead of \"Bike Labs,\" and nothing in it mentions Mansfield or bicycle shop.\n\nI also noticed an old site on a free bikelabstx.wixsite.com address is still indexed and turning up in search right next to your real site — splitting attention between two listings for the same shop instead of pointing everyone to the one that's current.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-bike-labs.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all — just thought a shop that's built a following since 2021 deserved one clean listing instead of two competing ones.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "bikelabstx@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
