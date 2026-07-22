@@ -24,6 +24,66 @@
       "email_body": "Hi,\n\nI was looking into family-owned hair salons in the Kingsburg area and came across Shear Magic Salon - cuts, color, waxing, and spray tans all under one roof on Sierra St is a real, well-rounded local shop. I checked how the site shows up on Google though, and your homepage is indexed under the title \"Shear Magic Salon – Just another WordPress site.\" That trailing phrase is just the default WordPress tagline, never replaced, so nothing about Kingsburg or hair salon services shows up in the one line Google gives searchers. I also found a mostly-empty post at /barber-blog-post-8/ indexed right alongside your real Services and Contact pages.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-shear-magic-salon.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a real family salon deserved a homepage title that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "shearmagic347@att.net",
       "sent_automatically": false
+    },
+    {
+      "business_name": "LaBelle Family Florist",
+      "website": "https://www.labellefamilyflorist.com/",
+      "industry": "Family-Owned Florist & Gift Shop, 18+ Years (LaBelle, FL)",
+      "issues": "A Google search of the site shows several product category pages with title tags that run past Google's roughly 60-character display limit and get cut off mid-word: \"Roses from LABELLE FAMILY FLORIST - your local Labelle, FL Florist & F\" (chopped after \"& F\"), \"Custom Orders from LABELLE FAMILY FLORIST - your local Labelle FL Flor\" (chopped mid-word at \"Flor\"), \"Get Well Flowers from LABELLE FAMILY FLORIST - local Labelle, FL Flori\" (chopped at \"Flori\"), and \"Plants from LABELLE FAMILY FLORIST - your local FL Florist and Flower Sho\" (chopped at \"Sho\"). The same repeated boilerplate - business name, city, and \"Florist and Flower Shop\" - is stapled onto every category page title, pushing each one past the cutoff.",
+      "opportunity": "Shortening the repeated title template so category pages read as complete phrases instead of cutting off mid-word is same-week cleanup for a florist that's served LaBelle for over 18 years - a small fix that stops search results from looking unfinished.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-22-labelle-family-florist.html",
+      "email_subject": "Google is cutting off your page titles mid-word",
+      "email_body": "Hi there,\n\nI was looking into local florists and came across LaBelle Family Florist - 18+ years serving LaBelle is real, established local trust. I checked how the site shows up on Google though, and several of your category pages have titles that run past the point Google actually displays, so they cut off mid-word: your Roses page ends in \"...Florist & F\", your Custom Orders page ends in \"...FL Flor\", and your Get Well Flowers page ends in \"...FL Flori\". It's the same repeated business name and city stapled onto every title, just running a bit too long each time.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-labelle-family-florist.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 18 years of local trust deserved page titles that don't look cut off.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "labellefamilyflorist@yahoo.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Holborn Driving School",
+      "website": "https://www.holborndrivingschool.co.uk/",
+      "industry": "Driving School, Est. 1965 — Oldest Independent in Central London (London, UK)",
+      "issues": "The FAQ, Terms & Conditions, Alumni, and News pages are all indexed under a stray /uncategorized/ folder in the URL (e.g. holborndrivingschool.co.uk/uncategorized/faq/) - the default WordPress category slug, never replaced with a real site structure. Worse, a page literally titled \"Draft Post\" - dated April 2021 and about COVID-era reopening hours - is still indexed live at /uncategorized/draft-post/, years-old leftover content sitting in Google's index next to the school's real pages.",
+      "opportunity": "Restructuring permalinks so FAQ, Terms, Alumni, and News no longer sit under a generic /uncategorized/ folder, and pulling the stale 2021 \"Draft Post\" out of the index, is same-week technical cleanup for London's oldest independent driving school - established 1965, now run by the third generation of the same family.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-22-holborn-driving-school.html",
+      "email_subject": "A 2021 \"Draft Post\" is still indexed on your site",
+      "email_body": "Hi Roberto,\n\nI was looking into driving schools in central London and came across Holborn - established in 1965 and still family-run three generations later is a genuinely rare story for a driving school. I checked how the site shows up on Google though, and your FAQ, Terms & Conditions, Alumni, and News pages are all indexed under a stray \"/uncategorized/\" folder in the address - a leftover WordPress default that was never replaced. On top of that, a page literally titled \"Draft Post\" from April 2021 - about COVID reopening hours - is still indexed and live at /uncategorized/draft-post/, years out of date.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-holborn-driving-school.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 60 years in business deserved a search presence without a 2021 leftover still showing up.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@holborndrivingschool.co.uk",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Canada Yoga Studio",
+      "website": "https://www.canadayogastudio.com/",
+      "industry": "Yoga Studio & Teacher Training — Calgary's Best Yoga Studio 2024 (Calgary, AB)",
+      "issues": "The homepage - the single most important page on the site - is indexed on Google under the literal title \"Home page - My Blog,\" the unedited WordPress theme default, with no mention of yoga, Calgary, or the studio's own name anywhere in it.",
+      "opportunity": "Rewriting the homepage title tag to lead with the studio's name, \"yoga,\" and Calgary is a same-day fix for a studio voted Calgary's Best Yoga Studio in 2024 that teaches students as far away as Dubai and Singapore online - a title tag currently undersells an award-winning studio worse than a blank page would.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-22-canada-yoga-studio.html",
+      "email_subject": "Your homepage's Google title is \"Home page - My Blog\"",
+      "email_body": "Hi Pallavi,\n\nI was looking into yoga studios in Calgary and came across Canada Yoga Studio - voted Calgary's Best Yoga Studio in 2024, with students joining your online sessions from as far as Dubai and Singapore, is a real, earned reputation. I checked how the site shows up on Google though, and your homepage - the page most people land on first - is indexed under the title \"Home page - My Blog,\" the default WordPress theme text. No mention of yoga, Calgary, or the studio's name anywhere in it.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-canada-yoga-studio.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought an award-winning studio deserved a homepage title that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "pallavi.linesandcurves@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Chaplows",
+      "website": "https://www.chaplows.co.nz/",
+      "industry": "Custom Picture Framing & Military Medal Mounting, Est. 1981 (Upper Hutt, NZ)",
+      "issues": "A page titled \"New Zealand's Premier Custom Picture Framing Website\" is indexed at chaplows.co.nz/index.php/2-uncategorised/1-chaplows - a raw, numbered Joomla category path instead of a normal page address. Several other pages (Services, Conservation Framing, Glass Choices) are still indexed on the same old /index.php/ URL structure rather than clean addresses.",
+      "opportunity": "Cleaning up the numbered \"/2-uncategorised/\" artifact and moving the site off raw /index.php/ URLs onto clean, readable addresses is same-week technical cleanup for a 45-year-old framing shop that mounts military medals for clients as far away as the UK, Canada, and Japan.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-22-chaplows.html",
+      "email_subject": "One of your pages lives at \"/2-uncategorised/1-chaplows\"",
+      "email_body": "Hi there,\n\nI was looking into custom framing shops and came across Chaplows - 45 years in Upper Hutt, plus NZDF-accredited medal mounting shipped as far as the UK, Canada, and Japan, is a genuinely rare combination of craft and reach. I checked how the site shows up on Google though, and one of your own pages - titled \"New Zealand's Premier Custom Picture Framing Website\" - is indexed at a raw, numbered address: /index.php/2-uncategorised/1-chaplows. Several other pages, like Services and Conservation Framing, are on the same old /index.php/ structure instead of a clean address.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-chaplows.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 45 years of real craft deserved page addresses that read like a business, not a numbered category.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "sales@chaplows.co.nz",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Nolan Locksmiths",
+      "website": "https://www.jacknolan.ie/",
+      "industry": "Locksmith — Residential, Commercial, Automotive & Safes, Family-Run Since 1982 (Portlaoise, Ireland)",
+      "issues": "The site's own About Us page is indexed under an insecure address - http://www.jacknolan.ie/about-us/ - while every other indexed page (Contact, Key Cutting, Automotive Locksmiths, Residential Locksmiths) correctly shows as https://. The one page that tells a potential customer who Nolan's actually are is the one page Google shows as not secure.",
+      "opportunity": "Forcing the About Us page onto the same https:// redirect already working across the rest of the site is a same-day fix for a family-run locksmith with 41+ years serving Portlaoise and four surrounding counties.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-22-nolan-locksmiths.html",
+      "email_subject": "Your About Us page shows up as \"Not Secure\" on Google",
+      "email_body": "Hi Jack,\n\nI was looking into locksmiths around Portlaoise and came across Nolan Locksmiths - 41+ years covering residential, commercial, automotive, and safe work across Laois, Kildare, Carlow, and Kilkenny is serious, established coverage. I checked how the site shows up on Google though, and your About Us page - the one page that actually tells someone who you are - is indexed at the insecure http://www.jacknolan.ie/about-us/, while every other page on your site (Contact, Key Cutting, Automotive) correctly shows as https://.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-22-nolan-locksmiths.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 41 years in business deserved an About page that doesn't flag as \"not secure.\"\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@jacknolan.ie",
+      "sent_automatically": false
     }
   ]
 }
