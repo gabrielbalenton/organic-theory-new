@@ -252,6 +252,42 @@
       "email_body": "Hi,\n\nI searched \"Our Family Tree Care\" to see how your Ringoes listing shows up, and noticed you're sharing the results page with a couple of unrelated tree companies with similar names - one in Colorado, one in Wisconsin. Nothing in the snippets makes it obvious which one is actually you.\n\nI also noticed your Facebook page lists the business as being in Lambertville, NJ, while your site and main listings say Ringoes - same phone number, two different cities. That kind of mismatch is exactly the sort of thing that trips up local search rankings, on top of just being confusing for anyone trying to place you.\n\nI put together a quick audit showing what I found and what I'd fix first: https://organic-theory.vercel.app/leads/funnels/2026-07-23-our-family-tree-care.html\n\nNo pitch, just wanted to flag it since 40+ years in the same community deserves a branded search that's actually yours. Happy to walk through it if useful.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "ourfamilytreecare@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Esquire Dry Cleaners",
+      "website": "https://esquirecleaner.com/",
+      "industry": "Dry Cleaning & Garment Care — Eco-Friendly, Wedding Dress Preservation (Sandy Springs, GA)",
+      "issues": "A Google search shows the homepage indexed under the title \"Esquire Dry Cleaners – Just another WordPress site\" - the unedited default WordPress tagline, with nothing about eco-friendly cleaning, wedding dress preservation, or Sandy Springs appearing in the one line Google shows searchers first. The site's inner pages are also titled inconsistently: \"Get a quote – Esquire Dry Cleaners\" and \"Our Gallery – Esquire Dry Cleaners\" use proper title case, while the About page is titled entirely in lowercase, \"about us – Esquire Dry Cleaners.\"",
+      "opportunity": "Rewriting the homepage title to lead with \"Esquire Dry Cleaners\" plus Sandy Springs, GA, eco-friendly dry cleaning, and wedding dress preservation, and cleaning up the inconsistent capitalization across page titles, is same-day polish for a shop offering real specialty services - eco-friendly cleaning, leather cleaning, wedding dress preservation - that currently don't show up anywhere in the one line Google shows searchers first.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-23-esquire-dry-cleaners.html",
+      "email_subject": "Your homepage's Google title still says \"Just another WordPress site\"",
+      "email_body": "Hi,\n\nI was looking into dry cleaners around Sandy Springs and came across Esquire Dry Cleaners - eco-friendly cleaning and wedding dress preservation is a step up from a standard cleaners. I checked how the site shows up on Google though, and your homepage is indexed under the title \"Esquire Dry Cleaners – Just another WordPress site.\" That trailing phrase is just the default WordPress tagline, never replaced - so nothing about eco-friendly cleaning, wedding dresses, or Sandy Springs shows up in the one line Google gives searchers first. I also noticed your page titles are set inconsistently - your quote and gallery pages use title case, but your About page title is all lowercase.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-23-esquire-dry-cleaners.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought eco-friendly cleaning and wedding dress preservation deserved a homepage title that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "jopojoa@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "The Garage Door Company of Carolina",
+      "website": "https://www.thegaragedoorcompany.biz/",
+      "industry": "Garage Door Installation & Repair, Since 1996 (Wilmington, NC)",
+      "issues": "A Google search shows the homepage indexed under the title \"GarageDoorCompany – Just another WordPress site\" - not only is the default WordPress tagline still live, but the business's own name is run together with no spaces (\"GarageDoorCompany\" instead of \"The Garage Door Company\"), so the one line Google shows searchers doesn't read as the business's real name. Nothing about Wilmington, NC, garage door installation, or the company's history since 1996 appears in that listing either.",
+      "opportunity": "Rewriting the homepage title to lead with \"The Garage Door Company\" (properly spaced), plus Wilmington, NC and garage door installation/repair, is same-day cleanup for a company that's been installing and repairing garage doors and openers since 1996 - nearly 30 years of real local history currently showing up in search as a run-together placeholder title.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-23-garage-door-company-carolina.html",
+      "email_subject": "Your business name shows up run together on Google",
+      "email_body": "Hi,\n\nI was looking into garage door companies around Wilmington and came across The Garage Door Company - installing and repairing garage doors and openers since 1996 is real, established history. I checked how the site shows up on Google though, and your homepage is indexed under the title \"GarageDoorCompany – Just another WordPress site.\" Not only is that the default WordPress tagline, never replaced, but your own business name shows up run together with no spaces - not how anyone would actually read it. Nothing about Wilmington or your almost 30 years in business shows up in that listing either.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-23-garage-door-company-carolina.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought almost 30 years of garage door work deserved a homepage title that actually reads right.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "info@thegaragedoorcompany.biz",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Old World Cobbler",
+      "website": "https://oldworldcobbler.wordpress.com/",
+      "industry": "Shoe & Leather Repair, Family-Owned ~20 Years (Minneapolis, MN)",
+      "issues": "The entire site runs on a free WordPress.com subdomain (oldworldcobbler.wordpress.com) rather than a domain of the shop's own, despite 65 reviews on Yelp and roughly two decades in business at the same Lyndale Avenue location. A shop built on old-world craftsmanship - owner Alexander Zelenyuk learned the trade in Lviv, Ukraine - doesn't currently have a web address that's actually its own.",
+      "opportunity": "Registering a real domain and repointing the site is same-week credibility work for a shop with 65 Yelp reviews and roughly 20 years at the same Minneapolis location - a business whose reputation for genuine old-world leather craftsmanship doesn't currently carry through to its own web address.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-23-old-world-cobbler.html",
+      "email_subject": "Your site's still on a free WordPress.com address",
+      "email_body": "Hi Alexander,\n\nI was looking into shoe and leather repair around Minneapolis and came across Old World Cobbler - 65 Yelp reviews and roughly 20 years at the same Lyndale Avenue spot is real, earned trust, and I like that the craft traces back to what you learned in Lviv. I checked how the site shows up online though, and it's still running on a free WordPress.com subdomain - oldworldcobbler.wordpress.com - rather than a domain of your own.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-23-old-world-cobbler.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 20 years of old-world craftsmanship deserved a web address that's actually yours.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "OldWorldCobbler@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
