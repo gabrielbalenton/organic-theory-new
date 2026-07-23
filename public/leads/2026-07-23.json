@@ -4,13 +4,61 @@
     {
       "business_name": "Goldin Jewelers",
       "website": "https://goldinjewelers.wordpress.com/",
-      "industry": "Fine Jewelry — Family-Owned Private Jeweler, 80+ Years (Chicago, IL — Michigan Avenue)",
+      "industry": "Fine Jewelry \u2014 Family-Owned Private Jeweler, 80+ Years (Chicago, IL \u2014 Michigan Avenue)",
       "issues": "The entire site runs on a free WordPress.com subdomain (goldinjewelers.wordpress.com) rather than a domain of the store's own. On top of that, Google indexes the About and Contact pages as \"About - Goldin Jewelers - WordPress.com\" and \"Contact - Goldin Jewelers - WordPress.com\" - the hosting platform's own name stapled onto the title - while the homepage and Inventory page don't have this, so it's inconsistent. Even the shop's own AGTA (American Gem Trade Association) trade listing links back to the same free subdomain instead of a domain that's actually theirs.",
-      "opportunity": "Registering a real domain and repointing the site, plus clearing the \"— WordPress.com\" branding off the About and Contact page titles, is same-week credibility work for a family-owned jeweler that's traded fine diamonds and gems 29 floors above Michigan Avenue for over 80 years - a business whose in-person trust doesn't currently carry through to how it looks in search.",
+      "opportunity": "Registering a real domain and repointing the site, plus clearing the \"\u2014 WordPress.com\" branding off the About and Contact page titles, is same-week credibility work for a family-owned jeweler that's traded fine diamonds and gems 29 floors above Michigan Avenue for over 80 years - a business whose in-person trust doesn't currently carry through to how it looks in search.",
       "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-23-goldin-jewelers.html",
-      "email_subject": "Two of your pages are branded \"— WordPress.com\"",
+      "email_subject": "Two of your pages are branded \"\u2014 WordPress.com\"",
       "email_body": "Hi Mitch,\n\nI was looking into fine jewelers around Michigan Avenue and came across Goldin Jewelers - family-owned, 80+ years, still doing appraisals and bridal selections 29 floors up on Michigan Ave, that's real, rare longevity for a business this personal. I checked how the site shows up on Google though, and it's still running on a free WordPress.com subdomain - goldinjewelers.wordpress.com - rather than a domain of your own. On top of that, your About and Contact pages are indexed as \"About - Goldin Jewelers - WordPress.com\" and \"Contact - Goldin Jewelers - WordPress.com,\" with the hosting platform's own name stapled onto the title. Even your AGTA trade listing links back to that same free address.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-23-goldin-jewelers.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 80 years on Michigan Avenue deserved a web address that's actually yours.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "goldinjewelers@yahoo.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Wheatley Roofing",
+      "website": "http://wheatleyroofing.com/",
+      "industry": "Residential & Commercial Roofing, Family-Owned Since 1980 (Louisville, KY)",
+      "issues": "A Google search shows the homepage - the single highest-traffic page on the site - indexed under the title \"Wheatley Roofing | Just another WordPress site,\" the unedited default WordPress tagline never replaced with roofing, Louisville, or the company's 45+ years in business. Nothing about the service area or trade appears in the one line Google shows searchers first.",
+      "opportunity": "Rewriting the homepage title to lead with the business name, \"roofing,\" and Louisville, KY is same-day cleanup for a family-owned roofing company run by the Wheatley family since 1980, currently led by President Beverly A. Wheatley and Director James E. Wheatley II - a real, established local operator whose most important search listing currently reads like an unfinished setup.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-23-wheatley-roofing.html",
+      "email_subject": "Google shows your homepage as \"Just another WordPress site\"",
+      "email_body": "Hi,\n\nI was looking into roofing contractors around Louisville and came across Wheatley Roofing - family-owned and operated since 1980, that's 45+ years of real local trust. I checked how the site shows up on Google though, and your homepage - the page most people land on first - is indexed under the title \"Wheatley Roofing | Just another WordPress site.\" That trailing phrase is just the default WordPress tagline, never replaced, so nothing about Louisville or roofing shows up in the one line Google gives searchers.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-23-wheatley-roofing.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 45 years of family roofing work deserved a homepage title that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "wheatleyroofingcompany@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Palm Beach Embroidery",
+      "website": "http://palmbeachembroidery.com/",
+      "industry": "Custom Embroidery & Apparel Decoration, 30+ Years (Palm Beach Gardens, FL)",
+      "issues": "A Google search shows the homepage indexed under the title \"website \u2013 Just another WordPress site\" - not just the leftover default tagline, but the entire title, with no mention of the business name, embroidery, or Palm Beach anywhere in it. A second page, the site's leftover default \"Sample Page,\" is also indexed under that same generic \"website \u2013 Just another WordPress site\" title, sitting in Google's results alongside the real site.",
+      "opportunity": "Rewriting the homepage title to lead with \"Palm Beach Embroidery\" and \"embroidery, Palm Beach Gardens, FL,\" and noindexing the leftover Sample Page, is same-day cleanup for a full-service embroidery super-store with 30+ years of experience - a real, established shop currently invisible in the one line Google shows searchers first.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-23-palm-beach-embroidery.html",
+      "email_subject": "Your homepage's Google title is just the word \"website\"",
+      "email_body": "Hi,\n\nI was looking into embroidery shops around Palm Beach Gardens and came across Palm Beach Embroidery - over 30 years of experience running a full-service embroidery super-store is real, established craft. I checked how the site shows up on Google though, and your homepage is indexed under the title \"website \u2013 Just another WordPress site\" - not a tagline stapled onto a real title, that's the entire listing, no mention of embroidery, Palm Beach, or even your business name. I also noticed the site's leftover default \"Sample Page\" is indexed under that same generic title, sitting right alongside your real pages.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-23-palm-beach-embroidery.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 30 years of embroidery work deserved a homepage title that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "PalmBeachEmbroidery@Comcast.net",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Singh Tax & Accounting Service",
+      "website": "http://singhtaxservices.com/",
+      "industry": "Tax Preparation & Accounting, Enrolled Agent-Led (Westland, MI)",
+      "issues": "A Google search shows the homepage indexed under the title \"Singh Tax & Accounting Service | Just another WordPress site,\" the unedited default WordPress tagline never replaced with Michigan, tax preparation, or accounting. The page most people land on first when searching for the business says nothing about the services offered or where the practice is based.",
+      "opportunity": "Rewriting the homepage title to lead with \"Singh Tax & Accounting Service\" plus \"tax preparation\" and the Michigan service area is same-day cleanup for a practice led by Mohan Singh, a Certified Enrolled Agent with a Master's in Taxation and 15 years of experience - real professional credentials currently invisible in the one line Google shows searchers first.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-23-singh-tax-accounting.html",
+      "email_subject": "Google shows your homepage as \"Just another WordPress site\"",
+      "email_body": "Hi Mohan,\n\nI was looking into tax preparers around Michigan and came across Singh Tax & Accounting Service - a Master's in Taxation and 15 years as a Certified Enrolled Agent is real, credentialed expertise. I checked how the site shows up on Google though, and your homepage - the page most people land on first - is indexed under the title \"Singh Tax & Accounting Service | Just another WordPress site.\" That trailing phrase is just the default WordPress tagline, never replaced, so nothing about tax prep or your service area shows up in the one line Google gives searchers.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-23-singh-tax-accounting.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 15 years of enrolled-agent expertise deserved a homepage title that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "sts2021@SinghTaxServices.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Great Beginnings Preschool",
+      "website": "https://www.gbpreschool.com/",
+      "industry": "Nature-First Preschool, Serving Long Beach Since 1977 (Long Beach, CA)",
+      "issues": "A Google search shows the homepage indexed under the title \"Just another WordPress site\" - not a tagline appended to a real title, that's the entire listing, with no mention of the preschool's name, Long Beach, or Belmont Heights anywhere in it. At least two inner pages - the site's blog index and a post titled \"5 Reasons Parents Choose Great Beginnings Preschool in Long Beach\" - are indexed the same way, both ending in \"\u2013 Just another WordPress site,\" showing this is a sitewide tagline issue rather than a one-off.",
+      "opportunity": "Rewriting the homepage and page titles to lead with \"Great Beginnings Preschool\" plus \"Long Beach, CA\" is same-week cleanup for a nearly 50-year-old neighborhood preschool that was recently saved from closing by new owners Adriana and Christian Webster after founder Marian Stocking retired - a real community comeback story currently invisible in the one line Google shows searchers first.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-23-great-beginnings-preschool.html",
+      "email_subject": "Your homepage's Google title doesn't mention Great Beginnings at all",
+      "email_body": "Hi,\n\nI saw the story about Great Beginnings Preschool being saved after 48 years when Adriana and Christian Webster stepped in to keep Marian Stocking's nature-first vision going for Belmont Heights families - that's a genuinely good comeback story. I checked how the site shows up on Google though, and your homepage is indexed under the title \"Just another WordPress site\" - not a tagline stapled onto a real title, that's the entire listing, no mention of the preschool's name or Long Beach anywhere in it. A couple of your inner pages, including one titled \"5 Reasons Parents Choose Great Beginnings,\" have the same issue, so it looks sitewide rather than a one-off.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-23-great-beginnings-preschool.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a preschool with a story this good deserved a homepage title that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "greatbeginningslb@gmail.com",
       "sent_automatically": false
     }
   ]
