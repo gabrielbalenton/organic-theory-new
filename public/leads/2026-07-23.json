@@ -192,6 +192,30 @@
       "email_body": "Hi,\n\nI was looking into wineries around Kennewick and came across Farmhand Winery - estate-grown grapes and a rooftop tasting room overlooking the cherry orchard is a genuinely distinctive setup. I checked how the site shows up on Google though, and your homepage is indexed under the title \"Farmhand Winery – Just another WordPress site.\" That's the default tagline every new WordPress site ships with - no mention of the tasting room, your Saturday hours, or Kennewick anywhere in it.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-23-farmhand-winery.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a tasting room this distinctive deserved a homepage title that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "steve@cherrychalet.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Furr Paradise Santa Ana, LLC",
+      "website": "https://furrparadise02.wixsite.com/santaana",
+      "industry": "Pet Grooming (Dog & Cat) — Santa Ana, CA",
+      "issues": "The homepage's indexed Google title is literally \"Furr Paradise Santa Ana Welcomes You!\" - a friendly greeting that never mentions \"pet grooming,\" \"dog groomer,\" or the service keyword at all, hurting how the page ranks for the searches people actually type. The entire site also runs on a default Wix account subdomain (furrparadise02.wixsite.com/santaana) rather than a domain of the business's own, despite an established local reputation (929 photos and 97 reviews on Yelp). That reputation currently lives entirely on Yelp/Facebook and doesn't surface on the site itself.",
+      "opportunity": "Rewriting the homepage title to lead with the actual service and location, registering a real domain, and pulling the 97 Yelp reviews onto the homepage is credibility and findability work that fits a shop with this much proven local trust - not a rebuild.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-23-furr-paradise-santa-ana.html",
+      "email_subject": "Your page title doesn't say \"pet grooming\" anywhere",
+      "email_body": "Hi there,\n\nI was looking at pet groomers around Santa Ana and came across Furr Paradise - 97 reviews and hundreds of photos on Yelp is real proof people love what you do. I checked how the site shows up on Google though, and the indexed title is \"Furr Paradise Santa Ana Welcomes You!\" - warm, but it never actually says \"pet grooming\" or \"dog groomer,\" which makes it harder to show up for the exact searches people are typing. On top of that, the site's still on a free Wix address (furrparadise02.wixsite.com/santaana) instead of a domain of your own.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-23-furr-paradise-santa-ana.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 97 five-star reviews deserved a site that actually says what you do.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "furrparadise02@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Pawfect Pups Grooming",
+      "website": "https://pawfectpups17.wixsite.com/pawfectpupsgrooming",
+      "industry": "Pet Grooming (Dog) — London, OH",
+      "issues": "The business has two separate, currently-live websites indexed under its name: a Wix site (pawfectpups17.wixsite.com/pawfectpupsgrooming) and a completely separate Weebly site (pawfectpupsgrooming.weebly.com). Both surface in search for \"Pawfect Pups Grooming,\" so a new customer has no clear signal which one is current, and neither address is a domain of the business's own - splitting whatever search authority either page could build instead of consolidating it onto one site.",
+      "opportunity": "Consolidating onto a single site on a real domain of their own, with the old Wix and Weebly addresses redirected to it, is same-week credibility and SEO work for a family-run grooming shop that's been serving London, OH since 2017.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-23-pawfect-pups-grooming.html",
+      "email_subject": "You've got two different websites right now",
+      "email_body": "Hi Rachel,\n\nI was looking into dog groomers around London, Ohio and came across Pawfect Pups - a real family business since 2017, that kind of longevity says a lot. While I was checking out the site though, I noticed there are actually two separate ones live right now: one on Wix (pawfectpups17.wixsite.com/pawfectpupsgrooming) and a different one on Weebly (pawfectpupsgrooming.weebly.com). Both show up when people search for you, so it's a coin flip which one a new customer lands on, and neither is a domain that's actually yours.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-23-pawfect-pups-grooming.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought one clean site would serve London's pups (and their owners) better than two competing ones.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "pawfectpups17@yahoo.com",
+      "sent_automatically": false
     }
   ]
 }
