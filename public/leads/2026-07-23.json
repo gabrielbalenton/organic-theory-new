@@ -1,0 +1,17 @@
+{
+  "date": "2026-07-23",
+  "leads": [
+    {
+      "business_name": "Goldin Jewelers",
+      "website": "https://goldinjewelers.wordpress.com/",
+      "industry": "Fine Jewelry — Family-Owned Private Jeweler, 80+ Years (Chicago, IL — Michigan Avenue)",
+      "issues": "The entire site runs on a free WordPress.com subdomain (goldinjewelers.wordpress.com) rather than a domain of the store's own. On top of that, Google indexes the About and Contact pages as \"About - Goldin Jewelers - WordPress.com\" and \"Contact - Goldin Jewelers - WordPress.com\" - the hosting platform's own name stapled onto the title - while the homepage and Inventory page don't have this, so it's inconsistent. Even the shop's own AGTA (American Gem Trade Association) trade listing links back to the same free subdomain instead of a domain that's actually theirs.",
+      "opportunity": "Registering a real domain and repointing the site, plus clearing the \"— WordPress.com\" branding off the About and Contact page titles, is same-week credibility work for a family-owned jeweler that's traded fine diamonds and gems 29 floors above Michigan Avenue for over 80 years - a business whose in-person trust doesn't currently carry through to how it looks in search.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-23-goldin-jewelers.html",
+      "email_subject": "Two of your pages are branded \"— WordPress.com\"",
+      "email_body": "Hi Mitch,\n\nI was looking into fine jewelers around Michigan Avenue and came across Goldin Jewelers - family-owned, 80+ years, still doing appraisals and bridal selections 29 floors up on Michigan Ave, that's real, rare longevity for a business this personal. I checked how the site shows up on Google though, and it's still running on a free WordPress.com subdomain - goldinjewelers.wordpress.com - rather than a domain of your own. On top of that, your About and Contact pages are indexed as \"About - Goldin Jewelers - WordPress.com\" and \"Contact - Goldin Jewelers - WordPress.com,\" with the hosting platform's own name stapled onto the title. Even your AGTA trade listing links back to that same free address.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-23-goldin-jewelers.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 80 years on Michigan Avenue deserved a web address that's actually yours.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "goldinjewelers@yahoo.com",
+      "sent_automatically": false
+    }
+  ]
+}
