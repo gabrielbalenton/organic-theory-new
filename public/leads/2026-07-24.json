@@ -168,6 +168,18 @@
       "email_body": "Hi there,\n\nI was looking into landscaping crews around Lake and McHenry County and came across Windy Hill Landscaping — over 10 years serving the area is real proof of steady, trusted work. I checked how the site shows up on Google though, and while your homepage is titled properly, the Contact page — the exact page someone uses to reach out for a quote — is indexed as \"Contact | Mysite.\" \"Mysite\" is the placeholder name Wix gives every new site, and it looks like it just never got swapped out on that one page.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-windy-hill-landscaping.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a decade of local trust deserved a contact page that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "WindyHillLandscaping@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Fluff Haven",
+      "website": "https://fluffhaven.wixsite.com/mysite",
+      "industry": "Pet Grooming — Dog Grooming By Appointment (Georgetown, TX)",
+      "issues": "Google indexes both of the site's visible pages under the unrenamed default Wix site name: the homepage is indexed as \"Home | Mysite\" and the services page as \"My Services | Mysite.\" Neither title carries the Fluff Haven name, so a searcher looking up the groomer by name sees no confirmation they've found the right site. The site also still lives on a shared fluffhaven.wixsite.com/mysite address rather than a domain of its own, and no title mentions Georgetown, TX.",
+      "opportunity": "Renaming the Wix site from \"Mysite\" to \"Fluff Haven\" and rewriting both page titles to include Georgetown, TX is a same-day fix that puts the groomer's own name into every page Google shows for the business.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-24-fluff-haven.html",
+      "email_subject": "Your Home and Services pages are both titled \"Mysite\" on Google",
+      "email_body": "Hi there,\n\nI was looking into dog groomers around Georgetown and came across Fluff Haven - clients who've stuck with you for years and dogs that clearly love coming back, that's the kind of trust that's hard to build. I checked how the site shows up on Google though, and both indexed pages - Home and My Services - are titled \"Mysite.\" \"Mysite\" is the placeholder name Wix gives every new site, and it looks like it was never swapped out for Fluff Haven, so your own name doesn't show up anywhere in the listing.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-fluff-haven.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought regulars who've stayed with you for years deserved a search listing that actually says Fluff Haven.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "fluffhaven@hotmail.com",
+      "sent_automatically": false
     }
   ]
 }
