@@ -120,6 +120,30 @@
       "email_body": "Hi Mario,\n\nI was looking into landscaping crews around Durham and the Triangle and came across MG Lawn Care Services - 17 years in business, fully insured, 5-star reviews on Yelp and 100% recommended on Facebook, that's a serious track record. I checked how the site shows up on Google though, and the homepage title reads \"mg lawn care services, llc\" - all lowercase, no city, and nothing about the design, patio, and retaining wall work you actually do. Next to a competitor whose title leads with their city and services, yours reads like an unfinished draft.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-mg-lawn-care-services.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 17 years of fully-insured work deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "mglandscaping29@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Stalvey's Plumbing & Repair Service, LLC",
+      "website": "https://stalveysplumbing.wixsite.com/mysite",
+      "industry": "Residential Plumbing & Property Maintenance (Longs, SC)",
+      "issues": "All three of the site's indexed pages carry the unrenamed default Wix site name: the homepage is indexed as \"Home | mysite,\" the About page as \"About | mysite,\" and the Contact page as \"Contact | mysite.\" This isn't one page that slipped through - it's every page Google has for the business, including the Contact page a customer clicks to reach out. None of the three titles mention Longs, SC or the plumbing/property-maintenance services offered.",
+      "opportunity": "Renaming the Wix site from \"mysite\" to Stalvey's Plumbing & Repair Service and rewriting all three page titles to include Longs, SC is a same-day fix that puts the family's name and 5-star reputation into every page Google shows for them.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-24-stalveys-plumbing.html",
+      "email_subject": "Your Home, About, and Contact pages are all titled \"mysite\"",
+      "email_body": "Hi Craig,\n\nI was looking into plumbers around Longs and came across Stalvey's Plumbing & Repair Service - a family-run shop with a 5-star reputation is exactly the kind of business word-of-mouth is built on. I checked how the site shows up on Google though, and all three indexed pages - Home, About, and Contact - are titled \"mysite.\" \"mysite\" is the placeholder name Wix gives every new site, and it looks like it was never swapped out for Stalvey's, so your name doesn't show up anywhere in the listing, including on the page someone clicks to actually reach you.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-stalveys-plumbing.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a 5-star family shop deserved a search listing with your actual name on it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "stalveysplumbing@yahoo.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Tumble & Dry Laundromat and Cleaners",
+      "website": "https://tumbleanddry1.wixsite.com/mysite",
+      "industry": "Laundromat & Dry Cleaning (Bronx, NY)",
+      "issues": "All three of the site's indexed pages carry the unrenamed default Wix site name: the homepage is indexed as \"Home | Mysite,\" the About page as \"About | Mysite,\" and the Location page as \"Location | Mysite.\" The Location page is exactly the one a nearby customer searches for to find the East 180th Street address, and it still reads \"Mysite.\" None of the three titles mention the Bronx.",
+      "opportunity": "Renaming the Wix site from \"Mysite\" to Tumble & Dry Laundromat and Cleaners and rewriting all three page titles to include Bronx, NY is a same-day fix that puts the shop's name and 4.1-star reputation into every page Google shows for it.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-24-tumble-and-dry.html",
+      "email_subject": "Your Home, About, and Location pages are all titled \"Mysite\"",
+      "email_body": "Hi there,\n\nI was looking into laundromats around the Bronx and came across Tumble & Dry Laundromat and Cleaners - customers describe it as clean and friendly with an owner who's kind to regulars, that's a real reputation. I checked how the site shows up on Google though, and all three indexed pages - Home, About, and Location - are titled \"Mysite.\" \"Mysite\" is the placeholder name Wix gives every new site, and it looks like it was never swapped out, so nobody searching for you by name or address on East 180th Street finds your actual name in the listing.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-tumble-and-dry.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a completely renovated laundromat with reviews this good deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "tumbleanddrylaundromatcleaners@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
