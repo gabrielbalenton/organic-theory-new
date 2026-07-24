@@ -36,6 +36,42 @@
       "email_body": "Hi there,\n\nI was looking into lawn care services across Central Texas and came across Treated Lawn Care - reliability and value are exactly what people say they want most from a lawn crew, so building that reputation is real work. I checked how the site shows up on Google though, and the homepage - the page nearly every new visitor lands on first - is indexed as \"Home | My Site.\" \"My Site\" is the placeholder name Wix gives every new site, and it looks like it was never swapped out. Nothing in the title mentions Central Texas either, so there's no local signal for someone searching \"lawn care near me.\"\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-treated-lawn-care.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a reliable, go-to lawn crew deserved a homepage title that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "TreatedLawnCare@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "WHB Tattoos",
+      "website": "https://whbtattoos.wixsite.com/mysite",
+      "industry": "Tattoo Studio (Western North Carolina)",
+      "issues": "Google indexes the homepage - the only page of the site currently indexed - as \"HOME | mysite.\" \"mysite\" is the unrenamed default Wix site name, so the studio's own name appears nowhere in the one line a searcher sees before deciding whether to click. There's no second indexed page (no separate Gallery, About, or Booking page showing up in search), so this single mistitled listing is the entirety of the studio's search presence.",
+      "opportunity": "Renaming the Wix site from \"mysite\" to \"WHB Tattoos\" and rewriting the homepage title to include the studio name and service area is a same-day fix that puts the shop's identity into its own only search listing.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-24-whb-tattoos.html",
+      "email_subject": "Your homepage is titled \"HOME | mysite\" on Google",
+      "email_body": "Hi there,\n\nI was looking into tattoo studios around western North Carolina and came across WHB Tattoos. I checked how the site shows up on Google though, and the homepage - the only page currently indexed - is titled \"HOME | mysite.\" \"mysite\" is the placeholder name Wix gives every new site, and it looks like it was never swapped out for the studio's actual name, so nothing about WHB Tattoos shows up when someone searches for you by name.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-whb-tattoos.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a real studio deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "whbtattoos@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Jamie Childs Photography",
+      "website": "https://jchildsphotography.wixsite.com/mysite",
+      "industry": "Wedding & Event Photography (Rochester, NH / New England)",
+      "issues": "The site's Weddings page - almost certainly the single page an engaged couple clicks first - is indexed by Google as \"Weddings | Mysite\" rather than Jamie Childs Photography. \"Mysite\" is the unrenamed default Wix site name, so the one line Google shows for the studio's most important page carries no brand name at all. This is a real gap given the studio has a 100% recommendation rate across dozens of reviews on Facebook - none of that reputation shows up in the search listing itself.",
+      "opportunity": "Renaming the Wix site from \"Mysite\" to \"Jamie Childs Photography\" and rewriting the Weddings page title to lead with the studio name is a same-day fix to the highest-intent page on the site.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-24-jamie-childs-photography.html",
+      "email_subject": "Your Weddings page is titled \"Weddings | Mysite\" on Google",
+      "email_body": "Hi Jamie,\n\nI was looking into wedding photographers around the NH/New England area and came across Jamie Childs Photography - a 100% recommendation rate across dozens of reviews is the kind of reputation that takes years to earn. I checked how the site shows up on Google though, and your Weddings page - probably the single page an engaged couple clicks first - is indexed as \"Weddings | Mysite.\" \"Mysite\" is the placeholder name Wix gives every new site, and it looks like it was never renamed to Jamie Childs Photography.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-jamie-childs-photography.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought reviews that good deserved a search listing that actually reflects them.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "jamiechildsphotography@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Castle Handyman Services",
+      "website": "https://castlehandyman.wixsite.com/mysite",
+      "industry": "Handyman & Home Repair (El Cajon / San Diego, CA)",
+      "issues": "Google indexes the homepage as \"HOME | mysite\" - the unrenamed default Wix site name - so the business's own name doesn't appear in its own top search listing. This is a real gap for a business established in 2013 with a BBB-accredited profile and around two dozen combined five-star reviews on Yelp and Facebook (100% recommended) - none of that decade-plus track record is reflected in the one line a searcher sees before clicking.",
+      "opportunity": "Renaming the Wix site from \"mysite\" to \"Castle Handyman Services\" and rewriting the homepage title to include the service area is a same-day fix that puts over a decade of reputation back into the business's own search listing.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-24-castle-handyman-services.html",
+      "email_subject": "Your homepage is titled \"HOME | mysite\" on Google",
+      "email_body": "Hi Joe,\n\nI was looking into handyman services around El Cajon and came across Castle Handyman Services - over a decade in business with a BBB-accredited profile and a stack of five-star reviews is real proof of the work. I checked how the site shows up on Google though, and the homepage is indexed as \"HOME | mysite.\" \"mysite\" is the placeholder name Wix gives every new site, and it looks like it was never swapped out for Castle Handyman, so your name doesn't show up anywhere in the listing.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-castle-handyman-services.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a veteran-owned shop with that track record deserved a search listing with your actual name on it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "castlehandymanservicessd@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
