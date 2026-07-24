@@ -72,6 +72,30 @@
       "email_body": "Hi Joe,\n\nI was looking into handyman services around El Cajon and came across Castle Handyman Services - over a decade in business with a BBB-accredited profile and a stack of five-star reviews is real proof of the work. I checked how the site shows up on Google though, and the homepage is indexed as \"HOME | mysite.\" \"mysite\" is the placeholder name Wix gives every new site, and it looks like it was never swapped out for Castle Handyman, so your name doesn't show up anywhere in the listing.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-castle-handyman-services.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a veteran-owned shop with that track record deserved a search listing with your actual name on it.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "castlehandymanservicessd@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "South Texas Jewelers",
+      "website": "https://southtexasjewelers.wixsite.com/home",
+      "industry": "Jewelry & Watch Repair (San Antonio, TX)",
+      "issues": "Google indexes the homepage as \"HOME | home\" - the Wix site was renamed to the generic word \"home\" rather than South Texas Jewelers, so the business's own name is absent from its own top search listing. This is a real gap for a family-owned shop with over 35 years in the trade, a jeweler on site for same-day repairs, 100% recommended on Facebook, and 27 reviews on Yelp - none of that reputation shows up in the one line a searcher sees before clicking. The site also still lives on a shared southtexasjewelers.wixsite.com/home address rather than a domain of its own.",
+      "opportunity": "Renaming the Wix site from \"home\" to \"South Texas Jewelers\" and rewriting the homepage title to include San Antonio, TX and core services is a same-day fix that puts 35 years of reputation back into the business's own search listing.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-24-south-texas-jewelers.html",
+      "email_subject": "Your homepage is titled \"HOME | home\" on Google",
+      "email_body": "Hi there,\n\nI was looking into jewelers around San Antonio and came across South Texas Jewelers - a family-owned shop with over 35 years in the trade and a jeweler on site every day for same-day repairs is real proof of the work. I checked how the site shows up on Google though, and the homepage is indexed as \"HOME | home.\" It looks like the Wix site got renamed to the generic word \"home\" instead of South Texas Jewelers, so your actual name doesn't show up anywhere in the listing.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-south-texas-jewelers.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 35 years of family-run reputation deserved a search listing with your actual name on it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "southtexasjewelers@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "OT Barbershop",
+      "website": "https://otbarbershop.wixsite.com/mysite",
+      "industry": "Barbershop (Kissimmee, FL)",
+      "issues": "Google indexes the homepage as \"Home | Mysite\" - the unrenamed default Wix site name - so the shop's own name doesn't appear in its own top search listing. This is a real gap for a shop in Old Town Kissimmee holding a 4.9-star rating across roughly 800 reviews, one of the best-reviewed barbershops in the area - none of that reputation is reflected in the one line a searcher sees before clicking. The site also still lives on a shared otbarbershop.wixsite.com/mysite address rather than a domain of its own.",
+      "opportunity": "Renaming the Wix site from \"Mysite\" to \"OT Barbershop\" and rewriting the homepage title to include the 4.9-star rating and Kissimmee, FL is a same-day fix that puts nearly 800 reviews of reputation back into the shop's own search listing.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-24-ot-barbershop.html",
+      "email_subject": "Your homepage is titled \"Home | Mysite\" on Google",
+      "email_body": "Hi Javier,\n\nI was looking into barbershops around Kissimmee and came across OT Barbershop - a 4.9-star rating across nearly 800 reviews is the kind of reputation most shops never get close to. I checked how the site shows up on Google though, and the homepage is indexed as \"Home | Mysite.\" \"Mysite\" is the placeholder name Wix gives every new site, and it looks like it was never swapped out for OT Barbershop, so your name doesn't show up anywhere in the listing.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-ot-barbershop.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a shop with reviews that good deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "jvega197698@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
