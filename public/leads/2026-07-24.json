@@ -96,6 +96,30 @@
       "email_body": "Hi Javier,\n\nI was looking into barbershops around Kissimmee and came across OT Barbershop - a 4.9-star rating across nearly 800 reviews is the kind of reputation most shops never get close to. I checked how the site shows up on Google though, and the homepage is indexed as \"Home | Mysite.\" \"Mysite\" is the placeholder name Wix gives every new site, and it looks like it was never swapped out for OT Barbershop, so your name doesn't show up anywhere in the listing.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-ot-barbershop.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a shop with reviews that good deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "jvega197698@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Caban Bakery Inc",
+      "website": "https://cabanbakeryinc.wixsite.com/mysite",
+      "industry": "Bakery & Cafe (Isabela, Puerto Rico)",
+      "issues": "The homepage itself is properly titled \"Caban Bakery,\" but Google indexes the About and Contact pages as \"ABOUT | mysite\" and \"CONTACT | mysite\" - \"mysite\" is the unrenamed default Wix site name, and it was never swapped out on these two pages specifically. Those are exactly the two pages a customer clicks to check hours, find the address, or reach out. The site also still lives on a shared cabanbakeryinc.wixsite.com/mysite address rather than a domain of its own.",
+      "opportunity": "Renaming the About and Contact pages from \"mysite\" to Caban Bakery and rewriting the homepage title to include Isabela, PR and \"since 2010\" is a same-day fix that puts sixteen years of reputation back into the two pages new customers click most.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-24-caban-bakery.html",
+      "email_subject": "Two pages on your site are titled \"mysite\" on Google",
+      "email_body": "Hi there,\n\nI was looking into bakeries around Isabela and came across Caban Bakery - sixteen years serving Arenales Altos, open 5am to 10pm every single day, that's a real neighborhood institution. I checked how the site shows up on Google though, and while your homepage is properly titled Caban Bakery, your About and Contact pages - the two pages someone clicks to check your hours or find you - are indexed as \"ABOUT | mysite\" and \"CONTACT | mysite.\" \"mysite\" is the placeholder name Wix gives every new site, and it looks like it just never got swapped out on those two specifically.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-caban-bakery.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought sixteen years of fresh bread deserved a search listing that says so on every page.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "CabanBakeryInc@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "MG Lawn Care Services LLC",
+      "website": "https://mglandscaping29.wixsite.com/mysite",
+      "industry": "Landscaping & Lawn Care (Durham / The Triangle, NC)",
+      "issues": "Google indexes the homepage as \"mg lawn care services, llc\" - all lowercase, with no city or region mentioned and no hint of the company's wide service list (landscape design, patios, retaining walls, lighting, French draining, seeding, aerating, fertilizing). It reads as an unfinished draft rather than the listing of a fully-insured, 17-year local business with 5-star Yelp reviews and a 100% recommend rate on Facebook.",
+      "opportunity": "Rewriting the homepage title to lead with \"MG Lawn Care Services LLC,\" Durham/Triangle NC, and 17 years fully insured is a same-day fix that puts the company's full service range and track record back into its own search listing.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-24-mg-lawn-care-services.html",
+      "email_subject": "Your site's title is lowercase with no city on Google",
+      "email_body": "Hi Mario,\n\nI was looking into landscaping crews around Durham and the Triangle and came across MG Lawn Care Services - 17 years in business, fully insured, 5-star reviews on Yelp and 100% recommended on Facebook, that's a serious track record. I checked how the site shows up on Google though, and the homepage title reads \"mg lawn care services, llc\" - all lowercase, no city, and nothing about the design, patio, and retaining wall work you actually do. Next to a competitor whose title leads with their city and services, yours reads like an unfinished draft.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-mg-lawn-care-services.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 17 years of fully-insured work deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "mglandscaping29@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
