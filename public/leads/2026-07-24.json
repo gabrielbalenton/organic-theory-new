@@ -4,8 +4,8 @@
     {
       "business_name": "GGs Grooming Salon",
       "website": "https://ggsgroomingsalon.wixsite.com/my-site",
-      "industry": "Pet Grooming \u2014 Full-Service Dog Grooming (South Milwaukee, WI)",
-      "issues": "Google indexes the About and Booking Info pages as \"About GGs | My Site\" and \"Booking Info | My Site\" \u2014 \"My Site\" is the unrenamed default Wix site name, so the shop's own brand disappears on the two pages a new customer is most likely to read. The homepage title, \"GGs Grooming Salon,\" doesn't mention South Milwaukee or any service, so it carries no local-search signal either. The site also still lives on a shared ggsgroomingsalon.wixsite.com/my-site address rather than a domain of its own.",
+      "industry": "Pet Grooming — Full-Service Dog Grooming (South Milwaukee, WI)",
+      "issues": "Google indexes the About and Booking Info pages as \"About GGs | My Site\" and \"Booking Info | My Site\" — \"My Site\" is the unrenamed default Wix site name, so the shop's own brand disappears on the two pages a new customer is most likely to read. The homepage title, \"GGs Grooming Salon,\" doesn't mention South Milwaukee or any service, so it carries no local-search signal either. The site also still lives on a shared ggsgroomingsalon.wixsite.com/my-site address rather than a domain of its own.",
       "opportunity": "Renaming the Wix site from \"My Site\" to \"GGs Grooming Salon\" and rewriting the homepage title to include South Milwaukee, WI is a same-day fix that puts the shop's five-star reputation back into its own search listing.",
       "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-24-ggs-grooming-salon.html",
       "email_subject": "Two of your pages are titled \"My Site\" on Google",
@@ -144,6 +144,30 @@
       "email_body": "Hi there,\n\nI was looking into laundromats around the Bronx and came across Tumble & Dry Laundromat and Cleaners - customers describe it as clean and friendly with an owner who's kind to regulars, that's a real reputation. I checked how the site shows up on Google though, and all three indexed pages - Home, About, and Location - are titled \"Mysite.\" \"Mysite\" is the placeholder name Wix gives every new site, and it looks like it was never swapped out, so nobody searching for you by name or address on East 180th Street finds your actual name in the listing.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-tumble-and-dry.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a completely renovated laundromat with reviews this good deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "tumbleanddrylaundromatcleaners@gmail.com",
       "sent_automatically": true
+    },
+    {
+      "business_name": "Hightech Auto Repair",
+      "website": "https://hightechframingham.wixsite.com/autorepair",
+      "industry": "Auto Repair (Framingham, MA)",
+      "issues": "Google indexes the Contact Us page as \"Contact Us | Mysite\" — \"Mysite\" is the unrenamed default Wix site name, so the exact page a customer uses to find the shop's address and phone number carries no trace of Hightech Auto Repair's name. This is a real gap for a shop that's an Automotive Service Association member with a strong local reputation (customers calling it \"the best mechanic in Framingham\") — none of that shows up in the one line Google displays for the contact page. The site also still lives on a shared wixsite.com/autorepair address rather than a domain of its own.",
+      "opportunity": "Renaming the Wix site from \"Mysite\" to \"Hightech Auto Repair\" and rewriting the Contact page title to include Framingham, MA is a same-day fix that puts the shop's own name back on the page customers use to reach it.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-24-hightech-auto-repair.html",
+      "email_subject": "Your Contact page is titled \"Contact Us | Mysite\" on Google",
+      "email_body": "Hi there,\n\nI was looking into auto repair shops around Framingham and came across Hightech Auto Repair — an ASA member with people online calling you the best mechanic in town, that's a real reputation to have built. I checked how the site shows up on Google though, and the Contact Us page — the exact page someone uses to find your address and phone number — is indexed as \"Contact Us | Mysite.\" \"Mysite\" is the placeholder name Wix gives every new site, and it looks like it was never swapped out on that page, so your own name doesn't show up there.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-hightech-auto-repair.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a shop with reviews that good deserved a contact page that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "hightechframingham@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Windy Hill Landscaping",
+      "website": "https://windyhilllandscapi.wixsite.com/mysite",
+      "industry": "Landscaping & Lawn Care (Lake & McHenry County, IL)",
+      "issues": "The homepage itself is properly titled, but Google indexes the Contact page as \"Contact | Mysite\" — \"Mysite\" is the unrenamed default Wix site name, so the one page a homeowner uses to actually reach out doesn't carry the Windy Hill Landscaping name at all. This is a real gap for a crew with over 10 years of experience serving Lake and McHenry County — none of that track record is reflected on the page a prospective customer clicks to get in touch.",
+      "opportunity": "Renaming the Wix site from \"Mysite\" to \"Windy Hill Landscaping\" on the Contact page is a same-day fix that puts the business's own name back on the page homeowners use to reach out.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-24-windy-hill-landscaping.html",
+      "email_subject": "Your Contact page is titled \"Contact | Mysite\" on Google",
+      "email_body": "Hi there,\n\nI was looking into landscaping crews around Lake and McHenry County and came across Windy Hill Landscaping — over 10 years serving the area is real proof of steady, trusted work. I checked how the site shows up on Google though, and while your homepage is titled properly, the Contact page — the exact page someone uses to reach out for a quote — is indexed as \"Contact | Mysite.\" \"Mysite\" is the placeholder name Wix gives every new site, and it looks like it just never got swapped out on that one page.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-24-windy-hill-landscaping.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a decade of local trust deserved a contact page that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "WindyHillLandscaping@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
