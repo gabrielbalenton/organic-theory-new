@@ -12,6 +12,18 @@
       "email_body": "Hi there,\n\nI was looking at mobile detailers around Dayton and came across 3Z's - saw the review about someone selling their car after a detail and the whole experience being excellent, which is exactly the kind of word-of-mouth that's hard to earn. I checked how the site shows up on Google though, and your homepage is indexed as \"HOME | My Site\" - \"My Site\" is the placeholder name Wix gives every new site, and it looks like it was never swapped out for 3Z's. It's also still sitting on the shared wixsite.com address instead of a domain of your own, and nothing in the title mentions Dayton or the surrounding area.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-26-3zs-mobile-detailing.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a shop with reviews this good deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "3Zsmobiledetailing@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Parker Power Wash, LLC",
+      "website": "https://parkerpowerwash.wixsite.com/my-site-1",
+      "industry": "Pressure Washing & Lawn Care (Hendersonville, TN)",
+      "issues": "Google indexes the homepage as \"HOME | My Site 1\" — \"My Site 1\" is the default, never-renamed Wix site title, so a searcher looking up Parker Power Wash by name gets no confirmation before they click. The site also still lives on the shared parkerpowerwash.wixsite.com/my-site-1 address rather than a domain of its own, and neither the URL nor the indexed title mentions Hendersonville or Nashville — the exact area the business is licensed and already working in (including a commercial job at the Jackson Grove apartment complex in Nashville).",
+      "opportunity": "Renaming the Wix site from \"My Site 1\" to \"Parker Power Wash\" and rewriting the homepage title to lead with Hendersonville & Nashville, TN is a same-day fix that puts the business's license and service area back into its own search listing instead of a generic placeholder — especially valuable given they're already landing commercial-scale jobs.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-26-parker-power-wash.html",
+      "email_subject": "Your homepage is titled \"My Site 1\" on Google",
+      "email_body": "Hi Parker,\n\nI was looking at power washing companies around Hendersonville and came across Parker Power Wash - saw you're licensed and insured and already doing commercial-scale work, like the Jackson Grove apartment complex job in Nashville. I checked how the site shows up on Google though, and your homepage is indexed as \"HOME | My Site 1\" - \"My Site 1\" is the placeholder name Wix gives every new site, and it looks like it was never swapped out for Parker Power Wash. It's also still sitting on the shared wixsite.com address instead of a domain of your own, and nothing in the title mentions Hendersonville or Nashville.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-26-parker-power-wash.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a crew landing jobs like that deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "parkerpowerwashllc@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
