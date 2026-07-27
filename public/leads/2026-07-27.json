@@ -36,6 +36,30 @@
       "email_body": "Hey there,\n\nI was looking at tree and fence companies around Houston and came across Juarez - family-owned since 1998 is a real track record in this business. I checked how the site shows up on Google though, and your contact page is indexed as \"Contact | My Site\" - \"My Site\" is the placeholder name Wix gives every new site, and it looks like it was never swapped out, even on the page someone clicks through to actually reach you. Nothing in the title or the URL mentions Houston or the 25+ years you've been at this either, which is exactly the kind of credibility a homeowner is searching for.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-27-juarez-tree-services.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured 25 years in Houston deserved a search listing that actually reflects it.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "juareztreeservice.gj@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Jourdan's Catering Services LLC",
+      "website": "https://horhay.wixsite.com/jcservices",
+      "industry": "Catering & Private Chef Services (Atlanta, GA)",
+      "issues": "Google indexes the homepage as \"Home | Jourdan's Catering Services LLC,\" but every social channel the business is actually active on — Facebook, Instagram/TikTok via Linktree, and its Alignable listing — uses the name \"JC Services\" or \"JC Services The Good Food\" instead. Someone who found the business through social media and later searches \"JC Services Atlanta\" has no guarantee the website surfaces. The site also still lives on the shared horhay.wixsite.com/jcservices address rather than a domain of its own, despite being a registered Georgia LLC (confirmed via the Georgia Secretary of State's business registry).",
+      "opportunity": "Rewriting the homepage title to lead with \"JC Services\" — the name customers actually search for and share — while keeping \"Jourdan's Catering Services, LLC\" as a subtitle, and moving onto an owned domain, closes the gap between an active social following and what actually shows up in search.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-27-jourdans-catering-services.html",
+      "email_subject": "Are you \"JC Services\" or \"Jourdan's Catering\" on Google?",
+      "email_body": "Hi Jourdan,\n\nI came across JC Services while looking into caterers around Atlanta - the private chef setup for weddings and events, plus the recommendations you've picked up on Alignable, stood out. I checked how the site shows up on Google though, and it's indexed as \"Home | Jourdan's Catering Services LLC\" - but your Facebook, Instagram/TikTok, and Alignable listing all go by \"JC Services.\" If someone found you through social media and later searches \"JC Services Atlanta,\" there's no guarantee your website actually shows up. The site's also still on the shared horhay.wixsite.com address rather than something of your own, even though you're a registered LLC.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-27-jourdans-catering-services.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a business with real momentum on social deserved a search listing that actually matches it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "jcservicesthegoodfood@outlook.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Paradise Pressure Washing LLC",
+      "website": "https://paradisepressure.wixsite.com/ppwllc",
+      "industry": "Pressure Washing & Soft Washing (Honolulu, HI)",
+      "issues": "Google indexes the site's Contact page as \"CONTACT | ppwllc\" - \"ppwllc\" is the internal Wix short-name for the site, not the actual business name, and it appears on the exact page a ready-to-book customer clicks through to reach out. Despite serving Honolulu and the island of O'ahu since 2013, neither \"Honolulu\" nor \"O'ahu\" appears anywhere in the site's indexed page titles, so a search for \"pressure washing Honolulu\" has no local signal pointing back to a business with over a decade of history there.",
+      "opportunity": "Renaming the Contact page title away from \"ppwllc\" and rewriting titles across the site to lead with the business name plus Honolulu, HI / O'ahu is a same-day fix that puts over a decade of local reputation in front of the exact local searches it should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-27-paradise-pressure-washing.html",
+      "email_subject": "Your contact page is titled \"ppwllc\" on Google",
+      "email_body": "Hey there,\n\nI was looking at pressure washing companies around Honolulu and came across Paradise - since 2013 is a real track record on O'ahu. I checked how the site shows up on Google though, and your Contact page is indexed as \"CONTACT | ppwllc\" - \"ppwllc\" looks like an internal Wix short-name rather than your actual business name, and it's on the exact page someone clicks through to reach out. On top of that, none of your indexed pages mention Honolulu or O'ahu, so a search for \"pressure washing Honolulu\" doesn't have much reason to point back to you despite over a decade of history here.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-27-paradise-pressure-washing.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured over ten years on O'ahu deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "ParadisePressureWashing808@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
