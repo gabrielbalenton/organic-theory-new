@@ -1,0 +1,41 @@
+{
+  "date": "2026-07-27",
+  "leads": [
+    {
+      "business_name": "All In One Mobile Detailing",
+      "website": "https://mobiledetailing12.wixsite.com/website-1",
+      "industry": "Mobile Auto Detailing (Cartersville, GA)",
+      "issues": "Google indexes both the homepage (\"Home | All In One Mobile Detailing\") and the booking page (\"Book Online | All In One Mobile Detailing\") without any mention of Cartersville, GA or Bartow County anywhere in the title or URL, despite being a come-to-you mobile service where local search matters most. The site also lives on a generic, numbered Wix subdomain (mobiledetailing12.wixsite.com/website-1) that has no relation to the business name.",
+      "opportunity": "Rewriting both indexed titles to lead with the business name plus Cartersville, GA, and adding LocalBusiness + AutoDetailer schema, puts the shop's service area in front of every local searcher and is a same-day fix in the Wix site settings.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-27-all-in-one-mobile-detailing.html",
+      "email_subject": "Nothing on your site says \"Cartersville\"",
+      "email_body": "Hey there,\n\nI was looking at mobile detailers around Cartersville and came across All In One - the paint sealant work you do sounds like a step up from a standard wax. I checked how the site shows up on Google though, and neither your homepage nor your booking page mentions Cartersville or Bartow County anywhere in the title. For a mobile service where the whole pitch is \"we come to you,\" that's the one word that should be everywhere search-wise, and right now it's nowhere. The site's also still sitting on a generic numbered Wix address (mobiledetailing12.wixsite.com) instead of something with your name on it.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-27-all-in-one-mobile-detailing.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a shop doing this kind of detail work deserved a listing that actually says where you work.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "mobiledetailing12@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Country Chicks Catering",
+      "website": "https://coonvalleywi.wixsite.com/countrychicks",
+      "industry": "Catering & Event Venue (Coon Valley, WI)",
+      "issues": "Google indexes the homepage with the title \"Coon Valley, Wi\" - no mention of Country Chicks Catering anywhere in the one line a searcher reads first. The web address itself is also named after the town (coonvalleywi.wixsite.com) rather than the business, with \"countrychicks\" only appearing as a secondary path - between the title and the URL, the business's own brand name barely shows up anywhere Google displays.",
+      "opportunity": "Rewriting the homepage title to lead with \"Country Chicks Catering\" plus Coon Valley, WI is a same-day fix in the Wix site settings, and it's the highest-leverage change available since it's the one indexed page anyone searching the business by name would land on.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-27-country-chicks-catering.html",
+      "email_subject": "Google's result for your business is just \"Coon Valley, Wi\"",
+      "email_body": "Hi there,\n\nI was looking into caterers around Coon Valley and came across Country Chicks - the catering-plus-venue setup with Venue in the Valley is a nice combination for handling a whole event in one place. I checked how the site shows up on Google though, and the homepage is indexed with the title \"Coon Valley, Wi\" - no mention of Country Chicks Catering anywhere in it. Someone searching for your business by name would land on a result that never actually confirms they found you. The web address is the same story - it's built around the town name (coonvalleywi.wixsite.com) rather than your business name.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-27-country-chicks-catering.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a business with a venue and a catering operation deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "countrychickscatering@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Juarez Tree Services & Fence Repair",
+      "website": "https://juareztreeserviceg.wixsite.com/my-site",
+      "industry": "Tree Service & Fence Repair (Houston, TX)",
+      "issues": "Google indexes the contact page as \"Contact | My Site\" - \"My Site\" is the placeholder name every new Wix site ships with, and it was never renamed to Juarez Tree Services & Fence Repair, even on the page a customer clicks through to reach out. Neither the title nor the URL (juareztreeserviceg.wixsite.com/my-site) mentions Houston or the business's history since 1998, so the 25+ years of family-owned experience never reaches the line Google actually shows a searcher.",
+      "opportunity": "Renaming the Wix site away from \"My Site\" and rewriting the titles to lead with the business name, Houston, TX, and \"since 1998\" is a same-day fix that puts a real trust signal in front of every homeowner searching for tree or fence work.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-27-juarez-tree-services.html",
+      "email_subject": "Your contact page is titled \"My Site\" on Google",
+      "email_body": "Hey there,\n\nI was looking at tree and fence companies around Houston and came across Juarez - family-owned since 1998 is a real track record in this business. I checked how the site shows up on Google though, and your contact page is indexed as \"Contact | My Site\" - \"My Site\" is the placeholder name Wix gives every new site, and it looks like it was never swapped out, even on the page someone clicks through to actually reach you. Nothing in the title or the URL mentions Houston or the 25+ years you've been at this either, which is exactly the kind of credibility a homeowner is searching for.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-27-juarez-tree-services.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured 25 years in Houston deserved a search listing that actually reflects it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "juareztreeservice.gj@gmail.com",
+      "sent_automatically": false
+    }
+  ]
+}
