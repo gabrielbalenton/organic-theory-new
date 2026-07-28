@@ -95,23 +95,22 @@ export const FPX_TEMPLATE = `<!DOCTYPE html>
                   </a>
                 </td>
                 <td valign="top" style="padding:16px 18px;border-left:1px solid #ebebeb;">
-                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:6px;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:8px;">
                     <tr>
-                      <td style="background-color:#1a8638;border-radius:100px;padding:4px 10px;line-height:1;">
-                        <span style="font-size:10px;font-weight:700;color:#ffffff;text-transform:uppercase;font-family:'Lato',Arial,sans-serif;line-height:1;">Best Single-Packet Deal</span>
+                      <td valign="middle">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#1a8638;border-radius:100px;padding:4px 10px;line-height:1;">
+                          <span style="font-size:10px;font-weight:700;color:#ffffff;text-transform:uppercase;font-family:'Lato',Arial,sans-serif;line-height:1;">Best Single-Packet Deal</span>
+                        </td></tr></table>
+                      </td>
+                      <td valign="middle" align="right"><!--SLOT1_SAVINGS_START-->
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="52" height="52" align="center" valign="middle" style="background-color:#1a8638;border-radius:10px;">
+                          <p style="margin:0;font-size:16px;font-weight:800;color:#ffffff;font-family:'Montserrat',Arial,sans-serif;line-height:1.15;letter-spacing:-0.3px;">{{SLOT1_SAVINGS_PCT}}</p>
+                          <p style="margin:0;font-size:9px;font-weight:700;color:#ffffff;font-family:'Lato',Arial,sans-serif;letter-spacing:1.5px;line-height:1.2;">OFF</p>
+                        </td></tr></table><!--SLOT1_SAVINGS_END-->
                       </td>
                     </tr>
                   </table>
-                  <!--SLOT1_TAGS_START--><table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:8px;">
-                    <tr>
-                      <!--SLOT1_CATEGORY_START--><td style="white-space:nowrap;padding:0 6px 0 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#eef7f0;border:1px solid #cdeada;border-radius:100px;padding:4px 10px;line-height:1;text-align:center;">
-                        <span style="font-size:10px;font-weight:700;color:#1a8638;font-family:'Lato',Arial,sans-serif;line-height:1;white-space:nowrap;">{{SLOT1_CATEGORY}}</span>
-                      </td></tr></table></td><!--SLOT1_CATEGORY_END-->
-                      <!--SLOT1_SAVINGS_START--><td style="padding-left:8px;white-space:nowrap;">
-                        <span style="font-size:12px;font-weight:800;color:#1a8638;font-family:'Montserrat',Arial,sans-serif;">{{SLOT1_SAVINGS}}</span>
-                      </td><!--SLOT1_SAVINGS_END-->
-                    </tr>
-                  </table><!--SLOT1_TAGS_END-->
+                  <!--SLOT1_CATEGORY_START--><div style="margin:0 0 8px;">{{SLOT1_CATEGORY_PILLS}}</div><!--SLOT1_CATEGORY_END-->
                   <p style="margin:0 0 2px;font-family:'Montserrat',Arial,sans-serif;font-size:21px;font-weight:800;color:#111111;line-height:1.1;letter-spacing:-0.3px;">{{SLOT1_SIZE}}</p>
                   <p style="margin:0 0 4px;font-family:'Montserrat',Arial,sans-serif;font-size:14px;font-weight:700;color:#1a8638;line-height:1;">{{SLOT1_GRADE}}</p>
                   <p style="margin:0 0 10px;font-family:'Montserrat',Arial,sans-serif;font-size:15px;font-weight:800;color:#111111;line-height:1;">{{SLOT1_PRICE_MAIN}} <span style="font-size:12px;font-weight:600;color:#888;">{{SLOT1_PRICE_SUB}}</span></p>
@@ -156,23 +155,22 @@ export const FPX_TEMPLATE = `<!DOCTYPE html>
                   </a>
                 </td>
                 <td valign="top" style="padding:16px 18px;border-left:1px solid #ebebeb;">
-                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:6px;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:8px;">
                     <tr>
-                      <td style="background-color:#2563a8;border-radius:100px;padding:4px 10px;line-height:1;">
-                        <span style="font-size:10px;font-weight:700;color:#ffffff;text-transform:uppercase;font-family:'Lato',Arial,sans-serif;line-height:1;">Best Bulk Deal</span>
+                      <td valign="middle">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#2563a8;border-radius:100px;padding:4px 10px;line-height:1;">
+                          <span style="font-size:10px;font-weight:700;color:#ffffff;text-transform:uppercase;font-family:'Lato',Arial,sans-serif;line-height:1;">Best Bulk Deal</span>
+                        </td></tr></table>
+                      </td>
+                      <td valign="middle" align="right"><!--SLOT2_SAVINGS_START-->
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="52" height="52" align="center" valign="middle" style="background-color:#2563a8;border-radius:10px;">
+                          <p style="margin:0;font-size:16px;font-weight:800;color:#ffffff;font-family:'Montserrat',Arial,sans-serif;line-height:1.15;letter-spacing:-0.3px;">{{SLOT2_SAVINGS_PCT}}</p>
+                          <p style="margin:0;font-size:9px;font-weight:700;color:#ffffff;font-family:'Lato',Arial,sans-serif;letter-spacing:1.5px;line-height:1.2;">OFF</p>
+                        </td></tr></table><!--SLOT2_SAVINGS_END-->
                       </td>
                     </tr>
                   </table>
-                  <!--SLOT2_TAGS_START--><table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:8px;">
-                    <tr>
-                      <!--SLOT2_CATEGORY_START--><td style="white-space:nowrap;padding:0 6px 0 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#eaf1fa;border:1px solid #cfe0f2;border-radius:100px;padding:4px 10px;line-height:1;text-align:center;">
-                        <span style="font-size:10px;font-weight:700;color:#2563a8;font-family:'Lato',Arial,sans-serif;line-height:1;white-space:nowrap;">{{SLOT2_CATEGORY}}</span>
-                      </td></tr></table></td><!--SLOT2_CATEGORY_END-->
-                      <!--SLOT2_SAVINGS_START--><td style="padding-left:8px;white-space:nowrap;">
-                        <span style="font-size:12px;font-weight:800;color:#2563a8;font-family:'Montserrat',Arial,sans-serif;">{{SLOT2_SAVINGS}}</span>
-                      </td><!--SLOT2_SAVINGS_END-->
-                    </tr>
-                  </table><!--SLOT2_TAGS_END-->
+                  <!--SLOT2_CATEGORY_START--><div style="margin:0 0 8px;">{{SLOT2_CATEGORY_PILLS}}</div><!--SLOT2_CATEGORY_END-->
                   <p style="margin:0 0 2px;font-family:'Montserrat',Arial,sans-serif;font-size:21px;font-weight:800;color:#111111;line-height:1.1;letter-spacing:-0.3px;">{{SLOT2_SIZE}}</p>
                   <p style="margin:0 0 4px;font-family:'Montserrat',Arial,sans-serif;font-size:14px;font-weight:700;color:#2563a8;line-height:1;">{{SLOT2_GRADE}}</p>
                   <p style="margin:0 0 10px;font-family:'Montserrat',Arial,sans-serif;font-size:15px;font-weight:800;color:#111111;line-height:1;">{{SLOT2_PRICE_MAIN}} <span style="font-size:12px;font-weight:600;color:#888;">{{SLOT2_PRICE_SUB}}</span></p>
@@ -218,23 +216,22 @@ export const FPX_TEMPLATE = `<!DOCTYPE html>
                   </a>
                 </td>
                 <td valign="top" style="padding:16px 18px;border-left:1px solid #ebebeb;">
-                  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:6px;">
+                  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:8px;">
                     <tr>
-                      <td style="background-color:#d97706;border-radius:100px;padding:4px 10px;line-height:1;">
-                        <span style="font-size:10px;font-weight:700;color:#ffffff;text-transform:uppercase;font-family:'Lato',Arial,sans-serif;line-height:1;">&#9889; Selling Fast</span>
+                      <td valign="middle">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#d97706;border-radius:100px;padding:4px 10px;line-height:1;">
+                          <span style="font-size:10px;font-weight:700;color:#ffffff;text-transform:uppercase;font-family:'Lato',Arial,sans-serif;line-height:1;">&#9889; Selling Fast</span>
+                        </td></tr></table>
+                      </td>
+                      <td valign="middle" align="right"><!--SLOT3_SAVINGS_START-->
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="52" height="52" align="center" valign="middle" style="background-color:#d97706;border-radius:10px;">
+                          <p style="margin:0;font-size:16px;font-weight:800;color:#ffffff;font-family:'Montserrat',Arial,sans-serif;line-height:1.15;letter-spacing:-0.3px;">{{SLOT3_SAVINGS_PCT}}</p>
+                          <p style="margin:0;font-size:9px;font-weight:700;color:#ffffff;font-family:'Lato',Arial,sans-serif;letter-spacing:1.5px;line-height:1.2;">OFF</p>
+                        </td></tr></table><!--SLOT3_SAVINGS_END-->
                       </td>
                     </tr>
                   </table>
-                  <!--SLOT3_TAGS_START--><table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:8px;">
-                    <tr>
-                      <!--SLOT3_CATEGORY_START--><td style="white-space:nowrap;padding:0 6px 0 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td style="background-color:#fdf1e0;border:1px solid #f3dcb2;border-radius:100px;padding:4px 10px;line-height:1;text-align:center;">
-                        <span style="font-size:10px;font-weight:700;color:#d97706;font-family:'Lato',Arial,sans-serif;line-height:1;white-space:nowrap;">{{SLOT3_CATEGORY}}</span>
-                      </td></tr></table></td><!--SLOT3_CATEGORY_END-->
-                      <!--SLOT3_SAVINGS_START--><td style="padding-left:8px;white-space:nowrap;">
-                        <span style="font-size:12px;font-weight:800;color:#d97706;font-family:'Montserrat',Arial,sans-serif;">{{SLOT3_SAVINGS}}</span>
-                      </td><!--SLOT3_SAVINGS_END-->
-                    </tr>
-                  </table><!--SLOT3_TAGS_END-->
+                  <!--SLOT3_CATEGORY_START--><div style="margin:0 0 8px;">{{SLOT3_CATEGORY_PILLS}}</div><!--SLOT3_CATEGORY_END-->
                   <p style="margin:0 0 2px;font-family:'Montserrat',Arial,sans-serif;font-size:21px;font-weight:800;color:#111111;line-height:1.1;letter-spacing:-0.3px;">{{SLOT3_SIZE}}</p>
                   <p style="margin:0 0 4px;font-family:'Montserrat',Arial,sans-serif;font-size:14px;font-weight:700;color:#d97706;line-height:1;">{{SLOT3_GRADE}}</p>
                   <p style="margin:0 0 10px;font-family:'Montserrat',Arial,sans-serif;font-size:15px;font-weight:800;color:#111111;line-height:1;">{{SLOT3_PRICE_MAIN}} <span style="font-size:12px;font-weight:600;color:#888;">{{SLOT3_PRICE_SUB}}</span></p>
@@ -268,6 +265,21 @@ export const FPX_TEMPLATE = `<!DOCTYPE html>
           </td>
         </tr>
         <!--SLOT3_END-->
+
+        <!-- VIEW ALL SPECIALS CTA -->
+        <tr>
+          <td style="padding:20px 32px 0;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#eef7f0;border:1px solid #cdeada;border-radius:8px;overflow:hidden;">
+              <tr>
+                <td align="center" style="padding:20px 24px;">
+                  <p style="margin:0 0 5px;font-family:'Montserrat',Arial,sans-serif;font-size:15px;font-weight:700;color:#111111;line-height:1.3;">Looking for more weekly deals?</p>
+                  <p style="margin:0 0 14px;font-size:12px;color:#666666;font-family:'Open Sans',Arial,sans-serif;line-height:1.6;">Browse all current specials available on FPX.</p>
+                  <a href="https://app.fpx.nz/specials" style="display:inline-block;background-color:#1a8638;color:#ffffff;font-family:'Montserrat',Arial,sans-serif;font-size:12px;font-weight:700;padding:10px 24px;border-radius:100px;text-decoration:none;letter-spacing:0.3px;">View All Specials &rarr;</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
 
         <!-- BROWSE BY CATEGORY -->
         <tr>
@@ -414,11 +426,23 @@ function toTitleCase(text: string): string {
     .join(' ');
 }
 
-// "15" / "15%" / "15% OFF" -> "15% off", one consistent format
-// regardless of how it was typed into the details blob.
-function formatSavingsBadge(text: string): string {
+// "15" / "15%" / "15% OFF" -> "15%", for the square sale-tag badge.
+function formatSavingsPct(text: string): string {
   const m = text.match(/(\d+(?:\.\d+)?)/);
-  return m ? `${m[1]}% off` : '';
+  return m ? `${m[1]}%` : '';
+}
+
+// "Treated Timber, Dunnage, Pole" -> one pill <span> per category, title-cased.
+function renderCategoryPills(text: string, color: string, bg: string, border: string): string {
+  return text
+    .split(/[,;]/)
+    .map((c) => toTitleCase(c))
+    .filter(Boolean)
+    .map(
+      (c) =>
+        `<span style="display:inline-block;background-color:${bg};border:1px solid ${border};border-radius:100px;padding:4px 10px;line-height:1;font-size:10px;font-weight:700;color:${color};font-family:'Lato',Arial,sans-serif;white-space:nowrap;margin:0 4px 4px 0;">${c}</span>`
+    )
+    .join('');
 }
 
 // Splits "$924/M3 ($4.62/LM)" into a bold main part and a lighter
@@ -446,12 +470,12 @@ export function renderFpxTemplate(weekLabel: string, slot1: SlotFields, slot2: S
   // If we know both numbers and the deal doesn't clear the min order, don't feature it.
   const showSlot3 = !(qtyAvailable !== null && minOrderQty !== null && qtyAvailable < minOrderQty);
 
-  const category1 = toTitleCase(slot1.category);
-  const category2 = toTitleCase(slot2.category);
-  const category3 = toTitleCase(slot3.category);
-  const savings1 = formatSavingsBadge(slot1.savingsPct);
-  const savings2 = formatSavingsBadge(slot2.savingsPct);
-  const savings3 = formatSavingsBadge(slot3.savingsPct);
+  const categoryPills1 = renderCategoryPills(slot1.category, '#1a8638', '#eef7f0', '#cdeada');
+  const categoryPills2 = renderCategoryPills(slot2.category, '#2563a8', '#eaf1fa', '#cfe0f2');
+  const categoryPills3 = renderCategoryPills(slot3.category, '#d97706', '#fdf1e0', '#f3dcb2');
+  const savings1 = formatSavingsPct(slot1.savingsPct);
+  const savings2 = formatSavingsPct(slot2.savingsPct);
+  const savings3 = formatSavingsPct(slot3.savingsPct);
   const price1 = splitPrice(slot1.price);
   const price2 = splitPrice(slot2.price);
   const price3 = splitPrice(slot3.price);
@@ -469,8 +493,8 @@ export function renderFpxTemplate(weekLabel: string, slot1: SlotFields, slot2: S
     SLOT1_PCS: slot1.pcs,
     SLOT1_DISPATCH: slot1.dispatch,
     SLOT1_AVAIL: slot1.availability,
-    SLOT1_CATEGORY: category1,
-    SLOT1_SAVINGS: savings1,
+    SLOT1_CATEGORY_PILLS: categoryPills1,
+    SLOT1_SAVINGS_PCT: savings1,
     SLOT1_PRICE_MAIN: price1.main,
     SLOT1_PRICE_SUB: price1.sub,
     SLOT1_LENGTH: slot1.length,
@@ -485,8 +509,8 @@ export function renderFpxTemplate(weekLabel: string, slot1: SlotFields, slot2: S
     SLOT2_DISPATCH: slot2.dispatch,
     SLOT2_MOQ: slot2.minOrder,
     SLOT2_AVAIL: slot2.availability,
-    SLOT2_CATEGORY: category2,
-    SLOT2_SAVINGS: savings2,
+    SLOT2_CATEGORY_PILLS: categoryPills2,
+    SLOT2_SAVINGS_PCT: savings2,
     SLOT2_PRICE_MAIN: price2.main,
     SLOT2_PRICE_SUB: price2.sub,
     SLOT2_LENGTH: slot2.length,
@@ -501,12 +525,12 @@ export function renderFpxTemplate(weekLabel: string, slot1: SlotFields, slot2: S
     SLOT3_DISPATCH: slot3.dispatch,
     SLOT3_MOQ: slot3.minOrder,
     SLOT3_AVAIL: slot3.availability,
-    SLOT3_CATEGORY: category3,
-    SLOT3_SAVINGS: savings3,
+    SLOT3_CATEGORY_PILLS: categoryPills3,
+    SLOT3_SAVINGS_PCT: savings3,
     SLOT3_PRICE_MAIN: price3.main,
     SLOT3_PRICE_SUB: price3.sub,
     SLOT3_LENGTH: slot3.length,
-    SLOT3_QTY_AVAILABLE: slot3.qtyAvailable,
+    SLOT3_QTY_AVAILABLE: slot3.qtyAvailable.trim() || slot3.availability,
   };
   let html = FPX_TEMPLATE;
   if (!showSlot3) {
@@ -514,15 +538,12 @@ export function renderFpxTemplate(weekLabel: string, slot1: SlotFields, slot2: S
   } else {
     html = html.replace(/<!--SLOT3_START-->|<!--SLOT3_END-->/g, '');
   }
-  html = stripIfEmpty(html, 'SLOT1_CATEGORY', category1);
+  html = stripIfEmpty(html, 'SLOT1_CATEGORY', categoryPills1);
   html = stripIfEmpty(html, 'SLOT1_SAVINGS', savings1);
-  html = stripIfEmpty(html, 'SLOT2_CATEGORY', category2);
+  html = stripIfEmpty(html, 'SLOT2_CATEGORY', categoryPills2);
   html = stripIfEmpty(html, 'SLOT2_SAVINGS', savings2);
-  html = stripIfEmpty(html, 'SLOT3_CATEGORY', category3);
+  html = stripIfEmpty(html, 'SLOT3_CATEGORY', categoryPills3);
   html = stripIfEmpty(html, 'SLOT3_SAVINGS', savings3);
-  html = stripIfEmpty(html, 'SLOT1_TAGS', category1 + savings1);
-  html = stripIfEmpty(html, 'SLOT2_TAGS', category2 + savings2);
-  html = stripIfEmpty(html, 'SLOT3_TAGS', category3 + savings3);
   for (const [token, value] of Object.entries(replacements)) {
     html = html.split(`{{${token}}}`).join(value ?? '');
   }
