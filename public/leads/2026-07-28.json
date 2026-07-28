@@ -1,0 +1,17 @@
+{
+  "date": "2026-07-28",
+  "leads": [
+    {
+      "business_name": "MOAT's Junk Removal LLC",
+      "website": "https://moatsjunkremoval.wixsite.com/mysite-1",
+      "industry": "Junk Removal & Hauling (Jonesboro, AR)",
+      "issues": "Google indexes the entire site on the default, never-renamed Wix address \"mysite-1\" - the homepage, services, about, and contact pages all live at moatsjunkremoval.wixsite.com/mysite-1/... instead of an address built around the business name. On top of that, none of the indexed page titles (\"HOME | MOAT's JUNK REMOVAL\", \"CONTACT | MOAT's JUNK REMOVAL\") mention Jonesboro or Arkansas anywhere, despite being a local, come-to-you hauling service where \"junk removal Jonesboro\" is close to the exact phrase a customer would search.",
+      "opportunity": "Renaming the site off the placeholder \"mysite-1\" slug and rewriting every indexed title to lead with the business name plus Jonesboro, AR, along with adding LocalBusiness + MovingCompany schema, is a same-day fix in the Wix site settings that puts the business directly in front of the local searches it should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-28-moats-junk-removal.html",
+      "email_subject": "Your whole site is still on Wix's default \"mysite-1\" address",
+      "email_body": "Hey there,\n\nI was looking at junk removal companies around Jonesboro and came across MOAT's. I checked how the site shows up on Google though, and every page - home, services, about, contact - is still sitting on Wix's default, never-renamed \"mysite-1\" address instead of something with your name on it. On top of that, none of the page titles Google has indexed mention Jonesboro or Arkansas anywhere, which is exactly the word a local customer is typing in when they search for a hauling company.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-28-moats-junk-removal.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a local hauling business deserved a search listing that actually says where you work.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "moatsjunkremoval@gmail.com",
+      "sent_automatically": false
+    }
+  ]
+}
