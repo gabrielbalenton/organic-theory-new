@@ -24,6 +24,54 @@
       "email_body": "Hey Eric,\n\nI was looking at lawn care and junk removal options around Crystal River and came across Clean N Cut. I checked how the site shows up on Google though, and the only page indexed is titled just \"Home | Clean N Cut\" - it doesn't mention Crystal River, Citrus County, or Florida anywhere, which is exactly what a nearby customer types in when they're searching for a lawn crew or a pressure washer. The site's also still sitting on Wix's default address (cleanncutservices.wixsite.com/clean-n-cut) instead of something with your name on it.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-29-clean-n-cut.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a local crew doing lawn care, junk removal, pressure washing and home cleaning deserved a search listing that actually says where you work.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "cleanncutservices@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Triatik's Tree Service LLC",
+      "website": "https://triatikstreeservic.wixsite.com/my-site",
+      "industry": "Tree Service (Oshkosh / Blackwolf, WI)",
+      "issues": "Google has the site's About and Contact pages indexed as \"ABOUT US | My Site\" and \"CONTACT | My Site\" - the default Wix placeholder title was never swapped out, even though the homepage itself is correctly titled \"Triatik's Tree Service LLC | Blackwolf, WI\". The site also still lives on Wix's default, never-renamed address (triatikstreeservic.wixsite.com/my-site) instead of a domain built around the business name.",
+      "opportunity": "Rewriting the About and Contact page titles to lead with the business name instead of \"My Site\", and moving off the default wixsite.com/my-site slug, is a same-day fix in Wix's page settings that stops handing searchers a half-branded result on exactly the pages most likely to close a job.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-29-triatiks-tree-service.html",
+      "email_subject": "Two of your pages are titled \"My Site\" on Google",
+      "email_body": "Hey there,\n\nI was looking at tree services around Oshkosh and came across Triatik's Tree Service. Your homepage is titled correctly on Google, but I checked the About and Contact pages and they're both indexed as just \"My Site\" - the default Wix placeholder that never got swapped out. Those are usually the two pages a customer clicks right before calling, so it's worth fixing.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-29-triatiks-tree-service.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a Winnebago County crew with fully insured, 24-hour storm response deserved page titles that actually say who you are.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "triatikstreeservice@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Gilmore's Lawn & Landscaping",
+      "website": "https://gilmoresservices93.wixsite.com/gilmoreslawnlandscap",
+      "industry": "Lawn Care & Landscaping (Seminole, FL)",
+      "issues": "The site's only indexed page title is the generic \"Home | Gilmore's lawn & Landscaping\" - it never mentions Seminole, Pinellas County, or Florida even though this is a local business that's served the same area since 2000 - and the site still lives on Wix's default, never-renamed address (gilmoresservices93.wixsite.com/gilmoreslawnlandscap) instead of a domain built around the business name.",
+      "opportunity": "Rewriting the indexed title to lead with the business name plus Seminole, FL, adding LocalBusiness schema, and moving off the default wixsite.com address is a same-day fix in Wix's site settings that puts 25 years of local reputation directly in front of the searches it should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-29-gilmores-lawn-landscaping.html",
+      "email_subject": "Your listing doesn't mention Seminole anywhere",
+      "email_body": "Hey there,\n\nI was looking at lawn care options around Seminole and came across Gilmore's Lawn & Landscaping. I checked how the site shows up on Google though, and the only page indexed is titled just \"Home | Gilmore's lawn & Landscaping\" - it doesn't mention Seminole, Pinellas County, or Florida anywhere, even though you've been serving the area since 2000. That's exactly what a nearby customer types in when searching for a lawn crew. The site's also still on Wix's default address (gilmoresservices93.wixsite.com/gilmoreslawnlandscap) instead of something with your name on it.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-29-gilmores-lawn-landscaping.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured 25 years in the same neighborhood deserved a search listing that actually says where you work.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "gilmoresservices93@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Our Best Friends Pet Grooming & Services",
+      "website": "https://ourbestfriendswv.wixsite.com/home",
+      "industry": "Pet Grooming (Charles Town, WV)",
+      "issues": "The site's only indexed page title is the generic \"Home | Our Best Friends Pet Grooming & Services\" - it never mentions Charles Town, Jefferson County, or West Virginia even though this is a local, appointment-based grooming shop - and the site still lives on Wix's default, never-renamed address (ourbestfriendswv.wixsite.com/home) instead of a domain built around the business name.",
+      "opportunity": "Rewriting the indexed title to lead with the business name plus Charles Town, WV, adding LocalBusiness schema, and moving off the default wixsite.com address is a same-day fix in Wix's site settings that puts the shop directly in front of the local pet-owner searches it should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-29-our-best-friends-pet-grooming.html",
+      "email_subject": "Your site doesn't say Charles Town anywhere",
+      "email_body": "Hey there,\n\nI was looking at pet groomers around Charles Town and came across Our Best Friends Pet Grooming. I checked how the site shows up on Google though, and the only page indexed is titled just \"Home | Our Best Friends Pet Grooming & Services\" - it doesn't mention Charles Town, Jefferson County, or West Virginia anywhere, which is exactly what a nearby pet owner types in when searching for a groomer. The site's also still on Wix's default address (ourbestfriendswv.wixsite.com/home) instead of something with your name on it.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-29-our-best-friends-pet-grooming.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a local shop serving VA, WV and MD deserved a search listing that actually says where you're located.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "ourbestfriendswv@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "JG Lawn & Landscaping",
+      "website": "https://jglawnlandscaping.wixsite.com/website",
+      "industry": "Lawn Care & Landscaping (Houston, TX)",
+      "issues": "The site's only indexed page title is the generic \"Home | JG LAWN & LANDSCAPING\" - it never mentions Houston, Harris County, or Texas even though this is a local business that's served the same area since 2016 - and the site still lives on Wix's default, never-renamed address (jglawnlandscaping.wixsite.com/website) instead of a domain built around the business name.",
+      "opportunity": "Rewriting the indexed title to lead with the business name plus Houston, TX, adding LocalBusiness schema, and moving off the default wixsite.com address is a same-day fix in Wix's site settings that puts almost a decade of local reputation directly in front of the searches it should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-29-jg-lawn-landscaping.html",
+      "email_subject": "Your listing doesn't mention Houston anywhere",
+      "email_body": "Hey there,\n\nI was looking at lawn care options around Houston and came across JG Lawn & Landscaping. I checked how the site shows up on Google though, and the only page indexed is titled just \"Home | JG LAWN & LANDSCAPING\" - it doesn't mention Houston, Harris County, or Texas anywhere, even though you've been serving the area since 2016. That's exactly what a nearby customer types in when searching for a lawn crew. The site's also still on Wix's default address (jglawnlandscaping.wixsite.com/website) instead of something with your name on it.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-29-jg-lawn-landscaping.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured almost a decade in the same neighborhoods deserved a search listing that actually says where you work.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "jglawnlandscaping@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
