@@ -1,0 +1,17 @@
+{
+  "date": "2026-07-29",
+  "leads": [
+    {
+      "business_name": "Solutions Tree & Dumpster Rental Services",
+      "website": "https://solutionstreeservi.wixsite.com/services",
+      "industry": "Tree Service & Dumpster Rental (Brockton / West Bridgewater, MA)",
+      "issues": "The site is still on Wix's default, never-renamed address (solutionstreeservi.wixsite.com/services) instead of a domain built around the business name, and the indexed page titles - \"Home | Solutions Tree & Dumpster Rental Services\", \"Dumpster Rental Services | services\" - never mention Brockton, West Bridgewater, or Massachusetts anywhere, despite this being a local, service-area business where that's exactly the search a nearby customer would type.",
+      "opportunity": "Renaming off the default wixsite.com/services slug and rewriting the indexed titles to lead with the business name plus Brockton, MA, along with LocalBusiness + TreeService schema, is a same-day fix in Wix's site settings that puts the business directly in front of the local searches it should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-29-solutions-tree-dumpster.html",
+      "email_subject": "Your site's still on Wix's default address",
+      "email_body": "Hey Frank,\n\nI was looking at tree services around Brockton and came across Solutions Tree & Dumpster Rental. I checked how the site shows up on Google though, and it's still sitting on Wix's default, never-renamed address (solutionstreeservi.wixsite.com/services) instead of something with your name on it. None of the page titles Google has indexed mention Brockton or West Bridgewater either, which is exactly what a local customer is typing in when they search for tree work or a dumpster rental.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-29-solutions-tree-dumpster.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a local crew doing both tree work and dumpster rentals deserved a search listing that actually says where you work.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "solutionstreeservices@gmail.com",
+      "sent_automatically": false
+    }
+  ]
+}
