@@ -1,0 +1,41 @@
+{
+  "date": "2026-07-30",
+  "leads": [
+    {
+      "business_name": "Pets Garden",
+      "website": "https://petsgardenss3.wixsite.com/homepage",
+      "industry": "Pet Grooming & Pet Supplies (Petaling Jaya, Selangor, Malaysia)",
+      "issues": "The site is still on Wix's default, never-renamed address (petsgardenss3.wixsite.com/homepage), and the Contact page Google has indexed carries the title \"Contact us | homepage\" - the word \"homepage\" is standing in for the business name. Nothing in that indexed title mentions Pets Garden or Petaling Jaya, despite this being a local, appointment-based grooming and supply shop.",
+      "opportunity": "Renaming off the default \"homepage\" slug and rewriting the indexed titles to lead with Pets Garden plus Petaling Jaya, along with LocalBusiness + PetGroomingBusiness schema, is a same-day fix in Wix's site settings that puts the shop directly in front of the local pet-owner searches it should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-30-pets-garden.html",
+      "email_subject": "Your contact page is literally titled \"homepage\"",
+      "email_body": "Hey there,\n\nI was looking at pet groomers around Petaling Jaya and came across Pets Garden. I checked how the site shows up on Google though, and the address itself is still on Wix's default, never-renamed handle - petsgardenss3.wixsite.com/homepage - and the Contact page Google has indexed is literally titled \"Contact us | homepage.\" Nothing in it says Pets Garden or Petaling Jaya, which is exactly what a nearby pet owner types in when they're searching for a groomer.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-30-pets-garden.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a real neighborhood pet shop deserved a search listing that actually has your name on it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "petsgardenss3@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "All In One Handyman Services LLC",
+      "website": "https://sonnystehr330.wixsite.com/mysite",
+      "industry": "Handyman Services - Electrical, Plumbing & Carpentry, Licensed & Insured (Williamsport, PA)",
+      "issues": "The site is still on Wix's default, never-renamed \"mysite\" address (sonnystehr330.wixsite.com/mysite), and the only indexed page title - \"Home | All in one handyman services llc\" - never mentions Williamsport or Pennsylvania anywhere, despite this being a local, licensed and insured handyman business with 15+ years of hands-on experience.",
+      "opportunity": "Renaming off the default \"mysite\" slug and rewriting the indexed title to lead with the business name plus Williamsport, PA, along with LocalBusiness schema, is a same-day fix in Wix's site settings that puts the business directly in front of the local searches it should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-30-all-in-one-handyman-services.html",
+      "email_subject": "Your site's still called \"mysite\" on Google",
+      "email_body": "Hey there,\n\nI was looking at handyman services around Williamsport and came across All In One Handyman Services. I checked how the site shows up on Google though, and it's still on Wix's default, never-renamed address (sonnystehr330.wixsite.com/mysite), and the only page indexed - \"Home | All in one handyman services llc\" - doesn't mention Williamsport or PA anywhere. That's exactly what a nearby homeowner is typing in when they're searching for a licensed handyman.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-30-all-in-one-handyman-services.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured 15+ years of licensed, insured work deserved a search listing that actually says where you work.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "sonnystehr330@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "TT's Handyman Service's",
+      "website": "https://ttshandymanservice.wixsite.com/home",
+      "industry": "Handyman Services, 40+ Years Experience (Bedlington, Northumberland, North East England, UK)",
+      "issues": "The site's own web address is still Wix's default, never-renamed \"home\" slug (ttshandymanservice.wixsite.com/home), and the indexed page title - \"Handyman | TT's Handyman Service's\" - never mentions Bedlington, Northumberland, or the North East anywhere, despite 40+ years of local tradesman experience.",
+      "opportunity": "Moving off the default \"home\" slug and rewriting the indexed title to lead with the business name plus Bedlington, Northumberland, along with LocalBusiness schema, is a same-day fix in Wix's site settings that puts four decades of local reputation directly in front of the searches it should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-30-tts-handyman-services.html",
+      "email_subject": "Your web address is literally \"wixsite.com/home\"",
+      "email_body": "Hey there,\n\nI was looking at handyman services around Bedlington and came across TT's Handyman Service's. Sounds like you've got 40+ years of trade experience in the North East, but I checked how the site shows up on Google and the address itself is still Wix's default, never-renamed \"home\" slug (ttshandymanservice.wixsite.com/home), and the indexed title never mentions Bedlington, Northumberland, or the North East anywhere.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-30-tts-handyman-services.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured 40 years on the tools deserved a search listing that actually says where you work.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "ttshandymanservice@gmail.com",
+      "sent_automatically": false
+    }
+  ]
+}
