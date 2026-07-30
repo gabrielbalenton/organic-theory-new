@@ -72,6 +72,42 @@
       "email_body": "Hey there,\n\nI was looking at wedding caterers around Hood River and came across Ahi's Ohana Catering - the homepage title actually does a nice job leading with your name and Hood River, Oregon. But I checked the Contact and My Story pages Google has indexed, and both drop back to the generic \"Contact Us | mysite\" and \"My Story | mysite\" - your name and location disappear on exactly the pages a couple would click into while deciding on a caterer.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-30-ahis-ohana-catering.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a business built on feeding people's ohana deserved consistent branding on every page, not just the homepage.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "ahi.catering@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Songs Pet Grooming",
+      "website": "https://songspetgrooming.wixsite.com/songspetgrooming",
+      "industry": "Pet Grooming (Vista, CA)",
+      "issues": "The homepage Google has indexed is titled simply \"HOME | Songs Pet Grooming\" - it never mentions Vista, CA or even the words \"pet grooming,\" despite the shop being independently listed with the same address and phone number across Yelp (149+ reviews), Yahoo Local, Cylex and Orange Book. The site also still sits on Wix's shared wixsite.com/songspetgrooming address rather than a domain of its own.",
+      "opportunity": "Rewriting the indexed homepage title to lead with Songs Pet Grooming plus Vista, CA and \"pet grooming,\" adding LocalBusiness + PetGroomingBusiness schema, and moving off the shared wixsite.com address onto a real domain is a same-day fix that finally puts a well-reviewed, years-established shop in front of the local searches it should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-30-songs-pet-grooming.html",
+      "email_subject": "Your homepage title doesn't say Vista anywhere",
+      "email_body": "Hey there,\n\nI was looking at pet groomers around Vista and came across Songs Pet Grooming - looks like you've built up a real following (I saw 149+ reviews on Yelp alone). But I checked how the site actually shows up on Google, and the homepage is indexed as just \"HOME | Songs Pet Grooming\" - no mention of Vista, CA, or even \"pet grooming\" itself. That's exactly what a nearby pet owner types into Google.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-30-songs-pet-grooming.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a shop with this many happy customers deserved a Google listing that actually says where you are.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "songspetgrooming@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "JMJ Bliss Salon and Day Spa",
+      "website": "https://jmjblisssalon.wixsite.com/my-site-2",
+      "industry": "Hair Salon & Day Spa (Mobile, AL)",
+      "issues": "The Contact page Google has indexed carries the title \"Contact | My Site 2\" - the business name JMJ Bliss and the Mobile, AL location both disappear entirely on exactly the page a prospective client clicks into right before calling to book. The site is also still on Wix's default, never-renamed \"my-site-2\" address rather than a domain of its own, despite being independently listed on Yelp, Vagaro, Nextdoor and Instagram at the same Old Shell Rd address.",
+      "opportunity": "Rewriting the indexed Contact page title to lead with JMJ Bliss Salon and Day Spa plus Mobile, AL, renaming off the default \"my-site-2\" slug, and adding LocalBusiness + HairSalon schema is a same-day fix that keeps your name in front of exactly the clients who are one click away from booking.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-30-jmj-bliss-salon.html",
+      "email_subject": "Your Contact page is titled \"My Site 2\" on Google",
+      "email_body": "Hey there,\n\nI was looking at salons around Mobile and came across JMJ Bliss Salon and Day Spa on Old Shell Rd. I checked how the site shows up on Google though, and the Contact page that's indexed is literally titled \"Contact | My Site 2\" - your name and Mobile, AL are both missing, right on the page someone clicks into before calling to book an appointment.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-30-jmj-bliss-salon.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a salon people already trust enough to book with deserved a Contact page that actually says who you are.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "jmjblisssalon@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Advance Pressure Washer Repair",
+      "website": "https://advancepressurewas.wixsite.com/mysite",
+      "industry": "Pressure Washer Repair & Small Engine Service (Otisville, MI)",
+      "issues": "Both the homepage and the Contact page Google has indexed carry the literal title \"Mysite\" (\"HOME | Mysite\" and \"CONTACT | Mysite\") - neither page anywhere mentions Advance Pressure Washer Repair or Otisville, MI, the two things someone is actually searching for. The site also still sits on Wix's fully generic, never-renamed wixsite.com/mysite address.",
+      "opportunity": "Rewriting both indexed page titles to lead with Advance Pressure Washer Repair plus Otisville, MI, and adding LocalBusiness schema, is a same-day fix that gets the shop's own name showing up in its own Google results for the first time.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-30-advance-pressure-washer-repair.html",
+      "email_subject": "Your homepage and Contact page are both titled \"Mysite\"",
+      "email_body": "Hey there,\n\nI was looking at pressure washer repair shops around Otisville and came across Advance Pressure Washer Repair. I checked how the site shows up on Google though, and both the homepage and the Contact page are indexed under the literal title \"Mysite\" - not your business name, not Otisville, nothing. That's a tough spot to be searchable from.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-30-advance-pressure-washer-repair.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a repair shop that's been doing this work deserved a Google listing with its own name on it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "advancepressurewasherrepair@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
