@@ -1,0 +1,29 @@
+{
+  "date": "2026-07-31",
+  "leads": [
+    {
+      "business_name": "Grady's Auto Detailing",
+      "website": "https://gradysdetailing1.wixsite.com/auto",
+      "industry": "Mobile Auto Detailing, LLC (Redmond, Oregon)",
+      "issues": "The Google-indexed homepage title is still \"Home | Mysite\" - Wix's untouched default - with no mention of Grady's, detailing, or Redmond anywhere in it, despite this being a registered LLC (confirmed via its Better Business Bureau profile) offering mobile detailing for cars, trucks, motorcycles, semis, and farm equipment. The site also still lives on Wix's shared, never-renamed subdomain (gradysdetailing1.wixsite.com) instead of a domain of its own.",
+      "opportunity": "Rewriting the indexed title to lead with Grady's Auto Detailing plus Redmond, Oregon, and moving off the shared wixsite.com subdomain onto a real domain, is a same-day fix that puts a legitimate registered LLC in front of the local and mobile-radius searches across Central Oregon it should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-31-gradys-auto-detailing.html",
+      "email_subject": "Your homepage is still titled \"Home | Mysite\"",
+      "email_body": "Hey there,\n\nI was looking at mobile detailers around Redmond and came across Grady's Auto Detailing. I checked how the site shows up on Google though, and the page indexed is still titled \"Home | Mysite\" - Wix's default, never-changed title - with nothing about Grady's or Redmond anywhere in it. That's exactly what someone nearby is typing in when they're looking for a mobile detailer.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-31-gradys-auto-detailing.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a registered detailing LLC deserved a search listing that actually has your name on it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "gradysdetailing1@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "The Frederick Grooming Co.",
+      "website": "https://frederickgroomingc.wixsite.com/website",
+      "industry": "Mobile Dog Grooming (Brunswick, MD - serving Frederick County, MD & Loudoun County, VA)",
+      "issues": "The site's web address is still Wix's shared subdomain with the page slug literally set to the word \"website\" (frederickgroomingc.wixsite.com/website) rather than a domain of its own. Searching for mobile dog grooming in the same service area surfaces competitors like Woofie's and Lucky Dog Mobile Groomers, each on a proper branded domain - this is the one shared wixsite.com listing sitting next to them.",
+      "opportunity": "Moving off the wixsite.com/website address onto a real domain (e.g. frederickgroomingco.com) plus LocalBusiness + service-area schema for Frederick County and Loudoun County is a same-day fix that puts a genuinely mobile, personalized grooming service on the same credibility footing as the franchise competitors already outranking it.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-31-frederick-grooming-co.html",
+      "email_subject": "Your site's on Wix's shared \"/website\" address",
+      "email_body": "Hey there,\n\nI was looking at mobile dog groomers around Frederick County and came across The Frederick Grooming Co. I checked how the site shows up next to the competition though, and it's still sitting on Wix's shared, never-renamed address (frederickgroomingc.wixsite.com/website) - the page slug is literally the word \"website\". Everyone else showing up for mobile grooming in Frederick County and Loudoun County is on a real domain of their own.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-31-frederick-grooming-co.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a genuinely mobile, personal grooming service deserved to look as credible online as the franchises it's competing with.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "frederickgroomingco@gmail.com",
+      "sent_automatically": false
+    }
+  ]
+}
