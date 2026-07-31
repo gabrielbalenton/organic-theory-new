@@ -84,6 +84,30 @@
       "email_body": "Hey there,\n\nI was looking at landscaping crews around Aurora and Plainfield and came across Evergreen Landscape Experts. I checked how the site shows up on Google though, and the homepage is indexed under the plain Wix default title \"Home | Mysite\" - nothing in it mentions Evergreen, landscaping, or any of the ten towns you actually cover (Shorewood, Aurora, Plainfield, Minooka, Orland Park, New Lenox, Naperville, Rockdale, Channahon, Morris). For a business that lives on local searches, that's ten towns' worth of customers who can't find you by name.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-31-evergreen-landscape-experts.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a family-owned crew covering that much ground deserved a homepage that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "evergreenexperts@yahoo.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Provision Handyman Services",
+      "website": "https://getprovisionhandym.wixsite.com/provision-handyman-s",
+      "industry": "Handyman Services (New Hanover, Pender, Brunswick & Southern Onslow County, NC)",
+      "issues": "The site's own web address is a truncated version of the business name - getprovisionhandym.wixsite.com/provision-handyman-s, where the slug cuts \"Services\" down to a lone \"s\" - rather than a purchased domain, and the page Google has indexed carries the literal title \"HOME | Provision Handyman S,\" the name cut off mid-word with a generic \"HOME |\" prefix and no mention of New Hanover, Pender, Brunswick, or Onslow County anywhere.",
+      "opportunity": "Moving off the truncated wixsite.com slug onto a real domain, rewriting the indexed title to lead with the full business name plus the counties served, and adding LocalBusiness + HomeAndConstructionBusiness schema is a same-day fix that puts the business in front of the exact multi-county local searches it should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-31-provision-handyman-services.html",
+      "email_subject": "Your site's title cuts off mid-word on Google",
+      "email_body": "Hey there,\n\nI was looking at handyman services around New Hanover and Pender County and came across Provision Handyman. I checked how the site shows up on Google though, and the address itself is a truncated version of your name - getprovisionhandym.wixsite.com/provision-handyman-s, where the \"s\" is all that's left of \"Services\" - and the indexed title reads just \"HOME | Provision Handyman S,\" cut off mid-word with no mention of New Hanover, Pender, Brunswick, or Onslow County anywhere.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-31-provision-handyman-services.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a business covering four counties deserved a Google listing that isn't missing half its own name.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "getprovisionhandyman@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "M-Express Locksmith",
+      "website": "https://mexpresslocksmith.wixsite.com/mexpresslocksmith",
+      "industry": "Mobile Locksmith, Trusted Since 2019 (Ottawa, ON, Canada)",
+      "issues": "The site has been live since 2019 on Wix's shared wixsite.com address rather than a domain of its own, and the one page Google has indexed carries the title \"M-Express Locksmith | Mobile locksmith services in the ottawa area\" - \"ottawa\" in lowercase, an inconsistent, unpolished detail sitting right in the title a searcher sees first when comparing locksmiths to call.",
+      "opportunity": "Moving off the shared wixsite.com address onto a proper domain, correcting the title casing, and adding LocalBusiness + Locksmith schema so hours, service area, and phone number show directly in rich results, is a same-day fix that brings the online presence up to the same standard as five years of local trust.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-07-31-mexpress-locksmith.html",
+      "email_subject": "Even \"Ottawa\" isn't capitalized in your own Google listing",
+      "email_body": "Hey there,\n\nI was looking at mobile locksmiths around Ottawa and came across M-Express Locksmith - trusted since 2019 is real, earned local reputation. I checked how the site shows up on Google though, and it's still on Wix's shared, free address (mexpresslocksmith.wixsite.com/mexpresslocksmith) rather than a domain of your own, and the indexed title reads \"...mobile locksmith services in the ottawa area\" - with \"ottawa\" lowercase, right in the line someone sees first when comparing locksmiths to call.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-07-31-mexpress-locksmith.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured five years of trusted lockout calls deserved a Google listing that looks as polished as the work itself.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "mexpresslocksmith@hotmail.com",
+      "sent_automatically": false
     }
   ]
 }
