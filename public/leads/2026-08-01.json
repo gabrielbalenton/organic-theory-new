@@ -24,6 +24,30 @@
       "email_body": "Hi there,\n\nI was looking into carpet cleaners around Siler City and came across Brown's Carpet Cleaning - family-owned since 1987 is the kind of track record that's hard to fake. I checked how the site shows up on Google though, and while your homepage is titled correctly as Brown's Carpet Cleaning, the Cleaning Services page one click deeper is indexed as \"Cleaning Services | mysite\" - \"mysite\" is the placeholder Wix left behind, and it looks like the rename never reached that page. Right now someone clicking around your own site sees two different business names depending on which page they land on.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-01-browns-carpet-cleaning.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 37 years in Chatham County deserved a consistent name on every page.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "brownscarpetcleaning@yahoo.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Grooming Tails Pet Spa",
+      "website": "https://groomingtailsjc.wixsite.com/mysite",
+      "industry": "Dog & Cat Grooming (Johnson City, TN)",
+      "issues": "Google indexes the homepage as \"HOME | Mysite\" and the Contact and Location page as \"CONTACT AND LOCATION | Mysite\" - Wix's untouched default, confirmed on both of the pages a new client is most likely to click first. Separately, business directories currently list two different street addresses for the shop (one on Browns Mill Road, another on N Roan St), a NAP inconsistency that muddies both local search ranking and a pet owner's ability to find the right location.",
+      "opportunity": "Rewriting the indexed homepage and Contact page titles to lead with Grooming Tails Pet Spa plus Johnson City, TN, and reconciling the address across every directory, is a same-day fix that puts a Westminster-credentialed groomer in front of the local searches the shop should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-08-01-grooming-tails-pet-spa.html",
+      "email_subject": "Your homepage and contact page are both titled \"Mysite\"",
+      "email_body": "Hi Beth and Neesha,\n\nI was looking into pet groomers around Johnson City and came across Grooming Tails Pet Spa - having a Master Groomer on staff who's worked the Westminster Dog Show is a real, rare credential for a local shop. I checked how the site shows up on Google though, and both your homepage and your Contact and Location page are indexed under Wix's untouched default, \"Mysite.\" Neither page carries the Grooming Tails name. I also noticed a few directories list two different street addresses for the shop, which can quietly hurt how Google ranks you locally.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-01-grooming-tails-pet-spa.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a Westminster-featured groomer deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "GroomingTailsJC@yahoo.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "G&P Handyman and Painting",
+      "website": "https://ronnygarrido.wixsite.com/mysite",
+      "industry": "Handyman & Painting Services (North Fork & The Hamptons, NY)",
+      "issues": "Google indexes the homepage as \"HOME | mysite\" - Wix's untouched default - with no mention of G&P, Ronny, or handyman services anywhere in it. The business covers eleven distinct towns (Jamesport, East Quogue, Riverhead, Mastic, Wading River, Rocky Point, Calverton, Manorville, Greenport, Mattituck, Southold) plus the Hamptons, but none of those town names appear anywhere in the indexed listing, so none of those local searches can surface the business by area.",
+      "opportunity": "Rewriting the indexed homepage title to lead with G&P Handyman and Painting plus its top service towns is a same-day fix that puts the business in front of the exact North Fork and Hamptons local searches it should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-08-01-gp-handyman-and-painting.html",
+      "email_subject": "Your homepage is titled \"HOME | mysite\" on Google",
+      "email_body": "Hey Ronny,\n\nI was looking into handyman services around the North Fork and came across G&P Handyman and Painting. I checked how the site shows up on Google though, and the homepage is indexed as \"HOME | mysite\" - Wix's default, never-changed title - with nothing about G&P or handyman work in it. You cover eleven towns from Jamesport to Southold plus the Hamptons, but not one of those names shows up anywhere in the listing either.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-01-gp-handyman-and-painting.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a crew covering that much ground deserved a homepage that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "shadow_g18@hotmail.com",
+      "sent_automatically": false
     }
   ]
 }
