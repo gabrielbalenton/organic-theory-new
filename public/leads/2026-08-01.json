@@ -156,6 +156,30 @@
       "email_body": "Hi Lorna,\n\nI was looking into cleaning services around Bury and came across LP Cleaning Services. I checked how the site shows up on Google though, and both your Contact page and About Me page - the two pages someone deciding whether to book you is most likely to check - are indexed under Wix's untouched default, \"Mysite.\" Neither one mentions LP Cleaning Services, your name, or Bury anywhere.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-01-lp-cleaning-services.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a business run under your own name deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "lornapower131@btinternet.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Central Auto Service Center",
+      "website": "https://centralautoservice2.wixsite.com/mysite",
+      "industry": "Auto Repair (Albany, NY)",
+      "issues": "Google indexes the homepage as \"Home | Mysite\" and the Contact Us page as \"Contact Us | Mysite\" - Wix's untouched default, confirmed on both of the pages a new customer is most likely to click first. Neither listing mentions Central Auto Service Center or Albany, despite the shop having been in business on Central Ave for over 10 years with a strong reputation for honest, fairly-priced repair work.",
+      "opportunity": "Rewriting the indexed homepage and Contact Us page titles to lead with Central Auto Service Center plus Albany, NY is a same-day fix that puts a decade-plus of trusted repair work in front of the local searches the shop should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-08-01-central-auto-service-center.html",
+      "email_subject": "Your homepage and contact page are both titled \"Mysite\" on Google",
+      "email_body": "Hi there,\n\nI was looking into auto repair shops around Albany and came across Central Auto Service Center - over 10 years on Central Ave and a reputation for honest, fair pricing is exactly what people search for. I checked how the site shows up on Google though, and both your homepage and your Contact Us page are indexed under Wix's untouched default, \"Mysite.\" Neither one mentions Central Auto Service or Albany anywhere.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-01-central-auto-service-center.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured over a decade of honest repair work deserved a search listing with your actual name on it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "centralautoservicesllc@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "VNG Hair Salon",
+      "website": "https://vnghairsalon.wixsite.com/mysite",
+      "industry": "Hair Salon (Cincinnati, OH)",
+      "issues": "Google indexes the homepage as \"HOME | Mysite\", the Contact Us page as \"CONTACT US | Mysite\", and the Services page as \"SERVICES | Mysite\" - three separate pages all carrying Wix's untouched default, confirmed across independent searches. None of the three mention VNG Hair Salon or Cincinnati, despite the salon having built a following of 500+ on its own Facebook page.",
+      "opportunity": "Rewriting the indexed homepage, Contact Us, and Services page titles to lead with VNG Hair Salon plus Cincinnati, OH is a same-day fix that turns an already-loyal local following into searches the salon actually wins.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-08-01-vng-hair-salon.html",
+      "email_subject": "Three of your pages are titled \"Mysite\" on Google",
+      "email_body": "Hi there,\n\nI was looking into hair salons around Cincinnati and came across VNG Hair Salon - 500+ followers on Facebook says people already know and like the work. I checked how the site shows up on Google though, and three separate pages - your homepage, Contact Us, and Services - are all indexed under Wix's untouched default, \"Mysite.\" None of them mention VNG or Cincinnati anywhere.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-01-vng-hair-salon.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a salon with that kind of local following deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "vnghairsalon@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
