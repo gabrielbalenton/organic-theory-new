@@ -120,6 +120,42 @@
       "email_body": "Hi Sherri and Lisa,\n\nI was looking into pet groomers around Clyde and came across Groomers Corner - having your own self-serve dog wash room plus a retail store on-site is a real reason for people to choose you over a mobile groomer. I checked how the site shows up on Google though, and both your homepage and Contact Us page are indexed under Wix's untouched default, \"mysite.\" Neither one mentions Groomers Corner or Clyde anywhere.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-01-groomers-corner.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a salon with its own wash room deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "groomerscorner2000@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Key Auto Spa",
+      "website": "https://keyautospa134.wixsite.com/mysite",
+      "industry": "Auto Repair & Tire Shop (Hempstead, NY)",
+      "issues": "Your homepage is indexed correctly as \"Key Auto Spa,\" but the two pages a new customer is most likely to click next - Contact Us and About Us - are both still indexed under Wix's untouched default: \"Contact Us | Mysite\" and \"About Us | Mysite,\" confirmed across independent searches. Neither of those listings mentions Key Auto Spa, Hempstead, or any of the services actually offered (oil changes, tires, inspections, mufflers, 24/7 towing).",
+      "opportunity": "Rewriting the Contact Us and About Us page titles to match the homepage's Key Auto Spa branding, and adding Hempstead, NY plus the core services offered, is a same-day fix that makes the two pages most likely to close a new customer actually say who you are.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-08-01-key-auto-spa.html",
+      "email_subject": "Your Contact and About pages are titled \"Mysite\" on Google",
+      "email_body": "Hi there,\n\nI was looking into auto shops around Hempstead and came across Key Auto Spa - offering everything from oil changes and tires to mufflers and 24/7 towing under one roof is a real reason to pick you over a single-service shop. I checked how the site shows up on Google though, and while your homepage is indexed correctly as \"Key Auto Spa,\" the Contact Us and About Us pages - the two pages someone deciding whether to call you is most likely to click - are still indexed under Wix's untouched default, \"Mysite.\" Neither one mentions Key Auto Spa or Hempstead anywhere.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-01-key-auto-spa.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a shop that does this much under one roof deserved search listings that actually say so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "Keyautospa134@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Hair Spa",
+      "website": "https://hairspastyle.wixsite.com/hairspa",
+      "industry": "Hair Salon (Puget Sound area, WA - 425 area code)",
+      "issues": "Google indexes the homepage as \"Home | Hair Spa\" - no city, no neighborhood, nothing beyond the business name and the word \"Home.\" Searching specifically for this salon and working only from what's indexed, it wasn't possible to confirm which Washington city or neighborhood it's actually in - the phone number's 425 area code is the only location signal available anywhere in search.",
+      "opportunity": "Adding the salon's city and neighborhood to the homepage title and meta description is a same-day fix that turns a generic, un-locatable listing into one that can actually compete for local \"hair salon near me\" searches in its own area.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-08-01-hair-spa.html",
+      "email_subject": "I couldn't tell what city your salon is in from Google",
+      "email_body": "Hi there,\n\nI was searching for hair salons in the Seattle/Eastside area and came across Hair Spa. I checked how the site shows up on Google though, and the homepage is indexed as \"Home | Hair Spa\" - no city, no neighborhood, nothing beyond the name. I actually couldn't pin down which Washington city you're in from what's indexed - the 425 area code on your phone number was the only clue I could find. If I can't place you from a direct search, customers searching \"hair salon near me\" probably can't either.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-01-hair-spa.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a salon offering coloring, special-occasion styling, and perms deserved a listing that actually says where to find it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "hairspastyle@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "LP Cleaning Services",
+      "website": "https://lpcleaningservices1.wixsite.com/mysite",
+      "industry": "Domestic & Commercial Cleaning (Bury, Greater Manchester, UK)",
+      "issues": "Google indexes the Contact page as \"CONTACT | Mysite\" and the About Me page as \"ABOUT ME | Mysite\" - Wix's untouched default, confirmed on both of the pages a prospective customer is most likely to check before booking. Neither page mentions LP Cleaning Services, Lorna, or Bury/Greater Manchester anywhere, despite those being exactly the terms a local customer would search.",
+      "opportunity": "Rewriting the Contact and About Me page titles to lead with LP Cleaning Services plus Bury, Greater Manchester is a same-day fix that puts the business name and service area in front of the local searches it should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-08-01-lp-cleaning-services.html",
+      "email_subject": "Your Contact and About Me pages are titled \"Mysite\" on Google",
+      "email_body": "Hi Lorna,\n\nI was looking into cleaning services around Bury and came across LP Cleaning Services. I checked how the site shows up on Google though, and both your Contact page and About Me page - the two pages someone deciding whether to book you is most likely to check - are indexed under Wix's untouched default, \"Mysite.\" Neither one mentions LP Cleaning Services, your name, or Bury anywhere.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-01-lp-cleaning-services.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a business run under your own name deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "lornapower131@btinternet.com",
+      "sent_automatically": false
     }
   ]
 }
