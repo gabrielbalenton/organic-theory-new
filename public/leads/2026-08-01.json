@@ -1,0 +1,29 @@
+{
+  "date": "2026-08-01",
+  "leads": [
+    {
+      "business_name": "Bill's Mobile",
+      "website": "https://billsmobile7718.wixsite.com/mysite",
+      "industry": "Mobile Auto & Heavy Equipment Repair (Georgetown, CO)",
+      "issues": "The only page Google has indexed for this site is the homepage, and it's titled \"HOME | Mysite\" — \"Mysite\" is the unrenamed default Wix site name, confirmed across independent searches for the business. Bill's Mobile doesn't appear anywhere in its own top search listing, and since the title never got past the Wix default, there's no mention of Georgetown, Clear Creek County, or mobile/roadside repair either — no local search signal at all for a business built entirely on service-area calls.",
+      "opportunity": "Renaming the Wix site from \"Mysite\" to \"Bill's Mobile\" and rewriting the homepage title to lead with the business name and Georgetown, CO is a same-day fix that puts 38 years of experience and a five-star Yelp record back into the business's own search listing.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-08-01-bills-mobile.html",
+      "email_subject": "Your homepage is titled \"HOME | Mysite\" on Google",
+      "email_body": "Hi Bill,\n\nI was looking into mobile mechanics around Georgetown and came across Bill's Mobile - 38 years turning wrenches and a five-star record on Yelp is real proof of the work. I checked how the site shows up on Google though, and the only page indexed is the homepage, titled \"HOME | Mysite.\" \"Mysite\" is the placeholder name Wix gives every new site, and it looks like it was never swapped out for Bill's Mobile, so your name doesn't show up anywhere in the listing - and neither does Georgetown or Clear Creek County.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-01-bills-mobile.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought four decades of hands-on experience deserved a search listing with your actual name on it.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "billsmobile7718@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Brown's Carpet Cleaning",
+      "website": "https://brownscarpetcleani8.wixsite.com/mysite",
+      "industry": "Carpet & Upholstery Cleaning (Siler City, NC)",
+      "issues": "The homepage is correctly titled \"Brown's Carpet Cleaning Siler City, NC\" in Google's index, but the Cleaning Services page — one click deeper — is indexed as \"Cleaning Services | mysite,\" the leftover unrenamed Wix default, confirmed via two independent searches. The rename only reached the homepage, so the business shows up under two different names depending on which page a searcher lands on, which undercuts the consistent, trustworthy brand a business operating since 1987 has actually earned.",
+      "opportunity": "Rewriting the Cleaning Services page title to match the homepage's Brown's Carpet Cleaning branding is a same-day fix that makes nearly four decades of local reputation show up consistently across every indexed page.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-08-01-browns-carpet-cleaning.html",
+      "email_subject": "Your Cleaning Services page is titled \"mysite\" on Google",
+      "email_body": "Hi there,\n\nI was looking into carpet cleaners around Siler City and came across Brown's Carpet Cleaning - family-owned since 1987 is the kind of track record that's hard to fake. I checked how the site shows up on Google though, and while your homepage is titled correctly as Brown's Carpet Cleaning, the Cleaning Services page one click deeper is indexed as \"Cleaning Services | mysite\" - \"mysite\" is the placeholder Wix left behind, and it looks like the rename never reached that page. Right now someone clicking around your own site sees two different business names depending on which page they land on.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-01-browns-carpet-cleaning.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought 37 years in Chatham County deserved a consistent name on every page.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "brownscarpetcleaning@yahoo.com",
+      "sent_automatically": false
+    }
+  ]
+}
