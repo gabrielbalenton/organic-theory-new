@@ -72,6 +72,30 @@
       "email_body": "Hi there,\n\nI was looking into home bakeries around Whitehorse and came across Home Sweet Home Baking - being a weekly regular at the Fireweed Community Market and local craft fairs is real, earned local presence. I checked how the site shows up on Google though, and the homepage is indexed as \"Home | mysite\" - Wix's default, never-changed title - with nothing about baking, Whitehorse, the market, or your catering anywhere in it.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-01-home-sweet-home-baking.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a market regular this consistent deserved a homepage that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "homesweethome.baking@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Kim Spa 804",
+      "website": "https://kimspa804.wixsite.com/mysite",
+      "industry": "Massage Therapy (Richardson, TX)",
+      "issues": "Google indexes the homepage as \"HOME | mysite\" and the Contact page as \"CONTACT | mysite\" - Wix's untouched default, confirmed on both of the pages a new client is most likely to click first. Neither page mentions Richardson, TX, or the specific massage services offered (full body, deep tissue, foot massage), so local \"massage near me\" searches have nothing on the listing to match against.",
+      "opportunity": "Rewriting the indexed homepage and Contact page titles to lead with Kim Spa 804 plus Richardson, TX and the core services offered is a same-day fix that puts a business open seven days a week in front of the local searches it should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-08-01-kim-spa-804.html",
+      "email_subject": "Your homepage and contact page are both titled \"mysite\"",
+      "email_body": "Hi there,\n\nI was looking into massage spots around Richardson and came across Kim Spa 804 - being open seven days a week, 10am to 10pm, is a real commitment to being available when people need it. I checked how the site shows up on Google though, and both your homepage and Contact page are indexed under Wix's untouched default, \"mysite.\" Neither mentions Richardson or the specific services you offer, so a \"massage near me\" search in Richardson has nothing to match you against.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-01-kim-spa-804.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a spa open that many hours a week deserved a listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "Kimspa804@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Hydro Kleen Pressure Washing",
+      "website": "https://hydrokleenpressure.wixsite.com/mysite",
+      "industry": "Exterior Pressure Washing (Hickory, KY)",
+      "issues": "The Google-indexed homepage title reads only \"Home | Hydro Kleen\" - the business name made it in, but nothing else did. No mention of Hickory, Kentucky, or any of the specific services offered (house washing, roof cleaning, concrete cleaning, fence washing, gutter cleaning). The site also still lives on Wix's shared, never-renamed address (hydrokleenpressure.wixsite.com/mysite) instead of a domain of its own.",
+      "opportunity": "Rewriting the indexed title to lead with Hydro Kleen Pressure Washing plus Hickory, KY and its core services, and moving off the shared wixsite.com/mysite subdomain onto a real domain, is a same-day fix that puts the business in front of the local \"pressure washing near me\" searches it should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-08-01-hydro-kleen-pressure-washing.html",
+      "email_subject": "Your homepage only says \"Hydro Kleen\" - nothing else",
+      "email_body": "Hey there,\n\nI was looking into pressure washing around Hickory and came across Hydro Kleen. I checked how the site shows up on Google though, and the homepage title is just \"Home | Hydro Kleen\" - your name made it in, but nothing about Hickory, Kentucky, or the services you actually offer (house washing, roof cleaning, concrete, fence, gutters) shows up anywhere in it. The site's also still sitting on Wix's shared, never-renamed wixsite.com/mysite address.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-01-hydro-kleen-pressure-washing.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a full-service crew like yours deserved a listing that actually says what you do and where.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "hydrokleenpressurewashingllc@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
