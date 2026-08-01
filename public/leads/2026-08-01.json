@@ -108,6 +108,18 @@
       "email_body": "Hi Allison and David,\n\nI was looking into electricians around Austin and came across Hart Electrical Services - a licensed master electrician with 15+ years and a business you've run since 2018 is real, earned trust. I checked how the site shows up on Google though, and the only page indexed is the homepage, titled \"Home | Mysite.\" \"Mysite\" is the placeholder name Wix gives every new site, and it looks like it was never swapped out for Hart Electrical, so your name doesn't show up anywhere in the listing - and neither does Manchaca or Austin.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-01-hart-electrical-services.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured 15+ years of licensed electrical work deserved a search listing with your actual name on it.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "hartelectricalservices@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Groomers Corner",
+      "website": "https://groomerscorner2000.wixsite.com/mysite",
+      "industry": "Dog & Cat Grooming (Clyde, OH)",
+      "issues": "Google indexes both the homepage and the Contact Us page under Wix's untouched default title \"mysite\" - \"Home | mysite\" and \"Contact us | mysite\" respectively, confirmed on both of the pages a new customer is most likely to click first. Neither page mentions Groomers Corner, Clyde, or Ohio anywhere, despite the salon having its own self-serve dog wash room and retail store - a real local differentiator that isn't showing up in search at all.",
+      "opportunity": "Rewriting the indexed homepage and Contact Us page titles to lead with Groomers Corner plus Clyde, OH is a same-day fix that puts a full-service grooming salon with its own self-serve wash room in front of the local searches it should already be winning.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-08-01-groomers-corner.html",
+      "email_subject": "Your homepage and Contact page are both titled \"mysite\"",
+      "email_body": "Hi Sherri and Lisa,\n\nI was looking into pet groomers around Clyde and came across Groomers Corner - having your own self-serve dog wash room plus a retail store on-site is a real reason for people to choose you over a mobile groomer. I checked how the site shows up on Google though, and both your homepage and Contact Us page are indexed under Wix's untouched default, \"mysite.\" Neither one mentions Groomers Corner or Clyde anywhere.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-01-groomers-corner.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just figured a salon with its own wash room deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "groomerscorner2000@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
