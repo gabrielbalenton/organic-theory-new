@@ -120,6 +120,30 @@
       "email_body": "Hi there,\n\nI was looking into barbershops around Willard and came across The Fade Barbershop - you've clearly put work into the site, with separate Locations and Booking pages already set up. I checked how the homepage shows up on Google though, and it's indexed as \"HOME | Mysite.\" \"Mysite\" is the placeholder name every new Wix site ships with, and it looks like the homepage itself never got renamed, so your own name doesn't show up on the one result most people actually click. Willard, MO isn't mentioned in the title either.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-02-the-fade-barbershop.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a shop with a real booking page deserved a homepage that says who you are.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "thefadebarber@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "Brows by Britny",
+      "website": "https://browsbybritny.wixsite.com/mysite",
+      "industry": "Brow & Lash Studio (Auburn, CA)",
+      "issues": "Both pages of the site Google has indexed - the homepage and the Contact page - still carry Wix's unrenamed default title. The homepage is indexed as \"H O M E | Mysite\" and the Contact page as \"C O N T A C T | Mysite\", confirmed via independent search of site:browsbybritny.wixsite.com. Between the only two pages Google has of this site, neither one shows the business name \"Brows by Britny\" or the city Auburn.",
+      "opportunity": "Renaming both indexed page titles to lead with \"Brows by Britny\" and \"Auburn, CA\" is a same-day fix in the Wix site settings that puts the studio's own name on the search results people actually click.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-08-02-brows-by-britny.html",
+      "email_subject": "Both your indexed pages still say \"Mysite\" on Google",
+      "email_body": "Hi there,\n\nI came across Brows by Britny looking into brow and lash studios around Auburn. I checked how your site shows up on Google, and both pages it has indexed - the homepage and the Contact page - are still titled with Wix's placeholder \"Mysite,\" never renamed. So right now neither of the two results Google actually shows for your site says \"Brows by Britny\" or \"Auburn.\"\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-02-brows-by-britny.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a studio with real booking set up deserved search results that actually say who you are.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "browsbybritny@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "The Wizard Food Truck",
+      "website": "https://thewizardfoodtruck.wixsite.com/mysite",
+      "industry": "Food Truck (Rochester, MI)",
+      "issues": "The two pages Google has indexed for this site - the online-ordering Menu page and the My Account page - both still carry Wix's unrenamed default title (\"Menu | Mysite\" and \"My Account | Mysite\"), confirmed via independent search of site:thewizardfoodtruck.wixsite.com. The Menu page is the truck's highest-intent page - the one people land on to actually order - and it doesn't mention \"The Wizard Food Truck\" or Rochester anywhere in its title.",
+      "opportunity": "Renaming the indexed Menu and Account page titles to lead with \"The Wizard Food Truck\" and \"Rochester, MI\" is a same-day fix that puts the truck's own name on the exact result hungry searchers click.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-08-02-the-wizard-food-truck.html",
+      "email_subject": "Your online-ordering menu page is titled \"Mysite\" on Google",
+      "email_body": "Hi there,\n\nI came across The Wizard Food Truck looking into food trucks around Rochester. You've clearly done real work setting up online ordering, but I checked how that Menu page shows up on Google and it's still indexed as \"Menu | Mysite\" - Wix's default that never got renamed. Same story on your My Account page. Between the two pages Google actually has of your site, neither says \"The Wizard Food Truck\" or names Rochester.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-02-the-wizard-food-truck.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a truck with real online ordering deserved a menu page that says who you are.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "thewizardfoodtruck@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
