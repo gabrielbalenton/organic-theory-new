@@ -144,6 +144,30 @@
       "email_body": "Hi there,\n\nI came across The Wizard Food Truck looking into food trucks around Rochester. You've clearly done real work setting up online ordering, but I checked how that Menu page shows up on Google and it's still indexed as \"Menu | Mysite\" - Wix's default that never got renamed. Same story on your My Account page. Between the two pages Google actually has of your site, neither says \"The Wizard Food Truck\" or names Rochester.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-02-the-wizard-food-truck.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought a truck with real online ordering deserved a menu page that says who you are.\n\nGabriel Balenton | Organic Theory Founder",
       "contact_email": "thewizardfoodtruck@gmail.com",
       "sent_automatically": false
+    },
+    {
+      "business_name": "V-Tec Electric Co.",
+      "website": "https://vtecelectricco.wixsite.com/mysite",
+      "industry": "Residential Electrical Services (Seattle & Snohomish/King County, WA)",
+      "issues": "Google indexes the homepage as \"HOME | Mysite\" - the unrenamed default Wix site name, confirmed via independent search for the same URL. V-Tec Electric Co. is run personally by Victor and serves Seattle, Arlington, Bothell, Everett, and the broader Snohomish and King County area, and none of that coverage or the business's own name reaches the title Google actually shows a searcher.",
+      "opportunity": "Renaming the Wix site from \"Mysite\" to \"V-Tec Electric Co.\" and rewriting the homepage title to name Seattle and the Snohomish/King County service area is a same-day fix that puts the electrician's real coverage back into the search listing.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-08-02-v-tec-electric-co.html",
+      "email_subject": "Your homepage is titled \"HOME | Mysite\" on Google",
+      "email_body": "Hi there,\n\nI was looking into electricians around Seattle and came across V-Tec Electric Co. - covering Seattle, Arlington, Bothell, Everett, and the rest of Snohomish and King County is real range for one person to run personally. I checked how the site shows up on Google though, and the homepage is indexed as \"HOME | Mysite.\" \"Mysite\" is the placeholder name every new Wix site ships with, and it looks like it was never swapped out for V-Tec Electric Co., so your name doesn't show up anywhere in the listing - and neither does the area you actually serve.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-02-v-tec-electric-co.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought that much service area deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "vtecelectricco@gmail.com",
+      "sent_automatically": false
+    },
+    {
+      "business_name": "Treated Lawn Care",
+      "website": "https://treatedlawncare.wixsite.com/mysite",
+      "industry": "Residential & Commercial Lawn Care (Central Texas)",
+      "issues": "Google indexes the homepage as \"Home | My Site\" - the unrenamed default Wix site name, confirmed via independent search for the same URL. Treated Lawn Care has built a reputation as the go-to lawn care service in the Central Texas area for both residential and commercial properties, and neither the business's name nor its service area reaches the title Google actually shows a searcher.",
+      "opportunity": "Renaming the Wix site from \"My Site\" to \"Treated Lawn Care\" and rewriting the homepage title to name the Central Texas service area is a same-day fix that puts the crew's own reputation back into its search listing.",
+      "funnel_html": "https://organic-theory.vercel.app/leads/funnels/2026-08-02-treated-lawn-care.html",
+      "email_subject": "Your homepage is titled \"Home | My Site\" on Google",
+      "email_body": "Hi there,\n\nI was looking into lawn care services around Central Texas and came across Treated Lawn Care - being the go-to lawn care team in the area, for both residential and commercial properties, is a real reputation to have built. I checked how the site shows up on Google though, and the homepage is indexed as \"Home | My Site.\" \"My Site\" is the placeholder name every new Wix site ships with, and it looks like it was never swapped out for Treated Lawn Care, so your name doesn't show up anywhere in the listing - and neither does Central Texas.\n\nI put together a page showing what I'd fix: https://organic-theory.vercel.app/leads/funnels/2026-08-02-treated-lawn-care.html\n\nMore on how I work at https://organic-theory.vercel.app\n\nNo pressure at all, just thought that kind of reputation deserved a search listing that actually says so.\n\nGabriel Balenton | Organic Theory Founder",
+      "contact_email": "treatedlawncare@gmail.com",
+      "sent_automatically": false
     }
   ]
 }
