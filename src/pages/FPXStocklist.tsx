@@ -212,40 +212,26 @@ function saveHistory(entries: HistoryEntry[]) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
 }
 
-// Adds the FPX email-preferences footer to every generated Brevo email.
-// The {{ update_profile }} placeholder is resolved by Brevo for each recipient
-// and opens the update-profile form selected in the campaign settings.
-function addEmailPreferencesFooter(html: string): string {
-  const footer = `
-<!-- FPX EMAIL PREFERENCES FOOTER -->
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;background-color:#f5f5f5;">
-  <tr>
-    <td align="center" style="padding:0;">
-      <table role="presentation" width="620" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:620px;background-color:#040E0E;">
-        <tr>
-          <td style="background-color:#040E0E;padding:22px 36px;text-align:center;border-top:3px solid #53C396;">
-            <p style="margin:0 0 10px;font-family:'Open Sans',Arial,sans-serif;font-size:11px;line-height:1.6;color:#AAB6B1;">
-              FPX &nbsp;|&nbsp; Forest Products Exchange, New Zealand
-            </p>
-            <p style="margin:0;font-family:'Open Sans',Arial,sans-serif;font-size:11px;line-height:1.6;">
-              <a href="https://fpx.nz" style="color:#ffffff;text-decoration:none;">fpx.nz</a>
-              <span style="color:#75817C;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
-              <a href="{{ update_profile }}" style="color:#53C396;text-decoration:underline;font-weight:600;">Manage email preferences or unsubscribe</a>
-            </p>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>`;
+// Adds the Brevo preference link inside the template's existing white footer.
+// The {{ update_profile }} placeholder is resolved uniquely for each recipient.
+function addEmailPreferencesLink(html: string): string {
+  const marker = '<!-- FPX EMAIL PREFERENCES LINK -->';
+  if (html.includes(marker)) return html;
 
-  if (html.includes('<!-- FPX EMAIL PREFERENCES FOOTER -->')) return html;
+  const footerText = 'forest products exchange, new zealand';
+  const footerTextIndex = html.toLowerCase().lastIndexOf(footerText);
+  if (footerTextIndex === -1) return html;
 
-  if (/<\/body>/i.test(html)) {
-    return html.replace(/<\/body>/i, `${footer}\n</body>`);
-  }
+  const paragraphEndIndex = html.indexOf('</p>', footerTextIndex);
+  if (paragraphEndIndex === -1) return html;
 
-  return `${html}\n${footer}`;
+  const preferencesLink = `<br>
+                ${marker}
+                <a href="{{ update_profile }}" style="display:inline-block;margin-top:12px;color:#777777;font-family:'Open Sans',Arial,sans-serif;font-size:11px;font-weight:600;line-height:1.5;text-decoration:underline;">
+                  Manage email preferences or unsubscribe
+                </a>`;
+
+  return `${html.slice(0, paragraphEndIndex)}${preferencesLink}${html.slice(paragraphEndIndex)}`;
 }
 
 // ── styles (black / white / grey only, no framework) ──
@@ -428,7 +414,7 @@ export default function FPXStocklist() {
   }
 
   function handleGenerate() {
-    const html = addEmailPreferencesFooter(
+    const html = addEmailPreferencesLink(
       renderFpxTemplate(weekLabel, slots.green, slots.blue, slots.orange),
     );
     setGeneratedHtml(html);
