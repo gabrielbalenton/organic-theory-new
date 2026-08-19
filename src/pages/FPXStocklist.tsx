@@ -212,6 +212,42 @@ function saveHistory(entries: HistoryEntry[]) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
 }
 
+// Adds the FPX email-preferences footer to every generated Brevo email.
+// The {{ update_profile }} placeholder is resolved by Brevo for each recipient
+// and opens the update-profile form selected in the campaign settings.
+function addEmailPreferencesFooter(html: string): string {
+  const footer = `
+<!-- FPX EMAIL PREFERENCES FOOTER -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%;background-color:#f5f5f5;">
+  <tr>
+    <td align="center" style="padding:0;">
+      <table role="presentation" width="620" cellpadding="0" cellspacing="0" border="0" style="width:100%;max-width:620px;background-color:#040E0E;">
+        <tr>
+          <td style="background-color:#040E0E;padding:22px 36px;text-align:center;border-top:3px solid #53C396;">
+            <p style="margin:0 0 10px;font-family:'Open Sans',Arial,sans-serif;font-size:11px;line-height:1.6;color:#AAB6B1;">
+              FPX &nbsp;|&nbsp; Forest Products Exchange, New Zealand
+            </p>
+            <p style="margin:0;font-family:'Open Sans',Arial,sans-serif;font-size:11px;line-height:1.6;">
+              <a href="https://fpx.nz" style="color:#ffffff;text-decoration:none;">fpx.nz</a>
+              <span style="color:#75817C;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+              <a href="{{ update_profile }}" style="color:#53C396;text-decoration:underline;font-weight:600;">Manage email preferences or unsubscribe</a>
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>`;
+
+  if (html.includes('<!-- FPX EMAIL PREFERENCES FOOTER -->')) return html;
+
+  if (/<\/body>/i.test(html)) {
+    return html.replace(/<\/body>/i, `${footer}\n</body>`);
+  }
+
+  return `${html}\n${footer}`;
+}
+
 // ── styles (black / white / grey only, no framework) ──
 const s = {
   page: { minHeight: '100vh', background: '#ffffff', color: '#000000', fontFamily: "'Helvetica Neue', Arial, sans-serif" } as const,
@@ -392,7 +428,9 @@ export default function FPXStocklist() {
   }
 
   function handleGenerate() {
-    const html = renderFpxTemplate(weekLabel, slots.green, slots.blue, slots.orange);
+    const html = addEmailPreferencesFooter(
+      renderFpxTemplate(weekLabel, slots.green, slots.blue, slots.orange),
+    );
     setGeneratedHtml(html);
     setCopyLabel('Copy to Clipboard');
     setOutputView('code');
