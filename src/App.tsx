@@ -20,7 +20,7 @@ const About = lazy(() => import('./pages/About'));
 const Start = lazy(() => import('./pages/Start'));
 const Pipeline = lazy(() => import('./pages/Pipeline'));
 const Pitch = lazy(() => import('./pages/Pitch'));
-const FPXStocklist = lazy(() => import('./pages/FPXStocklist'));
+const FPXStocklist = lazy(() => import('./pages/FPXStocklistWorkspace'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 const PageLoader = () => <div className="min-h-screen bg-[#09090B]" />;
