@@ -21,6 +21,7 @@ const Start = lazy(() => import('./pages/Start'));
 const Pipeline = lazy(() => import('./pages/Pipeline'));
 const Pitch = lazy(() => import('./pages/Pitch'));
 const FPXStocklist = lazy(() => import('./pages/FPXStocklist'));
+const FPXStocklistBeta = lazy(() => import('./pages/FPXStocklistBeta'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 const PageLoader = () => <div className="min-h-screen bg-[#09090B]" />;
@@ -53,6 +54,7 @@ export default function App() {
           <Route path="/courses/:courseId/learn" element={<CoursePlayer />} />
           <Route path="/pitch/:slug" element={<Pitch />} />
           <Route path="/fpx/stocklist" element={<FPXStocklist />} />
+          <Route path="/fpx/stocklist-beta" element={<FPXStocklistBeta />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
