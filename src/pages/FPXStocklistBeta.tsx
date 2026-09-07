@@ -19,6 +19,7 @@ type Candidate = {
   available: number;
   categories: string[];
   url: string;
+  imageUrl: string;
   source: string;
 };
 
@@ -45,6 +46,7 @@ const CURRENT_RECOMMENDATIONS: Candidate[] = [
     available: 5,
     categories: ['Structural (Stress Graded)', 'Internal Framing'],
     url: 'https://app.fpx.nz/listing-details?recordId=recdrMHARaWqP1UrG',
+    imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1788753600000/_FbuTwtljpYbVHk4057L6w/33XEsdUoNTd-kgPloZTyfvr7bd-Pg_jx_7VaBPM8N9fJC8G2jzP7Cot5w5d9ThdDanDyBOl3ksd9NBMrHwS62xxBheP_9OusRIMk397tW4vcRLAlbM7Axg5hb7RqPgvd1PtYgd5UjHalmis4O_Igtw/BaMbb1HUOc_AuYZTUhYdoLRPSLv1IU5oDdVEW3AM8sg',
     source: 'Packet Deals',
   },
   {
@@ -55,6 +57,7 @@ const CURRENT_RECOMMENDATIONS: Candidate[] = [
     available: 17,
     categories: ['Structural (Stress Graded)', 'Internal Framing'],
     url: 'https://app.fpx.nz/listing-details?recordId=recB7zY5Y3eURxjPy',
+    imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1788753600000/b3eRNxeRYnwVpC1V5He_uw/FMQP5gIdQwmflHyDC1ZfevlMXIdUawGLRayuwH39hFsl7j4DU9EBAeptUl-8LoytEc_tPQkImSIhCVYfOG2_26EZY66WN1hVTjk19sxremf0yDfzw3XehnMME1s7N9dCojUyCzkzeCnduoxkRefxYw/Q7XJqvH6d7QzqVmNomyKS0CMdLCMhRxG1YRUZOpaGQo',
     source: 'Bulk Deals',
   },
   {
@@ -65,6 +68,7 @@ const CURRENT_RECOMMENDATIONS: Candidate[] = [
     available: 4,
     categories: ['Outdoor'],
     url: 'https://app.fpx.nz/listing-details?recordId=rechwFB9LOWmiDxdE',
+    imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1788753600000/NMkrJii-yZ4KN8ntML9xCg/5WcpLT_sC0P0pLgN2L4H-IQwAfI_CJG4U-8J6dC3GsZMIbgU5-clFaMNLwH6GfdSPliFTPD-7T4Oi8cnEHPygaOpQvqdri9GmTd0mGZvXrQ3-idOiaWVUB57qehXQvoj_VDP5-ah27-3pqfxNGuD_Q/rzmhjNNvJsNTtH3dwXk2wY3gnrWvjd7bySOib71gQd0',
     source: 'Selling Fast',
   },
 ];
@@ -126,7 +130,7 @@ function candidateToSlot(candidate: Candidate): SlotFields {
   return {
     name: candidate.name,
     url: candidate.url,
-    imageUrl: '',
+    imageUrl: candidate.imageUrl,
     size: parsed.size,
     grade: parsed.grade,
     treatment: parsed.treatment,
@@ -134,7 +138,7 @@ function candidateToSlot(candidate: Candidate): SlotFields {
     profile: parsed.profile,
     pcs: '',
     minOrder: `${candidate.moq}x Packet${candidate.moq === 1 ? '' : 's'}`,
-    availability: `${candidate.available} Packet${candidate.available === 1 ? '' : 's'}`,
+    availability: `${candidate.available}x Packet${candidate.available === 1 ? '' : 's'}`,
     dispatch: 'Dispatches in 1-3 days',
     category: candidate.categories.join(', '),
     savingsPct: candidate.discountPct.toFixed(2),
@@ -280,7 +284,7 @@ export default function FPXStocklistBeta() {
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, fontSize: 12, marginBottom: 14 }}>
                       <div><strong>Discount</strong><br />{item.discountPct.toFixed(2)}%</div>
                       <div><strong>MOQ</strong><br />{item.moq}</div>
-                      <div><strong>Available</strong><br />{item.available}</div>
+                      <div><strong>Available</strong><br />{item.available}x Packets</div>
                       <div><strong>Source</strong><br />{item.source}</div>
                     </div>
                     {([
