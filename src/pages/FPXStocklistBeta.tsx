@@ -20,6 +20,7 @@ type Candidate = {
   categories: string[];
   url: string;
   imageUrl: string;
+  price: string;
   source: string;
 };
 
@@ -44,9 +45,10 @@ const CURRENT_RECOMMENDATIONS: Candidate[] = [
     discountPct: 36.507936507936506,
     moq: 1,
     available: 5,
-    categories: ['Structural (Stress Graded)', 'Internal Framing'],
-    url: 'https://app.fpx.nz/listing-details?recordId=recdrMHARaWqP1UrG',
+    categories: ['Stress Graded Timber', 'Internal Framing', 'Treated Timber'],
+    url: 'https://app.fpx.nz/products-details?recordId=reck5Iu0QOHNujERO',
     imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1788753600000/_FbuTwtljpYbVHk4057L6w/33XEsdUoNTd-kgPloZTyfvr7bd-Pg_jx_7VaBPM8N9fJC8G2jzP7Cot5w5d9ThdDanDyBOl3ksd9NBMrHwS62xxBheP_9OusRIMk397tW4vcRLAlbM7Axg5hb7RqPgvd1PtYgd5UjHalmis4O_Igtw/BaMbb1HUOc_AuYZTUhYdoLRPSLv1IU5oDdVEW3AM8sg',
+    price: '$660/M3 ($9.90/LM)',
     source: 'Packet Deals',
   },
   {
@@ -55,9 +57,10 @@ const CURRENT_RECOMMENDATIONS: Candidate[] = [
     discountPct: 26.94610778443114,
     moq: 4,
     available: 17,
-    categories: ['Structural (Stress Graded)', 'Internal Framing'],
-    url: 'https://app.fpx.nz/listing-details?recordId=recB7zY5Y3eURxjPy',
+    categories: ['Stress Graded Timber', 'Internal Framing', 'Treated Timber'],
+    url: 'https://app.fpx.nz/products-details?recordId=rechqRdpgamG6uPWp',
     imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1788753600000/b3eRNxeRYnwVpC1V5He_uw/FMQP5gIdQwmflHyDC1ZfevlMXIdUawGLRayuwH39hFsl7j4DU9EBAeptUl-8LoytEc_tPQkImSIhCVYfOG2_26EZY66WN1hVTjk19sxremf0yDfzw3XehnMME1s7N9dCojUyCzkzeCnduoxkRefxYw/Q7XJqvH6d7QzqVmNomyKS0CMdLCMhRxG1YRUZOpaGQo',
+    price: '$671/M3 ($6.71/LM)',
     source: 'Bulk Deals',
   },
   {
@@ -66,9 +69,10 @@ const CURRENT_RECOMMENDATIONS: Candidate[] = [
     discountPct: 23.076923076923077,
     moq: 1,
     available: 4,
-    categories: ['Outdoor'],
-    url: 'https://app.fpx.nz/listing-details?recordId=rechwFB9LOWmiDxdE',
+    categories: ['Outdoor', 'Treated Timber'],
+    url: 'https://app.fpx.nz/products-details?recordId=recZT1wJlKohtcVdV',
     imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1788753600000/NMkrJii-yZ4KN8ntML9xCg/5WcpLT_sC0P0pLgN2L4H-IQwAfI_CJG4U-8J6dC3GsZMIbgU5-clFaMNLwH6GfdSPliFTPD-7T4Oi8cnEHPygaOpQvqdri9GmTd0mGZvXrQ3-idOiaWVUB57qehXQvoj_VDP5-ah27-3pqfxNGuD_Q/rzmhjNNvJsNTtH3dwXk2wY3gnrWvjd7bySOib71gQd0',
+    price: '$605/M3 ($1.51/LM)',
     source: 'Selling Fast',
   },
 ];
@@ -141,8 +145,8 @@ function candidateToSlot(candidate: Candidate): SlotFields {
     availability: `${candidate.available}x Packet${candidate.available === 1 ? '' : 's'}`,
     dispatch: 'Dispatches in 1-3 days',
     category: candidate.categories.join(', '),
-    savingsPct: candidate.discountPct.toFixed(2),
-    price: '',
+    savingsPct: candidate.discountPct.toFixed(1),
+    price: candidate.price,
     length: parsed.length,
     qtyAvailable: String(candidate.available),
     minOrderQty: String(candidate.moq),
@@ -220,6 +224,11 @@ export default function FPXStocklistBeta() {
   }
 
   function generateHtml() {
+    const missingPcs = (['green', 'blue', 'orange'] as SlotKey[]).filter((slot) => !slotDrafts[slot].pcs.trim());
+    if (missingPcs.length) {
+      window.alert(`Enter pcs per pack for: ${missingPcs.join(', ')}. This is the only Week 10 field that must be checked manually.`);
+      return;
+    }
     const raw = renderFpxTemplate(weekLabel, slotDrafts.green, slotDrafts.blue, slotDrafts.orange);
     const html = addEmailPreferencesLink(patchCampaignCtas(raw));
     setGeneratedHtml(html);
@@ -243,7 +252,7 @@ export default function FPXStocklistBeta() {
             <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: 1.2, textTransform: 'uppercase', color: '#666' }}>FPX Weekly Stocklist</div>
             <h1 style={{ margin: '6px 0 8px', fontSize: 30 }}>Week 10 Recommendation Test</h1>
             <p style={{ margin: 0, maxWidth: 780, lineHeight: 1.6, color: '#555' }}>
-              Manual test only. This page reads your existing history but never writes to or overwrites it. Recommendations load only when you press the button.
+              Uses the same approved email template as Week 9. This page reads your history but does not overwrite it.
             </p>
           </div>
           <a href="/fpx/stocklist" style={{ background: '#111', color: '#fff', padding: '10px 16px', textDecoration: 'none', fontWeight: 700, whiteSpace: 'nowrap' }}>Current Generator</a>
@@ -282,29 +291,29 @@ export default function FPXStocklistBeta() {
                     <div style={{ fontSize: 12, fontWeight: 800, textTransform: 'uppercase' }}>{slotLabel[item.slot]}</div>
                     <h2 style={{ fontSize: 17, lineHeight: 1.35, margin: '14px 0 10px' }}>{item.name}</h2>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8, fontSize: 12, marginBottom: 14 }}>
-                      <div><strong>Discount</strong><br />{item.discountPct.toFixed(2)}%</div>
+                      <div><strong>Discount</strong><br />{item.discountPct.toFixed(1)}%</div>
                       <div><strong>MOQ</strong><br />{item.moq}</div>
                       <div><strong>Available</strong><br />{item.available}x Packets</div>
                       <div><strong>Source</strong><br />{item.source}</div>
                     </div>
                     {([
                       ['size', 'Size'], ['grade', 'Grade'], ['treatment', 'Treatment'], ['condition', 'Condition'],
-                      ['profile', 'Profile'], ['length', 'Length'], ['category', 'Category'], ['pcs', 'Pcs per pack'],
-                      ['dispatch', 'Dispatch'], ['imageUrl', 'Image URL'],
+                      ['profile', 'Profile'], ['length', 'Length'], ['category', 'Category'], ['price', 'Price'],
+                      ['pcs', 'Pcs per pack — CHECK THIS'], ['dispatch', 'Dispatch'], ['imageUrl', 'Image URL'],
                     ] as Array<[keyof SlotFields, string]>).map(([field, label]) => (
-                      <label key={field} style={{ display: 'block', marginTop: 8, fontSize: 11, fontWeight: 700, color: '#555' }}>
+                      <label key={field} style={{ display: 'block', marginTop: 8, fontSize: 11, fontWeight: 700, color: field === 'pcs' ? '#b45309' : '#555' }}>
                         {label}
-                        <input value={draft[field]} onChange={(e) => updateSlot(item.slot, field, e.target.value)} style={{ display: 'block', width: '100%', boxSizing: 'border-box', marginTop: 3, padding: '7px 8px', border: '1px solid #bbb', fontSize: 12 }} />
+                        <input value={draft[field]} onChange={(e) => updateSlot(item.slot, field, e.target.value)} style={{ display: 'block', width: '100%', boxSizing: 'border-box', marginTop: 3, padding: '7px 8px', border: field === 'pcs' ? '2px solid #d97706' : '1px solid #bbb', fontSize: 12 }} />
                       </label>
                     ))}
-                    <a href={item.url} target="_blank" rel="noreferrer" style={{ display: 'inline-block', marginTop: 14, color: '#111', fontWeight: 800, fontSize: 12 }}>Open FPX Listing ↗</a>
+                    <a href={item.url} target="_blank" rel="noreferrer" style={{ display: 'inline-block', marginTop: 14, color: '#111', fontWeight: 800, fontSize: 12 }}>Open FPX Product ↗</a>
                   </div>
                 );
               })}
             </div>
 
             <div style={{ marginTop: 22, display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-              <button onClick={generateHtml} style={{ background: '#111', color: '#fff', border: '1px solid #111', padding: '11px 18px', fontWeight: 800 }}>Generate Existing Brevo HTML</button>
+              <button onClick={generateHtml} style={{ background: '#111', color: '#fff', border: '1px solid #111', padding: '11px 18px', fontWeight: 800 }}>Generate Approved Brevo HTML</button>
               {generatedHtml && (
                 <>
                   <button onClick={copyHtml} style={{ background: '#fff', color: '#111', border: '1px solid #111', padding: '11px 18px', fontWeight: 800 }}>{copyLabel}</button>
@@ -320,7 +329,7 @@ export default function FPXStocklistBeta() {
         )}
 
         <div style={{ background: '#fff8dc', border: '1px solid #d6b85a', padding: 16, marginTop: 20, fontSize: 13, lineHeight: 1.55 }}>
-          <strong>Test safeguards:</strong> no history writes, no automatic loading, no Airtable runtime credential required, and the generated HTML uses the existing FPX email template. The top “View All Listings” and bottom “Browse All” CTAs are changed in the copied HTML to {CTA_URL}.
+          <strong>Send safeguard:</strong> the Week 9 approved HTML layout is retained. Week 10 product links, Pieces Photo images, price, MOQ, availability, discount, categories and specifications are prefilled. Only pcs per pack must be checked manually. The top “View All Listings” and bottom “Browse All” CTAs use {CTA_URL}.
         </div>
       </div>
     </div>
