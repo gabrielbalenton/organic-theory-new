@@ -1,99 +1,22 @@
 import { useMemo, useState } from 'react';
 import { renderFpxTemplate, type SlotFields } from '../data/fpxStocklistTemplate';
+import {
+  categoriesOverlap,
+  exactCooldownKeys,
+  hasSentWeek,
+  isOnExactCooldown,
+  parseWeek,
+  selectWeeklyRecommendations,
+  type Candidate,
+  type HistoryEntry,
+  type SlotKey,
+} from '../data/fpxRecommendationEngine';
+import { BASELINE_HISTORY, CURRENT_OFFERS, WEEK_10_CANDIDATES } from '../data/fpxWeek10Data';
 
 const STORAGE_KEY = 'fpx-stocklist-history';
 const CTA_URL = 'https://app.fpx.nz/shop#available-stock';
 
-type SlotKey = 'green' | 'blue' | 'orange';
 type Tab = 'compose' | 'history';
-type HistoryEntry = {
-  id?: string;
-  weekLabel: string;
-  dateSubmitted?: string;
-  green?: { name?: string; url?: string };
-  blue?: { name?: string; url?: string };
-  orange?: { name?: string; url?: string };
-  html?: string;
-};
-type Candidate = {
-  slot: SlotKey;
-  name: string;
-  productId: string;
-  discountPct: number;
-  moq: number;
-  available: number;
-  primaryCategory: string;
-  categories: string[];
-  url: string;
-  imageUrl: string;
-  price: string;
-  source: string;
-};
-
-const BASELINE_HISTORY: HistoryEntry[] = [
-  { weekLabel: 'Week 9', dateSubmitted: '2026-08-31T08:27:01', green: { name: '300x50 (290x45) SG8 H1.2 Kiln Dried Machine Gauged (5.400m)' }, blue: { name: '150x50 (140x45) SG10 H3.2 Kiln Dried Machine Gauged (5.400m)' }, orange: { name: '50x25 Merch H3.2 Treated Wet Dressed 4 Sides (3.600m)' } },
-  { weekLabel: 'Week 8', dateSubmitted: '2026-08-24T07:11:05', green: { name: '100x50 (90x45) SG10 H3.2 Kiln Dried Machine Gauged (4.200m)' }, blue: { name: '100x50 2Frame H4 Treated Wet Rough Sawn (4.800m)' }, orange: { name: '150x50 (140x45) SG8 H1.2 Kiln Dried Machine Gauged (3.600m)' } },
-  { weekLabel: 'Week 7', dateSubmitted: '2026-08-17T08:17:49', green: { name: '100x50 (90x45) SG12 H3.2 Kiln Dried Machine Gauged (6.000m)' }, blue: { name: '150x50 (140x45) SG8 H3.2 Treated Wet Machine Gauged (5.400m)' }, orange: { name: '100x40 Merch H3.2 Treated Wet GripTread (3.600m)' } },
-  { weekLabel: 'Week 6', dateSubmitted: '2026-08-10T08:01:12', green: { name: '50x25 Merch H3.2 Treated Wet Dressed 4 Sides (3.600m)' }, blue: { name: '200x50 (190x45) SG8 H1.2 Kiln Dried Machine Gauged (5.400m)' }, orange: { name: '100x25 Merch H3.2 Treated Wet Dressed 4 Sides (3.600m)' } },
-  { weekLabel: 'Week 5', dateSubmitted: '2026-08-03T07:29:28', green: { name: '300x50 (290x45) SG8 H1.2 Kiln Dried Machine Gauged (4.200m)' }, blue: { name: '200x50 2Frame H4 Treated Wet Tongue & Groove (5.400m)' }, orange: { name: '100x50 (90x45) SG10 H3.2 Kiln Dried Machine Gauged (3.600m)' } },
-  { weekLabel: 'Week 4', dateSubmitted: '2026-07-28T07:27:11', green: { name: '100x25 Merch H3.2 Treated Wet Dressed 4 Sides (4.200m)' }, blue: { name: '200x50 (190x45) SG8 H1.2 Kiln Dried Machine Gauged (6.000m)' }, orange: { name: '150x50 2Frame H4 Treated Wet TGV (5.400m)' } },
-  { weekLabel: 'Week 3', dateSubmitted: '2026-07-20T10:15:44', green: { name: '100x50 (90x45) SG12 H3.2 Kiln Dried Machine Gauged (6.000m)' }, blue: { name: '150x50 (140x45) SG8 H1.2 Kiln Dried Machine Gauged (4.200m)' }, orange: { name: '100x25 Merch H3.2 Treated Wet Dressed 4 Sides (3.600m)' } },
-  { weekLabel: 'Week 2', dateSubmitted: '2026-07-14T15:41:53', green: { name: '50x25 Merch H3.2 Treated Wet Dressed 4 Sides (4.200m)' }, blue: { name: '150x50 (140x45) SG10 H3.2 Kiln Dried Machine Gauged (5.400m)' }, orange: { name: '75x50 (70x45) SG8 H3.2 Kiln Dried Machine Gauged' } },
-  { weekLabel: 'Week 1', dateSubmitted: '2026-07-14T15:41:53', green: { name: '300x50 (290x45) SG8 H1.2 Kiln Dried Machine Gauged (4.800m)' }, blue: { name: '200x50 (190x45) SG8 H1.2 Kiln Dried Machine Gauged (5.400m)' }, orange: { name: '150x50 (140x45) SG12 H3.2 Kiln Dried Machine Gauged (5.400m)' } },
-];
-
-// Week 10 selection based on current FPX-backed listing data.
-// George rules:
-// - Green / Blue / Orange must use different primary product categories.
-// - Selling Fast cannot repeat an FPX product already used by either Offer slot.
-// - Exact length-specific 2-week cooldown remains unchanged.
-const RECOMMENDATIONS: Candidate[] = [
-  {
-    slot: 'green',
-    name: '300x50 (290x45) SG8 H1.2 Kiln Dried Machine Gauged (4.200m)',
-    productId: 'reck5Iu0QOHNujERO',
-    discountPct: 36.507936507936506,
-    moq: 1,
-    available: 5,
-    primaryCategory: 'Structural (Stress Graded)',
-    categories: ['Structural (Stress Graded)', 'Internal Framing'],
-    url: 'https://app.fpx.nz/listing-details?recordId=recdrMHARaWqP1UrG',
-    imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1788753600000/_FbuTwtljpYbVHk4057L6w/33XEsdUoNTd-kgPloZTyfvr7bd-Pg_jx_7VaBPM8N9fJC8G2jzP7Cot5w5d9ThdDanDyBOl3ksd9NBMrHwS62xxBheP_9OusRIMk397tW4vcRLAlbM7Axg5hb7RqPgvd1PtYgd5UjHalmis4O_Igtw/BaMbb1HUOc_AuYZTUhYdoLRPSLv1IU5oDdVEW3AM8sg',
-    price: '$660/M3 ($9.90/LM)',
-    source: 'Packet Deals',
-  },
-  {
-    slot: 'blue',
-    name: '200x50 2Frame H4 Treated Wet Tongue & Groove (4.800m)',
-    productId: 'recGgdFiUK04RUf2c',
-    discountPct: 23.77952755905512,
-    moq: 2,
-    available: 45,
-    primaryCategory: 'Retaining',
-    categories: ['Retaining'],
-    url: 'https://app.fpx.nz/listing-details?recordId=rec429fznsKgup8Ob',
-    imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1788753600000/MMghF7fO59HCww8yS5rgVA/CFFao8_5xx79PPAtRM-UKRS8EzFgHNtyuEpEUlzKe_8iu3qcA4VqYn6ddYwuVMxqydGnOYh4BIaVGtZ3OA0p1RFMfGMPO_tlN7P25eAtfHJOtYYtqBsrGHsA3rz6Q3156nVyGLx1eu-FQV5IW-_z8Q/xbEG_zZujITcqPmnmJT2M6ygNEnWjMa0SNqnNlTLY7A',
-    price: '$532.40/M3 ($5.32/LM)',
-    source: 'Bulk Deals',
-  },
-  {
-    slot: 'orange',
-    name: '100x25 Merch H3.2 Treated Wet Dressed 4 Sides (3.600m)',
-    productId: 'recZT1wJlKohtcVdV',
-    discountPct: 23.076923076923077,
-    moq: 1,
-    available: 4,
-    primaryCategory: 'Outdoor',
-    categories: ['Outdoor'],
-    url: 'https://app.fpx.nz/listing-details?recordId=rechwFB9LOWmiDxdE',
-    imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1788753600000/NMkrJii-yZ4KN8ntML9xCg/5WcpLT_sC0P0pLgN2L4H-IQwAfI_CJG4U-8J6dC3GsZMIbgU5-clFaMNLwH6GfdSPliFTPD-7T4Oi8cnEHPygaOpQvqdri9GmTd0mGZvXrQ3-idOiaWVUB57qehXQvoj_VDP5-ah27-3pqfxNGuD_Q/rzmhjNNvJsNTtH3dwXk2wY3gnrWvjd7bySOib71gQd0',
-    price: '$605/M3 ($1.51/LM)',
-    source: 'Selling Fast',
-  },
-];
-
-function parseWeek(label: string) { const m = label.match(/(\d+)/); return m ? Number(m[1]) : null; }
-function norm(s: string) { return s.trim().replace(/\s+/g, ' ').toLowerCase(); }
 function loadHistory(): HistoryEntry[] {
   try { const raw = localStorage.getItem(STORAGE_KEY); const parsed = raw ? JSON.parse(raw) : []; return Array.isArray(parsed) && parsed.length ? parsed : BASELINE_HISTORY; }
   catch { return BASELINE_HISTORY; }
@@ -113,7 +36,7 @@ function parseName(name: string) {
 }
 function emptySlot(): SlotFields { return { name:'',url:'',imageUrl:'',size:'',grade:'',treatment:'',condition:'',profile:'',pcs:'',minOrder:'',availability:'',dispatch:'',category:'',savingsPct:'',price:'',length:'',qtyAvailable:'',minOrderQty:'' }; }
 function candidateToSlot(c: Candidate): SlotFields {
-  const p = parseName(c.name); return { name:c.name,url:c.url,imageUrl:c.imageUrl,size:p.size,grade:p.grade,treatment:p.treatment,condition:p.condition,profile:p.profile,pcs:'',minOrder:`${c.moq}x Packet${c.moq===1?'':'s'}`,availability:`${c.available}x Packet${c.available===1?'':'s'}`,dispatch:'',category:c.categories.join(', '),savingsPct:c.discountPct.toFixed(1),price:c.price,length:p.length,qtyAvailable:String(c.available),minOrderQty:String(c.moq) };
+  const p = parseName(c.name); return { name:c.name,url:c.productUrl,imageUrl:c.imageUrl,size:p.size,grade:p.grade,treatment:p.treatment,condition:p.condition,profile:p.profile,pcs:String(c.pcsPerPack),minOrder:`${c.moq}x Packet${c.moq===1?'':'s'}`,availability:`${c.available}x Packet${c.available===1?'':'s'}`,dispatch:c.dispatch||'',category:c.categories.join(', '),savingsPct:c.discountPct.toFixed(1),price:c.price,length:p.length,qtyAvailable:String(c.available),minOrderQty:String(c.moq) };
 }
 function addPreferences(html: string) {
   if (html.includes('<!-- FPX EMAIL PREFERENCES LINK -->')) return html;
@@ -127,13 +50,11 @@ function patchCtas(html: string) {
     .replace(/href="https:\/\/app\.fpx\.nz\/"([^>]*>View All Listings)/, `href="${CTA_URL}"$1`)
     .replace(/href="https:\/\/app\.fpx\.nz\/"([^>]*>Browse All)/, `href="${CTA_URL}"$1`);
 }
-function georgeRuleViolations(candidates: Candidate[]) {
+function currentWeekViolations(candidates: Candidate[]) {
   const violations: string[] = [];
-  const categories = candidates.map(c=>c.primaryCategory.trim().toLowerCase());
-  if(new Set(categories).size!==candidates.length) violations.push('All three featured products must use different primary categories.');
-  const sellingFast=candidates.find(c=>c.slot==='orange');
-  const offers=candidates.filter(c=>c.slot!=='orange');
-  if(sellingFast&&offers.some(c=>c.productId===sellingFast.productId)) violations.push('Selling Fast repeats an FPX product already used in the Offer slots.');
+  for(let i=0;i<candidates.length;i+=1) for(let j=i+1;j<candidates.length;j+=1) {
+    if(categoriesOverlap(candidates[i],candidates[j])) violations.push(`${candidates[i].slot} and ${candidates[j].slot} share a category.`);
+  }
   return violations;
 }
 
@@ -150,25 +71,36 @@ export default function FPXStocklistLive() {
   const [html,setHtml]=useState('');
   const [view,setView]=useState<'code'|'preview'>('preview');
   const [copy,setCopy]=useState('Copy HTML');
+  const [selected,setSelected]=useState<Partial<Record<SlotKey,Candidate>>>({});
+  const [sentMessage,setSentMessage]=useState('');
 
-  const blocked = useMemo(()=>{
-    const out=new Set<string>(); const w=parseWeek(weekLabel);
-    history.forEach(h=>{ const hw=parseWeek(h.weekLabel); if(w===null||hw===null||![1,2].includes(w-hw)) return; [h.green?.name,h.blue?.name,h.orange?.name].forEach(n=>n&&out.add(norm(n))); });
-    return out;
-  },[history,weekLabel]);
-  const conflicts=RECOMMENDATIONS.filter(r=>blocked.has(norm(r.name)));
-  const georgeConflicts=georgeRuleViolations(RECOMMENDATIONS);
-  const loadingBlocked=conflicts.length>0||georgeConflicts.length>0;
+  const recommendations=useMemo(()=>selectWeeklyRecommendations(WEEK_10_CANDIDATES,CURRENT_OFFERS,history,weekLabel),[history,weekLabel]);
+  const recommendationList=(['green','blue','orange'] as SlotKey[]).map(key=>recommendations[key]).filter((c):c is Candidate=>Boolean(c));
+  const cooldown=useMemo(()=>exactCooldownKeys(history,weekLabel),[history,weekLabel]);
+  const conflicts=WEEK_10_CANDIDATES.filter(candidate=>isOnExactCooldown(candidate,cooldown));
+  const ruleConflicts=currentWeekViolations(recommendationList);
+  const loadingBlocked=recommendationList.length!==3||ruleConflicts.length>0;
 
-  function loadRecommendations(){ if(loadingBlocked)return; setSlots({green:candidateToSlot(RECOMMENDATIONS[0]),blue:candidateToSlot(RECOMMENDATIONS[1]),orange:candidateToSlot(RECOMMENDATIONS[2])}); setLoaded(true); setHtml(''); }
+  function loadRecommendations(){
+    if(loadingBlocked||!recommendations.green||!recommendations.blue||!recommendations.orange)return;
+    setSelected(recommendations);
+    setSlots({green:candidateToSlot(recommendations.green),blue:candidateToSlot(recommendations.blue),orange:candidateToSlot(recommendations.orange)});
+    setLoaded(true); setHtml(''); setSentMessage('');
+  }
   function update(slot:SlotKey,field:keyof SlotFields,value:string){ setSlots(p=>({...p,[slot]:{...p[slot],[field]:value}})); }
   function generate(){
     const missing=(['green','blue','orange'] as SlotKey[]).filter(k=>!slots[k].pcs.trim());
     if(missing.length){ alert(`Enter pcs per pack for ${missing.join(', ')} before generating. Check the live FPX listing first.`); return; }
-    if(history.some(h=>h.weekLabel.trim().toLowerCase()===weekLabel.trim().toLowerCase())){ if(!confirm(`${weekLabel} already exists in history. Generate without adding a duplicate history entry?`)){return;} const generated=addPreferences(patchCtas(renderFpxTemplate(weekLabel,slots.green,slots.blue,slots.orange))); setHtml(generated); setView('preview'); return; }
     const generated=addPreferences(patchCtas(renderFpxTemplate(weekLabel,slots.green,slots.blue,slots.orange)));
-    const entry:HistoryEntry={id:String(Date.now()),weekLabel,dateSubmitted:new Date().toISOString(),green:{name:slots.green.name,url:slots.green.url},blue:{name:slots.blue.name,url:slots.blue.url},orange:{name:slots.orange.name,url:slots.orange.url},html:generated};
-    const next=[entry,...history]; setHistory(next); saveHistory(next); setHtml(generated); setView('preview');
+    setHtml(generated); setView('preview'); setSentMessage('');
+  }
+  function markWeekSent(){
+    if(!html){ alert('Generate the final HTML before marking the week as sent.'); return; }
+    if(hasSentWeek(history,weekLabel)){ alert(`${weekLabel} has already been marked as sent.`); return; }
+    if(!selected.green||!selected.blue||!selected.orange){ alert('Load recommendations before marking the week as sent.'); return; }
+    const historySlot=(key:SlotKey)=>({name:slots[key].name,stockLineId:selected[key]!.stockLineId,productId:selected[key]!.productId,categories:selected[key]!.categories,url:selected[key]!.productUrl});
+    const entry:HistoryEntry={id:String(Date.now()),weekLabel,dateSubmitted:new Date().toISOString(),green:historySlot('green'),blue:historySlot('blue'),orange:historySlot('orange'),html};
+    const next=[entry,...history]; setHistory(next); saveHistory(next); setSentMessage(`${weekLabel} marked as sent. Cooldown history committed.`);
   }
   function copyHtml(){ navigator.clipboard.writeText(html).then(()=>{setCopy('Copied!');setTimeout(()=>setCopy('Copy HTML'),1200);}); }
 
@@ -180,20 +112,21 @@ export default function FPXStocklistLive() {
         <label style={{display:'block',fontSize:11,fontWeight:800,textTransform:'uppercase',marginBottom:5}}>Week</label>
         <input value={weekLabel} onChange={e=>setWeekLabel(e.target.value)} style={{padding:'8px 10px',border:'1px solid #999',fontSize:14,width:150}} />
         <button onClick={loadRecommendations} disabled={loadingBlocked} style={{marginLeft:12,padding:'10px 16px',background:loadingBlocked?'#aaa':'#111',color:'#fff',border:'1px solid #111',fontWeight:800,cursor:'pointer'}}>Load This Week's Recommendations</button>
-        <span style={{marginLeft:10,fontSize:12,color:'#666'}}>Different categories + no Selling Fast / Offer product duplication + 2-week cooldown.</span>
-        {conflicts.length>0&&<div style={{marginTop:12,padding:10,border:'1px solid #d97706',background:'#fff7e6',fontSize:12}}><b>Cooldown conflict:</b> {conflicts.map(c=>c.name).join(' | ')}</div>}
-        {georgeConflicts.length>0&&<div style={{marginTop:12,padding:10,border:'1px solid #b91c1c',background:'#fee2e2',fontSize:12}}><b>George-rule conflict:</b> {georgeConflicts.join(' ')}</div>}
+        <span style={{marginLeft:10,fontSize:12,color:'#666'}}>Exact stock-line cooldown · all-category separation · Offers priority for Selling Fast.</span>
+        {conflicts.length>0&&<div style={{marginTop:12,padding:10,border:'1px solid #d97706',background:'#fff7e6',fontSize:12}}><b>Excluded by exact 2-week cooldown:</b> {conflicts.map(c=>c.name).join(' | ')}</div>}
+        {ruleConflicts.length>0&&<div style={{marginTop:12,padding:10,border:'1px solid #b91c1c',background:'#fee2e2',fontSize:12}}><b>Current-week rule conflict:</b> {ruleConflicts.join(' ')}</div>}
       </section>
       {loaded&&<>
-        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(320px,1fr))',gap:16}}>{RECOMMENDATIONS.map(c=>{const d=slots[c.slot];return <section key={c.slot} style={{border:'1px solid #ddd',borderLeft:`6px solid ${border[c.slot]}`,padding:16}}>
+        <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(320px,1fr))',gap:16}}>{recommendationList.map(c=>{const d=slots[c.slot];return <section key={c.slot} style={{border:'1px solid #ddd',borderLeft:`6px solid ${border[c.slot]}`,padding:16}}>
           <div style={{fontSize:11,fontWeight:800,textTransform:'uppercase'}}>{slotNames[c.slot]}</div><h2 style={{fontSize:16,lineHeight:1.35}}>{c.name}</h2>
-          <div style={{fontSize:12,lineHeight:1.6,marginBottom:12}}><b>{c.discountPct.toFixed(1)}% off</b> · MOQ {c.moq} · {c.available}x Packets available · {c.source}<br/><b>Primary category:</b> {c.primaryCategory}</div>
-          {([['size','Size'],['grade','Grade'],['treatment','Treatment'],['condition','Condition'],['profile','Profile'],['length','Length'],['category','Category'],['price','Price'],['pcs','Pcs per pack — CHECK LIVE FPX'],['dispatch','Dispatch — CHECK LIVE FPX'],['imageUrl','Pieces Photo URL'],['url','Exact FPX Listing URL']] as Array<[keyof SlotFields,string]>).map(([f,l])=><label key={f} style={{display:'block',fontSize:11,fontWeight:700,color:f==='pcs'||f==='dispatch'?'#b45309':'#555',marginTop:7}}>{l}<input value={d[f]} onChange={e=>update(c.slot,f,e.target.value)} style={{display:'block',boxSizing:'border-box',width:'100%',padding:'7px 8px',marginTop:3,border:f==='pcs'||f==='dispatch'?'2px solid #d97706':'1px solid #bbb'}} /></label>)}
-          <a href={c.url} target="_blank" rel="noreferrer" style={{display:'inline-block',marginTop:12,fontSize:12,fontWeight:800,color:'#111'}}>Open exact FPX listing ↗</a>
+          <div style={{fontSize:12,lineHeight:1.6,marginBottom:12}}><b>{c.discountPct.toFixed(1)}% off</b> · MOQ {c.moq} · {c.available}x Packets available · {c.source}<br/><b>All categories:</b> {c.categories.join(', ')}<br/><b>Stock-line ID:</b> {c.stockLineId}</div>
+          {([['size','Size'],['grade','Grade'],['treatment','Treatment'],['condition','Condition'],['profile','Profile'],['length','Length'],['category','All categories'],['price','Price'],['pcs','Authoritative pcs per pack'],['dispatch','Dispatch (blank when no Leadtime)'],['imageUrl','Pieces Photo URL from linked FPX Product'],['url','Clean FPX Product URL used in email']] as Array<[keyof SlotFields,string]>).map(([f,l])=><label key={f} style={{display:'block',fontSize:11,fontWeight:700,color:'#555',marginTop:7}}>{l}<input value={d[f]} onChange={e=>update(c.slot,f,e.target.value)} style={{display:'block',boxSizing:'border-box',width:'100%',padding:'7px 8px',marginTop:3,border:'1px solid #bbb'}} /></label>)}
+          <a href={c.listingUrl} target="_blank" rel="noreferrer" style={{display:'inline-block',marginTop:12,fontSize:12,fontWeight:800,color:'#111'}}>Open exact FPX stock line ↗</a>
         </section>})}</div>
-        <div style={{display:'flex',gap:8,marginTop:18}}><button onClick={generate} style={{padding:'11px 18px',background:'#111',color:'#fff',border:'1px solid #111',fontWeight:800,cursor:'pointer'}}>Generate & Save Week</button>{html&&<><button onClick={copyHtml} style={{padding:'11px 18px',background:'#fff',border:'1px solid #111',fontWeight:800,cursor:'pointer'}}>{copy}</button><button onClick={()=>setView('preview')} style={{padding:'11px 18px',background:view==='preview'?'#111':'#fff',color:view==='preview'?'#fff':'#111',border:'1px solid #111',fontWeight:800}}>Preview</button><button onClick={()=>setView('code')} style={{padding:'11px 18px',background:view==='code'?'#111':'#fff',color:view==='code'?'#fff':'#111',border:'1px solid #111',fontWeight:800}}>Code</button></>}</div>
+        <div style={{display:'flex',gap:8,marginTop:18,flexWrap:'wrap'}}><button onClick={generate} style={{padding:'11px 18px',background:'#111',color:'#fff',border:'1px solid #111',fontWeight:800,cursor:'pointer'}}>Generate / Preview HTML</button>{html&&<><button onClick={copyHtml} style={{padding:'11px 18px',background:'#fff',border:'1px solid #111',fontWeight:800,cursor:'pointer'}}>{copy}</button><button onClick={()=>setView('preview')} style={{padding:'11px 18px',background:view==='preview'?'#111':'#fff',color:view==='preview'?'#fff':'#111',border:'1px solid #111',fontWeight:800}}>Preview</button><button onClick={()=>setView('code')} style={{padding:'11px 18px',background:view==='code'?'#111':'#fff',color:view==='code'?'#fff':'#111',border:'1px solid #111',fontWeight:800}}>Code</button><button onClick={markWeekSent} disabled={Boolean(sentMessage)} style={{padding:'11px 18px',background:sentMessage?'#aaa':'#1a8638',color:'#fff',border:'1px solid #111',fontWeight:800,cursor:sentMessage?'default':'pointer'}}>Mark Week as Sent</button></>}</div>
+        {sentMessage&&<div style={{marginTop:10,padding:10,border:'1px solid #1a8638',background:'#eef6ef',fontSize:12,fontWeight:700}}>{sentMessage}</div>}
         {html&&(view==='preview'?<iframe title="FPX email preview" srcDoc={html} style={{width:'100%',height:750,border:'1px solid #111',marginTop:12,background:'#fff'}}/>:<textarea readOnly value={html} style={{width:'100%',height:600,boxSizing:'border-box',marginTop:12,padding:12,fontFamily:'monospace',fontSize:11}}/>)}
       </>}
-    </main> : <main style={{padding:28,maxWidth:1500,margin:'0 auto'}}><h2 style={{fontSize:18}}>Stocklist History</h2><p style={{fontSize:12,color:'#666'}}>Same <code>{STORAGE_KEY}</code> data used by the previous manager. Existing entries are not replaced.</p><div style={{overflowX:'auto'}}><table style={{width:'100%',borderCollapse:'collapse',fontSize:12}}><thead><tr>{['Week','Date Submitted','Green Product','Blue Product','Orange Product','HTML'].map(h=><th key={h} style={{textAlign:'left',padding:8,borderBottom:'2px solid #111'}}>{h}</th>)}</tr></thead><tbody>{history.map((h,i)=><tr key={h.id||`${h.weekLabel}-${i}`}><td style={{padding:8,borderBottom:'1px solid #ddd',whiteSpace:'nowrap'}}>{h.weekLabel}</td><td style={{padding:8,borderBottom:'1px solid #ddd',whiteSpace:'nowrap'}}>{h.dateSubmitted?new Date(h.dateSubmitted).toLocaleString():''}</td><td style={{padding:8,borderBottom:'1px solid #ddd'}}>{h.green?.name}</td><td style={{padding:8,borderBottom:'1px solid #ddd'}}>{h.blue?.name}</td><td style={{padding:8,borderBottom:'1px solid #ddd'}}>{h.orange?.name}</td><td style={{padding:8,borderBottom:'1px solid #ddd'}}>{h.html?'Saved':'No HTML'}</td></tr>)}</tbody></table></div></main>}
+    </main> : <main style={{padding:28,maxWidth:1500,margin:'0 auto'}}><h2 style={{fontSize:18}}>Stocklist History</h2><p style={{fontSize:12,color:'#666'}}>Weeks 1–9 are preserved. New cooldown history is added only by <b>Mark Week as Sent</b>.</p><div style={{overflowX:'auto'}}><table style={{width:'100%',borderCollapse:'collapse',fontSize:12}}><thead><tr>{['Week','Date Sent','Green Product','Blue Product','Orange Product','HTML'].map(h=><th key={h} style={{textAlign:'left',padding:8,borderBottom:'2px solid #111'}}>{h}</th>)}</tr></thead><tbody>{history.map((h,i)=><tr key={h.id||`${h.weekLabel}-${i}`}><td style={{padding:8,borderBottom:'1px solid #ddd',whiteSpace:'nowrap'}}>{h.weekLabel}</td><td style={{padding:8,borderBottom:'1px solid #ddd',whiteSpace:'nowrap'}}>{h.dateSubmitted?new Date(h.dateSubmitted).toLocaleString():''}</td><td style={{padding:8,borderBottom:'1px solid #ddd'}}>{h.green?.name}</td><td style={{padding:8,borderBottom:'1px solid #ddd'}}>{h.blue?.name}</td><td style={{padding:8,borderBottom:'1px solid #ddd'}}>{h.orange?.name}</td><td style={{padding:8,borderBottom:'1px solid #ddd'}}>{h.html?'Saved':'No HTML'}</td></tr>)}</tbody></table></div></main>}
   </div>;
 }
