@@ -14,9 +14,11 @@ type HistoryEntry = {
 type Candidate = {
   slot: SlotKey;
   name: string;
+  productId: string;
   discountPct: number;
   moq: number;
   available: number;
+  primaryCategory: string;
   categories: string[];
   url: string;
   imageUrl: string;
@@ -38,39 +40,50 @@ const BASELINE_HISTORY: HistoryEntry[] = [
   { weekLabel: 'Week 1', green: { name: '300x50 (290x45) SG8 H1.2 Kiln Dried Machine Gauged (4.800m)' }, blue: { name: '200x50 (190x45) SG8 H1.2 Kiln Dried Machine Gauged (5.400m)' }, orange: { name: '150x50 (140x45) SG12 H3.2 Kiln Dried Machine Gauged (5.400m)' } },
 ];
 
+// Week 10 snapshot selected from the current FPX-backed Airtable interface pages.
+// George's rules now enforced here:
+// 1) all three featured lines must have different primary categories;
+// 2) Selling Fast cannot repeat a product already used by either Offer slot;
+// 3) exact length-specific 2-week cooldown remains in force.
 const CURRENT_RECOMMENDATIONS: Candidate[] = [
   {
     slot: 'green',
     name: '300x50 (290x45) SG8 H1.2 Kiln Dried Machine Gauged (4.200m)',
+    productId: 'reck5Iu0QOHNujERO',
     discountPct: 36.507936507936506,
     moq: 1,
     available: 5,
-    categories: ['Stress Graded Timber', 'Internal Framing', 'Treated Timber'],
-    url: 'https://app.fpx.nz/products-details?recordId=reck5Iu0QOHNujERO',
+    primaryCategory: 'Structural (Stress Graded)',
+    categories: ['Structural (Stress Graded)', 'Internal Framing'],
+    url: 'https://app.fpx.nz/listing-details?recordId=recdrMHARaWqP1UrG',
     imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1788753600000/_FbuTwtljpYbVHk4057L6w/33XEsdUoNTd-kgPloZTyfvr7bd-Pg_jx_7VaBPM8N9fJC8G2jzP7Cot5w5d9ThdDanDyBOl3ksd9NBMrHwS62xxBheP_9OusRIMk397tW4vcRLAlbM7Axg5hb7RqPgvd1PtYgd5UjHalmis4O_Igtw/BaMbb1HUOc_AuYZTUhYdoLRPSLv1IU5oDdVEW3AM8sg',
     price: '$660/M3 ($9.90/LM)',
     source: 'Packet Deals',
   },
   {
     slot: 'blue',
-    name: '200x50 (190x45) SG8 H1.2 Kiln Dried Machine Gauged (6.000m)',
-    discountPct: 26.94610778443114,
-    moq: 4,
-    available: 17,
-    categories: ['Stress Graded Timber', 'Internal Framing', 'Treated Timber'],
-    url: 'https://app.fpx.nz/products-details?recordId=rechqRdpgamG6uPWp',
-    imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1788753600000/b3eRNxeRYnwVpC1V5He_uw/FMQP5gIdQwmflHyDC1ZfevlMXIdUawGLRayuwH39hFsl7j4DU9EBAeptUl-8LoytEc_tPQkImSIhCVYfOG2_26EZY66WN1hVTjk19sxremf0yDfzw3XehnMME1s7N9dCojUyCzkzeCnduoxkRefxYw/Q7XJqvH6d7QzqVmNomyKS0CMdLCMhRxG1YRUZOpaGQo',
-    price: '$671/M3 ($6.71/LM)',
+    name: '200x50 2Frame H4 Treated Wet Tongue & Groove (4.800m)',
+    productId: 'recGgdFiUK04RUf2c',
+    discountPct: 23.77952755905512,
+    moq: 2,
+    available: 45,
+    primaryCategory: 'Retaining',
+    categories: ['Retaining'],
+    url: 'https://app.fpx.nz/listing-details?recordId=rec429fznsKgup8Ob',
+    imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1788753600000/MMghF7fO59HCww8yS5rgVA/CFFao8_5xx79PPAtRM-UKRS8EzFgHNtyuEpEUlzKe_8iu3qcA4VqYn6ddYwuVMxqydGnOYh4BIaVGtZ3OA0p1RFMfGMPO_tlN7P25eAtfHJOtYYtqBsrGHsA3rz6Q3156nVyGLx1eu-FQV5IW-_z8Q/xbEG_zZujITcqPmnmJT2M6ygNEnWjMa0SNqnNlTLY7A',
+    price: '$532.40/M3 ($5.32/LM)',
     source: 'Bulk Deals',
   },
   {
     slot: 'orange',
     name: '100x25 Merch H3.2 Treated Wet Dressed 4 Sides (3.600m)',
+    productId: 'recZT1wJlKohtcVdV',
     discountPct: 23.076923076923077,
     moq: 1,
     available: 4,
-    categories: ['Outdoor', 'Treated Timber'],
-    url: 'https://app.fpx.nz/products-details?recordId=recZT1wJlKohtcVdV',
+    primaryCategory: 'Outdoor',
+    categories: ['Outdoor'],
+    url: 'https://app.fpx.nz/listing-details?recordId=rechwFB9LOWmiDxdE',
     imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1788753600000/NMkrJii-yZ4KN8ntML9xCg/5WcpLT_sC0P0pLgN2L4H-IQwAfI_CJG4U-8J6dC3GsZMIbgU5-clFaMNLwH6GfdSPliFTPD-7T4Oi8cnEHPygaOpQvqdri9GmTd0mGZvXrQ3-idOiaWVUB57qehXQvoj_VDP5-ah27-3pqfxNGuD_Q/rzmhjNNvJsNTtH3dwXk2wY3gnrWvjd7bySOib71gQd0',
     price: '$605/M3 ($1.51/LM)',
     source: 'Selling Fast',
@@ -124,7 +137,7 @@ function parseProductName(name: string) {
 function emptySlot(): SlotFields {
   return {
     name: '', url: '', imageUrl: '', size: '', grade: '', treatment: '', condition: '', profile: '', pcs: '',
-    minOrder: '', availability: '', dispatch: 'Dispatches in 1-3 days', category: '', savingsPct: '', price: '',
+    minOrder: '', availability: '', dispatch: '', category: '', savingsPct: '', price: '',
     length: '', qtyAvailable: '', minOrderQty: '',
   };
 }
@@ -143,7 +156,7 @@ function candidateToSlot(candidate: Candidate): SlotFields {
     pcs: '',
     minOrder: `${candidate.moq}x Packet${candidate.moq === 1 ? '' : 's'}`,
     availability: `${candidate.available}x Packet${candidate.available === 1 ? '' : 's'}`,
-    dispatch: 'Dispatches in 1-3 days',
+    dispatch: '',
     category: candidate.categories.join(', '),
     savingsPct: candidate.discountPct.toFixed(1),
     price: candidate.price,
@@ -168,6 +181,21 @@ function patchCampaignCtas(html: string) {
   return html
     .replace(/href="https:\/\/app\.fpx\.nz\/"([^>]*>View All Listings)/, `href="${CTA_URL}"$1`)
     .replace(/href="https:\/\/app\.fpx\.nz\/"([^>]*>Browse All)/, `href="${CTA_URL}"$1`);
+}
+
+function georgeRuleViolations(candidates: Candidate[]) {
+  const violations: string[] = [];
+  const categories = candidates.map((candidate) => candidate.primaryCategory.trim().toLowerCase());
+  if (new Set(categories).size !== candidates.length) {
+    violations.push('All three featured products must come from different primary categories.');
+  }
+
+  const offers = candidates.filter((candidate) => candidate.slot !== 'orange');
+  const sellingFast = candidates.find((candidate) => candidate.slot === 'orange');
+  if (sellingFast && offers.some((candidate) => candidate.productId === sellingFast.productId)) {
+    violations.push('Selling Fast cannot repeat a product already featured in the Offer slots.');
+  }
+  return violations;
 }
 
 const slotStyle: Record<SlotKey, React.CSSProperties> = {
@@ -208,8 +236,11 @@ export default function FPXStocklistBeta() {
   }, [history, weekLabel]);
 
   const conflicts = CURRENT_RECOMMENDATIONS.filter((item) => blockedNames.has(normaliseProduct(item.name)));
+  const ruleViolations = georgeRuleViolations(CURRENT_RECOMMENDATIONS);
+  const loadingBlocked = conflicts.length > 0 || ruleViolations.length > 0;
 
   function loadRecommendations() {
+    if (loadingBlocked) return;
     setSlotDrafts({
       green: candidateToSlot(CURRENT_RECOMMENDATIONS[0]),
       blue: candidateToSlot(CURRENT_RECOMMENDATIONS[1]),
@@ -226,7 +257,7 @@ export default function FPXStocklistBeta() {
   function generateHtml() {
     const missingPcs = (['green', 'blue', 'orange'] as SlotKey[]).filter((slot) => !slotDrafts[slot].pcs.trim());
     if (missingPcs.length) {
-      window.alert(`Enter pcs per pack for: ${missingPcs.join(', ')}. This is the only Week 10 field that must be checked manually.`);
+      window.alert(`Enter pcs per pack for: ${missingPcs.join(', ')}. This must be checked against the live FPX listing.`);
       return;
     }
     const raw = renderFpxTemplate(weekLabel, slotDrafts.green, slotDrafts.blue, slotDrafts.orange);
@@ -250,9 +281,9 @@ export default function FPXStocklistBeta() {
         <div style={{ display: 'flex', justifyContent: 'space-between', gap: 20, alignItems: 'flex-start', marginBottom: 24 }}>
           <div>
             <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: 1.2, textTransform: 'uppercase', color: '#666' }}>FPX Weekly Stocklist</div>
-            <h1 style={{ margin: '6px 0 8px', fontSize: 30 }}>Week 10 Recommendation Test</h1>
-            <p style={{ margin: 0, maxWidth: 780, lineHeight: 1.6, color: '#555' }}>
-              Uses the same approved email template as Week 9. This page reads your history but does not overwrite it.
+            <h1 style={{ margin: '6px 0 8px', fontSize: 30 }}>Week 10 — George Rules Applied</h1>
+            <p style={{ margin: 0, maxWidth: 820, lineHeight: 1.6, color: '#555' }}>
+              Week 10 now uses three different primary categories and prevents Selling Fast from repeating a product already used by the Offer slots. The exact 2-week cooldown still applies.
             </p>
           </div>
           <a href="/fpx/stocklist" style={{ background: '#111', color: '#fff', padding: '10px 16px', textDecoration: 'none', fontWeight: 700, whiteSpace: 'nowrap' }}>Current Generator</a>
@@ -267,16 +298,24 @@ export default function FPXStocklistBeta() {
           <div style={{ marginTop: 5, fontSize: 12, color: '#666' }}>
             Strict cooldown: Week N blocks the exact length-specific product in Weeks N+1 and N+2; it is eligible again in Week N+3.
           </div>
+          <div style={{ marginTop: 5, fontSize: 12, color: '#666' }}>
+            George rule: categories must be unique across Green / Blue / Orange, and Orange must use a different FPX product from the two Offer slots.
+          </div>
         </div>
 
         <div style={{ background: '#fff', border: '1px solid #111', padding: 18, marginBottom: 20 }}>
-          <button onClick={loadRecommendations} disabled={conflicts.length > 0} style={{ background: conflicts.length ? '#aaa' : '#111', color: '#fff', border: '1px solid #111', padding: '12px 20px', fontWeight: 800 }}>
+          <button onClick={loadRecommendations} disabled={loadingBlocked} style={{ background: loadingBlocked ? '#aaa' : '#111', color: '#fff', border: '1px solid #111', padding: '12px 20px', fontWeight: 800 }}>
             Load This Week's Recommendations
           </button>
           <span style={{ marginLeft: 12, fontSize: 12, color: '#555' }}>This button does not save or alter history.</span>
           {conflicts.length > 0 && (
             <div style={{ marginTop: 12, padding: 10, background: '#fff4e5', border: '1px solid #d97706', fontSize: 12 }}>
               <strong>Cooldown conflict:</strong> {conflicts.map((c) => c.name).join(' | ')}. Loading is disabled until the snapshot is corrected.
+            </div>
+          )}
+          {ruleViolations.length > 0 && (
+            <div style={{ marginTop: 12, padding: 10, background: '#fee2e2', border: '1px solid #b91c1c', fontSize: 12 }}>
+              <strong>George-rule conflict:</strong> {ruleViolations.join(' ')}
             </div>
           )}
         </div>
@@ -295,18 +334,20 @@ export default function FPXStocklistBeta() {
                       <div><strong>MOQ</strong><br />{item.moq}</div>
                       <div><strong>Available</strong><br />{item.available}x Packets</div>
                       <div><strong>Source</strong><br />{item.source}</div>
+                      <div><strong>Primary category</strong><br />{item.primaryCategory}</div>
+                      <div><strong>FPX product ID</strong><br />{item.productId}</div>
                     </div>
                     {([
                       ['size', 'Size'], ['grade', 'Grade'], ['treatment', 'Treatment'], ['condition', 'Condition'],
                       ['profile', 'Profile'], ['length', 'Length'], ['category', 'Category'], ['price', 'Price'],
-                      ['pcs', 'Pcs per pack — CHECK THIS'], ['dispatch', 'Dispatch'], ['imageUrl', 'Image URL'],
+                      ['pcs', 'Pcs per pack — CHECK LIVE FPX'], ['dispatch', 'Dispatch — CHECK LIVE FPX'], ['imageUrl', 'Image URL'],
                     ] as Array<[keyof SlotFields, string]>).map(([field, label]) => (
-                      <label key={field} style={{ display: 'block', marginTop: 8, fontSize: 11, fontWeight: 700, color: field === 'pcs' ? '#b45309' : '#555' }}>
+                      <label key={field} style={{ display: 'block', marginTop: 8, fontSize: 11, fontWeight: 700, color: field === 'pcs' || field === 'dispatch' ? '#b45309' : '#555' }}>
                         {label}
-                        <input value={draft[field]} onChange={(e) => updateSlot(item.slot, field, e.target.value)} style={{ display: 'block', width: '100%', boxSizing: 'border-box', marginTop: 3, padding: '7px 8px', border: field === 'pcs' ? '2px solid #d97706' : '1px solid #bbb', fontSize: 12 }} />
+                        <input value={draft[field]} onChange={(e) => updateSlot(item.slot, field, e.target.value)} style={{ display: 'block', width: '100%', boxSizing: 'border-box', marginTop: 3, padding: '7px 8px', border: field === 'pcs' || field === 'dispatch' ? '2px solid #d97706' : '1px solid #bbb', fontSize: 12 }} />
                       </label>
                     ))}
-                    <a href={item.url} target="_blank" rel="noreferrer" style={{ display: 'inline-block', marginTop: 14, color: '#111', fontWeight: 800, fontSize: 12 }}>Open FPX Product ↗</a>
+                    <a href={item.url} target="_blank" rel="noreferrer" style={{ display: 'inline-block', marginTop: 14, color: '#111', fontWeight: 800, fontSize: 12 }}>Open exact FPX Listing ↗</a>
                   </div>
                 );
               })}
@@ -329,7 +370,7 @@ export default function FPXStocklistBeta() {
         )}
 
         <div style={{ background: '#fff8dc', border: '1px solid #d6b85a', padding: 16, marginTop: 20, fontSize: 13, lineHeight: 1.55 }}>
-          <strong>Send safeguard:</strong> the Week 9 approved HTML layout is retained. Week 10 product links, Pieces Photo images, price, MOQ, availability, discount, categories and specifications are prefilled. Only pcs per pack must be checked manually. The top “View All Listings” and bottom “Browse All” CTAs use {CTA_URL}.
+          <strong>Week 10 safeguard:</strong> the Week 9 approved HTML layout is retained. The selected lines are Structural (Stress Graded), Retaining and Outdoor. Selling Fast uses a different FPX product ID from both Offer slots. Exact listing links are used. Pcs per pack and dispatch are deliberately left blank until checked against the live FPX listing. The top “View All Listings” and bottom “Browse All” CTAs use {CTA_URL}.
         </div>
       </div>
     </div>
