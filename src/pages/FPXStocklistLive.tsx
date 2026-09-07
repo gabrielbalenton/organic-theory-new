@@ -16,10 +16,47 @@ import { BASELINE_HISTORY, CURRENT_OFFERS, WEEK_10_CANDIDATES } from '../data/fp
 const STORAGE_KEY = 'fpx-stocklist-history';
 const CTA_URL = 'https://app.fpx.nz/shop#available-stock';
 
+const FINAL_WEEK_10: HistoryEntry = {
+  id: 'week-10-final-2026-09-07',
+  weekLabel: 'Week 10',
+  dateSubmitted: '2026-09-07T13:44:37+08:00',
+  green: {
+    name: '300x50 (290x45) SG8 H1.2 Kiln Dried Machine Gauged (4.200m)',
+    stockLineId: 'recdrMHARaWqP1UrG',
+    productId: 'reck5Iu0QOHNujERO',
+    categories: ['Structural (Stress Graded)', 'Internal Framing'],
+    url: 'https://app.fpx.nz/products-details?recordId=reck5Iu0QOHNujERO',
+  },
+  blue: {
+    name: '200x50 2Frame H4 Treated Wet Tongue & Groove (4.800m)',
+    stockLineId: 'rec429fznsKgup8Ob',
+    productId: 'recGgdFiUK04RUf2c',
+    categories: ['Retaining'],
+    url: 'https://app.fpx.nz/products-details?recordId=recGgdFiUK04RUf2c',
+  },
+  orange: {
+    name: '50x50 (45x45) 2Frame H3.2 Treated Wet Machine Gauged (4.200m)',
+    stockLineId: 'recf6HJNc8PFv7ETZ',
+    productId: 'reczhxQn7K6RXRvHX',
+    categories: ['Pegs', 'Outdoor', 'Balustrades'],
+    url: 'https://app.fpx.nz/products-details?recordId=reczhxQn7K6RXRvHX',
+  },
+};
+
 type Tab = 'compose' | 'history';
 function loadHistory(): HistoryEntry[] {
-  try { const raw = localStorage.getItem(STORAGE_KEY); const parsed = raw ? JSON.parse(raw) : []; return Array.isArray(parsed) && parsed.length ? parsed : BASELINE_HISTORY; }
-  catch { return BASELINE_HISTORY; }
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    const parsed = raw ? JSON.parse(raw) : [];
+    const source: HistoryEntry[] = Array.isArray(parsed) && parsed.length ? parsed : BASELINE_HISTORY;
+    const withoutWeek10 = source.filter(item => item.weekLabel?.trim().toLowerCase() !== 'week 10');
+    const migrated = [FINAL_WEEK_10, ...withoutWeek10];
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(migrated));
+    return migrated;
+  }
+  catch {
+    return [FINAL_WEEK_10, ...BASELINE_HISTORY.filter(item => item.weekLabel?.trim().toLowerCase() !== 'week 10')];
+  }
 }
 function saveHistory(entries: HistoryEntry[]) { localStorage.setItem(STORAGE_KEY, JSON.stringify(entries)); }
 function parseName(name: string) {
@@ -130,6 +167,6 @@ export default function FPXStocklistLive() {
         {sentMessage&&<div style={{marginTop:10,padding:10,border:'1px solid #1a8638',background:'#eef6ef',fontSize:12,fontWeight:700}}>{sentMessage}</div>}
         {html&&(view==='preview'?<iframe title="FPX email preview" srcDoc={html} style={{width:'100%',height:750,border:'1px solid #111',marginTop:12,background:'#fff'}}/>:<textarea readOnly value={html} style={{width:'100%',height:600,boxSizing:'border-box',marginTop:12,padding:12,fontFamily:'monospace',fontSize:11}}/>)}
       </>}
-    </main> : <main style={{padding:28,maxWidth:1500,margin:'0 auto'}}><h2 style={{fontSize:18}}>Stocklist History</h2><p style={{fontSize:12,color:'#666'}}>Weeks 1–9 are preserved. New cooldown history is added only by <b>Mark Week as Sent</b>. If a week was marked prematurely, <b>Update Sent Week</b> replaces that one entry with the final version actually sent.</p><div style={{overflowX:'auto'}}><table style={{width:'100%',borderCollapse:'collapse',fontSize:12}}><thead><tr>{['Week','Date Sent','Green Product','Blue Product','Orange Product','HTML'].map(h=><th key={h} style={{textAlign:'left',padding:8,borderBottom:'2px solid #111'}}>{h}</th>)}</tr></thead><tbody>{history.map((h,i)=><tr key={h.id||`${h.weekLabel}-${i}`}><td style={{padding:8,borderBottom:'1px solid #ddd',whiteSpace:'nowrap'}}>{h.weekLabel}</td><td style={{padding:8,borderBottom:'1px solid #ddd',whiteSpace:'nowrap'}}>{h.dateSubmitted?new Date(h.dateSubmitted).toLocaleString():''}</td><td style={{padding:8,borderBottom:'1px solid #ddd'}}>{h.green?.name}</td><td style={{padding:8,borderBottom:'1px solid #ddd'}}>{h.blue?.name}</td><td style={{padding:8,borderBottom:'1px solid #ddd'}}>{h.orange?.name}</td><td style={{padding:8,borderBottom:'1px solid #ddd'}}>{h.html?'Saved':'No HTML'}</td></tr>)}</tbody></table></div></main>}
+    </main> : <main style={{padding:28,maxWidth:1500,margin:'0 auto'}}><h2 style={{fontSize:18}}>Stocklist History</h2><p style={{fontSize:12,color:'#666'}}>Weeks 1–10 are preserved. New cooldown history is added only by <b>Mark Week as Sent</b>. If a future week is marked prematurely, <b>Update Sent Week</b> can replace that one entry with the final version actually sent.</p><div style={{overflowX:'auto'}}><table style={{width:'100%',borderCollapse:'collapse',fontSize:12}}><thead><tr>{['Week','Date Sent','Green Product','Blue Product','Orange Product','HTML'].map(h=><th key={h} style={{textAlign:'left',padding:8,borderBottom:'2px solid #111'}}>{h}</th>)}</tr></thead><tbody>{history.map((h,i)=><tr key={h.id||`${h.weekLabel}-${i}`}><td style={{padding:8,borderBottom:'1px solid #ddd',whiteSpace:'nowrap'}}>{h.weekLabel}</td><td style={{padding:8,borderBottom:'1px solid #ddd',whiteSpace:'nowrap'}}>{h.dateSubmitted?new Date(h.dateSubmitted).toLocaleString():''}</td><td style={{padding:8,borderBottom:'1px solid #ddd'}}>{h.green?.name}</td><td style={{padding:8,borderBottom:'1px solid #ddd'}}>{h.blue?.name}</td><td style={{padding:8,borderBottom:'1px solid #ddd'}}>{h.orange?.name}</td><td style={{padding:8,borderBottom:'1px solid #ddd'}}>{h.html?'Saved':'No HTML'}</td></tr>)}</tbody></table></div></main>}
   </div>;
 }
