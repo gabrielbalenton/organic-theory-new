@@ -18,9 +18,11 @@ type HistoryEntry = {
 type Candidate = {
   slot: SlotKey;
   name: string;
+  productId: string;
   discountPct: number;
   moq: number;
   available: number;
+  primaryCategory: string;
   categories: string[];
   url: string;
   imageUrl: string;
@@ -40,27 +42,53 @@ const BASELINE_HISTORY: HistoryEntry[] = [
   { weekLabel: 'Week 1', dateSubmitted: '2026-07-14T15:41:53', green: { name: '300x50 (290x45) SG8 H1.2 Kiln Dried Machine Gauged (4.800m)' }, blue: { name: '200x50 (190x45) SG8 H1.2 Kiln Dried Machine Gauged (5.400m)' }, orange: { name: '150x50 (140x45) SG12 H3.2 Kiln Dried Machine Gauged (5.400m)' } },
 ];
 
+// Week 10 selection based on current FPX-backed listing data.
+// George rules:
+// - Green / Blue / Orange must use different primary product categories.
+// - Selling Fast cannot repeat an FPX product already used by either Offer slot.
+// - Exact length-specific 2-week cooldown remains unchanged.
 const RECOMMENDATIONS: Candidate[] = [
   {
-    slot: 'green', name: '300x50 (290x45) SG8 H1.2 Kiln Dried Machine Gauged (4.200m)', discountPct: 36.507936507936506,
-    moq: 1, available: 5, categories: ['Stress Graded Timber', 'Internal Framing', 'Treated Timber'],
-    url: 'https://app.fpx.nz/products-details?recordId=reck5Iu0QOHNujERO',
+    slot: 'green',
+    name: '300x50 (290x45) SG8 H1.2 Kiln Dried Machine Gauged (4.200m)',
+    productId: 'reck5Iu0QOHNujERO',
+    discountPct: 36.507936507936506,
+    moq: 1,
+    available: 5,
+    primaryCategory: 'Structural (Stress Graded)',
+    categories: ['Structural (Stress Graded)', 'Internal Framing'],
+    url: 'https://app.fpx.nz/listing-details?recordId=recdrMHARaWqP1UrG',
     imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1788753600000/_FbuTwtljpYbVHk4057L6w/33XEsdUoNTd-kgPloZTyfvr7bd-Pg_jx_7VaBPM8N9fJC8G2jzP7Cot5w5d9ThdDanDyBOl3ksd9NBMrHwS62xxBheP_9OusRIMk397tW4vcRLAlbM7Axg5hb7RqPgvd1PtYgd5UjHalmis4O_Igtw/BaMbb1HUOc_AuYZTUhYdoLRPSLv1IU5oDdVEW3AM8sg',
-    price: '$660/M3 ($9.90/LM)', source: 'Packet Deals',
+    price: '$660/M3 ($9.90/LM)',
+    source: 'Packet Deals',
   },
   {
-    slot: 'blue', name: '200x50 (190x45) SG8 H1.2 Kiln Dried Machine Gauged (6.000m)', discountPct: 26.94610778443114,
-    moq: 4, available: 17, categories: ['Stress Graded Timber', 'Internal Framing', 'Treated Timber'],
-    url: 'https://app.fpx.nz/products-details?recordId=rechqRdpgamG6uPWp',
-    imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1788753600000/b3eRNxeRYnwVpC1V5He_uw/FMQP5gIdQwmflHyDC1ZfevlMXIdUawGLRayuwH39hFsl7j4DU9EBAeptUl-8LoytEc_tPQkImSIhCVYfOG2_26EZY66WN1hVTjk19sxremf0yDfzw3XehnMME1s7N9dCojUyCzkzeCnduoxkRefxYw/Q7XJqvH6d7QzqVmNomyKS0CMdLCMhRxG1YRUZOpaGQo',
-    price: '$671/M3 ($6.71/LM)', source: 'Bulk Deals',
+    slot: 'blue',
+    name: '200x50 2Frame H4 Treated Wet Tongue & Groove (4.800m)',
+    productId: 'recGgdFiUK04RUf2c',
+    discountPct: 23.77952755905512,
+    moq: 2,
+    available: 45,
+    primaryCategory: 'Retaining',
+    categories: ['Retaining'],
+    url: 'https://app.fpx.nz/listing-details?recordId=rec429fznsKgup8Ob',
+    imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1788753600000/MMghF7fO59HCww8yS5rgVA/CFFao8_5xx79PPAtRM-UKRS8EzFgHNtyuEpEUlzKe_8iu3qcA4VqYn6ddYwuVMxqydGnOYh4BIaVGtZ3OA0p1RFMfGMPO_tlN7P25eAtfHJOtYYtqBsrGHsA3rz6Q3156nVyGLx1eu-FQV5IW-_z8Q/xbEG_zZujITcqPmnmJT2M6ygNEnWjMa0SNqnNlTLY7A',
+    price: '$532.40/M3 ($5.32/LM)',
+    source: 'Bulk Deals',
   },
   {
-    slot: 'orange', name: '100x25 Merch H3.2 Treated Wet Dressed 4 Sides (3.600m)', discountPct: 23.076923076923077,
-    moq: 1, available: 4, categories: ['Outdoor', 'Treated Timber'],
-    url: 'https://app.fpx.nz/products-details?recordId=recZT1wJlKohtcVdV',
+    slot: 'orange',
+    name: '100x25 Merch H3.2 Treated Wet Dressed 4 Sides (3.600m)',
+    productId: 'recZT1wJlKohtcVdV',
+    discountPct: 23.076923076923077,
+    moq: 1,
+    available: 4,
+    primaryCategory: 'Outdoor',
+    categories: ['Outdoor'],
+    url: 'https://app.fpx.nz/listing-details?recordId=rechwFB9LOWmiDxdE',
     imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1788753600000/NMkrJii-yZ4KN8ntML9xCg/5WcpLT_sC0P0pLgN2L4H-IQwAfI_CJG4U-8J6dC3GsZMIbgU5-clFaMNLwH6GfdSPliFTPD-7T4Oi8cnEHPygaOpQvqdri9GmTd0mGZvXrQ3-idOiaWVUB57qehXQvoj_VDP5-ah27-3pqfxNGuD_Q/rzmhjNNvJsNTtH3dwXk2wY3gnrWvjd7bySOib71gQd0',
-    price: '$605/M3 ($1.51/LM)', source: 'Selling Fast',
+    price: '$605/M3 ($1.51/LM)',
+    source: 'Selling Fast',
   },
 ];
 
@@ -83,9 +111,9 @@ function parseName(name: string) {
   for (const c of ['Kiln Dried', 'Treated Wet', 'Green Sawn', 'Green']) if (after.toLowerCase().startsWith(c.toLowerCase())) { condition = c; profile = after.slice(c.length).trim(); break; }
   return { size, grade, treatment, condition, profile, length };
 }
-function emptySlot(): SlotFields { return { name:'',url:'',imageUrl:'',size:'',grade:'',treatment:'',condition:'',profile:'',pcs:'',minOrder:'',availability:'',dispatch:'Dispatches in 1-3 days',category:'',savingsPct:'',price:'',length:'',qtyAvailable:'',minOrderQty:'' }; }
+function emptySlot(): SlotFields { return { name:'',url:'',imageUrl:'',size:'',grade:'',treatment:'',condition:'',profile:'',pcs:'',minOrder:'',availability:'',dispatch:'',category:'',savingsPct:'',price:'',length:'',qtyAvailable:'',minOrderQty:'' }; }
 function candidateToSlot(c: Candidate): SlotFields {
-  const p = parseName(c.name); return { name:c.name,url:c.url,imageUrl:c.imageUrl,size:p.size,grade:p.grade,treatment:p.treatment,condition:p.condition,profile:p.profile,pcs:'',minOrder:`${c.moq}x Packet${c.moq===1?'':'s'}`,availability:`${c.available}x Packet${c.available===1?'':'s'}`,dispatch:'Dispatches in 1-3 days',category:c.categories.join(', '),savingsPct:c.discountPct.toFixed(1),price:c.price,length:p.length,qtyAvailable:String(c.available),minOrderQty:String(c.moq) };
+  const p = parseName(c.name); return { name:c.name,url:c.url,imageUrl:c.imageUrl,size:p.size,grade:p.grade,treatment:p.treatment,condition:p.condition,profile:p.profile,pcs:'',minOrder:`${c.moq}x Packet${c.moq===1?'':'s'}`,availability:`${c.available}x Packet${c.available===1?'':'s'}`,dispatch:'',category:c.categories.join(', '),savingsPct:c.discountPct.toFixed(1),price:c.price,length:p.length,qtyAvailable:String(c.available),minOrderQty:String(c.moq) };
 }
 function addPreferences(html: string) {
   if (html.includes('<!-- FPX EMAIL PREFERENCES LINK -->')) return html;
@@ -98,6 +126,15 @@ function patchCtas(html: string) {
   return html
     .replace(/href="https:\/\/app\.fpx\.nz\/"([^>]*>View All Listings)/, `href="${CTA_URL}"$1`)
     .replace(/href="https:\/\/app\.fpx\.nz\/"([^>]*>Browse All)/, `href="${CTA_URL}"$1`);
+}
+function georgeRuleViolations(candidates: Candidate[]) {
+  const violations: string[] = [];
+  const categories = candidates.map(c=>c.primaryCategory.trim().toLowerCase());
+  if(new Set(categories).size!==candidates.length) violations.push('All three featured products must use different primary categories.');
+  const sellingFast=candidates.find(c=>c.slot==='orange');
+  const offers=candidates.filter(c=>c.slot!=='orange');
+  if(sellingFast&&offers.some(c=>c.productId===sellingFast.productId)) violations.push('Selling Fast repeats an FPX product already used in the Offer slots.');
+  return violations;
 }
 
 const slotNames: Record<SlotKey,string> = { green:'Green — Best Single-Packet Deal', blue:'Blue — Best Bulk Deal', orange:'Orange — Selling Fast' };
@@ -120,12 +157,14 @@ export default function FPXStocklistLive() {
     return out;
   },[history,weekLabel]);
   const conflicts=RECOMMENDATIONS.filter(r=>blocked.has(norm(r.name)));
+  const georgeConflicts=georgeRuleViolations(RECOMMENDATIONS);
+  const loadingBlocked=conflicts.length>0||georgeConflicts.length>0;
 
-  function loadRecommendations(){ setSlots({green:candidateToSlot(RECOMMENDATIONS[0]),blue:candidateToSlot(RECOMMENDATIONS[1]),orange:candidateToSlot(RECOMMENDATIONS[2])}); setLoaded(true); setHtml(''); }
+  function loadRecommendations(){ if(loadingBlocked)return; setSlots({green:candidateToSlot(RECOMMENDATIONS[0]),blue:candidateToSlot(RECOMMENDATIONS[1]),orange:candidateToSlot(RECOMMENDATIONS[2])}); setLoaded(true); setHtml(''); }
   function update(slot:SlotKey,field:keyof SlotFields,value:string){ setSlots(p=>({...p,[slot]:{...p[slot],[field]:value}})); }
   function generate(){
     const missing=(['green','blue','orange'] as SlotKey[]).filter(k=>!slots[k].pcs.trim());
-    if(missing.length){ alert(`Enter pcs per pack for ${missing.join(', ')} before generating.`); return; }
+    if(missing.length){ alert(`Enter pcs per pack for ${missing.join(', ')} before generating. Check the live FPX listing first.`); return; }
     if(history.some(h=>h.weekLabel.trim().toLowerCase()===weekLabel.trim().toLowerCase())){ if(!confirm(`${weekLabel} already exists in history. Generate without adding a duplicate history entry?`)){return;} const generated=addPreferences(patchCtas(renderFpxTemplate(weekLabel,slots.green,slots.blue,slots.orange))); setHtml(generated); setView('preview'); return; }
     const generated=addPreferences(patchCtas(renderFpxTemplate(weekLabel,slots.green,slots.blue,slots.orange)));
     const entry:HistoryEntry={id:String(Date.now()),weekLabel,dateSubmitted:new Date().toISOString(),green:{name:slots.green.name,url:slots.green.url},blue:{name:slots.blue.name,url:slots.blue.url},orange:{name:slots.orange.name,url:slots.orange.url},html:generated};
@@ -134,21 +173,23 @@ export default function FPXStocklistLive() {
   function copyHtml(){ navigator.clipboard.writeText(html).then(()=>{setCopy('Copied!');setTimeout(()=>setCopy('Copy HTML'),1200);}); }
 
   return <div className="use-native-cursor" style={{minHeight:'100vh',background:'#fff',color:'#111',fontFamily:"'Helvetica Neue',Arial,sans-serif"}}>
-    <header style={{padding:'20px 28px',borderBottom:'1px solid #111',display:'flex',justifyContent:'space-between',alignItems:'center'}}><strong>FPX Weekly Stocklist Manager</strong><span style={{fontSize:12,color:'#666'}}>Production</span></header>
+    <header style={{padding:'20px 28px',borderBottom:'1px solid #111',display:'flex',justifyContent:'space-between',alignItems:'center'}}><strong>FPX Weekly Stocklist Manager</strong><span style={{fontSize:12,color:'#666'}}>Production · George rules active</span></header>
     <nav style={{display:'flex',borderBottom:'1px solid #111'}}>{(['compose','history'] as Tab[]).map(t=><button key={t} onClick={()=>setTab(t)} style={{padding:'12px 22px',border:0,borderRight:'1px solid #111',background:tab===t?'#111':'#fff',color:tab===t?'#fff':'#111',fontWeight:700,cursor:'pointer',textTransform:'uppercase'}}>{t}</button>)}</nav>
     {tab==='compose' ? <main style={{padding:28,maxWidth:1300,margin:'0 auto'}}>
       <section style={{border:'1px solid #111',padding:16,marginBottom:18}}>
         <label style={{display:'block',fontSize:11,fontWeight:800,textTransform:'uppercase',marginBottom:5}}>Week</label>
         <input value={weekLabel} onChange={e=>setWeekLabel(e.target.value)} style={{padding:'8px 10px',border:'1px solid #999',fontSize:14,width:150}} />
-        <button onClick={loadRecommendations} disabled={conflicts.length>0} style={{marginLeft:12,padding:'10px 16px',background:conflicts.length?'#aaa':'#111',color:'#fff',border:'1px solid #111',fontWeight:800,cursor:'pointer'}}>Load This Week's Recommendations</button>
-        <span style={{marginLeft:10,fontSize:12,color:'#666'}}>Uses your existing history; does not overwrite it.</span>
+        <button onClick={loadRecommendations} disabled={loadingBlocked} style={{marginLeft:12,padding:'10px 16px',background:loadingBlocked?'#aaa':'#111',color:'#fff',border:'1px solid #111',fontWeight:800,cursor:'pointer'}}>Load This Week's Recommendations</button>
+        <span style={{marginLeft:10,fontSize:12,color:'#666'}}>Different categories + no Selling Fast / Offer product duplication + 2-week cooldown.</span>
         {conflicts.length>0&&<div style={{marginTop:12,padding:10,border:'1px solid #d97706',background:'#fff7e6',fontSize:12}}><b>Cooldown conflict:</b> {conflicts.map(c=>c.name).join(' | ')}</div>}
+        {georgeConflicts.length>0&&<div style={{marginTop:12,padding:10,border:'1px solid #b91c1c',background:'#fee2e2',fontSize:12}}><b>George-rule conflict:</b> {georgeConflicts.join(' ')}</div>}
       </section>
       {loaded&&<>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(320px,1fr))',gap:16}}>{RECOMMENDATIONS.map(c=>{const d=slots[c.slot];return <section key={c.slot} style={{border:'1px solid #ddd',borderLeft:`6px solid ${border[c.slot]}`,padding:16}}>
           <div style={{fontSize:11,fontWeight:800,textTransform:'uppercase'}}>{slotNames[c.slot]}</div><h2 style={{fontSize:16,lineHeight:1.35}}>{c.name}</h2>
-          <div style={{fontSize:12,lineHeight:1.6,marginBottom:12}}><b>{c.discountPct.toFixed(1)}% off</b> · MOQ {c.moq} · {c.available}x Packets available · {c.source}</div>
-          {([['size','Size'],['grade','Grade'],['treatment','Treatment'],['condition','Condition'],['profile','Profile'],['length','Length'],['category','Category'],['price','Price'],['pcs','Pcs per pack — REQUIRED'],['dispatch','Dispatch'],['imageUrl','Pieces Photo URL'],['url','FPX Product URL']] as Array<[keyof SlotFields,string]>).map(([f,l])=><label key={f} style={{display:'block',fontSize:11,fontWeight:700,color:f==='pcs'?'#b45309':'#555',marginTop:7}}>{l}<input value={d[f]} onChange={e=>update(c.slot,f,e.target.value)} style={{display:'block',boxSizing:'border-box',width:'100%',padding:'7px 8px',marginTop:3,border:f==='pcs'?'2px solid #d97706':'1px solid #bbb'}} /></label>)}
+          <div style={{fontSize:12,lineHeight:1.6,marginBottom:12}}><b>{c.discountPct.toFixed(1)}% off</b> · MOQ {c.moq} · {c.available}x Packets available · {c.source}<br/><b>Primary category:</b> {c.primaryCategory}</div>
+          {([['size','Size'],['grade','Grade'],['treatment','Treatment'],['condition','Condition'],['profile','Profile'],['length','Length'],['category','Category'],['price','Price'],['pcs','Pcs per pack — CHECK LIVE FPX'],['dispatch','Dispatch — CHECK LIVE FPX'],['imageUrl','Pieces Photo URL'],['url','Exact FPX Listing URL']] as Array<[keyof SlotFields,string]>).map(([f,l])=><label key={f} style={{display:'block',fontSize:11,fontWeight:700,color:f==='pcs'||f==='dispatch'?'#b45309':'#555',marginTop:7}}>{l}<input value={d[f]} onChange={e=>update(c.slot,f,e.target.value)} style={{display:'block',boxSizing:'border-box',width:'100%',padding:'7px 8px',marginTop:3,border:f==='pcs'||f==='dispatch'?'2px solid #d97706':'1px solid #bbb'}} /></label>)}
+          <a href={c.url} target="_blank" rel="noreferrer" style={{display:'inline-block',marginTop:12,fontSize:12,fontWeight:800,color:'#111'}}>Open exact FPX listing ↗</a>
         </section>})}</div>
         <div style={{display:'flex',gap:8,marginTop:18}}><button onClick={generate} style={{padding:'11px 18px',background:'#111',color:'#fff',border:'1px solid #111',fontWeight:800,cursor:'pointer'}}>Generate & Save Week</button>{html&&<><button onClick={copyHtml} style={{padding:'11px 18px',background:'#fff',border:'1px solid #111',fontWeight:800,cursor:'pointer'}}>{copy}</button><button onClick={()=>setView('preview')} style={{padding:'11px 18px',background:view==='preview'?'#111':'#fff',color:view==='preview'?'#fff':'#111',border:'1px solid #111',fontWeight:800}}>Preview</button><button onClick={()=>setView('code')} style={{padding:'11px 18px',background:view==='code'?'#111':'#fff',color:view==='code'?'#fff':'#111',border:'1px solid #111',fontWeight:800}}>Code</button></>}</div>
         {html&&(view==='preview'?<iframe title="FPX email preview" srcDoc={html} style={{width:'100%',height:750,border:'1px solid #111',marginTop:12,background:'#fff'}}/>:<textarea readOnly value={html} style={{width:'100%',height:600,boxSizing:'border-box',marginTop:12,padding:12,fontFamily:'monospace',fontSize:11}}/>)}
