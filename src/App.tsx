@@ -54,7 +54,7 @@ export default function App() {
           <Route path="/courses/:courseId/learn" element={<CoursePlayer />} />
           <Route path="/pitch/:slug" element={<Pitch />} />
           <Route path="/fpx/stocklist" element={<FPXStocklist />} />
-          <Route path="/fpx/stocklist-beta" element={<FPXStocklistBeta />} />
+          <Route path="/fpx/stocklist-beta" element={<div className="use-native-cursor"><FPXStocklistBeta /></div>} />
         </Routes>
       </Suspense>
     </BrowserRouter>
