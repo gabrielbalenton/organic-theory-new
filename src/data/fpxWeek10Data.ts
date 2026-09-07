@@ -23,7 +23,7 @@ function candidate(input: Omit<Candidate, 'productUrl' | 'listingUrl'>): Candida
 const greenImage = 'https://v5.airtableusercontent.com/v3/u/57/57/1788768000000/BouplrqnUIljMfoJ73m8wA/fN_Cfn577dtFxv_Wu2IuDE4OSsna-_3s6Nl978zpstGe7RbaSjGLS-FeOiUp4JyoA5r9n-7xejfajQOC0Sf9QYlCD-QfSqlHOqmVIPfyd6MTy5cq14-uvW7yWQbDIieZ-j2fB-Xsl-e36AcTo4qxHg/G9hk7EjhjYKuuFAnF6e4RkxzSPlP-ZZDjxnThpcrO68?fileId=att4gng9qtqmuK57F';
 const blueImage = 'https://v5.airtableusercontent.com/v3/u/57/57/1788768000000/shZzYbDTEhbMakmI9jCN4w/taQ93zf1DosjnSHLZAU6o3_YjjwbBxoVxmRWIEgMjhuC8Bs61X3x-9Cp3L9RsF82F4eQ11hE690grBm5jXd1gd_EAFXIqirAWJD1eG0FStvg6g5zPyWdLO1DZenNK-2ocYGayDqJvaU6MiZxoM4gOw/M1xj8qUyv79fctFgFviozDqu8WO5nVzv7H_NpNJFpSw?fileId=attDyTrdGhwO7t2FI';
 const orangeImage = 'https://v5.airtableusercontent.com/v3/u/57/57/1788768000000/9S9O5ecootiJc-m8XTmzDg/98lhJJVYPbZFzoT-T9lQGkP-QwD3XrKT3F69EnrmeeL9UeF-lHjOnjRWG-6uPi-fOmhAfG3yTxaewpPigUHF7KOTxl04QpjJfV4101X_aeldiiOxpaAmPvVTuUn-I7SXaMi4UqF2Kd09GUNzFdJJMA/_3tFgrOvEbgeQuwr-9m2-bE92mN6tbBQXfjM8xuCeKs?fileId=atti7kiJSaytXZCIe';
-const dispatch = '🚀 Dispatches in 1-3 days';
+const dispatch = 'Dispatches in 1-3 days';
 
 export const WEEK_10_CANDIDATES: Candidate[] = [
   candidate({ slot:'green', name:'300x50 (290x45) SG8 H1.2 Kiln Dried Machine Gauged (4.200m)', stockLineId:'recdrMHARaWqP1UrG', productId:'reck5Iu0QOHNujERO', discountPct:36.5079, moq:1, available:5, categories:structural, imageUrl:greenImage, price:'$660/M3 ($9.90/LM)', pcsPerPack:36, dispatch, source:'Packet Deals', characteristics:{nominalSizes:['300x50'],gaugedSize:'290x45',grade:'SG8',treatment:'H1.2',condition:'Kiln Dried',profile:'Machine Gauged'} }),
