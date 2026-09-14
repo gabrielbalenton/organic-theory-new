@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { categoriesOverlap, selectWeeklyRecommendations, type HistoryEntry } from '../src/data/fpxRecommendationEngine.ts';
+import { categoriesOverlap, exactCooldownKeys, isOnExactCooldown, selectWeeklyRecommendations, type Candidate, type HistoryEntry } from '../src/data/fpxRecommendationEngine.ts';
 import { CURRENT_OFFERS, BASELINE_HISTORY } from '../src/data/fpxWeek10Data.ts';
 import { CURRENT_STOCK_CANDIDATES } from '../src/data/fpxCurrentStockSnapshot.ts';
 
@@ -22,12 +22,12 @@ const week10: HistoryEntry = {
 
 const history = [week10, ...BASELINE_HISTORY];
 
-test('Week 11 current stock produces all three recommendations', () => {
+test('Week 11 current stock produces three genuinely different recommendations', () => {
   const selected = selectWeeklyRecommendations(CURRENT_STOCK_CANDIDATES, CURRENT_OFFERS, history, 'Week 11');
 
-  assert.equal(selected.green?.stockLineId, 'recBuG0wNBISW2itO');
-  assert.equal(selected.blue?.stockLineId, 'rec4j0C5tteNxPfif');
-  assert.equal(selected.orange?.stockLineId, 'recgmPGN70Bm6WUll');
+  assert.equal(selected.green?.stockLineId, 'recjcDyxx6VxTQUoe');
+  assert.equal(selected.blue?.stockLineId, 'recCH7KdpPLD5XKDj');
+  assert.equal(selected.orange?.stockLineId, 'rec2f7DAb0e9RL6lM');
 });
 
 test('Week 11 recommendations obey same-week category separation', () => {
@@ -40,11 +40,27 @@ test('Week 11 recommendations obey same-week category separation', () => {
   assert.equal(categoriesOverlap(selected.blue!, selected.orange!), false);
 });
 
-test('Week 10 exact stock lines remain on cooldown while replacement stock lines can qualify', () => {
-  const selected = selectWeeklyRecommendations(CURRENT_STOCK_CANDIDATES, CURRENT_OFFERS, history, 'Week 11');
-  const selectedIds = new Set([selected.green?.stockLineId, selected.blue?.stockLineId, selected.orange?.stockLineId]);
+test('relisted same visible product and length stays on cooldown even with a new Airtable stock-line ID', () => {
+  const relisted = CURRENT_STOCK_CANDIDATES.find(candidate => candidate.stockLineId === 'recBuG0wNBISW2itO')!;
+  assert.equal(isOnExactCooldown(relisted, exactCooldownKeys(history, 'Week 11')), true);
+});
 
-  assert.equal(selectedIds.has('recdrMHARaWqP1UrG'), false);
-  assert.equal(selectedIds.has('rec429fznsKgup8Ob'), false);
-  assert.equal(selectedIds.has('recf6HJNc8PFv7ETZ'), false);
+test('same product at a different length can still qualify', () => {
+  const candidate = CURRENT_STOCK_CANDIDATES.find(item => item.stockLineId === 'rec2f7DAb0e9RL6lM')! as Candidate;
+  assert.equal(isOnExactCooldown(candidate, exactCooldownKeys(history, 'Week 11')), false);
+});
+
+test('Week 9 and Week 10 visible listing names are excluded from Week 11', () => {
+  const selected = selectWeeklyRecommendations(CURRENT_STOCK_CANDIDATES, CURRENT_OFFERS, history, 'Week 11');
+  const selectedNames = new Set([selected.green?.name, selected.blue?.name, selected.orange?.name]);
+  const recentNames = new Set([
+    week10.green?.name,
+    week10.blue?.name,
+    week10.orange?.name,
+    BASELINE_HISTORY[0].green?.name,
+    BASELINE_HISTORY[0].blue?.name,
+    BASELINE_HISTORY[0].orange?.name,
+  ]);
+
+  for (const name of selectedNames) assert.equal(recentNames.has(name), false);
 });
