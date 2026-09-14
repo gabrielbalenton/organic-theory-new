@@ -93,9 +93,6 @@ export function exactCooldownKeys(history: HistoryEntry[], weekLabel: string) {
     for (const slot of [entry.green, entry.blue, entry.orange]) {
       if (!slot) continue;
       if (slot.stockLineId) ids.add(slot.stockLineId);
-      // Also retain the full length-specific listing name. Airtable can create a
-      // replacement stock-line record for the same visible product, and that must
-      // not bypass the two-week cooldown just because the record ID changed.
       if (slot.name) names.add(normalizeListingName(slot.name));
     }
   }
@@ -150,17 +147,13 @@ export function selectWeeklyRecommendations(
   const cooldown = exactCooldownKeys(history, weekLabel);
   const sortDiscount = (a: Candidate, b: Candidate) => b.discountPct - a.discountPct;
 
-  // Current Offers take precedence over every stocklist slot. A product/spec that
-  // is already represented by an offer must not also appear as Green, Blue or Orange.
   const packet = candidates
     .filter(c => c.slot === 'green' && isOrderable(c) && !isOnExactCooldown(c, cooldown) && !clashesWithCurrentOffer(c, offers))
     .sort(sortDiscount);
-  const green = packet[0];
 
   const bulk = candidates
     .filter(c => c.slot === 'blue' && isOrderable(c) && !isOnExactCooldown(c, cooldown) && !clashesWithCurrentOffer(c, offers))
     .sort(sortDiscount);
-  const blue = bulk.find(c => !green || !categoriesOverlap(green, c));
 
   const sellingFast = candidates
     .filter(c => c.slot === 'orange')
@@ -168,10 +161,24 @@ export function selectWeeklyRecommendations(
     .filter(c => !isOnExactCooldown(c, cooldown))
     .filter(c => !clashesWithCurrentOffer(c, offers))
     .sort((a, b) => b.discountPct - a.discountPct || a.available - b.available);
-  const orange = sellingFast.find(c =>
-    (!green || !categoriesOverlap(green, c)) &&
-    (!blue || !categoriesOverlap(blue, c)),
-  );
 
-  return { green, blue, orange };
+  // Choose the highest-ranked COMPLETE valid trio instead of greedily locking
+  // the top Green first. A top Green can legitimately block every Blue by
+  // category, even when a lower-ranked Green produces a valid full week.
+  for (const green of packet) {
+    for (const blue of bulk) {
+      if (categoriesOverlap(green, blue)) continue;
+      const orange = sellingFast.find(candidate =>
+        !categoriesOverlap(green, candidate) &&
+        !categoriesOverlap(blue, candidate),
+      );
+      if (orange) return { green, blue, orange };
+    }
+  }
+
+  return {
+    green: packet[0],
+    blue: undefined,
+    orange: undefined,
+  };
 }
