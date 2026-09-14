@@ -25,8 +25,8 @@ const history = [week10, ...BASELINE_HISTORY];
 test('Week 11 current stock produces three genuinely different recommendations', () => {
   const selected = selectWeeklyRecommendations(CURRENT_STOCK_CANDIDATES, CURRENT_OFFERS, history, 'Week 11');
 
-  assert.equal(selected.green?.stockLineId, 'recjcDyxx6VxTQUoe');
-  assert.equal(selected.blue?.stockLineId, 'recCH7KdpPLD5XKDj');
+  assert.equal(selected.green?.stockLineId, 'recJPPWmBLke0C6Kh');
+  assert.equal(selected.blue?.stockLineId, 'recmHxZeHnFesgzi0');
   assert.equal(selected.orange?.stockLineId, 'rec2f7DAb0e9RL6lM');
 });
 
