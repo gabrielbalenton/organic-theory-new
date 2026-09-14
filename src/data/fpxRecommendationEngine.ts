@@ -137,6 +137,10 @@ function isOrderable(candidate: Candidate) {
   return candidate.available >= candidate.moq;
 }
 
+function clashesWithCurrentOffer(candidate: Candidate, offers: Offer[]) {
+  return offers.some(offer => offerMatchesCandidate(offer, candidate));
+}
+
 export function selectWeeklyRecommendations(
   candidates: Candidate[],
   offers: Offer[],
@@ -145,11 +149,16 @@ export function selectWeeklyRecommendations(
 ) {
   const cooldown = exactCooldownKeys(history, weekLabel);
   const sortDiscount = (a: Candidate, b: Candidate) => b.discountPct - a.discountPct;
-  const packet = candidates.filter(c => c.slot === 'green' && isOrderable(c) && !isOnExactCooldown(c, cooldown)).sort(sortDiscount);
+
+  // Current Offers take precedence over every stocklist slot. A product/spec that
+  // is already represented by an offer must not also appear as Green, Blue or Orange.
+  const packet = candidates
+    .filter(c => c.slot === 'green' && isOrderable(c) && !isOnExactCooldown(c, cooldown) && !clashesWithCurrentOffer(c, offers))
+    .sort(sortDiscount);
   const green = packet[0];
 
   const bulk = candidates
-    .filter(c => c.slot === 'blue' && isOrderable(c) && !isOnExactCooldown(c, cooldown))
+    .filter(c => c.slot === 'blue' && isOrderable(c) && !isOnExactCooldown(c, cooldown) && !clashesWithCurrentOffer(c, offers))
     .sort(sortDiscount);
   const blue = bulk.find(c => !green || !categoriesOverlap(green, c));
 
@@ -157,11 +166,11 @@ export function selectWeeklyRecommendations(
     .filter(c => c.slot === 'orange')
     .filter(c => c.available >= 2 && isOrderable(c))
     .filter(c => !isOnExactCooldown(c, cooldown))
+    .filter(c => !clashesWithCurrentOffer(c, offers))
     .sort((a, b) => b.discountPct - a.discountPct || a.available - b.available);
   const orange = sellingFast.find(c =>
     (!green || !categoriesOverlap(green, c)) &&
-    (!blue || !categoriesOverlap(blue, c)) &&
-    !offers.some(offer => offerMatchesCandidate(offer, c)),
+    (!blue || !categoriesOverlap(blue, c)),
   );
 
   return { green, blue, orange };
