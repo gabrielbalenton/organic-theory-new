@@ -55,6 +55,31 @@ test('Offer length is not required and a different nominal size does not collide
   assert.equal(offerMatchesCandidate(CURRENT_OFFERS[0], fiftyByTwentyFive), false);
 });
 
+test('current Offers exclude matching products from Green, Blue and Orange', () => {
+  const greenBase = WEEK_10_CANDIDATES.find(item => item.slot === 'green')!;
+  const blueBase = WEEK_10_CANDIDATES.find(item => item.slot === 'blue')!;
+  const orangeBase = WEEK_10_CANDIDATES.find(item => item.slot === 'orange')!;
+  const conflictProductId = 'recOfferConflict';
+  const offer = [{
+    id: 'offer-all-slots',
+    title: 'Current offer conflict',
+    productIds: [conflictProductId],
+    characteristics: { nominalSizes: ['999x99'] },
+  }];
+  const candidates: Candidate[] = [
+    { ...greenBase, stockLineId:'green-conflict', productId:conflictProductId, discountPct:99, categories:['Green Conflict'] },
+    { ...greenBase, stockLineId:'green-safe', productId:'green-safe', discountPct:50, categories:['Green Safe'] },
+    { ...blueBase, stockLineId:'blue-conflict', productId:conflictProductId, discountPct:99, categories:['Blue Conflict'] },
+    { ...blueBase, stockLineId:'blue-safe', productId:'blue-safe', discountPct:50, categories:['Blue Safe'] },
+    { ...orangeBase, stockLineId:'orange-conflict', productId:conflictProductId, discountPct:99, categories:['Orange Conflict'], available:2, moq:1 },
+    { ...orangeBase, stockLineId:'orange-safe', productId:'orange-safe', discountPct:50, categories:['Orange Safe'], available:2, moq:1 },
+  ];
+  const selected = selectWeeklyRecommendations(candidates, offer, [], 'Week 99');
+  assert.equal(selected.green?.stockLineId, 'green-safe');
+  assert.equal(selected.blue?.stockLineId, 'blue-safe');
+  assert.equal(selected.orange?.stockLineId, 'orange-safe');
+});
+
 test('Orange rejects availability below two or below MOQ', () => {
   const base = WEEK_10_CANDIDATES.find(item => item.stockLineId === 'recf6HJNc8PFv7ETZ')!;
   const invalid: Candidate[] = [
