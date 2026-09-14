@@ -105,6 +105,21 @@ export const CURRENT_STOCK_CANDIDATES: Candidate[] = [
     source: 'Packet Deals',
     characteristics: { nominalSizes: ['100x25'], grade: 'Merch', treatment: 'H3.2', condition: 'Treated Wet', profile: 'Dressed 4 Sides' },
   }),
+  candidate({
+    slot: 'green',
+    name: '75x25 Merch H3.2 Treated Wet Dressed 4 Sides (4.200m)',
+    stockLineId: 'recXFcV4f9uTHDTsO',
+    productId: 'recAb0mCOOP55cwFg',
+    discountPct: 11.688311688311688,
+    moq: 1,
+    available: 1,
+    categories: ['Outdoor'],
+    imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1789358400000/jdqJz6GWt77qFPXemiTeNQ/bLZXsgwuvAIUdq6YVjnsBhtFm-hI3nByBfPxFnnHNZTdQk0u4HyS1jQW4PUU0F_TIX9G2beqx4LSBTalqOY1dRJhtsYxW-9Z1_KVHxZHgfR1q0tSR5xAlRw96JSJdW6wZpcqkqQT0Y-shBAxYTtf9w/850JgIQMi3DakZ8mQEjcysJk4r-MRT4PwPi9qdIF7t4',
+    price: '$748/M3',
+    pcsPerPack: 0,
+    source: 'Packet Deals',
+    characteristics: { nominalSizes: ['75x25'], grade: 'Merch', treatment: 'H3.2', condition: 'Treated Wet', profile: 'Dressed 4 Sides' },
+  }),
 
   // Bulk Deals / Blue
   candidate({
