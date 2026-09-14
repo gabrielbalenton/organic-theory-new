@@ -93,7 +93,10 @@ export function exactCooldownKeys(history: HistoryEntry[], weekLabel: string) {
     for (const slot of [entry.green, entry.blue, entry.orange]) {
       if (!slot) continue;
       if (slot.stockLineId) ids.add(slot.stockLineId);
-      else if (slot.name) names.add(normalizeListingName(slot.name));
+      // Also retain the full length-specific listing name. Airtable can create a
+      // replacement stock-line record for the same visible product, and that must
+      // not bypass the two-week cooldown just because the record ID changed.
+      if (slot.name) names.add(normalizeListingName(slot.name));
     }
   }
   return { ids, names };
