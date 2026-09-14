@@ -16,6 +16,7 @@ function candidate(input: Omit<Candidate, 'productUrl' | 'listingUrl'>): Candida
 
 const structuralInternal = ['Structural (Stress Graded)', 'Internal Framing'];
 const structuralExternal = ['Structural (Stress Graded)', 'External Framing'];
+const MAX_BIRT_DISPATCH = '🚀 Dispatches in 1-3 days';
 
 /**
  * Current FPX recommendation pool captured from the authoritative Airtable
@@ -81,9 +82,10 @@ export const CURRENT_STOCK_CANDIDATES: Candidate[] = [
     moq: 1,
     available: 4,
     categories: ['Outdoor'],
-    imageUrl: '',
+    imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1789358400000/jdqJz6GWt77qFPXemiTeNQ/bLZXsgwuvAIUdq6YVjnsBhtFm-hI3nByBfPxFnnHNZTdQk0u4HyS1jQW4PUU0F_TIX9G2beqx4LSBTalqOY1dRJhtsYxW-9Z1_KVHxZHgfR1q0tSR5xAlRw96JSJdW6wZpcqkqQT0Y-shBAxYTtf9w/850JgIQMi3DakZ8mQEjcysJk4r-MRT4PwPi9qdIF7t4',
     price: '$605/M3',
     pcsPerPack: 100,
+    dispatch: MAX_BIRT_DISPATCH,
     source: 'Packet Deals',
     characteristics: { nominalSizes: ['100x25'], grade: 'Merch', treatment: 'H3.2', condition: 'Treated Wet', profile: 'Dressed 4 Sides' },
   }),
@@ -98,9 +100,10 @@ export const CURRENT_STOCK_CANDIDATES: Candidate[] = [
     moq: 2,
     available: 5,
     categories: structuralExternal,
-    imageUrl: '',
+    imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1789358400000/_JhfAhvlGxUadfcpk0UDtA/guJkjnxovkNpgPedQyzH1IOfdwO1LGAXrHxN6HWIUgfqDHlbj1ElBcvrbPQ-9HpmODedPDOEF8aQFNdB31fdcpVLmv4jMSBaYu_UPogHED6CJjgC6dZAM-uiG0Aqc4L0jgToPBQWX9j6ZPxMEytjXw/6BSzWeBprcPXs5OnM2MI3AO2G_zdud1yZO694cVrISM',
     price: '$715/M3',
     pcsPerPack: 0,
+    dispatch: MAX_BIRT_DISPATCH,
     source: 'Bulk Deals',
     characteristics: { nominalSizes: ['150x50'], gaugedSize: '140x45', grade: 'SG8', treatment: 'H3.2', condition: 'Treated Wet', profile: 'Machine Gauged' },
   }),
@@ -190,9 +193,10 @@ export const CURRENT_STOCK_CANDIDATES: Candidate[] = [
     moq: 1,
     available: 4,
     categories: ['Retaining'],
-    imageUrl: '',
+    imageUrl: 'https://v5.airtableusercontent.com/v3/u/57/57/1789358400000/XZZTst9TwexhYJnQorSayw/AQZbxulK-lKNaBdeDweFmHBPvX7b2l-20--Qly8-Kf1AonoSBTykq1UaClIIQsIBM688S8c7fJhsZYFy2n0oWFlRrk0NdXnp4EL1ofFkfci-lprYDFYepxCryqwVvfQVIga-J28poXjSXmeZJZnejA/lkGIC0sl2A3Ei95iLX6GQ-B0OfcprNQb2Hvm2EangDs',
     price: '$554/M3',
     pcsPerPack: 65,
+    dispatch: MAX_BIRT_DISPATCH,
     source: 'Selling Fast',
     characteristics: { nominalSizes: ['200x50'], grade: '2Frame', treatment: 'H4', condition: 'Treated Wet', profile: 'Tongue & Groove' },
   }),
