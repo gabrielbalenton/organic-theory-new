@@ -11,6 +11,7 @@ interface DitherGradientProps {
   intensity?: number
   speed?: number
   angle?: number
+  resolutionScale?: number
 }
 
 export function DitherGradient({
@@ -21,6 +22,7 @@ export function DitherGradient({
   intensity = 0.15,
   speed = 3,
   angle = 45,
+  resolutionScale = 0.32,
 }: DitherGradientProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const animationRef = useRef<number>(0)
@@ -34,8 +36,8 @@ export function DitherGradient({
 
     const resize = () => {
       const rect = canvas.getBoundingClientRect()
-      canvas.width = rect.width
-      canvas.height = rect.height
+      canvas.width = Math.max(1, Math.round(rect.width * resolutionScale))
+      canvas.height = Math.max(1, Math.round(rect.height * resolutionScale))
     }
 
     resize()
@@ -118,7 +120,7 @@ export function DitherGradient({
       window.removeEventListener("resize", resize)
       cancelAnimationFrame(animationRef.current)
     }
-  }, [colorFrom, colorTo, colorMid, intensity, speed, angle])
+  }, [colorFrom, colorTo, colorMid, intensity, speed, angle, resolutionScale])
 
   return (
     <canvas
