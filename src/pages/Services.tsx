@@ -9,6 +9,7 @@ import { TextReveal } from '../components/TextReveal';
 import { ScrambleText } from '../components/ScrambleText';
 import { MagneticButton } from '../components/MagneticButton';
 import { ParallaxImage } from '../components/ParallaxImage';
+import { OrganicPricing } from '../components/OrganicPricing';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -137,6 +138,47 @@ export default function Services() {
               strength={10}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-[#09090B]/60 via-transparent to-[#09090B]/80" />
+          </div>
+        </section>
+
+        {/* Componentry-inspired tactile service paths */}
+        <section className="bg-[#F5F0EB] text-[#09090B] py-20 px-6 md:px-12 border-t border-[#09090B]/10">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-10">
+              <div className="lg:col-span-6">
+                <p className="text-[10px] tracking-[0.3em] uppercase font-bold text-[#09090B]/40 mb-4">[ CHOOSE THE ENTRY POINT ]</p>
+                <h2 className="text-3xl md:text-5xl font-editorial uppercase tracking-tight leading-[0.95]">Start small.<br />Build what earns its place.</h2>
+              </div>
+              <p className="lg:col-span-5 lg:col-start-8 text-sm leading-relaxed text-[#09090B]/50 max-w-lg">
+                Three ways into the same system: diagnose the problem, build the fix, or keep the machine moving. The detailed scopes remain below.
+              </p>
+            </div>
+            <OrganicPricing
+              plans={[
+                {
+                  label: 'Audit',
+                  price: auditService.price,
+                  description: auditService.descriptor,
+                  features: auditService.bullets,
+                  note: 'Find the constraint before paying to fix it.',
+                },
+                {
+                  label: 'Build',
+                  price: 'from $1,500',
+                  description: 'One-time search, automation, CRM, workflow, or interface builds scoped around the problem that matters most.',
+                  features: coreServices.map((service) => service.name),
+                  note: 'The core engagement for brands ready to move.',
+                  highlighted: true,
+                },
+                {
+                  label: 'Ongoing',
+                  price: 'from $800 / month',
+                  description: 'Optional ongoing support for content, email, automation, reporting, and iteration after the main build is live.',
+                  features: ongoingServices.flatMap((service) => [service.name, ...service.bullets.slice(0, 2)]),
+                  note: 'Stay supported without being trapped in a retainer.',
+                },
+              ]}
+            />
           </div>
         </section>
 
