@@ -11,6 +11,7 @@ import {
   type MotionValue,
 } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 export interface CaseStudyFlipItem {
   number?: string;
@@ -21,6 +22,7 @@ export interface CaseStudyFlipItem {
   imageAlt: string;
   background: string;
   foreground?: string;
+  href?: string;
 }
 
 interface CaseStudyFlipStackProps {
@@ -178,6 +180,14 @@ function FlipCard({
             <p className="mt-[clamp(16px,1.8vw,24px)] max-w-[42rem] text-[clamp(13px,1.1vw,16px)] leading-[1.5] opacity-82">
               {item.description}
             </p>
+            {item.href && (
+              <Link
+                to={item.href}
+                className="mt-5 inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] opacity-60 transition-opacity hover:opacity-100"
+              >
+                Open case study <span aria-hidden="true">↗</span>
+              </Link>
+            )}
           </div>
         </div>
 
@@ -220,7 +230,7 @@ export function CaseStudyFlipStack({
 
   return (
     <main
-      className={cn("relative bg-[#eeeae2] font-sans text-[#29251f]", className)}
+      className={cn("relative bg-[#09090B] font-sans text-[#FAFAFA]", className)}
     >
       <section className="relative h-[82vh] min-h-[640px] overflow-hidden px-5 sm:px-10">
         <div className="absolute inset-x-0 top-[clamp(110px,16vh,165px)] flex items-center justify-center gap-[clamp(14px,2.5vw,32px)] text-[clamp(26px,3.5vw,52px)] font-medium tracking-[-0.055em]">
@@ -247,7 +257,7 @@ export function CaseStudyFlipStack({
         </div>
 
         <div className="absolute inset-x-5 top-[clamp(330px,43vh,440px)] flex justify-center sm:inset-x-10">
-          <h1 className="max-w-[18ch] text-center text-[clamp(42px,5.5vw,82px)] font-semibold leading-[0.92] tracking-[-0.06em] text-[#a94808]">
+          <h1 className="max-w-[18ch] text-center text-[clamp(42px,5.5vw,82px)] font-semibold leading-[0.92] tracking-[-0.06em] text-[#FAFAFA]">
             {heading}
           </h1>
         </div>
@@ -278,7 +288,7 @@ export function CaseStudyFlipStack({
       </div>
 
       <section className="flex min-h-[120vh] items-center justify-center px-5 sm:px-10">
-        <p className="text-center text-[clamp(54px,9vw,144px)] font-semibold leading-none tracking-[-0.07em] text-[#29251f]">
+        <p className="text-center text-[clamp(54px,9vw,144px)] font-semibold leading-none tracking-[-0.07em] text-[#FAFAFA]">
           {endLabel}
         </p>
       </section>
