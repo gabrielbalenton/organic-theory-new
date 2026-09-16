@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import { TextReveal, TextRevealLines } from '../components/TextReveal';
 import { ScrambleText } from '../components/ScrambleText';
 import { MagneticButton } from '../components/MagneticButton';
+import { ScrollChoreography } from '../components/ui/scroll-choreography';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -102,6 +103,22 @@ export default function Process() {
           >
             From first conversation to live system. Every engagement follows the same architecture - discover, audit, design, build, launch, measure. What changes is the scope and the specific tools.
           </motion.p>
+        </section>
+
+        {/* Componentry scroll choreography - desktop only */}
+        <section className="hidden md:block border-y border-[#FAFAFA]/10 relative">
+          <div className="absolute top-10 left-12 z-50 pointer-events-none">
+            <p className="text-[10px] tracking-[0.3em] uppercase font-bold text-[#FAFAFA]/45">[ FROM DISCOVERY TO DEPLOYMENT ]</p>
+          </div>
+          <ScrollChoreography
+            images={{
+              topLeft: '/images/home-methodology.png',
+              topRight: '/images/fpx-vault.avif',
+              bottomLeft: '/images/dmr-vault.avif',
+              bottomRight: '/images/home-hero.png',
+            }}
+            className="bg-[#09090B]"
+          />
         </section>
 
         {/* Steps */}
