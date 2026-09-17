@@ -12,17 +12,9 @@ import { MagneticButton } from '../components/MagneticButton';
 import { ParallaxImage } from '../components/ParallaxImage';
 import { testimonials } from '../data/testimonialsData';
 import { KineticTextReveal } from '../components/ui/kinetic-text-reveal';
-import { ScrollChoreography } from '../components/ui/scroll-choreography';
 import { DitherGradient } from '../components/ui/dither-gradient';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
-
-const WHAT_I_BUILD_IMAGES = {
-  topLeft: '/images/what-i-build/traffic-card.svg',
-  topRight: '/images/what-i-build/infrastructure-system-card.svg',
-  bottomLeft: '/images/what-i-build/capture-card.svg',
-  bottomRight: '/images/what-i-build/conversion-card.svg',
-};
 
 const TOOLS = [
   {
@@ -608,28 +600,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* ── WHAT I BUILD / SCROLL CHOREOGRAPHY ── */}
-        <section className="border-t border-[#2F3A45]/10 bg-[#FAF9F4] px-6 pb-12 pt-24 text-[#2F3A45] md:px-12 md:pb-16 md:pt-28">
-          <div className="mx-auto max-w-7xl">
-            <p className="ot-eyebrow mb-5">
-              <ScrambleText text="[ WHAT I BUILD ]" />
-            </p>
-            <TextReveal>
-              <h2 className="max-w-[12ch] font-editorial text-5xl leading-[0.96] tracking-[-0.04em] text-[#2F3A45] md:text-7xl">
-                One system. Several layers.
-              </h2>
-            </TextReveal>
-            <p className="mt-6 max-w-2xl text-sm leading-7 text-[#2F3A45]/62 md:text-base">
-              Search, automation, interface, and content should reinforce each other. The stack stays simple; the thinking does the heavy lifting.
-            </p>
-          </div>
-        </section>
-
-        <ScrollChoreography
-          className="bg-[#FAF9F4]"
-          images={WHAT_I_BUILD_IMAGES}
-        />
 
         {/* ── METHODOLOGY - with photo (DARK) ── */}
         <RevealSection className="border-t border-[#FAFAFA]/10 overflow-hidden">
