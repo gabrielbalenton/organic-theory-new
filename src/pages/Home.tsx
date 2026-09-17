@@ -12,7 +12,7 @@ import { MagneticButton } from '../components/MagneticButton';
 import { ParallaxImage } from '../components/ParallaxImage';
 import { testimonials } from '../data/testimonialsData';
 import { KineticTextReveal } from '../components/ui/kinetic-text-reveal';
-import { StickyServiceCards } from '../components/StickyServiceCards';
+import { ServiceOrbitStack } from '../components/ui/service-orbit-stack';
 import { DitherGradient } from '../components/ui/dither-gradient';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -358,7 +358,7 @@ export default function Home() {
         <script type="application/ld+json">{JSON.stringify(schemaProfessional)}</script>
       </Helmet>
 
-      <div className="w-full overflow-x-hidden bg-[#09090B] text-[#FAFAFA]">
+      <div className="w-full overflow-x-clip bg-[#09090B] text-[#FAFAFA]">
 
         {/* ── HERO ── */}
         <section ref={heroRef} className="relative min-h-screen flex flex-col overflow-hidden">
@@ -431,18 +431,18 @@ export default function Home() {
               <MagneticButton>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-4 group border border-[#FAFAFA]/30 bg-[#FAFAFA]/10 backdrop-blur-sm px-8 py-4 hover:bg-[#FAFAFA] transition-all duration-300 ease-out"
+                  className="inline-flex items-center gap-4 rounded-full border border-[#FAF9F4]/35 bg-[#2F3A45]/90 px-8 py-4 text-[#FAF9F4] shadow-[0_8px_30px_rgba(0,0,0,0.18)] backdrop-blur-md transition-all duration-300 ease-out hover:bg-[#43515E]"
                 >
-                  <span className="text-[10px] tracking-[0.2em] uppercase font-bold group-hover:text-[#09090B] transition-colors duration-300">Start a conversation</span>
-                  <ArrowRight size={14} className="group-hover:translate-x-1 group-hover:text-[#09090B] transition-all duration-300" />
+                  <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-[#FAF9F4]">Start a conversation</span>
+                  <ArrowRight size={14} className="text-[#FAF9F4] transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
               </MagneticButton>
               <MagneticButton>
                 <Link
                   to="/case-studies"
-                  className="inline-flex items-center gap-4 group px-8 py-4 hover:opacity-60 transition-opacity duration-300"
+                  className="inline-flex items-center gap-4 rounded-full border border-[#FAF9F4]/22 bg-black/15 px-8 py-4 text-[#FAF9F4] backdrop-blur-sm transition-all duration-300 hover:border-[#FAF9F4]/45 hover:bg-black/25"
                 >
-                  <span className="text-[10px] tracking-[0.2em] uppercase font-bold opacity-50 group-hover:opacity-100 transition-opacity">See the work</span>
+                  <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-[#FAF9F4]/78 transition-colors group-hover:text-[#FAF9F4]">See the work</span>
                 </Link>
               </MagneticButton>
             </motion.div>
@@ -607,14 +607,14 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <div className="mb-14">
               <p className="text-[10px] text-[#A1A1AA] mb-4 font-bold tracking-[0.3em] uppercase">
-                <ScrambleText text="[ SERVICE ARCHITECTURE ]" />
+                <ScrambleText text="[ WHAT I BUILD ]" />
               </p>
               <TextReveal>
                 <h2 className="text-2xl md:text-3xl mb-4 font-display uppercase tracking-widest">{homeData.layers.title}</h2>
               </TextReveal>
               <p className="text-sm md:text-base leading-relaxed opacity-50 max-w-xl">{homeData.layers.description}</p>
             </div>
-            <StickyServiceCards
+            <ServiceOrbitStack
               items={homeData.layers.items.map((layer) => ({
                 id: layer.id,
                 label: layer.label,
@@ -869,42 +869,40 @@ export default function Home() {
           );
         })()}
 
-        {/* ── BOTTOM CTA / COMPONENTRY DITHER FIELD ── */}
-        <section className="bg-[#09090B] text-[#FAFAFA] py-28 px-6 md:px-12 overflow-hidden relative border-t border-[#FAFAFA]/10">
-          <DitherGradient
-            colorFrom="#09090B"
-            colorMid="#26262B"
-            colorTo="#555560"
-            intensity={0.08}
-            speed={0.65}
-            angle={18}
-            resolutionScale={0.28}
-            className="opacity-70"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#09090B]/95 via-[#09090B]/55 to-[#09090B]/80 pointer-events-none" />
-
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10 relative z-10">
-            <div>
-              <p className="text-[10px] text-[#FAFAFA]/45 mb-4 font-bold tracking-[0.3em] uppercase">
-                <ScrambleText text="[ READY TO BUILD ]" />
-              </p>
-              <TextReveal>
-                <h2 className="text-3xl md:text-5xl lg:text-6xl font-display uppercase tracking-tight leading-tight max-w-lg text-[#FAFAFA]">
-                  Let&rsquo;s build<br />the system.
-                </h2>
-              </TextReveal>
+        {/* ── BOTTOM CTA / QUIET DITHER FIELD ── */}
+        <DitherGradient
+          colorFrom="#2F3A45"
+          colorMid="#43515E"
+          colorTo="#566B62"
+          intensity={0.07}
+          speed={0.55}
+          angle={18}
+          className="ot-contrast border-t border-[#FAF9F4]/10"
+        >
+          <section className="px-6 py-28 text-[#FAF9F4] md:px-12">
+            <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-10 md:flex-row md:items-center">
+              <div>
+                <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.3em] text-[#FAF9F4]/58">
+                  <ScrambleText text="[ READY TO BUILD ]" />
+                </p>
+                <TextReveal>
+                  <h2 className="max-w-lg font-editorial text-5xl leading-[0.96] tracking-[-0.04em] text-[#FAF9F4] md:text-7xl">
+                    Let&rsquo;s build<br />the system.
+                  </h2>
+                </TextReveal>
+              </div>
+              <MagneticButton strength={0.5}>
+                <Link
+                  to="/contact"
+                  className="group inline-flex shrink-0 items-center gap-4 rounded-full bg-[#FAF9F4] px-9 py-4 text-[#2F3A45] shadow-[0_12px_36px_rgba(0,0,0,0.18)] transition-transform duration-300 hover:-translate-y-0.5"
+                >
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#2F3A45]">Start a conversation</span>
+                  <ArrowRight size={14} className="text-[#2F3A45] transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </MagneticButton>
             </div>
-            <MagneticButton strength={0.5}>
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-4 group border border-[#FAFAFA]/30 bg-[#FAFAFA]/5 backdrop-blur-sm px-10 py-5 hover:bg-[#FAFAFA] hover:text-[#09090B] transition-all duration-300 ease-out shrink-0 text-[#FAFAFA]"
-              >
-                <span className="text-[10px] tracking-[0.2em] uppercase font-bold group-hover:text-[#09090B] transition-colors duration-300">Start a conversation</span>
-                <ArrowRight size={14} className="group-hover:translate-x-1 transition-all duration-300" />
-              </Link>
-            </MagneticButton>
-          </div>
-        </section>
+          </section>
+        </DitherGradient>
 
       </div>
     </>
