@@ -12,10 +12,17 @@ import { MagneticButton } from '../components/MagneticButton';
 import { ParallaxImage } from '../components/ParallaxImage';
 import { testimonials } from '../data/testimonialsData';
 import { KineticTextReveal } from '../components/ui/kinetic-text-reveal';
-import { ServiceScrollChoreography } from '../components/ui/service-scroll-choreography';
+import { ScrollChoreography } from '../components/ui/scroll-choreography';
 import { DitherGradient } from '../components/ui/dither-gradient';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
+
+const WHAT_I_BUILD_IMAGES = {
+  topLeft: '/images/what-i-build/traffic-card.svg',
+  topRight: '/images/what-i-build/infrastructure-system-card.svg',
+  bottomLeft: '/images/what-i-build/capture-card.svg',
+  bottomRight: '/images/what-i-build/conversion-card.svg',
+};
 
 const TOOLS = [
   {
@@ -619,13 +626,9 @@ export default function Home() {
           </div>
         </section>
 
-        <ServiceScrollChoreography
-          items={homeData.layers.items.map((layer) => ({
-            id: layer.id,
-            label: layer.label,
-            description: layer.description,
-            detail: layer.detail,
-          }))}
+        <ScrollChoreography
+          className="bg-[#FAF9F4]"
+          images={WHAT_I_BUILD_IMAGES}
         />
 
         {/* ── METHODOLOGY - with photo (DARK) ── */}
