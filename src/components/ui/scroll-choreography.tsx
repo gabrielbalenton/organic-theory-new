@@ -1,67 +1,100 @@
-import { useRef } from 'react';
-import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion';
+"use client";
 
-export interface ChoreographyStep {
-  number: string;
-  title: string;
-  description: string;
-  detail?: string;
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { cn } from "@/lib/utils";
+
+interface ScrollChoreographyProps {
+  className?: string;
+  images: {
+    topLeft: string;
+    topRight: string;
+    bottomLeft: string;
+    bottomRight: string;
+  };
 }
 
-export function ScrollChoreography({ steps }: { steps: ChoreographyStep[] }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const reduceMotion = useReducedMotion() ?? false;
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end end'] });
+export function ScrollChoreography({
+  className,
+  images,
+}: ScrollChoreographyProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 400,
+    damping: 50,
+    mass: 1.2,
+    restDelta: 0.001,
+  });
+
+  const xLeft = "-20vw";
+  const xRight = "20vw";
+  const yTop = "-14vh";
+  const yBottom = "14vh";
+
+  const tlX = useTransform(smoothProgress, [0, 0.3, 0.35, 0.65, 1], [xLeft, xLeft, xLeft, "0vw", "0vw"]);
+  const tlY = useTransform(smoothProgress, [0, 0.3, 0.35, 0.65, 1], [yTop, yBottom, yBottom, "0vh", "0vh"]);
+
+  const brX = useTransform(smoothProgress, [0, 0.3, 0.35, 0.65, 1], [xRight, xRight, xRight, "0vw", "0vw"]);
+  const brY = useTransform(smoothProgress, [0, 0.3, 0.35, 0.65, 1], [yBottom, yTop, yTop, "0vh", "0vh"]);
+
+  const blX = useTransform(smoothProgress, [0, 0.3, 0.35, 0.65, 1], [xLeft, xLeft, xLeft, "0vw", "0vw"]);
+  const blY = useTransform(smoothProgress, [0, 0.3, 0.35, 0.65, 1], [yBottom, yBottom, yBottom, "0vh", "0vh"]);
+
+  const trX = useTransform(smoothProgress, [0, 0.3, 0.35, 0.65, 1], [xRight, xRight, xRight, "0vw", "0vw"]);
+  const trY = useTransform(smoothProgress, [0, 0.3, 0.35, 0.65, 1], [yTop, yTop, yTop, "0vh", "0vh"]);
+
+  const heroWidth = useTransform(smoothProgress, [0.65, 0.7, 0.9, 1], ["36vw", "36vw", "100vw", "100vw"]);
+  const heroHeight = useTransform(smoothProgress, [0.65, 0.7, 0.9, 1], ["24vh", "24vh", "100vh", "100vh"]);
+
+  const underImagesOpacity = useTransform(smoothProgress, [0.75, 0.85], [1, 0]);
+
+  const baseImageClasses =
+    "absolute left-1/2 top-1/2 w-[36vw] h-[24vh] overflow-hidden -translate-x-1/2 -translate-y-1/2 bg-muted shadow-2xl will-change-transform";
 
   return (
-    <section ref={ref} className="bg-[#FAF9F4]" style={{ minHeight: reduceMotion ? undefined : `${Math.max(steps.length, 2) * 74}vh` }}>
-      <div className={reduceMotion ? 'px-6 py-16 md:px-12' : 'sticky top-0 min-h-screen px-6 py-20 md:px-12'}>
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
-          <div className="lg:pt-10">
-            <p className="ot-eyebrow mb-5">[ THE PROCESS ]</p>
-            <h2 className="max-w-[10ch] font-editorial text-4xl leading-[0.98] tracking-[-0.035em] text-[#2F3A45] md:text-6xl">Clarity before complexity.</h2>
-            <p className="mt-6 max-w-sm text-sm leading-7 text-[#2F3A45]/62 md:text-base">Each phase narrows uncertainty before more time or budget is committed.</p>
-            <div className="mt-10 hidden h-44 w-px bg-[#2F3A45]/10 lg:block">
-              <motion.div className="w-px bg-[#8DA5B7]" style={{ height: useTransform(scrollYProgress, [0, 1], ['0%', '100%']) }} />
-            </div>
-          </div>
-          <div className="relative min-h-[570px]">
-            {steps.map((step, index) => (
-              <ChoreographyCard key={step.number} step={step} index={index} total={steps.length} progress={scrollYProgress} reduceMotion={reduceMotion} />
-            ))}
-          </div>
+    <div ref={containerRef} className={cn("relative h-[300vh] w-full", className)}>
+      <div className="sticky top-0 h-screen w-full overflow-hidden">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <motion.div
+            style={{ x: tlX, y: tlY, opacity: underImagesOpacity }}
+            className={cn(baseImageClasses, "z-10")}
+          >
+            <img src={images.topLeft} alt="Top Left" className="h-full w-full object-cover" />
+          </motion.div>
+
+          <motion.div
+            style={{ x: brX, y: brY, opacity: underImagesOpacity }}
+            className={cn(baseImageClasses, "z-20")}
+          >
+            <img src={images.bottomRight} alt="Bottom Right" className="h-full w-full object-cover" />
+          </motion.div>
+
+          <motion.div
+            style={{ x: blX, y: blY, opacity: underImagesOpacity }}
+            className={cn(baseImageClasses, "z-30")}
+          >
+            <img src={images.bottomLeft} alt="Bottom Left" className="h-full w-full object-cover" />
+          </motion.div>
+
+          <motion.div
+            style={{
+              x: trX,
+              y: trY,
+              width: heroWidth,
+              height: heroHeight,
+            }}
+            className={cn(baseImageClasses, "z-40 origin-center bg-black/5")}
+          >
+            <img src={images.topRight} alt="Top Right (Hero)" className="h-full w-full object-cover" />
+          </motion.div>
         </div>
       </div>
-    </section>
-  );
-}
-
-function ChoreographyCard({ step, index, total, progress, reduceMotion }: {
-  step: ChoreographyStep;
-  index: number;
-  total: number;
-  progress: ReturnType<typeof useScroll>['scrollYProgress'];
-  reduceMotion: boolean;
-}) {
-  const point = index / Math.max(total - 1, 1);
-  const prev = Math.max(0, point - 0.14);
-  const next = Math.min(1, point + 0.14);
-  const opacity = useTransform(progress, [prev, point, next], index === 0 ? [1, 1, 0.22] : [0.16, 1, 0.22]);
-  const y = useTransform(progress, [prev, point, next], reduceMotion ? [0, 0, 0] : [46, 0, -40]);
-  const scale = useTransform(progress, [prev, point, next], reduceMotion ? [1, 1, 1] : [0.985, 1, 0.985]);
-
-  return (
-    <motion.article
-      className={`${reduceMotion ? 'relative mb-5' : 'absolute inset-x-0 top-0'} overflow-hidden rounded-[22px] border border-[#2F3A45]/10 bg-[#E8E2DB] p-8 md:p-12`}
-      style={{ opacity, y, scale, zIndex: total - index }}
-    >
-      <div className="flex items-center justify-between gap-4">
-        <span className="font-editorial text-5xl text-[#2F3A45]/28 md:text-7xl">{step.number}</span>
-        <span className="h-2 w-2 rounded-full bg-[#8FA897]" />
-      </div>
-      <h3 className="mt-14 max-w-[13ch] font-editorial text-4xl leading-none tracking-[-0.03em] text-[#2F3A45] md:text-5xl">{step.title}</h3>
-      <p className="mt-6 max-w-2xl text-sm leading-7 text-[#2F3A45]/68 md:text-base">{step.description}</p>
-      {step.detail ? <p className="mt-8 border-t border-[#2F3A45]/10 pt-5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#2F3A45]/45">{step.detail}</p> : null}
-    </motion.article>
+    </div>
   );
 }
