@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, useReducedMotion } from 'framer-motion';
 
 interface TextRevealProps {
   children: React.ReactNode;
@@ -8,16 +8,17 @@ interface TextRevealProps {
   as?: keyof React.JSX.IntrinsicElements;
 }
 
-export function TextReveal({ children, className = '', delay = 0, as: Tag = 'div' }: TextRevealProps) {
+export function TextReveal({ children, className = '', delay = 0 }: TextRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: '-5% 0px' });
+  const reduced = useReducedMotion();
 
   return (
     <div ref={ref} className={`overflow-hidden ${className}`} style={{ display: 'block' }}>
       <motion.div
-        initial={{ y: '105%', opacity: 0 }}
-        animate={inView ? { y: '0%', opacity: 1 } : {}}
-        transition={{ duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] }}
+        initial={reduced ? { opacity: 0 } : { y: '102%', opacity: 0, filter: 'blur(7px)' }}
+        animate={inView ? { y: '0%', opacity: 1, filter: 'blur(0px)' } : {}}
+        transition={{ duration: reduced ? 0.01 : 0.82, delay, ease: [0.22, 1, 0.36, 1] }}
       >
         {children}
       </motion.div>
@@ -25,7 +26,6 @@ export function TextReveal({ children, className = '', delay = 0, as: Tag = 'div
   );
 }
 
-// Multi-line - wraps each line in its own mask
 export function TextRevealLines({ lines, className = '', staggerDelay = 0.1, baseDelay = 0 }: {
   lines: string[];
   className?: string;
@@ -34,16 +34,17 @@ export function TextRevealLines({ lines, className = '', staggerDelay = 0.1, bas
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: '-5% 0px' });
+  const reduced = useReducedMotion();
 
   return (
     <div ref={ref}>
       {lines.map((line, i) => (
-        <div key={i} className="overflow-hidden">
+        <div key={i} className="overflow-hidden pb-[0.06em]">
           <motion.div
             className={className}
-            initial={{ y: '105%', opacity: 0 }}
-            animate={inView ? { y: '0%', opacity: 1 } : {}}
-            transition={{ duration: 0.9, delay: baseDelay + i * staggerDelay, ease: [0.22, 1, 0.36, 1] }}
+            initial={reduced ? { opacity: 0 } : { y: '102%', opacity: 0, filter: 'blur(7px)' }}
+            animate={inView ? { y: '0%', opacity: 1, filter: 'blur(0px)' } : {}}
+            transition={{ duration: reduced ? 0.01 : 0.88, delay: baseDelay + i * staggerDelay, ease: [0.22, 1, 0.36, 1] }}
           >
             {line}
           </motion.div>
