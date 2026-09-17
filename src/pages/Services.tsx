@@ -5,10 +5,18 @@ import { Helmet } from 'react-helmet-async';
 import { auditService, coreServices, ongoingServices } from '../data/servicesData';
 import { ScrambleText } from '../components/ScrambleText';
 import { KineticTextReveal } from '../components/ui/kinetic-text-reveal';
-import { StickyServiceCards } from '../components/ui/sticky-service-cards';
+import { ServicesScrollChoreography } from '../components/ui/services-scroll-choreography';
 import { DitherGradient } from '../components/ui/dither-gradient';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
+
+const SERVICES_CHOREOGRAPHY_IMAGES = {
+  topLeft: '/images/services-choreography/traffic.svg',
+  topRight: '/images/services-choreography/infrastructure.svg',
+  bottomLeft: '/images/services-choreography/capture.svg',
+  bottomRight: '/images/services-choreography/conversion.svg',
+  hero: '/images/services-choreography/modular-by-design.svg',
+};
 
 function OfferCard({ service, index }: { service: typeof coreServices[0]; index: number }) {
   const accent = index % 3 === 1 ? '#8FA897' : index % 3 === 0 ? '#8DA5B7' : '#B7AFA6';
@@ -45,14 +53,6 @@ function OfferCard({ service, index }: { service: typeof coreServices[0]; index:
 }
 
 export default function Services() {
-  const stickyItems = coreServices.slice(0, 4).map((service, index) => ({
-    id: service.id,
-    title: service.name,
-    description: service.descriptor,
-    detail: service.price,
-    accent: (index % 3 === 1 ? 'sage' : index % 3 === 0 ? 'blue' : 'neutral') as 'blue' | 'sage' | 'neutral',
-  }));
-
   const schemaFAQ = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -121,7 +121,22 @@ export default function Services() {
           </div>
         </section>
 
-        <StickyServiceCards items={stickyItems} />
+        <section className="border-t border-[#2F3A45]/10 bg-[#FAF9F4] px-6 pb-10 pt-24 md:px-12 md:pb-14 md:pt-28">
+          <div className="mx-auto max-w-7xl">
+            <p className="ot-eyebrow mb-5">[ WHAT I BUILD ]</p>
+            <h2 className="max-w-[12ch] font-editorial text-5xl leading-[0.96] tracking-[-0.04em] text-[#2F3A45] md:text-7xl">
+              One system. Several layers.
+            </h2>
+            <p className="mt-6 max-w-2xl text-sm leading-7 text-[#2F3A45]/62 md:text-base">
+              Search, automation, interface, and content should reinforce each other. The stack stays simple; the thinking does the heavy lifting.
+            </p>
+          </div>
+        </section>
+
+        <ServicesScrollChoreography
+          className="bg-[#FAF9F4]"
+          images={SERVICES_CHOREOGRAPHY_IMAGES}
+        />
 
         <section className="border-t border-[#2F3A45]/10 px-6 py-20 md:px-12 md:py-28">
           <div className="mx-auto max-w-7xl">
