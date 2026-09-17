@@ -40,17 +40,13 @@ body {
   line-height: 1.65;
 }
 
-.font-display {
-  font-family: var(--font-display);
-}
-
+.font-display { font-family: var(--font-display); }
 .font-editorial {
   font-family: var(--font-editorial);
   font-weight: 400;
   letter-spacing: -0.015em;
 }
 
-/* Editorial system helpers */
 .ot-canvas { background: var(--ot-canvas); color: var(--ot-ink); }
 .ot-surface { background: var(--ot-surface); color: var(--ot-ink); }
 .ot-dark { background: var(--ot-ink); color: var(--ot-canvas); }
@@ -81,9 +77,7 @@ body {
 }
 .ot-secondary-button:hover { background: var(--ot-surface); }
 
-/* Compatibility remap for the existing dark-theme arbitrary Tailwind classes.
-   This lets the whole site inherit the new system while individual pages are
-   progressively refined instead of being blindly recolored. */
+/* Compatibility remap for the original dark visual system. */
 [class*="bg-[#09090B]"] { background-color: var(--ot-canvas) !important; }
 [class*="text-[#FAFAFA]"] { color: var(--ot-ink) !important; }
 [class*="border-[#FAFAFA]"] { border-color: var(--ot-line) !important; }
@@ -93,7 +87,7 @@ body {
 [class*="text-[#09090B]"] { color: var(--ot-ink) !important; }
 [class*="border-[#09090B]"] { border-color: var(--ot-line) !important; }
 
-/* Preserve intentional dark contrast sections. */
+/* Explicit dark contrast regions. */
 .ot-contrast,
 .ot-contrast [class*="bg-[#09090B]"] { background-color: var(--ot-ink) !important; }
 .ot-contrast,
@@ -101,12 +95,36 @@ body {
 .ot-contrast [class*="text-[#A1A1AA]"] { color: var(--ot-canvas) !important; }
 .ot-contrast [class*="border-[#FAFAFA]"] { border-color: rgba(250, 249, 244, 0.18) !important; }
 
-/* Images should sit naturally in the quieter palette. */
-.ot-editorial-image img {
-  filter: saturate(0.8) contrast(0.96) brightness(1.02);
+/* Existing image heroes remain intentionally high-contrast. */
+section:has(img[src="/images/home-hero.png"]),
+section:has(img[src="/images/services-hero.png"]),
+section:has(img[src="/images/contact-hero.png"]) {
+  color: var(--ot-canvas) !important;
+}
+section:has(img[src="/images/home-hero.png"]) [class*="text-[#FAFAFA]"],
+section:has(img[src="/images/services-hero.png"]) [class*="text-[#FAFAFA]"],
+section:has(img[src="/images/contact-hero.png"]) [class*="text-[#FAFAFA]"] {
+  color: var(--ot-canvas) !important;
+}
+section:has(img[src="/images/home-hero.png"]) [class*="text-[#A1A1AA]"],
+section:has(img[src="/images/contact-hero.png"]) [class*="text-[#A1A1AA]"] {
+  color: #D4DEE5 !important;
 }
 
-/* Hide default cursor on pointer devices — custom cursor replaces it */
+div:has(> img[src="/images/home-methodology.png"]) [class*="text-[#FAFAFA]"] {
+  color: var(--ot-canvas) !important;
+}
+
+/* Keep photography quiet enough to live with the warm neutral system. */
+.ot-editorial-image img,
+main img:not([src*="logo"]):not([src*="icon"]) {
+  filter: saturate(0.86) contrast(0.98);
+}
+
+/* Soft, consistent interactive surfaces without forcing boxed layouts. */
+a, button { -webkit-tap-highlight-color: transparent; }
+button, a { text-underline-offset: 0.22em; }
+
 @media (pointer: fine) {
   html, * { cursor: none !important; }
   input, textarea, select, [contenteditable] { cursor: text !important; }
@@ -116,7 +134,6 @@ body {
   .use-native-cursor button, .use-native-cursor a { cursor: pointer !important; }
 }
 
-/* Minimal scrollbar */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(47, 58, 69, 0.2); border-radius: 999px; }
