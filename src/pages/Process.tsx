@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import { ScrambleText } from '../components/ScrambleText';
 import { KineticTextReveal } from '../components/ui/kinetic-text-reveal';
-import { ScrollChoreography } from '../components/ui/scroll-choreography';
+import { TextMorph } from '../components/ui/text-morph';
 import { DitherGradient } from '../components/ui/dither-gradient';
 
 const STEPS = [
@@ -68,13 +68,6 @@ const FAQS = [
 ];
 
 export default function Process() {
-  const choreographySteps = STEPS.map(step => ({
-    number: step.number,
-    title: `${step.phase}. ${step.title}`,
-    description: step.description,
-    detail: `${step.duration} · ${step.deliverables.join(' · ')}`,
-  }));
-
   return (
     <>
       <Helmet>
@@ -107,9 +100,66 @@ export default function Process() {
           </div>
         </header>
 
-        <div className="border-y border-[#2F3A45]/10">
-          <ScrollChoreography steps={choreographySteps} />
-        </div>
+        <section className="border-y border-[#2F3A45]/10 bg-[#E8E2DB]/45 px-6 py-20 md:px-12 md:py-28">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-10 border-b border-[#2F3A45]/10 pb-12 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+              <div>
+                <p className="ot-eyebrow mb-5">[ THE PROCESS ]</p>
+                <h2 className="max-w-[10ch] font-editorial text-4xl leading-[0.98] tracking-[-0.035em] md:text-6xl">
+                  Clarity before complexity.
+                </h2>
+              </div>
+              <div className="lg:pb-1">
+                <p className="mb-3 text-[9px] font-bold uppercase tracking-[0.24em] text-[#2F3A45]/38">The sequence stays disciplined</p>
+                <div className="min-h-[1.2em] font-editorial text-4xl leading-none tracking-[-0.03em] text-[#8DA5B7] md:text-6xl">
+                  <TextMorph
+                    words={['DISCOVER', 'DIAGNOSE', 'ARCHITECT', 'BUILD', 'LAUNCH', 'MEASURE']}
+                    interval={1550}
+                    morphDuration={560}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-2">
+              {STEPS.map((step, index) => (
+                <motion.article
+                  key={step.number}
+                  initial={{ opacity: 0, y: 22 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.22 }}
+                  transition={{ duration: 0.55, delay: Math.min(index * 0.05, 0.18), ease: [0.22, 1, 0.36, 1] }}
+                  className="group grid gap-6 border-b border-[#2F3A45]/10 py-10 md:grid-cols-[0.34fr_0.66fr] md:gap-10 md:py-14"
+                >
+                  <div className="flex items-start gap-6">
+                    <span className="font-editorial text-5xl leading-none text-[#2F3A45]/22 md:text-6xl">{step.number}</span>
+                    <div>
+                      <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-[#8FA897]">{step.phase}</p>
+                      <p className="mt-2 text-[10px] uppercase tracking-[0.15em] text-[#2F3A45]/38">{step.duration}</p>
+                    </div>
+                  </div>
+                  <div className="grid gap-7 lg:grid-cols-[1fr_0.75fr]">
+                    <div>
+                      <h3 className="max-w-[18ch] font-editorial text-3xl leading-[1.02] tracking-[-0.025em] text-[#2F3A45] md:text-4xl">{step.title}</h3>
+                      <p className="mt-5 max-w-2xl text-sm leading-7 text-[#2F3A45]/64">{step.description}</p>
+                    </div>
+                    <div className="border-l border-[#2F3A45]/10 pl-5">
+                      <p className="mb-4 text-[9px] font-bold uppercase tracking-[0.2em] text-[#2F3A45]/36">Outputs</p>
+                      <ul className="space-y-2">
+                        {step.deliverables.map(item => (
+                          <li key={item} className="flex items-start gap-3 text-xs leading-5 text-[#2F3A45]/56">
+                            <span className="mt-[0.52rem] h-1 w-1 shrink-0 rounded-full bg-[#8DA5B7]" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </motion.article>
+              ))}
+            </div>
+          </div>
+        </section>
 
         <section className="px-6 py-20 md:px-12 md:py-28">
           <div className="mx-auto max-w-7xl">
