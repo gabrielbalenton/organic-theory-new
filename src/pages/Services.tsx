@@ -1,73 +1,58 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { RevealSection } from '../components/RevealSection';
 import { auditService, coreServices, ongoingServices } from '../data/servicesData';
-import { TextReveal } from '../components/TextReveal';
 import { ScrambleText } from '../components/ScrambleText';
-import { MagneticButton } from '../components/MagneticButton';
-import { ParallaxImage } from '../components/ParallaxImage';
+import { KineticTextReveal } from '../components/ui/kinetic-text-reveal';
+import { StickyServiceCards } from '../components/ui/sticky-service-cards';
+import { DitherGradient } from '../components/ui/dither-gradient';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-function SectionLabel({ children }: { children: string }) {
+function OfferCard({ service, index }: { service: typeof coreServices[0]; index: number }) {
+  const accent = index % 3 === 1 ? '#8FA897' : index % 3 === 0 ? '#8DA5B7' : '#B7AFA6';
   return (
-    <div className="flex items-center gap-6 mb-10">
-      <p className="text-[10px] tracking-[0.3em] uppercase font-bold text-[#A1A1AA] shrink-0">
-        <ScrambleText text={children} />
-      </p>
-      <div className="flex-1 h-px bg-[#FAFAFA]/10" />
-    </div>
-  );
-}
-
-function ServiceCard({ service, index }: { service: typeof coreServices[0]; index: number; key?: React.Key }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 24 }}
+    <motion.article
+      initial={{ opacity: 0, y: 22 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.6, delay: index * 0.08, ease: EASE }}
-      className="relative overflow-hidden border border-[#FAFAFA]/10 bg-[#FAFAFA]/[0.02] p-8 md:p-10 flex flex-col justify-between hover:border-[#FAFAFA]/25 hover:bg-[#FAFAFA]/[0.04] transition-all duration-500 group"
+      viewport={{ once: true, amount: 0.12 }}
+      transition={{ duration: 0.55, delay: Math.min(index * 0.06, 0.24), ease: EASE }}
+      className="group flex h-full flex-col rounded-[22px] border border-[#2F3A45]/10 bg-[#E8E2DB]/65 p-7 transition-all duration-500 hover:-translate-y-1 hover:border-[#2F3A45]/18 hover:bg-[#E8E2DB] hover:shadow-[0_18px_45px_rgba(47,58,69,0.08)] md:p-9"
     >
-      <span aria-hidden="true" className="absolute -top-6 -right-3 text-[160px] font-display leading-none text-[#FAFAFA] opacity-[0.025] select-none pointer-events-none">
-        {service.id}
-      </span>
-
-      <div>
-        <div className="mb-6">
-          <span className="text-[10px] tracking-[0.3em] uppercase font-bold text-[#A1A1AA] block mb-3">{service.id}</span>
-          <h3 className="text-xl md:text-2xl font-display uppercase tracking-wider mb-4 leading-tight text-[#FAFAFA]">{service.name}</h3>
-          <span className="text-[10px] tracking-[0.2em] uppercase font-bold border border-[#FAFAFA]/15 px-3 py-1 inline-block text-[#A1A1AA]">
-            {service.price}
-          </span>
-        </div>
-        <p className="text-sm leading-relaxed opacity-50 mb-6">{service.descriptor}</p>
-        <div className="w-8 h-px bg-[#FAFAFA]/15 mb-6" />
-        <ul className="space-y-2.5 mb-10">
+      <div className="flex items-center justify-between gap-6">
+        <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#2F3A45]/42">{service.id}</span>
+        <span className="h-2 w-2 rounded-full" style={{ backgroundColor: accent }} />
+      </div>
+      <h3 className="mt-12 font-editorial text-3xl leading-[1.02] tracking-[-0.025em] text-[#2F3A45]">{service.name}</h3>
+      <p className="mt-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[#2F3A45]/54">{service.price}</p>
+      <p className="mt-6 text-sm leading-7 text-[#2F3A45]/66">{service.descriptor}</p>
+      <div className="mt-8 border-t border-[#2F3A45]/10 pt-6">
+        <ul className="space-y-3">
           {service.bullets.map((bullet, i) => (
-            <li key={i} className="flex items-start gap-3 text-sm opacity-60">
-              <span className="text-[#A1A1AA] shrink-0 mt-px">-</span>
-              {bullet}
+            <li key={i} className="flex items-start gap-3 text-sm leading-6 text-[#2F3A45]/62">
+              <Check size={13} className="mt-1 shrink-0 text-[#8FA897]" strokeWidth={2} />
+              <span>{bullet}</span>
             </li>
           ))}
         </ul>
       </div>
-
-      <Link
-        to="/contact"
-        className="inline-flex items-center gap-4 group/btn border border-[#FAFAFA]/20 px-6 py-3 hover:bg-[#FAFAFA] hover:text-[#09090B] transition-all duration-300 self-start"
-      >
-        <span className="text-[10px] tracking-[0.2em] uppercase font-bold">Initiate Brief</span>
-        <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform duration-300" />
+      <Link to="/contact" className="mt-9 inline-flex items-center gap-3 self-start border-b border-[#2F3A45]/25 pb-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#2F3A45] transition-colors hover:border-[#8DA5B7]">
+        Start a brief <ArrowRight size={13} className="transition-transform duration-300 group-hover:translate-x-1" />
       </Link>
-    </motion.div>
+    </motion.article>
   );
 }
 
 export default function Services() {
+  const stickyItems = coreServices.slice(0, 4).map((service, index) => ({
+    id: service.id,
+    title: service.name,
+    description: service.descriptor,
+    detail: service.price,
+    accent: (index % 3 === 1 ? 'sage' : index % 3 === 0 ? 'blue' : 'neutral') as 'blue' | 'sage' | 'neutral',
+  }));
+
   const schemaFAQ = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -88,124 +73,90 @@ export default function Services() {
         <meta property="og:url" content="https://organic-theory.vercel.app/services" />
         <meta property="og:title" content="Services & Pricing | Organic Theory" />
         <meta property="og:description" content="From a $400 audit to full system builds. Search, AI, workflow, and interface. No retainer required." />
-        <meta property="og:image" content="https://organic-theory.vercel.app/og-image.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="Organic Theory Services - From $400 audit to full system builds." />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Services & Pricing | Organic Theory" />
-        <meta name="twitter:description" content="From a $400 audit to full system builds. Search, AI, workflow, and interface. No retainer required." />
-        <meta name="twitter:image" content="https://organic-theory.vercel.app/og-image.png" />
         <link rel="canonical" href="https://organic-theory.vercel.app/services" />
         <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
 
-      <div className="w-full min-h-screen bg-[#09090B] text-[#FAFAFA]">
-
-        {/* Header with hero image */}
-        <section className="pt-32 pb-0 px-0 overflow-hidden">
-          <div className="px-6 md:px-12 max-w-7xl mx-auto pb-16">
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-[10px] text-[#A1A1AA] mb-6 font-bold tracking-[0.3em] uppercase"
-            >
-              <ScrambleText text="[ THE OFFER ]" delay={0.3} />
+      <main className="min-h-screen bg-[#FAF9F4] text-[#2F3A45]">
+        <header className="px-6 pb-20 pt-28 md:px-12 md:pb-28 md:pt-36">
+          <div className="mx-auto max-w-7xl">
+            <motion.p initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="ot-eyebrow mb-6">
+              <ScrambleText text="[ THE OFFER ]" delay={0.25} />
             </motion.p>
-            <TextReveal>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl leading-[1.1] mb-8 font-editorial uppercase tracking-tight">
-                What I build,<br />
-                <span className="text-[#A1A1AA]">and what it costs.</span>
-              </h1>
-            </TextReveal>
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-sm md:text-base leading-relaxed max-w-xl"
-            >
-              Start with the $400 audit - one session where I review your site and tell you exactly what's holding you back. From there, you choose what to fix and when. No monthly lock-in, no ongoing commitment unless you want it.
-            </motion.p>
-          </div>
-          {/* Hero image full-width */}
-          <div className="relative h-[40vh] md:h-[55vh] w-full overflow-hidden">
-            <ParallaxImage
-              src="/images/services-hero.png"
-              alt="Services overview"
-              className="absolute inset-0 w-full h-full"
-              strength={10}
+            <KineticTextReveal
+              text="What I build, and what it costs."
+              splitBy="words"
+              stagger={0.04}
+              distance={20}
+              className="max-w-[13ch] font-editorial text-5xl leading-[0.96] tracking-[-0.045em] md:text-7xl lg:text-8xl"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#09090B]/60 via-transparent to-[#09090B]/80" />
+            <p className="mt-8 max-w-2xl text-sm leading-7 text-[#2F3A45]/64 md:text-base">
+              Start with a diagnostic, then commission only the work that earns its place. No padded retainer, no forced package, no visual noise around the decision.
+            </p>
+          </div>
+        </header>
+
+        <section className="border-y border-[#2F3A45]/10 bg-[#E8E2DB]/42 px-6 py-16 md:px-12 md:py-20">
+          <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+            <div>
+              <p className="ot-eyebrow mb-5">[ START HERE ]</p>
+              <h2 className="max-w-[10ch] font-editorial text-4xl leading-none tracking-[-0.035em] md:text-6xl">A clear first step.</h2>
+            </div>
+            <div className="rounded-[24px] border border-[#2F3A45]/10 bg-[#FAF9F4] p-7 shadow-[0_18px_45px_rgba(47,58,69,0.06)] md:p-10">
+              <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-[#8DA5B7]">Search & Systems Audit</p>
+                  <h3 className="mt-3 font-editorial text-3xl text-[#2F3A45] md:text-4xl">{auditService.name}</h3>
+                </div>
+                <span className="rounded-full border border-[#2F3A45]/12 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#2F3A45]/62">{auditService.price}</span>
+              </div>
+              <p className="mt-6 max-w-2xl text-sm leading-7 text-[#2F3A45]/66">{auditService.descriptor}</p>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {auditService.bullets.map((bullet, i) => <div key={i} className="flex items-start gap-3 text-sm text-[#2F3A45]/62"><Check size={13} className="mt-1 shrink-0 text-[#8FA897]" />{bullet}</div>)}
+              </div>
+              <Link to="/contact" className="ot-primary-button mt-9 inline-flex items-center gap-3 rounded-full px-6 py-3 text-[10px] font-bold uppercase tracking-[0.2em] transition-colors">
+                Book the audit <ArrowRight size={13} />
+              </Link>
+            </div>
           </div>
         </section>
 
-        {/* START HERE */}
-        <RevealSection className="py-20 px-6 md:px-12 border-t border-[#FAFAFA]/10">
-          <div className="max-w-7xl mx-auto">
-            <SectionLabel>[ START HERE ]</SectionLabel>
-            <div className="relative overflow-hidden border border-[#FAFAFA]/15 bg-[#FAFAFA]/[0.04] p-10 md:p-14 lg:p-16">
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 80, repeat: Infinity, ease: 'linear' }}
-                aria-hidden="true"
-                className="absolute top-8 right-8 w-44 h-44 opacity-[0.05] pointer-events-none"
-              >
-                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="50" cy="50" r="42" stroke="#FAFAFA" strokeWidth="1" />
-                  <path d="M20 20L80 80M80 20L20 80" stroke="#FAFAFA" strokeWidth="1" />
-                </svg>
-              </motion.div>
+        <StickyServiceCards items={stickyItems} />
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 relative">
-                <div>
-                  <p className="text-[10px] tracking-[0.3em] uppercase font-bold text-[#A1A1AA] mb-8">[ SEARCH &amp; SYSTEMS AUDIT ]</p>
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-display uppercase tracking-tight leading-tight mb-6">{auditService.name}</h2>
-                  <span className="text-[10px] tracking-[0.2em] uppercase font-bold border border-[#FAFAFA]/20 px-3 py-1 inline-block text-[#A1A1AA] mb-8">{auditService.price}</span>
-                  <p className="text-sm md:text-base leading-relaxed opacity-50 max-w-sm">{auditService.descriptor}</p>
-                </div>
-                <div className="flex flex-col justify-between gap-10">
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
-                    {auditService.bullets.map((b, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm opacity-60">
-                        <span className="text-[#A1A1AA] shrink-0 mt-px">-</span>{b}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-4 group border border-[#FAFAFA]/20 px-8 py-4 hover:bg-[#FAFAFA] transition-all duration-300 ease-out self-start"
-                  >
-                    <span className="text-[10px] tracking-[0.2em] uppercase font-bold group-hover:text-[#09090B] transition-colors duration-300">Book the Audit</span>
-                    <ArrowRight size={16} className="group-hover:translate-x-1 group-hover:text-[#09090B] transition-all duration-300" />
-                  </Link>
-                </div>
+        <section className="border-t border-[#2F3A45]/10 px-6 py-20 md:px-12 md:py-28">
+          <div className="mx-auto max-w-7xl">
+            <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="ot-eyebrow mb-4">[ CORE BUILDS ]</p>
+                <h2 className="font-editorial text-4xl tracking-[-0.03em] md:text-6xl">Choose the layer that matters.</h2>
               </div>
+              <p className="max-w-sm text-sm leading-7 text-[#2F3A45]/58">Each engagement is scoped around the work itself. These are starting points, not rigid packages.</p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+              {coreServices.map((service, index) => <OfferCard key={service.id} service={service} index={index} />)}
             </div>
           </div>
-        </RevealSection>
+        </section>
 
-        {/* CORE BUILDS */}
-        <RevealSection className="py-20 px-6 md:px-12 border-t border-[#FAFAFA]/10">
-          <div className="max-w-7xl mx-auto">
-            <SectionLabel>[ CORE BUILDS - ONE-TIME ]</SectionLabel>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {coreServices.map((s, i) => <ServiceCard key={s.id} service={s} index={i} />)}
+        <section className="border-t border-[#2F3A45]/10 bg-[#E8E2DB]/45 px-6 py-20 md:px-12 md:py-24">
+          <div className="mx-auto max-w-7xl">
+            <p className="ot-eyebrow mb-4">[ ONGOING ]</p>
+            <div className="grid gap-4 md:grid-cols-2">
+              {ongoingServices.map((service, index) => <OfferCard key={service.id} service={service as typeof coreServices[0]} index={index + 5} />)}
             </div>
           </div>
-        </RevealSection>
+        </section>
 
-        {/* ONGOING */}
-        <RevealSection className="py-20 px-6 md:px-12 border-t border-[#FAFAFA]/10">
-          <div className="max-w-7xl mx-auto">
-            <SectionLabel>[ ONGOING - MONTHLY ]</SectionLabel>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {ongoingServices.map((s, i) => <ServiceCard key={s.id} service={s} index={i} />)}
-            </div>
+        <DitherGradient className="border-t border-[#2F3A45]/10 px-6 py-24 md:px-12 md:py-32">
+          <div className="mx-auto max-w-5xl text-center">
+            <p className="ot-eyebrow mb-5">[ NEXT STEP ]</p>
+            <h2 className="font-editorial text-5xl leading-[0.98] tracking-[-0.04em] md:text-7xl">Start with clarity, then decide what deserves to be built.</h2>
+            <Link to="/contact" className="ot-primary-button mt-9 inline-flex items-center gap-3 rounded-full px-7 py-3.5 text-[10px] font-bold uppercase tracking-[0.2em] transition-colors">
+              Start a conversation <ArrowRight size={13} />
+            </Link>
           </div>
-        </RevealSection>
-
-      </div>
+        </DitherGradient>
+      </main>
     </>
   );
 }
