@@ -13,35 +13,41 @@ export interface StickyServiceItem {
 export function StickyServiceCards({ items }: { items: StickyServiceItem[] }) {
   return (
     <div className="relative">
-      {items.map((item, index) => (
-        <motion.article
-          key={item.id}
-          initial={{ opacity: 0, y: 40, scale: 0.98 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.18 }}
-          transition={{ duration: 0.65, delay: Math.min(index * 0.06, 0.24), ease: [0.22, 1, 0.36, 1] }}
-          className="md:sticky mb-5 border border-[#FAFAFA]/10 bg-[#0D0D10]/95 backdrop-blur-xl overflow-hidden"
-          style={{ top: String(96 + index * 18) + 'px', zIndex: index + 1 }}
-        >
-          <div className="grid grid-cols-1 md:grid-cols-12 min-h-[330px]">
-            <div className="md:col-span-3 p-7 md:p-9 border-b md:border-b-0 md:border-r border-[#FAFAFA]/10 flex flex-col justify-between">
-              <span className="text-5xl md:text-6xl font-display text-[#FAFAFA]/15">{item.id}</span>
-              <p className="text-[10px] tracking-[0.28em] uppercase font-bold text-[#A1A1AA]">{item.label}</p>
-            </div>
-            <div className="md:col-span-9 p-7 md:p-10 lg:p-12 flex flex-col justify-between">
-              <div>
-                <h3 className="text-3xl md:text-5xl font-editorial uppercase tracking-tight leading-[0.95] max-w-3xl">{item.title}</h3>
-                <p className="mt-6 text-sm md:text-base leading-relaxed text-[#FAFAFA]/50 max-w-2xl">{item.description}</p>
-                {item.detail && <p className="mt-5 text-xs md:text-sm leading-relaxed text-[#FAFAFA]/30 max-w-2xl">{item.detail}</p>}
+      {items.map((item, index) => {
+        const accent = index % 2 === 0 ? '#8DA5B7' : '#8FA897';
+        return (
+          <motion.article
+            key={item.id}
+            initial={{ opacity: 0, y: 34, scale: 0.985 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true, amount: 0.18 }}
+            transition={{ duration: 0.62, delay: Math.min(index * 0.06, 0.24), ease: [0.22, 1, 0.36, 1] }}
+            className="mb-5 overflow-hidden rounded-[22px] border border-[#2F3A45]/10 bg-[#E8E2DB]/95 shadow-[0_16px_45px_rgba(47,58,69,0.07)] md:sticky"
+            style={{ top: String(96 + index * 18) + 'px', zIndex: index + 1 }}
+          >
+            <div className="grid min-h-[330px] grid-cols-1 md:grid-cols-12">
+              <div className="flex flex-col justify-between border-b border-[#2F3A45]/10 p-7 md:col-span-3 md:border-b-0 md:border-r md:p-9">
+                <span className="font-editorial text-6xl leading-none text-[#2F3A45]/18 md:text-7xl">{item.id}</span>
+                <div>
+                  <span className="mb-3 block h-2 w-2 rounded-full" style={{ backgroundColor: accent }} />
+                  <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#2F3A45]/54">{item.label}</p>
+                </div>
               </div>
-              <Link to="/services" className="mt-10 inline-flex items-center gap-3 text-[10px] tracking-[0.22em] uppercase font-bold text-[#FAFAFA]/45 hover:text-[#FAFAFA] transition-colors w-fit group">
-                See how this works
-                <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
+              <div className="flex flex-col justify-between p-7 md:col-span-9 md:p-10 lg:p-12">
+                <div>
+                  <h3 className="max-w-3xl font-editorial text-4xl leading-[0.98] tracking-[-0.035em] text-[#2F3A45] md:text-5xl">{item.title}</h3>
+                  <p className="mt-6 max-w-2xl text-sm leading-7 text-[#2F3A45]/66 md:text-base">{item.description}</p>
+                  {item.detail && <p className="mt-5 max-w-2xl text-xs leading-6 text-[#2F3A45]/45 md:text-sm">{item.detail}</p>}
+                </div>
+                <Link to="/services" className="group mt-10 inline-flex w-fit items-center gap-3 text-[10px] font-bold uppercase tracking-[0.22em] text-[#2F3A45]/52 transition-colors hover:text-[#2F3A45]">
+                  See how this works
+                  <ArrowRight size={12} className="transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
             </div>
-          </div>
-        </motion.article>
-      ))}
+          </motion.article>
+        );
+      })}
     </div>
   );
 }
