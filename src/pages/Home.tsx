@@ -11,6 +11,9 @@ import { ScrambleText } from '../components/ScrambleText';
 import { MagneticButton } from '../components/MagneticButton';
 import { ParallaxImage } from '../components/ParallaxImage';
 import { testimonials } from '../data/testimonialsData';
+import { KineticTextReveal } from '../components/ui/kinetic-text-reveal';
+import { StickyServiceCards } from '../components/StickyServiceCards';
+import { DitherGradient } from '../components/ui/dither-gradient';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -388,12 +391,27 @@ export default function Home() {
               <ScrambleText text={homeData.hero.badge} delay={0.5} />
             </motion.p>
 
-            <TextRevealLines
-              lines={[homeData.hero.titlePrimary, homeData.hero.titleAccent]}
-              className="text-5xl md:text-7xl lg:text-[7rem] leading-[1.0] font-editorial uppercase tracking-tight"
-              staggerDelay={0.12}
-              baseDelay={0.1}
-            />
+            <h1 className="text-5xl md:text-7xl lg:text-[7rem] leading-[1.0] font-editorial uppercase tracking-tight">
+              <KineticTextReveal
+                text={homeData.hero.titlePrimary}
+                splitBy="words"
+                direction="up"
+                distance={28}
+                stagger={0.08}
+                className="block"
+                delay={0.08}
+              />
+              <KineticTextReveal
+                text={homeData.hero.titleAccent}
+                splitBy="words"
+                direction="up"
+                distance={32}
+                stagger={0.09}
+                staggerFrom="end"
+                className="block text-[#A1A1AA]"
+                delay={0.2}
+              />
+            </h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -596,17 +614,15 @@ export default function Home() {
               </TextReveal>
               <p className="text-sm md:text-base leading-relaxed opacity-50 max-w-xl">{homeData.layers.description}</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-              {homeData.layers.items.map((layer, i) => (
-                <LayerCard
-                  key={layer.id}
-                  layer={layer}
-                  index={i}
-                  isOpen={openLayer === layer.id}
-                  onToggle={() => toggleLayer(layer.id)}
-                />
-              ))}
-            </div>
+            <StickyServiceCards
+              items={homeData.layers.items.map((layer) => ({
+                id: layer.id,
+                label: layer.label,
+                title: layer.label,
+                description: layer.description,
+                detail: layer.detail,
+              }))}
+            />
           </div>
         </RevealSection>
 
@@ -853,23 +869,27 @@ export default function Home() {
           );
         })()}
 
-        {/* ── BOTTOM CTA (LIGHT) ── */}
-        <section className="bg-[#F5F0EB] text-[#09090B] py-28 px-6 md:px-12 overflow-hidden relative">
-          {/* Large background text */}
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden"
-          >
-            <span className="text-[20vw] font-display uppercase tracking-[0.1em] text-[#09090B]/[0.04] whitespace-nowrap">O+X</span>
-          </div>
+        {/* ── BOTTOM CTA / COMPONENTRY DITHER FIELD ── */}
+        <section className="bg-[#09090B] text-[#FAFAFA] py-28 px-6 md:px-12 overflow-hidden relative border-t border-[#FAFAFA]/10">
+          <DitherGradient
+            colorFrom="#09090B"
+            colorMid="#26262B"
+            colorTo="#555560"
+            intensity={0.08}
+            speed={0.65}
+            angle={18}
+            resolutionScale={0.28}
+            className="opacity-70"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#09090B]/95 via-[#09090B]/55 to-[#09090B]/80 pointer-events-none" />
 
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10 relative z-10">
             <div>
-              <p className="text-[10px] text-[#09090B]/40 mb-4 font-bold tracking-[0.3em] uppercase">
+              <p className="text-[10px] text-[#FAFAFA]/45 mb-4 font-bold tracking-[0.3em] uppercase">
                 <ScrambleText text="[ READY TO BUILD ]" />
               </p>
               <TextReveal>
-                <h2 className="text-3xl md:text-5xl lg:text-6xl font-display uppercase tracking-tight leading-tight max-w-lg text-[#09090B]">
+                <h2 className="text-3xl md:text-5xl lg:text-6xl font-display uppercase tracking-tight leading-tight max-w-lg text-[#FAFAFA]">
                   Let&rsquo;s build<br />the system.
                 </h2>
               </TextReveal>
@@ -877,9 +897,9 @@ export default function Home() {
             <MagneticButton strength={0.5}>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-4 group border border-[#09090B]/20 px-10 py-5 hover:bg-[#09090B] hover:text-[#FAFAFA] transition-all duration-300 ease-out shrink-0 text-[#09090B]"
+                className="inline-flex items-center gap-4 group border border-[#FAFAFA]/30 bg-[#FAFAFA]/5 backdrop-blur-sm px-10 py-5 hover:bg-[#FAFAFA] hover:text-[#09090B] transition-all duration-300 ease-out shrink-0 text-[#FAFAFA]"
               >
-                <span className="text-[10px] tracking-[0.2em] uppercase font-bold group-hover:text-[#FAFAFA] transition-colors duration-300">Start a conversation</span>
+                <span className="text-[10px] tracking-[0.2em] uppercase font-bold group-hover:text-[#09090B] transition-colors duration-300">Start a conversation</span>
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-all duration-300" />
               </Link>
             </MagneticButton>

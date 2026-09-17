@@ -8,6 +8,7 @@ import { testimonials } from '../data/testimonialsData';
 import { TextReveal, TextRevealLines } from '../components/TextReveal';
 import { ScrambleText } from '../components/ScrambleText';
 import { MagneticButton } from '../components/MagneticButton';
+import { HoverTransition } from '../components/ui/hover-transition';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -16,6 +17,68 @@ const TAG_COLORS: Record<string, string> = {
   Automation: 'border-amber-400/30 text-amber-400',
   AEO: 'border-purple-400/30 text-purple-400',
 };
+
+function CourseOverviewCard({
+  course,
+  index,
+  onSelect,
+}: {
+  course: typeof courses[0];
+  index: number;
+  onSelect: () => void;
+}) {
+  const defaultCard = (
+    <div className="h-full min-h-[270px] p-7 flex flex-col justify-between bg-[#0D0D10] text-[#FAFAFA]">
+      <div>
+        <div className="flex items-start justify-between mb-7">
+          <span className={'text-[9px] font-bold tracking-[0.25em] uppercase border px-2 py-0.5 ' + (TAG_COLORS[course.tag] ?? 'border-[#FAFAFA]/20 text-[#A1A1AA]')}>{course.tag}</span>
+          <span className="text-lg font-display opacity-80">{course.price}</span>
+        </div>
+        <h3 className="text-xl font-display uppercase tracking-wide mb-3">{course.title}</h3>
+        <p className="text-xs opacity-40 leading-relaxed">{course.subtitle}</p>
+      </div>
+      <div className="flex items-center justify-between">
+        <span className="text-[10px] tracking-[0.15em] uppercase opacity-30">{course.duration} · {course.level}</span>
+        <span className="text-[10px] tracking-[0.15em] uppercase opacity-30">0{index + 1}</span>
+      </div>
+    </div>
+  );
+
+  const hoverCard = (
+    <div className="h-full min-h-[270px] p-7 flex flex-col justify-between bg-[#F5F0EB] text-[#09090B]">
+      <div>
+        <p className="text-[9px] font-bold tracking-[0.25em] uppercase text-[#09090B]/40 mb-7">[ OPEN CURRICULUM ]</p>
+        <h3 className="text-2xl font-editorial uppercase tracking-tight leading-tight mb-4">{course.title}</h3>
+        <p className="text-sm leading-relaxed text-[#09090B]/55">{course.description}</p>
+      </div>
+      <div className="flex items-center justify-between border-t border-[#09090B]/10 pt-5">
+        <span className="text-[10px] tracking-[0.18em] uppercase font-bold">View course</span>
+        <ArrowRight size={15} />
+      </div>
+    </div>
+  );
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.6, delay: index * 0.1, ease: EASE }}
+      onClick={onSelect}
+      className="cursor-pointer"
+    >
+      <HoverTransition
+        defaultComponent={defaultCard}
+        hoverComponent={hoverCard}
+        effect="slide"
+        direction="bottom"
+        duration={0.62}
+        label={course.title + ' course'}
+        className="min-h-[270px] border border-[#FAFAFA]/10"
+      />
+    </motion.div>
+  );
+}
 
 function ModuleAccordion({ modules }: { modules: typeof courses[0]['modules'] }) {
   const [open, setOpen] = useState<number | null>(0);
@@ -380,27 +443,16 @@ export default function Courses() {
               </TextReveal>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {courses.map((c, i) => (
-                <motion.div
-                  key={c.id}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.6, delay: i * 0.1, ease: EASE }}
-                  onClick={() => { setActiveTab(c.id); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-                  className="border border-[#FAFAFA]/10 bg-[#FAFAFA]/[0.02] p-7 cursor-pointer hover:border-[#FAFAFA]/25 hover:bg-[#FAFAFA]/[0.04] transition-all duration-500 group"
-                >
-                  <div className="flex items-start justify-between mb-5">
-                    <span className={`text-[9px] font-bold tracking-[0.25em] uppercase border px-2 py-0.5 ${TAG_COLORS[c.tag] ?? 'border-[#FAFAFA]/20 text-[#A1A1AA]'}`}>{c.tag}</span>
-                    <span className="text-lg font-display opacity-80">{c.price}</span>
-                  </div>
-                  <h3 className="text-lg font-display uppercase tracking-wide mb-3 group-hover:opacity-70 transition-opacity duration-300">{c.title}</h3>
-                  <p className="text-xs opacity-40 leading-relaxed mb-5">{c.subtitle}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] tracking-[0.15em] uppercase opacity-30">{c.duration} · {c.level}</span>
-                    <ArrowRight size={14} className="opacity-30 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
-                  </div>
-                </motion.div>
+              {courses.map((course, i) => (
+                <CourseOverviewCard
+                  key={course.id}
+                  course={course}
+                  index={i}
+                  onSelect={() => {
+                    setActiveTab(course.id);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                />
               ))}
             </div>
           </div>
