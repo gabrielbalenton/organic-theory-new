@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Outlet, useLocation, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
@@ -186,8 +186,8 @@ export default function Layout() {
               <p className="max-w-xs text-xs leading-6 text-[#FAF9F4]/58">Search, automation, and systems for brands that want to scale without unnecessary friction.</p>
             </div>
 
-            <FooterColumn title="Work" links={[['/services', 'Services'], ['/case-studies', 'Case Studies'], ['/process', 'Process']]} />
-            <FooterColumn title="Learn" links={[['/insights', 'Insights'], ['/courses', 'Courses'], ['/tools', 'Free Tools']]} />
+            <FooterColumn title="Work" links={[["/services", "Services"], ["/case-studies", "Case Studies"], ["/process", "Process"]]} />
+            <FooterColumn title="Learn" links={[["/insights", "Insights"], ["/courses", "Courses"], ["/tools", "Free Tools"]]} />
 
             <div>
               <p className="mb-4 text-[9px] font-bold uppercase tracking-[0.28em] text-[#FAF9F4]/35">Connect</p>
@@ -224,6 +224,6 @@ function FooterColumn({ title, links }: { title: string; links: [string, string]
   );
 }
 
-function FooterLink({ to, children }: { to: string; children: React.ReactNode }) {
+function FooterLink({ to, children }: { to: string; children: ReactNode }) {
   return <Link to={to} className="text-[10px] uppercase tracking-[0.18em] text-[#FAF9F4]/55 transition-colors hover:text-[#FAF9F4]">{children}</Link>;
 }
