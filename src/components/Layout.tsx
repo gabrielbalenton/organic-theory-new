@@ -7,7 +7,6 @@ import Cursor from './Cursor';
 import FloatingCTA from './FloatingCTA';
 import CookieBanner from './CookieBanner';
 import { ScrollProgress } from './ScrollProgress';
-import { MagneticButton } from './MagneticButton';
 import { Chatbot } from './Chatbot';
 import { Newsletter } from './Newsletter';
 
@@ -28,14 +27,13 @@ export default function Layout() {
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [showIntro, setShowIntro] = useState(() => !sessionStorage.getItem('intro_shown'));
-  const [introDone, setIntrosDone] = useState(() => !!sessionStorage.getItem('intro_shown'));
+  const [introDone, setIntroDone] = useState(() => !!sessionStorage.getItem('intro_shown'));
 
   const headerRef = useRef<HTMLElement>(null);
   const [headerHeight, setHeaderHeight] = useState(0);
   const lastScrollY = useRef(0);
   const rafId = useRef<number>();
 
-  // Measure header height dynamically
   useEffect(() => {
     const measure = () => {
       if (headerRef.current) setHeaderHeight(headerRef.current.offsetHeight);
@@ -45,7 +43,6 @@ export default function Layout() {
     return () => window.removeEventListener('resize', measure);
   }, [scrolled]);
 
-  // Scroll behavior
   useEffect(() => {
     const onScroll = () => {
       if (rafId.current) cancelAnimationFrame(rafId.current);
@@ -64,7 +61,6 @@ export default function Layout() {
     };
   }, []);
 
-  // Close menu + scroll top on route change
   useEffect(() => {
     setMenuOpen(false);
     window.scrollTo(0, 0);
@@ -73,7 +69,7 @@ export default function Layout() {
   const handleIntroComplete = () => {
     sessionStorage.setItem('intro_shown', 'true');
     setShowIntro(false);
-    setIntrosDone(true);
+    setIntroDone(true);
   };
 
   return (
@@ -82,57 +78,50 @@ export default function Layout() {
       <ScrollProgress />
       {showIntro && <Intro onComplete={handleIntroComplete} />}
 
-      {/* Page transition overlay */}
       <AnimatePresence>
         <motion.div
           key={location.pathname + '_overlay'}
           initial={{ scaleY: 1, transformOrigin: 'top' }}
           animate={{ scaleY: 0, transformOrigin: 'top' }}
-          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.05 }}
-          className="fixed inset-0 z-[250] bg-[#09090B] pointer-events-none"
+          transition={{ duration: 0.58, ease: [0.22, 1, 0.36, 1], delay: 0.04 }}
+          className="pointer-events-none fixed inset-0 z-[250] bg-[#FAF9F4]"
         />
       </AnimatePresence>
 
       <motion.div
         initial={introDone ? false : { opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="min-h-screen flex flex-col relative overflow-x-hidden"
+        transition={{ duration: 0.45 }}
+        className="relative flex min-h-screen flex-col overflow-x-hidden bg-[#FAF9F4] text-[#2F3A45]"
       >
-        {/* Navbar */}
         <motion.header
           ref={headerRef}
           animate={{ y: hidden ? '-100%' : '0%' }}
-          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className={`w-full fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-6 md:px-12 transition-all duration-300 ${
+          transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
+          className={`fixed left-0 right-0 top-0 z-50 flex w-full items-center justify-between px-6 transition-all duration-300 md:px-12 ${
             scrolled
-              ? 'py-4 bg-[#09090B]/85 backdrop-blur-md border-b border-[#FAFAFA]/[0.06]'
-              : 'py-6 bg-transparent'
+              ? 'border-b border-[#2F3A45]/10 bg-[#FAF9F4]/92 py-4 shadow-[0_8px_24px_rgba(47,58,69,0.035)] backdrop-blur-xl'
+              : 'bg-transparent py-6'
           }`}
         >
-          <Link
-            to="/"
-            className="flex items-center gap-4 group z-50"
-            aria-label="Organic Theory Home"
-          >
-            <div className="flex items-center font-display font-bold text-xl tracking-[0.3em] text-[#FAFAFA]">
+          <Link to="/" className="group z-50 flex items-center gap-4" aria-label="Organic Theory Home">
+            <div className="flex items-center font-display text-xl font-bold tracking-[0.3em] text-[#2F3A45]">
               <span>O</span>
-              <span className="text-[#A1A1AA] mx-1">+</span>
+              <span className="mx-1 text-[#8DA5B7]">+</span>
               <span>X</span>
             </div>
-            <span className="hidden md:block font-sans text-[10px] tracking-[0.2em] uppercase opacity-0 group-hover:opacity-40 transition-opacity duration-300 text-[#FAFAFA]">
+            <span className="hidden text-[10px] uppercase tracking-[0.2em] text-[#2F3A45]/0 transition-colors duration-300 group-hover:text-[#2F3A45]/45 md:block">
               Organic Theory
             </span>
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8 font-sans text-[10px] tracking-[0.2em] uppercase z-50">
+          <nav className="z-50 hidden items-center gap-7 text-[10px] uppercase tracking-[0.18em] md:flex">
             <Link
               to="/start"
-              className={`border px-3 py-1.5 transition-all duration-200 ${
+              className={`rounded-full border px-4 py-2 transition-all duration-200 ${
                 location.pathname === '/start'
-                  ? 'border-[#FAFAFA] text-[#FAFAFA]'
-                  : 'border-[#FAFAFA]/30 text-[#FAFAFA]/70 hover:border-[#FAFAFA] hover:text-[#FAFAFA]'
+                  ? 'border-[#2F3A45] bg-[#2F3A45] text-[#FAF9F4]'
+                  : 'border-[#2F3A45]/18 text-[#2F3A45]/65 hover:border-[#2F3A45]/45 hover:text-[#2F3A45]'
               }`}
             >
               Start Here
@@ -141,18 +130,15 @@ export default function Layout() {
               <Link
                 key={to}
                 to={to}
-                className={`transition-opacity duration-200 text-[#FAFAFA] ${
-                  location.pathname === to ? 'opacity-100' : 'opacity-50 hover:opacity-100'
-                }`}
+                className={`transition-colors duration-200 ${location.pathname === to ? 'text-[#2F3A45]' : 'text-[#2F3A45]/48 hover:text-[#2F3A45]'}`}
               >
                 {label}
               </Link>
             ))}
           </nav>
 
-          {/* Mobile hamburger */}
           <button
-            className="md:hidden z-50 p-2 text-[#FAFAFA]"
+            className="z-50 p-2 text-[#2F3A45] md:hidden"
             onClick={() => setMenuOpen(o => !o)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           >
@@ -160,122 +146,62 @@ export default function Layout() {
           </button>
         </motion.header>
 
-        {/* Mobile menu */}
         <AnimatePresence>
           {menuOpen && (
             <motion.div
               initial={{ opacity: 0, clipPath: 'inset(0 0 100% 0)' }}
               animate={{ opacity: 1, clipPath: 'inset(0 0 0% 0)' }}
               exit={{ opacity: 0, clipPath: 'inset(0 0 100% 0)' }}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="fixed inset-0 z-40 bg-[#09090B] flex flex-col items-center justify-center gap-10"
+              transition={{ duration: 0.46, ease: [0.22, 1, 0.36, 1] }}
+              className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-[#E8E2DB] px-6"
             >
               {[{ to: '/', label: 'Home' }, { to: '/start', label: 'Start Here' }, ...NAV_LINKS].map(({ to, label }) => (
                 <Link
                   key={to}
                   to={to}
                   onClick={() => setMenuOpen(false)}
-                  className="font-display text-3xl tracking-[0.3em] uppercase text-[#FAFAFA] hover:text-[#A1A1AA] transition-colors duration-200"
+                  className="font-editorial text-4xl tracking-[-0.02em] text-[#2F3A45] transition-colors duration-200 hover:text-[#8DA5B7]"
                 >
                   {label}
                 </Link>
               ))}
-              <a
-                href="https://www.linkedin.com/in/gabrielbalenton/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[10px] tracking-[0.3em] uppercase text-[#A1A1AA] mt-6 hover:opacity-60 transition-opacity"
-              >
+              <a href="https://www.linkedin.com/in/gabrielbalenton/" target="_blank" rel="noopener noreferrer" className="mt-5 text-[10px] uppercase tracking-[0.28em] text-[#2F3A45]/45 hover:text-[#2F3A45]">
                 LinkedIn
               </a>
             </motion.div>
           )}
         </AnimatePresence>
 
-        {/* Page content - padding driven by measured header height */}
-        <main className="flex-grow w-full" style={{ paddingTop: headerHeight }}>
+        <main className="w-full flex-grow" style={{ paddingTop: headerHeight }}>
           <Outlet />
         </main>
 
-        {/* Newsletter */}
         <Newsletter />
 
-        {/* Footer */}
-        <footer className="border-t border-[#FAFAFA]/10 px-6 md:px-12 py-16">
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 items-start">
-
-            {/* Brand */}
-            <div className="md:col-span-1">
-              <div className="font-display font-bold text-lg tracking-[0.3em] text-[#FAFAFA] mb-2">
-                O<span className="text-[#A1A1AA] mx-1">+</span>X
-              </div>
-              <p className="text-[10px] tracking-[0.2em] uppercase opacity-30 mb-3">Organic Theory</p>
-              <p className="text-xs opacity-40 leading-relaxed max-w-xs">
-                Search, automation, and systems for global brands that want to scale without friction.
-              </p>
+        <footer className="ot-contrast border-t border-[#FAF9F4]/10 bg-[#2F3A45] px-6 py-16 text-[#FAF9F4] md:px-12 md:py-20">
+          <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 md:grid-cols-4">
+            <div>
+              <div className="mb-3 font-display text-lg font-bold tracking-[0.3em] text-[#FAF9F4]">O<span className="mx-1 text-[#8DA5B7]">+</span>X</div>
+              <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-[#FAF9F4]/45">Organic Theory</p>
+              <p className="max-w-xs text-xs leading-6 text-[#FAF9F4]/58">Search, automation, and systems for brands that want to scale without unnecessary friction.</p>
             </div>
 
-            {/* Work */}
-            <div>
-              <p className="text-[9px] tracking-[0.3em] uppercase opacity-25 mb-4 font-bold">Work</p>
-              <nav className="flex flex-col gap-3">
-                {[
-                  { to: '/services', label: 'Services' },
-                  { to: '/case-studies', label: 'Case Studies' },
-                  { to: '/process', label: 'Process' },
-                ].map(({ to, label }) => (
-                  <Link key={to} to={to} className="text-[10px] tracking-[0.2em] uppercase opacity-40 hover:opacity-100 transition-opacity duration-200">
-                    {label}
-                  </Link>
-                ))}
-              </nav>
-            </div>
+            <FooterColumn title="Work" links={[['/services', 'Services'], ['/case-studies', 'Case Studies'], ['/process', 'Process']]} />
+            <FooterColumn title="Learn" links={[['/insights', 'Insights'], ['/courses', 'Courses'], ['/tools', 'Free Tools']]} />
 
-            {/* Learn */}
             <div>
-              <p className="text-[9px] tracking-[0.3em] uppercase opacity-25 mb-4 font-bold">Learn</p>
-              <nav className="flex flex-col gap-3">
-                {[
-                  { to: '/insights', label: 'Insights' },
-                  { to: '/courses', label: 'Courses' },
-                  { to: '/tools', label: 'Free Tools' },
-                ].map(({ to, label }) => (
-                  <Link key={to} to={to} className="text-[10px] tracking-[0.2em] uppercase opacity-40 hover:opacity-100 transition-opacity duration-200">
-                    {label}
-                  </Link>
-                ))}
-              </nav>
-            </div>
-
-            {/* Connect */}
-            <div>
-              <p className="text-[9px] tracking-[0.3em] uppercase opacity-25 mb-4 font-bold">Connect</p>
+              <p className="mb-4 text-[9px] font-bold uppercase tracking-[0.28em] text-[#FAF9F4]/35">Connect</p>
               <div className="flex flex-col gap-3">
-                <Link to="/about" className="text-[10px] tracking-[0.2em] uppercase opacity-40 hover:opacity-100 transition-opacity duration-200">About</Link>
-                <Link to="/contact" className="text-[10px] tracking-[0.2em] uppercase opacity-40 hover:opacity-100 transition-opacity duration-200">Contact</Link>
-                <a
-                  href="https://www.linkedin.com/in/gabrielbalenton/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[10px] tracking-[0.2em] uppercase opacity-40 hover:opacity-100 transition-opacity duration-200"
-                >
-                  LinkedIn
-                </a>
-                <a
-                  href="mailto:gabrielbalenton@gmail.com"
-                  className="text-[10px] tracking-[0.2em] uppercase opacity-40 hover:opacity-100 transition-opacity duration-200 lowercase"
-                >
-                  gabrielbalenton@gmail.com
-                </a>
+                <FooterLink to="/about">About</FooterLink>
+                <FooterLink to="/contact">Contact</FooterLink>
+                <a href="https://www.linkedin.com/in/gabrielbalenton/" target="_blank" rel="noopener noreferrer" className="text-[10px] uppercase tracking-[0.18em] text-[#FAF9F4]/55 transition-colors hover:text-[#FAF9F4]">LinkedIn</a>
+                <a href="mailto:gabrielbalenton@gmail.com" className="text-[10px] tracking-[0.12em] text-[#FAF9F4]/55 transition-colors hover:text-[#FAF9F4]">gabrielbalenton@gmail.com</a>
               </div>
             </div>
-
           </div>
-          <div className="max-w-7xl mx-auto mt-12 pt-6 border-t border-[#FAFAFA]/5 flex flex-col md:flex-row justify-between gap-2">
-            <p className="text-[10px] tracking-[0.15em] uppercase opacity-20">
-              &copy; {new Date().getFullYear()} Organic Theory // Gabriel Balenton
-            </p>
-            <p className="text-[10px] tracking-[0.15em] uppercase opacity-20">Worldwide</p>
+          <div className="mx-auto mt-14 flex max-w-7xl flex-col justify-between gap-3 border-t border-[#FAF9F4]/10 pt-6 md:flex-row">
+            <p className="text-[9px] uppercase tracking-[0.16em] text-[#FAF9F4]/32">© {new Date().getFullYear()} Organic Theory · Gabriel Balenton</p>
+            <p className="text-[9px] uppercase tracking-[0.16em] text-[#FAF9F4]/32">Worldwide</p>
           </div>
         </footer>
 
@@ -285,4 +211,19 @@ export default function Layout() {
       </motion.div>
     </>
   );
+}
+
+function FooterColumn({ title, links }: { title: string; links: [string, string][] }) {
+  return (
+    <div>
+      <p className="mb-4 text-[9px] font-bold uppercase tracking-[0.28em] text-[#FAF9F4]/35">{title}</p>
+      <nav className="flex flex-col gap-3">
+        {links.map(([to, label]) => <FooterLink key={to} to={to}>{label}</FooterLink>)}
+      </nav>
+    </div>
+  );
+}
+
+function FooterLink({ to, children }: { to: string; children: React.ReactNode }) {
+  return <Link to={to} className="text-[10px] uppercase tracking-[0.18em] text-[#FAF9F4]/55 transition-colors hover:text-[#FAF9F4]">{children}</Link>;
 }
