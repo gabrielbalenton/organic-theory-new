@@ -12,7 +12,7 @@ import { MagneticButton } from '../components/MagneticButton';
 import { ParallaxImage } from '../components/ParallaxImage';
 import { testimonials } from '../data/testimonialsData';
 import { KineticTextReveal } from '../components/ui/kinetic-text-reveal';
-import { ServiceOrbitStack } from '../components/ui/service-orbit-stack';
+import { ServiceScrollChoreography } from '../components/ui/service-scroll-choreography';
 import { DitherGradient } from '../components/ui/dither-gradient';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -602,29 +602,31 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── SERVICE LAYERS (DARK) ── */}
-        <RevealSection className="py-20 px-6 md:px-12 border-t border-[#FAFAFA]/10">
-          <div className="max-w-7xl mx-auto">
-            <div className="mb-14">
-              <p className="text-[10px] text-[#A1A1AA] mb-4 font-bold tracking-[0.3em] uppercase">
-                <ScrambleText text="[ WHAT I BUILD ]" />
-              </p>
-              <TextReveal>
-                <h2 className="text-2xl md:text-3xl mb-4 font-display uppercase tracking-widest">{homeData.layers.title}</h2>
-              </TextReveal>
-              <p className="text-sm md:text-base leading-relaxed opacity-50 max-w-xl">{homeData.layers.description}</p>
-            </div>
-            <ServiceOrbitStack
-              items={homeData.layers.items.map((layer) => ({
-                id: layer.id,
-                label: layer.label,
-                title: layer.label,
-                description: layer.description,
-                detail: layer.detail,
-              }))}
-            />
+        {/* ── WHAT I BUILD / SCROLL CHOREOGRAPHY ── */}
+        <section className="border-t border-[#2F3A45]/10 bg-[#FAF9F4] px-6 pb-12 pt-24 text-[#2F3A45] md:px-12 md:pb-16 md:pt-28">
+          <div className="mx-auto max-w-7xl">
+            <p className="ot-eyebrow mb-5">
+              <ScrambleText text="[ WHAT I BUILD ]" />
+            </p>
+            <TextReveal>
+              <h2 className="max-w-[12ch] font-editorial text-5xl leading-[0.96] tracking-[-0.04em] text-[#2F3A45] md:text-7xl">
+                One system. Several layers.
+              </h2>
+            </TextReveal>
+            <p className="mt-6 max-w-2xl text-sm leading-7 text-[#2F3A45]/62 md:text-base">
+              Search, automation, interface, and content should reinforce each other. The stack stays simple; the thinking does the heavy lifting.
+            </p>
           </div>
-        </RevealSection>
+        </section>
+
+        <ServiceScrollChoreography
+          items={homeData.layers.items.map((layer) => ({
+            id: layer.id,
+            label: layer.label,
+            description: layer.description,
+            detail: layer.detail,
+          }))}
+        />
 
         {/* ── METHODOLOGY - with photo (DARK) ── */}
         <RevealSection className="border-t border-[#FAFAFA]/10 overflow-hidden">
