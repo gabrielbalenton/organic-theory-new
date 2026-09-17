@@ -21,7 +21,7 @@ export default function Intro({ onComplete }: { onComplete: () => void }) {
         <motion.div
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, transition: { duration: 0.52, ease: [0.22, 1, 0.36, 1] } }}
-          className="fixed inset-0 z-[200] flex flex-col items-center justify-center overflow-hidden bg-[#FAF9F4] text-[#2F3A45]"
+          className="fixed inset-0 z-[300] flex flex-col items-center justify-center overflow-hidden bg-[#FAF9F4] text-[#2F3A45]"
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
