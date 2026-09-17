@@ -4,52 +4,154 @@
   --font-display: "Montserrat", sans-serif;
   --font-sans: "Inter", sans-serif;
   --font-editorial: "Cormorant Garamond", Georgia, serif;
-}
 
-.font-editorial {
-  font-family: var(--font-editorial);
-  font-weight: 300;
-  letter-spacing: 0.02em;
+  --color-ot-canvas: #FAF9F4;
+  --color-ot-surface: #E8E2DB;
+  --color-ot-ink: #2F3A45;
+  --color-ot-blue: #8DA5B7;
+  --color-ot-sage: #8FA897;
 }
 
 :root {
-  background-color: #09090B;
-  color: #FAFAFA;
+  --ot-canvas: #FAF9F4;
+  --ot-surface: #E8E2DB;
+  --ot-ink: #2F3A45;
+  --ot-blue: #8DA5B7;
+  --ot-sage: #8FA897;
+  --ot-line: rgba(47, 58, 69, 0.14);
+  --ot-soft-line: rgba(47, 58, 69, 0.08);
+  --ot-shadow: 0 18px 50px rgba(47, 58, 69, 0.08);
+  background-color: var(--ot-canvas);
+  color: var(--ot-ink);
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  background-color: #09090B;
-  color: #FAFAFA;
+  background-color: var(--ot-canvas);
+  color: var(--ot-ink);
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
 }
 
-.font-display {
-  font-family: var(--font-display);
+body {
+  font-family: var(--font-sans);
+  line-height: 1.65;
 }
 
-/* Hide default cursor on pointer devices — custom cursor replaces it */
+.font-display { font-family: var(--font-display); }
+.font-editorial {
+  font-family: var(--font-editorial);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+.ot-canvas { background: var(--ot-canvas); color: var(--ot-ink); }
+.ot-surface { background: var(--ot-surface); color: var(--ot-ink); }
+.ot-dark { background: var(--ot-ink); color: var(--ot-canvas); }
+.ot-eyebrow {
+  color: var(--ot-blue);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+.ot-rule { border-color: var(--ot-line); }
+.ot-card {
+  border: 1px solid var(--ot-soft-line);
+  border-radius: 1.25rem;
+  background: rgba(232, 226, 219, 0.62);
+  box-shadow: var(--ot-shadow);
+}
+.ot-primary-button {
+  background: var(--ot-ink);
+  color: var(--ot-canvas);
+  border: 1px solid var(--ot-ink);
+}
+.ot-primary-button:hover { background: #43515e; border-color: #43515e; }
+.ot-secondary-button {
+  background: transparent;
+  color: var(--ot-ink);
+  border: 1px solid var(--ot-ink);
+}
+.ot-secondary-button:hover { background: var(--ot-surface); }
+
+/* Compatibility remap for the original dark visual system. */
+[class*="bg-[#09090B]"] { background-color: var(--ot-canvas) !important; }
+[class*="text-[#FAFAFA]"] { color: var(--ot-ink) !important; }
+[class*="border-[#FAFAFA]"] { border-color: var(--ot-line) !important; }
+[class*="text-[#A1A1AA]"] { color: var(--ot-blue) !important; }
+[class*="bg-[#F5F0EB]"],
+[class*="bg-[#F4F4F5]"] { background-color: var(--ot-surface) !important; }
+[class*="text-[#09090B]"] { color: var(--ot-ink) !important; }
+[class*="border-[#09090B]"] { border-color: var(--ot-line) !important; }
+
+/* Explicit dark contrast regions. */
+.ot-contrast,
+.ot-contrast [class*="bg-[#09090B]"] { background-color: var(--ot-ink) !important; }
+.ot-contrast,
+.ot-contrast [class*="text-[#FAFAFA]"],
+.ot-contrast [class*="text-[#A1A1AA]"] { color: var(--ot-canvas) !important; }
+.ot-contrast [class*="border-[#FAFAFA]"] { border-color: rgba(250, 249, 244, 0.18) !important; }
+
+/* Existing image heroes remain intentionally high-contrast. */
+section:has(img[src="/images/home-hero.png"]),
+section:has(img[src="/images/services-hero.png"]),
+section:has(img[src="/images/contact-hero.png"]) {
+  color: var(--ot-canvas) !important;
+}
+section:has(img[src="/images/home-hero.png"]) [class*="text-[#FAFAFA]"],
+section:has(img[src="/images/services-hero.png"]) [class*="text-[#FAFAFA]"],
+section:has(img[src="/images/contact-hero.png"]) [class*="text-[#FAFAFA]"] {
+  color: var(--ot-canvas) !important;
+}
+section:has(img[src="/images/home-hero.png"]) [class*="text-[#A1A1AA]"],
+section:has(img[src="/images/contact-hero.png"]) [class*="text-[#A1A1AA]"] {
+  color: #D4DEE5 !important;
+}
+
+div:has(> img[src="/images/home-methodology.png"]) [class*="text-[#FAFAFA]"] {
+  color: var(--ot-canvas) !important;
+}
+
+/* Keep photography quiet enough to live with the warm neutral system. */
+.ot-editorial-image img,
+main img:not([src*="logo"]):not([src*="icon"]) {
+  filter: saturate(0.86) contrast(0.98);
+}
+
+/* Soft, consistent interactive surfaces without forcing boxed layouts. */
+a, button { -webkit-tap-highlight-color: transparent; }
+button, a { text-underline-offset: 0.22em; }
+
 @media (pointer: fine) {
   html, * { cursor: none !important; }
   input, textarea, select, [contenteditable] { cursor: text !important; }
-  /* Internal tools (e.g. /fpx/stocklist) render outside Layout, so there's
-     no custom cursor dot to replace the hidden native one — restore it. */
   .use-native-cursor, .use-native-cursor * { cursor: auto !important; }
   .use-native-cursor input, .use-native-cursor textarea,
   .use-native-cursor select, .use-native-cursor [contenteditable] { cursor: text !important; }
   .use-native-cursor button, .use-native-cursor a { cursor: pointer !important; }
 }
 
-/* Minimal scrollbar */
-::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(250,250,250,0.15); border-radius: 2px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(250,250,250,0.3); }
+::-webkit-scrollbar-thumb { background: rgba(47, 58, 69, 0.2); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(47, 58, 69, 0.35); }
 
-/* Selection */
-::selection { background: rgba(250,250,250,0.15); color: #FAFAFA; }
+::selection { background: rgba(141, 165, 183, 0.28); color: var(--ot-ink); }
 
-/* Smooth focus */
-:focus-visible { outline: 1px solid rgba(250,250,250,0.4); outline-offset: 3px; }
+:focus-visible {
+  outline: 2px solid var(--ot-blue);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

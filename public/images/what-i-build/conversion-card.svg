@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#E3E9E4"/>
+<circle cx="1390" cy="150" r="14" fill="#8DA5B7"/>
+<text x="110" y="170" fill="#2F3A45" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="700" letter-spacing="10">03</text>
+<text x="110" y="390" fill="#2F3A45" font-family="Georgia, serif" font-size="104">CONVERSION</text>
+<text x="110" y="470" fill="#2F3A45" opacity=".64" font-family="Arial, Helvetica, sans-serif" font-size="30">Email and nurture systems that move leads toward a yes.</text>
+<path d="M108 590 H760" stroke="#2F3A45" opacity=".12"/>
+<text x="110" y="645" fill="#2F3A45" opacity=".42" font-family="Arial, Helvetica, sans-serif" font-size="22" letter-spacing="4">EMAIL · NURTURE · BEHAVIORAL FLOWS</text>
+</svg>
