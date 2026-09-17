@@ -26,8 +26,8 @@ export default function Layout() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
-  const [showIntro, setShowIntro] = useState(() => !sessionStorage.getItem('intro_shown'));
-  const [introDone, setIntroDone] = useState(() => !!sessionStorage.getItem('intro_shown'));
+  const [showIntro, setShowIntro] = useState(() => !sessionStorage.getItem('intro_shown_componentry_v2'));
+  const [introDone, setIntroDone] = useState(() => !!sessionStorage.getItem('intro_shown_componentry_v2'));
 
   const headerRef = useRef<HTMLElement>(null);
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -67,7 +67,7 @@ export default function Layout() {
   }, [location.pathname]);
 
   const handleIntroComplete = () => {
-    sessionStorage.setItem('intro_shown', 'true');
+    sessionStorage.setItem('intro_shown_componentry_v2', 'true');
     setShowIntro(false);
     setIntroDone(true);
   };
@@ -92,7 +92,7 @@ export default function Layout() {
         initial={introDone ? false : { opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.45 }}
-        className="relative flex min-h-screen flex-col overflow-x-hidden bg-[#FAF9F4] text-[#2F3A45]"
+        className="relative flex min-h-screen flex-col overflow-x-clip bg-[#FAF9F4] text-[#2F3A45]"
       >
         <motion.header
           ref={headerRef}
