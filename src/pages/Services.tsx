@@ -60,6 +60,7 @@ export default function Services() {
       { '@type': 'Question', name: 'What does the Search & Systems Audit include?', acceptedAnswer: { '@type': 'Answer', text: 'The audit covers search visibility, site structure, speed, workflow gaps, and delivers a prioritized fix list with a 30-day action plan.' } },
       { '@type': 'Question', name: 'Do I need to commit to a monthly plan?', acceptedAnswer: { '@type': 'Answer', text: 'No monthly commitment required. Start with the $400 audit, then choose which projects to commission. You only pay for the work you want done.' } },
       { '@type': 'Question', name: 'What is the difference between Search Architecture and AI Automation?', acceptedAnswer: { '@type': 'Answer', text: 'Search Architecture focuses on being found - keyword strategy, technical SEO, and content structure. AI Automation focuses on intelligence inside your workflow - AI agents, lead routing, and smart processing.' } },
+      { '@type': 'Question', name: 'What is the difference between Interface Design and Full-Stack Development?', acceptedAnswer: { '@type': 'Answer', text: 'Interface Design and Development is for public websites, landing pages, CMS builds, and front-end experiences. Full-Stack Development is for applications that also require databases, authentication, permissions, business logic, APIs, and operational workflows.' } },
     ],
   };
 
@@ -67,12 +68,12 @@ export default function Services() {
     <>
       <Helmet>
         <title>Services & Pricing | Organic Theory</title>
-        <meta name="description" content="Search architecture, AI automation, workflow engineering, and interface builds. Start with a $400 audit. No retainer required." />
+        <meta name="description" content="Search architecture, AI automation, workflow engineering, interface builds, and full-stack development. Start with a $400 audit. No retainer required." />
         <meta property="og:site_name" content="Organic Theory" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://organic-theory.vercel.app/services" />
         <meta property="og:title" content="Services & Pricing | Organic Theory" />
-        <meta property="og:description" content="From a $400 audit to full system builds. Search, AI, workflow, and interface. No retainer required." />
+        <meta property="og:description" content="From a $400 audit to full-stack product builds. Search, AI, workflow, interface, and custom software. No retainer required." />
         <link rel="canonical" href="https://organic-theory.vercel.app/services" />
         <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
@@ -128,7 +129,7 @@ export default function Services() {
               One system. Several layers.
             </h2>
             <p className="mt-6 max-w-2xl text-sm leading-7 text-[#2F3A45]/62 md:text-base">
-              Search, automation, interface, and content should reinforce each other. The stack stays simple; the thinking does the heavy lifting.
+              Search, automation, interfaces, and full-stack products should reinforce each other. The four growth layers stay intact; custom software becomes available when the business needs more than a website or off-the-shelf tool.
             </p>
           </div>
         </section>
