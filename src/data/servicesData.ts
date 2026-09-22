@@ -90,11 +90,27 @@ export const coreServices = [
       'Deployment on GitHub and Vercel',
     ],
   },
+  {
+    id: '06',
+    name: 'Full-Stack Development',
+    price: '$2,500',
+    descriptor: 'Custom applications and internal platforms built end to end. Interface, database, authentication, business logic, integrations, and deployment designed as one system - not a front end stitched onto disconnected tools.',
+    bullets: [
+      'Product architecture - translating business rules into a buildable application model',
+      'Front-end application development - responsive interfaces, dashboards, portals, and admin experiences',
+      'Relational databases - schema design, canonical records, history, and data integrity',
+      'Authentication & RBAC - account access, role-based permissions, and scoped authority',
+      'Backend & business logic - validation, state transitions, server-side rules, and APIs',
+      'Integrations - payments, email, third-party services, automation, and external data',
+      'Custom CRMs & internal tools - software built around the operation instead of a generic template',
+      'QA, security & deployment - edge-case testing, production hardening, GitHub, and Vercel',
+    ],
+  },
 ];
 
 export const ongoingServices = [
   {
-    id: '06',
+    id: '07',
     name: 'Content Strategy & Management',
     price: 'from $1,200 / month',
     descriptor: 'A content system you can actually sustain, not a one-off burst.',
@@ -108,7 +124,7 @@ export const ongoingServices = [
     ],
   },
   {
-    id: '07',
+    id: '08',
     name: 'Email & Automation',
     price: 'from $800 / month',
     descriptor: 'Campaigns and flows that move people from interested to buying.',
