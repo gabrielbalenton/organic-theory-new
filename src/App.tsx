@@ -10,6 +10,9 @@ const DMR = lazy(() => import('./pages/case-studies/DMR'));
 const FPX = lazy(() => import('./pages/case-studies/FPX'));
 const ICSH = lazy(() => import('./pages/case-studies/ICSH'));
 const ContentSystem = lazy(() => import('./pages/case-studies/ContentSystem'));
+const HeadlessGM = lazy(() => import('./pages/case-studies/HeadlessGM'));
+const B2BTimberMerchant = lazy(() => import('./pages/case-studies/B2BTimberMerchant'));
+const B2BTimberSourcing = lazy(() => import('./pages/case-studies/B2BTimberSourcing'));
 const Tools = lazy(() => import('./pages/Tools'));
 const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
@@ -39,6 +42,9 @@ export default function App() {
             <Route path="case-studies/fpx" element={<FPX />} />
             <Route path="case-studies/icsh" element={<ICSH />} />
             <Route path="case-studies/content-system" element={<ContentSystem />} />
+            <Route path="case-studies/headless-gm" element={<HeadlessGM />} />
+            <Route path="case-studies/b2b-timber-merchant" element={<B2BTimberMerchant />} />
+            <Route path="case-studies/b2b-timber-sourcing" element={<B2BTimberSourcing />} />
             <Route path="contact" element={<Contact />} />
             <Route path="tools" element={<Tools />} />
             <Route path="insights" element={<Blog />} />
