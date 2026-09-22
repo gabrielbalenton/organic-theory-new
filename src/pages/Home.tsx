@@ -129,6 +129,14 @@ const TOOLS = [
     ),
   },
   {
+    name: 'Supabase', cat: 'Backend',
+    logo: <span className="text-[10px] font-black tracking-tight">Supabase</span>,
+  },
+  {
+    name: 'TypeScript', cat: 'Build',
+    logo: <span className="text-[12px] font-black tracking-tight">TS</span>,
+  },
+  {
     name: 'GA4', cat: 'Analytics',
     logo: <span className="text-[11px] font-black tracking-tight">GA4</span>,
   },
@@ -317,7 +325,7 @@ export default function Home() {
     '@type': 'WebSite',
     name: 'Organic Theory',
     url: 'https://organic-theory.vercel.app',
-    description: 'Digital consultancy specializing in search architecture, AI automation, and workflow engineering.',
+    description: 'Digital consultancy building search architecture, AI automation, workflow systems, production websites, and full-stack applications.',
     author: { '@type': 'Person', name: 'Gabriel Balenton', url: 'https://organic-theory.vercel.app', sameAs: ['https://www.linkedin.com/in/gabrielbalenton/'] },
   };
   const schemaProfessional = {
@@ -325,31 +333,31 @@ export default function Home() {
     '@type': 'ProfessionalService',
     name: 'Organic Theory',
     url: 'https://organic-theory.vercel.app',
-    description: 'Strategic digital consultancy building search systems, AI automation, and workflow infrastructure for global brands.',
+    description: 'Strategic digital consultancy building search systems, AI automation, workflow infrastructure, production websites, and full-stack software for global brands.',
     founder: { '@type': 'Person', name: 'Gabriel Balenton' },
     areaServed: 'Worldwide',
-    serviceType: ['SEO', 'AI Automation', 'Workflow Engineering', 'Web Development', 'Content Strategy'],
+    serviceType: ['SEO', 'Answer Engine Optimization', 'AI Automation', 'Workflow Engineering', 'Web Development', 'Full-Stack Development', 'Custom Software Development', 'Content Strategy'],
     sameAs: ['https://www.linkedin.com/in/gabrielbalenton/'],
   };
 
   return (
     <>
       <Helmet>
-        <title>Organic Theory | Strategic Search Architecture & Systems</title>
-        <meta name="description" content="Organic Theory builds search systems, AI automation, and workflow infrastructure that allow global brands to scale without friction. Founded by Gabriel Balenton." />
+        <title>Organic Theory | Search, Automation & Full-Stack Systems</title>
+        <meta name="description" content="Organic Theory builds search systems, automation, production websites, and full-stack software - from acquisition architecture to the operational products behind the business." />
         <meta property="og:site_name" content="Organic Theory" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://organic-theory.vercel.app" />
-        <meta property="og:title" content="Organic Theory | Strategic Search Architecture & Systems" />
-        <meta property="og:description" content="Search architecture, AI automation, and workflow engineering for global brands. Founded by Gabriel Balenton." />
+        <meta property="og:title" content="Organic Theory | Search, Automation & Full-Stack Systems" />
+        <meta property="og:description" content="Search architecture, AI automation, workflow engineering, production websites, and full-stack applications." />
         <meta property="og:image" content="https://organic-theory.vercel.app/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Organic Theory - Strategic Logic. Measurable Growth." />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Organic Theory | Strategic Search Architecture & Systems" />
-        <meta name="twitter:description" content="Search architecture, AI automation, and workflow engineering for global brands." />
+        <meta name="twitter:title" content="Organic Theory | Search, Automation & Full-Stack Systems" />
+        <meta name="twitter:description" content="Search architecture, automation, production websites, and full-stack software built as connected systems." />
         <meta name="twitter:image" content="https://organic-theory.vercel.app/og-image.png" />
         <meta name="twitter:image:alt" content="Organic Theory - Strategic Logic. Measurable Growth." />
         <link rel="canonical" href="https://organic-theory.vercel.app" />
@@ -549,6 +557,42 @@ export default function Home() {
               <p className="text-sm opacity-30 max-w-xs text-right">Numbers from real builds. No projections.</p>
             </div>
             <StatTicker />
+          </div>
+        </RevealSection>
+
+        {/* ── FULL-STACK DEVELOPMENT ── */}
+        <RevealSection className="py-24 px-6 md:px-12 border-t border-[#FAFAFA]/10">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+            <div className="lg:col-span-5">
+              <p className="text-[10px] text-[#A1A1AA] mb-5 font-bold tracking-[0.3em] uppercase">
+                <ScrambleText text="[ FULL-STACK DEVELOPMENT ]" />
+              </p>
+              <TextReveal>
+                <h2 className="text-3xl md:text-5xl font-display uppercase tracking-tight leading-[1.05]">
+                  Not every problem<br />should end as a website.
+                </h2>
+              </TextReveal>
+            </div>
+            <div className="lg:col-span-7">
+              <p className="text-sm md:text-base leading-7 opacity-60 max-w-2xl">
+                When the business needs accounts, permissions, relational data, workflow state, validation, integrations, and an interface people actually operate every day, I build the application behind it too.
+              </p>
+              <div className="mt-8 grid grid-cols-2 gap-px border border-[#FAFAFA]/10 bg-[#FAFAFA]/10 sm:grid-cols-3">
+                {['Product architecture', 'Frontend application', 'Database design', 'Authentication & RBAC', 'Business logic & APIs', 'QA & deployment'].map((item) => (
+                  <div key={item} className="bg-[#09090B] px-4 py-5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#FAFAFA]/55">
+                    {item}
+                  </div>
+                ))}
+              </div>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Link to="/services" className="inline-flex items-center gap-3 border border-[#FAFAFA]/20 px-6 py-3 text-[10px] font-bold uppercase tracking-[0.2em] transition-all hover:bg-[#FAFAFA] hover:text-[#09090B]">
+                  Full-stack service <ArrowRight size={12} />
+                </Link>
+                <Link to="/case-studies/headless-gm" className="inline-flex items-center gap-3 px-2 py-3 text-[10px] font-bold uppercase tracking-[0.2em] text-[#FAFAFA]/55 transition-colors hover:text-[#FAFAFA]">
+                  See the product case study <ArrowRight size={12} />
+                </Link>
+              </div>
+            </div>
           </div>
         </RevealSection>
 
@@ -756,7 +800,11 @@ export default function Home() {
             },
             {
               q: 'Do you build websites?',
-              a: "Yes, under Interface Design and Development. I build performance-first sites in React and modern frameworks - designed to convert, not just impress. These are typically paired with a Search Architecture engagement so the site is built to rank from day one.",
+              a: "Yes. Interface Design and Development covers public websites, landing pages, CMS builds, and high-performance front ends. Full-Stack Development is separate: that is for applications that also need a database, authentication, permissions, backend logic, APIs, and operational workflows.",
+            },
+            {
+              q: 'Do you build full-stack applications?',
+              a: "Yes. Full-Stack Development is priced at $2,500 and covers custom applications and internal platforms where the interface, database, authentication, business logic, integrations, QA, and deployment need to work as one system. Headless GM is the portfolio proof point for this kind of build.",
             },
             {
               q: 'Can you help with just one thing, or do I need a full package?',
