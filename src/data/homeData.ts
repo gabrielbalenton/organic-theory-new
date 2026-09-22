@@ -9,7 +9,7 @@ export const homeData = {
     badge: "[ GLOBAL DIGITAL CONSULTANCY ]",
     titlePrimary: "STRATEGIC LOGIC.",
     titleAccent: "MEASURABLE GROWTH.",
-    description: "Not just Google. Every search engine, every AI tool, every map. Your business gets found by the right people, at the right moment. Then the systems built around it handle everything once they arrive."
+    description: "Get found by the right people, turn attention into action, automate the operation, or build the software the business actually needs. Search, conversion, infrastructure, and custom product development designed to work as one system."
   },
   layers: {
     title: "The System",
