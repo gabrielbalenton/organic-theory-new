@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+<title id="title">Headless operations platform architecture</title>
+<desc id="desc">Layered diagram showing client interfaces, application layer, domain rules, relational data, services, and audit history.</desc>
+<rect width="1600" height="1000" fill="#FAF9F4"/>
+<rect x="90" y="90" width="1420" height="820" rx="36" fill="#E8E2DB" stroke="#2F3A45" stroke-opacity=".12" stroke-width="2"/>
+<text x="150" y="180" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#2F3A45">HEADLESS OPERATIONS PLATFORM</text>
+<text x="150" y="225" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#2F3A45" opacity=".58">Business rules separated from the interfaces that consume them.</text>
+<g font-family="Arial, Helvetica, sans-serif">
+<rect x="150" y="310" width="350" height="150" rx="24" fill="#FAF9F4" stroke="#2F3A45" stroke-opacity=".16"/>
+<text x="185" y="360" font-size="22" font-weight="700" fill="#2F3A45">Client Interfaces</text>
+<text x="185" y="400" font-size="17" fill="#2F3A45" opacity=".58">Dashboard · admin · future clients</text>
+<rect x="625" y="310" width="350" height="150" rx="24" fill="#FAF9F4" stroke="#2F3A45" stroke-opacity=".16"/>
+<text x="660" y="360" font-size="22" font-weight="700" fill="#2F3A45">Application Layer</text>
+<text x="660" y="400" font-size="17" fill="#2F3A45" opacity=".58">Orchestration · validation · state</text>
+<rect x="1100" y="310" width="350" height="150" rx="24" fill="#FAF9F4" stroke="#2F3A45" stroke-opacity=".16"/>
+<text x="1135" y="360" font-size="22" font-weight="700" fill="#2F3A45">Domain Core</text>
+<text x="1135" y="400" font-size="17" fill="#2F3A45" opacity=".58">Identity · roles · transactions</text>
+<rect x="150" y="590" width="350" height="150" rx="24" fill="#FAF9F4" stroke="#2F3A45" stroke-opacity=".16"/>
+<text x="185" y="640" font-size="22" font-weight="700" fill="#2F3A45">Relational Data</text>
+<text x="185" y="680" font-size="17" fill="#2F3A45" opacity=".58">Canonical records · history</text>
+<rect x="625" y="590" width="350" height="150" rx="24" fill="#FAF9F4" stroke="#2F3A45" stroke-opacity=".16"/>
+<text x="660" y="640" font-size="22" font-weight="700" fill="#2F3A45">External Services</text>
+<text x="660" y="680" font-size="17" fill="#2F3A45" opacity=".58">Auth · notifications · integrations</text>
+<rect x="1100" y="590" width="350" height="150" rx="24" fill="#FAF9F4" stroke="#2F3A45" stroke-opacity=".16"/>
+<text x="1135" y="640" font-size="22" font-weight="700" fill="#2F3A45">Auditability</text>
+<text x="1135" y="680" font-size="17" fill="#2F3A45" opacity=".58">Actors · timestamps · provenance</text>
+</g>
+<g stroke="#8FA897" stroke-width="5" fill="none" stroke-linecap="round" opacity=".85">
+<path d="M500 385 H625"/>
+<path d="M975 385 H1100"/>
+<path d="M1275 460 V535 H325 V590"/>
+<path d="M800 460 V590"/>
+<path d="M1275 460 V590"/>
+</g>
+<circle cx="562" cy="385" r="7" fill="#8DA5B7"/>
+<circle cx="1037" cy="385" r="7" fill="#8DA5B7"/>
+</svg>
