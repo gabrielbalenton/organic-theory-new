@@ -5,10 +5,10 @@ import { ScrambleText } from '../components/ScrambleText';
 import { KineticTextReveal } from '../components/ui/kinetic-text-reveal';
 import { CaseStudyFlipStack, type EditorialCaseStudy } from '../components/ui/case-study-flip-stack';
 
-const accents: Array<'blue' | 'sage' | 'neutral'> = ['blue', 'sage', 'neutral', 'blue'];
+const accents: Array<'blue' | 'sage' | 'neutral'> = ['blue', 'sage', 'neutral', 'blue', 'sage', 'neutral', 'blue'];
 
-export default function Work() {
-  const items: EditorialCaseStudy[] = portfolioData.map((project, index) => ({
+function toEditorial(project: typeof portfolioData[number], index: number): EditorialCaseStudy {
+  return {
     id: project.id,
     eyebrow: project.client,
     title: project.title,
@@ -18,13 +18,18 @@ export default function Work() {
     href: project.slug,
     metrics: project.metrics,
     accent: accents[index % accents.length],
-  }));
+  };
+}
+
+export default function Work() {
+  const featured = portfolioData.slice(0, 3).map(toEditorial);
+  const earlier = portfolioData.slice(3).map((project, index) => toEditorial(project, index + 3));
 
   return (
     <>
       <Helmet>
-        <title>Case Studies | Real Results | Organic Theory</title>
-        <meta name="description" content="Real results from real builds. Search visibility from 0 to 63%, Lighthouse SEO score of 100, 1,281 pages deployed. See the work." />
+        <title>Case Studies | Product Engineering, Search & Systems | Organic Theory</title>
+        <meta name="description" content="Full-stack product engineering, production website rebuilds, performance engineering, search systems, CRM automation, and content architecture. See the work." />
         <meta property="og:title" content="Case Studies | Organic Theory" />
         <meta property="og:url" content="https://organic-theory.vercel.app/case-studies" />
         <link rel="canonical" href="https://organic-theory.vercel.app/case-studies" />
@@ -52,16 +57,39 @@ export default function Work() {
             />
             <div className="mt-8 flex max-w-3xl flex-col gap-5 border-t border-[#2F3A45]/10 pt-6 md:flex-row md:items-end md:justify-between">
               <p className="max-w-2xl text-sm leading-7 text-[#2F3A45]/62 md:text-base">
-                Technical search, automation, content systems, and platform work. The presentation is quieter now; the evidence stays front and centre.
+                Product engineering, production website rebuilds, performance work, search systems, automation, and content. The work ranges from acquisition layers to the software the operation actually runs on.
               </p>
               <p className="shrink-0 text-[10px] font-bold uppercase tracking-[0.24em] text-[#2F3A45]/40">{portfolioData.length} studies</p>
             </div>
           </div>
         </header>
 
+        <section className="border-t border-[#2F3A45]/10 px-6 py-14 md:px-12 md:py-18">
+          <div className="mx-auto max-w-7xl">
+            <p className="ot-eyebrow mb-4">[ FEATURED ENGINEERING WORK ]</p>
+            <h2 className="max-w-[13ch] font-editorial text-4xl leading-[0.98] tracking-[-0.035em] md:text-6xl">
+              From public websites to operational software.
+            </h2>
+            <p className="mt-5 max-w-2xl text-sm leading-7 text-[#2F3A45]/58">
+              These three projects show the expanded build capability directly: full-stack product architecture, production website migration, and a high-performance acquisition layer designed around an existing application.
+            </p>
+          </div>
+        </section>
+
         <div className="border-t border-[#2F3A45]/10">
-          <CaseStudyFlipStack items={items} />
+          <CaseStudyFlipStack items={featured} />
         </div>
+
+        <section className="border-y border-[#2F3A45]/10 bg-[#E8E2DB]/35 px-6 py-14 md:px-12 md:py-18">
+          <div className="mx-auto max-w-7xl">
+            <p className="ot-eyebrow mb-4">[ EARLIER & SPECIALIST WORK ]</p>
+            <h2 className="max-w-[12ch] font-editorial text-4xl leading-[0.98] tracking-[-0.035em] md:text-6xl">
+              Search, automation, content, and earlier technical phases.
+            </h2>
+          </div>
+        </section>
+
+        <CaseStudyFlipStack items={earlier} />
       </div>
     </>
   );
