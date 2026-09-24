@@ -57,12 +57,12 @@ export default function DMRSignature() {
               style="display:block;border:0;width:80px;height:250px;">
           </td>
 
-          <!-- RIGHT PHOTO FRAME: exact-pixel transparent PNG, no browser scaling -->
-          <td width="330" height="250" valign="top"
-            style="width:330px;height:250px;padding:0;background:#f7f7f7;">
+          <!-- RIGHT PHOTO FRAME: Gmail-safe TD background + rasterized portrait fallback -->
+          <td width="330" height="250" valign="top" bgcolor="#f7f7f7"
+            background="${asset('dmr-right-background.png')}"
+            style="width:330px;height:250px;padding:0;background-color:#f7f7f7;background-image:url('${asset('dmr-right-background.png')}');background-repeat:no-repeat;background-position:left top;background-size:330px 250px;-webkit-background-size:330px 250px;">
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="330" height="250"
-              background="${asset('dmr-right-background.png')}"
-              style="width:330px;height:250px;border-collapse:collapse;background-color:#f7f7f7;background-image:url('${asset('dmr-right-background.png')}');background-repeat:no-repeat;background-position:center center;background-size:330px 250px;-webkit-background-size:330px 250px;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+              style="width:330px;height:250px;border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
               <tr>
 
                 <!-- CONTACT DETAILS -->
@@ -121,11 +121,11 @@ export default function DMRSignature() {
                   </table>
                 </td>
 
-                <!-- DANIEL PORTRAIT -->
+                <!-- DANIEL PORTRAIT: normal IMG includes the building background so Gmail cannot strip it -->
                 <td width="160" height="250" valign="bottom" align="right"
-                  style="width:160px;height:250px;padding:0;">
-                  <img src="${asset('daniel-reid-cutout.png')}" alt="Daniel Reid" width="160"
-                    style="display:block;border:0;width:160px;height:auto;max-width:160px;">
+                  style="width:160px;height:250px;padding:0;background:#f7f7f7;">
+                  <img src="${asset('dmr-daniel-panel.jpg')}" alt="Daniel Reid" width="160" height="250"
+                    style="display:block;border:0;width:160px;height:250px;max-width:160px;">
                 </td>
 
               </tr>
@@ -255,7 +255,17 @@ export default function DMRSignature() {
   };
 
   return (
-    <main className="use-native-cursor" style={{
+    <style>{`
+      .dmr-signature-page,
+      .dmr-signature-page * {
+        cursor: default !important;
+      }
+      .dmr-signature-page a,
+      .dmr-signature-page button {
+        cursor: pointer !important;
+      }
+    `}</style>
+    <main className="dmr-signature-page use-native-cursor" style={{
       minHeight: '100vh',
       background: '#f3f3f3',
       padding: '42px 20px 70px',
