@@ -38,8 +38,8 @@ export default function DMRSignature() {
 
   <tr>
     <td colspan="3" width="700" height="250" valign="top"
-      background="${asset('FULLBG2.png')}"
-      style="width:700px;height:250px;padding:0;margin:0;line-height:0;font-size:0;background-color:#061311;background-image:url('${asset('FULLBG2.png')}');background-repeat:no-repeat;background-position:left top;background-size:700px 250px;-webkit-background-size:700px 250px;">
+      background="${asset('FULLBG2-700.png')}"
+      style="width:700px;height:250px;padding:0;margin:0;line-height:0;font-size:0;background-color:#061311;background-image:url('${asset('FULLBG2-700.png')}');background-repeat:no-repeat;background-position:left top;background-size:700px 250px;-webkit-background-size:700px 250px;">
       
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="700" height="250"
         style="width:700px;height:250px;border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
