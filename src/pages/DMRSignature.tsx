@@ -37,99 +37,80 @@ export default function DMRSignature() {
   style="width:700px;border-collapse:collapse;background:#ffffff;font-family:Montserrat,Arial,Helvetica,sans-serif;color:#111111;mso-table-lspace:0pt;mso-table-rspace:0pt;">
 
   <tr>
-    <td colspan="3" style="padding:0;margin:0;">
-
+    <td colspan="3" width="700" height="250" valign="top"
+      background="${asset('FULLBG.png')}"
+      style="width:700px;height:250px;padding:0;margin:0;background-color:#061311;background-image:url('${asset('FULLBG.png')}');background-repeat:no-repeat;background-position:left top;background-size:700px 250px;-webkit-background-size:700px 250px;">
+      
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="700" height="250"
-        style="width:700px;height:250px;border-collapse:collapse;background:#ffffff;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+        style="width:700px;height:250px;border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
         <tr>
 
-          <!-- LEFT BLACK LOGO PANEL -->
-          <td width="290" height="250" valign="middle" bgcolor="#000000"
-            style="width:290px;height:250px;background:#000000;padding:0 2px 0 6px;">
-            <img src="${asset('dmr-logo-white.png')}" alt="DMR Designs" width="282"
-              style="display:block;border:0;width:282px;height:auto;max-width:282px;">
+          <!-- DMR LOGO OVER THE BLACK AREA -->
+          <td width="355" height="250" valign="middle"
+            style="width:355px;height:250px;padding:0 0 0 12px;background:transparent;">
+            <img src="${asset('dmr-logo-white.png')}" alt="DMR Designs" width="295"
+              style="display:block;border:0;width:295px;height:auto;max-width:295px;">
           </td>
 
-          <!-- EMAIL-SAFE DIAGONAL WEDGE -->
-          <td width="80" height="250" valign="top" bgcolor="#f7f7f7"
-            style="width:80px;height:250px;padding:0;background:#f7f7f7;">
-            <img src="${asset('dmr-diagonal-wedge.png')}" alt="" width="80" height="250"
-              style="display:block;border:0;width:80px;height:250px;max-width:80px;">
-          </td>
+          <!-- DANIEL DETAILS OVER FULLBG -->
+          <td width="195" height="250" valign="middle"
+            style="width:195px;height:250px;padding:0 0 0 4px;color:#111111;background:transparent;">
+            <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:27px;line-height:30px;font-weight:700;letter-spacing:-1px;white-space:nowrap;">
+              Daniel Reid
+            </div>
 
-          <!-- RIGHT PANEL: merged architecture background + Daniel. Keep a real IMG fallback for Gmail. -->
-          <td width="330" height="250" valign="top" bgcolor="#f7f7f7"
-            background="${asset('dmr-right-background-daniel.png')}"
-            style="width:330px;height:250px;padding:0;background-color:#f7f7f7;background-image:url('${asset('dmr-right-background-daniel.png')}');background-repeat:no-repeat;background-position:left top;background-size:330px 250px;-webkit-background-size:330px 250px;">
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="330" height="250"
-              style="width:330px;height:250px;border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+            <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9px;line-height:13px;font-weight:500;letter-spacing:2.7px;white-space:nowrap;margin-top:2px;">
+              DESIGN DIRECTOR
+            </div>
+
+            <div style="border-top:1px solid #777777;width:185px;height:1px;line-height:1px;font-size:1px;margin:8px 0 8px;">&nbsp;</div>
+
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+              style="border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
               <tr>
-
-                <!-- CONTACT DETAILS -->
-                <td width="160" height="250" valign="middle"
-                  style="width:160px;height:250px;padding:0 2px 0 2px;color:#111111;background:transparent;">
-                  <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:27px;line-height:30px;font-weight:700;letter-spacing:-1px;white-space:nowrap;">
-                    Daniel Reid
-                  </div>
-
-                  <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9px;line-height:13px;font-weight:500;letter-spacing:2.7px;white-space:nowrap;margin-top:2px;">
-                    DESIGN DIRECTOR
-                  </div>
-
-                  <div style="border-top:1px solid #777777;width:158px;height:1px;line-height:1px;font-size:1px;margin:8px 0 8px;">&nbsp;</div>
-
-                  <table role="presentation" cellpadding="0" cellspacing="0" border="0"
-                    style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
-                    <tr>
-                      <td width="26" valign="middle" style="width:26px;padding:0 6px 6px 0;">
-                        <img src="${asset('icon-phone.png')}" alt="" width="20" height="20"
-                          style="display:block;border:0;width:20px;height:20px;">
-                      </td>
-                      <td valign="middle" style="padding:0 0 6px;white-space:nowrap;">
-                        <a href="tel:+61294109819"
-                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:10px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
-                          02 9410 9819
-                        </a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td width="26" valign="middle" style="width:26px;padding:0 6px 6px 0;">
-                        <img src="${asset('icon-email.png')}" alt="" width="20" height="20"
-                          style="display:block;border:0;width:20px;height:20px;">
-                      </td>
-                      <td valign="middle" style="padding:0 0 6px;white-space:nowrap;">
-                        <a href="mailto:daniel@dmrdesigns.com.au"
-                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:8.7px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
-                          daniel@dmrdesigns.com.au
-                        </a>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td width="26" valign="middle" style="width:26px;padding:0 6px 0 0;">
-                        <img src="${asset('icon-web.png')}" alt="" width="20" height="20"
-                          style="display:block;border:0;width:20px;height:20px;">
-                      </td>
-                      <td valign="middle" style="padding:0;white-space:nowrap;">
-                        <a href="https://www.dmrdesigns.com.au/" target="_blank"
-                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.5px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
-                          dmrdesigns.com.au
-                        </a>
-                      </td>
-                    </tr>
-                  </table>
+                <td width="26" valign="middle" style="width:26px;padding:0 6px 6px 0;">
+                  <img src="${asset('icon-phone.png')}" alt="" width="20" height="20"
+                    style="display:block;border:0;width:20px;height:20px;">
                 </td>
-
-                <!-- DANIEL PHOTO: real IMG fallback so Gmail still loads Daniel even if it strips TD backgrounds -->
-                <td width="170" height="250" valign="bottom" align="right"
-                  style="width:170px;height:250px;padding:0;background:transparent;font-size:0;line-height:0;">
-                  <img src="${asset('dmr-daniel-panel.jpg')}" alt="Daniel Reid" width="170" height="250"
-                    style="display:block;border:0;width:170px;height:250px;max-width:170px;min-width:170px;">
+                <td valign="middle" style="padding:0 0 6px;white-space:nowrap;">
+                  <a href="tel:+61294109819"
+                    style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:10px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
+                    02 9410 9819
+                  </a>
                 </td>
+              </tr>
 
+              <tr>
+                <td width="26" valign="middle" style="width:26px;padding:0 6px 6px 0;">
+                  <img src="${asset('icon-email.png')}" alt="" width="20" height="20"
+                    style="display:block;border:0;width:20px;height:20px;">
+                </td>
+                <td valign="middle" style="padding:0 0 6px;white-space:nowrap;">
+                  <a href="mailto:daniel@dmrdesigns.com.au"
+                    style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:8.7px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
+                    daniel@dmrdesigns.com.au
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td width="26" valign="middle" style="width:26px;padding:0 6px 0 0;">
+                  <img src="${asset('icon-web.png')}" alt="" width="20" height="20"
+                    style="display:block;border:0;width:20px;height:20px;">
+                </td>
+                <td valign="middle" style="padding:0;white-space:nowrap;">
+                  <a href="https://www.dmrdesigns.com.au/" target="_blank"
+                    style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.5px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
+                    dmrdesigns.com.au
+                  </a>
+                </td>
               </tr>
             </table>
+          </td>
+
+          <!-- DANIEL IS ALREADY BAKED INTO FULLBG.PNG -->
+          <td width="150" height="250" style="width:150px;height:250px;padding:0;background:transparent;font-size:0;line-height:0;">
+            &nbsp;
           </td>
 
         </tr>
@@ -281,7 +262,7 @@ export default function DMRSignature() {
             Email Signature Preview
           </h1>
           <p style={{ margin: '10px 0 0', fontSize: 14, lineHeight: 1.6, color: '#6b6b6b' }}>
-            Gmail-safe version. 700px wide with table-based layout and explicit image sizing.
+            Gmail-safe version. 700px wide with a single 700 × 250 background header and explicit image sizing.
           </p>
         </div>
 
