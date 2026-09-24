@@ -41,26 +41,26 @@ export default function DMRSignature() {
 
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="700" height="250"
         background="${asset('dmr-right-background.jpg')}"
-        style="width:700px;height:250px;border-collapse:collapse;background-color:#f7f7f7;background-image:url('${asset('dmr-right-background.jpg')}');background-repeat:no-repeat;background-position:center center;background-size:cover;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+        style="width:700px;height:250px;border-collapse:collapse;background-color:#f7f7f7;background-image:url('${asset('dmr-right-background.jpg')}');background-repeat:no-repeat;background-position:right center;background-size:430px auto;mso-table-lspace:0pt;mso-table-rspace:0pt;">
         <tr>
 
           <!-- LEFT BLACK LOGO PANEL -->
-          <td width="275" height="250" valign="middle" bgcolor="#000000"
-            style="width:275px;height:250px;background:#000000;padding:0 7px 0 8px;">
-            <img src="${asset('dmr-logo-white.png')}" alt="DMR Designs" width="260"
-              style="display:block;border:0;width:260px;height:auto;max-width:260px;">
+          <td width="290" height="250" valign="middle" bgcolor="#000000"
+            style="width:290px;height:250px;background:#000000;padding:0 2px 0 6px;">
+            <img src="${asset('dmr-logo-white.png')}" alt="DMR Designs" width="282"
+              style="display:block;border:0;width:282px;height:auto;max-width:282px;">
           </td>
 
           <!-- EMAIL-SAFE DIAGONAL WEDGE -->
-          <td width="105" height="250" valign="top"
-            style="width:105px;height:250px;padding:0;background:transparent;">
-            <img src="${asset('dmr-diagonal-wedge.png')}" alt="" width="105" height="250"
-              style="display:block;border:0;width:105px;height:250px;">
+          <td width="90" height="250" valign="top"
+            style="width:90px;height:250px;padding:0;background:transparent;">
+            <img src="${asset('dmr-diagonal-wedge.png')}" alt="" width="90" height="250"
+              style="display:block;border:0;width:90px;height:250px;">
           </td>
 
           <!-- CONTACT DETAILS -->
-          <td width="185" height="250" valign="middle"
-            style="width:185px;height:250px;padding:0 3px 0 2px;color:#111111;">
+          <td width="175" height="250" valign="middle"
+            style="width:175px;height:250px;padding:0 2px 0 1px;color:#111111;">
             <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:25px;line-height:28px;font-weight:700;letter-spacing:-1px;white-space:nowrap;">
               Daniel Reid
             </div>
@@ -115,10 +115,10 @@ export default function DMRSignature() {
           </td>
 
           <!-- DANIEL PORTRAIT -->
-          <td width="135" height="250" valign="bottom" align="right"
-            style="width:135px;height:250px;padding:0;">
-            <img src="${asset('daniel-reid-cutout.png')}" alt="Daniel Reid" width="135"
-              style="display:block;border:0;width:135px;height:auto;max-width:135px;">
+          <td width="145" height="250" valign="bottom" align="right"
+            style="width:145px;height:250px;padding:0;">
+            <img src="${asset('daniel-reid-cutout.png')}" alt="Daniel Reid" width="145"
+              style="display:block;border:0;width:145px;height:auto;max-width:145px;">
           </td>
 
         </tr>
