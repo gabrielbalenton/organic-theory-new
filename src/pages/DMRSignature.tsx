@@ -57,17 +57,17 @@ export default function DMRSignature() {
               style="display:block;border:0;width:80px;height:250px;">
           </td>
 
-          <!-- RIGHT PHOTO FRAME: Gmail-safe TD background + rasterized portrait fallback -->
+          <!-- RIGHT PHOTO FRAME: merged background + Daniel image -->
           <td width="330" height="250" valign="top" bgcolor="#f7f7f7"
-            background="${asset('dmr-right-background.png')}"
-            style="width:330px;height:250px;padding:0;background-color:#f7f7f7;background-image:url('${asset('dmr-right-background.png')}');background-repeat:no-repeat;background-position:left top;background-size:330px 250px;-webkit-background-size:330px 250px;">
+            background="${asset('dmr-right-background-daniel.png')}"
+            style="width:330px;height:250px;padding:0;background-color:#f7f7f7;background-image:url('${asset('dmr-right-background-daniel.png')}');background-repeat:no-repeat;background-position:left top;background-size:330px 250px;-webkit-background-size:330px 250px;">
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="330" height="250"
               style="width:330px;height:250px;border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
               <tr>
 
                 <!-- CONTACT DETAILS -->
                 <td width="170" height="250" valign="middle"
-                  style="width:170px;height:250px;padding:0 4px 0 2px;color:#111111;">
+                  style="width:170px;height:250px;padding:0 4px 0 2px;color:#111111;background:transparent;">
                   <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:27px;line-height:30px;font-weight:700;letter-spacing:-1px;white-space:nowrap;">
                     Daniel Reid
                   </div>
@@ -121,11 +121,10 @@ export default function DMRSignature() {
                   </table>
                 </td>
 
-                <!-- DANIEL PORTRAIT: normal IMG includes the building background so Gmail cannot strip it -->
+                <!-- DANIEL IS ALREADY MERGED INTO dmr-right-background-daniel.png -->
                 <td width="160" height="250" valign="bottom" align="right"
-                  style="width:160px;height:250px;padding:0;background:#f7f7f7;">
-                  <img src="${asset('dmr-daniel-panel.jpg')}" alt="Daniel Reid" width="160" height="250"
-                    style="display:block;border:0;width:160px;height:250px;max-width:160px;">
+                  style="width:160px;height:250px;padding:0;background:transparent;font-size:0;line-height:0;">
+                  &nbsp;
                 </td>
 
               </tr>
