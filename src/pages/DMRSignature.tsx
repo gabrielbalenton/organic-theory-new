@@ -5,12 +5,12 @@ import '@fontsource/montserrat/600.css';
 import '@fontsource/montserrat/700.css';
 
 const socials = [
-  ['linkedin.png', 'LinkedIn', 'https://www.linkedin.com/company/dmr-designs-aus'],
   ['instagram.png', 'Instagram', 'https://www.instagram.com/dmrdesigns_/?hl=en'],
-  ['youtube.png', 'YouTube', 'https://www.youtube.com/@dmrdesigns1'],
-  ['pinterest.png', 'Pinterest', 'https://au.pinterest.com/dmrdesigns_/'],
-  ['tiktok.png', 'TikTok', 'https://www.tiktok.com/@dmrdesigns_'],
   ['facebook.png', 'Facebook', 'https://www.facebook.com/DMRDESIGNS.com.au/'],
+  ['tiktok.png', 'TikTok', 'https://www.tiktok.com/@dmrdesigns_'],
+  ['pinterest.png', 'Pinterest', 'https://au.pinterest.com/dmrdesigns_/'],
+  ['youtube.png', 'YouTube', 'https://www.youtube.com/@dmrdesigns1'],
+  ['linkedin.png', 'LinkedIn', 'https://www.linkedin.com/company/dmr-designs-aus'],
 ] as const;
 
 // DMR footer typography locked after Gmail QA.
