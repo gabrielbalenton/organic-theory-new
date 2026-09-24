@@ -255,16 +255,6 @@ export default function DMRSignature() {
   };
 
   return (
-    <style>{`
-      .dmr-signature-page,
-      .dmr-signature-page * {
-        cursor: default !important;
-      }
-      .dmr-signature-page a,
-      .dmr-signature-page button {
-        cursor: pointer !important;
-      }
-    `}</style>
     <main className="dmr-signature-page use-native-cursor" style={{
       minHeight: '100vh',
       background: '#f3f3f3',
@@ -272,6 +262,16 @@ export default function DMRSignature() {
       fontFamily: 'Montserrat, Arial, Helvetica, sans-serif',
       color: '#111',
     }}>
+      <style>{`
+        .dmr-signature-page,
+        .dmr-signature-page * {
+          cursor: default !important;
+        }
+        .dmr-signature-page a,
+        .dmr-signature-page button {
+          cursor: pointer !important;
+        }
+      `}</style>
       <div style={{ maxWidth: 820, margin: '0 auto' }}>
         <div style={{ marginBottom: 22 }}>
           <div style={{ fontSize: 12, letterSpacing: '0.22em', textTransform: 'uppercase', color: '#777', marginBottom: 8 }}>
