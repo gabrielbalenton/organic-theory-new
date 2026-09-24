@@ -48,8 +48,8 @@ export default function DMRSignature() {
           <!-- DMR LOGO OVER THE BLACK AREA -->
           <td width="378" height="250" valign="middle"
             style="width:378px;height:250px;padding:0 0 0 8px;background:transparent;">
-            <img src="${asset('dmr-logo-white.png')}" alt="DMR Designs" width="242"
-              style="display:block;border:0;width:242px;height:auto;max-width:242px;">
+            <img src="${asset('dmr-logo-white.png')}" alt="DMR Designs" width="276"
+              style="display:block;border:0;width:276px;height:auto;max-width:276px;">
           </td>
 
           <!-- DANIEL DETAILS OVER FULLBG -->
@@ -130,7 +130,7 @@ export default function DMRSignature() {
         <tr>
           <td width="229" valign="top"
             style="width:229px;padding:13px 14px 10px 15px;background:#ffffff;">
-            <div style="border-right:1px solid #8c8c8c;padding-right:14px;">
+            <div style="padding-right:14px;">
       <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:8.5px;line-height:11px;font-weight:500;letter-spacing:1.7px;white-space:nowrap;margin-bottom:8px;">
         PROFESSIONAL REGISTRATION
       </div>
