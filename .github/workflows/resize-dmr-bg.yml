@@ -1,0 +1,36 @@
+name: Resize DMR background
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'public/images/DMR Assets/FULLBG2.png'
+      - '.github/workflows/resize-dmr-bg.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  resize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ImageMagick
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+
+      - name: Resize FULLBG2 to Gmail-safe 700x250
+        run: |
+          convert "public/images/DMR Assets/FULLBG2.png" -filter Lanczos -resize 700x250! -strip "public/images/DMR Assets/FULLBG2-700.png"
+
+      - name: Commit resized asset if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "public/images/DMR Assets/FULLBG2-700.png"
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Generate Gmail-safe 700x250 DMR background"
+            git push
+          fi
