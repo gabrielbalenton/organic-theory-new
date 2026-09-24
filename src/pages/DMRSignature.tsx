@@ -140,9 +140,9 @@ export default function DMRSignature() {
         style="width:230px;border-collapse:collapse;">
         <tr>
           <td width="229" valign="top"
-            style="width:229px;padding:13px 14px 10px 15px;background:#ffffff;">
-            <div style="padding-right:14px;">
-      <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.2px;line-height:12px;font-weight:500;letter-spacing:1.7px;white-space:nowrap;margin-bottom:8px;">
+            style="width:229px;padding:13px 8px 10px 15px;background:#ffffff;">
+            <div style="padding-right:6px;">
+      <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:10.2px;line-height:13px;font-weight:500;letter-spacing:1.5px;white-space:nowrap;margin-bottom:8px;">
         PROFESSIONAL REGISTRATION
       </div>
 
@@ -152,7 +152,7 @@ export default function DMRSignature() {
             <img src="${asset('icon-arrow.png')}" alt="" width="11" height="11"
               style="display:block;border:0;width:11px;height:11px;">
           </td>
-          <td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:8.4px;line-height:12px;color:#202020;padding-bottom:5px;">
+          <td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.8px;line-height:14px;color:#202020;padding-bottom:6px;">
             Registered Design Practitioner:<br>Medium Rise QRCCC315
           </td>
         </tr>
@@ -161,7 +161,7 @@ export default function DMRSignature() {
             <img src="${asset('icon-arrow.png')}" alt="" width="11" height="11"
               style="display:block;border:0;width:11px;height:11px;">
           </td>
-          <td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:8.4px;line-height:12px;color:#202020;">
+          <td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.8px;line-height:14px;color:#202020;">
             BDAA Medium Rise 6490
           </td>
         </tr>
@@ -182,23 +182,23 @@ export default function DMRSignature() {
         style="width:255px;border-collapse:collapse;">
         <tr>
           <td width="254" valign="top"
-            style="width:254px;padding:13px 14px 10px 20px;background:#ffffff;">
-      <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.2px;line-height:12px;font-weight:500;letter-spacing:1.7px;white-space:nowrap;margin-bottom:8px;">
+            style="width:254px;padding:13px 8px 10px 20px;background:#ffffff;">
+      <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:10.2px;line-height:13px;font-weight:500;letter-spacing:1.5px;white-space:nowrap;margin-bottom:8px;">
         QUALIFICATIONS
       </div>
 
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
         <tr>
           <td width="20" valign="middle"><img src="${asset('icon-arrow.png')}" alt="" width="11" height="11" style="display:block;border:0;width:11px;height:11px;"></td>
-          <td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:8.4px;line-height:13px;color:#202020;white-space:nowrap;">BDesign in Architecture (USYD)</td>
+          <td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.8px;line-height:14px;color:#202020;white-space:nowrap;">BDesign in Architecture (USYD)</td>
         </tr>
         <tr>
           <td width="20" valign="middle"><img src="${asset('icon-arrow.png')}" alt="" width="11" height="11" style="display:block;border:0;width:11px;height:11px;"></td>
-          <td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:8.4px;line-height:13px;color:#202020;white-space:nowrap;">Diploma Architectural Technology</td>
+          <td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.8px;line-height:14px;color:#202020;white-space:nowrap;">Diploma Architectural Technology</td>
         </tr>
         <tr>
           <td width="20" valign="middle"><img src="${asset('icon-arrow.png')}" alt="" width="11" height="11" style="display:block;border:0;width:11px;height:11px;"></td>
-          <td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:8.4px;line-height:13px;color:#202020;white-space:nowrap;">Cert IV Building &amp; Construction</td>
+          <td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.8px;line-height:14px;color:#202020;white-space:nowrap;">Cert IV Building &amp; Construction</td>
         </tr>
       </table>
           </td>
