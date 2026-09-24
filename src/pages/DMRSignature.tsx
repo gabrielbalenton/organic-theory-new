@@ -46,15 +46,15 @@ export default function DMRSignature() {
         <tr>
 
           <!-- DMR LOGO OVER THE BLACK AREA -->
-          <td width="355" height="250" valign="middle"
-            style="width:355px;height:250px;padding:0 0 0 12px;background:transparent;">
-            <img src="${asset('dmr-logo-white.png')}" alt="DMR Designs" width="295"
-              style="display:block;border:0;width:295px;height:auto;max-width:295px;">
+          <td width="378" height="250" valign="middle"
+            style="width:378px;height:250px;padding:0 0 0 8px;background:transparent;">
+            <img src="${asset('dmr-logo-white.png')}" alt="DMR Designs" width="242"
+              style="display:block;border:0;width:242px;height:auto;max-width:242px;">
           </td>
 
           <!-- DANIEL DETAILS OVER FULLBG -->
-          <td width="195" height="250" valign="middle"
-            style="width:195px;height:250px;padding:0 0 0 4px;color:#111111;background:transparent;">
+          <td width="182" height="250" valign="top"
+            style="width:182px;height:250px;padding:78px 0 0 8px;color:#111111;background:transparent;">
             <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:27px;line-height:30px;font-weight:700;letter-spacing:-1px;white-space:nowrap;">
               Daniel Reid
             </div>
@@ -109,7 +109,7 @@ export default function DMRSignature() {
           </td>
 
           <!-- DANIEL IS ALREADY BAKED INTO FULLBG.PNG -->
-          <td width="150" height="250" style="width:150px;height:250px;padding:0;background:transparent;font-size:0;line-height:0;">
+          <td width="140" height="250" style="width:140px;height:250px;padding:0;background:transparent;font-size:0;line-height:0;">
             &nbsp;
           </td>
 
