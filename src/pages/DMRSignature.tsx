@@ -51,24 +51,24 @@ export default function DMRSignature() {
           </td>
 
           <!-- EMAIL-SAFE DIAGONAL WEDGE -->
-          <td width="90" height="250" valign="top"
-            style="width:90px;height:250px;padding:0;background:#ffffff;">
-            <img src="${asset('dmr-diagonal-wedge.png')}" alt="" width="90" height="250"
-              style="display:block;border:0;width:90px;height:250px;">
+          <td width="80" height="250" valign="top"
+            style="width:80px;height:250px;padding:0;background:#ffffff;">
+            <img src="${asset('dmr-diagonal-wedge.png')}" alt="" width="80" height="250"
+              style="display:block;border:0;width:80px;height:250px;">
           </td>
 
-          <!-- RIGHT PHOTO FRAME: background is confined to exactly 320 x 250 -->
-          <td width="320" height="250" valign="top"
-            style="width:320px;height:250px;padding:0;background:#f7f7f7;">
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="320" height="250"
-              background="${asset('dmr-right-background.jpg')}"
-              style="width:320px;height:250px;border-collapse:collapse;background-color:#f7f7f7;background-image:url('${asset('dmr-right-background.jpg')}');background-repeat:no-repeat;background-position:center center;background-size:320px 250px;-webkit-background-size:320px 250px;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+          <!-- RIGHT PHOTO FRAME: exact-pixel transparent PNG, no browser scaling -->
+          <td width="330" height="250" valign="top"
+            style="width:330px;height:250px;padding:0;background:#f7f7f7;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="330" height="250"
+              background="${asset('dmr-right-background.png')}"
+              style="width:330px;height:250px;border-collapse:collapse;background-color:#f7f7f7;background-image:url('${asset('dmr-right-background.png')}');background-repeat:no-repeat;background-position:center center;mso-table-lspace:0pt;mso-table-rspace:0pt;">
               <tr>
 
                 <!-- CONTACT DETAILS -->
-                <td width="175" height="250" valign="middle"
-                  style="width:175px;height:250px;padding:0 2px 0 1px;color:#111111;">
-                  <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:25px;line-height:28px;font-weight:700;letter-spacing:-1px;white-space:nowrap;">
+                <td width="170" height="250" valign="middle"
+                  style="width:170px;height:250px;padding:0 4px 0 2px;color:#111111;">
+                  <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:27px;line-height:30px;font-weight:700;letter-spacing:-1px;white-space:nowrap;">
                     Daniel Reid
                   </div>
 
@@ -87,7 +87,7 @@ export default function DMRSignature() {
                       </td>
                       <td valign="middle" style="padding:0 0 6px;white-space:nowrap;">
                         <a href="tel:+61294109819"
-                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9px;line-height:14px;font-weight:500;color:#111111;text-decoration:none;">
+                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:10px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
                           02 9410 9819
                         </a>
                       </td>
@@ -100,7 +100,7 @@ export default function DMRSignature() {
                       </td>
                       <td valign="middle" style="padding:0 0 6px;white-space:nowrap;">
                         <a href="mailto:daniel@dmrdesigns.com.au"
-                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:7.6px;line-height:14px;font-weight:500;color:#111111;text-decoration:none;">
+                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:8.7px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
                           daniel@dmrdesigns.com.au
                         </a>
                       </td>
@@ -113,7 +113,7 @@ export default function DMRSignature() {
                       </td>
                       <td valign="middle" style="padding:0;white-space:nowrap;">
                         <a href="https://www.dmrdesigns.com.au/" target="_blank"
-                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:8.5px;line-height:14px;font-weight:500;color:#111111;text-decoration:none;">
+                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.5px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
                           dmrdesigns.com.au
                         </a>
                       </td>
@@ -122,10 +122,10 @@ export default function DMRSignature() {
                 </td>
 
                 <!-- DANIEL PORTRAIT -->
-                <td width="145" height="250" valign="bottom" align="right"
-                  style="width:145px;height:250px;padding:0;">
-                  <img src="${asset('daniel-reid-cutout.png')}" alt="Daniel Reid" width="145"
-                    style="display:block;border:0;width:145px;height:auto;max-width:145px;">
+                <td width="160" height="250" valign="bottom" align="right"
+                  style="width:160px;height:250px;padding:0;">
+                  <img src="${asset('daniel-reid-cutout.png')}" alt="Daniel Reid" width="160"
+                    style="display:block;border:0;width:160px;height:auto;max-width:160px;">
                 </td>
 
               </tr>
