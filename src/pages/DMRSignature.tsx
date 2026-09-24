@@ -57,16 +57,17 @@ export default function DMRSignature() {
               style="display:block;border:0;width:80px;height:250px;max-width:80px;">
           </td>
 
-          <!-- RIGHT PANEL: Gmail-safe. No CSS background images. -->
+          <!-- RIGHT PANEL: merged architecture background + Daniel. Keep a real IMG fallback for Gmail. -->
           <td width="330" height="250" valign="top" bgcolor="#f7f7f7"
-            style="width:330px;height:250px;padding:0;background:#f7f7f7;">
+            background="${asset('dmr-right-background-daniel.png')}"
+            style="width:330px;height:250px;padding:0;background-color:#f7f7f7;background-image:url('${asset('dmr-right-background-daniel.png')}');background-repeat:no-repeat;background-position:left top;background-size:330px 250px;-webkit-background-size:330px 250px;">
             <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="330" height="250"
-              style="width:330px;height:250px;border-collapse:collapse;background:#f7f7f7;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+              style="width:330px;height:250px;border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
               <tr>
 
                 <!-- CONTACT DETAILS -->
-                <td width="170" height="250" valign="middle" bgcolor="#f7f7f7"
-                  style="width:170px;height:250px;padding:0 4px 0 2px;color:#111111;background:#f7f7f7;">
+                <td width="160" height="250" valign="middle"
+                  style="width:160px;height:250px;padding:0 2px 0 2px;color:#111111;background:transparent;">
                   <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:27px;line-height:30px;font-weight:700;letter-spacing:-1px;white-space:nowrap;">
                     Daniel Reid
                   </div>
@@ -75,7 +76,7 @@ export default function DMRSignature() {
                     DESIGN DIRECTOR
                   </div>
 
-                  <div style="border-top:1px solid #777777;width:170px;height:1px;line-height:1px;font-size:1px;margin:8px 0 8px;">&nbsp;</div>
+                  <div style="border-top:1px solid #777777;width:158px;height:1px;line-height:1px;font-size:1px;margin:8px 0 8px;">&nbsp;</div>
 
                   <table role="presentation" cellpadding="0" cellspacing="0" border="0"
                     style="border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt;">
@@ -120,11 +121,11 @@ export default function DMRSignature() {
                   </table>
                 </td>
 
-                <!-- DANIEL PHOTO: regular IMG so Gmail's image proxy can load it -->
-                <td width="160" height="250" valign="bottom" align="right" bgcolor="#f7f7f7"
-                  style="width:160px;height:250px;padding:0;background:#f7f7f7;font-size:0;line-height:0;">
-                  <img src="${asset('dmr-daniel-panel.jpg')}" alt="Daniel Reid" width="160" height="250"
-                    style="display:block;border:0;width:160px;height:250px;max-width:160px;min-width:160px;">
+                <!-- DANIEL PHOTO: real IMG fallback so Gmail still loads Daniel even if it strips TD backgrounds -->
+                <td width="170" height="250" valign="bottom" align="right"
+                  style="width:170px;height:250px;padding:0;background:transparent;font-size:0;line-height:0;">
+                  <img src="${asset('dmr-daniel-panel.jpg')}" alt="Daniel Reid" width="170" height="250"
+                    style="display:block;border:0;width:170px;height:250px;max-width:170px;min-width:170px;">
                 </td>
 
               </tr>
