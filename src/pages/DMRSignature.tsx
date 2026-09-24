@@ -39,7 +39,7 @@ export default function DMRSignature() {
   <tr>
     <td colspan="3" width="700" height="250" valign="top"
       background="${asset('FULLBG.png')}"
-      style="width:700px;height:250px;padding:0;margin:0;background-color:#061311;background-image:url('${asset('FULLBG.png')}');background-repeat:no-repeat;background-position:left top;background-size:700px 250px;-webkit-background-size:700px 250px;">
+      style="width:700px;height:250px;padding:0;margin:0;line-height:0;font-size:0;background-color:#061311;background-image:url('${asset('FULLBG.png')}');background-repeat:no-repeat;background-position:left top;background-size:700px 250px;-webkit-background-size:700px 250px;">
       
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="700" height="250"
         style="width:700px;height:250px;border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
@@ -124,7 +124,13 @@ export default function DMRSignature() {
 
     <!-- REGISTRATION -->
     <td width="230" valign="top"
-      style="width:230px;padding:13px 14px 10px 15px;border-right:1px solid #8c8c8c;background:#ffffff;">
+      style="width:230px;padding:0;background:#ffffff;">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="230"
+        style="width:230px;border-collapse:collapse;">
+        <tr>
+          <td width="229" valign="top"
+            style="width:229px;padding:13px 14px 10px 15px;background:#ffffff;">
+            <div style="border-right:1px solid #8c8c8c;padding-right:14px;">
       <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:8.5px;line-height:11px;font-weight:500;letter-spacing:1.7px;white-space:nowrap;margin-bottom:8px;">
         PROFESSIONAL REGISTRATION
       </div>
@@ -149,11 +155,23 @@ export default function DMRSignature() {
           </td>
         </tr>
       </table>
+            </div>
+          </td>
+          <td width="1" valign="top" style="width:1px;padding:12px 0 0;">
+            <div style="width:1px;height:75px;background:#8c8c8c;font-size:0;line-height:0;">&nbsp;</div>
+          </td>
+        </tr>
+      </table>
     </td>
 
     <!-- QUALIFICATIONS -->
     <td width="255" valign="top"
-      style="width:255px;padding:13px 14px 10px 20px;border-right:1px solid #8c8c8c;background:#ffffff;">
+      style="width:255px;padding:0;background:#ffffff;">
+      <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="255"
+        style="width:255px;border-collapse:collapse;">
+        <tr>
+          <td width="254" valign="top"
+            style="width:254px;padding:13px 14px 10px 20px;background:#ffffff;">
       <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:8.5px;line-height:11px;font-weight:500;letter-spacing:1.7px;white-space:nowrap;margin-bottom:8px;">
         QUALIFICATIONS
       </div>
@@ -170,6 +188,12 @@ export default function DMRSignature() {
         <tr>
           <td width="20" valign="middle"><img src="${asset('icon-arrow.png')}" alt="" width="11" height="11" style="display:block;border:0;width:11px;height:11px;"></td>
           <td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:7.6px;line-height:12px;color:#202020;white-space:nowrap;">Cert IV Building &amp; Construction</td>
+        </tr>
+      </table>
+          </td>
+          <td width="1" valign="top" style="width:1px;padding:12px 0 0;">
+            <div style="width:1px;height:75px;background:#8c8c8c;font-size:0;line-height:0;">&nbsp;</div>
+          </td>
         </tr>
       </table>
     </td>
