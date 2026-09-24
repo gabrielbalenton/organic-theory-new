@@ -38,8 +38,8 @@ export default function DMRSignature() {
 
   <tr>
     <td colspan="3" width="700" height="250" valign="top"
-      background="${asset('FULLBG.png')}"
-      style="width:700px;height:250px;padding:0;margin:0;line-height:0;font-size:0;background-color:#061311;background-image:url('${asset('FULLBG.png')}');background-repeat:no-repeat;background-position:left top;background-size:700px 250px;-webkit-background-size:700px 250px;">
+      background="${asset('FULLBG2.png')}"
+      style="width:700px;height:250px;padding:0;margin:0;line-height:0;font-size:0;background-color:#061311;background-image:url('${asset('FULLBG2.png')}');background-repeat:no-repeat;background-position:left top;background-size:700px 250px;-webkit-background-size:700px 250px;">
       
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="700" height="250"
         style="width:700px;height:250px;border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
@@ -48,61 +48,71 @@ export default function DMRSignature() {
           <!-- DMR LOGO OVER THE BLACK AREA -->
           <td width="378" height="250" valign="middle"
             style="width:378px;height:250px;padding:0 0 0 8px;background:transparent;">
-            <img src="${asset('dmr-logo-white.png')}" alt="DMR Designs" width="276"
-              style="display:block;border:0;width:276px;height:auto;max-width:276px;">
+            <img src="${asset('dmr-logo-white.png')}" alt="DMR Designs" width="266"
+              style="display:block;border:0;width:266px;height:auto;max-width:266px;">
           </td>
 
           <!-- DANIEL DETAILS OVER FULLBG -->
           <td width="182" height="250" valign="top"
-            style="width:182px;height:250px;padding:78px 0 0 8px;color:#111111;background:transparent;">
-            <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:27px;line-height:30px;font-weight:700;letter-spacing:-1px;white-space:nowrap;">
-              Daniel Reid
-            </div>
-
-            <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9px;line-height:13px;font-weight:500;letter-spacing:2.7px;white-space:nowrap;margin-top:2px;">
-              DESIGN DIRECTOR
-            </div>
-
-            <div style="border-top:1px solid #777777;width:185px;height:1px;line-height:1px;font-size:1px;margin:8px 0 8px;">&nbsp;</div>
-
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0"
-              style="border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+            style="width:182px;height:250px;padding:0;color:#111111;background:transparent;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="182" height="250"
+              style="width:182px;height:250px;border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
               <tr>
-                <td width="26" valign="middle" style="width:26px;padding:0 6px 6px 0;">
-                  <img src="${asset('icon-phone.png')}" alt="" width="20" height="20"
-                    style="display:block;border:0;width:20px;height:20px;">
-                </td>
-                <td valign="middle" style="padding:0 0 6px;white-space:nowrap;">
-                  <a href="tel:+61294109819"
-                    style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:10px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
-                    02 9410 9819
-                  </a>
-                </td>
+                <td height="66" style="height:66px;font-size:0;line-height:0;">&nbsp;</td>
               </tr>
-
               <tr>
-                <td width="26" valign="middle" style="width:26px;padding:0 6px 6px 0;">
-                  <img src="${asset('icon-email.png')}" alt="" width="20" height="20"
-                    style="display:block;border:0;width:20px;height:20px;">
-                </td>
-                <td valign="middle" style="padding:0 0 6px;white-space:nowrap;">
-                  <a href="mailto:daniel@dmrdesigns.com.au"
-                    style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:8.7px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
-                    daniel@dmrdesigns.com.au
-                  </a>
-                </td>
-              </tr>
+                <td valign="top" style="padding:0 0 0 8px;background:transparent;">
+                  <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:27px;line-height:30px;font-weight:700;letter-spacing:-1px;white-space:nowrap;">
+                    Daniel Reid
+                  </div>
 
-              <tr>
-                <td width="26" valign="middle" style="width:26px;padding:0 6px 0 0;">
-                  <img src="${asset('icon-web.png')}" alt="" width="20" height="20"
-                    style="display:block;border:0;width:20px;height:20px;">
-                </td>
-                <td valign="middle" style="padding:0;white-space:nowrap;">
-                  <a href="https://www.dmrdesigns.com.au/" target="_blank"
-                    style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.5px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
-                    dmrdesigns.com.au
-                  </a>
+                  <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9px;line-height:13px;font-weight:500;letter-spacing:2.7px;white-space:nowrap;margin-top:2px;">
+                    DESIGN DIRECTOR
+                  </div>
+
+                  <div style="border-top:1px solid #777777;width:174px;height:1px;line-height:1px;font-size:1px;margin:8px 0 8px;">&nbsp;</div>
+
+                  <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+                    style="border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+                    <tr>
+                      <td width="26" valign="middle" style="width:26px;padding:0 6px 6px 0;">
+                        <img src="${asset('icon-phone.png')}" alt="" width="20" height="20"
+                          style="display:block;border:0;width:20px;height:20px;">
+                      </td>
+                      <td valign="middle" style="padding:0 0 6px;white-space:nowrap;">
+                        <a href="tel:+61294109819"
+                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:10px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
+                          02 9410 9819
+                        </a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td width="26" valign="middle" style="width:26px;padding:0 6px 6px 0;">
+                        <img src="${asset('icon-email.png')}" alt="" width="20" height="20"
+                          style="display:block;border:0;width:20px;height:20px;">
+                      </td>
+                      <td valign="middle" style="padding:0 0 6px;white-space:nowrap;">
+                        <a href="mailto:daniel@dmrdesigns.com.au"
+                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:8.7px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
+                          daniel@dmrdesigns.com.au
+                        </a>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td width="26" valign="middle" style="width:26px;padding:0 6px 0 0;">
+                        <img src="${asset('icon-web.png')}" alt="" width="20" height="20"
+                          style="display:block;border:0;width:20px;height:20px;">
+                      </td>
+                      <td valign="middle" style="padding:0;white-space:nowrap;">
+                        <a href="https://www.dmrdesigns.com.au/" target="_blank"
+                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.5px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
+                          dmrdesigns.com.au
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
                 </td>
               </tr>
             </table>
