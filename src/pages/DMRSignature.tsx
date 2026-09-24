@@ -13,6 +13,7 @@ const socials = [
   ['facebook.png', 'Facebook', 'https://www.facebook.com/DMRDESIGNS.com.au/'],
 ] as const;
 
+// DMR footer typography locked after Gmail QA.
 export default function DMRSignature() {
   const signatureRef = useRef<HTMLDivElement>(null);
   const [copied, setCopied] = useState(false);
