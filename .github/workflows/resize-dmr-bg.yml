@@ -37,5 +37,6 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Generate Gmail-safe 700x250 DMR background"
-            git push
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi
