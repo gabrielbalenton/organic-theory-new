@@ -6,6 +6,7 @@ on:
     paths:
       - 'public/images/DMR Assets/FULLBG2.png'
       - 'public/images/DMR Assets/FULLBG3.png'
+      - 'public/images/DMR Assets/FULLBG4.png'
       - '.github/workflows/resize-dmr-bg.yml'
 
 permissions:
@@ -28,11 +29,15 @@ jobs:
         run: |
           convert "public/images/DMR Assets/FULLBG3.png" -filter Lanczos -resize 700x250! -strip "public/images/DMR Assets/FULLBG3-700.png"
 
+      - name: Resize FULLBG4 to Gmail-safe 700x250
+        run: |
+          convert "public/images/DMR Assets/FULLBG4.png" -filter Lanczos -resize 700x250! -strip "public/images/DMR Assets/FULLBG4-700.png"
+
       - name: Commit resized asset if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "public/images/DMR Assets/FULLBG2-700.png" "public/images/DMR Assets/FULLBG3-700.png"
+          git add "public/images/DMR Assets/FULLBG2-700.png" "public/images/DMR Assets/FULLBG3-700.png" "public/images/DMR Assets/FULLBG4-700.png"
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
