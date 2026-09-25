@@ -26,6 +26,7 @@ const Pitch = lazy(() => import('./pages/Pitch'));
 const FPXStocklist = lazy(() => import('./pages/FPXStocklist'));
 const FPXStocklistLive = lazy(() => import('./pages/FPXStocklistLive'));
 const DMRSignature = lazy(() => import('./pages/DMRSignature'));
+const DMRSignatureRobby = lazy(() => import('./pages/DMRSignatureRobby'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 const PageLoader = () => <div className="min-h-screen bg-[#09090B]" />;
@@ -62,6 +63,7 @@ export default function App() {
           <Route path="/pitch/:slug" element={<Pitch />} />
           <Route path="/fpx/stocklist" element={<FPXStocklistLive />} />
           <Route path="/dmr-signature" element={<DMRSignature />} />
+          <Route path="/dmr-signature-robby" element={<DMRSignatureRobby />} />
           <Route path="/fpx/stocklist-classic" element={<FPXStocklist />} />
           <Route path="/fpx/stocklist-beta" element={<Navigate to="/fpx/stocklist" replace />} />
         </Routes>
