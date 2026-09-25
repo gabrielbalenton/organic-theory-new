@@ -139,7 +139,7 @@ export default function DMRSignatureRobby() {
         <tr><td valign="top" style="padding:13px 4px 10px 15px;background:#ffffff;">
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"><tr><td width="20" valign="middle"><img src="${asset('icon-arrow.png')}" alt="" width="11" height="11" style="display:block;border:0;width:11px;height:11px;"></td><td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.8px;line-height:18px;color:#202020;white-space:nowrap;">Custom Homes</td></tr>
 <tr><td width="20" valign="middle"><img src="${asset('icon-arrow.png')}" alt="" width="11" height="11" style="display:block;border:0;width:11px;height:11px;"></td><td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.8px;line-height:18px;color:#202020;white-space:nowrap;">Alterations &amp; Additions</td></tr></table>
-        </td></tr>
+        </td><td width="1" valign="top" style="width:1px;padding:12px 0 0;"><div style="width:1px;height:75px;background:#8c8c8c;font-size:0;line-height:0;">&nbsp;</div></td></tr>
       </table>
     </td>
     <td width="255" valign="top" style="width:255px;padding:0;background:#ffffff;">
@@ -147,7 +147,7 @@ export default function DMRSignatureRobby() {
         <tr><td valign="top" style="padding:13px 3px 10px 12px;background:#ffffff;">
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"><tr><td width="20" valign="middle"><img src="${asset('icon-arrow.png')}" alt="" width="11" height="11" style="display:block;border:0;width:11px;height:11px;"></td><td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.8px;line-height:18px;color:#202020;white-space:nowrap;">Duplex &amp; Dual Occupancy</td></tr>
 <tr><td width="20" valign="middle"><img src="${asset('icon-arrow.png')}" alt="" width="11" height="11" style="display:block;border:0;width:11px;height:11px;"></td><td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.8px;line-height:18px;color:#202020;white-space:nowrap;">DA / CDC Approvals</td></tr></table>
-        </td></tr>
+        </td><td width="1" valign="top" style="width:1px;padding:12px 0 0;"><div style="width:1px;height:75px;background:#8c8c8c;font-size:0;line-height:0;">&nbsp;</div></td></tr>
       </table>
     </td>
 
