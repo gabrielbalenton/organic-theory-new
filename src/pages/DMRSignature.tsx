@@ -82,7 +82,7 @@ export default function DMRSignature() {
                       </td>
                       <td valign="middle" style="padding:0 0 6px;white-space:nowrap;">
                         <a href="tel:+61294109819"
-                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:10px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
+                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:10.6px;line-height:15.5px;font-weight:700;color:#111111;text-decoration:none;">
                           02 9410 9819
                         </a>
                       </td>
@@ -95,7 +95,7 @@ export default function DMRSignature() {
                       </td>
                       <td valign="middle" style="padding:0 0 6px;white-space:nowrap;">
                         <a href="mailto:daniel@dmrdesigns.com.au"
-                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:8.7px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
+                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.2px;line-height:15.5px;font-weight:700;color:#111111;text-decoration:none;">
                           daniel@dmrdesigns.com.au
                         </a>
                       </td>
@@ -108,7 +108,7 @@ export default function DMRSignature() {
                       </td>
                       <td valign="middle" style="padding:0;white-space:nowrap;">
                         <a href="https://www.dmrdesigns.com.au/" target="_blank"
-                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.5px;line-height:15px;font-weight:700;color:#111111;text-decoration:none;">
+                          style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:10px;line-height:15.5px;font-weight:700;color:#111111;text-decoration:none;">
                           dmrdesigns.com.au
                         </a>
                       </td>
@@ -222,7 +222,7 @@ export default function DMRSignature() {
       <div style="border-top:1px solid #909090;width:100%;height:1px;line-height:1px;font-size:1px;margin:8px 0 8px;">&nbsp;</div>
 
       <a href="https://maps.app.goo.gl/GujN3CKSUuL5t3Hv8" target="_blank"
-        style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:7.8px;line-height:11px;font-weight:400;letter-spacing:2px;color:#111111;text-decoration:none;white-space:nowrap;">
+        style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:8.4px;line-height:11.5px;font-weight:400;letter-spacing:2px;color:#111111;text-decoration:none;white-space:nowrap;">
         SYDNEY&nbsp;&nbsp; | &nbsp;&nbsp;REGIONAL NSW
       </a>
     </td>
