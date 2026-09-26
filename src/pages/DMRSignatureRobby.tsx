@@ -39,30 +39,30 @@ export default function DMRSignatureRobby() {
 
   <tr>
     <td colspan="3" width="700" height="250" valign="top"
-      background="${asset('FULLBG3-700.png')}"
-      style="width:700px;height:250px;padding:0;margin:0;line-height:0;font-size:0;background-color:#061311;background-image:url('${asset('FULLBG3-700.png')}');background-repeat:no-repeat;background-position:left top;background-size:700px 250px;-webkit-background-size:700px 250px;">
+      background="${asset('FULLBG4-700.png')}"
+      style="width:700px;height:250px;padding:0;margin:0;line-height:0;font-size:0;background-color:#061311;background-image:url('${asset('FULLBG4-700.png')}');background-repeat:no-repeat;background-position:left top;background-size:700px 250px;-webkit-background-size:700px 250px;">
       
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="700" height="250"
         style="width:700px;height:250px;border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
         <tr>
 
           <!-- DMR LOGO OVER THE BLACK AREA -->
-          <td width="378" height="250" valign="middle"
-            style="width:378px;height:250px;padding:0 0 0 8px;background:transparent;">
+          <td width="372" height="250" valign="middle"
+            style="width:372px;height:250px;padding:0 0 0 8px;background:transparent;">
             <img src="${asset('dmr-logo-white.png')}" alt="DMR Designs" width="266"
               style="display:block;border:0;width:266px;height:auto;max-width:266px;">
           </td>
 
           <!-- ROBBY DETAILS OVER FULLBG -->
-          <td width="182" height="250" valign="top"
-            style="width:182px;height:250px;padding:0;color:#111111;background:transparent;">
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="182" height="250"
-              style="width:182px;height:250px;border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+          <td width="188" height="250" valign="top"
+            style="width:188px;height:250px;padding:0;color:#111111;background:transparent;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="188" height="250"
+              style="width:188px;height:250px;border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
               <tr>
                 <td height="66" style="height:66px;font-size:0;line-height:0;">&nbsp;</td>
               </tr>
               <tr>
-                <td valign="top" style="padding:0 0 0 8px;background:transparent;">
+                <td valign="top" style="padding:0 0 0 6px;background:transparent;">
                   <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:27px;line-height:30px;font-weight:700;letter-spacing:-1px;white-space:nowrap;">
                     Robby
                   </div>
@@ -133,20 +133,28 @@ export default function DMRSignatureRobby() {
   <!-- FOOTER -->
   <tr>
 
-    <!-- ROBBY SERVICES -->
+
+    <!-- PROJECT SUPPORT -->
     <td width="230" valign="top" style="width:230px;padding:0;background:#ffffff;">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="230" style="width:230px;border-collapse:collapse;">
         <tr><td valign="top" style="padding:13px 4px 10px 15px;background:#ffffff;">
-          <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"><tr><td width="20" valign="middle"><img src="${asset('icon-arrow.png')}" alt="" width="11" height="11" style="display:block;border:0;width:11px;height:11px;"></td><td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.8px;line-height:18px;color:#202020;white-space:nowrap;">Custom Homes</td></tr>
-<tr><td width="20" valign="middle"><img src="${asset('icon-arrow.png')}" alt="" width="11" height="11" style="display:block;border:0;width:11px;height:11px;"></td><td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.8px;line-height:18px;color:#202020;white-space:nowrap;">Alterations &amp; Additions</td></tr></table>
+          <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:10.2px;line-height:13px;font-weight:500;letter-spacing:1.5px;white-space:nowrap;margin-bottom:8px;">PROJECT SUPPORT</div>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+            <tr><td width="20" valign="top" style="width:20px;padding-top:1px;"><img src="${asset('icon-arrow.png')}" alt="" width="11" height="11" style="display:block;border:0;width:11px;height:11px;"></td><td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.8px;line-height:14px;color:#202020;padding-bottom:6px;white-space:nowrap;">Client Coordination</td></tr>
+            <tr><td width="20" valign="top" style="width:20px;padding-top:1px;"><img src="${asset('icon-arrow.png')}" alt="" width="11" height="11" style="display:block;border:0;width:11px;height:11px;"></td><td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.8px;line-height:14px;color:#202020;padding-bottom:6px;white-space:nowrap;">Consultant Coordination</td></tr>
+          </table>
         </td><td width="1" valign="top" style="width:1px;padding:12px 0 0;"><div style="width:1px;height:75px;background:#8c8c8c;font-size:0;line-height:0;">&nbsp;</div></td></tr>
       </table>
     </td>
+    <!-- PROJECT DELIVERY -->
     <td width="255" valign="top" style="width:255px;padding:0;background:#ffffff;">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="255" style="width:255px;border-collapse:collapse;">
         <tr><td valign="top" style="padding:13px 3px 10px 12px;background:#ffffff;">
-          <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;"><tr><td width="20" valign="middle"><img src="${asset('icon-arrow.png')}" alt="" width="11" height="11" style="display:block;border:0;width:11px;height:11px;"></td><td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.8px;line-height:18px;color:#202020;white-space:nowrap;">Duplex &amp; Dual Occupancy</td></tr>
-<tr><td width="20" valign="middle"><img src="${asset('icon-arrow.png')}" alt="" width="11" height="11" style="display:block;border:0;width:11px;height:11px;"></td><td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.8px;line-height:18px;color:#202020;white-space:nowrap;">DA / CDC Approvals</td></tr></table>
+          <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:10.2px;line-height:13px;font-weight:500;letter-spacing:1.5px;white-space:nowrap;margin-bottom:8px;">PROJECT DELIVERY</div>
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+            <tr><td width="20" valign="top" style="width:20px;padding-top:1px;"><img src="${asset('icon-arrow.png')}" alt="" width="11" height="11" style="display:block;border:0;width:11px;height:11px;"></td><td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.8px;line-height:14px;color:#202020;padding-bottom:6px;white-space:nowrap;">Design &amp; Approvals Coordination</td></tr>
+            <tr><td width="20" valign="top" style="width:20px;padding-top:1px;"><img src="${asset('icon-arrow.png')}" alt="" width="11" height="11" style="display:block;border:0;width:11px;height:11px;"></td><td style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:9.8px;line-height:14px;color:#202020;padding-bottom:6px;white-space:nowrap;">Project Coordination</td></tr>
+          </table>
         </td><td width="1" valign="top" style="width:1px;padding:12px 0 0;"><div style="width:1px;height:75px;background:#8c8c8c;font-size:0;line-height:0;">&nbsp;</div></td></tr>
       </table>
     </td>
