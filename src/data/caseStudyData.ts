@@ -25,6 +25,77 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
+    slug: 'fpx-lead-journey-lab',
+    label: 'AI-Assisted Full-Stack Product Development',
+    client: 'FPX | Forest Products Exchange',
+    context: 'An internal process-mapping application developed for a New Zealand timber sourcing business to turn stakeholder discussions into shared, reviewable lead and customer journeys.',
+    headline: 'From workshop conversations to a collaborative, AI-assisted process workspace.',
+    coverImage: '/images/fpx-lead-journey-lab-case-study.svg',
+    coverAlt: 'Conceptual illustration of the Lead Journey Lab interface, with connected workflow cards, review states, and a shared decision panel; no internal customer data is shown',
+    metrics: [
+      { value: 'Visual', label: 'Journey mapping' },
+      { value: 'AI', label: 'Controlled proposals' },
+      { value: 'Shared', label: 'Workshop decisions' },
+      { value: 'Versioned', label: 'Change history' },
+    ],
+    stack: ['Next.js', 'React', 'TypeScript', 'Supabase', 'PostgreSQL', 'Vercel', 'GitHub'],
+    sections: [
+      {
+        title: 'The Challenge',
+        body: 'Lead acquisition, onboarding, follow-up, and customer reactivation involve multiple channels, tools, people, and decisions. During team workshops, a process can be understood in conversation but remain difficult to document, compare, or revisit. FPX needed one practical workspace where its team could map the current process, flag unresolved steps, and build a shared picture of what should happen next.',
+      },
+      {
+        title: 'My Role',
+        body: 'I designed and developed the Lead Journey Lab as a custom internal web application. The work covered requirements discovery, information architecture, interaction design, frontend and server development, data migration, AI import controls, and deployment. The application is a working team tool, not a public self-service product or a claim that the proposed downstream automations have already been activated.',
+      },
+      {
+        title: 'An Interactive Process Canvas',
+        items: [
+          'Built a navigable canvas with connected cards, directional relationships, zooming, panning, multi-select, automatic alignment, and simple or in-depth viewing modes.',
+          'Separated overarching source views from focused lead, onboarding, customer, and reactivation journeys, so a complex process can be reviewed without displaying everything at once.',
+          'Created reusable card definitions and editable sequence templates. Cards capture purpose, tool, execution method, owner, timing, status, and relevant notes.',
+        ],
+      },
+      {
+        title: 'Decisions, Not Just Diagrams',
+        items: [
+          'Added Draft, Needs Discussion, and Agreed workshop states so a proposed activity cannot be confused with an approved company process.',
+          'Placed questions, comments, final decisions, incoming and outgoing connections, and editing controls alongside each selected card.',
+          'Introduced named workspace presence and activity indicators to help a small team coordinate changes across shared journeys.',
+        ],
+      },
+      {
+        title: 'AI With Review Controls',
+        body: 'The AI workflow starts with the current journey source, even when the canvas is blank. A team member copies a structured request into an external AI assistant, describes the process in ordinary language, then brings back a complete proposed journey. The application validates the returned structure, previews additions, modifications, and removals, and requires an explicit Save Version action before applying it. Existing journey identity, cards, and connections are protected against incomplete or mismatched responses. AI-generated process proposals still require human review.',
+      },
+      {
+        title: 'Reusable Knowledge & Recovery',
+        items: [
+          'Organised master cards, editable sequences, and journey templates so repeatable activities do not need to be drawn from scratch each time.',
+          'Added separate mechanisms for canvas layout snapshots and versioned journey content, allowing teams to revisit layouts and restore earlier saved workflow versions.',
+          'Kept proposed automation opportunities distinct from implemented automation, so the visual map can guide future integration work without overstating the current system.',
+        ],
+      },
+      {
+        title: 'A More Sustainable Data Foundation',
+        body: 'The first working iteration used a separate Airtable account. As the application developed, its API allowance became a practical constraint for shared editing. I migrated the working application to a dedicated Supabase PostgreSQL project, preserving the original Airtable export as a historical archive rather than presenting it as a live synchronized backup. Database access is handled server-side, with protective checks around shared updates.',
+      },
+      {
+        title: 'Delivery & Outcome',
+        body: 'Delivered a deployed internal workspace for FPX to review existing processes, document decisions, explore AI-generated alternatives, and maintain reusable workflow structures. The technical migration, canvas interactions, shared data persistence, AI preview, and version-saving flows were exercised during delivery. The organisational journey decisions remain a collaborative work in progress, and this case study does not claim measured time savings, conversion uplift, or completed third-party automations.',
+      },
+      {
+        title: 'What This Demonstrates',
+        body: 'This project connects discovery workshops with full-stack product development: understanding real operational complexity, turning it into usable interfaces and data, introducing AI behind deliberate approval steps, and delivering a system that can evolve as people agree on the process.',
+      },
+    ],
+    seo: {
+      title: 'FPX Lead Journey Lab: AI-Assisted Workflow Platform | Organic Theory',
+      description: 'How I designed and developed an internal AI-assisted journey-mapping platform for FPX, combining visual process design, collaborative decisions, controlled AI updates, and Supabase.',
+      canonical: 'https://organic-theory.vercel.app/case-studies/fpx-lead-journey-lab',
+    },
+  },
+  {
     slug: 'headless-gm',
     label: 'Full-Stack Product Engineering',
     client: 'Headless GM',

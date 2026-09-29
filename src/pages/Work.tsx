@@ -5,7 +5,7 @@ import { ScrambleText } from '../components/ScrambleText';
 import { KineticTextReveal } from '../components/ui/kinetic-text-reveal';
 import { CaseStudyFlipStack, type EditorialCaseStudy } from '../components/ui/case-study-flip-stack';
 
-const accents: Array<'blue' | 'sage' | 'neutral'> = ['blue', 'sage', 'neutral', 'blue', 'sage', 'neutral', 'blue'];
+const accents: Array<'blue' | 'sage' | 'neutral'> = ['sage', 'blue', 'sage', 'neutral', 'blue', 'sage', 'neutral', 'blue'];
 
 function toEditorial(project: typeof portfolioData[number], index: number): EditorialCaseStudy {
   return {
@@ -22,8 +22,8 @@ function toEditorial(project: typeof portfolioData[number], index: number): Edit
 }
 
 export default function Work() {
-  const featured = portfolioData.slice(0, 3).map(toEditorial);
-  const earlier = portfolioData.slice(3).map((project, index) => toEditorial(project, index + 3));
+  const featured = portfolioData.slice(0, 4).map(toEditorial);
+  const earlier = portfolioData.slice(4).map((project, index) => toEditorial(project, index + 4));
 
   return (
     <>
@@ -71,7 +71,7 @@ export default function Work() {
               From public websites to operational software.
             </h2>
             <p className="mt-5 max-w-2xl text-sm leading-7 text-[#2F3A45]/58">
-              These three projects show the expanded build capability directly: full-stack product architecture, production website migration, and a high-performance acquisition layer designed around an existing application.
+              These four projects show the expanded build capability directly: AI-assisted operational software, full-stack product architecture, production website migration, and a high-performance acquisition layer.
             </p>
           </div>
         </section>

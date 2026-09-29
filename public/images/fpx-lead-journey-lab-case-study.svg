@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+<title id="title">Illustrated process canvas for an AI-assisted journey lab</title>
+<desc id="desc">A conceptual, non-sensitive view of a visual workflow editor featuring connected activity cards, workshop review states, and a structured decision panel.</desc>
+<defs>
+  <pattern id="grid" width="35" height="35" patternUnits="userSpaceOnUse"><path d="M35 0H0V35" fill="none" stroke="#2F3A45" stroke-opacity=".045"/></pattern>
+  <linearGradient id="desk" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#FAF9F4"/><stop offset="1" stop-color="#E8E2DB"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-30%" width="145%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#2F3A45" flood-opacity=".12"/></filter>
+  <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#8FA897"/></marker>
+</defs>
+<rect width="1600" height="1000" fill="url(#desk)"/>
+<circle cx="1425" cy="65" r="365" fill="#8DA5B7" opacity=".075"/>
+<circle cx="80" cy="940" r="300" fill="#8FA897" opacity=".095"/>
+<text x="104" y="104" fill="#2F3A45" font-size="23" letter-spacing="7" font-weight="700" font-family="Arial,sans-serif">ORGANIC THEORY / PRODUCT ENGINEERING</text>
+<text x="104" y="174" fill="#2F3A45" font-family="Arial,sans-serif" font-size="65" font-weight="700">FROM DISCUSSION</text>
+<text x="104" y="237" fill="#758E7C" font-family="Arial,sans-serif" font-size="65" font-weight="700">TO DECISION.</text>
+<text x="107" y="276" fill="#2F3A45" fill-opacity=".57" font-family="Arial,sans-serif" font-size="21">AI-ASSISTED JOURNEY MAPPING  /  CONCEPTUAL INTERFACE</text>
+<g filter="url(#shadow)">
+ <rect x="105" y="318" width="1390" height="594" rx="24" fill="#FDFCF9" stroke="#2F3A45" stroke-opacity=".16" stroke-width="2"/>
+ <path d="M129 318H1471Q1495 318 1495 342V386H105V342Q105 318 129 318Z" fill="#2F3A45"/>
+ <circle cx="141" cy="352" r="7" fill="#8FA897"/><circle cx="165" cy="352" r="7" fill="#8DA5B7"/><circle cx="189" cy="352" r="7" fill="#D6BD92"/>
+ <text x="229" y="360" fill="#FAF9F4" font-size="19" font-family="Arial,sans-serif" font-weight="700" letter-spacing="3">LEAD JOURNEY LAB</text>
+ <rect x="689" y="333" width="162" height="37" rx="9" fill="#485B60"/><text x="716" y="358" fill="#F5F3ED" font-family="Arial,sans-serif" font-size="15" font-weight="700">MAIN VIEW</text>
+ <text x="879" y="358" fill="#FAF9F4" fill-opacity=".7" font-family="Arial,sans-serif" font-size="15">CARD LIBRARY</text>
+ <text x="1075" y="358" fill="#FAF9F4" fill-opacity=".7" font-family="Arial,sans-serif" font-size="15">SEQUENCES</text>
+ <circle cx="1412" cy="351" r="15" fill="#8FA897"/><circle cx="1455" cy="351" r="15" fill="#8DA5B7"/>
+ <path d="M1141 386V910" stroke="#2F3A45" stroke-opacity=".1" stroke-width="2"/>
+ <rect x="106" y="386" width="1034" height="524" fill="url(#grid)"/>
+ <text x="145" y="430" fill="#2F3A45" fill-opacity=".47" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="3">WORKFLOW CANVAS</text>
+ <g fill="none" stroke="#8FA897" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)">
+  <path d="M407 609H484"/>
+  <path d="M756 609H809V518H866"/>
+  <path d="M756 609H808V749H866"/>
+ </g>
+ <g font-family="Arial,sans-serif">
+  <rect x="155" y="533" width="252" height="154" rx="18" fill="#FAF9F4" stroke="#2F3A45" stroke-opacity=".2" stroke-width="2"/>
+  <rect x="155" y="533" width="252" height="12" rx="6" fill="#8DA5B7"/>
+  <text x="180" y="579" fill="#2F3A45" font-size="15" font-weight="700" letter-spacing="2">CAPTURE</text>
+  <text x="180" y="622" fill="#2F3A45" font-size="27" font-weight="700">New enquiry</text>
+  <text x="180" y="659" fill="#2F3A45" fill-opacity=".47" font-size="17">Source recorded</text>
+  <rect x="485" y="525" width="271" height="170" rx="18" fill="#FAF9F4" stroke="#8FA897" stroke-width="3"/>
+  <rect x="485" y="525" width="271" height="12" rx="6" fill="#8FA897"/>
+  <text x="510" y="574" fill="#2F3A45" font-size="15" font-weight="700" letter-spacing="2">DECISION</text>
+  <text x="510" y="618" fill="#2F3A45" font-size="26" font-weight="700">Review need</text>
+  <rect x="510" y="641" width="211" height="31" rx="15" fill="#EDE5D8"/>
+  <text x="527" y="662" fill="#8B7250" font-size="14" font-weight="700" letter-spacing=".7">NEEDS DISCUSSION</text>
+  <rect x="868" y="457" width="231" height="129" rx="17" fill="#FAF9F4" stroke="#2F3A45" stroke-opacity=".2" stroke-width="2"/>
+  <rect x="868" y="457" width="231" height="10" rx="5" fill="#8FA897"/>
+  <text x="889" y="500" fill="#2F3A45" font-size="13" font-weight="700" letter-spacing="2">FOLLOW-UP</text>
+  <text x="889" y="540" fill="#2F3A45" font-size="24" font-weight="700">Contact owner</text>
+  <text x="889" y="565" fill="#59866C" font-size="15">Draft</text>
+  <rect x="868" y="685" width="231" height="129" rx="17" fill="#FAF9F4" stroke="#2F3A45" stroke-opacity=".2" stroke-width="2"/>
+  <rect x="868" y="685" width="231" height="10" rx="5" fill="#8DA5B7"/>
+  <text x="889" y="728" fill="#2F3A45" font-size="13" font-weight="700" letter-spacing="2">OUTCOME</text>
+  <text x="889" y="767" fill="#2F3A45" font-size="23" font-weight="700">Next action</text>
+  <text x="889" y="790" fill="#59866C" font-size="15">Draft</text>
+ </g>
+ <g font-family="Arial,sans-serif">
+  <text x="1172" y="433" fill="#2F3A45" font-size="13" font-weight="700" letter-spacing="2.6">INSPECTOR / DECISIONS</text>
+  <text x="1172" y="490" fill="#2F3A45" font-size="29" font-weight="700">Review need</text>
+  <path d="M1172 515H1462" stroke="#2F3A45" stroke-opacity=".16" stroke-width="2"/>
+  <text x="1172" y="557" fill="#2F3A45" fill-opacity=".56" font-size="15" letter-spacing="1.5">OWNER</text>
+  <text x="1172" y="584" fill="#2F3A45" font-size="19">Team review</text>
+  <text x="1172" y="633" fill="#2F3A45" fill-opacity=".56" font-size="15" letter-spacing="1.5">WORKSHOP STATUS</text>
+  <rect x="1172" y="649" width="230" height="41" rx="8" fill="#EDE5D8"/>
+  <text x="1190" y="676" fill="#8B7250" font-size="16" font-weight="700">NEEDS DISCUSSION</text>
+  <text x="1172" y="735" fill="#2F3A45" fill-opacity=".56" font-size="15" letter-spacing="1.5">DECISION LOG</text>
+  <rect x="1172" y="753" width="286" height="89" rx="11" fill="#F4F0E9" stroke="#2F3A45" stroke-opacity=".11"/>
+  <path d="M1192 784H1437M1192 805H1391" stroke="#2F3A45" stroke-opacity=".17" stroke-linecap="round" stroke-width="8"/>
+  <rect x="1172" y="856" width="286" height="35" rx="9" fill="#8FA897"/>
+  <text x="1206" y="879" fill="#18342A" font-size="15" font-weight="700" letter-spacing="1">REVIEW BEFORE SAVE</text>
+ </g>
+</g>
+<text x="105" y="961" fill="#2F3A45" fill-opacity=".45" font-family="Arial,sans-serif" font-size="17" letter-spacing="2">MAP  /  REVIEW  /  VERSION</text>
+<text x="1493" y="961" text-anchor="end" fill="#2F3A45" fill-opacity=".55" font-family="Arial,sans-serif" font-size="17" letter-spacing="1.5">ILLUSTRATIVE · NO CLIENT DATA</text>
+</svg>

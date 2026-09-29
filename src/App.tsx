@@ -8,6 +8,7 @@ const Work = lazy(() => import('./pages/Work'));
 const Contact = lazy(() => import('./pages/Contact'));
 const DMR = lazy(() => import('./pages/case-studies/DMR'));
 const FPX = lazy(() => import('./pages/case-studies/FPX'));
+const FPXLeadJourneyLab = lazy(() => import('./pages/case-studies/FPXLeadJourneyLab'));
 const ICSH = lazy(() => import('./pages/case-studies/ICSH'));
 const ContentSystem = lazy(() => import('./pages/case-studies/ContentSystem'));
 const HeadlessGM = lazy(() => import('./pages/case-studies/HeadlessGM'));
@@ -40,6 +41,7 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path="services" element={<Services />} />
             <Route path="case-studies" element={<Work />} />
+            <Route path="case-studies/fpx-lead-journey-lab" element={<FPXLeadJourneyLab />} />
             <Route path="case-studies/dmr" element={<DMR />} />
             <Route path="case-studies/fpx" element={<FPX />} />
             <Route path="case-studies/icsh" element={<ICSH />} />

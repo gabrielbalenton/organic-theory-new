@@ -1,6 +1,17 @@
 export const portfolioData = [
   {
     id: '01',
+    client: 'AI-Assisted Product Development',
+    title: 'FPX Lead Journey Lab',
+    description: 'A custom collaborative process platform that turns stakeholder discussions into visual journeys, structured decisions, and AI-assisted workflow proposals with review and version controls.',
+    buttonLabel: '[ Explore the Platform ]',
+    slug: '/case-studies/fpx-lead-journey-lab',
+    image: '/images/fpx-lead-journey-lab-case-study.svg',
+    alt: 'Conceptual workflow canvas illustration for an AI-assisted lead and customer journey platform',
+    metrics: ['Visual Journey Mapping', 'Controlled AI Updates', 'Shared Decision History'],
+  },
+  {
+    id: '02',
     client: 'Full-Stack Product Engineering',
     title: 'Headless Operations Platform',
     description: 'A custom operations product replacing chat, spreadsheets, screenshots, and institutional memory with relational data, scoped permissions, transactional workflows, validation, and audit history.',
@@ -11,7 +22,7 @@ export const portfolioData = [
     metrics: ['Relational Domain Model', 'Role-Scoped Access', 'Auditable State'],
   },
   {
-    id: '02',
+    id: '03',
     client: 'Website Engineering',
     title: 'B2B Timber Merchant Rebuild',
     description: 'A Wix website rebuilt as a custom Next.js production system with migration controls, technical SEO, accessibility, analytics, security hardening, and perfect final Lighthouse category scores.',
@@ -22,7 +33,7 @@ export const portfolioData = [
     metrics: ['100 Performance', '100 Accessibility', '100 SEO'],
   },
   {
-    id: '03',
+    id: '04',
     client: 'Product UX & Performance',
     title: 'B2B Timber Sourcing Acquisition Layer',
     description: 'A public acquisition experience redesigned around an existing authenticated product, with clearer buyer journeys, server-first rendering, tighter payloads, and mobile performance improved from 79 to 98.',
@@ -33,7 +44,7 @@ export const portfolioData = [
     metrics: ['79 → 98 Mobile', '95 → 99 Desktop', '100 SEO / A11y / BP'],
   },
   {
-    id: '04',
+    id: '05',
     client: 'Performance',
     title: 'Technical Calibration',
     description: 'An earlier technical optimization phase for a timber platform: crawlability, semantic structure, performance, and machine-readable search signals rebuilt before the later public-site redesign.',
@@ -44,7 +55,7 @@ export const portfolioData = [
     metrics: ['96 Performance Score', '100 SEO Score'],
   },
   {
-    id: '05',
+    id: '06',
     client: 'Scale',
     title: 'Search at Scale',
     description: '1,281 suburb-specific landing pages deployed in 8 weeks. Search visibility hit 63.21% - more than double the 30% target.',
@@ -55,7 +66,7 @@ export const portfolioData = [
     metrics: ['+154% Search Impressions', '63.21% Search Visibility'],
   },
   {
-    id: '06',
+    id: '07',
     client: 'Automation',
     title: 'Zero-Touch Workflow',
     description: 'Annual membership that processes itself - form to CRM to inbox, with zero manual data entry and three automated handling paths.',
@@ -66,7 +77,7 @@ export const portfolioData = [
     metrics: ['Zero Manual Entry', 'Instant Processing'],
   },
   {
-    id: '07',
+    id: '08',
     client: 'Content',
     title: 'Authority Architecture',
     description: 'A five-pillar content system for a B2B platform building authority from zero - structured for sign-off, cadence, and compounding reach.',
