@@ -39,30 +39,30 @@ export default function DMRSignature() {
 
   <tr>
     <td colspan="3" width="700" height="250" valign="top"
-      background="${asset('dmr-right-background.png')}"
-      style="width:700px;height:250px;padding:0;margin:0;line-height:0;font-size:0;background-color:#000000;background-image:url('${asset('dmr-right-background.png')}');background-repeat:no-repeat;background-position:right top;background-size:420px 250px;-webkit-background-size:420px 250px;">
+      background="${asset('FULLBG2-700.png')}"
+      style="width:700px;height:250px;padding:0;margin:0;line-height:0;font-size:0;background-color:#061311;background-image:url('${asset('FULLBG2-700.png')}');background-repeat:no-repeat;background-position:left top;background-size:700px 250px;-webkit-background-size:700px 250px;">
       
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="700" height="250"
         style="width:700px;height:250px;border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
         <tr>
 
-          <!-- DMR LOGO -->
-          <td width="360" height="250" valign="middle"
-            style="width:360px;height:250px;padding:0 0 0 8px;background:transparent;">
-            <img src="${asset('dmr-logo-white.png')}" alt="DMR Designs" width="282"
-              style="display:block;border:0;width:282px;height:auto;max-width:282px;">
+          <!-- DMR LOGO OVER THE BLACK AREA -->
+          <td width="378" height="250" valign="middle"
+            style="width:378px;height:250px;padding:0 0 0 8px;background:transparent;">
+            <img src="${asset('dmr-logo-white.png')}" alt="DMR Designs" width="266"
+              style="display:block;border:0;width:266px;height:auto;max-width:266px;">
           </td>
 
-          <!-- DANIEL DETAILS -->
-          <td width="185" height="250" valign="top"
-            style="width:185px;height:250px;padding:0;color:#111111;background:transparent;">
-            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="185" height="250"
-              style="width:185px;height:250px;border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
+          <!-- DANIEL DETAILS OVER FULLBG -->
+          <td width="182" height="250" valign="top"
+            style="width:182px;height:250px;padding:0;color:#111111;background:transparent;">
+            <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="182" height="250"
+              style="width:182px;height:250px;border-collapse:collapse;background:transparent;mso-table-lspace:0pt;mso-table-rspace:0pt;">
               <tr>
-                <td height="60" style="height:60px;font-size:0;line-height:0;">&nbsp;</td>
+                <td height="66" style="height:66px;font-size:0;line-height:0;">&nbsp;</td>
               </tr>
               <tr>
-                <td valign="top" style="padding:0 0 0 6px;background:transparent;">
+                <td valign="top" style="padding:0 0 0 8px;background:transparent;">
                   <div style="font-family:Montserrat,Arial,Helvetica,sans-serif;font-size:27px;line-height:30px;font-weight:700;letter-spacing:-1px;white-space:nowrap;">
                     Daniel Reid
                   </div>
@@ -119,11 +119,9 @@ export default function DMRSignature() {
             </table>
           </td>
 
-          <!-- DANIEL CUTOUT -->
-          <td width="155" height="250" valign="bottom" align="right"
-            style="width:155px;height:250px;padding:0;background:transparent;font-size:0;line-height:0;">
-            <img src="${asset('daniel-reid-cutout.png')}" alt="Daniel Reid" width="155"
-              style="display:block;border:0;width:155px;height:auto;max-width:155px;">
+          <!-- DANIEL IS ALREADY BAKED INTO FULLBG.PNG -->
+          <td width="140" height="250" style="width:140px;height:250px;padding:0;background:transparent;font-size:0;line-height:0;">
+            &nbsp;
           </td>
 
         </tr>
