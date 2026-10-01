@@ -13,6 +13,10 @@
   ],
   "rewrites": [
     {
+      "source": "/randall-penn-preview",
+      "destination": "/randall-penn-preview.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
