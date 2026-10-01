@@ -9,12 +9,25 @@
       "source": "/vault",
       "destination": "/case-studies",
       "permanent": true
+    },
+    {
+      "source": "/randall-penn-preview",
+      "destination": "/randall-penn/option-2",
+      "permanent": false
     }
   ],
   "rewrites": [
     {
-      "source": "/randall-penn-preview",
-      "destination": "/randall-penn-preview.html"
+      "source": "/randall-penn/option-1",
+      "destination": "/randall-penn/option-1.html"
+    },
+    {
+      "source": "/randall-penn/option-2",
+      "destination": "/randall-penn/option-2.html"
+    },
+    {
+      "source": "/randall-penn/option-3",
+      "destination": "/randall-penn/option-3.html"
     },
     {
       "source": "/(.*)",
