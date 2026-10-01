@@ -83,6 +83,12 @@ body.tier-1 .motion-label{background:#dfe3d9;color:#324137}
 @media(prefers-reduced-motion:reduce){.cinematic,.reel-section{height:auto;min-height:650px}.cinematic{height:85svh}.reel-section{padding:55px 20px 75px}.reel-track{width:100%;overflow-x:auto;scroll-snap-type:x mandatory}.reel-card{scroll-snap-align:center;flex-basis:85vw}.cinema-progress{display:none}}
 @media(max-width:1000px){.reel-section{height:auto;min-height:700px}.reel-track{width:100%;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 8vw 25px 0}.reel-card{flex-basis:85vw;scroll-snap-align:start}.reel-header h2{font-size:clamp(51px,8vw,86px)}.reel-note{display:none}}
 @media(max-width:640px){.pitch-inner{min-height:0}.option-tab{min-width:0!important}.cinematic{min-height:530px;height:85svh}.cinematic-stage{padding:20px}.cinematic-word{font-size:clamp(65px,18vw,115px)}.cinematic-word:nth-child(2){margin-left:5vw}.cinematic-word:nth-child(3){margin-left:11vw}.cinematic-line{left:20px}.cinematic-caption{left:22px;right:22px;bottom:24px;font-size:11px}.reel-section{min-height:0;padding:70px 0 70px 18px}.reel-header{padding-right:20px}.reel-header h2{font-size:51px}.reel-card{flex-basis:85vw;height:420px}.reel-card-info{bottom:22px;left:22px}.reel-card-info h3{font-size:43px}body.tier-3 .three-hero-text h1{font-size:clamp(54px,12.3vw,76px)}}
+
+/* Animate design intelligence, not decorative gimmicks. The custom blueprint
+   SVG and Lottie stamp are isolated from GSAP's pinned photography sequences. */
+.three-blueprint{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:clamp(35px,5vw,90px);padding:clamp(80px,9vw,150px) clamp(24px,6vw,110px);background:#e6dfd1;color:#253b30}.blueprint-copy .eyebrow{color:#7c765f}.blueprint-copy h2{font-size:clamp(50px,5.6vw,94px);line-height:1.03;max-width:700px;margin:26px 0}.blueprint-copy p{font-size:clamp(13px,1.2vw,16px);line-height:1.95;max-width:460px;color:#657265}.blueprint-caption{border-top:1px solid #bcb8a7;margin-top:45px;padding-top:16px;color:#677567;font-size:10px;letter-spacing:.18em;font-weight:700}.blueprint-board{background:#20362b;color:#f5ead1;position:relative;box-shadow:24px 24px 0 #c9c3b4;min-width:0;overflow:hidden}.blueprint-board svg{display:block;width:100%;aspect-ratio:700/530}.blueprint-head,.blueprint-foot{position:relative;z-index:1;display:flex;justify-content:space-between;gap:14px;font-size:10px;letter-spacing:.17em;padding:17px 24px;color:#c8bb9b}.blueprint-head{border-bottom:1px solid #a8b69e54}.blueprint-foot{border-top:1px solid #a8b69e54}
+.brand-draft{width:132px;display:grid;grid-template-columns:132px;grid-template-rows:120px auto;margin:5px 0 17px}.brand-draft-anim,.brand-draft-fallback{grid-column:1;grid-row:1;width:132px;height:120px}.brand-draft-name{grid-column:1;grid-row:2;padding-top:7px;font-size:9px;letter-spacing:.18em;color:#d8b889;white-space:nowrap}
+@media(max-width:880px){.three-blueprint{grid-template-columns:1fr}.blueprint-copy{max-width:630px}.blueprint-board{max-width:850px}}@media(max-width:550px){.three-blueprint{padding:70px 22px 90px}.blueprint-board{box-shadow:12px 12px 0 #c9c3b4}.blueprint-head,.blueprint-foot{padding:12px 11px;font-size:8px;letter-spacing:.08em}.blueprint-copy h2{font-size:clamp(42px,12vw,66px)}.blueprint-caption{letter-spacing:.09em;font-size:9px}}
 </style></head><body class="tier-3"><header id="pitch-bar"><div class="pitch-inner"><div class="pitch-brand"><div class="ot-square">O+X</div><div><div class="pitch-overline">ORGANIC THEORY PRESENTS</div><div class="pitch-name">Randall-Penn · Live design concepts</div></div></div><nav class="option-switch" aria-label="Choose website design concept"><a class="option-tab" href="/randall-penn/option-1" ><span class="tab-line">Option 1 · Essential</span><span class="tab-price">AU$1,100</span></a>
 <a class="option-tab" href="/randall-penn/option-2" ><span class="tab-line">Option 2 · Professional ★</span><span class="tab-price">AU$1,500 · Recommended</span></a>
 <a class="option-tab" href="/randall-penn/option-3" aria-current="page"><span class="tab-line">Option 3 · Complete</span><span class="tab-price">AU$1,900</span></a></nav><div class="pitch-status"><span>PRIVATE CLIENT PREVIEW</span>CINEMATIC SCROLL MOTION</div></div></header><main><article class="concept active" id="opt3" role="tabpanel" aria-label="Complete homepage website concept">
@@ -104,7 +110,35 @@ body.tier-1 .motion-label{background:#dfe3d9;color:#324137}
   <div class="reel-card"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1500&q=84" alt="Illustrative outdoor living project"><div class="reel-card-info"><div><p>02 / PROJECT STORY CONCEPT</p><h3>Life, outside.</h3></div><span class="reel-arrow">↗</span></div></div>
   <div class="reel-card"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1500&q=84" alt="Illustrative interior project"><div class="reel-card-info"><div><p>03 / PROJECT STORY CONCEPT</p><h3>Every detail, considered.</h3></div><span class="reel-arrow">↗</span></div></div>
  </div><span class="reel-note">A SCROLL-DRIVEN GALLERY · CONCEPT IMAGERY</span>
-</section><section class="three-statement"><div><span class="eyebrow" style="color:#debb8b">Our philosophy</span><h2 class="serif">Built with care.<br>Made to belong.</h2></div><div class="right"><strong>More than the finished space</strong>Whether it's a renovation, an extension or a well-crafted outdoor area, the way a space comes together matters. This is where Logan's own approach and business story will live, supported by an intentional visual brand.</div></section>
+</section><section class="three-statement"><div><span class="eyebrow" style="color:#debb8b">Our philosophy</span><h2 class="serif">Built with care.<br>Made to belong.</h2></div><div class="right"><strong>More than the finished space</strong><div class="brand-draft" role="img" aria-label="Decorative architectural house drawing"><div class="brand-draft-anim" id="randall-lottie" aria-hidden="true"></div><svg class="brand-draft-fallback" viewBox="0 0 200 180" aria-hidden="true"><g stroke="#e1c69a" stroke-width="2.2" fill="none" stroke-linejoin="round" stroke-linecap="round"><path d="M28 92 L100 31 L172 92"/><path d="M43 88 V148 H157 V88"/><path d="M84 148 V110 H115 V148"/><path d="M56 104 H75 V123 H56 Z"/><path d="M127 104 H145 V123 H127 Z"/></g></svg><div class="brand-draft-name">LINE BY LINE &nbsp;·&nbsp; RP</div></div>Whether it's a renovation, an extension or a well-crafted outdoor area, the way a space comes together matters. This is where Logan's own approach and business story will live, supported by an intentional visual brand.</div></section>
+
+<section class="three-blueprint" id="three-blueprint" aria-label="Architectural sketch concept">
+ <div class="blueprint-copy"><div class="eyebrow">Attention to detail</div><h2 class="serif">From first line<br>to final detail.</h2>
+ <p>Great spaces take shape through thoughtful decisions. This animated architectural diagram illustrates the concept; real plans would require Logan’s approval.</p>
+ <div class="blueprint-caption">CONCEPT STUDY &nbsp;/&nbsp; NOT A PROJECT PLAN</div></div>
+ <div class="blueprint-board">
+  <div class="blueprint-head"><span>RP / STUDIO</span><span>DETAIL STUDY &nbsp;—&nbsp; 01</span></div>
+  <svg id="blueprint-plan" viewBox="0 0 700 530" role="img" aria-label="Illustrative architectural line drawing of a house floor plan and adjoining timber deck">
+   <defs><pattern id="blueprint-grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0 H0 V28" fill="none" stroke="#b7a584" stroke-opacity=".12" stroke-width="1"/></pattern></defs>
+   <rect width="700" height="530" fill="url(#blueprint-grid)"/>
+   <g class="blueprint-draw" stroke="#dbc59d" fill="none" stroke-linecap="square" stroke-linejoin="round">
+    <path d="M108 101 H501 V394 H108 Z" stroke-width="4"/>
+    <path d="M117 112 H491 V384 H117 Z" stroke-width="1.4" opacity=".7"/>
+    <path d="M323 103 V268 H501 M323 268 V393 M109 265 H240" stroke-width="3"/>
+    <path d="M243 265 H323 M243 265 V392" stroke-width="2"/>
+    <path d="M245 264 A78 78 0 0 1 323 342" stroke-width="1.2" stroke-dasharray="4 5"/>
+    <path d="M323 282 A54 54 0 0 1 377 336" stroke-width="1.1" stroke-dasharray="3 5"/>
+    <path d="M139 103 H266 M350 103 H468 M110 141 V229" stroke-width="7" stroke="#f2dfb8"/>
+    <path d="M501 172 H609 V352 H501" stroke-width="2.5"/>
+    <path d="M516 178 V346 M533 178 V346 M550 178 V346 M567 178 V346 M584 178 V346 M601 178 V346" stroke-width="1" opacity=".56"/>
+    <path d="M84 101 V394 M69 101 H100 M69 394 H100 M108 420 H501 M108 413 V434 M501 413 V434" stroke="#a8b7a8" stroke-width="1"/>
+    <path d="M491 260 H617 M617 250 V365 M604 365 H635" stroke="#a8b7a8" stroke-width="1.2"/>
+   </g>
+   <g font-family="DM Sans,sans-serif" fill="#d4bd95" font-size="12" letter-spacing="2"><text x="134" y="87">LIVING</text><text x="366" y="87">KITCHEN</text><text x="137" y="366">ENTRY</text><text x="368" y="366">UTILITY</text><text x="526" y="156">TIMBER DECK</text><text x="242" y="450">8.4 M — CONCEPT</text><text x="51" y="272" transform="rotate(-90 51 272)">6.0 M</text></g>
+  </svg>
+  <div class="blueprint-foot"><span>DRAWN WITH PURPOSE</span><span>CONCEPT &nbsp;/&nbsp; NOT TO SCALE</span></div>
+ </div>
+</section>
 <section class="site-section three-portfolio" id="three-work"><div class="section-top"><div><span class="eyebrow">Featured work</span><h2 class="serif">Form. Function.<br>Feeling.</h2></div><span class="text-link">Project presentation system ↗</span></div><div class="three-mosaic">
 <div class="photo"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1350&q=88" alt="Illustrative architectural feature project"><div class="three-photo-caption"><small>01 / FEATURED PROJECT EXAMPLE</small><h3 class="serif">A space to<br>come together.</h3><span style="font-size:11px">Detailed project story ↗</span></div></div>
 <div class="photo"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85" alt="Illustrative outdoor design"><div class="three-photo-caption"><small>02 / EXAMPLE</small><h3 class="serif">Outside, elevated.</h3></div></div>
@@ -182,4 +216,43 @@ reveal('.three-cta > *','.three-cta',{stagger:.2});
 ST.create({trigger:document.documentElement,start:'top top',end:'bottom bottom',onUpdate:s=>gsap.set('.cinema-progress',{scaleX:s.progress})});
 window.addEventListener('load',()=>ST.refresh(),{once:true});
 })();
-});</script></body></html>
+});</script><script type="module">
+/* Progressive enhancement. Anime.js owns only SVG path drawing.
+   Lottie owns only its own architectural stamp. GSAP owns the scroll scenes. */
+(async function(){
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches||navigator.connection?.saveData)return;
+ function observeOnce(node,fn){
+  if(!node)return;
+  if(!('IntersectionObserver' in window)){fn();return}
+  const obs=new IntersectionObserver(entries=>{if(entries.some(e=>e.isIntersecting)){obs.disconnect();fn()}},{threshold:.18,rootMargin:'0px 0px -6% 0px'});obs.observe(node);
+ }
+ observeOnce(document.querySelector('.blueprint-board'),async()=>{
+  try{
+   const {animate,svg,stagger}=await import('https://cdn.jsdelivr.net/npm/animejs@4.5.0/+esm');
+   const lines=svg.createDrawable('#blueprint-plan .blueprint-draw path');
+   animate(lines,{draw:['0 0','0 1'],duration:1450,delay:stagger(125),ease:'inOutQuad'});
+  }catch(error){console.warn('Blueprint animation not available; static artwork remains visible.',error)}
+ });
+ const container=document.getElementById('randall-lottie');
+ observeOnce(container,()=>{
+  function launch(){
+   if(!window.lottie)return;
+   try{
+    const animation=window.lottie.loadAnimation({container,renderer:'svg',loop:false,autoplay:false,path:'/images/randall-penn/drafting-stamp.json'});
+    animation.addEventListener('DOMLoaded',()=>{
+     const fallback=container.parentElement.querySelector('.brand-draft-fallback');
+     if(fallback)fallback.style.display='none';
+     animation.play();
+    });
+    animation.addEventListener('data_failed',()=>animation.destroy());
+   }catch(err){console.warn('Brand stamp unavailable; static vector remains visible.',err)}
+  }
+  if(window.lottie){launch();return}
+  const loader=document.createElement('script');
+  loader.src='https://cdn.jsdelivr.net/npm/lottie-web@5.13.0/build/player/lottie_light.min.js';
+  loader.async=true;loader.onload=launch;
+  loader.onerror=()=>console.warn('Lottie unavailable; static brand vector remains visible.');
+  document.head.append(loader);
+ });
+})();
+</script></body></html>
