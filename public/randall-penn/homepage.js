@@ -70,26 +70,75 @@ modal?.addEventListener("click",e=>{if(e.target===modal)modal.close()});
 modalAction?.addEventListener("click",()=>{modal.close();$("contact")?.scrollIntoView({behavior:reduced?"instant":"smooth"})});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&backdrop?.classList.contains("open"))closeMenu();if(e.key==="Tab"&&backdrop?.classList.contains("open")){const f=[...drawer.querySelectorAll('a[href],button:not([disabled])')].filter(x=>x.offsetParent!==null);const first=f[0],last=f[f.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
 
-/* Portrait build film: native video, no third-party embed or animation framework. */
+/* Portrait build film: one automatic play per page visit; ended films remain on their final frame. */
 const buildVideo=$("buildVideo"),buildPlay=$("buildPlay"),buildSound=$("buildSound");
 if(buildVideo){
-  buildVideo.pause();buildVideo.autoplay=false;buildVideo.muted=true;
-  let videoInView=false,wantsPlayback=!reduced;
+  buildVideo.pause();
+  buildVideo.autoplay=false;
+  buildVideo.loop=false;
+  buildVideo.muted=true;
+  let videoInView=false,autoStarted=false,userPaused=false,completed=false;
   const syncVideo=()=>{
-    if(buildPlay){const playing=!buildVideo.paused;buildPlay.innerHTML=playing?"Ⅱ <span>PAUSE</span>":"▶ <span>PLAY</span>";buildPlay.setAttribute("aria-pressed",String(playing));buildPlay.setAttribute("aria-label",playing?"Pause video":"Play video");}
-    if(buildSound){buildSound.innerHTML=buildVideo.muted?"♪ <span>SOUND OFF</span>":"♫ <span>SOUND ON</span>";buildSound.setAttribute("aria-pressed",String(!buildVideo.muted));buildSound.setAttribute("aria-label",buildVideo.muted?"Unmute video":"Mute video");}
+    const playing=!buildVideo.paused&&!buildVideo.ended;
+    if(buildPlay){
+      const label=completed?"Replay video":playing?"Pause video":"Play video";
+      buildPlay.innerHTML=completed?"↻ <span>REPLAY</span>":playing?"Ⅱ <span>PAUSE</span>":"▶ <span>PLAY</span>";
+      buildPlay.setAttribute("aria-pressed",String(playing));
+      buildPlay.setAttribute("aria-label",label);
+    }
+    if(buildSound){
+      buildSound.innerHTML=buildVideo.muted?"♪ <span>SOUND OFF</span>":"♫ <span>SOUND ON</span>";
+      buildSound.setAttribute("aria-pressed",String(!buildVideo.muted));
+      buildSound.setAttribute("aria-label",buildVideo.muted?"Unmute video":"Mute video");
+    }
   };
-  const attemptPlay=()=>{if(videoInView&&!document.hidden&&wantsPlayback){const pending=buildVideo.play();if(pending?.catch)pending.catch(()=>{wantsPlayback=false;syncVideo()})}syncVideo()};
+  const attemptPlay=()=>{
+    if(!videoInView||document.hidden||completed||userPaused)return;
+    const pending=buildVideo.play();
+    if(pending?.catch)pending.catch(()=>{userPaused=true;syncVideo()});
+    syncVideo();
+  };
   buildVideo.addEventListener("play",syncVideo);
   buildVideo.addEventListener("pause",syncVideo);
-  buildVideo.addEventListener("error",()=>{const box=buildVideo.closest(".build-video-wrap");if(box&&!box.querySelector(".build-error")){const message=document.createElement("div");message.className="build-error";message.textContent="The Build video could not be loaded.";message.style.cssText="position:absolute;inset:38% 18px auto;text-align:center;color:#fff;font-weight:700;font-size:14px;z-index:3";box.appendChild(message)}});
-  if(!reduced){buildVideo.removeAttribute("controls")}else{buildVideo.removeAttribute("autoplay");buildVideo.setAttribute("controls","")}
-  buildPlay?.addEventListener("click",()=>{wantsPlayback=buildVideo.paused;if(wantsPlayback){videoInView=true;attemptPlay()}else{buildVideo.pause();syncVideo()}});
+  buildVideo.addEventListener("ended",()=>{completed=true;userPaused=true;syncVideo()});
+  buildVideo.addEventListener("error",()=>{
+    const box=buildVideo.closest(".build-video-wrap");
+    if(box&&!box.querySelector(".build-error")){
+      const message=document.createElement("div");message.className="build-error";
+      message.textContent="The Build video could not be loaded.";
+      message.style.cssText="position:absolute;inset:38% 18px auto;text-align:center;color:#fff;font-weight:700;font-size:14px;z-index:3";
+      box.appendChild(message);
+    }
+  });
+  if(!reduced)buildVideo.removeAttribute("controls");
+  else buildVideo.setAttribute("controls","");
+  buildPlay?.addEventListener("click",()=>{
+    if(!buildVideo.paused&&!buildVideo.ended){
+      userPaused=true;buildVideo.pause();syncVideo();return;
+    }
+    if(completed||buildVideo.ended){buildVideo.currentTime=0;completed=false;}
+    userPaused=false;videoInView=true;attemptPlay();
+  });
   buildSound?.addEventListener("click",()=>{buildVideo.muted=!buildVideo.muted;syncVideo()});
   if("IntersectionObserver" in window){
-    const observer=new IntersectionObserver(entries=>{videoInView=entries[0].isIntersecting;if(videoInView)attemptPlay();else buildVideo.pause()},{threshold:.3});observer.observe(buildVideo);
-  }else{videoInView=true;if(!reduced)attemptPlay()}
-  document.addEventListener("visibilitychange",()=>{if(document.hidden)buildVideo.pause();else if(videoInView)attemptPlay()});
+    const observer=new IntersectionObserver(entries=>{
+      videoInView=entries[0].isIntersecting;
+      if(videoInView){
+        if(!autoStarted&&!reduced)autoStarted=true;
+        if(autoStarted&&!completed&&!userPaused)attemptPlay();
+      }else if(!buildVideo.paused){
+        buildVideo.pause();
+      }
+    },{threshold:.3});
+    observer.observe(buildVideo);
+  }else{
+    videoInView=true;
+    if(!reduced){autoStarted=true;attemptPlay();}
+  }
+  document.addEventListener("visibilitychange",()=>{
+    if(document.hidden)buildVideo.pause();
+    else if(videoInView&&autoStarted&&!completed&&!userPaused)attemptPlay();
+  });
   syncVideo();
 }
 /* Scroll-triggered editorial reveals, never applied to daily content rotation. */
