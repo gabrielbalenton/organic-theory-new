@@ -1,10 +1,11 @@
 (()=>{"use strict";
 const $=(id)=>document.getElementById(id);
 const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if(!reduced && "IntersectionObserver" in window)document.documentElement.classList.add("motion-ready");
 const body=document.body;
 const intro=$("intro");
-const finishIntro=()=>{if(!intro||intro.classList.contains("is-done"))return;intro.classList.add("is-done");try{sessionStorage.setItem("rp_intro_seen","1")}catch(e){}window.setTimeout(()=>{intro.hidden=true},750)};
-if(intro){if(document.documentElement.classList.contains("skip-intro")){intro.hidden=true}else{intro.classList.add("intro-ready");$("introSkip")?.addEventListener("click",finishIntro);window.setTimeout(finishIntro,5700)}}
+const finishIntro=()=>{if(!intro||intro.classList.contains("is-done"))return;intro.classList.add("is-done");try{sessionStorage.setItem("rp_intro_seen","1")}catch(e){}window.setTimeout(()=>body.classList.add("hero-enter"),380);window.setTimeout(()=>{intro.hidden=true},740)};
+if(intro){if(document.documentElement.classList.contains("skip-intro")){intro.hidden=true;body.classList.add("hero-enter")}else{intro.classList.add("intro-ready");$("introSkip")?.addEventListener("click",finishIntro);window.setTimeout(finishIntro,5700)}}
 const backdrop=$("menuBackdrop"),drawer=$("menuDrawer"),floatButton=$("floatMenu"),mobileButton=$("mobileNavToggle"),backTop=$("backTop");
 let lastFocus=null;
 function openMenu(){lastFocus=document.activeElement;backdrop.classList.add("open");backdrop.setAttribute("aria-hidden","false");body.classList.add("menu-open");floatButton?.setAttribute("aria-expanded","true");mobileButton?.setAttribute("aria-expanded","true");$("drawerClose")?.focus()}
@@ -13,22 +14,41 @@ function closeMenu(){backdrop.classList.remove("open");backdrop.setAttribute("ar
 $("drawerClose")?.addEventListener("click",closeMenu);
 backdrop?.addEventListener("click",e=>{if(e.target===backdrop)closeMenu()});
 document.querySelectorAll(".drawer-links a,.drawer-foot a").forEach(a=>a.addEventListener("click",closeMenu));
-const hero=$("home"),heroMedia=$("heroMedia");
+const hero=$("home"),heroMedia=$("heroMedia"),featuredBox=$("featuredParallax"),featuredPhoto=$("featuredPhoto");
 let ticking=false;
-function updateScroll(){if(!hero)return;const rect=hero.getBoundingClientRect();const left=rect.bottom<=60;floatButton?.classList.toggle("show",left);backTop?.classList.toggle("show",window.scrollY>650);if(!reduced&&heroMedia&&rect.bottom>0&&rect.top<window.innerHeight){const progress=Math.min(1,Math.max(0,-rect.top/Math.max(1,rect.height)));heroMedia.style.transform="translate3d(0,"+Math.round(progress*39)+"px,0)"}ticking=false}
+function updateScroll(){
+ if(!hero)return;
+ const rect=hero.getBoundingClientRect();
+ const left=rect.bottom<=60;
+ floatButton?.classList.toggle("show",left);
+ backTop?.classList.toggle("show",window.scrollY>650);
+ if(!reduced&&heroMedia&&rect.bottom>0&&rect.top<window.innerHeight){
+   const progress=Math.min(1,Math.max(0,-rect.top/Math.max(1,rect.height)));
+   const travel=window.innerWidth<=700?70:95;
+   heroMedia.style.transform="translate3d(0,"+Math.round(-26+progress*travel)+"px,0) scale("+(window.innerWidth<=700?"1.03":"1.045")+")";
+ }
+ if(!reduced&&featuredBox&&featuredPhoto){
+   const box=featuredBox.getBoundingClientRect();
+   if(box.bottom>0&&box.top<window.innerHeight){
+     const progress=Math.min(1,Math.max(0,(window.innerHeight-box.top)/(window.innerHeight+box.height)));
+     featuredPhoto.style.transform="translate3d(0,"+Math.round((progress-.5)*112)+"px,0)";
+   }
+ }
+ ticking=false;
+}
 window.addEventListener("scroll",()=>{if(!ticking){ticking=true;requestAnimationFrame(updateScroll)}},{passive:true});window.addEventListener("resize",updateScroll);updateScroll();
 backTop?.addEventListener("click",()=>window.scrollTo({top:0,behavior:reduced?"instant":"smooth"}));
 const projects=[
- {title:"A home, reimagined.",kind:"Residential renovation",number:"01",image:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=83",description:"An editorial project-story concept intended for Logan's approved before, during and after photographs. The final feature will document real project work, construction decisions and the finished result."},
- {title:"The outdoor connection",kind:"Outdoor living",number:"02",image:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=83",description:"A concept presentation for an outdoor living project, focusing on the built connection between home and exterior spaces."},
- {title:"Room to come together",kind:"Interior construction",number:"03",image:"https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1800&q=83",description:"A concept presentation for completed interior construction, with emphasis on joinery, structural detailing, finishing and everyday practicality rather than interior styling."},
- {title:"More space, naturally",kind:"Residential extensions",number:"04",image:"https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=83",description:"A concept presentation for a residential extension or addition, documenting the way new spaces connect with an existing home."}
+ {title:"A home, reimagined.",kind:"Residential renovation",number:"01",image:"https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=83",description:"A closer look at residential transformation, from considered building details to beautifully finished spaces."},
+ {title:"The outdoor connection",kind:"Outdoor living",number:"02",image:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=83",description:"Outdoor living that brings the home and its surroundings together, with attention to construction quality and the details that make spaces work."},
+ {title:"Room to come together",kind:"Interior construction",number:"03",image:"https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1800&q=83",description:"The craftsmanship behind finished interiors — from built-in joinery to the lines, materials and practical details that bring spaces together."},
+ {title:"More space, naturally",kind:"Residential extensions",number:"04",image:"https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=83",description:"Well-considered extensions that create room to live while bringing new and existing spaces into balance."}
 ];
 let featuredIndex=-1;
 const elements={img:$("featuredPhoto"),heading:$("featuredTitle"),desc:$("featuredDesc"),idx:$("featuredIndex"),cards:$("supportingCards")};
-const createTile=(p,i)=>{const b=document.createElement("button");b.className="project-tile";b.type="button";b.setAttribute("aria-label","Preview: "+p.title);b.innerHTML='<div class="project-photo"><img loading="lazy" alt="Illustrative architectural concept image for '+p.kind+'" src="'+p.image.replace("w=1800","w=800")+'"><span class="image-label">Concept</span></div><h3></h3><div class="type"></div>';b.querySelector("h3").textContent=p.title;b.querySelector(".type").textContent=p.kind;b.addEventListener("click",()=>openProject(i));return b};
+const createTile=(p,i)=>{const b=document.createElement("button");b.className="project-tile";b.type="button";b.setAttribute("aria-label","Preview: "+p.title);b.innerHTML='<div class="project-photo"><img loading="lazy" alt="Architectural project photography illustrating '+p.kind+'" src="'+p.image.replace("w=1800","w=800")+'"></div><h3></h3><div class="type"></div>';b.querySelector("h3").textContent=p.title;b.querySelector(".type").textContent=p.kind;b.addEventListener("click",()=>openProject(i));return b};
 function sydneyDay(){const parts=new Intl.DateTimeFormat("en-AU",{timeZone:"Australia/Sydney",year:"numeric",month:"2-digit",day:"2-digit"}).formatToParts(new Date());const obj={};parts.forEach(part=>{if(part.type!=="literal")obj[part.type]=+part.value});return Math.floor((Date.UTC(obj.year,obj.month-1,obj.day)-Date.UTC(2026,9,2))/86400000)}
-function renderFeatured(force=false){const day=sydneyDay();const selected=((day%4)+4)%4;if(!force&&selected===featuredIndex)return;featuredIndex=selected;const p=projects[selected];if(elements.img){elements.img.src=p.image;elements.img.alt="Illustrative finished residential architecture photograph for "+p.kind}if(elements.heading)elements.heading.textContent=p.title;if(elements.desc)elements.desc.textContent=p.description;if(elements.idx)elements.idx.textContent=p.number+" / FEATURED PROJECT CONCEPT";if(elements.cards){elements.cards.replaceChildren();for(let k=1;k<4;k++){const idx=(selected+k)%4;elements.cards.appendChild(createTile(projects[idx],idx))}}}
+function renderFeatured(force=false){const day=sydneyDay();const selected=((day%4)+4)%4;if(!force&&selected===featuredIndex)return;featuredIndex=selected;const p=projects[selected];if(elements.img){elements.img.src=p.image;elements.img.alt="Illustrative finished residential architecture photograph for "+p.kind}if(elements.heading)elements.heading.textContent=p.title;if(elements.desc)elements.desc.textContent=p.description;if(elements.idx)elements.idx.textContent=p.number+" / FEATURED WORK";if(elements.cards){elements.cards.replaceChildren();for(let k=1;k<4;k++){const idx=(selected+k)%4;elements.cards.appendChild(createTile(projects[idx],idx))}}}
 $("featuredView")?.addEventListener("click",()=>openProject(featuredIndex<0?0:featuredIndex));renderFeatured(true);window.setInterval(renderFeatured,60000);
 const modal=$("infoModal"),modalTitle=$("modalTitle"),modalEyebrow=$("modalEyebrow"),modalCopy=$("modalCopy"),modalPhoto=$("modalPhoto"),modalTags=$("modalTags"),modalSocials=$("modalSocials"),modalAction=$("modalAction");
 function openModal({title,eyebrow,copy,img,tags,contact=false}){if(!modal)return;modalTitle.textContent=title;modalEyebrow.textContent=eyebrow;modalCopy.textContent=copy;if(img){modalPhoto.src=img;modalPhoto.alt="Illustrative project photography";modalPhoto.hidden=false}else{modalPhoto.hidden=true;modalPhoto.removeAttribute("src")}modalTags.replaceChildren();(tags||[]).forEach(t=>{const el=document.createElement("span");el.className="modal-tag";el.textContent=t;modalTags.appendChild(el)});modalSocials.hidden=!contact;modalAction.hidden=contact;modal.showModal();body.classList.add("modal-open");$("modalClose")?.focus()}
@@ -49,5 +69,35 @@ modal?.addEventListener("close",()=>{body.classList.remove("modal-open")});
 modal?.addEventListener("click",e=>{if(e.target===modal)modal.close()});
 modalAction?.addEventListener("click",()=>{modal.close();$("contact")?.scrollIntoView({behavior:reduced?"instant":"smooth"})});
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&backdrop?.classList.contains("open"))closeMenu();if(e.key==="Tab"&&backdrop?.classList.contains("open")){const f=[...drawer.querySelectorAll('a[href],button:not([disabled])')].filter(x=>x.offsetParent!==null);const first=f[0],last=f[f.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
+
+/* Portrait build film: native video, no third-party embed or animation framework. */
+const buildVideo=$("buildVideo"),buildPlay=$("buildPlay"),buildSound=$("buildSound");
+if(buildVideo){
+  buildVideo.pause();buildVideo.autoplay=false;buildVideo.muted=true;
+  let videoInView=false,wantsPlayback=!reduced;
+  const syncVideo=()=>{
+    if(buildPlay){const playing=!buildVideo.paused;buildPlay.innerHTML=playing?"Ⅱ <span>PAUSE</span>":"▶ <span>PLAY</span>";buildPlay.setAttribute("aria-pressed",String(playing));buildPlay.setAttribute("aria-label",playing?"Pause video":"Play video");}
+    if(buildSound){buildSound.innerHTML=buildVideo.muted?"♪ <span>SOUND OFF</span>":"♫ <span>SOUND ON</span>";buildSound.setAttribute("aria-pressed",String(!buildVideo.muted));buildSound.setAttribute("aria-label",buildVideo.muted?"Unmute video":"Mute video");}
+  };
+  const attemptPlay=()=>{if(videoInView&&!document.hidden&&wantsPlayback){const pending=buildVideo.play();if(pending?.catch)pending.catch(()=>{wantsPlayback=false;syncVideo()})}syncVideo()};
+  buildVideo.addEventListener("play",syncVideo);
+  buildVideo.addEventListener("pause",syncVideo);
+  buildVideo.addEventListener("error",()=>{const box=buildVideo.closest(".build-video-wrap");if(box&&!box.querySelector(".build-error")){const message=document.createElement("div");message.className="build-error";message.textContent="The Build video could not be loaded.";message.style.cssText="position:absolute;inset:38% 18px auto;text-align:center;color:#fff;font-weight:700;font-size:14px;z-index:3";box.appendChild(message)}});
+  if(!reduced){buildVideo.removeAttribute("controls")}else{buildVideo.removeAttribute("autoplay");buildVideo.setAttribute("controls","")}
+  buildPlay?.addEventListener("click",()=>{wantsPlayback=buildVideo.paused;if(wantsPlayback){videoInView=true;attemptPlay()}else{buildVideo.pause();syncVideo()}});
+  buildSound?.addEventListener("click",()=>{buildVideo.muted=!buildVideo.muted;syncVideo()});
+  if("IntersectionObserver" in window){
+    const observer=new IntersectionObserver(entries=>{videoInView=entries[0].isIntersecting;if(videoInView)attemptPlay();else buildVideo.pause()},{threshold:.3});observer.observe(buildVideo);
+  }else{videoInView=true;if(!reduced)attemptPlay()}
+  document.addEventListener("visibilitychange",()=>{if(document.hidden)buildVideo.pause();else if(videoInView)attemptPlay()});
+  syncVideo();
+}
+/* Scroll-triggered editorial reveals, never applied to daily content rotation. */
+if(!reduced && "IntersectionObserver" in window){
+  const revealObserver=new IntersectionObserver(entries=>{
+    for(const e of entries){if(e.isIntersecting){e.target.classList.add("is-visible");revealObserver.unobserve(e.target)}}
+  },{threshold:.09,rootMargin:"0px 0px -25px 0px"});
+  document.querySelectorAll(".motion-reveal").forEach(el=>revealObserver.observe(el));
+}
 $("year").textContent=String(new Date().getFullYear());
 })();

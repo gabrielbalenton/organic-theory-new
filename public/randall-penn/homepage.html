@@ -42,7 +42,7 @@
      </div>
      <a class="soft-btn btn-ivory nav-talk" href="#contact">Talk to Us <span class="arr" aria-hidden="true">↗</span></a>
      <button class="mobile-nav-toggle" id="mobileNavToggle" type="button" aria-label="Open navigation" aria-haspopup="true" aria-controls="menuDrawer" aria-expanded="false">
-       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+       <svg class="r-menu-icon" viewBox="0 0 58 60" fill="none" aria-hidden="true"><path d="M5 54V5H32C45 5 53 13 53 25C53 35 48 40 40 43L53 55H37L27 44H17V54H5Z" fill="currentColor"/><path d="M18 19H40M18 28H34" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
      </button>
    </nav>
    <div class="wrap hero-content">
@@ -53,65 +53,80 @@
        <a class="soft-btn btn-ivory" href="#featured">Projects <span class="arr" aria-hidden="true">↗</span></a>
        <a class="soft-btn btn-outline-light" href="#contact">Talk to Us <span class="arr" aria-hidden="true">↗</span></a>
      </div>
-     <div class="hero-scroll" aria-hidden="true">SCROLL TO EXPLORE</div><span class="hero-concept">Concept photography</span>
+     <div class="hero-scroll" aria-hidden="true">SCROLL TO EXPLORE</div>
    </div>
  </section>
  <section class="section featured" id="featured" aria-labelledby="featuredHeading">
    <div class="wrap">
-     <header class="section-top">
+     <header class="section-top motion-reveal">
        <div><div class="micro micro-line">A closer look at our work</div><h2 id="featuredHeading">Made for living.<br>Crafted to last.</h2></div>
        <p>Explore the spaces and details that define our approach to residential construction.</p>
      </header>
      <div class="featured-grid">
-       <div class="featured-image"><img id="featuredPhoto" alt="Illustrative finished residential architecture photograph" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1800&amp;q=83" width="1100" height="800"><span class="image-label">Concept image — replace with actual work</span></div>
-       <div class="featured-detail">
-         <div class="index" id="featuredIndex">01 / FEATURED PROJECT CONCEPT</div>
+       <div class="featured-image" id="featuredParallax"><img id="featuredPhoto" alt="Illustrative finished residential architecture photograph" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1800&amp;q=83" width="1100" height="800"></div>
+       <div class="featured-detail motion-reveal">
+         <div class="index" id="featuredIndex">01 / FEATURED WORK</div>
          <h3 id="featuredTitle">A home, reimagined.</h3>
          <p id="featuredDesc">An editorial project story reserved for real before, during and after photography, with a short account of the finished build.</p>
          <button class="soft-btn btn-dark" type="button" id="featuredView">View Project <span class="arr" aria-hidden="true">↗</span></button>
        </div>
      </div>
      <div class="featured-small" id="supportingCards" aria-label="Other project previews">
-       <button type="button" class="project-tile" data-concept-static="true"><div class="project-photo"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Illustrative outdoor living concept" loading="lazy"><span class="image-label">Concept</span></div><h3>The outdoor connection</h3><div class="type">Outdoor living</div></button>
-       <button type="button" class="project-tile" data-concept-static="true"><div class="project-photo"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Illustrative interior build concept" loading="lazy"><span class="image-label">Concept</span></div><h3>Room to come together</h3><div class="type">Interior construction</div></button>
-       <button type="button" class="project-tile" data-concept-static="true"><div class="project-photo"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Illustrative extension concept" loading="lazy"><span class="image-label">Concept</span></div><h3>More space, naturally</h3><div class="type">Residential extension</div></button>
+       <button type="button" class="project-tile" data-concept-static="true"><div class="project-photo"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Illustrative outdoor living concept" loading="lazy"></div><h3>The outdoor connection</h3><div class="type">Outdoor living</div></button>
+       <button type="button" class="project-tile" data-concept-static="true"><div class="project-photo"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Illustrative interior build concept" loading="lazy"></div><h3>Room to come together</h3><div class="type">Interior construction</div></button>
+       <button type="button" class="project-tile" data-concept-static="true"><div class="project-photo"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&amp;fit=crop&amp;w=800&amp;q=82" alt="Illustrative extension concept" loading="lazy"></div><h3>More space, naturally</h3><div class="type">Residential extension</div></button>
      </div>
    </div>
  </section>
- <section class="media-slot" id="media" aria-label="Behind the Build film placeholder">
-   <div class="wrap media-slot-inner">
-     <div><div class="micro micro-line" style="color:#5c685e">Behind the Build</div><h2>The story behind the finished work.</h2></div>
-     <p>The before-and-after construction film will be added here when the footage is ready.</p>
-     <span class="status-pill">Film in production</span>
+ <section class="the-build" id="media" aria-labelledby="buildHeading">
+   <div class="wrap build-inner">
+     <div class="build-story motion-reveal">
+       <div class="micro micro-line">The Build</div>
+       <h2 id="buildHeading">The work behind<br>the finished build.</h2>
+       <p>See the building process up close. A look at the work, decisions and attention to detail behind Randall-Penn Constructions.</p>
+       <div class="build-rule"></div>
+       <span class="build-edition">THE BUILD &nbsp; / &nbsp; RANDALL-PENN</span>
+     </div>
+     <div class="build-visual motion-reveal" style="--reveal-delay:130ms">
+       <div class="build-video-wrap">
+         <video id="buildVideo" src="/randall-penn/Build.mp4" muted autoplay loop playsinline preload="metadata" controls aria-label="Randall-Penn construction film">Your browser does not support HTML5 video.</video>
+         <div class="build-grain" aria-hidden="true"></div>
+         <div class="build-video-head"><span>RP / THE BUILD</span><span class="build-live"><i></i> MOTION</span></div>
+         <div class="build-video-controls">
+           <button type="button" id="buildPlay" aria-label="Pause video" aria-pressed="true">Ⅱ <span>PAUSE</span></button>
+           <button type="button" id="buildSound" aria-label="Unmute video" aria-pressed="false">♪ <span>SOUND OFF</span></button>
+         </div>
+       </div>
+       <div class="build-caption"><span>01 / ON SITE</span><span>THE PROCESS IN MOTION</span></div>
+     </div>
    </div>
  </section>
  <section class="section services" id="services" aria-labelledby="servicesHeading">
    <div class="wrap services-inner">
+     
      <div>
        <div class="micro micro-line">What we do</div>
-       <h2 id="servicesHeading">Considered from the first cut to the finishing touch.</h2>
+       <h2 id="servicesHeading" class="motion-reveal">Considered from the first cut to the finishing touch.</h2>
        <p class="intro">From the first conversation to the final details, your home deserves a considered approach.</p>
      </div>
      <div>
-       <div class="service-list">
+       <div class="service-list motion-reveal" style="--reveal-delay:90ms">
          <button type="button" class="service-row" data-service="Residential construction"><span class="n">01</span><span class="name">Residential construction</span><span class="tip" aria-hidden="true">↗</span></button>
          <button type="button" class="service-row" data-service="Renovations &amp; upgrades"><span class="n">02</span><span class="name">Renovations &amp; upgrades</span><span class="tip" aria-hidden="true">↗</span></button>
          <button type="button" class="service-row" data-service="Extensions &amp; additions"><span class="n">03</span><span class="name">Extensions &amp; additions</span><span class="tip" aria-hidden="true">↗</span></button>
          <button type="button" class="service-row" data-service="Outdoor living &amp; carpentry"><span class="n">04</span><span class="name">Outdoor living &amp; carpentry</span><span class="tip" aria-hidden="true">↗</span></button>
        </div>
-       <p class="services-note">Service categories and full descriptions subject to Logan's approval. Dedicated service-page links will replace these previews.</p>
+       
      </div>
    </div>
  </section>
  <section class="about" id="about" aria-labelledby="aboutHeading">
    <div class="about-photo">
-     <img class="about-backdrop" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1250&amp;q=80" loading="lazy" alt="Illustrative completed residential construction exterior">
-     <img class="logan-frame" src="/images/randall-penn/logan-site-reference.jpg" loading="lazy" width="210" height="240" alt="Logan Randall-Penn photographed on a building site, temporary low-resolution reference">
-     <span class="photo-note">Logan on site · temporary reference photograph</span>
+     <img class="about-backdrop" src="/randall-penn/Randall%20Photo%20on%20site.png" loading="lazy" alt="Logan Randall-Penn on a building site" width="1050" height="1200">
    </div>
    <div class="about-copy">
      <img class="watermark" src="/images/randall-penn/rp-logo-original.svg" alt="" loading="lazy" width="265" height="308" aria-hidden="true">
-     <div class="about-copy-inner">
+     <div class="about-copy-inner motion-reveal">
        <div class="micro micro-line">The person behind the work</div>
        <h2 id="aboutHeading">Get to know<br>Randall-Penn<br>Constructions.</h2>
        <p>Get to know the person behind Randall-Penn Constructions and his approach to residential building.</p>
@@ -120,7 +135,7 @@
    </div>
  </section>
  <section class="testimonials" id="testimonials" aria-labelledby="testimonialsHeading">
-   <div class="wrap quote-inner">
+   <div class="wrap quote-inner motion-reveal">
      <div class="micro micro-line">Client experiences</div>
      <h2 id="testimonialsHeading">What our clients say.</h2>
      <div class="quote-mark" aria-hidden="true">“</div>
@@ -129,7 +144,7 @@
    </div>
  </section>
  <section class="contact" id="contact" aria-labelledby="contactHeading">
-   <div class="wrap contact-inner">
+   <div class="wrap contact-inner motion-reveal">
      <div>
        <div class="micro micro-line">Your next project</div>
        <h2 id="contactHeading">Have a project in mind?</h2>
@@ -166,10 +181,10 @@
        </div>
      </div>
    </div>
-   <div class="footer-base"><span>© <span id="year">2026</span> Randall-Penn Constructions.</span><span>Website homepage preview · Project photography and reviews pending approval</span></div>
+   <div class="footer-base"><span>© <span id="year">2026</span> Randall-Penn Constructions.</span><span>Efficient Sustainable Builds</span></div>
  </div>
 </footer>
-<button class="float-menu" id="floatMenu" type="button" aria-label="Open navigation" aria-haspopup="true" aria-controls="menuDrawer" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+<button class="float-menu" id="floatMenu" type="button" aria-label="Open navigation" aria-haspopup="true" aria-controls="menuDrawer" aria-expanded="false"><svg class="r-menu-icon" viewBox="0 0 58 60" fill="none" aria-hidden="true"><path d="M5 54V5H32C45 5 53 13 53 25C53 35 48 40 40 43L53 55H37L27 44H17V54H5Z" fill="currentColor"/><path d="M18 19H40M18 28H34" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></button>
 <button class="back-top" id="backTop" type="button" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" aria-hidden="true"><path d="M12 20V4m-7 7 7-7 7 7"/></svg></button>
 <div class="menu-backdrop" id="menuBackdrop" aria-hidden="true">
  <aside class="menu-drawer" id="menuDrawer" aria-label="Site menu">
