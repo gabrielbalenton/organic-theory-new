@@ -30,6 +30,10 @@
       "destination": "/randall-penn/option-3.html"
     },
     {
+      "source": "/randall-penn/homepage",
+      "destination": "/randall-penn/homepage.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
