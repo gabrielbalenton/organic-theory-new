@@ -95,6 +95,19 @@ body {
 .ot-contrast [class*="text-[#A1A1AA]"] { color: var(--ot-canvas) !important; }
 .ot-contrast [class*="border-[#FAFAFA]"] { border-color: rgba(250, 249, 244, 0.18) !important; }
 
+/* Life OS is intentionally dark and must not inherit the public-site light remap. */
+.life-os-shell {
+  min-height: 100vh;
+  background: #09090B !important;
+  color: #FFFFFF !important;
+}
+.life-os-shell [class*="bg-[#09090B]"] { background-color: #09090B !important; }
+.life-os-shell .text-slate-500 { color: #94A3B8 !important; }
+.life-os-shell .text-slate-600,
+.life-os-shell .text-slate-700 { color: #7F8EA3 !important; }
+.life-os-shell [class*="border-white/10"] { border-color: rgba(255, 255, 255, 0.16) !important; }
+.life-os-shell .input::placeholder { color: #7F8EA3; opacity: 1; }
+
 /* Existing image heroes remain intentionally high-contrast. */
 section:has(img[src="/images/home-hero.png"]),
 section:has(img[src="/images/services-hero.png"]),
