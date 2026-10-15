@@ -28,6 +28,7 @@ const FPXStocklist = lazy(() => import('./pages/FPXStocklist'));
 const FPXStocklistLive = lazy(() => import('./pages/FPXStocklistLive'));
 const DMRSignature = lazy(() => import('./pages/DMRSignature'));
 const DMRSignatureRobby = lazy(() => import('./pages/DMRSignatureRobby'));
+const Internal = lazy(() => import('./pages/Internal'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 const PageLoader = () => <div className="min-h-screen bg-[#09090B]" />;
@@ -61,6 +62,7 @@ export default function App() {
             <Route path="pipeline/jobs" element={<Navigate to="/pipeline" replace />} />
             <Route path="*" element={<NotFound />} />
           </Route>
+          <Route path="/internal" element={<Internal />} />
           <Route path="/courses/:courseId/learn" element={<CoursePlayer />} />
           <Route path="/pitch/:slug" element={<Pitch />} />
           <Route path="/fpx/stocklist" element={<FPXStocklistLive />} />
