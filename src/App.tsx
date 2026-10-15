@@ -38,6 +38,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Cursor />
+      <style>{`button[aria-label="Log out"] { display: none !important; }`}</style>
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Layout />}>
