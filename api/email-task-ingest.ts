@@ -32,21 +32,35 @@ export default async function handler(req: Req, res: Res) {
   }
 
   try {
-    const sourceId = cleanText(req.query?.emailId, 160);
+    const tasks = await loadTasks();
+    const taskId = cleanText(req.query?.taskId, 100);
+    const requestedStatus = cleanText(req.query?.status, 20);
+
+    if (taskId && requestedStatus) {
+      const index = tasks.findIndex((task) => task.id === taskId);
+      if (index < 0) return res.status(404).json({ error: 'Task not found' });
+      const current = tasks[index];
+      const updated = sanitizeTask({ ...current, status: requestedStatus }, current);
+      tasks[index] = updated;
+      await saveTasks(tasks);
+      return res.status(200).json({ ok: true, updated: true, task: updated });
+    }
+
+    const sourceType = cleanText(req.query?.sourceType, 20) === 'Chat' ? 'Chat' : 'Email';
+    const sourceId = cleanText(req.query?.emailId ?? req.query?.sourceId, 160);
     const sourceThreadId = cleanText(req.query?.threadId, 160);
     const title = cleanText(req.query?.title, 180);
     if (!sourceId || !title) {
-      return res.status(400).json({ error: 'emailId and title are required' });
+      return res.status(400).json({ error: 'sourceId/emailId and title are required' });
     }
 
-    const tasks = await loadTasks();
-    const exact = tasks.find((task) => task.sourceType === 'Email' && task.sourceId === sourceId);
+    const exact = tasks.find((task) => task.sourceType === sourceType && task.sourceId === sourceId);
     if (exact) {
       return res.status(200).json({ ok: true, duplicate: true, task: exact });
     }
 
     const sameOpenThread = sourceThreadId
-      ? tasks.find((task) => task.sourceType === 'Email' && task.sourceThreadId === sourceThreadId && task.status !== 'Done')
+      ? tasks.find((task) => task.sourceType === sourceType && task.sourceThreadId === sourceThreadId && task.status !== 'Done')
       : undefined;
 
     if (sameOpenThread) {
@@ -78,7 +92,7 @@ export default async function handler(req: Req, res: Res) {
       status: 'Active',
       notes: cleanText(req.query?.notes, 2000),
       lastCompleted: null,
-      sourceType: 'Email',
+      sourceType,
       sourceId,
       sourceThreadId,
       sourceUrl: cleanText(req.query?.sourceUrl, 1000),
@@ -90,7 +104,7 @@ export default async function handler(req: Req, res: Res) {
     await saveTasks(tasks);
     return res.status(201).json({ ok: true, task });
   } catch (error) {
-    console.error('Email task ingest error:', error);
-    return res.status(500).json({ error: 'Could not add email task' });
+    console.error('Life OS task ingest error:', error);
+    return res.status(500).json({ error: 'Could not add or update task' });
   }
 }
