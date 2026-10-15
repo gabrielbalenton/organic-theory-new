@@ -11,7 +11,7 @@ type Cadence = 'Weekly' | 'Monthly' | 'Quarterly' | 'One-off';
 type Priority = 'P1' | 'P2' | 'P3';
 type Status = 'Active' | 'Paused' | 'Done';
 
-type Task = {
+export type Task = {
   id: string;
   title: string;
   area: string;
@@ -25,6 +25,12 @@ type Task = {
   lastCompleted?: string | null;
   createdAt?: string;
   updatedAt?: string;
+  sourceType?: 'Email';
+  sourceId?: string;
+  sourceThreadId?: string;
+  sourceUrl?: string;
+  sourceSubject?: string;
+  sourceSender?: string;
 };
 
 const TASKS_PATH = 'internal/life-os/tasks.json';
@@ -36,7 +42,7 @@ function cleanText(value: unknown, max = 500) {
   return typeof value === 'string' ? value.trim().slice(0, max) : '';
 }
 
-function sanitizeTask(input: any, existing?: Task): Task {
+export function sanitizeTask(input: any, existing?: Task): Task {
   const now = new Date().toISOString();
   const cadence = CADENCES.has(input?.cadence) ? input.cadence : existing?.cadence || 'Weekly';
   const priority = PRIORITIES.has(input?.priority) ? input.priority : existing?.priority || 'P2';
@@ -44,6 +50,8 @@ function sanitizeTask(input: any, existing?: Task): Task {
   const title = cleanText(input?.title ?? existing?.title, 180);
 
   if (!title) throw new Error('Task title is required');
+
+  const sourceType = input?.sourceType === 'Email' || existing?.sourceType === 'Email' ? 'Email' : undefined;
 
   return {
     id: existing?.id || crypto.randomUUID(),
@@ -63,10 +71,16 @@ function sanitizeTask(input: any, existing?: Task): Task {
       : cleanText(input?.lastCompleted ?? existing?.lastCompleted, 64) || null,
     createdAt: existing?.createdAt || now,
     updatedAt: now,
+    sourceType,
+    sourceId: cleanText(input?.sourceId ?? existing?.sourceId, 160),
+    sourceThreadId: cleanText(input?.sourceThreadId ?? existing?.sourceThreadId, 160),
+    sourceUrl: cleanText(input?.sourceUrl ?? existing?.sourceUrl, 1000),
+    sourceSubject: cleanText(input?.sourceSubject ?? existing?.sourceSubject, 500),
+    sourceSender: cleanText(input?.sourceSender ?? existing?.sourceSender, 500),
   };
 }
 
-async function saveTasks(tasks: Task[]) {
+export async function saveTasks(tasks: Task[]) {
   await put(TASKS_PATH, JSON.stringify(tasks), {
     access: 'private',
     addRandomSuffix: false,
@@ -76,7 +90,7 @@ async function saveTasks(tasks: Task[]) {
   });
 }
 
-async function loadTasks(): Promise<Task[]> {
+export async function loadTasks(): Promise<Task[]> {
   const blob = await get(TASKS_PATH, { access: 'private', useCache: false });
   if (blob?.statusCode === 200 && blob.stream) {
     const raw = await new Response(blob.stream).text();
