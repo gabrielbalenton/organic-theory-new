@@ -65,7 +65,7 @@ export default function App() {
             <Route path="pipeline/jobs" element={<Navigate to="/pipeline" replace />} />
             <Route path="*" element={<NotFound />} />
           </Route>
-          <Route path="/internal" element={<Internal />} />
+          <Route path="/internal" element={<div className="life-os-shell ot-contrast"><Internal /></div>} />
           <Route path="/courses/:courseId/learn" element={<CoursePlayer />} />
           <Route path="/pitch/:slug" element={<Pitch />} />
           <Route path="/fpx/stocklist" element={<FPXStocklistLive />} />
