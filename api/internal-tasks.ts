@@ -10,6 +10,7 @@ type Res = any;
 type Cadence = 'Weekly' | 'Monthly' | 'Quarterly' | 'One-off';
 type Priority = 'P1' | 'P2' | 'P3';
 type Status = 'Active' | 'Paused' | 'Done';
+type SourceType = 'Email' | 'Chat';
 
 export type Task = {
   id: string;
@@ -25,7 +26,7 @@ export type Task = {
   lastCompleted?: string | null;
   createdAt?: string;
   updatedAt?: string;
-  sourceType?: 'Email';
+  sourceType?: SourceType;
   sourceId?: string;
   sourceThreadId?: string;
   sourceUrl?: string;
@@ -37,6 +38,7 @@ const TASKS_PATH = 'internal/life-os/tasks.json';
 const CADENCES = new Set<Cadence>(['Weekly', 'Monthly', 'Quarterly', 'One-off']);
 const PRIORITIES = new Set<Priority>(['P1', 'P2', 'P3']);
 const STATUSES = new Set<Status>(['Active', 'Paused', 'Done']);
+const SOURCE_TYPES = new Set<SourceType>(['Email', 'Chat']);
 
 function cleanText(value: unknown, max = 500) {
   return typeof value === 'string' ? value.trim().slice(0, max) : '';
@@ -51,7 +53,8 @@ export function sanitizeTask(input: any, existing?: Task): Task {
 
   if (!title) throw new Error('Task title is required');
 
-  const sourceType = input?.sourceType === 'Email' || existing?.sourceType === 'Email' ? 'Email' : undefined;
+  const requestedSourceType = cleanText(input?.sourceType ?? existing?.sourceType, 20) as SourceType;
+  const sourceType = SOURCE_TYPES.has(requestedSourceType) ? requestedSourceType : undefined;
 
   return {
     id: existing?.id || crypto.randomUUID(),
