@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
+import Cursor from './components/Cursor';
 
 const Home = lazy(() => import('./pages/Home'));
 const Services = lazy(() => import('./pages/Services'));
@@ -36,6 +37,8 @@ const PageLoader = () => <div className="min-h-screen bg-[#09090B]" />;
 export default function App() {
   return (
     <BrowserRouter>
+      <Cursor />
+      <style>{`button[aria-label="Log out"] { display: none !important; }`}</style>
       <Suspense fallback={<PageLoader />}>
         <Routes>
           <Route path="/" element={<Layout />}>

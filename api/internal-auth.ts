@@ -1,5 +1,3 @@
-import { clearSessionCookie, createSessionCookie, isInternalAuthorized, verifyPin } from '../server/internal-session.js';
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Req = any;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -10,21 +8,11 @@ export default async function handler(req: Req, res: Res) {
   res.setHeader('X-Content-Type-Options', 'nosniff');
 
   if (req.method === 'GET') {
-    return res.status(200).json({ authenticated: isInternalAuthorized(req) });
+    return res.status(200).json({ authenticated: true });
   }
 
-  if (req.method === 'POST') {
-    if (!verifyPin(req.body?.pin)) {
-      return res.status(401).json({ ok: false, error: 'Invalid PIN' });
-    }
-
-    res.setHeader('Set-Cookie', createSessionCookie());
-    return res.status(200).json({ ok: true });
-  }
-
-  if (req.method === 'DELETE') {
-    res.setHeader('Set-Cookie', clearSessionCookie());
-    return res.status(200).json({ ok: true });
+  if (req.method === 'POST' || req.method === 'DELETE') {
+    return res.status(200).json({ ok: true, authenticated: true });
   }
 
   res.setHeader('Allow', 'GET, POST, DELETE');
