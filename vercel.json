@@ -21,6 +21,15 @@
           "value": "noindex, nofollow, noarchive"
         }
       ]
+    },
+    {
+      "source": "/ny-beauty",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -60,6 +69,10 @@
     {
       "source": "/old-jeans",
       "destination": "/old-jeans.html"
+    },
+    {
+      "source": "/ny-beauty",
+      "destination": "/ny-beauty.html"
     },
     {
       "source": "/(.*)",
