@@ -122,7 +122,7 @@ export default function Layout() {
               className={`rounded-full border px-4 py-2 transition-all duration-200 ${
                 location.pathname === '/start'
                   ? 'border-[#2F3A45] bg-[#2F3A45] text-[#FAF9F4]'
-                  : 'border-[#2F3A45]/18 text-[#2F3A45]/65 hover:border-[#2F3A45]/45 hover:text-[#2F3A45]'
+                  : 'border-[#2F3A45]/18 text-[#2F3A45]/80 hover:border-[#2F3A45]/45 hover:text-[#2F3A45]'
               }`}
             >
               Start Here
@@ -131,7 +131,7 @@ export default function Layout() {
               <Link
                 key={to}
                 to={to}
-                className={`transition-colors duration-200 ${location.pathname === to ? 'text-[#2F3A45]' : 'text-[#2F3A45]/48 hover:text-[#2F3A45]'}`}
+                className={`transition-colors duration-200 ${location.pathname === to ? 'text-[#2F3A45]' : 'text-[#2F3A45]/75 hover:text-[#2F3A45]'}`}
               >
                 {label}
               </Link>
@@ -166,7 +166,7 @@ export default function Layout() {
                   {label}
                 </Link>
               ))}
-              <a href="https://www.linkedin.com/in/gabrielbalenton/" target="_blank" rel="noopener noreferrer" className="mt-5 text-[10px] uppercase tracking-[0.28em] text-[#2F3A45]/45 hover:text-[#2F3A45]">
+              <a href="https://www.linkedin.com/in/gabrielbalenton/" target="_blank" rel="noopener noreferrer" className="mt-5 text-[10px] uppercase tracking-[0.28em] text-[#2F3A45]/70 hover:text-[#2F3A45]">
                 LinkedIn
               </a>
             </motion.div>
@@ -183,19 +183,19 @@ export default function Layout() {
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 md:grid-cols-4">
             <div>
               <div className="mb-3 font-display text-lg font-bold tracking-[0.3em] text-[#FAF9F4]">O<span className="mx-1 text-[#8DA5B7]">+</span>X</div>
-              <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-[#FAF9F4]/45">Organic Theory</p>
-              <p className="max-w-xs text-xs leading-6 text-[#FAF9F4]/58">Search, automation, and systems for brands that want to scale without unnecessary friction.</p>
+              <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-[#FAF9F4]/70">Organic Theory</p>
+              <p className="max-w-xs text-xs leading-6 text-[#FAF9F4]/80">Search, automation, and systems for brands that want to scale without unnecessary friction.</p>
             </div>
 
             <FooterColumn title="Work" links={[["/services", "Services"], ["/case-studies", "Case Studies"], ["/process", "Process"]]} />
             <FooterColumn title="Learn" links={[["/insights", "Insights"], ["/courses", "Courses"], ["/tools", "Free Tools"]]} />
 
             <div>
-              <p className="mb-4 text-[9px] font-bold uppercase tracking-[0.28em] text-[#FAF9F4]/35">Connect</p>
+              <p className="mb-4 text-[9px] font-bold uppercase tracking-[0.28em] text-[#FAF9F4]/65">Connect</p>
               <div className="flex flex-col gap-3">
                 <FooterLink to="/about">About</FooterLink>
                 <FooterLink to="/contact">Contact</FooterLink>
-                <a href="https://www.linkedin.com/in/gabrielbalenton/" target="_blank" rel="noopener noreferrer" className="text-[10px] uppercase tracking-[0.18em] text-[#FAF9F4]/55 transition-colors hover:text-[#FAF9F4]">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/gabrielbalenton/" target="_blank" rel="noopener noreferrer" className="text-[10px] uppercase tracking-[0.18em] text-[#FAF9F4]/78 transition-colors hover:text-[#FAF9F4]">LinkedIn</a>
                 <a href="mailto:gabrielbalenton@gmail.com" className="text-[10px] tracking-[0.12em] text-[#FAF9F4]/55 transition-colors hover:text-[#FAF9F4]">gabrielbalenton@gmail.com</a>
               </div>
             </div>
