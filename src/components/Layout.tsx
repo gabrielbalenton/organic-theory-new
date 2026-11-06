@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { Outlet, useLocation, Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import Intro from './Intro';
 import Cursor from './Cursor';
@@ -23,6 +23,7 @@ const NAV_LINKS = [
 
 export default function Layout() {
   const location = useLocation();
+  const reduceMotion = useReducedMotion();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
@@ -149,10 +150,10 @@ export default function Layout() {
         <AnimatePresence>
           {menuOpen && (
             <motion.div
-              initial={{ opacity: 0, clipPath: 'inset(0 0 100% 0)' }}
-              animate={{ opacity: 1, clipPath: 'inset(0 0 0% 0)' }}
-              exit={{ opacity: 0, clipPath: 'inset(0 0 100% 0)' }}
-              transition={{ duration: 0.46, ease: [0.22, 1, 0.36, 1] }}
+              initial={reduceMotion ? false : { opacity: 0, y: -12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: reduceMotion ? 0 : 0.22, ease: [0.16, 1, 0.3, 1] }}
               className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-[#E8E2DB] px-6"
             >
               {[{ to: '/', label: 'Home' }, { to: '/start', label: 'Start Here' }, ...NAV_LINKS].map(({ to, label }) => (
