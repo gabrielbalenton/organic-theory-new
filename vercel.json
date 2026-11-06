@@ -12,6 +12,15 @@
           "value": "no-store, max-age=0"
         }
       ]
+    },
+    {
+      "source": "/old-jeans",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -47,6 +56,10 @@
     {
       "source": "/randall-penn/homepage",
       "destination": "/randall-penn/homepage.html"
+    },
+    {
+      "source": "/old-jeans",
+      "destination": "/old-jeans.html"
     },
     {
       "source": "/(.*)",

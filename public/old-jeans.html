@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Old Jeans: an unofficial e-commerce storefront concept by Organic Theory, featuring curated thrift finds, sample products, and an interactive demo checkout." />
+  <title>Old Jeans — Demo Storefront by Organic Theory</title>
+  <style>
+    :root {
+      --bg: #f6f1ea;
+      --paper: #fffaf4;
+      --card: #fffdf9;
+      --ink: #191715;
+      --muted: #6f655d;
+      --line: #e5ddd3;
+      --accent: #946f52;
+      --accent-deep: #76553c;
+      --soft: #f0e7de;
+      --olive: #73705a;
+      --success: #30553b;
+      --shadow: 0 18px 40px rgba(25, 23, 21, 0.08);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --radius-sm: 10px;
+      --container: 1240px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(148,111,82,0.08), transparent 30%),
+        linear-gradient(180deg, #f8f3ec 0%, #f7f2eb 38%, #f3eee7 100%);
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button {
+      font: inherit;
+      border: none;
+      cursor: pointer;
+    }
+
+    .container { width: min(var(--container), calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(255, 250, 244, 0.78);
+      border-bottom: 1px solid rgba(229,221,211,0.85);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 0;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #8a6a51, #b99a7b);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      box-shadow: var(--shadow);
+    }
+    .brand-copy h1 {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .brand-copy p {
+      margin: 4px 0 0;
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .pill, .btn, .btn-ghost, .icon-btn {
+      border-radius: 999px;
+      transition: 0.2s ease;
+    }
+    .pill {
+      font-size: 0.8rem;
+      padding: 10px 14px;
+      background: rgba(148,111,82,0.08);
+      color: var(--accent-deep);
+      border: 1px solid rgba(148,111,82,0.14);
+      font-weight: 600;
+    }
+    .btn {
+      padding: 13px 20px;
+      font-weight: 700;
+      background: var(--ink);
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn.secondary {
+      background: var(--accent);
+    }
+    .btn-ghost {
+      padding: 13px 20px;
+      font-weight: 700;
+      background: rgba(255,255,255,0.72);
+      color: var(--ink);
+      border: 1px solid var(--line);
+    }
+    .icon-btn {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--line);
+      position: relative;
+    }
+    .icon-btn .badge {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #fff;
+      font-size: 0.72rem;
+      display: grid;
+      place-items: center;
+      transform: translate(15%, -15%);
+    }
+
+    .hero {
+      padding: 36px 0 28px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    .hero-card, .hero-side {
+      background: linear-gradient(180deg, rgba(255,253,249,0.95), rgba(255,248,239,0.95));
+      border: 1px solid var(--line);
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-card {
+      min-height: 620px;
+      padding: 38px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background:
+        radial-gradient(circle at 82% 22%, rgba(148,111,82,0.16), transparent 22%),
+        radial-gradient(circle at 18% 92%, rgba(115,112,90,0.10), transparent 30%),
+        linear-gradient(180deg, #fdf9f4 0%, #fbf4eb 100%);
+    }
+    .eyebrow {
+      margin-bottom: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.82rem;
+      color: var(--accent-deep);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: var(--accent);
+    }
+    .hero-card h2 {
+      margin: 0;
+      font-size: clamp(2.6rem, 4vw, 4.9rem);
+      line-height: 0.96;
+      letter-spacing: -0.05em;
+      max-width: 10ch;
+    }
+    .hero-card .sub {
+      margin: 22px 0 30px;
+      max-width: 520px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 38px;
+    }
+    .metric {
+      background: rgba(255,255,255,0.82);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px 18px;
+    }
+    .metric strong {
+      display: block;
+      font-size: 1.32rem;
+      letter-spacing: -0.04em;
+      margin-bottom: 6px;
+    }
+    .metric span {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .editorial {
+      position: absolute;
+      right: 28px;
+      bottom: 32px;
+      width: 36%;
+      min-width: 240px;
+      max-width: 290px;
+      aspect-ratio: 4/5;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 1px solid rgba(25,23,21,0.08);
+      background:
+        linear-gradient(180deg, rgba(24,21,19,0.08), transparent 20%),
+        linear-gradient(140deg, #d7b99c 0%, #c6ab93 22%, #f2e1d3 22%, #f4e9df 55%, #b69377 55%, #cba98d 100%);
+      box-shadow: 0 22px 40px rgba(25,23,21,0.12);
+    }
+    .editorial::before {
+      content: "upcycled / curated / one-of-a-kind";
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: rgba(25,23,21,0.68);
+    }
+    .editorial::after {
+      content: "01";
+      position: absolute;
+      right: 16px;
+      bottom: 12px;
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1;
+      color: rgba(255,255,255,0.42);
+      letter-spacing: -0.08em;
+    }
+
+    .hero-side {
+      padding: 24px;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      gap: 18px;
+    }
+    .mosaic {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      min-height: 100%;
+    }
+    .tile {
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      min-height: 220px;
+      position: relative;
+      background: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(255,255,255,0));
+    }
+    .tile.t1 {
+      background:
+        linear-gradient(180deg, rgba(25,23,21,0.05), transparent 26%),
+        linear-gradient(135deg, #d5b196 0%, #e8d7ca 40%, #f7efe8 40%, #eedccc 100%);
+    }
+    .tile.t2 {
+      background:
+        linear-gradient(180deg, rgba(25,23,21,0.05), transparent 26%),
+        linear-gradient(135deg, #7c8165 0%, #b5baa0 38%, #f2ede5 38%, #ddd0c0 100%);
+    }
+    .tile.t3 {
+      background:
+        linear-gradient(180deg, rgba(25,23,21,0.05), transparent 26%),
+        linear-gradient(135deg, #b8885f 0%, #f0e4d7 46%, #926644 46%, #d4b291 100%);
+    }
+    .tile.t4 {
+      background:
+        linear-gradient(180deg, rgba(25,23,21,0.05), transparent 26%),
+        linear-gradient(135deg, #6a6f59 0%, #d9d8ce 42%, #e0bc95 42%, #f4ebe2 100%);
+    }
+    .tile .caption {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      background: rgba(255,255,255,0.8);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.7);
+      padding: 10px 12px;
+      border-radius: 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .promise {
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--line);
+      padding: 18px;
+      border-radius: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .promise .item {
+      padding-right: 12px;
+      border-right: 1px solid var(--line);
+    }
+    .promise .item:last-child { border-right: 0; }
+    .promise .label {
+      display: block;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .promise strong {
+      display: block;
+      font-size: 1rem;
+      line-height: 1.35;
+    }
+
+    section { padding: 34px 0; }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .section-head h3 {
+      margin: 0;
+      font-size: clamp(1.8rem, 2.6vw, 2.6rem);
+      letter-spacing: -0.04em;
+    }
+    .section-head p {
+      margin: 10px 0 0;
+      max-width: 680px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .collection-card {
+      background: rgba(255,255,255,0.82);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .collection-image {
+      height: 180px;
+      border-radius: 18px;
+      margin-bottom: 16px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(25,23,21,0.05);
+    }
+    .collection-image.c1 { background: linear-gradient(135deg, #cba98d 0%, #f1e2d2 42%, #8f6541 42%, #b28662 100%); }
+    .collection-image.c2 { background: linear-gradient(135deg, #7a8467 0%, #d5d8c7 46%, #f0e4d6 46%, #d8b493 100%); }
+    .collection-image.c3 { background: linear-gradient(135deg, #d7b799 0%, #fff2e6 54%, #8d8162 54%, #adb194 100%); }
+    .collection-image.c4 { background: linear-gradient(135deg, #b78f6a 0%, #d0b39a 33%, #f5eee6 33%, #6a705b 100%); }
+    .collection-image::after {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.42);
+    }
+    .collection-card span {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .collection-card strong {
+      font-size: 1.1rem;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .shop-wrap {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+    .filters, .products-wrap, .feature-banner, .checkout-card, .content-card {
+      background: rgba(255,255,255,0.84);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+    .filters {
+      padding: 22px;
+      position: sticky;
+      top: 92px;
+    }
+    .filters h4, .content-card h4, .checkout-card h4 {
+      margin: 0 0 18px;
+      font-size: 1.05rem;
+    }
+    .filter-group + .filter-group { margin-top: 22px; }
+    .filter-group label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.94rem;
+      color: var(--muted);
+      margin: 9px 0;
+    }
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tag {
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .products-wrap {
+      padding: 22px;
+    }
+    .shop-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .shop-head .search {
+      flex: 1;
+      min-width: 220px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 12px 16px;
+      color: var(--muted);
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .product-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 22px rgba(25,23,21,0.06);
+    }
+    .product-image {
+      height: 260px;
+      position: relative;
+      overflow: hidden;
+    }
+    .product-image::after {
+      content: attr(data-tone);
+      position: absolute;
+      right: 14px;
+      top: 14px;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(255,255,255,0.78);
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.84);
+      color: var(--ink);
+      font-weight: 700;
+    }
+    .product-image.p1 { background: linear-gradient(135deg, #cba98d 0%, #f4e8da 52%, #6f765f 52%, #aeb195 100%); }
+    .product-image.p2 { background: linear-gradient(135deg, #9a7251 0%, #d8b495 42%, #f5eee6 42%, #ddd7cc 100%); }
+    .product-image.p3 { background: linear-gradient(135deg, #70745e 0%, #eef0e8 48%, #d1b093 48%, #f5ebe1 100%); }
+    .product-image.p4 { background: linear-gradient(135deg, #b28d69 0%, #f3e8dd 40%, #90785f 40%, #c6a287 100%); }
+    .product-image.p5 { background: linear-gradient(135deg, #7c8168 0%, #d6dbc8 42%, #f6f0ea 42%, #d5b296 100%); }
+    .product-image.p6 { background: linear-gradient(135deg, #d4b69c 0%, #f9f1e9 46%, #797f69 46%, #bfc4aa 100%); }
+    .product-image .heart {
+      position: absolute;
+      left: 14px;
+      top: 14px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(255,255,255,0.84);
+      color: var(--accent-deep);
+    }
+    .product-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 12px;
+    }
+    .product-body h5 {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    .sku {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .price {
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+    }
+    .desc {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+      min-height: 42px;
+    }
+    .chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .chip {
+      font-size: 0.75rem;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 10px;
+      color: var(--muted);
+    }
+    .product-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: auto;
+    }
+    .product-actions button { flex: 1; }
+
+    .feature-banner {
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 1fr 0.82fr;
+      gap: 18px;
+      overflow: hidden;
+    }
+    .feature-banner h4 {
+      margin: 0;
+      font-size: 2rem;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+    .feature-banner p {
+      margin: 14px 0 18px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+    .story-card {
+      min-height: 280px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, #87644a 0%, #dfc1a6 34%, #f7efe7 34%, #7c826c 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .story-card::after {
+      content: "one-of-a-kind";
+      position: absolute;
+      left: 18px;
+      top: 18px;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      color: rgba(255,255,255,0.78);
+    }
+
+    .checkout-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+    }
+    .content-card, .checkout-card {
+      padding: 24px;
+    }
+    .mini-steps {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+    .step {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .step.active {
+      background: rgba(148,111,82,0.1);
+      color: var(--accent-deep);
+      border-color: rgba(148,111,82,0.22);
+    }
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .field.full { grid-column: 1 / -1; }
+    .field label {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    .field input, .field textarea, .field select {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px 15px;
+      font: inherit;
+      color: var(--ink);
+    }
+    .field textarea { min-height: 96px; resize: vertical; }
+
+    .summary-list { display: grid; gap: 12px; }
+    .summary-item {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      border-radius: 16px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+    }
+    .summary-thumb {
+      width: 72px;
+      height: 82px;
+      border-radius: 14px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, #cda889, #f4eadf 45%, #747b64 45%, #b6baa1);
+    }
+    .summary-item strong { display: block; margin-bottom: 4px; }
+    .summary-item span { color: var(--muted); font-size: 0.86rem; }
+    .totals {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      gap: 10px;
+    }
+    .total-row {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+    }
+    .total-row.grand {
+      color: var(--ink);
+      font-weight: 800;
+      font-size: 1.05rem;
+    }
+    .note {
+      margin-top: 14px;
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(48,85,59,0.08);
+      color: var(--success);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      border: 1px solid rgba(48,85,59,0.14);
+    }
+
+    .footer {
+      padding: 30px 0 48px;
+      color: var(--muted);
+    }
+    .footer-card {
+      padding: 28px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.82);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+    }
+    .footer strong { color: var(--ink); }
+
+    .cart-drawer, .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      display: none;
+    }
+    .cart-drawer.open, .modal.open { display: block; }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(25,23,21,0.45);
+      backdrop-filter: blur(6px);
+    }
+    .drawer-panel {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: min(430px, 100%);
+      background: #fffaf4;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: -18px 0 60px rgba(25,23,21,0.18);
+    }
+    .drawer-head, .modal-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .drawer-head h4, .modal-head h4 { margin: 0; font-size: 1.15rem; }
+    .cart-items {
+      flex: 1;
+      overflow: auto;
+      display: grid;
+      gap: 12px;
+      margin: 6px 0 18px;
+      padding-right: 6px;
+    }
+    .cart-item {
+      display: grid;
+      grid-template-columns: 76px 1fr auto;
+      gap: 12px;
+      padding: 12px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.72);
+    }
+    .cart-thumb {
+      width: 76px;
+      height: 88px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #cba98d, #f3e7da 48%, #77806a 48%, #bfc1ac);
+    }
+    .cart-item strong { display: block; margin-bottom: 4px; }
+    .cart-item small { color: var(--muted); }
+    .qty-row {
+      margin-top: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+    }
+    .qty-row button {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+    .cart-empty {
+      color: var(--muted);
+      text-align: center;
+      padding: 50px 10px;
+      border-radius: 18px;
+      border: 1px dashed var(--line);
+      background: rgba(255,255,255,0.65);
+    }
+    .drawer-footer {
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      gap: 12px;
+    }
+    .modal-panel {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: min(980px, calc(100% - 24px));
+      max-height: calc(100% - 24px);
+      overflow: auto;
+      border-radius: 28px;
+      background: #fffaf4;
+      border: 1px solid var(--line);
+      box-shadow: 0 28px 70px rgba(25,23,21,0.26);
+      padding: 24px;
+    }
+    .modal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+    .modal-image {
+      min-height: 520px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: linear-gradient(135deg, #caa78a 0%, #f3e8dc 42%, #7a7f68 42%, #bcc0a6 100%);
+    }
+    .modal-copy .sku { margin-bottom: 10px; display: block; }
+    .modal-copy h2 {
+      margin: 0;
+      font-size: 2rem;
+      line-height: 1.06;
+      letter-spacing: -0.04em;
+    }
+    .modal-copy .price { margin: 16px 0; font-size: 1.4rem; }
+    .modal-copy p {
+      color: var(--muted);
+      line-height: 1.75;
+    }
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 18px 0 22px;
+    }
+    .detail-box {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px;
+      background: var(--paper);
+    }
+    .detail-box span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+    .size-row { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+    .size-pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: var(--muted);
+    }
+    .size-pill.active {
+      background: rgba(148,111,82,0.1);
+      color: var(--accent-deep);
+      border-color: rgba(148,111,82,0.22);
+    }
+    .helper-note {
+      margin-top: 18px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      background: rgba(148,111,82,0.08);
+      color: var(--accent-deep);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      border: 1px solid rgba(148,111,82,0.14);
+    }
+
+    @media (max-width: 1120px) {
+      .hero-grid, .shop-wrap, .checkout-grid, .feature-banner, .modal-grid {
+        grid-template-columns: 1fr;
+      }
+      .collection-grid, .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .filters { position: static; }
+      .editorial { position: relative; right: auto; bottom: auto; width: 100%; max-width: 100%; min-width: 0; margin-top: 24px; }
+      .hero-card { min-height: auto; }
+    }
+    @media (max-width: 760px) {
+      .nav-links { display: none; }
+      .metrics, .promise, .collection-grid, .product-grid, .form-grid { grid-template-columns: 1fr; }
+      .hero-card, .hero-side, .products-wrap, .filters, .feature-banner, .content-card, .checkout-card { border-radius: 22px; }
+      .hero-card { padding: 24px; }
+      .section-head { align-items: start; flex-direction: column; }
+      .cta-row, .nav-actions, .shop-head { width: 100%; }
+      .shop-head { align-items: stretch; }
+      .shop-head > * { width: 100%; }
+      .modal-panel { padding: 16px; }
+      .modal-image { min-height: 320px; }
+    }
+  
+/* Editorial stock photography is illustrative and not Old Jeans inventory. */
+.editorial {background-image:linear-gradient(180deg,rgba(20,18,16,.08),rgba(20,18,16,.15)),url('https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1100&q=85')!important;background-size:cover!important;background-position:center!important;}
+.tile.t1,.collection-image.c1 {background-image:linear-gradient(180deg,transparent,rgba(0,0,0,.12)),url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85')!important;background-position:center!important;background-size:cover!important}
+.tile.t2,.collection-image.c2 {background-image:linear-gradient(180deg,transparent,rgba(0,0,0,.12)),url('https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1000&q=85')!important;background-position:center!important;background-size:cover!important}
+.tile.t3,.collection-image.c3 {background-image:linear-gradient(180deg,transparent,rgba(0,0,0,.12)),url('https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=1000&q=85')!important;background-position:center!important;background-size:cover!important}
+.tile.t4,.collection-image.c4 {background-image:linear-gradient(180deg,transparent,rgba(0,0,0,.12)),url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=85')!important;background-position:center!important;background-size:cover!important}
+.story-card{background-image:linear-gradient(180deg,transparent,rgba(0,0,0,.22)),url('https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?auto=format&fit=crop&w=1000&q=85')!important;background-position:center!important;background-size:cover!important}
+.product-image.p1,.modal-image.p1{background-image:url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85'),linear-gradient(135deg,#d6bca4,#8f765f)!important;background-position:center!important;background-size:cover!important}
+.product-image.p2,.modal-image.p2{background-image:url('https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=1000&q=85'),linear-gradient(135deg,#d6bca4,#8f765f)!important;background-position:center!important;background-size:cover!important}
+.product-image.p3,.modal-image.p3{background-image:url('https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=1000&q=85'),linear-gradient(135deg,#879178,#d3ba9e)!important;background-position:center!important;background-size:cover!important}
+.product-image.p4,.modal-image.p4{background-image:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=85'),linear-gradient(135deg,#d6bca4,#8f765f)!important;background-position:center!important;background-size:cover!important}
+.product-image.p5,.modal-image.p5{background-image:url('https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1000&q=85'),linear-gradient(135deg,#d6bca4,#8f765f)!important;background-position:center!important;background-size:cover!important}
+.product-image.p6,.modal-image.p6{background-image:url('https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?auto=format&fit=crop&w=1000&q=85'),linear-gradient(135deg,#879178,#d3ba9e)!important;background-position:center!important;background-size:cover!important}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #7d523e;outline-offset:3px}
+#shopSort{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:12px 16px;font:inherit;color:var(--ink)}
+#demoOrderFeedback{margin-top:16px;display:none;background:#e7f2e8;color:#22512f;border:1px solid #bcd2bf;padding:16px;border-radius:16px;line-height:1.6}
+#demoOrderFeedback.error{background:#f9e9e5;color:#813822;border-color:#eed0c6}
+.product-image{background-color:#e6d3c0}
+@media(max-width:760px){.hero-grid{gap:12px}.hero-card h2{font-size:clamp(2.4rem,11vw,4rem)}.nav-actions .pill{display:none}.hero-side{padding:14px}.promise{display:grid;grid-template-columns:1fr}.promise .item{border-right:0;border-bottom:1px solid var(--line);padding-bottom:12px}.promise .item:last-child{border-bottom:0}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-image{height:185px}.product-body{padding:12px}.product-actions{flex-direction:column}}
+
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-mark">OJ</div>
+        <div class="brand-copy">
+          <h1>Old Jeans</h1>
+          <p>curated thrift + upcycled edits</p>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#collections">Collections</a>
+        <a href="#shop">Shop</a>
+        <a href="#story">Story</a>
+        <a href="#checkout">Order Flow</a>
+      </div>
+      <div class="nav-actions">
+        <span class="pill">Demo storefront by Organic Theory</span>
+        <button class="icon-btn" id="cartButton" aria-label="Open cart">
+          👜
+          <span class="badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <div>
+            <div class="eyebrow">Pre-loved, elevated</div>
+            <h2>Thrifted pieces curated like a fashion drop.</h2>
+            <p class="sub">A polished e-commerce concept for <strong>Old Jeans</strong> that helps shoppers discover one-of-a-kind pieces, browse collections, and place orders without relying only on social media DMs.</p>
+            <div class="cta-row">
+              <a class="btn" href="#shop">Shop the demo</a>
+              <a class="btn-ghost" href="#checkout">View order flow</a>
+            </div>
+            <div class="metrics">
+              <div class="metric">
+                <strong>Mobile-first</strong>
+                <span>Built for scrolling, saving, carting, and checking out on mobile.</span>
+              </div>
+              <div class="metric">
+                <strong>Product-led</strong>
+                <span>Collections, sizing, condition, and one-of-a-kind inventory all front and center.</span>
+              </div>
+              <div class="metric">
+                <strong>Conversion-ready</strong>
+                <span>Cart flow, order form, email capture, and analytics-ready layout.</span>
+              </div>
+            </div>
+          </div>
+          <div class="editorial" aria-hidden="true"></div>
+        </div>
+        <div class="hero-side">
+          <div class="mosaic">
+            <div class="tile t1"><div class="caption">Curated thrift drops</div></div>
+            <div class="tile t2"><div class="caption">Premium product presentation</div></div>
+            <div class="tile t3"><div class="caption">Shop by vibe / collection</div></div>
+            <div class="tile t4"><div class="caption">Smoother order experience</div></div>
+          </div>
+          <div class="promise">
+            <div class="item">
+              <span class="label">Built for the brand</span>
+              <strong>Editorial visuals that feel premium, warm, and fashion-forward.</strong>
+            </div>
+            <div class="item">
+              <span class="label">Built for customers</span>
+              <strong>Clear collections, product details, and a friction-light order journey.</strong>
+            </div>
+            <div class="item">
+              <span class="label">Built for growth</span>
+              <strong>Ready for SEO, social traffic, and future automation as the store scales.</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="collections">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h3>Curated collections</h3>
+            <p>This mockup positions Old Jeans as a polished online destination for thrifted and upcycled fashion, with collections that feel intentional rather than random.</p>
+          </div>
+          <a class="btn-ghost" href="#shop">Browse all items</a>
+        </div>
+        <div class="collection-grid">
+          <article class="collection-card">
+            <div class="collection-image c1"></div>
+            <div>
+              <strong>The Denim Room</strong>
+              <span>Vintage denim, reworked washes, and one-of-a-kind jeans-led pieces.</span>
+            </div>
+          </article>
+          <article class="collection-card">
+            <div class="collection-image c2"></div>
+            <div>
+              <strong>Soft Utility</strong>
+              <span>Relaxed layers, earthy tones, and easy thrift finds styled with intention.</span>
+            </div>
+          </article>
+          <article class="collection-card">
+            <div class="collection-image c3"></div>
+            <div>
+              <strong>Upcycled Studio</strong>
+              <span>Creative remakes and statement pieces designed to feel rare and collectible.</span>
+            </div>
+          </article>
+          <article class="collection-card">
+            <div class="collection-image c4"></div>
+            <div>
+              <strong>Weekend Drop</strong>
+              <span>Freshly uploaded thrift treasures ready to sell fast before they're gone.</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h3>Demo shop experience</h3>
+            <p>Customers can browse by collection, review condition and sizing, and add products to cart. The products below are sample items meant to show how Old Jeans could sell through a proper store instead of relying purely on messages.</p>
+          </div>
+          <div class="tag-row">
+            <span class="tag">One-of-a-kind inventory</span>
+            <span class="tag">Dummy checkout flow</span>
+            <span class="tag">Ready for product SEO</span>
+          </div>
+        </div>
+
+        <div class="shop-wrap">
+          <aside class="filters">
+            <h4>Filter the drop</h4>
+            <div class="filter-group">
+              <div class="tag-row">
+                <span class="tag">Thrifted</span>
+                <span class="tag">Upcycled</span>
+                <span class="tag">New drop</span>
+                <span class="tag">Best sellers</span>
+              </div>
+            </div>
+            <div class="filter-group">
+              <h4>Categories</h4>
+              <label><input type="checkbox" checked data-cat="denim" /> Denim</label>
+              <label><input type="checkbox" checked data-cat="bottoms" /> Bottoms</label>
+              <label><input type="checkbox" checked data-cat="tops" /> Tops</label>
+              <label><input type="checkbox" checked data-cat="dresses" /> Dresses</label>
+              <label><input type="checkbox" checked data-cat="jackets" /> Jackets</label>
+              <label><input type="checkbox" checked data-cat="accessories" /> Accessories</label>
+            </div>
+            <div class="filter-group">
+              <h4>Style notes</h4>
+              <span class="tag">Y2K inspired</span>
+              <span class="tag">Neutral palette</span>
+              <span class="tag">Street + casual</span>
+              <span class="tag">Soft vintage</span>
+            </div>
+            <div class="filter-group">
+              <h4>Why this matters</h4>
+              <p style="color: var(--muted); line-height: 1.7; margin: 0; font-size: 0.92rem;">This storefront structure makes it easier for customers to discover pieces, understand sizing and condition, and order with less friction.</p>
+            </div>
+          </aside>
+
+          <div class="products-wrap">
+            <div class="shop-head">
+              <input class="search" id="shopSearch" type="search" placeholder="Search pieces, sizes, collections..." aria-label="Search shop products" />
+              <select id="shopSort" aria-label="Sort products"><option value="newest">Sort: newest drop</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="name">Name: A to Z</option></select>
+            </div>
+            <div class="product-grid" id="productGrid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="story">
+      <div class="container">
+        <div class="feature-banner">
+          <div>
+            <div class="eyebrow">Brand story + store logic</div>
+            <h4>More than a page. A storefront that supports discovery, trust, and repeat purchases.</h4>
+            <p>For a thrift and upcycled brand, the store needs to feel editorial and exciting while still being practical. This concept balances premium product presentation with the functional pieces that help convert social traffic into actual orders.</p>
+            <div class="tag-row">
+              <span class="tag">Homepage storytelling</span>
+              <span class="tag">New arrivals</span>
+              <span class="tag">Cart and order capture</span>
+              <span class="tag">Email list growth</span>
+              <span class="tag">Analytics-ready</span>
+            </div>
+          </div>
+          <div class="story-card"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="checkout">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h3>Order flow mockup</h3>
+            <p>This is a dummy checkout section to demonstrate how Old Jeans could guide customers from selected pieces to order submission. No live payments are connected.</p>
+          </div>
+          <span class="pill">Demo only — no Stripe / payment setup</span>
+        </div>
+
+        <div class="checkout-grid">
+          <div class="content-card">
+            <div class="mini-steps">
+              <span class="step active">1. Cart review</span>
+              <span class="step active">2. Shipping info</span>
+              <span class="step">3. Order confirmation</span>
+            </div>
+            <h4>Checkout details</h4>
+            <div class="form-grid">
+              <div class="field">
+                <label>First name</label>
+                <input type="text" placeholder="Maria" />
+              </div>
+              <div class="field">
+                <label>Last name</label>
+                <input type="text" placeholder="Santos" />
+              </div>
+              <div class="field full">
+                <label>Email address</label>
+                <input type="email" placeholder="maria@email.com" />
+              </div>
+              <div class="field full">
+                <label>Shipping address</label>
+                <input type="text" placeholder="Unit / Street / Barangay / City" />
+              </div>
+              <div class="field">
+                <label>Region</label>
+                <select>
+                  <option>Metro Manila</option>
+                  <option>Cebu</option>
+                  <option>Davao</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Contact number</label>
+                <input type="text" placeholder="09XX XXX XXXX" />
+              </div>
+              <div class="field full">
+                <label>Order notes</label>
+                <textarea placeholder="Sizing questions, delivery notes, or preferred contact method."></textarea>
+              </div>
+            </div>
+            <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:20px;">
+              <button class="btn" type="button" id="submitDemoOrder">Place demo order</button>
+              <a class="btn-ghost" href="#shop">Continue shopping</a>
+            </div><div id="demoOrderFeedback" role="status" aria-live="polite"></div>
+          </div>
+
+          <aside class="checkout-card">
+            <h4>Your demo order</h4>
+            <div class="summary-list" id="checkoutItems"><div class="note">Choose a piece from the shop to build your sample order.</div></div>
+            <div class="totals">
+              <div class="total-row"><span>Subtotal</span><strong id="checkoutSubtotal">₱0</strong></div>
+              <div class="total-row"><span>Illustrative shipping</span><strong id="checkoutShipping">₱0</strong></div>
+              <div class="total-row grand"><span>Demo total</span><strong id="checkoutTotal">₱0</strong></div>
+            </div>
+            <div class="note">Simulation only. No orders, contact details, payments or messages are sent or stored. Actual shipping rates and products are placeholders.</div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer">
+      <div class="container footer-card">
+        <div>
+          <strong>Old Jeans demo storefront · Unofficial concept</strong><br />
+          Concept by Organic Theory, not an official Old Jeans website. All products, prices, photography and shopping interactions are illustrative.
+        </div>
+        <div class="tag-row">
+          <span class="tag">Website concept</span>
+          <span class="tag">E-commerce demo</span>
+          <span class="tag">Organic Theory presentation piece</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="overlay" data-close-cart></div>
+    <div class="drawer-panel">
+      <div class="drawer-head">
+        <h4>Your bag</h4>
+        <button class="icon-btn" data-close-cart aria-label="Close cart">✕</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="drawer-footer">
+        <div class="total-row grand"><span>Total</span><strong id="cartTotal">₱0</strong></div>
+        <a class="btn" href="#checkout" id="goCheckout">Go to order flow</a>
+        <button class="btn-ghost" data-close-cart>Keep browsing</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="productModal">
+    <div class="overlay" data-close-modal></div>
+    <div class="modal-panel">
+      <div class="modal-head">
+        <h4>Product quick view</h4>
+        <button class="icon-btn" data-close-modal aria-label="Close product modal">✕</button>
+      </div>
+      <div class="modal-grid">
+        <div class="modal-image" id="modalImage"></div>
+        <div class="modal-copy">
+          <span class="sku" id="modalSku">SKU</span>
+          <h2 id="modalName">Product name</h2>
+          <div class="price" id="modalPrice">₱0</div>
+          <p id="modalDesc">Product description.</p>
+          <div class="detail-grid">
+            <div class="detail-box"><span>Condition</span><strong id="modalCondition">Excellent</strong></div>
+            <div class="detail-box"><span>Fit</span><strong id="modalFit">Relaxed</strong></div>
+            <div class="detail-box"><span>Category</span><strong id="modalCategory">Jacket</strong></div>
+            <div class="detail-box"><span>Availability</span><strong>Only one piece</strong></div>
+          </div>
+          <div class="size-row" id="modalSizes"></div>
+          <div class="product-actions">
+            <button class="btn secondary" id="modalAddToCart">Add to bag</button>
+            <button class="btn-ghost" data-close-modal>Continue browsing</button>
+          </div>
+          <div class="helper-note">This demo shows how product pages can communicate sizing, condition, and scarcity — which is especially important for thrift and upcycled pieces.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const products = [
+      {
+        id: 1,
+        name: 'Washed Utility Jacket',
+        sku: 'OJ-001',
+        price: 1290,
+        tone: 'new drop',
+        className: 'p1',
+        short: 'Soft-structured outerwear piece with a broken-in vintage feel.',
+        description: 'A soft utility jacket with a washed finish and an effortless relaxed fit. Styled as a statement layer for casual everyday wear while still feeling refined and collectible.',
+        condition: 'Excellent vintage condition',
+        fit: 'Relaxed fit',
+        category: 'Jacket',
+        sizes: ['S', 'M', 'L']
+      },
+      {
+        id: 2,
+        name: 'Reworked Denim Midi',
+        sku: 'OJ-002',
+        price: 1480,
+        tone: 'upcycled',
+        className: 'p2',
+        short: 'An upcycled denim piece with strong silhouette and premium detail.',
+        description: 'A reworked midi-length denim piece featuring structured lines and a one-of-a-kind upcycled finish. Designed to feel both nostalgic and modern.',
+        condition: 'Excellent reworked condition',
+        fit: 'Structured fit',
+        category: 'Dress / skirt edit',
+        sizes: ['Waist 27', 'Waist 28']
+      },
+      {
+        id: 3,
+        name: 'Soft Olive Cargo Pants',
+        sku: 'OJ-003',
+        price: 990,
+        tone: 'thrifted',
+        className: 'p3',
+        short: 'Relaxed pants with utilitarian pockets and a muted earthy tone.',
+        description: 'Soft cargo pants sourced for everyday wear. The color and shape make this piece ideal for pairing with minimalist or street-style looks.',
+        condition: 'Very good thrift condition',
+        fit: 'Easy straight fit',
+        category: 'Bottoms',
+        sizes: ['Waist 30', 'Waist 32']
+      },
+      {
+        id: 4,
+        name: 'Vintage Knit Layer',
+        sku: 'OJ-004',
+        price: 820,
+        tone: 'best seller',
+        className: 'p4',
+        short: 'Warm textured knit for soft vintage styling and layered outfits.',
+        description: 'A cozy knit layer with a warm neutral tone and easy silhouette. Curated to work as a versatile styling piece in a thrift-led wardrobe.',
+        condition: 'Very good condition',
+        fit: 'Oversized fit',
+        category: 'Top / knitwear',
+        sizes: ['Free size', 'L']
+      },
+      {
+        id: 5,
+        name: 'Neutral Boxy Shirt',
+        sku: 'OJ-005',
+        price: 740,
+        tone: 'curated',
+        className: 'p5',
+        short: 'A clean, easy shirt with editorial simplicity and styling range.',
+        description: 'A clean neutral shirt with a slightly boxy silhouette. Sourced for versatility, layering potential, and everyday styling ease.',
+        condition: 'Excellent condition',
+        fit: 'Boxy fit',
+        category: 'Top',
+        sizes: ['M', 'L']
+      },
+      {
+        id: 6,
+        name: 'Patchwork Denim Tote',
+        sku: 'OJ-006',
+        price: 690,
+        tone: 'one-of-a-kind',
+        className: 'p6',
+        short: 'Upcycled denim tote built from mixed fabric panels.',
+        description: 'A patchwork denim tote assembled from reclaimed fabric panels. Functional, expressive, and aligned with the upcycled side of the Old Jeans brand.',
+        condition: 'Handmade / upcycled',
+        fit: 'Accessory',
+        category: 'Bag',
+        sizes: ['One size']
+      }
+    ];
+
+    const productGrid = document.getElementById('productGrid');
+    const cartDrawer = document.getElementById('cartDrawer');
+    const productModal = document.getElementById('productModal');
+    const cartItemsEl = document.getElementById('cartItems');
+    const cartTotalEl = document.getElementById('cartTotal');
+    const cartCountEl = document.getElementById('cartCount');
+
+    let cart = [];
+    let activeProduct = null;
+
+    function peso(value) {
+      return new Intl.NumberFormat('en-PH', { style: 'currency', currency: 'PHP', maximumFractionDigits: 0 }).format(value);
+    }
+
+    function renderProducts() {
+      const q = (document.getElementById('shopSearch')?.value || '').trim().toLowerCase();
+      const checked = [...document.querySelectorAll('[data-cat]:checked')].map(el => el.dataset.cat);
+      const matchesCategory = (p) => checked.some(c => {
+        const s=(p.name+' '+p.category+' '+p.description).toLowerCase();
+        if(c==='denim')return s.includes('denim');
+        if(c==='bottoms')return /bottom|pants|cargo|skirt/.test(s);
+        if(c==='tops')return /top|knit|shirt/.test(s);
+        if(c==='dresses')return /dress|midi/.test(s);
+        if(c==='jackets')return /jacket|outerwear/.test(s);
+        if(c==='accessories')return /bag|tote|accessory/.test(s);
+        return false;
+      });
+      let visible = products.filter(p=>matchesCategory(p) && (!q || (p.name+' '+p.category+' '+p.description+' '+p.sizes.join(' ')).toLowerCase().includes(q)));
+      const order = document.getElementById('shopSort')?.value;
+      if(order==='price-asc')visible.sort((a,b)=>a.price-b.price);
+      if(order==='price-desc')visible.sort((a,b)=>b.price-a.price);
+      if(order==='name')visible.sort((a,b)=>a.name.localeCompare(b.name));
+      productGrid.innerHTML = visible.map(product => `
+        <article class="product-card">
+          <div class="product-image ${product.className}" data-tone="${product.tone}">
+            <div class="heart">♡</div>
+          </div>
+          <div class="product-body">
+            <div class="meta-row">
+              <div>
+                <span class="sku">${product.sku}</span>
+                <h5>${product.name}</h5>
+              </div>
+              <div class="price">${peso(product.price)}</div>
+            </div>
+            <div class="desc">${product.short}</div>
+            <div class="chips">
+              <span class="chip">${product.category}</span>
+              <span class="chip">1 of 1 piece</span>
+              <span class="chip">${product.sizes[0]}</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn-ghost" onclick="openProduct(${product.id})">View item</button>
+              <button class="btn secondary" onclick="addToCart(${product.id})">Add to bag</button>
+            </div>
+          </div>
+        </article>
+      `).join('') || '<div class="cart-empty" style="grid-column:1/-1">No pieces match these filters. Try clearing your search or selecting more categories.</div>';
+    }
+
+    function openProduct(id) {
+      const product = products.find(p => p.id === id);
+      activeProduct = product;
+      document.getElementById('modalSku').textContent = product.sku;
+      document.getElementById('modalName').textContent = product.name;
+      document.getElementById('modalPrice').textContent = peso(product.price);
+      document.getElementById('modalDesc').textContent = product.description;
+      document.getElementById('modalCondition').textContent = product.condition;
+      document.getElementById('modalFit').textContent = product.fit;
+      document.getElementById('modalCategory').textContent = product.category;
+      document.getElementById('modalImage').className = `modal-image ${product.className}`;
+      document.getElementById('modalSizes').innerHTML = product.sizes.map((size, index) => `<span class="size-pill ${index === 0 ? 'active' : ''}">${size}</span>`).join('');
+      productModal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProduct() {
+      productModal.classList.remove('open');
+      if (!cartDrawer.classList.contains('open')) document.body.style.overflow = '';
+    }
+
+    function openCart() {
+      cartDrawer.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCart() {
+      cartDrawer.classList.remove('open');
+      if (!productModal.classList.contains('open')) document.body.style.overflow = '';
+    }
+
+    function addToCart(id) {
+      const product = products.find(p => p.id === id);
+      const existing = cart.find(item => item.id === id);
+      if (!existing) cart.push({ ...product, qty: 1 }); // Unique thrift stock: one piece per SKU
+      renderCart();
+      openCart();
+    }
+
+    function updateQty(id, delta) {
+      cart = cart.filter(item => !(item.id === id && delta < 0)); // Remove unique item
+      renderCart();
+    }
+
+    function renderCheckout() {
+      const list=document.getElementById('checkoutItems');
+      if(!list)return;
+      const subtotal=cart.reduce((s,i)=>s+i.price,0);
+      const shipping=cart.length?180:0;
+      list.innerHTML=cart.length ? cart.map(i=>`<div class="summary-item"><div class="summary-thumb"></div><div><strong>${i.name}</strong><span>${i.sku} · one-of-a-kind</span></div><strong>${peso(i.price)}</strong></div>`).join('') : '<div class="note">Your bag is empty. Add a piece to preview your order.</div>';
+      document.getElementById('checkoutSubtotal').textContent=peso(subtotal);
+      document.getElementById('checkoutShipping').textContent=peso(shipping);
+      document.getElementById('checkoutTotal').textContent=peso(subtotal+shipping);
+    }
+
+    function renderCart() {
+      renderCheckout();
+      const count = cart.reduce((sum, item) => sum + item.qty, 0);
+      const total = cart.reduce((sum, item) => sum + item.qty * item.price, 0);
+      cartCountEl.textContent = count;
+      cartTotalEl.textContent = peso(total);
+
+      if (!cart.length) {
+        cartItemsEl.innerHTML = `<div class="cart-empty">Your bag is empty for now.<br />Add a few demo items to experience the order flow.</div>`;
+        return;
+      }
+
+      cartItemsEl.innerHTML = cart.map(item => `
+        <div class="cart-item">
+          <div class="cart-thumb"></div>
+          <div>
+            <strong>${item.name}</strong>
+            <small>${item.sku} · ${item.category}</small>
+            <div class="qty-row">
+              <button onclick="updateQty(${item.id}, -1)">−</button>
+              <span>${item.qty}</span>
+              <span style="font-size:.72rem;color:var(--muted)">One of one</span>
+            </div>
+          </div>
+          <strong>${peso(item.price * item.qty)}</strong>
+        </div>
+      `).join('');
+    }
+
+    document.getElementById('cartButton').addEventListener('click', openCart);
+    document.querySelectorAll('[data-close-cart]').forEach(el => el.addEventListener('click', closeCart));
+    document.querySelectorAll('[data-close-modal]').forEach(el => el.addEventListener('click', closeProduct));
+    document.getElementById('modalAddToCart').addEventListener('click', () => {
+      if (activeProduct) addToCart(activeProduct.id);
+      closeProduct();
+    });
+    document.getElementById('goCheckout').addEventListener('click', closeCart);
+
+    document.getElementById('shopSearch')?.addEventListener('input',renderProducts);
+    document.getElementById('shopSort')?.addEventListener('change',renderProducts);
+    document.querySelectorAll('[data-cat]').forEach(x=>x.addEventListener('change',renderProducts));
+    document.getElementById('submitDemoOrder')?.addEventListener('click',()=>{
+      const feedback=document.getElementById('demoOrderFeedback');
+      feedback.style.display='block';feedback.classList.remove('error');
+      if(cart.length===0){feedback.textContent='Add at least one piece to your bag before placing a demo order.'; feedback.classList.add('error');return;}
+      const fields=[...document.querySelectorAll('#checkout input')];
+      const incomplete=fields.some(el=>!el.value.trim());
+      const email=fields.find(el=>el.type==='email');
+      if(incomplete || (email && !email.validity.valid)){
+        feedback.textContent='Complete the sample contact and shipping fields to preview an order confirmation.';feedback.classList.add('error');return;
+      }
+      feedback.innerHTML='<strong>Demo order complete.</strong> This is a mock confirmation only. No order was placed, no payment was taken, and no customer information was submitted or stored.';
+      feedback.scrollIntoView({behavior:'smooth',block:'center'});
+    });
+    renderProducts();
+    renderCart();
+    window.openProduct = openProduct;
+    window.addToCart = addToCart;
+    window.updateQty = updateQty;
+  </script>
+</body>
+</html>
