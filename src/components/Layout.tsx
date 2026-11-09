@@ -11,13 +11,9 @@ import { Chatbot } from './Chatbot';
 import { Newsletter } from './Newsletter';
 
 const NAV_LINKS = [
-  { to: '/services', label: 'Services' },
-  { to: '/case-studies', label: 'Case Studies' },
-  { to: '/process', label: 'Process' },
+  { to: '/case-studies', label: 'Work' },
+  { to: '/services', label: 'Expertise' },
   { to: '/about', label: 'About' },
-  { to: '/insights', label: 'Insights' },
-  { to: '/courses', label: 'Courses' },
-  { to: '/tools', label: 'Free Tools' },
   { to: '/contact', label: 'Contact' },
 ];
 
@@ -27,8 +23,8 @@ export default function Layout() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
-  const [showIntro, setShowIntro] = useState(() => !sessionStorage.getItem('intro_shown_componentry_v2'));
-  const [introDone, setIntroDone] = useState(() => !!sessionStorage.getItem('intro_shown_componentry_v2'));
+  const [showIntro, setShowIntro] = useState(false);
+  const [introDone, setIntroDone] = useState(true);
 
   const headerRef = useRef<HTMLElement>(null);
   const [headerHeight, setHeaderHeight] = useState(0);
@@ -75,8 +71,6 @@ export default function Layout() {
 
   return (
     <>
-      <Cursor />
-      <ScrollProgress />
       {showIntro && <Intro onComplete={handleIntroComplete} />}
 
       <AnimatePresence>
@@ -93,7 +87,7 @@ export default function Layout() {
         initial={introDone ? false : { opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.45 }}
-        className="relative flex min-h-screen flex-col overflow-x-clip bg-[#FAF9F4] text-[#2F3A45]"
+        className="relative flex min-h-screen flex-col overflow-x-clip bg-[#F5F3EE] text-[#292B2A]"
       >
         <motion.header
           ref={headerRef}
@@ -101,37 +95,28 @@ export default function Layout() {
           transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
           className={`fixed left-0 right-0 top-0 z-50 flex w-full items-center justify-between px-6 transition-all duration-300 md:px-12 ${
             scrolled
-              ? 'border-b border-[#2F3A45]/10 bg-[#FAF9F4]/92 py-4 shadow-[0_8px_24px_rgba(47,58,69,0.035)] backdrop-blur-xl'
-              : 'bg-transparent py-6'
+              ? 'border-b border-[#292B2A]/10 bg-[#F5F3EE]/95 py-4 backdrop-blur-md'
+              : 'bg-[#F5F3EE] py-6'
           }`}
         >
-          <Link to="/" className="group z-50 flex items-center gap-4" aria-label="Organic Theory Home">
-            <div className="flex items-center font-display text-xl font-bold tracking-[0.3em] text-[#2F3A45]">
+          <Link to="/" className="group z-50 flex items-center gap-3" aria-label="Organic Theory Home">
+            <div className="flex items-center font-display text-lg font-bold tracking-[0.12em] text-[#292B2A]">
               <span>O</span>
-              <span className="mx-1 text-[#8DA5B7]">+</span>
+              <span className="mx-1 text-[#738475]">+</span>
               <span>X</span>
             </div>
-            <span className="hidden text-[10px] uppercase tracking-[0.2em] text-[#2F3A45]/0 transition-colors duration-300 group-hover:text-[#2F3A45]/45 md:block">
+            <span className="hidden text-xs font-medium tracking-normal text-[#555B56] md:block">
               Organic Theory
             </span>
           </Link>
 
-          <nav className="z-50 hidden items-center gap-7 text-[10px] uppercase tracking-[0.18em] md:flex">
-            <Link
-              to="/start"
-              className={`rounded-full border px-4 py-2 transition-all duration-200 ${
-                location.pathname === '/start'
-                  ? 'border-[#2F3A45] bg-[#2F3A45] text-[#FAF9F4]'
-                  : 'border-[#2F3A45]/18 text-[#2F3A45]/80 hover:border-[#2F3A45]/45 hover:text-[#2F3A45]'
-              }`}
-            >
-              Start Here
-            </Link>
+          <nav className="z-50 hidden items-center gap-8 text-sm tracking-normal md:flex">
+            <Link to="/contact" className="order-last border-b border-[#292B2A] pb-1 text-sm font-medium tracking-normal text-[#292B2A]">Let's talk ↗</Link>
             {NAV_LINKS.map(({ to, label }) => (
               <Link
                 key={to}
                 to={to}
-                className={`transition-colors duration-200 ${location.pathname === to ? 'text-[#2F3A45]' : 'text-[#2F3A45]/75 hover:text-[#2F3A45]'}`}
+                className={`transition-colors duration-200 ${location.pathname === to ? 'text-[#292B2A]' : 'text-[#555B56] hover:text-[#292B2A]'}`}
               >
                 {label}
               </Link>
@@ -156,12 +141,12 @@ export default function Layout() {
               transition={{ duration: reduceMotion ? 0 : 0.22, ease: [0.16, 1, 0.3, 1] }}
               className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-[#E8E2DB] px-6"
             >
-              {[{ to: '/', label: 'Home' }, { to: '/start', label: 'Start Here' }, ...NAV_LINKS].map(({ to, label }) => (
+              {[{ to: '/', label: 'Home' }, ...NAV_LINKS].map(({ to, label }) => (
                 <Link
                   key={to}
                   to={to}
                   onClick={() => setMenuOpen(false)}
-                  className="font-editorial text-4xl tracking-[-0.02em] text-[#2F3A45] transition-colors duration-200 hover:text-[#8DA5B7]"
+                  className="font-editorial text-4xl tracking-[-0.02em] text-[#292B2A] transition-colors duration-200 hover:text-[#738475]"
                 >
                   {label}
                 </Link>
