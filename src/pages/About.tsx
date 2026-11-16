@@ -10,34 +10,29 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 
 const JOURNEY = [
   {
-    year: '2011',
-    role: 'Graduate',
-    detail: 'Finished a degree in Entrepreneurship. Entered the workforce with no clear lane yet.',
+    year: '2011–2013',
+    role: 'Events Marketing | Dominguez Marketing',
+    detail: 'Joined the team after an internship, supporting event marketing campaigns, promotions and on-site execution.',
   },
   {
-    year: '2012–18',
-    role: 'Customer Service → Sales → Medical Encoding',
-    detail: 'Cycled through jobs that had nothing to do with each other. Learned how to talk to people, how to close, how to process data under pressure.',
+    year: '2013–2016',
+    role: 'Assistant Marketing Manager | HCBI',
+    detail: 'Supported marketing planning, promotional campaigns, events and coordination with internal teams and partners.',
   },
   {
-    year: '2019–22',
-    role: 'Culinary School',
-    detail: 'Finally chased the real passion. Kitchen life is brutal when you\'re raising three kids - the hours, the heat, the margin for error. Loved it anyway.',
+    year: '2016–2021',
+    role: 'Digital Marketing Specialist | BVN',
+    detail: 'Worked across the digital marketing function, including paid and organic campaigns, websites, content, email, social media and reporting.',
   },
   {
-    year: '2023',
-    role: 'Introduced to Digital Marketing',
-    detail: 'My wife - who had been in this industry long before I knew what a keyword was - showed me what she did. I didn\'t expect to care. I ended up caring a lot.',
+    year: '2021–2024',
+    role: 'Digital Marketing Specialist | Unmake Studios',
+    detail: 'Focused on paid and organic marketing, technical and content SEO, landing pages, tracking, and marketing automation.',
   },
   {
-    year: '2023–24',
-    role: 'Agency Training + Self-Study',
-    detail: 'Trained with small agencies and large ones. Self-studied obsessively - not just tactics but frameworks, data, and the edge cases most practitioners skip.',
-  },
-  {
-    year: '2024',
-    role: 'Founded Organic Theory',
-    detail: 'After everything - the cross-industry experience, agency training, late-night self-study - one thing kept proving true: nothing beats a solid foundation.',
+    year: '2024–Present',
+    role: 'Digital Marketing Consultant | Organic Theory',
+    detail: 'Support growth across sectors such as building materials, B2B sourcing and distribution, professional services, and membership organizations. Work includes paid media, search, websites, CRM workflows, lead capture and conversion.',
   },
 ];
 
@@ -47,7 +42,7 @@ const STATS = [
   { value: '63%', label: 'Peak search visibility gain' },
   { value: '8 wks', label: 'Fastest result turnaround' },
   { value: '3', label: 'Kids (still cooking on weekends)' },
-  { value: '2023', label: 'Year everything clicked' },
+  { value: '2016', label: 'Digital marketing focus' },
 ];
 
 export default function About() {
@@ -55,19 +50,19 @@ export default function About() {
     <>
       <Helmet>
         <title>About Gabriel Balenton | Organic Theory</title>
-        <meta name="description" content="Gabriel Balenton is the founder of Organic Theory - a digital consultant who came up through customer service, sales, medical encoding, and culinary school before discovering a love for search architecture and automation." />
+        <meta name="description" content="Gabriel Balenton is a digital marketing consultant with a background spanning events marketing, marketing management, paid acquisition, SEO, content, websites, and automation." />
         <meta property="og:site_name" content="Organic Theory" />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://organic-theory.vercel.app/about" />
         <meta property="og:title" content="About Gabriel Balenton | Organic Theory" />
-        <meta property="og:description" content="The theory didn't start in marketing. Gabriel Balenton is the founder of Organic Theory - the non-linear path that built a systems-first approach to digital growth." />
+        <meta property="og:description" content="Gabriel Balenton's marketing career spans events, campaign management and digital growth. Explore his experience and practical approach." />
         <meta property="og:image" content="https://organic-theory.vercel.app/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Gabriel Balenton - Founder of Organic Theory" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About Gabriel Balenton | Organic Theory" />
-        <meta name="twitter:description" content="The theory didn't start in marketing. The non-linear path that built a systems-first approach to digital growth." />
+        <meta name="twitter:description" content="From events marketing and campaign management to paid media, SEO and automation." />
         <meta name="twitter:image" content="https://organic-theory.vercel.app/og-image.png" />
         <link rel="canonical" href="https://organic-theory.vercel.app/about" />
       </Helmet>
@@ -82,11 +77,11 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="text-[10px] text-[#A1A1AA] mb-8 font-bold tracking-[0.3em] uppercase"
           >
-            <ScrambleText text="[ THE FOUNDER ]" delay={0.3} />
+            <ScrambleText text="[ ABOUT GABRIEL ]" delay={0.3} />
           </motion.p>
           <TextReveal>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-editorial uppercase tracking-tight leading-[0.95] mb-10 max-w-4xl">
-              The theory didn't start in marketing.
+              From events to digital.
             </h1>
           </TextReveal>
           <motion.p
@@ -95,7 +90,7 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-base md:text-lg max-w-xl leading-relaxed"
           >
-            I spent years doing things that had nothing to do with websites or rankings. That turned out to be exactly the right preparation.
+            I started in events marketing in 2011, moved into marketing management, and shifted into digital in 2016. Across every role, the goal has been to connect the right audience with a clear next step.
           </motion.p>
         </section>
 
@@ -103,7 +98,7 @@ export default function About() {
         <section className="py-20 px-6 md:px-12 border-t border-[#FAFAFA]/10">
           <div className="max-w-7xl mx-auto">
             <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#A1A1AA]/40 mb-14">
-              <ScrambleText text="[ THE LONG WAY ROUND ]" />
+              <ScrambleText text="[ CAREER TIMELINE ]" />
             </p>
             <div className="space-y-0">
               {JOURNEY.map((item, i) => (
@@ -135,23 +130,23 @@ export default function About() {
           <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#09090B]/40 mb-6">
-                <ScrambleText text="[ WHAT CLICKED ]" />
+                <ScrambleText text="[ HOW I WORK ]" />
               </p>
               <TextReveal>
                 <h2 className="text-3xl md:text-5xl font-display uppercase tracking-tight leading-tight mb-8 text-[#09090B]">
-                  I've always been a numbers person who takes things apart.
+                  Business outcomes first. Channels second.
                 </h2>
               </TextReveal>
               <p className="text-sm leading-relaxed text-[#09090B]/60 max-w-md">
-                Digital marketing turned out to be the perfect place for both of those instincts. The data side - reading signals, mapping structure, measuring what actually moves - felt familiar in a way I didn't expect.
+                Experience across events, brand activity and digital campaigns shaped a practical approach: understand the buyer journey, improve the weak points and measure what changes.
               </p>
             </div>
             <div className="space-y-4">
               {[
-                'Trained with small agencies. Trained with large ones.',
-                'Self-studied the frameworks and edge cases most practitioners skip because they\'re not interesting enough.',
-                'Fell in love with the whole process - not just the tactics but how the systems connect.',
-                'Built a point of view: nothing beats a solid foundation.',
+                'Start with the business goal, the audience and the existing data.',
+                'Connect paid, organic, email and social activity into a coherent buyer journey.',
+                'Build practical lead capture, enquiry and follow-up processes.',
+                'Report on results, identify bottlenecks and improve what matters.',
               ].map((line, i) => (
                 <motion.div
                   key={i}
@@ -207,10 +202,10 @@ export default function About() {
             </div>
             <div className="lg:col-span-7 lg:pt-16 space-y-6">
               <p className="text-base leading-relaxed opacity-50">
-                After all the jobs, the agency time, the self-study - the one thing that kept proving itself true is this: most businesses have a traffic problem that's actually a structure problem. They don't need more content. They need a better foundation.
+                Years in events, marketing management, and digital consulting taught me that more activity does not always mean better results. The offer, customer journey, website experience, follow-up and measurement all need to work together.
               </p>
               <p className="text-base leading-relaxed opacity-50">
-                Organic Theory exists to build that foundation. Search architecture that compounds over time, automation that removes the manual drag, and design that converts rather than just impresses.
+                Organic Theory brings those pieces together: organic and paid acquisition, useful content, effective web experiences, and automation that reduces unnecessary manual work.
               </p>
               <p className="text-base leading-relaxed opacity-50">
                 The name is intentional. Organic - because sustainable growth beats borrowed traffic. Theory - because every engagement is built on a framework, not a feeling.
