@@ -13,12 +13,15 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 const SERVICES = [
   { value: '', label: 'Select a service' },
   { value: 'Search & Systems Audit - $400', label: 'Search & Systems Audit - $400' },
-  { value: 'Search Architecture - from $1,500', label: 'Search Architecture - from $1,500' },
-  { value: 'AI Automation - from $1,800', label: 'AI Automation - from $1,800' },
+  { value: 'SEO, Local SEO & AEO/GEO - from $1,500', label: 'SEO, Local SEO & AEO/GEO - from $1,500' },
+  { value: 'Google & Meta Ads - custom scope', label: 'Google & Meta Ads - custom scope' },
+  { value: 'CRM & Marketing Automation - from $1,600', label: 'CRM & Marketing Automation - from $1,600' },
   { value: 'Workflow Engineering - from $1,500', label: 'Workflow Engineering - from $1,500' },
-  { value: 'Interface Design & Dev - from $2,000', label: 'Interface Design & Dev - from $2,000' },
-  { value: 'Content Strategy - from $1,200/mo', label: 'Content Strategy - from $1,200/mo' },
-  { value: 'Email & Automation - from $800/mo', label: 'Email & Automation - from $800/mo' },
+  { value: 'Interface Design & Development - from $2,000', label: 'Interface Design & Development - from $2,000' },
+  { value: 'Full-Stack Development - $2,500', label: 'Full-Stack Development - $2,500' },
+  { value: 'AI-Assisted Systems - from $1,800', label: 'AI-Assisted Systems - from $1,800' },
+  { value: 'Content Strategy & Management - from $1,200/mo', label: 'Content Strategy & Management - from $1,200/mo' },
+  { value: 'Email & Lifecycle Marketing - from $800/mo', label: 'Email & Lifecycle Marketing - from $800/mo' },
   { value: 'Not sure yet', label: "Not sure yet - let's talk" },
 ];
 
@@ -26,7 +29,7 @@ type Status = 'idle' | 'sending' | 'success' | 'error';
 interface FormData { name: string; email: string; service: string; message: string; }
 
 const INFO_ITEMS = [
-  { label: 'Start here', value: 'Book the $400 audit to see exactly what to fix first.' },
+  { label: 'Start here', value: 'Choose the problem you want solved, or use the $400 audit when the priority is not clear yet.' },
   { label: 'Email', value: 'gabrielbalenton@gmail.com' },
   { label: 'LinkedIn', value: 'linkedin.com/in/gabrielbalenton' },
   { label: 'Response time', value: 'Within 24 hours.' },
