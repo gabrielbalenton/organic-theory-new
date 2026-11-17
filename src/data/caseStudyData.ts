@@ -25,13 +25,140 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: 'fpx-lead-journey-lab',
+    slug: 'crm-marketing-automation',
+    label: 'CRM & Marketing Automation',
+    client: 'New Zealand B2B Supply Business',
+    context: 'A quote-driven B2B supply business needed one controlled system connecting enquiries, customer records, deal stages, request-cart behaviour, email follow-up, analytics, and operational events.',
+    headline: '184 enquiries, 29 won deals, and NZ$486,740 in won-deal value across the first 90 days.',
+    coverImage: '/images/crm-automation-case-study.svg',
+    coverAlt: 'CRM and automation flow connecting website and app events to Make, HubSpot, GA4, sales, and marketing',
+    metrics: [
+      { value: '184', label: 'Enquiries' },
+      { value: '83', label: 'Quotes issued' },
+      { value: '29', label: 'Deals won' },
+      { value: 'NZ$486,740', label: 'Won-deal value' },
+      { value: '99.84%', label: 'Integration completion' },
+    ],
+    stack: ['HubSpot', 'Make', 'GA4', 'Google Tag Manager', 'Email Automation', 'CRM Workflows'],
+    sections: [
+      {
+        title: 'The Business Problem',
+        body: 'The customer journey moved through website enquiries, product browsing, saved request carts, quotations, sales follow-up, order confirmation, and repeat buying. The goal was to make those steps easier without creating more manual work or letting marketing automation interfere with live sales conversations.',
+      },
+      {
+        title: 'System Design',
+        items: [
+          'Kept one CRM record structure for contacts, companies, deals, owners, consent, sales tasks, and email workflows.',
+          'Used Make for validated handoffs between the sourcing application, operational records, commerce data, and HubSpot rather than treating GA4 as a CRM trigger.',
+          'Preserved request IDs, cart IDs, and order IDs so new events could be matched and deduplicated before creating records.',
+          'Separated quote-request recovery from true ecommerce checkout recovery so commercial intent was measured correctly.',
+        ],
+      },
+      {
+        title: 'Pipeline & Automation',
+        items: [
+          'Built a quote-to-order pipeline covering new enquiry, qualified, quote in progress, quote sent, negotiation, won, and lost or cancelled.',
+          'Designed workflows for enquiry intake, missing information, quote follow-up, lead nurture, saved request carts, customer onboarding, reorder prompts, SLA alerts, and approved supply notifications.',
+          'Suppressed irrelevant marketing when a contact had an active quotation, had replied, had purchased, or had unsubscribed.',
+        ],
+      },
+      {
+        title: 'Measurement Architecture',
+        body: 'GTM and GA4 measured consent-permitted website behaviour, HubSpot remained the source of record for identified leads and deal stages, and Make moved verified operational events between the application and CRM. Reporting reconciled records using request IDs rather than assuming anonymous GA4 event counts should equal CRM totals.',
+      },
+      {
+        title: '90-Day Results',
+        items: [
+          '184 enquiries received, 131 qualified, 83 quotes issued, and 29 deals marked won.',
+          'Won-deal value reached NZ$486,740 across the reporting period.',
+          '142 leads entered nurture and 16 later requested quotes; 99 known visitors without an enquiry produced 16 later enquiries.',
+          '78 identified saved request carts entered recovery and 27 completed after the reminder, a 34.6% recovery rate.',
+          '945 marketing emails were delivered, with a 42.0% unique open rate, 7.1% unique click rate, and 0.4% unsubscribe rate.',
+          'Make processed 11,382 scenario runs and reached a 99.84% final completion rate after retries.',
+        ],
+      },
+      {
+        title: 'What It Demonstrates',
+        body: 'This project shows CRM architecture, operational integration, lifecycle automation, customer communications, measurement, exception handling, and reporting working as one commercial system rather than as separate tools.',
+      },
+    ],
+    seo: {
+      title: 'CRM & Marketing Automation Case Study | Organic Theory',
+      description: 'A B2B HubSpot and Make automation case study covering quote-to-order workflows, cart recovery, email nurture, analytics, and 90-day commercial results.',
+      canonical: 'https://organic-theory.vercel.app/case-studies/crm-marketing-automation',
+    },
+  },
+  {
+    slug: 'paid-media-ecommerce',
+    label: 'Google & Meta Ads',
+    client: 'U.S. Ecommerce Store',
+    context: 'A six-month paid media engagement for a U.S. ecommerce store selling birth pools, liners, and accessories, with purchase tracking reconciled against Shopify.',
+    headline: '$157,674 in sales linked to paid ads from $42,121 in spend, producing a 3.74× blended return.',
+    coverImage: '/images/paid-media-case-study.svg',
+    coverAlt: 'Paid media results showing ad spend, sales, orders, return, and channel performance',
+    metrics: [
+      { value: '$157,674', label: 'Sales linked to ads' },
+      { value: '$42,121', label: 'Ad spend' },
+      { value: '521', label: 'Paid orders' },
+      { value: '3.74×', label: 'Sales per $1 spent' },
+    ],
+    stack: ['Google Ads', 'Google Shopping', 'Meta Ads', 'Shopify', 'Conversion Tracking', 'Remarketing'],
+    sections: [
+      {
+        title: 'The Goal',
+        body: 'Generate more paid orders without letting acquisition costs climb too far. The campaign had to distinguish high-intent pool shoppers from people still researching, returning customers buying liners, and low-value accessory purchases that could not support the same advertising cost.',
+      },
+      {
+        title: '14-Day Setup',
+        items: [
+          'Audited the old ads, sales tracking, product details, and available stock.',
+          'Connected purchase tracking to Shopify and verified order values before scaling.',
+          'Separated campaigns for core pools and accessories, excluding searches and audiences unlikely to buy.',
+          'Improved product comparisons, mobile checkout clarity, liner compatibility, shipping information, and the path from ad to the correct product page.',
+        ],
+      },
+      {
+        title: 'Channel Strategy',
+        items: [
+          'Used Google Search for shoppers already looking to buy and Google Shopping for product-led discovery with price and stock context.',
+          'Kept separate campaigns for the standard and upgraded pool models instead of forcing different purchase intents into one ad group.',
+          'Used Meta product creative and reminder ads to help shoppers compare options and return after viewing or abandoning the cart.',
+          'Kept accessories and open-box products on tighter budgets and reduced spend when order economics stopped supporting the traffic.',
+        ],
+      },
+      {
+        title: 'Optimization During the Run',
+        body: 'Month 4 exposed weaker traffic: orders fell from 96 to 71 and cost per order rose to $97.63. Weak searches and ads were cut, accessory spend was reduced, and product and checkout paths were reviewed before budget was increased again.',
+      },
+      {
+        title: 'Six-Month Results',
+        items: [
+          '$42,121 total ad spend produced $157,674 in sales linked to paid ads and 521 paid orders.',
+          'The blended return was 3.74×, with an average cost per order of $80.85.',
+          'Google Ads produced 360 orders and $113,108 in sales from $27,451 spend, a 4.12× return.',
+          'Meta Ads produced 161 orders and $44,566 in sales from $14,670 spend, a 3.04× return.',
+          'Month 6 finished at 122 orders, $38,216 in sales, a 4.21× return, and $74.45 ad spend per order.',
+        ],
+      },
+      {
+        title: 'What It Demonstrates',
+        body: 'Paid media performance depended on product economics, intent separation, accurate purchase tracking, landing-page clarity, budget discipline, and the willingness to cut weak traffic before scaling again.',
+      },
+    ],
+    seo: {
+      title: 'Google & Meta Ads Ecommerce Case Study | Organic Theory',
+      description: 'Six months of Google and Meta Ads: $157,674 in sales linked to $42,121 ad spend, 521 paid orders, and a 3.74x blended return.',
+      canonical: 'https://organic-theory.vercel.app/case-studies/paid-media-ecommerce',
+    },
+  },
+  {
+    slug: 'ai-assisted-journey-platform',
     label: 'AI-Assisted Full-Stack Product Development',
-    client: 'FPX | Forest Products Exchange',
-    context: 'An internal process-mapping application developed for a New Zealand timber sourcing business to turn stakeholder discussions into shared, reviewable lead and customer journeys.',
+    client: 'B2B Timber Sourcing Business',
+    context: 'An internal process-mapping application developed for a New Zealand B2B sourcing business to turn stakeholder discussions into shared, reviewable lead and customer journeys.',
     headline: 'From workshop conversations to a collaborative, AI-assisted process workspace.',
     coverImage: '/images/fpx-lead-journey-lab-case-study.svg',
-    coverAlt: 'Conceptual illustration of the Lead Journey Lab interface, with connected workflow cards, review states, and a shared decision panel; no internal customer data is shown',
+    coverAlt: 'Conceptual illustration of an AI-assisted lead and customer journey workspace',
     metrics: [
       { value: 'Visual', label: 'Journey mapping' },
       { value: 'AI', label: 'Controlled proposals' },
@@ -42,67 +169,52 @@ export const caseStudies: CaseStudy[] = [
     sections: [
       {
         title: 'The Challenge',
-        body: 'Lead acquisition, onboarding, follow-up, and customer reactivation involve multiple channels, tools, people, and decisions. During team workshops, a process can be understood in conversation but remain difficult to document, compare, or revisit. FPX needed one practical workspace where its team could map the current process, flag unresolved steps, and build a shared picture of what should happen next.',
+        body: 'Lead acquisition, onboarding, follow-up, and customer reactivation involved multiple channels, tools, people, and decisions. The business needed one practical workspace where the team could map the current process, flag unresolved steps, and build a shared picture of what should happen next.',
       },
       {
         title: 'My Role',
-        body: 'I designed and developed the Lead Journey Lab as a custom internal web application. The work covered requirements discovery, information architecture, interaction design, frontend and server development, data migration, AI import controls, and deployment. The application is a working team tool, not a public self-service product or a claim that the proposed downstream automations have already been activated.',
+        body: 'I designed and developed the platform as a custom internal web application covering requirements discovery, information architecture, interaction design, frontend and server development, data migration, AI import controls, and deployment.',
       },
       {
-        title: 'An Interactive Process Canvas',
+        title: 'Interactive Process Canvas',
         items: [
           'Built a navigable canvas with connected cards, directional relationships, zooming, panning, multi-select, automatic alignment, and simple or in-depth viewing modes.',
-          'Separated overarching source views from focused lead, onboarding, customer, and reactivation journeys, so a complex process can be reviewed without displaying everything at once.',
-          'Created reusable card definitions and editable sequence templates. Cards capture purpose, tool, execution method, owner, timing, status, and relevant notes.',
+          'Separated overarching source views from focused lead, onboarding, customer, and reactivation journeys.',
+          'Created reusable card definitions and editable sequence templates capturing purpose, tool, execution method, owner, timing, status, and notes.',
         ],
       },
       {
-        title: 'Decisions, Not Just Diagrams',
+        title: 'Decisions & AI Review',
         items: [
-          'Added Draft, Needs Discussion, and Agreed workshop states so a proposed activity cannot be confused with an approved company process.',
-          'Placed questions, comments, final decisions, incoming and outgoing connections, and editing controls alongside each selected card.',
-          'Introduced named workspace presence and activity indicators to help a small team coordinate changes across shared journeys.',
+          'Added Draft, Needs Discussion, and Agreed workshop states so proposals could not be confused with approved process.',
+          'Placed questions, comments, final decisions, connections, and editing controls beside each selected card.',
+          'Validated AI-generated journey structures, previewed additions, modifications, and removals, and required explicit version saving before applying changes.',
         ],
       },
       {
-        title: 'AI With Review Controls',
-        body: 'The AI workflow starts with the current journey source, even when the canvas is blank. A team member copies a structured request into an external AI assistant, describes the process in ordinary language, then brings back a complete proposed journey. The application validates the returned structure, previews additions, modifications, and removals, and requires an explicit Save Version action before applying it. Existing journey identity, cards, and connections are protected against incomplete or mismatched responses. AI-generated process proposals still require human review.',
+        title: 'Data Foundation',
+        body: 'The first working iteration used Airtable. As shared editing expanded, the application was migrated to a dedicated Supabase PostgreSQL project, with the original Airtable export preserved as a historical archive and database access handled server-side.',
       },
       {
-        title: 'Reusable Knowledge & Recovery',
-        items: [
-          'Organised master cards, editable sequences, and journey templates so repeatable activities do not need to be drawn from scratch each time.',
-          'Added separate mechanisms for canvas layout snapshots and versioned journey content, allowing teams to revisit layouts and restore earlier saved workflow versions.',
-          'Kept proposed automation opportunities distinct from implemented automation, so the visual map can guide future integration work without overstating the current system.',
-        ],
-      },
-      {
-        title: 'A More Sustainable Data Foundation',
-        body: 'The first working iteration used a separate Airtable account. As the application developed, its API allowance became a practical constraint for shared editing. I migrated the working application to a dedicated Supabase PostgreSQL project, preserving the original Airtable export as a historical archive rather than presenting it as a live synchronized backup. Database access is handled server-side, with protective checks around shared updates.',
-      },
-      {
-        title: 'Delivery & Outcome',
-        body: 'Delivered a deployed internal workspace for FPX to review existing processes, document decisions, explore AI-generated alternatives, and maintain reusable workflow structures. The technical migration, canvas interactions, shared data persistence, AI preview, and version-saving flows were exercised during delivery. The organisational journey decisions remain a collaborative work in progress, and this case study does not claim measured time savings, conversion uplift, or completed third-party automations.',
-      },
-      {
-        title: 'What This Demonstrates',
-        body: 'This project connects discovery workshops with full-stack product development: understanding real operational complexity, turning it into usable interfaces and data, introducing AI behind deliberate approval steps, and delivering a system that can evolve as people agree on the process.',
+        title: 'What It Demonstrates',
+        body: 'The project connects discovery workshops with full-stack product development: turning operational complexity into usable interfaces and data, placing AI behind deliberate approval steps, and delivering a system that can evolve as people agree on the process.',
       },
     ],
     seo: {
-      title: 'FPX Lead Journey Lab: AI-Assisted Workflow Platform | Organic Theory',
-      description: 'How I designed and developed an internal AI-assisted journey-mapping platform for FPX, combining visual process design, collaborative decisions, controlled AI updates, and Supabase.',
-      canonical: 'https://organic-theory.vercel.app/case-studies/fpx-lead-journey-lab',
+      title: 'AI-Assisted Journey Mapping Platform | Organic Theory',
+      description: 'An internal AI-assisted journey-mapping platform combining visual process design, collaborative decisions, controlled AI updates, Supabase, and full-stack development.',
+      canonical: 'https://organic-theory.vercel.app/case-studies/ai-assisted-journey-platform',
     },
   },
+
   {
-    slug: 'headless-gm',
+    slug: 'operations-platform',
     label: 'Full-Stack Product Engineering',
-    client: 'Headless GM',
+    client: 'Online Operations Organization',
     context: 'A custom operations platform built for a large online organization whose workflows had outgrown chat, spreadsheets, screenshots, and institutional memory.',
     headline: 'From scattered coordination to an auditable operations system of record.',
     coverImage: '/images/headless-gm-case-study.svg',
-    coverAlt: 'Headless operations platform architecture showing client, application, domain, data, and audit layers',
+    coverAlt: 'Operations platform architecture showing client, application, domain, data, and audit layers',
     metrics: [
       { value: 'RBAC', label: 'Scoped permissions' },
       { value: 'Relational', label: 'Domain model' },
@@ -117,67 +229,48 @@ export const caseStudies: CaseStudy[] = [
       },
       {
         title: 'Product Strategy',
-        body: 'I reframed the work as an operations platform rather than a collection of screens. Stable domains - identity, groups, roles, listings, transactions, entitlements, participation, approvals, publication, and audit history - sit below the interface so future clients, automations, integrations, or AI-assisted workflows can reuse the same operational core.',
+        body: 'I reframed the work as an operations platform rather than a collection of screens. Stable domains including identity, groups, roles, listings, transactions, entitlements, participation, approvals, publication, and audit history sit below the interface.',
       },
       {
         title: 'Architecture',
         items: [
-          'Separated client interfaces, application orchestration, domain rules, relational data, external services, and observability instead of putting business logic into one monolithic UI.',
-          'Kept consequential rules below the presentation layer: hiding a button improves UX, but authorization and state validation are enforced where requests are processed and persisted.',
+          'Separated client interfaces, application orchestration, domain rules, relational data, external services, and observability.',
+          'Kept consequential rules below the presentation layer so authorization and state validation are enforced where requests are processed and persisted.',
           'Designed the domain model around relationships and history so the system can answer both what is true now and how it became true.',
         ],
       },
       {
-        title: 'Authentication & RBAC',
+        title: 'Authentication, RBAC & Integrity',
         items: [
-          'Separated authentication from authorization so account identity does not automatically imply operational authority.',
-          'Scoped elevated roles to the relevant group rather than treating every operator or reviewer as globally privileged.',
-          'Designed sensitive actions to support additional authorization while preserving traceable records of consequential operations.',
-        ],
-      },
-      {
-        title: 'Identity & Data Integrity',
-        items: [
-          'Separated display identity from normalized identity so inconsistent casing, decorative characters, and non-Latin prefixes or suffixes do not become fragile primary identifiers.',
-          'Used canonical records, relational references, constrained transaction types, and validated state transitions to reduce contradictory or impossible records.',
+          'Separated authentication from authorization and scoped elevated roles to the relevant group.',
+          'Used canonical records, relational references, constrained transaction types, and validated state transitions.',
           'Preserved prior values when provenance mattered instead of destructively overwriting ownership, entitlement, or participation history.',
         ],
       },
       {
         title: 'Transactional Workflows',
         items: [
-          'Modelled sale, transfer, and gift as distinct transaction outcomes instead of forcing every movement of value or ownership into a single sale schema.',
-          'Made transfer a first-class domain event with source, destination, object or entitlement, authorization context, time, and resulting state.',
-          'Separated original entitlement from final participation so a transferred right can change the authoritative output without erasing who originally held it.',
+          'Modelled sale, transfer, and gift as distinct transaction outcomes.',
+          'Made transfer a first-class domain event with source, destination, authorization context, time, and resulting state.',
+          'Separated original entitlement from final participation so a transferred right can change authoritative output without erasing history.',
         ],
-      },
-      {
-        title: 'Validation & Publication',
-        body: 'Publication is treated as a controlled state transition, not a cosmetic button. Before finalization the system can normalize identities, check duplicates, resolve transfers, verify permissions, and review exceptional cases. The final output becomes an authoritative operational record only after those checks pass.',
       },
       {
         title: 'QA, Security & Auditability',
-        items: [
-          'Tested allowed and denied roles, same-group and cross-group behavior, identity variants, duplicate candidates, missing prerequisites, transfers before publication, and attempts to mutate finalized state.',
-          'Protected actions through authenticated identity, role, scope, and workflow state rather than trusting the client interface.',
-          'Preserved actors, timestamps, original ownership or entitlement, transfer relationships, review, and publication state so administrators can understand why the current state exists.',
-        ],
-      },
-      {
-        title: 'Outcome & Value',
-        body: 'The platform converts informal coordination into structured records and explicit system state. The result is directly transferable to custom CRMs, client portals, internal tools, marketplaces, membership systems, approval platforms, and vertical SaaS where business rules, permissions, data, and workflow state have to work together.',
+        body: 'The platform was tested across allowed and denied roles, same-group and cross-group behavior, identity variants, duplicates, missing prerequisites, transfers, and attempts to mutate finalized state. Actors, timestamps, provenance, transfer relationships, review, and publication state are preserved so administrators can understand why the current state exists.',
       },
       {
         title: 'What It Demonstrates',
-        body: 'This project is the proof point for Full-Stack Development at Organic Theory: requirements discovery, product architecture, frontend UX, backend logic, relational data modelling, authentication, RBAC, validation, security, testing, and extensible system design delivered as one product.',
+        body: 'Requirements discovery, product architecture, frontend UX, backend logic, relational data modelling, authentication, RBAC, validation, security, testing, and extensible system design delivered as one full-stack product.',
       },
     ],
     seo: {
-      title: 'Headless GM: Full-Stack Operations Platform | Organic Theory',
+      title: 'Full-Stack Operations Platform Case Study | Organic Theory',
       description: 'A full-stack operations platform case study covering relational data, authentication, RBAC, transactional workflows, validation, auditability, and headless product architecture.',
-      canonical: 'https://organic-theory.vercel.app/case-studies/headless-gm',
+      canonical: 'https://organic-theory.vercel.app/case-studies/operations-platform',
     },
   },
+
   {
     slug: 'b2b-timber-merchant',
     label: 'Website Engineering & Migration',
@@ -345,126 +438,143 @@ export const caseStudies: CaseStudy[] = [
     },
   },
   {
-    slug: 'dmr',
-    label: 'Search and Discovery',
-    client: 'DMR Designs',
-    context: 'A building design firm competing across New South Wales, Australia.',
-    headline: '63.21% search visibility in 8 weeks. The target was 30%.',
+    slug: 'local-seo-programmatic-pages',
+    label: 'SEO & Local SEO',
+    client: 'Australian Building Design Company',
+    context: 'An Australian building design and drafting business needed to reach homeowners, renovators, investors, and developers searching across New South Wales.',
+    headline: '1,281 local landing pages in eight weeks, with search visibility reaching 63.21%.',
+    metrics: [
+      { value: '+53%', label: 'Search clicks' },
+      { value: '+154%', label: 'Search impressions' },
+      { value: '1,281', label: 'Local pages launched' },
+      { value: '189', label: 'Keywords in top 3' },
+      { value: '63.21%', label: 'Search visibility' },
+    ],
+    stack: ['Google Search Console', 'Google Analytics', 'Moz', 'Technical SEO', 'Local SEO'],
     sections: [
       {
         title: 'The Problem',
-        body: 'DMR was up against established firms for the local searches homeowners and developers actually use, and ranked for almost none of them. The real opportunity sat in 1,281 individual suburbs, each with its own council rules. Covering that by hand, at quality, was impossible.',
+        body: 'Broad building-design terms were highly competitive, but the business also needed to appear when people searched for help in a specific suburb or council area. The existing website did not cover enough of those local searches, and publishing near-identical pages at scale would not have helped users or search engines.',
       },
       {
-        title: 'What I Did',
+        title: 'Search Mapping',
+        body: 'Searches were grouped by suburb or council area and matched to services people were already looking for: building design, home design, drafting, duplex design, and DA or CDC approval help. Each location page had a clear search purpose.',
+      },
+      {
+        title: '1,281 Local Pages',
+        body: 'Over eight weeks, 1,281 suburb landing pages were created and published with location-specific headings and content covering local planning context, housing types, and practical questions relevant to people planning a project in that area.',
+      },
+      {
+        title: 'Technical SEO & Measurement',
         items: [
-          'Built 1,281 suburb-specific landing pages, each with unique local content, council planning context, and geo-targeted terms. No cookie-cutter duplication.',
-          'Ran keyword research per suburb to match real search intent, mixing competitive head terms with long-tail local queries.',
-          'Rebuilt the technical foundation: indexing in Search Console, clearing crawl errors, removing duplicate titles, improving Core Web Vitals.',
-          'Rolled out in phases across 8 weeks to hold quality at scale.',
+          'Checked indexing and crawlability as the site footprint expanded.',
+          'Reviewed titles and descriptions for duplication and improved image and script performance.',
+          'Used Search Console for indexing, clicks, impressions, and search position; Google Analytics for visits and engagement; and Moz for local rankings and search visibility.',
         ],
       },
       {
         title: 'Results',
         items: [
-          'Search visibility reached 63.21%, more than double the 30% goal.',
-          '189 keywords in the top 3, 44 in the top 10.',
-          'Outranked every direct competitor (next best sat at 15.43%) and beat official council pages in some areas.',
-          'Impressions up 154%, clicks up 53% over two months.',
+          'Google Search clicks increased 53% in the two-month comparison.',
+          'Google Search impressions increased 154% over the same comparison.',
+          'Search visibility reached 63.21%, more than double the original 30% target.',
+          '189 tracked keywords ranked in positions 1 to 3 at project completion.',
         ],
       },
       {
-        title: 'What It Means',
-        body: 'This is what search looks like when it is built as a system instead of a page at a time. The same method scales to any business with a geographic or category footprint worth owning.',
+        title: 'What It Demonstrates',
+        body: 'This case study shows local SEO built as a scalable search system: location-intent mapping, useful local content, technical controls, progressive rollout, and measurement across search visibility, ranking distribution, and organic traffic.',
       },
     ],
-    downloadUrl: 'https://drive.google.com/file/d/1YhEhQpQjrZuZn7C6r3TfvESjTpPVLcNF/view',
     seo: {
-      title: 'DMR Designs: 63% Search Visibility in 8 Weeks | Organic Theory',
-      description: 'How 1,281 suburb-specific landing pages pushed DMR Designs to 63.21% search visibility in 8 weeks - more than double the 30% target.',
-      canonical: 'https://organic-theory.vercel.app/case-studies/dmr',
+      title: 'Local SEO Case Study: 1,281 NSW Pages | Organic Theory',
+      description: 'An eight-week local SEO project that launched 1,281 NSW suburb pages, increased search clicks 53%, impressions 154%, and reached 63.21% search visibility.',
+      canonical: 'https://organic-theory.vercel.app/case-studies/local-seo-programmatic-pages',
     },
   },
+
   {
-    slug: 'fpx',
-    label: 'Search and Discovery',
-    client: 'FPX',
-    context: 'A New Zealand timber platform connecting buyers, suppliers, and yard operations.',
+    slug: 'technical-seo-rebuild',
+    label: 'Technical SEO',
+    client: 'B2B Timber Platform',
+    context: 'A New Zealand B2B timber platform needed a technical search rebuild so search engines and AI systems could read, crawl, and understand the site properly.',
     headline: 'A site search engines could barely read, rebuilt to a perfect 100 SEO score.',
     sections: [
       {
         title: 'The Problem',
-        body: 'FPX ran a real business on a site that search engines and AI tools struggled with. Titles and descriptions ran too long and got cut off. There was no clear H1, headings were inconsistent across pages, and core signals like the robots tag, sitemap, and schema were missing. Load times dragged performance into the high 20s. The company had also just repositioned its two products, and the old site structure no longer matched. A solid platform that was hard to find and hard for machines to understand.',
+        body: 'Titles and descriptions ran too long, page structure was inconsistent, and core search signals such as robots controls, sitemap coverage, and structured data were incomplete. Load performance also created unnecessary technical friction.',
       },
       {
         title: 'What I Did',
         items: [
-          'Rewrote metadata across every page to proper lengths with social previews, so pages display cleanly in search and when shared.',
-          'Rebuilt the document structure site-wide: one clear H1 per page, logical H2 and H3 levels, and real semantic HTML so both search engines and AI answer engines can read the content.',
-          'Added the full technical layer: robots tag, sitemap, page-level schema including Service and FAQ types, and a cleaner link profile, with the two products modelled correctly as distinct services.',
-          'Optimized images and load performance across regions, without changing anything the user sees.',
+          'Rewrote page metadata and social previews so pages display cleanly in search and sharing surfaces.',
+          'Rebuilt heading and semantic structure so search engines and answer systems could understand each page more reliably.',
+          'Added robots controls, sitemap coverage, page-level structured data, and a cleaner internal link profile.',
+          'Optimized images and loading performance without changing the visible brand experience.',
         ],
       },
       {
         title: 'Results',
         items: [
           'Average Lighthouse score rose from 27 to 72.',
-          'Performance 57 to 96. SEO 61 to 100. Best Practices 100. Accessibility held at 92.',
-          'Full crawlability and indexing confirmed, with the FAQ page eligible for featured snippets.',
+          'Performance improved from 57 to 96.',
+          'SEO improved from 61 to 100.',
+          'Best Practices reached 100 and crawlability and indexing were confirmed.',
         ],
       },
       {
         title: 'What It Means',
-        body: 'Most sites lose traffic not to weak content but to technical friction crawlers and AI tools cannot get past. Clearing it, and structuring the site so machines understand the business, is some of the cheapest visibility a company can buy.',
+        body: 'Technical search work removes friction that blocks otherwise useful content from being discovered, understood, and surfaced by search engines and AI systems.',
       },
     ],
-    downloadUrl: 'https://drive.google.com/file/d/1lnGxQtv1dtpq3GphCzBrMfxFfyu-NiMe/view',
     seo: {
-      title: 'FPX: 27 to 100 SEO Score, Technical Rebuild | Organic Theory',
-      description: 'How a full technical SEO rebuild took FPX from a Lighthouse score of 27 to 72, with a perfect 100 SEO score and confirmed crawlability.',
-      canonical: 'https://organic-theory.vercel.app/case-studies/fpx',
+      title: 'Technical SEO Rebuild Case Study | Organic Theory',
+      description: 'A technical SEO rebuild that improved performance from 57 to 96, SEO from 61 to 100, and restored clean crawlability and machine-readable structure.',
+      canonical: 'https://organic-theory.vercel.app/case-studies/technical-seo-rebuild',
     },
   },
+
   {
-    slug: 'icsh',
-    label: 'CRM and Automation',
-    client: 'ICSH',
-    context: 'A membership organization processing annual member renewals and signups.',
-    headline: 'Annual membership that processes itself, from form submission to CRM to the member\'s inbox.',
+    slug: 'membership-automation',
+    label: 'CRM & Workflow Automation',
+    client: 'Membership-Based Industry Organization',
+    context: 'A membership organization needed annual signups and renewals to move from form submission to CRM and email without repetitive manual handling.',
+    headline: 'Annual membership processing automated from form submission to CRM to the member inbox.',
     sections: [
       {
         title: 'The Problem',
-        body: 'Every membership application meant manual work. Someone had to create the record, check whether the person was new or renewing, assign an ID, send the right email, and clean up after failed payments. At any real volume that is slow, easy to get wrong, and easy to drop entirely.',
+        body: 'Every application required someone to create the record, determine whether the person was new or renewing, assign an ID, send the correct email, and clean up failed payments. At volume, the process was slow and easy to break.',
       },
       {
         title: 'What I Did',
         items: [
-          'Built an automated workflow connecting the signup form, an automation engine, the CRM, and email, so every submission is processed the instant it lands, routed by payment status.',
-          'Set up three handling paths: completed payments create or renew the member record and fire the correct welcome or welcome-back email; declined and stuck payments notify the member and the team and clear the CRM automatically.',
-          'Automated the logic people get wrong by hand: unique member ID generation, member-year calculation based on payment month, phone formatting, and new-versus-renewal detection.',
-          'Built in reliability so failed CRM writes retry on their own before anything is flagged, meaning a momentary glitch never loses a member.',
+          'Connected the signup form, automation engine, CRM, and email so every valid submission is processed immediately and routed by payment status.',
+          'Built separate handling for completed, declined, and stuck payments.',
+          'Automated member ID generation, member-year calculation, phone formatting, and new-versus-renewal detection.',
+          'Added retries around failed CRM writes so temporary errors do not lose a member record.',
         ],
       },
       {
         title: 'Results',
         items: [
           'Successful signups and renewals process with zero manual data entry.',
-          'The CRM stays clean on its own, even when a payment fails.',
-          'Members receive the right email instantly; the team only touches genuine exceptions.',
-          'The whole system is documented in plain language so any admin can run it with no technical background.',
+          'Failed payments are routed without polluting the CRM.',
+          'Members receive the correct email immediately.',
+          'The team only handles genuine exceptions.',
         ],
       },
       {
-        title: 'What It Means',
-        body: 'This is the infrastructure layer doing its job. The system runs the operation and people handle only the edge cases. The same pattern fits any business buried in repetitive intake, onboarding, or record-keeping.',
+        title: 'What It Demonstrates',
+        body: 'A repeatable automation pattern for intake, onboarding, record keeping, routing, and customer communication where the system handles routine work and people handle exceptions.',
       },
     ],
     seo: {
-      title: 'ICSH: Automated Membership Processing, Zero Manual Entry | Organic Theory',
-      description: 'How a fully automated workflow replaced manual membership processing for ICSH - from form submission to CRM record to welcome email, instantly.',
-      canonical: 'https://organic-theory.vercel.app/case-studies/icsh',
+      title: 'Membership Workflow Automation Case Study | Organic Theory',
+      description: 'A membership automation case study connecting forms, CRM, payment-state routing, member records, and email with zero routine manual data entry.',
+      canonical: 'https://organic-theory.vercel.app/case-studies/membership-automation',
     },
   },
+
   {
     slug: 'content-system',
     label: 'Content and Conversion',
