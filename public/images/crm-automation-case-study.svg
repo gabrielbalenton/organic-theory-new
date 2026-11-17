@@ -1,23 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
 <title id="title">CRM and marketing automation case study</title>
 <desc id="desc">A quote-to-order system connecting website and app activity to Make, HubSpot, analytics, sales and marketing, with 90-day results.</desc>
-<rect width="1600" height="1000" fill="#F5F3EE"/>
-<rect x="90" y="90" width="1420" height="820" rx="36" fill="#E8E2DB"/>
-<text x="150" y="180" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#292B2A">CRM + AUTOMATION</text>
-<text x="150" y="225" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#526357">Quote-to-order system with verified events, consent controls, and sales handoff.</text>
+<rect width="1600" height="1000" fill="#050505"/>
+<rect x="90" y="90" width="1420" height="820" rx="36" fill="#0D100D"/>
+<text x="150" y="180" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#F5F7F5">CRM + AUTOMATION</text>
+<text x="150" y="225" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#929A94">Quote-to-order system with verified events, consent controls, and sales handoff.</text>
 <g font-family="Arial,Helvetica,sans-serif">
-<rect x="150" y="315" width="300" height="145" rx="22" fill="#F5F3EE"/><text x="185" y="365" font-size="20" font-weight="700" fill="#292B2A">Website + App</text><text x="185" y="405" font-size="16" fill="#555B56">Enquiries · carts · activity</text>
-<rect x="650" y="315" width="300" height="145" rx="22" fill="#F5F3EE"/><text x="685" y="365" font-size="20" font-weight="700" fill="#292B2A">Make</text><text x="685" y="405" font-size="16" fill="#555B56">Validate · dedupe · route</text>
-<rect x="1150" y="315" width="300" height="145" rx="22" fill="#292B2A"/><text x="1185" y="365" font-size="20" font-weight="700" fill="#F5F3EE">HubSpot</text><text x="1185" y="405" font-size="16" fill="#D2D6D0">Contacts · deals · workflows</text>
-<path d="M450 388 H650" stroke="#738475" stroke-width="7" stroke-linecap="round"/><path d="M950 388 H1150" stroke="#738475" stroke-width="7" stroke-linecap="round"/>
-<rect x="275" y="560" width="1050" height="105" rx="22" fill="#F5F3EE"/>
-<text x="800" y="605" text-anchor="middle" font-size="19" font-weight="700" fill="#292B2A">GA4 measures anonymous behaviour · CRM holds identified commercial outcomes</text>
-<text x="800" y="637" text-anchor="middle" font-size="15" fill="#555B56">Shared request IDs reconcile the journey without treating analytics as the source of record.</text>
+<rect x="150" y="315" width="300" height="145" rx="22" fill="#050505"/><text x="185" y="365" font-size="20" font-weight="700" fill="#F5F7F5">Website + App</text><text x="185" y="405" font-size="16" fill="#929A94">Enquiries · carts · activity</text>
+<rect x="650" y="315" width="300" height="145" rx="22" fill="#050505"/><text x="685" y="365" font-size="20" font-weight="700" fill="#F5F7F5">Make</text><text x="685" y="405" font-size="16" fill="#929A94">Validate · dedupe · route</text>
+<rect x="1150" y="315" width="300" height="145" rx="22" fill="#F5F7F5"/><text x="1185" y="365" font-size="20" font-weight="700" fill="#050505">HubSpot</text><text x="1185" y="405" font-size="16" fill="#C9D0CA">Contacts · deals · workflows</text>
+<path d="M450 388 H650" stroke="#7CFF6B" stroke-width="7" stroke-linecap="round"/><path d="M950 388 H1150" stroke="#7CFF6B" stroke-width="7" stroke-linecap="round"/>
+<rect x="275" y="560" width="1050" height="105" rx="22" fill="#050505"/>
+<text x="800" y="605" text-anchor="middle" font-size="19" font-weight="700" fill="#F5F7F5">GA4 measures anonymous behaviour · CRM holds identified commercial outcomes</text>
+<text x="800" y="637" text-anchor="middle" font-size="15" fill="#929A94">Shared request IDs reconcile the journey without treating analytics as the source of record.</text>
 </g>
 <g font-family="Arial,Helvetica,sans-serif" text-anchor="middle">
-<rect x="150" y="735" width="280" height="110" rx="22" fill="#F5F3EE"/><text x="290" y="780" font-size="30" font-weight="700" fill="#2D664E">184</text><text x="290" y="815" font-size="13" fill="#555B56">ENQUIRIES</text>
-<rect x="490" y="735" width="280" height="110" rx="22" fill="#F5F3EE"/><text x="630" y="780" font-size="30" font-weight="700" fill="#2D664E">29</text><text x="630" y="815" font-size="13" fill="#555B56">WON DEALS</text>
-<rect x="830" y="735" width="280" height="110" rx="22" fill="#F5F3EE"/><text x="970" y="780" font-size="30" font-weight="700" fill="#2D664E">NZ$486,740</text><text x="970" y="815" font-size="13" fill="#555B56">WON-DEAL VALUE</text>
-<rect x="1170" y="735" width="280" height="110" rx="22" fill="#F5F3EE"/><text x="1310" y="780" font-size="30" font-weight="700" fill="#2D664E">99.84%</text><text x="1310" y="815" font-size="13" fill="#555B56">INTEGRATION COMPLETION</text>
+<rect x="150" y="735" width="280" height="110" rx="22" fill="#050505"/><text x="290" y="780" font-size="30" font-weight="700" fill="#7CFF6B">184</text><text x="290" y="815" font-size="13" fill="#929A94">ENQUIRIES</text>
+<rect x="490" y="735" width="280" height="110" rx="22" fill="#050505"/><text x="630" y="780" font-size="30" font-weight="700" fill="#7CFF6B">29</text><text x="630" y="815" font-size="13" fill="#929A94">WON DEALS</text>
+<rect x="830" y="735" width="280" height="110" rx="22" fill="#050505"/><text x="970" y="780" font-size="30" font-weight="700" fill="#7CFF6B">NZ$486,740</text><text x="970" y="815" font-size="13" fill="#929A94">WON-DEAL VALUE</text>
+<rect x="1170" y="735" width="280" height="110" rx="22" fill="#050505"/><text x="1310" y="780" font-size="30" font-weight="700" fill="#7CFF6B">99.84%</text><text x="1310" y="815" font-size="13" fill="#929A94">INTEGRATION COMPLETION</text>
 </g>
 </svg>
