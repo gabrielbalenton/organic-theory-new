@@ -10,44 +10,39 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 
 const JOURNEY = [
   {
-    year: '2011',
-    role: 'Graduate',
-    detail: 'Finished a degree in Entrepreneurship. Entered the workforce with no clear lane yet.',
+    year: '2011–13',
+    role: 'Events Marketing',
+    detail: 'Started in event promotion, supplier coordination, and on-site delivery. The work was practical: deadlines, stakeholders, materials, and execution had to line up.',
   },
   {
-    year: '2012–18',
-    role: 'Customer Service → Sales → Medical Encoding',
-    detail: 'Cycled through jobs that had nothing to do with each other. Learned how to talk to people, how to close, how to process data under pressure.',
+    year: '2013–16',
+    role: 'Assistant Marketing Manager',
+    detail: 'Moved into broader brand campaigns, promotions, schedules, suppliers, and cross-team campaign delivery.',
   },
   {
-    year: '2019–22',
-    role: 'Culinary School',
-    detail: 'Finally chased the real passion. Kitchen life is brutal when you\'re raising three kids - the hours, the heat, the margin for error. Loved it anyway.',
+    year: '2016–21',
+    role: 'Digital Marketing Specialist',
+    detail: 'Worked across paid advertising, SEO, social campaigns, website updates, email marketing, campaign data, content, and landing pages.',
   },
   {
-    year: '2023',
-    role: 'Introduced to Digital Marketing',
-    detail: 'My wife - who had been in this industry long before I knew what a keyword was - showed me what she did. I didn\'t expect to care. I ended up caring a lot.',
+    year: '2021–24',
+    role: 'Digital Marketing Specialist',
+    detail: 'Managed Google and Meta Ads, SEO, social media, content plans, reporting, and website-to-CRM lead workflows with automated email follow-up.',
   },
   {
-    year: '2023–24',
-    role: 'Agency Training + Self-Study',
-    detail: 'Trained with small agencies and large ones. Self-studied obsessively - not just tactics but frameworks, data, and the edge cases most practitioners skip.',
-  },
-  {
-    year: '2024',
-    role: 'Founded Organic Theory',
-    detail: 'After everything - the cross-industry experience, agency training, late-night self-study - one thing kept proving true: nothing beats a solid foundation.',
+    year: '2024–Present',
+    role: 'Digital Marketing Consultant · Organic Theory',
+    detail: 'Advising B2B suppliers and service businesses on lead generation, quote requests, customer follow-up, SEO, paid media, websites, CRM automation, and digital systems.',
   },
 ];
 
 const STATS = [
-  { value: '40+', label: 'Site audits completed' },
-  { value: '1,281', label: 'Programmatic pages deployed' },
-  { value: '63%', label: 'Peak search visibility gain' },
-  { value: '8 wks', label: 'Fastest result turnaround' },
-  { value: '3', label: 'Kids (still cooking on weekends)' },
-  { value: '2023', label: 'Year everything clicked' },
+  { value: '2011', label: 'Marketing experience since' },
+  { value: '2016', label: 'Digital marketing since' },
+  { value: '1,281', label: 'Local pages launched in 8 weeks' },
+  { value: '$157,674', label: 'Sales linked to paid ads' },
+  { value: 'NZ$486,740', label: 'Won-deal value in 90-day CRM report' },
+  { value: '99.84%', label: 'Final Make integration completion' },
 ];
 
 export default function About() {
@@ -55,19 +50,19 @@ export default function About() {
     <>
       <Helmet>
         <title>About Gabriel Balenton | Organic Theory</title>
-        <meta name="description" content="Gabriel Balenton is the founder of Organic Theory - a digital consultant who came up through customer service, sales, medical encoding, and culinary school before discovering a love for search architecture and automation." />
+        <meta name="description" content="Gabriel Balenton is a digital marketing consultant with experience in marketing since 2011 and digital marketing since 2016, spanning paid media, SEO, websites, CRM automation, email, reporting, and full-stack systems." />
         <meta property="og:site_name" content="Organic Theory" />
         <meta property="og:type" content="profile" />
         <meta property="og:url" content="https://organic-theory.vercel.app/about" />
         <meta property="og:title" content="About Gabriel Balenton | Organic Theory" />
-        <meta property="og:description" content="The theory didn't start in marketing. Gabriel Balenton is the founder of Organic Theory - the non-linear path that built a systems-first approach to digital growth." />
+        <meta property="og:description" content="Marketing, paid media, search, CRM automation, websites, reporting, and full-stack systems delivered through Organic Theory." />
         <meta property="og:image" content="https://organic-theory.vercel.app/og-image.png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Gabriel Balenton - Founder of Organic Theory" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="About Gabriel Balenton | Organic Theory" />
-        <meta name="twitter:description" content="The theory didn't start in marketing. The non-linear path that built a systems-first approach to digital growth." />
+        <meta name="twitter:description" content="Marketing, paid media, search, CRM automation, websites, reporting, and full-stack systems." />
         <meta name="twitter:image" content="https://organic-theory.vercel.app/og-image.png" />
         <link rel="canonical" href="https://organic-theory.vercel.app/about" />
       </Helmet>
@@ -86,7 +81,7 @@ export default function About() {
           </motion.p>
           <TextReveal>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-editorial uppercase tracking-tight leading-[0.95] mb-10 max-w-4xl">
-              The theory didn't start in marketing.
+              Marketing and systems.<br />Built to work together.
             </h1>
           </TextReveal>
           <motion.p
@@ -95,7 +90,7 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-base md:text-lg max-w-xl leading-relaxed"
           >
-            I spent years doing things that had nothing to do with websites or rankings. That turned out to be exactly the right preparation.
+            I have worked in marketing since 2011 and digital marketing since 2016. Today the work spans Google and Meta Ads, SEO, website development, email, CRM workflows, performance reporting, and full-stack delivery.
           </motion.p>
         </section>
 
@@ -103,7 +98,7 @@ export default function About() {
         <section className="py-20 px-6 md:px-12 border-t border-[#FAFAFA]/10">
           <div className="max-w-7xl mx-auto">
             <p className="text-[10px] font-bold tracking-[0.3em] uppercase text-[#A1A1AA]/40 mb-14">
-              <ScrambleText text="[ THE LONG WAY ROUND ]" />
+              <ScrambleText text="[ EXPERIENCE ]" />
             </p>
             <div className="space-y-0">
               {JOURNEY.map((item, i) => (
@@ -139,19 +134,19 @@ export default function About() {
               </p>
               <TextReveal>
                 <h2 className="text-3xl md:text-5xl font-display uppercase tracking-tight leading-tight mb-8 text-[#09090B]">
-                  I've always been a numbers person who takes things apart.
+                  Strategy only matters if it survives implementation.
                 </h2>
               </TextReveal>
               <p className="text-sm leading-relaxed text-[#09090B]/60 max-w-md">
-                Digital marketing turned out to be the perfect place for both of those instincts. The data side - reading signals, mapping structure, measuring what actually moves - felt familiar in a way I didn't expect.
+                The work I do now sits across acquisition and delivery: finding demand, building the page or campaign that captures it, connecting the CRM and follow-up behind it, and measuring what actually happened.
               </p>
             </div>
             <div className="space-y-4">
               {[
-                'Trained with small agencies. Trained with large ones.',
-                'Self-studied the frameworks and edge cases most practitioners skip because they\'re not interesting enough.',
-                'Fell in love with the whole process - not just the tactics but how the systems connect.',
-                'Built a point of view: nothing beats a solid foundation.',
+                'Google and Meta Ads are treated as commercial channels, not isolated dashboards.',
+                'SEO and local search are tied to useful pages, crawlability, and measurable search demand.',
+                'CRM and Make workflows are designed around real sales and customer states.',
+                'Websites and full-stack products are built with performance, data, permissions, analytics, and QA in the same system.',
               ].map((line, i) => (
                 <motion.div
                   key={i}
@@ -201,19 +196,19 @@ export default function About() {
               </p>
               <TextReveal>
                 <h2 className="text-3xl md:text-4xl font-display uppercase tracking-tight leading-tight">
-                  Everything I'd seen pointed to the same problem.
+                  The same problem keeps showing up in different forms.
                 </h2>
               </TextReveal>
             </div>
             <div className="lg:col-span-7 lg:pt-16 space-y-6">
               <p className="text-base leading-relaxed opacity-50">
-                After all the jobs, the agency time, the self-study - the one thing that kept proving itself true is this: most businesses have a traffic problem that's actually a structure problem. They don't need more content. They need a better foundation.
+                A business can have traffic and still lose the enquiry. It can have leads and still lose the follow-up. It can run ads without reliable purchase tracking, or own a website that cannot support the next stage of the operation.
               </p>
               <p className="text-base leading-relaxed opacity-50">
-                Organic Theory exists to build that foundation. Search architecture that compounds over time, automation that removes the manual drag, and design that converts rather than just impresses.
+                Organic Theory exists to connect those pieces: search and paid acquisition, conversion paths, CRM and automation, website engineering, and custom software when the business needs more than off-the-shelf tools.
               </p>
               <p className="text-base leading-relaxed opacity-50">
-                The name is intentional. Organic - because sustainable growth beats borrowed traffic. Theory - because every engagement is built on a framework, not a feeling.
+                The name is intentional. Organic is the system growing from a strong foundation. Theory is the discipline behind the work: define the problem, build the right response, and measure the outcome.
               </p>
               <div className="pt-4">
                 <span className="text-2xl font-display tracking-[0.3em] text-[#FAFAFA]/30">O + X</span>
@@ -232,11 +227,11 @@ export default function About() {
               </p>
               <TextReveal>
                 <h2 className="text-3xl md:text-5xl font-display uppercase tracking-tight leading-tight max-w-lg text-[#09090B]">
-                  Start with the<br />$400 audit.
+                  Start with the<br />actual bottleneck.
                 </h2>
               </TextReveal>
               <p className="text-sm opacity-50 mt-4 max-w-sm leading-relaxed">
-                One hour. Your site, your data, a full diagnostic and a 30-day action plan. No fluff.
+                SEO, paid media, CRM, automation, website, or full-stack development. Scope the part that needs to change first.
               </p>
             </div>
             <MagneticButton strength={0.5}>
@@ -244,7 +239,7 @@ export default function About() {
                 to="/contact"
                 className="inline-flex items-center gap-4 group border border-[#09090B]/20 px-10 py-5 hover:bg-[#09090B] hover:text-[#FAFAFA] transition-all duration-300 text-[#09090B] shrink-0"
               >
-                <span className="text-[10px] tracking-[0.2em] uppercase font-bold group-hover:text-[#FAFAFA] transition-colors duration-300">Book the Audit</span>
+                <span className="text-[10px] tracking-[0.2em] uppercase font-bold group-hover:text-[#FAFAFA] transition-colors duration-300">Start a Conversation</span>
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-all duration-300" />
               </Link>
             </MagneticButton>
