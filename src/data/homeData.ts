@@ -1,43 +1,73 @@
 export const homeData = {
   metrics: [
-    { value: 63, suffix: '%', label: 'Search visibility' },
-    { value: 100, suffix: '', label: 'Lighthouse SEO score' },
-    { value: 1281, suffix: '', label: 'Pages deployed' },
-    { value: 154, suffix: '%', label: 'Impressions increase' },
+    { value: 1281, suffix: '', label: 'Local pages launched' },
+    { value: 154, suffix: '%', label: 'Search impressions increase' },
+    { value: 157674, suffix: '', label: 'Sales linked to paid ads' },
+    { value: 486740, suffix: '', label: 'Won-deal value (NZD)' },
   ],
   hero: {
-    badge: "[ GLOBAL DIGITAL CONSULTANCY ]",
+    badge: "[ DIGITAL MARKETING + SYSTEMS CONSULTANCY ]",
     titlePrimary: "STRATEGIC LOGIC.",
     titleAccent: "MEASURABLE GROWTH.",
-    description: "SEO and local search. Google and Meta Ads. CRM and automation. High-performance websites. Full-stack software. One consultancy across acquisition and the systems behind it."
+    description: "SEO and local search. Google and Meta Ads. CRM and marketing automation. High-performance websites. Full-stack software. Strategy, implementation, and reporting connected around measurable business outcomes."
   },
   layers: {
     title: "The System",
-    description: "Four layers, one machine. Each works alone. They're built to connect.",
+    description: "Four layers. One commercial system. Use one or connect the whole stack.",
     items: [
-      { id: "01", label: "Traffic", description: "Search architecture built to be found by people and AI.", detail: "Technical SEO, keyword architecture, programmatic page deployment, and AEO optimization. This layer is about being structurally visible - to Google, to AI answer engines, and to the humans running both." },
-      { id: "02", label: "Capture", description: "Pages engineered to turn visitors into leads.", detail: "Landing pages, conversion architecture, and UX systems designed around a single outcome. Traffic that doesn't convert is expensive noise. This layer turns attention into action." },
-      { id: "03", label: "Conversion", description: "Email and nurture flows that move leads toward a yes.", detail: "Email sequences, behavioral triggers, and automation flows that shorten the gap between interest and commitment. Built to run without constant input." },
-      { id: "04", label: "Infrastructure", description: "Custom CRM and automation that runs it all.", detail: "CRM setup, workflow automation, API integrations, and the operational logic that keeps the machine running cleanly - with zero manual overhead." }
+      {
+        id: "01",
+        label: "Acquire",
+        description: "SEO, local search, Google Ads, and Meta Ads built around real demand.",
+        detail: "Search research, technical SEO, local intent, paid search, Shopping, Meta campaigns, conversion tracking, and channel reporting. The goal is not more traffic for its own sake. It is qualified demand that can be measured through to an enquiry, order, or sale."
+      },
+      {
+        id: "02",
+        label: "Convert",
+        description: "Pages and journeys that make the next action obvious.",
+        detail: "Landing pages, product pages, quote forms, buyer journeys, mobile UX, and conversion architecture. The work connects acquisition to the correct page and removes the friction that stops visitors from submitting, enquiring, or buying."
+      },
+      {
+        id: "03",
+        label: "Automate",
+        description: "CRM, email, and Make workflows that keep follow-up moving.",
+        detail: "HubSpot and CRM setup, lead and deal pipelines, Make integrations, consent-aware email flows, cart or request recovery, sales tasks, retries, exception handling, and reporting. Routine work is automated while commercial decisions stay with people."
+      },
+      {
+        id: "04",
+        label: "Build",
+        description: "Websites and full-stack systems engineered around the operation.",
+        detail: "High-performance public websites, internal tools, portals, relational databases, authentication, role-based access, business logic, APIs, analytics, QA, and deployment. When the business needs more than a marketing site, the application layer is built with it."
+      }
     ]
   },
   methodology: {
-    title: "Two pillars. One system.",
-    description: "Most agencies optimize one thing. I build both sides - the foundation that earns long-term attention, and the precision layer that converts it into measurable outcomes.",
+    title: "Acquisition + systems.",
+    description: "Organic Theory covers both sides of the commercial journey: generating demand and building the digital systems that capture, route, measure, and support it.",
     pillars: [
       {
         id: "O",
-        label: "The Ecosystem",
+        label: "Acquisition",
         accent: false,
-        summary: "Build the structure that compounds over time.",
-        points: ["Search architecture & crawlability", "Programmatic content systems", "Organic visibility infrastructure", "Authority that accrues month over month"]
+        summary: "Get found, get considered, and measure what creates demand.",
+        points: [
+          "SEO, local SEO, AEO and GEO",
+          "Google Ads, Shopping and Meta Ads",
+          "Landing pages, product pages and conversion paths",
+          "GA4, GTM, Search Console and campaign reporting"
+        ]
       },
       {
         id: "X",
-        label: "The Solve",
+        label: "Systems",
         accent: true,
-        summary: "Intervene precisely where it matters most.",
-        points: ["Data-backed strategic decisions", "Automation that removes manual drag", "Conversion-focused page design", "Measurable outputs, not activity reports"]
+        summary: "Make the business follow through after the click or enquiry.",
+        points: [
+          "HubSpot CRM, Make and workflow automation",
+          "Email nurture, recovery and sales follow-up",
+          "Website engineering and full-stack development",
+          "Relational data, permissions, QA and operational reporting"
+        ]
       }
     ]
   }
