@@ -153,49 +153,49 @@ const TOOLS = [
 // ── Client logos ──────────────────────────────────────────────
 const CLIENT_LOGOS = [
   {
-    wordmark: 'Timberline Co.',
-    mark: <svg viewBox="0 0 18 22" className="w-4 h-5 fill-current shrink-0"><polygon points="9,1 17,14 1,14"/><rect x="7" y="14" width="4" height="6"/></svg>,
+    wordmark: 'Australian Building Design',
+    mark: <svg viewBox="0 0 18 18" className="w-4 h-4 fill-none stroke-current shrink-0" strokeWidth="1.8"><path d="M2 15V7l7-5 7 5v8H2Z"/><path d="M6 15v-5h6v5"/></svg>,
   },
   {
-    wordmark: 'Propvault Digital',
-    mark: <svg viewBox="0 0 18 18" className="w-4 h-4 fill-none stroke-current shrink-0" strokeWidth="1.8"><path d="M2,9 L9,2 L16,9 V16 H11 V12 H7 V16 H2 Z"/></svg>,
+    wordmark: 'U.S. Ecommerce',
+    mark: <svg viewBox="0 0 18 18" className="w-4 h-4 fill-none stroke-current shrink-0" strokeWidth="1.8"><path d="M3 5h12l-1 8H4L3 5Z"/><path d="M6 5V3h6v2"/></svg>,
   },
   {
-    wordmark: 'Meridian Digital',
-    mark: <svg viewBox="0 0 18 12" className="w-5 h-3 fill-current shrink-0"><rect x="0" y="5" width="6" height="2"/><polygon points="9,0 12,6 9,12 6,6"/><rect x="12" y="5" width="6" height="2"/></svg>,
+    wordmark: 'NZ B2B Supply',
+    mark: <svg viewBox="0 0 18 18" className="w-4 h-4 fill-none stroke-current shrink-0" strokeWidth="1.8"><path d="M2 14h14M4 14V7h10v7M7 7V4h4v3"/></svg>,
   },
   {
-    wordmark: 'Hazel & Rye',
-    mark: <svg viewBox="0 0 18 12" className="w-5 h-3 fill-none stroke-current shrink-0" strokeWidth="1.6"><circle cx="5" cy="6" r="4"/><circle cx="13" cy="6" r="4"/></svg>,
+    wordmark: 'B2B Sourcing Platform',
+    mark: <svg viewBox="0 0 18 18" className="w-4 h-4 fill-none stroke-current shrink-0" strokeWidth="1.8"><circle cx="4" cy="9" r="2"/><circle cx="14" cy="4" r="2"/><circle cx="14" cy="14" r="2"/><path d="M6 8l6-3M6 10l6 3"/></svg>,
   },
   {
-    wordmark: 'GroundUp Finance',
-    mark: <svg viewBox="0 0 16 16" className="w-4 h-4 fill-none stroke-current shrink-0" strokeWidth="2" strokeLinecap="round"><path d="M2,14 L2,8 L6,8 L6,4 L10,4 L10,0 L14,0"/></svg>,
+    wordmark: 'Operations Platform',
+    mark: <svg viewBox="0 0 18 18" className="w-4 h-4 fill-none stroke-current shrink-0" strokeWidth="1.8"><rect x="2" y="2" width="5" height="5"/><rect x="11" y="2" width="5" height="5"/><rect x="6.5" y="11" width="5" height="5"/><path d="M4.5 7v2h9V7M9 9v2"/></svg>,
   },
   {
-    wordmark: 'Buildwise',
-    mark: <svg viewBox="0 0 16 16" className="w-4 h-4 fill-current shrink-0"><rect x="0" y="0" width="6" height="6"/><rect x="10" y="0" width="6" height="6"/><rect x="5" y="10" width="6" height="6"/></svg>,
+    wordmark: 'Website Engineering',
+    mark: <svg viewBox="0 0 18 18" className="w-4 h-4 fill-none stroke-current shrink-0" strokeWidth="1.8"><rect x="2" y="3" width="14" height="12" rx="1"/><path d="M2 6h14M5 4.5h.01M7 4.5h.01"/></svg>,
   },
   {
-    wordmark: 'Kintsugi Health',
-    mark: <svg viewBox="0 0 18 12" className="w-5 h-3 fill-none stroke-current shrink-0" strokeWidth="1.8" strokeLinecap="round"><path d="M0,6 L5,6 L7,2 L9,10 L11,6 L18,6"/></svg>,
+    wordmark: 'CRM Automation',
+    mark: <svg viewBox="0 0 18 18" className="w-4 h-4 fill-none stroke-current shrink-0" strokeWidth="1.8"><circle cx="6" cy="6" r="3"/><path d="M1.5 16c.5-3 2-5 4.5-5s4 2 4.5 5M12 6h4M14 4v4"/></svg>,
   },
   {
-    wordmark: 'Stackwork',
-    mark: <svg viewBox="0 0 16 14" className="w-4 h-3.5 fill-current shrink-0"><rect x="0" y="0" width="16" height="3"/><rect x="2" y="5.5" width="12" height="3"/><rect x="4" y="11" width="8" height="3"/></svg>,
+    wordmark: 'Membership Operations',
+    mark: <svg viewBox="0 0 18 18" className="w-4 h-4 fill-none stroke-current shrink-0" strokeWidth="1.8"><circle cx="6" cy="6" r="2.5"/><circle cx="12.5" cy="7" r="2"/><path d="M1.5 16c.4-3 2-5 4.5-5s4.1 2 4.5 5M10 12c2.8 0 4.7 1.4 5.5 4"/></svg>,
   },
   {
-    wordmark: 'The Fold Agency',
-    mark: <svg viewBox="0 0 16 16" className="w-4 h-4 fill-none stroke-current shrink-0" strokeWidth="1.6"><path d="M0,0 H10 L16,6 V16 H0 Z"/><path d="M10,0 L10,6 L16,6"/></svg>,
+    wordmark: 'Content Systems',
+    mark: <svg viewBox="0 0 18 18" className="w-4 h-4 fill-none stroke-current shrink-0" strokeWidth="1.8"><rect x="3" y="2" width="12" height="14" rx="1"/><path d="M6 6h6M6 9h6M6 12h4"/></svg>,
   },
   {
-    wordmark: 'Northgate Sports Club',
-    mark: <svg viewBox="0 0 16 18" className="w-4 h-4.5 fill-none stroke-current shrink-0" strokeWidth="1.6"><path d="M8,1 L14,4 V10 Q14,16 8,17 Q2,16 2,10 V4 Z"/></svg>,
+    wordmark: 'Full-Stack Product',
+    mark: <svg viewBox="0 0 18 18" className="w-4 h-4 fill-none stroke-current shrink-0" strokeWidth="1.8"><path d="M9 2l6 3-6 3-6-3 6-3Z"/><path d="M3 9l6 3 6-3M3 13l6 3 6-3"/></svg>,
   },
 ];
 
 // ── Animated counter ──────────────────────────────────────────
-function AnimatedCounter({ to, suffix = '' }: { to: number; suffix?: string }) {
+function AnimatedCounter({ to, suffix = '', prefix = '' }: { to: number; suffix?: string; prefix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });
   const [value, setValue] = useState(0);
@@ -213,7 +213,7 @@ function AnimatedCounter({ to, suffix = '' }: { to: number; suffix?: string }) {
     requestAnimationFrame(raf);
   }, [inView, to]);
 
-  return <span ref={ref}>{value}{suffix}</span>;
+  return <span ref={ref}>{prefix}{new Intl.NumberFormat('en-US').format(value)}{suffix}</span>;
 }
 
 // ── Layer accordion card ──────────────────────────────────────
@@ -279,12 +279,12 @@ function LayerCard({ layer, index, isOpen, onToggle }: {
 // ── Horizontal scroll ticker for stats ───────────────────────
 function StatTicker() {
   const stats = [
-    { value: 154, suffix: '%', label: 'Search Impressions' },
-    { value: 63, suffix: '%', label: 'Search Visibility' },
-    { value: 100, suffix: '', label: 'Lighthouse SEO Score' },
-    { value: 1281, suffix: '', label: 'Pages Deployed' },
-    { value: 96, suffix: '', label: 'Performance Score' },
-    { value: 8, suffix: ' wks', label: 'From Zero to Rank' },
+    { value: 1281, suffix: '', prefix: '', label: 'Local Pages Launched' },
+    { value: 154, suffix: '%', prefix: '+', label: 'Search Impressions' },
+    { value: 157674, suffix: '', prefix: '$', label: 'Sales Linked to Paid Ads' },
+    { value: 521, suffix: '', prefix: '', label: 'Paid Orders' },
+    { value: 486740, suffix: '', prefix: 'NZ$', label: 'Won-Deal Value' },
+    { value: 100, suffix: '/100', prefix: '', label: 'Final Lighthouse Categories' },
   ];
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.3 });
@@ -300,7 +300,7 @@ function StatTicker() {
           className="bg-[#09090B] px-6 py-8 md:px-8 md:py-10"
         >
           <div className="text-3xl md:text-4xl font-display text-[#FAFAFA] mb-1">
-            {inView ? <AnimatedCounter to={s.value} suffix={s.suffix} /> : `0${s.suffix}`}
+            {inView ? <AnimatedCounter to={s.value} suffix={s.suffix} prefix={s.prefix} /> : `${s.prefix}0${s.suffix}`}
           </div>
           <div className="text-[9px] tracking-[0.25em] uppercase text-[#A1A1AA] opacity-60">{s.label}</div>
         </motion.div>
@@ -356,7 +356,7 @@ export default function Home() {
         <meta property="og:image:alt" content="Organic Theory - Strategic Logic. Measurable Growth." />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Organic Theory | Search, Automation & Full-Stack Systems" />
+        <meta name="twitter:title" content="Organic Theory | SEO, Paid Media, Automation & Full-Stack Systems" />
         <meta name="twitter:description" content="Search, paid acquisition, automation, websites, and full-stack software built as connected systems." />
         <meta name="twitter:image" content="https://organic-theory.vercel.app/og-image.png" />
         <meta name="twitter:image:alt" content="Organic Theory - Strategic Logic. Measurable Growth." />
@@ -477,7 +477,7 @@ export default function Home() {
         {/* ── CLIENT LOGO STRIP ── */}
         <section className="py-10 px-6 md:px-12 border-t border-[#FAFAFA]/8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
-            <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-[#FAFAFA]/70 mb-8 text-center">Brands I've worked with</p>
+            <p className="text-[10px] font-bold tracking-[0.4em] uppercase text-[#FAFAFA]/70 mb-8 text-center">Selected project environments</p>
             <div className="relative overflow-hidden">
               <motion.div
                 animate={{ x: ['0%', '-50%'] }}
@@ -510,7 +510,7 @@ export default function Home() {
                 </h2>
               </TextReveal>
               <p className="text-sm leading-relaxed opacity-50 max-w-lg mb-8">
-                Gabriel Balenton - from the first conversation to the finished build. No account managers in between, no handoffs to someone else halfway through. Just someone who takes the time to understand what you're actually dealing with before touching the work.
+                Gabriel Balenton is a digital marketing consultant with experience spanning brand and event marketing, paid media, SEO, website development, email, CRM workflows, and performance reporting. Organic Theory keeps strategy and implementation close to the person doing the work.
               </p>
               <MagneticButton strength={0.4}>
                 <Link
@@ -525,10 +525,10 @@ export default function Home() {
             <div className="lg:col-span-5 lg:flex lg:justify-end">
               <div className="grid grid-cols-2 gap-3 max-w-xs">
                 {[
-                  { val: '40+', label: 'Site audits' },
-                  { val: '1,281', label: 'Pages deployed' },
-                  { val: '63%', label: 'Peak visibility gain' },
-                  { val: '8 wks', label: 'Fastest turnaround' },
+                  { val: '2011', label: 'Marketing since' },
+                  { val: '2016', label: 'Digital marketing since' },
+                  { val: '3.74×', label: 'Paid media return' },
+                  { val: '99.84%', label: 'Integration completion' },
                 ].map((s, i) => (
                   <motion.div
                     key={i}
@@ -608,7 +608,7 @@ export default function Home() {
                   <h2 className="text-2xl md:text-3xl font-display uppercase tracking-widest text-[#09090B]">Tools I deploy.</h2>
                 </TextReveal>
               </div>
-              <p className="text-sm opacity-50 max-w-xs leading-relaxed">Every engagement runs on this stack - SEO, automation, build, and reporting.</p>
+              <p className="text-sm opacity-50 max-w-xs leading-relaxed">The working stack spans search, paid media, CRM, automation, development, analytics, and reporting.</p>
             </div>
             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-3">
               {TOOLS.map((tool, i) => (
@@ -716,13 +716,13 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-14">
               <div>
                 <p className="text-[10px] text-[#A1A1AA] mb-4 font-bold tracking-[0.3em] uppercase">
-                  <ScrambleText text="[ CLIENT RESULTS ]" />
+                  <ScrambleText text="[ PORTFOLIO PROOF ]" />
                 </p>
                 <TextReveal>
-                  <h2 className="text-2xl md:text-3xl font-display uppercase tracking-widest">What clients say.</h2>
+                  <h2 className="text-2xl md:text-3xl font-display uppercase tracking-widest">What the work produced.</h2>
                 </TextReveal>
               </div>
-              <p className="text-sm opacity-30 max-w-xs text-right md:text-right">{testimonials.length} testimonials across all services</p>
+              <p className="text-sm opacity-30 max-w-xs text-right md:text-right">{testimonials.length} case-study outcomes</p>
             </div>
 
             {/* Featured testimonials - first 3 large */}
@@ -738,7 +738,7 @@ export default function Home() {
                 >
                   <div>
                     <Quote size={20} className="text-[#A1A1AA]/30 mb-5" />
-                    <p className="text-sm leading-[1.8] opacity-70 mb-6">"{t.quote}"</p>
+                    <p className="text-sm leading-[1.8] opacity-70 mb-6">{t.quote}</p>
                   </div>
                   <div className="border-t border-[#FAFAFA]/10 pt-4">
                     <p className="text-xs font-bold tracking-[0.1em]">{t.name}</p>
@@ -758,7 +758,7 @@ export default function Home() {
               >
                 {[...testimonials.slice(3), ...testimonials.slice(3)].map((t, i) => (
                   <div key={i} className="w-72 shrink-0 border border-[#FAFAFA]/8 bg-[#FAFAFA]/[0.01] p-5">
-                    <p className="text-xs leading-[1.7] opacity-50 mb-4 line-clamp-4">"{t.quote}"</p>
+                    <p className="text-xs leading-[1.7] opacity-50 mb-4 line-clamp-4">{t.quote}</p>
                     <p className="text-[10px] font-bold tracking-[0.1em] opacity-70">{t.name}</p>
                     <p className="text-[9px] opacity-30 tracking-[0.1em]">{t.company} · {t.service}</p>
                   </div>
@@ -775,60 +775,48 @@ export default function Home() {
         {(() => {
           const FAQS = [
             {
-              q: 'How much does it cost to work with you?',
-              a: 'Everything starts with the $400 site audit. One hour, full diagnostic, 30-day action plan. From there, project engagements are scoped individually based on what the work actually requires - no padded retainers, no arbitrary packages. Most clients spend between $1,500 and $8,000 on their first full engagement.',
+              q: 'What does Organic Theory actually do?',
+              a: 'Organic Theory works across SEO and local search, Google and Meta Ads, CRM and marketing automation, website engineering, email and content systems, and full-stack development. The scope can be one channel or a connected system.',
             },
             {
-              q: 'Can you guarantee results?',
-              a: "No, and I won't pretend to. Anyone who guarantees specific rankings or traffic numbers is either lying or has no idea what they're doing. What I can guarantee is a structured, data-backed approach - and I can show you the exact results from previous clients who started where you are.",
+              q: 'Do you manage Google and Meta Ads?',
+              a: 'Yes. Paid media work covers account and tracking review, campaign structure, search and Shopping, Meta prospecting and remarketing, landing-page alignment, budget control, and performance reporting. The portfolio includes a six-month ecommerce engagement that linked $157,674 in sales to $42,121 in ad spend.',
             },
             {
-              q: 'How long until I see results?',
-              a: "Automation wins are immediate - the system starts working the day it goes live. SEO is slower by nature, but the bigger problem isn't that it takes months to work - it's that most agencies only report rankings and go quiet while everything else that matters is already moving. I track leading indicators from week one: entity growth, AI citations, branded search demand, topical authority, and conversion improvements on the pages you already have. Revenue may take time. Visibility shouldn't.",
+              q: 'What does SEO and local SEO include?',
+              a: 'Search work can include keyword and local-intent mapping, technical SEO, content and page architecture, indexing and crawl checks, metadata, internal linking, Search Console and GA4 measurement, and AEO/GEO where it is relevant to the site.',
             },
             {
-              q: "I've been burned by an SEO agency before. How is this different?",
-              a: "Most agencies sell ongoing retainers because retainers benefit them, not you. I work project-by-project unless you choose ongoing support. Every engagement starts with a diagnostic - no work begins until we both agree on what's broken and what success looks like. And you own everything we build together.",
-            },
-            {
-              q: 'What exactly is a Search Architecture Audit?',
-              a: "It's a full diagnostic of your site's technical structure, crawlability, keyword architecture, and competitive position. You get a prioritized list of issues with clear fix instructions - whether you handle them yourself, brief your developer, or bring me in to fix them. Price: $400 flat. Time: one 60-minute session plus a written report.",
-            },
-            {
-              q: "What's the difference between SEO and AEO?",
-              a: "SEO optimizes for Google's blue-link results. AEO (Answer Engine Optimization) optimizes for AI-generated answers - the kind you see in ChatGPT, Perplexity, and Google's AI Overviews. The structural requirements overlap but are not the same. Brands that get AEO right now will own their categories in three years.",
+              q: 'What does CRM and marketing automation include?',
+              a: 'CRM work covers contact and company structure, deal pipelines, lead routing, sales tasks, consent, email nurture, recovery flows, reporting, and integrations. Make is used where HubSpot or the source systems need a controlled handoff, retry, deduplication, or operational alert.',
             },
             {
               q: 'Do you build websites?',
-              a: "Yes. Interface Design and Development covers public websites, landing pages, CMS builds, and high-performance front ends. Full-Stack Development is separate: that is for applications that also need a database, authentication, permissions, backend logic, APIs, and operational workflows.",
+              a: 'Yes. Website work includes information architecture, UX, responsive front-end development, technical SEO, analytics, performance engineering, accessibility, migration, production QA, and deployment.',
             },
             {
               q: 'Do you build full-stack applications?',
-              a: "Yes. Full-Stack Development is priced at $2,500 and covers custom applications and internal platforms where the interface, database, authentication, business logic, integrations, QA, and deployment need to work as one system. The anonymized operations-platform case study is the portfolio proof point for this kind of build.",
+              a: 'Yes. Full-Stack Development is priced at $2,500 and covers applications that need a frontend, relational data, authentication, role-based access, backend rules, APIs or integrations, validation, QA, and deployment.',
             },
             {
-              q: 'Can you help with just one thing, or do I need a full package?',
-              a: "You can start with just the audit, just an automation build, or just a content strategy. There's no minimum commitment. Most clients start with one project and expand from there once they see how the system works.",
+              q: 'Can I hire you for only one area?',
+              a: 'Yes. A project can be limited to SEO, paid media, CRM automation, a website, a workflow, or a full-stack build. The work only becomes cross-channel when the business problem actually requires it.',
+            },
+            {
+              q: 'How do you measure results?',
+              a: 'The measurement depends on the work: Search Console and GA4 for search and site behavior, ad-platform and commerce data for paid orders and revenue, HubSpot for identified leads and deals, and Make run history for integration reliability. The goal is to keep each system responsible for the data it actually owns.',
+            },
+            {
+              q: 'Can you guarantee rankings, sales, or revenue?',
+              a: 'No. The portfolio reports measured outcomes from completed work, but future rankings, sales, and revenue depend on the market, offer, budget, site, competition, and execution. The work is scoped around controllable inputs and transparent measurement.',
             },
             {
               q: 'What automation tools do you work with?',
-              a: "Primarily Make (Integromat) and n8n for workflow automation, HubSpot and ActiveCampaign for CRM, and custom AI integrations built on Google Gemini and Claude. The tool choice depends on what you already have and what your stack needs to do - I won't force a migration if your existing tools can be connected.",
-            },
-            {
-              q: 'What industries do you work with?',
-              a: "E-commerce, SaaS, professional services, legal, health and wellness, real estate, and creative agencies. The frameworks transfer across industries because the underlying problems - poor site structure, manual workflows, content that doesn't convert - are the same everywhere.",
-            },
-            {
-              q: 'Why hire you instead of an agency?',
-              a: "Agencies have account managers, overhead, junior staff doing the actual work, and a business model built on keeping you on retainer. With Organic Theory, you work directly with the person who scoped it, built it, and will pick up if something needs fixing. No handoffs, no upsells, no monthly fees unless you want ongoing work. The $400 audit alone usually surfaces more than six months of agency reporting.",
+              a: 'HubSpot and Make are central to the CRM case study, and I also work with tools such as Airtable, Brevo, n8n, Zapier, GA4, GTM, and custom integrations when they fit the workflow.',
             },
             {
               q: 'Do you work with overseas clients?',
-              a: 'Yes. All work is delivered remotely. The audit session is via video call, and all deliverables are written documents and implemented systems - timezone is a scheduling matter, not a limitation.',
-            },
-            {
-              q: 'Do you offer ongoing support after a project ends?',
-              a: "Some clients move to a quarterly check-in model after their initial engagement - usually 3-4 hours a month to monitor performance, adjust strategy, and catch new issues before they compound. This is optional and only makes sense if there's active work to do. I don't sell retainers for the sake of retainers.",
+              a: 'Yes. The portfolio includes work in Australia, New Zealand, and the United States, and delivery is remote.',
             },
           ];
           const [open, setOpen] = React.useState<number | null>(null);
