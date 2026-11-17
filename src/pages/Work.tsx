@@ -57,7 +57,7 @@ export default function Work() {
             />
             <div className="mt-8 flex max-w-3xl flex-col gap-5 border-t border-[#2F3A45]/10 pt-6 md:flex-row md:items-end md:justify-between">
               <p className="max-w-2xl text-sm leading-7 text-[#2F3A45]/62 md:text-base">
-                Product engineering, production website rebuilds, performance work, search systems, automation, and content. The work ranges from acquisition layers to the software the operation actually runs on.
+                SEO and local search, Google and Meta Ads, CRM and Make automation, production websites, workflow systems, content, and full-stack product development. Client identities stay withheld where required; the work and measured results stay intact.
               </p>
               <p className="shrink-0 text-[10px] font-bold uppercase tracking-[0.24em] text-[#2F3A45]/40">{portfolioData.length} studies</p>
             </div>
@@ -68,10 +68,10 @@ export default function Work() {
           <div className="mx-auto max-w-7xl">
             <p className="ot-eyebrow mb-4">[ FEATURED CASE STUDIES ]</p>
             <h2 className="max-w-[13ch] font-editorial text-4xl leading-[0.98] tracking-[-0.035em] md:text-6xl">
-              Search, acquisition, automation, and software.
+              Search, paid acquisition, automation, and software.
             </h2>
             <p className="mt-5 max-w-2xl text-sm leading-7 text-[#2F3A45]/58">
-              The lead work across search visibility, paid acquisition, CRM automation, and full-stack product engineering.
+              The featured work covers the three new performance case studies first, followed by the existing full-stack, website engineering, performance, workflow, technical SEO, and content cases.
             </p>
           </div>
         </section>
