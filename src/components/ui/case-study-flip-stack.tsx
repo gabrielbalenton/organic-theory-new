@@ -28,7 +28,7 @@ function FlipCard({ item, index, total, progress, reduceMotion }: {
   const y = useTransform(progress, [start, end], reduceMotion ? ['0%', '0%'] : ['0%', '-112%']);
   const rotateX = useTransform(progress, [start, end], reduceMotion ? [0, 0] : [0, 14]);
   const scale = useTransform(progress, [Math.max(0, start - segment), start], index === 0 ? [1, 1] : [0.975, 1]);
-  const accent = item.accent === 'sage' ? '#8FA897' : item.accent === 'blue' ? '#8DA5B7' : '#B7AFA6';
+  const accent = '#7CFF6B';
 
   return (
     <motion.article
