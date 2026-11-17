@@ -3,40 +3,35 @@
 @theme {
   --font-display: "Montserrat", sans-serif;
   --font-sans: "Inter", sans-serif;
-  --font-editorial: "Cormorant Garamond", Georgia, serif;
+  --font-editorial: "Montserrat", sans-serif;
 
-  --color-ot-canvas: #FAF9F4;
-  --color-ot-surface: #E8E2DB;
-  --color-ot-ink: #2F3A45;
-  --color-ot-blue: #8DA5B7;
-  --color-ot-sage: #8FA897;
-  --color-ot-muted: #536574;
-  --color-ot-blue-readable: #617889;
-  --color-ot-sage-readable: #587263;
+  --color-ot-black: #050505;
+  --color-ot-panel: #0D100D;
+  --color-ot-white: #F5F7F5;
+  --color-ot-muted: #929A94;
+  --color-ot-green: #7CFF6B;
 }
 
 :root {
-  --ot-canvas: #FAF9F4;
-  --ot-surface: #E8E2DB;
-  --ot-ink: #2F3A45;
-  --ot-blue: #8DA5B7;
-  --ot-sage: #8FA897;
-  --ot-muted: #536574;
-  --ot-blue-readable: #617889;
-  --ot-sage-readable: #587263;
-  --ot-line: rgba(47, 58, 69, 0.14);
-  --ot-soft-line: rgba(47, 58, 69, 0.12);
-  --ot-shadow: 0 18px 50px rgba(47, 58, 69, 0.08);
-  background-color: var(--ot-canvas);
-  color: var(--ot-ink);
+  --ot-black: #050505;
+  --ot-panel: #0D100D;
+  --ot-panel-2: #121612;
+  --ot-white: #F5F7F5;
+  --ot-muted: #929A94;
+  --ot-green: #7CFF6B;
+  --ot-green-soft: rgba(124, 255, 107, 0.14);
+  --ot-line: rgba(245, 247, 245, 0.13);
+  --ot-line-strong: rgba(245, 247, 245, 0.24);
+  background: var(--ot-black);
+  color: var(--ot-white);
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--ot-canvas);
-  color: var(--ot-ink);
+  background: var(--ot-black);
+  color: var(--ot-white);
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
 }
@@ -46,62 +41,169 @@ body {
   line-height: 1.65;
 }
 
-.font-display { font-family: var(--font-display); }
+.font-display,
 .font-editorial {
-  font-family: var(--font-editorial);
-  font-weight: 400;
-  letter-spacing: -0.015em;
+  font-family: var(--font-display);
 }
 
-.ot-canvas { background: var(--ot-canvas); color: var(--ot-ink); }
-.ot-surface { background: var(--ot-surface); color: var(--ot-ink); }
-.ot-dark { background: var(--ot-ink); color: var(--ot-canvas); }
+.font-editorial {
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.ot-canvas,
+.ot-surface,
+.ot-dark {
+  background: var(--ot-black);
+  color: var(--ot-white);
+}
+
 .ot-eyebrow {
-  color: var(--ot-blue-readable);
+  color: var(--ot-green);
   font-size: 0.625rem;
   font-weight: 700;
   letter-spacing: 0.28em;
   text-transform: uppercase;
 }
+
 .ot-rule { border-color: var(--ot-line); }
+
 .ot-card {
-  border: 1px solid var(--ot-soft-line);
-  border-radius: 1.25rem;
-  background: rgba(232, 226, 219, 0.62);
-  box-shadow: var(--ot-shadow);
+  border: 1px solid var(--ot-line);
+  border-radius: 1rem;
+  background: var(--ot-panel);
+  box-shadow: none;
 }
+
 .ot-primary-button {
-  background: var(--ot-ink);
-  color: var(--ot-canvas);
-  border: 1px solid var(--ot-ink);
+  background: var(--ot-green);
+  color: var(--ot-black);
+  border: 1px solid var(--ot-green);
 }
-.ot-primary-button:hover { background: #43515e; border-color: #43515e; }
+
+.ot-primary-button:hover {
+  background: var(--ot-white);
+  border-color: var(--ot-white);
+}
+
 .ot-secondary-button {
   background: transparent;
-  color: var(--ot-ink);
-  border: 1px solid var(--ot-ink);
+  color: var(--ot-white);
+  border: 1px solid var(--ot-line-strong);
 }
-.ot-secondary-button:hover { background: var(--ot-surface); }
 
-/* Compatibility remap for the original dark visual system. */
-[class*="bg-[#09090B]"] { background-color: var(--ot-canvas) !important; }
-[class*="text-[#FAFAFA]"] { color: var(--ot-ink) !important; }
-[class*="border-[#FAFAFA]"] { border-color: var(--ot-line) !important; }
-[class*="text-[#A1A1AA]"] { color: var(--ot-muted) !important; }
+.ot-secondary-button:hover {
+  border-color: var(--ot-green);
+  color: var(--ot-green);
+}
+
+/* Public-site palette remap: keep component structure, remove the warm editorial palette. */
+[class*="bg-[#FAF9F4]"],
+[class*="bg-[#F5F3EE]"],
 [class*="bg-[#F5F0EB]"],
-[class*="bg-[#F4F4F5]"] { background-color: var(--ot-surface) !important; }
-[class*="text-[#09090B]"] { color: var(--ot-ink) !important; }
-[class*="border-[#09090B]"] { border-color: var(--ot-line) !important; }
+[class*="bg-[#F4F4F5]"],
+[class*="bg-[#ECEAE3]"] {
+  background-color: var(--ot-black) !important;
+}
 
-/* Explicit dark contrast regions. */
-.ot-contrast,
-.ot-contrast [class*="bg-[#09090B]"] { background-color: var(--ot-ink) !important; }
-.ot-contrast,
-.ot-contrast [class*="text-[#FAFAFA]"],
-.ot-contrast [class*="text-[#A1A1AA]"] { color: var(--ot-canvas) !important; }
-.ot-contrast [class*="border-[#FAFAFA]"] { border-color: rgba(250, 249, 244, 0.18) !important; }
+[class*="bg-[#E8E2DB]"],
+[class*="bg-[#D9DBD4]"] {
+  background-color: var(--ot-panel) !important;
+}
 
-/* Life OS is intentionally dark and must not inherit the public-site light remap. */
+[class*="text-[#2F3A45]"],
+[class*="text-[#292B2A]"],
+[class*="text-[#09090B]"] {
+  color: var(--ot-white) !important;
+}
+
+[class*="text-[#555B56]"],
+[class*="text-[#536574]"],
+[class*="text-[#667469]"],
+[class*="text-[#A1A1AA]"],
+[class*="text-[#777A73]"] {
+  color: var(--ot-muted) !important;
+}
+
+[class*="border-[#2F3A45]"],
+[class*="border-[#292B2A]"],
+[class*="border-[#09090B]"],
+[class*="border-[#C9CAC2]"],
+[class*="border-[#CFCFC7]"] {
+  border-color: var(--ot-line) !important;
+}
+
+/* Aurora green replaces the former blue / sage accents. */
+[class*="text-[#8DA5B7]"],
+[class*="text-[#8FA897]"],
+[class*="text-[#738475]"],
+[class*="text-[#526357]"],
+[class*="text-[#617889]"],
+[class*="text-[#587263]"] {
+  color: var(--ot-green) !important;
+}
+
+[class*="bg-[#8DA5B7]"],
+[class*="bg-[#8FA897]"],
+[class*="bg-[#738475]"],
+[class*="bg-[#526357]"],
+[class*="bg-[#617889]"],
+[class*="bg-[#587263]"] {
+  background-color: var(--ot-green) !important;
+}
+
+[class*="border-[#8DA5B7]"],
+[class*="border-[#8FA897]"],
+[class*="border-[#738475]"],
+[class*="border-[#526357]"],
+[class*="border-[#617889]"],
+[class*="border-[#587263]"] {
+  border-color: var(--ot-green) !important;
+}
+
+[class*="hover:bg-[#43515E]"]:hover,
+[class*="hover:bg-[#526357]"]:hover,
+[class*="hover:bg-[#8DA5B7]"]:hover,
+[class*="hover:bg-[#8FA897]"]:hover {
+  background-color: var(--ot-green) !important;
+  color: var(--ot-black) !important;
+}
+
+[class*="hover:text-[#738475]"]:hover,
+[class*="hover:text-[#8DA5B7]"]:hover,
+[class*="hover:text-[#8FA897]"]:hover {
+  color: var(--ot-green) !important;
+}
+
+/* White remains the primary contrast color on the black canvas. */
+[class*="text-[#FAFAFA]"],
+[class*="text-[#FAF9F4]"],
+[class*="text-[#F5F3EE]"],
+[class*="text-[#F5F0EB]"] {
+  color: var(--ot-white) !important;
+}
+
+[class*="border-[#FAFAFA]"],
+[class*="border-[#FAF9F4]"] {
+  border-color: var(--ot-line) !important;
+}
+
+/* Preserve translucent white surfaces used by the original dark UI. */
+[class*="bg-[#FAFAFA]/"] {
+  background-color: rgba(245, 247, 245, 0.035) !important;
+}
+
+/* Original dark components stay truly dark. */
+[class*="bg-[#09090B]"] {
+  background-color: var(--ot-black) !important;
+}
+
+.ot-contrast {
+  background: var(--ot-black) !important;
+  color: var(--ot-white) !important;
+}
+
+/* Internal Life OS retains its dedicated dark behavior. */
 .life-os-shell {
   min-height: 100vh;
   background: #09090B !important;
@@ -111,36 +213,9 @@ body {
 .life-os-shell .text-slate-500 { color: #94A3B8 !important; }
 .life-os-shell .text-slate-600,
 .life-os-shell .text-slate-700 { color: #7F8EA3 !important; }
-.life-os-shell [class*="border-white/10"] { border-color: rgba(255, 255, 255, 0.16) !important; }
+.life-os-shell [class*="border-white/10"] { border-color: rgba(255,255,255,0.16) !important; }
 .life-os-shell .input::placeholder { color: #7F8EA3; opacity: 1; }
 
-/* Existing image heroes remain intentionally high-contrast. */
-section:has(img[src="/images/home-hero.png"]),
-section:has(img[src="/images/services-hero.png"]),
-section:has(img[src="/images/contact-hero.png"]) {
-  color: var(--ot-canvas) !important;
-}
-section:has(img[src="/images/home-hero.png"]) [class*="text-[#FAFAFA]"],
-section:has(img[src="/images/services-hero.png"]) [class*="text-[#FAFAFA]"],
-section:has(img[src="/images/contact-hero.png"]) [class*="text-[#FAFAFA]"] {
-  color: var(--ot-canvas) !important;
-}
-section:has(img[src="/images/home-hero.png"]) [class*="text-[#A1A1AA]"],
-section:has(img[src="/images/contact-hero.png"]) [class*="text-[#A1A1AA]"] {
-  color: #D4DEE5 !important;
-}
-
-div:has(> img[src="/images/home-methodology.png"]) [class*="text-[#FAFAFA]"] {
-  color: var(--ot-canvas) !important;
-}
-
-/* Keep photography quiet enough to live with the warm neutral system. */
-.ot-editorial-image img,
-main img:not([src*="logo"]):not([src*="icon"]) {
-  filter: saturate(0.86) contrast(0.98);
-}
-
-/* Soft, consistent interactive surfaces without forcing boxed layouts. */
 a, button { -webkit-tap-highlight-color: transparent; }
 button, a { text-underline-offset: 0.22em; }
 
@@ -154,14 +229,17 @@ button, a { text-underline-offset: 0.22em; }
 }
 
 ::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(47, 58, 69, 0.2); border-radius: 999px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(47, 58, 69, 0.35); }
+::-webkit-scrollbar-track { background: #050505; }
+::-webkit-scrollbar-thumb { background: rgba(124,255,107,0.28); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(124,255,107,0.55); }
 
-::selection { background: rgba(141, 165, 183, 0.28); color: var(--ot-ink); }
+::selection {
+  background: var(--ot-green);
+  color: var(--ot-black);
+}
 
 :focus-visible {
-  outline: 2px solid var(--ot-blue);
+  outline: 2px solid var(--ot-green);
   outline-offset: 4px;
 }
 
