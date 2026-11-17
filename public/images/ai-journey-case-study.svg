@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
 <title id="title">AI-assisted journey platform</title><desc id="desc">Visual workflow cards with review states, AI proposals and version controls.</desc>
-<rect width="1600" height="1000" fill="#F5F3EE"/><rect x="90" y="90" width="1420" height="820" rx="36" fill="#E8E2DB"/>
-<text x="150" y="180" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#292B2A">AI-ASSISTED JOURNEY WORKSPACE</text>
-<text x="150" y="225" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#526357">Visual process mapping with controlled AI proposals, review states, and saved versions.</text>
+<rect width="1600" height="1000" fill="#050505"/><rect x="90" y="90" width="1420" height="820" rx="36" fill="#0D100D"/>
+<text x="150" y="180" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#F5F7F5">AI-ASSISTED JOURNEY WORKSPACE</text>
+<text x="150" y="225" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#929A94">Visual process mapping with controlled AI proposals, review states, and saved versions.</text>
 <g font-family="Arial,Helvetica,sans-serif">
-<rect x="150" y="330" width="300" height="150" rx="22" fill="#F5F3EE"/><text x="185" y="385" font-size="20" font-weight="700" fill="#292B2A">Lead source</text><text x="185" y="425" font-size="15" fill="#555B56">Draft</text>
-<rect x="650" y="330" width="300" height="150" rx="22" fill="#F5F3EE"/><text x="685" y="385" font-size="20" font-weight="700" fill="#292B2A">Review step</text><text x="685" y="425" font-size="15" fill="#555B56">Needs discussion</text>
-<rect x="1150" y="330" width="300" height="150" rx="22" fill="#292B2A"/><text x="1185" y="385" font-size="20" font-weight="700" fill="#F5F3EE">Agreed flow</text><text x="1185" y="425" font-size="15" fill="#D2D6D0">Version saved</text>
-<path d="M450 405 H650 M950 405 H1150" stroke="#738475" stroke-width="7" stroke-linecap="round"/>
-<rect x="250" y="620" width="1100" height="150" rx="24" fill="#F5F3EE"/>
-<text x="300" y="675" font-size="20" font-weight="700" fill="#292B2A">AI proposal</text>
-<text x="300" y="715" font-size="16" fill="#555B56">Validate structure → preview additions / changes / removals → human review → explicit save</text>
+<rect x="150" y="330" width="300" height="150" rx="22" fill="#050505"/><text x="185" y="385" font-size="20" font-weight="700" fill="#F5F7F5">Lead source</text><text x="185" y="425" font-size="15" fill="#929A94">Draft</text>
+<rect x="650" y="330" width="300" height="150" rx="22" fill="#050505"/><text x="685" y="385" font-size="20" font-weight="700" fill="#F5F7F5">Review step</text><text x="685" y="425" font-size="15" fill="#929A94">Needs discussion</text>
+<rect x="1150" y="330" width="300" height="150" rx="22" fill="#F5F7F5"/><text x="1185" y="385" font-size="20" font-weight="700" fill="#050505">Agreed flow</text><text x="1185" y="425" font-size="15" fill="#C9D0CA">Version saved</text>
+<path d="M450 405 H650 M950 405 H1150" stroke="#7CFF6B" stroke-width="7" stroke-linecap="round"/>
+<rect x="250" y="620" width="1100" height="150" rx="24" fill="#050505"/>
+<text x="300" y="675" font-size="20" font-weight="700" fill="#F5F7F5">AI proposal</text>
+<text x="300" y="715" font-size="16" fill="#929A94">Validate structure → preview additions / changes / removals → human review → explicit save</text>
 </g></svg>
