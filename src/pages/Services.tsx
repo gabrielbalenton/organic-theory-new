@@ -57,10 +57,10 @@ export default function Services() {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: [
-      { '@type': 'Question', name: 'What does the Search & Systems Audit include?', acceptedAnswer: { '@type': 'Answer', text: 'The audit covers search visibility, site structure, speed, workflow gaps, and delivers a prioritized fix list with a 30-day action plan.' } },
-      { '@type': 'Question', name: 'Do I need to commit to a monthly plan?', acceptedAnswer: { '@type': 'Answer', text: 'No monthly commitment required. Start with the $400 audit, then choose which projects to commission. You only pay for the work you want done.' } },
-      { '@type': 'Question', name: 'What is the difference between Search Architecture and AI Automation?', acceptedAnswer: { '@type': 'Answer', text: 'Search Architecture focuses on being found - keyword strategy, technical SEO, and content structure. AI Automation focuses on intelligence inside your workflow - AI agents, lead routing, and smart processing.' } },
-      { '@type': 'Question', name: 'What is the difference between Interface Design and Full-Stack Development?', acceptedAnswer: { '@type': 'Answer', text: 'Interface Design and Development is for public websites, landing pages, CMS builds, and front-end experiences. Full-Stack Development is for applications that also require databases, authentication, permissions, business logic, APIs, and operational workflows.' } },
+      { '@type': 'Question', name: 'What does the Search & Systems Audit include?', acceptedAnswer: { '@type': 'Answer', text: 'The audit covers search visibility, site structure, tracking, conversion paths and workflow gaps, with a prioritized 30-day action plan.' } },
+      { '@type': 'Question', name: 'Do you manage Google and Meta Ads?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Paid media work can include Google Search and Shopping, Meta prospecting and remarketing, conversion tracking, landing-page alignment, budget control and performance reporting.' } },
+      { '@type': 'Question', name: 'What does CRM and marketing automation include?', acceptedAnswer: { '@type': 'Answer', text: 'CRM and automation work can include HubSpot structure, deal pipelines, ownership, lead routing, sales tasks, consent, nurture, recovery flows, Make integrations, exception handling and reporting.' } },
+      { '@type': 'Question', name: 'What is the difference between a website build and Full-Stack Development?', acceptedAnswer: { '@type': 'Answer', text: 'Website development focuses on public marketing and content experiences. Full-Stack Development is for applications that also require relational data, authentication, permissions, business logic, APIs or integrations, and operational workflows.' } },
     ],
   };
 
@@ -68,12 +68,12 @@ export default function Services() {
     <>
       <Helmet>
         <title>Services & Pricing | Organic Theory</title>
-        <meta name="description" content="Search architecture, AI automation, workflow engineering, interface builds, and full-stack development. Start with a $400 audit. No retainer required." />
+        <meta name="description" content="SEO and local search, Google and Meta Ads, CRM and marketing automation, workflow engineering, websites, and full-stack development through Organic Theory." />
         <meta property="og:site_name" content="Organic Theory" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://organic-theory.vercel.app/services" />
         <meta property="og:title" content="Services & Pricing | Organic Theory" />
-        <meta property="og:description" content="From a $400 audit to full-stack product builds. Search, AI, workflow, interface, and custom software. No retainer required." />
+        <meta property="og:description" content="SEO, paid media, CRM automation, workflow engineering, website development, and full-stack product builds." />
         <link rel="canonical" href="https://organic-theory.vercel.app/services" />
         <script type="application/ld+json">{JSON.stringify(schemaFAQ)}</script>
       </Helmet>
@@ -92,7 +92,7 @@ export default function Services() {
               className="max-w-[13ch] font-editorial text-5xl leading-[0.96] tracking-[-0.045em] md:text-7xl lg:text-8xl"
             />
             <p className="mt-8 max-w-2xl text-sm leading-7 text-[#2F3A45]/64 md:text-base">
-              Start with a diagnostic, then commission only the work that earns its place. No padded retainer, no forced package, no visual noise around the decision.
+              Start with the business problem, then scope the channel or system that needs to change. Search, paid media, CRM, automation, websites, and full-stack products can be commissioned independently or connected where the work requires it.
             </p>
           </div>
         </header>
@@ -129,7 +129,7 @@ export default function Services() {
               One system. Several layers.
             </h2>
             <p className="mt-6 max-w-2xl text-sm leading-7 text-[#2F3A45]/62 md:text-base">
-              Search, automation, interfaces, and full-stack products should reinforce each other. The four growth layers stay intact; custom software becomes available when the business needs more than a website or off-the-shelf tool.
+              Acquisition, conversion, CRM, automation, websites, and software should reinforce each other. The service mix covers both demand generation and the systems that capture, route, measure, and support that demand.
             </p>
           </div>
         </section>
@@ -144,9 +144,9 @@ export default function Services() {
             <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="ot-eyebrow mb-4">[ CORE BUILDS ]</p>
-                <h2 className="font-editorial text-4xl tracking-[-0.03em] md:text-6xl">Choose the layer that matters.</h2>
+                <h2 className="font-editorial text-4xl tracking-[-0.03em] md:text-6xl">Choose the work that matters.</h2>
               </div>
-              <p className="max-w-sm text-sm leading-7 text-[#2F3A45]/58">Each engagement is scoped around the work itself. These are starting points, not rigid packages.</p>
+              <p className="max-w-sm text-sm leading-7 text-[#2F3A45]/58">Each engagement is scoped around the actual requirement. The case studies show how these services work separately and as connected systems.</p>
             </div>
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
               {coreServices.map((service, index) => <OfferCard key={service.id} service={service} index={index} />)}
@@ -166,7 +166,7 @@ export default function Services() {
         <DitherGradient className="border-t border-[#2F3A45]/10 px-6 py-24 md:px-12 md:py-32">
           <div className="mx-auto max-w-5xl text-center">
             <p className="ot-eyebrow mb-5">[ NEXT STEP ]</p>
-            <h2 className="font-editorial text-5xl leading-[0.98] tracking-[-0.04em] md:text-7xl">Start with clarity, then decide what deserves to be built.</h2>
+            <h2 className="font-editorial text-5xl leading-[0.98] tracking-[-0.04em] md:text-7xl">Start with the bottleneck. Build the right response.</h2>
             <Link to="/contact" className="ot-primary-button mt-9 inline-flex items-center gap-3 rounded-full px-7 py-3.5 text-[10px] font-bold uppercase tracking-[0.2em] transition-colors">
               Start a conversation <ArrowRight size={13} />
             </Link>
