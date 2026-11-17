@@ -2,8 +2,8 @@ export const portfolioData = [
   {
     id: '01',
     client: 'SEO & Local SEO',
-    title: 'NSW Search Expansion',
-    description: '1,281 suburb landing pages launched in eight weeks for an Australian building design business, supported by technical SEO, local intent mapping, and continuous search measurement.',
+    title: 'NSW SEO & Local Search Expansion',
+    description: 'An eight-week SEO and local SEO rollout for an Australian building design business: 1,281 NSW suburb pages, +53% Google Search clicks, +154% impressions, and 189 tracked keywords in the top three.',
     buttonLabel: '[ See the Search Strategy ]',
     slug: '/case-studies/local-seo-programmatic-pages',
     image: '/images/local-seo-case-study.svg',
@@ -13,8 +13,8 @@ export const portfolioData = [
   {
     id: '02',
     client: 'Paid Media',
-    title: 'Six-Month Ecommerce Ads',
-    description: 'Google and Meta campaigns for a U.S. ecommerce store, combining search intent, Shopping, remarketing, product-page improvements, and channel-level profitability controls.',
+    title: 'Six-Month Google & Meta Ads',
+    description: 'Six months of Google Search, Shopping, Meta prospecting and remarketing for a U.S. ecommerce store: $157,674 in sales linked to $42,121 spend, 521 paid orders, and a 3.74× blended return.',
     buttonLabel: '[ See the Paid Media Results ]',
     slug: '/case-studies/paid-media-ecommerce',
     image: '/images/paid-media-case-study.svg',
@@ -24,8 +24,8 @@ export const portfolioData = [
   {
     id: '03',
     client: 'CRM & Marketing Automation',
-    title: 'Quote-to-Order Automation',
-    description: 'HubSpot, Make, GA4, and email automation connected around a B2B quote journey, with request IDs, deal stages, consent controls, recovery workflows, and operational exception handling.',
+    title: 'HubSpot + Make Quote-to-Order Automation',
+    description: 'A HubSpot, Make, GA4 and email system for a New Zealand B2B quote journey. The first 90 days recorded 184 enquiries, 83 quotes, 29 won deals, NZ$486,740 in won-deal value, and 99.84% final integration completion.',
     buttonLabel: '[ See the CRM System ]',
     slug: '/case-studies/crm-marketing-automation',
     image: '/images/crm-automation-case-study.svg',
