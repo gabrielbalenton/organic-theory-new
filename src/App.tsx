@@ -13,6 +13,8 @@ const FPXLeadJourneyLab = lazy(() => import('./pages/case-studies/FPXLeadJourney
 const ICSH = lazy(() => import('./pages/case-studies/ICSH'));
 const ContentSystem = lazy(() => import('./pages/case-studies/ContentSystem'));
 const HeadlessGM = lazy(() => import('./pages/case-studies/HeadlessGM'));
+const CRMAutomation = lazy(() => import('./pages/case-studies/CRMAutomation'));
+const PaidMediaEcommerce = lazy(() => import('./pages/case-studies/PaidMediaEcommerce'));
 const B2BTimberMerchant = lazy(() => import('./pages/case-studies/B2BTimberMerchant'));
 const B2BTimberSourcing = lazy(() => import('./pages/case-studies/B2BTimberSourcing'));
 const Tools = lazy(() => import('./pages/Tools'));
@@ -45,12 +47,19 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path="services" element={<Services />} />
             <Route path="case-studies" element={<Work />} />
-            <Route path="case-studies/fpx-lead-journey-lab" element={<FPXLeadJourneyLab />} />
-            <Route path="case-studies/dmr" element={<DMR />} />
-            <Route path="case-studies/fpx" element={<FPX />} />
-            <Route path="case-studies/icsh" element={<ICSH />} />
+            <Route path="case-studies/ai-assisted-journey-platform" element={<FPXLeadJourneyLab />} />
+            <Route path="case-studies/local-seo-programmatic-pages" element={<DMR />} />
+            <Route path="case-studies/technical-seo-rebuild" element={<FPX />} />
+            <Route path="case-studies/membership-automation" element={<ICSH />} />
             <Route path="case-studies/content-system" element={<ContentSystem />} />
-            <Route path="case-studies/headless-gm" element={<HeadlessGM />} />
+            <Route path="case-studies/operations-platform" element={<HeadlessGM />} />
+            <Route path="case-studies/crm-marketing-automation" element={<CRMAutomation />} />
+            <Route path="case-studies/paid-media-ecommerce" element={<PaidMediaEcommerce />} />
+            <Route path="case-studies/fpx-lead-journey-lab" element={<Navigate to="/case-studies/ai-assisted-journey-platform" replace />} />
+            <Route path="case-studies/dmr" element={<Navigate to="/case-studies/local-seo-programmatic-pages" replace />} />
+            <Route path="case-studies/fpx" element={<Navigate to="/case-studies/technical-seo-rebuild" replace />} />
+            <Route path="case-studies/icsh" element={<Navigate to="/case-studies/membership-automation" replace />} />
+            <Route path="case-studies/headless-gm" element={<Navigate to="/case-studies/operations-platform" replace />} />
             <Route path="case-studies/b2b-timber-merchant" element={<B2BTimberMerchant />} />
             <Route path="case-studies/b2b-timber-sourcing" element={<B2BTimberSourcing />} />
             <Route path="contact" element={<Contact />} />
