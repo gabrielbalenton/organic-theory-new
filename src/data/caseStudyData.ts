@@ -27,8 +27,8 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: 'crm-marketing-automation',
     label: 'CRM & Marketing Automation',
-    client: 'New Zealand B2B Supply Business',
-    context: 'A quote-driven B2B supply business needed one controlled system connecting enquiries, customer records, deal stages, request-cart behaviour, email follow-up, analytics, and operational events.',
+    client: 'New Zealand Timber Sourcing & Supply Business · Identity Withheld',
+    context: 'A New Zealand timber sourcing and supply business needed one controlled system connecting commercial enquiries, quotations, request-cart behaviour, customer records, email follow-up, analytics, and verified app-to-CRM events.',
     headline: '184 enquiries, 29 won deals, and NZ$486,740 in won-deal value across the first 90 days.',
     coverImage: '/images/crm-automation-case-study.svg',
     coverAlt: 'CRM and automation flow connecting website and app events to Make, HubSpot, GA4, sales, and marketing',
@@ -63,6 +63,15 @@ export const caseStudies: CaseStudy[] = [
         ],
       },
       {
+        title: 'Implementation Sequence',
+        items: [
+          'Structured the rollout into three lanes: quote-to-order first, behaviour-to-enquiry second, and request-cart or checkout recovery only after reliable event sync existed.',
+          'Mapped source systems, permissions, buyer stages, request IDs, data ownership, and existing GTM tags before activating workflows.',
+          'Connected HubSpot, Make, GTM/GA4, and secure source events before adding nurture, recovery, promotions, onboarding, reorder, and supply-alert workflows.',
+          'Used launch gates for reliable data, safe customer messages, and clear ownership before pilot go-live.',
+        ],
+      },
+      {
         title: 'Measurement Architecture',
         body: 'GTM and GA4 measured consent-permitted website behaviour, HubSpot remained the source of record for identified leads and deal stages, and Make moved verified operational events between the application and CRM. Reporting reconciled records using request IDs rather than assuming anonymous GA4 event counts should equal CRM totals.',
       },
@@ -74,7 +83,8 @@ export const caseStudies: CaseStudy[] = [
           '142 leads entered nurture and 16 later requested quotes; 99 known visitors without an enquiry produced 16 later enquiries.',
           '78 identified saved request carts entered recovery and 27 completed after the reminder, a 34.6% recovery rate.',
           '945 marketing emails were delivered, with a 42.0% unique open rate, 7.1% unique click rate, and 0.4% unsubscribe rate.',
-          'Make processed 11,382 scenario runs and reached a 99.84% final completion rate after retries.',
+          'Make processed 11,382 scenario runs: 11,227 completed on the first attempt, 137 recovered after retry, and the final completion rate reached 99.84%.',
+          'Lead-source reporting attributed 34.8% of enquiries to organic search, 20.7% to paid search, 16.8% to direct/referral, 11.4% to organic social, 9.8% to paid social, and 6.5% to email.',
         ],
       },
       {
