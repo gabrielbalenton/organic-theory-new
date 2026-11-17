@@ -1,23 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
 <title id="title">Paid media ecommerce case study</title>
 <desc id="desc">Six-month Google and Meta Ads results showing spend, orders, sales and return.</desc>
-<rect width="1600" height="1000" fill="#F5F3EE"/>
-<rect x="90" y="90" width="1420" height="820" rx="36" fill="#E8E2DB"/>
-<text x="150" y="180" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#292B2A">GOOGLE + META ADS</text>
-<text x="150" y="225" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#526357">Six months of ecommerce acquisition, tracking, budget control, and landing-page improvement.</text>
+<rect width="1600" height="1000" fill="#050505"/>
+<rect x="90" y="90" width="1420" height="820" rx="36" fill="#0D100D"/>
+<text x="150" y="180" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#F5F7F5">GOOGLE + META ADS</text>
+<text x="150" y="225" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#929A94">Six months of ecommerce acquisition, tracking, budget control, and landing-page improvement.</text>
 <g font-family="Arial,Helvetica,sans-serif" text-anchor="middle">
-<rect x="150" y="320" width="280" height="150" rx="24" fill="#F5F3EE"/><text x="290" y="382" font-size="34" font-weight="700" fill="#2D664E">$42,121</text><text x="290" y="422" font-size="13" fill="#555B56">AD SPEND</text>
-<rect x="490" y="320" width="280" height="150" rx="24" fill="#F5F3EE"/><text x="630" y="382" font-size="34" font-weight="700" fill="#2D664E">521</text><text x="630" y="422" font-size="13" fill="#555B56">PAID ORDERS</text>
-<rect x="830" y="320" width="280" height="150" rx="24" fill="#F5F3EE"/><text x="970" y="382" font-size="34" font-weight="700" fill="#2D664E">$157,674</text><text x="970" y="422" font-size="13" fill="#555B56">SALES LINKED TO ADS</text>
-<rect x="1170" y="320" width="280" height="150" rx="24" fill="#292B2A"/><text x="1310" y="382" font-size="34" font-weight="700" fill="#F5F3EE">3.74×</text><text x="1310" y="422" font-size="13" fill="#D2D6D0">BLENDED RETURN</text>
+<rect x="150" y="320" width="280" height="150" rx="24" fill="#050505"/><text x="290" y="382" font-size="34" font-weight="700" fill="#7CFF6B">$42,121</text><text x="290" y="422" font-size="13" fill="#929A94">AD SPEND</text>
+<rect x="490" y="320" width="280" height="150" rx="24" fill="#050505"/><text x="630" y="382" font-size="34" font-weight="700" fill="#7CFF6B">521</text><text x="630" y="422" font-size="13" fill="#929A94">PAID ORDERS</text>
+<rect x="830" y="320" width="280" height="150" rx="24" fill="#050505"/><text x="970" y="382" font-size="34" font-weight="700" fill="#7CFF6B">$157,674</text><text x="970" y="422" font-size="13" fill="#929A94">SALES LINKED TO ADS</text>
+<rect x="1170" y="320" width="280" height="150" rx="24" fill="#F5F7F5"/><text x="1310" y="382" font-size="34" font-weight="700" fill="#050505">3.74×</text><text x="1310" y="422" font-size="13" fill="#C9D0CA">BLENDED RETURN</text>
 </g>
 <g font-family="Arial,Helvetica,sans-serif">
-<text x="180" y="600" font-size="18" font-weight="700" fill="#292B2A">MONTHLY SALES LINKED TO ADS</text>
-<line x1="180" y1="795" x2="1420" y2="795" stroke="#B9B9B1" stroke-width="2"/>
-<g fill="#738475">
+<text x="180" y="600" font-size="18" font-weight="700" fill="#F5F7F5">MONTHLY SALES LINKED TO ADS</text>
+<line x1="180" y1="795" x2="1420" y2="795" stroke="#2A2F2A" stroke-width="2"/>
+<g fill="#7CFF6B">
 <rect x="230" y="720" width="120" height="75" rx="8"/><rect x="430" y="650" width="120" height="145" rx="8"/><rect x="630" y="625" width="120" height="170" rx="8"/><rect x="830" y="680" width="120" height="115" rx="8"/><rect x="1030" y="595" width="120" height="200" rx="8"/><rect x="1230" y="560" width="120" height="235" rx="8"/>
 </g>
-<g font-size="14" fill="#555B56" text-anchor="middle">
+<g font-size="14" fill="#929A94" text-anchor="middle">
 <text x="290" y="825">M1</text><text x="490" y="825">M2</text><text x="690" y="825">M3</text><text x="890" y="825">M4</text><text x="1090" y="825">M5</text><text x="1290" y="825">M6</text>
 </g>
 </g>
