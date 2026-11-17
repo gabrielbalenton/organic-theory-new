@@ -19,7 +19,7 @@ const SERVICES_CHOREOGRAPHY_IMAGES = {
 };
 
 function OfferCard({ service, index }: { service: typeof coreServices[0]; index: number }) {
-  const accent = index % 3 === 1 ? '#8FA897' : index % 3 === 0 ? '#8DA5B7' : '#B7AFA6';
+  const accent = '#7CFF6B';
   return (
     <motion.article
       initial={{ opacity: 0, y: 22 }}
