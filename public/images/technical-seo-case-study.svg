@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+<title id="title">Technical SEO rebuild</title><desc id="desc">Technical search improvements across performance, SEO, crawlability and structured data.</desc>
+<rect width="1600" height="1000" fill="#F5F3EE"/><rect x="90" y="90" width="1420" height="820" rx="36" fill="#E8E2DB"/>
+<text x="150" y="180" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#292B2A">TECHNICAL SEO REBUILD</text>
+<text x="150" y="225" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#526357">Crawlability, semantic structure, metadata, schema, and performance rebuilt together.</text>
+<g font-family="Arial,Helvetica,sans-serif" text-anchor="middle">
+<rect x="180" y="350" width="360" height="180" rx="26" fill="#F5F3EE"/><text x="360" y="410" font-size="20" fill="#555B56">PERFORMANCE</text><text x="360" y="475" font-size="42" font-weight="700" fill="#2D664E">57 → 96</text>
+<rect x="620" y="350" width="360" height="180" rx="26" fill="#F5F3EE"/><text x="800" y="410" font-size="20" fill="#555B56">SEO</text><text x="800" y="475" font-size="42" font-weight="700" fill="#2D664E">61 → 100</text>
+<rect x="1060" y="350" width="360" height="180" rx="26" fill="#292B2A"/><text x="1240" y="410" font-size="20" fill="#D2D6D0">BEST PRACTICES</text><text x="1240" y="475" font-size="42" font-weight="700" fill="#F5F3EE">100</text>
+</g>
+<g font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#292B2A">
+<rect x="180" y="650" width="1240" height="110" rx="22" fill="#F5F3EE"/><text x="230" y="700" font-weight="700">Technical layer</text><text x="230" y="735" fill="#555B56">Metadata · semantic headings · sitemap · robots controls · structured data · internal links · image optimization</text>
+</g></svg>
