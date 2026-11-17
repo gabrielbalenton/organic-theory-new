@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
 <title id="title">Membership automation case study</title><desc id="desc">Form-to-CRM membership workflow with payment-state routing and automated email.</desc>
-<rect width="1600" height="1000" fill="#F5F3EE"/><rect x="90" y="90" width="1420" height="820" rx="36" fill="#E8E2DB"/>
-<text x="150" y="180" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#292B2A">MEMBERSHIP AUTOMATION</text>
-<text x="150" y="225" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#526357">Routine intake handled automatically; people step in only for exceptions.</text>
+<rect width="1600" height="1000" fill="#050505"/><rect x="90" y="90" width="1420" height="820" rx="36" fill="#0D100D"/>
+<text x="150" y="180" font-family="Arial,Helvetica,sans-serif" font-size="28" font-weight="700" fill="#F5F7F5">MEMBERSHIP AUTOMATION</text>
+<text x="150" y="225" font-family="Arial,Helvetica,sans-serif" font-size="18" fill="#929A94">Routine intake handled automatically; people step in only for exceptions.</text>
 <g font-family="Arial,Helvetica,sans-serif">
-<rect x="150" y="360" width="270" height="130" rx="22" fill="#F5F3EE"/><text x="185" y="415" font-size="20" font-weight="700" fill="#292B2A">Form</text><text x="185" y="452" font-size="15" fill="#555B56">New or renewal</text>
-<rect x="500" y="360" width="270" height="130" rx="22" fill="#F5F3EE"/><text x="535" y="415" font-size="20" font-weight="700" fill="#292B2A">Automation</text><text x="535" y="452" font-size="15" fill="#555B56">Validate + route</text>
-<rect x="850" y="360" width="270" height="130" rx="22" fill="#F5F3EE"/><text x="885" y="415" font-size="20" font-weight="700" fill="#292B2A">CRM</text><text x="885" y="452" font-size="15" fill="#555B56">Create or update</text>
-<rect x="1200" y="360" width="250" height="130" rx="22" fill="#292B2A"/><text x="1235" y="415" font-size="20" font-weight="700" fill="#F5F3EE">Email</text><text x="1235" y="452" font-size="15" fill="#D2D6D0">Correct message</text>
-<path d="M420 425 H500 M770 425 H850 M1120 425 H1200" stroke="#738475" stroke-width="7" stroke-linecap="round"/>
+<rect x="150" y="360" width="270" height="130" rx="22" fill="#050505"/><text x="185" y="415" font-size="20" font-weight="700" fill="#F5F7F5">Form</text><text x="185" y="452" font-size="15" fill="#929A94">New or renewal</text>
+<rect x="500" y="360" width="270" height="130" rx="22" fill="#050505"/><text x="535" y="415" font-size="20" font-weight="700" fill="#F5F7F5">Automation</text><text x="535" y="452" font-size="15" fill="#929A94">Validate + route</text>
+<rect x="850" y="360" width="270" height="130" rx="22" fill="#050505"/><text x="885" y="415" font-size="20" font-weight="700" fill="#F5F7F5">CRM</text><text x="885" y="452" font-size="15" fill="#929A94">Create or update</text>
+<rect x="1200" y="360" width="250" height="130" rx="22" fill="#F5F7F5"/><text x="1235" y="415" font-size="20" font-weight="700" fill="#050505">Email</text><text x="1235" y="452" font-size="15" fill="#C9D0CA">Correct message</text>
+<path d="M420 425 H500 M770 425 H850 M1120 425 H1200" stroke="#7CFF6B" stroke-width="7" stroke-linecap="round"/>
 </g>
 <g font-family="Arial,Helvetica,sans-serif" text-anchor="middle">
-<rect x="330" y="650" width="420" height="125" rx="24" fill="#F5F3EE"/><text x="540" y="705" font-size="34" font-weight="700" fill="#2D664E">ZERO</text><text x="540" y="742" font-size="13" fill="#555B56">ROUTINE MANUAL ENTRY</text>
-<rect x="850" y="650" width="420" height="125" rx="24" fill="#F5F3EE"/><text x="1060" y="705" font-size="34" font-weight="700" fill="#2D664E">INSTANT</text><text x="1060" y="742" font-size="13" fill="#555B56">PROCESSING + EMAIL ROUTING</text>
+<rect x="330" y="650" width="420" height="125" rx="24" fill="#050505"/><text x="540" y="705" font-size="34" font-weight="700" fill="#7CFF6B">ZERO</text><text x="540" y="742" font-size="13" fill="#929A94">ROUTINE MANUAL ENTRY</text>
+<rect x="850" y="650" width="420" height="125" rx="24" fill="#050505"/><text x="1060" y="705" font-size="34" font-weight="700" fill="#7CFF6B">INSTANT</text><text x="1060" y="742" font-size="13" fill="#929A94">PROCESSING + EMAIL ROUTING</text>
 </g></svg>
