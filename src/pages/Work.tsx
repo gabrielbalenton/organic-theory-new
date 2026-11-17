@@ -5,7 +5,7 @@ import { ScrambleText } from '../components/ScrambleText';
 import { KineticTextReveal } from '../components/ui/kinetic-text-reveal';
 import { CaseStudyFlipStack, type EditorialCaseStudy } from '../components/ui/case-study-flip-stack';
 
-const accents: Array<'blue' | 'sage' | 'neutral'> = ['sage', 'blue', 'neutral', 'sage', 'blue', 'neutral', 'sage', 'blue', 'neutral', 'sage'];
+const accents: Array<'blue' | 'sage' | 'neutral'> = ['sage', 'blue', 'sage', 'neutral', 'blue', 'sage', 'neutral', 'blue'];
 
 function toEditorial(project: typeof portfolioData[number], index: number): EditorialCaseStudy {
   return {
@@ -22,16 +22,14 @@ function toEditorial(project: typeof portfolioData[number], index: number): Edit
 }
 
 export default function Work() {
-  const studies = portfolioData.map(toEditorial);
+  const featured = portfolioData.slice(0, 4).map(toEditorial);
+  const earlier = portfolioData.slice(4).map((project, index) => toEditorial(project, index + 4));
 
   return (
     <>
       <Helmet>
         <title>Case Studies | SEO, Paid Media, Automation & Development | Organic Theory</title>
-        <meta
-          name="description"
-          content="Case studies across SEO and local search, Google and Meta Ads, CRM automation, website engineering, workflow systems, and full-stack product development."
-        />
+        <meta name="description" content="Case studies across SEO and local search, Google and Meta Ads, CRM automation, website engineering, workflow systems, and full-stack product development." />
         <meta property="og:title" content="Case Studies | Organic Theory" />
         <meta property="og:url" content="https://organic-theory.vercel.app/case-studies" />
         <link rel="canonical" href="https://organic-theory.vercel.app/case-studies" />
@@ -48,7 +46,6 @@ export default function Work() {
             >
               <ScrambleText text="[ SELECTED WORK ]" delay={0.25} />
             </motion.p>
-
             <KineticTextReveal
               text="Case studies built around measurable change."
               splitBy="words"
@@ -58,31 +55,41 @@ export default function Work() {
               className="max-w-[14ch] font-editorial text-5xl leading-[0.96] tracking-[-0.045em] text-[#2F3A45] md:text-7xl lg:text-8xl"
               segmentClassName="inline-block"
             />
-
-            <div className="mt-8 flex max-w-4xl flex-col gap-5 border-t border-[#2F3A45]/10 pt-6 md:flex-row md:items-end md:justify-between">
+            <div className="mt-8 flex max-w-3xl flex-col gap-5 border-t border-[#2F3A45]/10 pt-6 md:flex-row md:items-end md:justify-between">
               <p className="max-w-2xl text-sm leading-7 text-[#2F3A45]/62 md:text-base">
-                Search visibility, paid acquisition, CRM and marketing automation, website engineering, workflow systems, content, and full-stack product development. Client names are withheld where appropriate; the work and results remain visible.
+                Product engineering, production website rebuilds, performance work, search systems, automation, and content. The work ranges from acquisition layers to the software the operation actually runs on.
               </p>
-              <p className="shrink-0 text-[10px] font-bold uppercase tracking-[0.24em] text-[#2F3A45]/40">
-                {portfolioData.length} studies
-              </p>
+              <p className="shrink-0 text-[10px] font-bold uppercase tracking-[0.24em] text-[#2F3A45]/40">{portfolioData.length} studies</p>
             </div>
           </div>
         </header>
 
-        <section className="border-y border-[#2F3A45]/10 px-6 py-14 md:px-12 md:py-18">
+        <section className="border-t border-[#2F3A45]/10 px-6 py-14 md:px-12 md:py-18">
           <div className="mx-auto max-w-7xl">
-            <p className="ot-eyebrow mb-4">[ FULL PORTFOLIO ]</p>
-            <h2 className="max-w-[14ch] font-editorial text-4xl leading-[0.98] tracking-[-0.035em] md:text-6xl">
-              Acquisition, systems, websites, and software.
+            <p className="ot-eyebrow mb-4">[ FEATURED CASE STUDIES ]</p>
+            <h2 className="max-w-[13ch] font-editorial text-4xl leading-[0.98] tracking-[-0.035em] md:text-6xl">
+              Search, acquisition, automation, and software.
             </h2>
             <p className="mt-5 max-w-2xl text-sm leading-7 text-[#2F3A45]/58">
-              No artificial separation between “main” and “secondary” work. Every case study below represents a different part of the problems I solve.
+              The lead work across search visibility, paid acquisition, CRM automation, and full-stack product engineering.
             </p>
           </div>
         </section>
 
-        <CaseStudyFlipStack items={studies} />
+        <div className="border-t border-[#2F3A45]/10">
+          <CaseStudyFlipStack items={featured} />
+        </div>
+
+        <section className="border-y border-[#2F3A45]/10 bg-[#E8E2DB]/35 px-6 py-14 md:px-12 md:py-18">
+          <div className="mx-auto max-w-7xl">
+            <p className="ot-eyebrow mb-4">[ MORE CASE STUDIES ]</p>
+            <h2 className="max-w-[12ch] font-editorial text-4xl leading-[0.98] tracking-[-0.035em] md:text-6xl">
+              Websites, performance, workflow, technical SEO, and content.
+            </h2>
+          </div>
+        </section>
+
+        <CaseStudyFlipStack items={earlier} />
       </div>
     </>
   );
