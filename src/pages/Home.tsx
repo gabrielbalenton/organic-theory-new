@@ -17,137 +17,26 @@ import { DitherGradient } from '../components/ui/dither-gradient';
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 const TOOLS = [
-  {
-    name: 'Ahrefs', cat: 'SEO',
-    logo: <span className="text-[11px] font-black tracking-tight">Ahrefs</span>,
-  },
-  {
-    name: 'Screaming Frog', cat: 'Technical',
-    logo: (
-      <svg viewBox="0 0 40 40" className="w-6 h-6 fill-current">
-        <circle cx="14" cy="16" r="5"/><circle cx="26" cy="16" r="5"/>
-        <ellipse cx="20" cy="26" rx="12" ry="8"/>
-        <circle cx="12" cy="13" r="2" fill="#F5F0EB"/><circle cx="28" cy="13" r="2" fill="#F5F0EB"/>
-        <path d="M8 30 Q6 38 4 36" stroke="currentColor" strokeWidth="2" fill="none"/>
-        <path d="M32 30 Q34 38 36 36" stroke="currentColor" strokeWidth="2" fill="none"/>
-      </svg>
-    ),
-  },
-  {
-    name: 'Google Search Console', cat: 'SEO',
-    logo: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
-        <path d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-      </svg>
-    ),
-  },
-  {
-    name: 'Make', cat: 'Automation',
-    logo: (
-      <svg viewBox="0 0 70 30" className="w-8 h-5 fill-current">
-        <circle cx="8" cy="15" r="7"/><line x1="15" y1="15" x2="27" y2="15" stroke="currentColor" strokeWidth="2.5"/><circle cx="35" cy="15" r="7"/><line x1="42" y1="15" x2="54" y2="15" stroke="currentColor" strokeWidth="2.5"/><circle cx="62" cy="15" r="7"/>
-      </svg>
-    ),
-  },
-  {
-    name: 'n8n', cat: 'Automation',
-    logo: <span className="text-[13px] font-black tracking-tighter">n8n</span>,
-  },
-  {
-    name: 'Zapier', cat: 'Automation',
-    logo: <span className="text-[11px] font-black tracking-tight">Zapier</span>,
-  },
-  {
-    name: 'Claude', cat: 'AI',
-    logo: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6 stroke-current fill-none" strokeWidth="1.8" strokeLinecap="round">
-        <line x1="12" y1="2" x2="12" y2="6"/>
-        <line x1="12" y1="18" x2="12" y2="22"/>
-        <line x1="2" y1="12" x2="6" y2="12"/>
-        <line x1="18" y1="12" x2="22" y2="12"/>
-        <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/>
-        <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
-        <line x1="19.07" y1="4.93" x2="16.24" y2="7.76"/>
-        <line x1="7.76" y1="16.24" x2="4.93" y2="19.07"/>
-      </svg>
-    ),
-  },
-  {
-    name: 'ChatGPT', cat: 'AI',
-    logo: (
-      <svg viewBox="0 0 41 41" className="w-6 h-6 fill-current">
-        <path d="M37.5 16.6a10 10 0 0 0-.9-8.2 10.4 10.4 0 0 0-11.1-5 10 10 0 0 0-7.5-3.4A10.4 10.4 0 0 0 8.1 6.4a10 10 0 0 0-6.7 4.9 10.4 10.4 0 0 0 1.3 12.2 10 10 0 0 0 .9 8.2 10.4 10.4 0 0 0 11.1 5 10 10 0 0 0 7.5 3.3 10.4 10.4 0 0 0 9.9-7.2 10 10 0 0 0 6.7-4.8 10.4 10.4 0 0 0-1.3-11.4zM22 37.3a7.7 7.7 0 0 1-4.9-1.8l.2-.1 8.2-4.7a1.4 1.4 0 0 0 .7-1.2V18.3l3.4 2a.1.1 0 0 1 .1.1v9.5A7.7 7.7 0 0 1 22 37.3zM6 31.2a7.7 7.7 0 0 1-.9-5.2l.2.1 8.2 4.7a1.4 1.4 0 0 0 1.4 0l10-5.8v3.9a.1.1 0 0 1 0 .1l-8.3 4.8A7.7 7.7 0 0 1 6 31.2zm-2-17.9a7.7 7.7 0 0 1 4-3.4V20a1.4 1.4 0 0 0 .7 1.2l10 5.8-3.5 2a.1.1 0 0 1-.1 0L6.8 24A7.7 7.7 0 0 1 4 13.3zM32.4 22l-10-5.8 3.5-2a.1.1 0 0 1 .1 0l8.3 4.8a7.7 7.7 0 0 1-1.2 13.9V23a1.4 1.4 0 0 0-.7-1.1zm3.4-5.2-.2-.1-8.2-4.7a1.4 1.4 0 0 0-1.4 0l-10 5.8v-3.9a.1.1 0 0 1 0-.1l8.3-4.8a7.7 7.7 0 0 1 11.5 8zm-21.8 7.2-3.5-2a.1.1 0 0 1-.1-.1v-9.5a7.7 7.7 0 0 1 12.6-5.9l-.2.1-8.2 4.7a1.4 1.4 0 0 0-.7 1.2zm1.9-4 4.5-2.6 4.5 2.6v5.1l-4.5 2.6-4.5-2.6z"/>
-      </svg>
-    ),
-  },
-  {
-    name: 'Perplexity', cat: 'AEO',
-    logo: (
-      <svg viewBox="0 0 24 24" className="w-6 h-6 fill-none stroke-current" strokeWidth="1.5">
-        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-      </svg>
-    ),
-  },
-  {
-    name: 'HubSpot', cat: 'CRM',
-    logo: (
-      <svg viewBox="0 0 40 40" className="w-6 h-6 fill-current">
-        <circle cx="28" cy="11" r="5.5"/><circle cx="28" cy="11" r="2.5" fill="#F5F0EB"/>
-        <path d="M22 11 H9 Q5 11 5 15 V28 Q5 32 9 32 H21 Q25 32 25 28 V19"/>
-      </svg>
-    ),
-  },
-  {
-    name: 'Vercel', cat: 'Build',
-    logo: (
-      <svg viewBox="0 0 116 100" className="w-6 h-5 fill-current">
-        <path d="M57.5 0L115 100H0L57.5 0z"/>
-      </svg>
-    ),
-  },
-  {
-    name: 'Figma', cat: 'Design',
-    logo: (
-      <svg viewBox="0 0 38 57" className="w-4 h-6 fill-current">
-        <path d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"/>
-        <path d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 0 1-19 0z"/>
-        <path d="M19 0v19h9.5a9.5 9.5 0 0 0 0-19H19z"/>
-        <path d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"/>
-        <path d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/>
-      </svg>
-    ),
-  },
-  {
-    name: 'React', cat: 'Build',
-    logo: (
-      <svg viewBox="0 0 100 100" className="w-6 h-6 fill-none stroke-current" strokeWidth="4">
-        <circle cx="50" cy="50" r="7" fill="currentColor" stroke="none"/>
-        <ellipse cx="50" cy="50" rx="46" ry="17"/>
-        <ellipse cx="50" cy="50" rx="46" ry="17" transform="rotate(60 50 50)"/>
-        <ellipse cx="50" cy="50" rx="46" ry="17" transform="rotate(120 50 50)"/>
-      </svg>
-    ),
-  },
-  {
-    name: 'Supabase', cat: 'Backend',
-    logo: <span className="text-[10px] font-black tracking-tight">Supabase</span>,
-  },
-  {
-    name: 'TypeScript', cat: 'Build',
-    logo: <span className="text-[12px] font-black tracking-tight">TS</span>,
-  },
-  {
-    name: 'GA4', cat: 'Analytics',
-    logo: <span className="text-[11px] font-black tracking-tight">GA4</span>,
-  },
-  {
-    name: 'Gemini', cat: 'AI',
-    logo: (
-      <svg viewBox="0 0 28 28" className="w-6 h-6 fill-current">
-        <path d="M14 0c0 7.73-6.27 14-14 14 7.73 0 14 6.27 14 14 0-7.73 6.27-14 14-14-7.73 0-14-6.27-14-14z"/>
-      </svg>
-    ),
-  },
+  { name: 'Google Ads', cat: 'Paid Media', logo: <span className="text-[10px] font-black tracking-tight">G ADS</span> },
+  { name: 'Meta Ads', cat: 'Paid Media', logo: <span className="text-[10px] font-black tracking-tight">META</span> },
+  { name: 'GA4', cat: 'Analytics', logo: <span className="text-[11px] font-black tracking-tight">GA4</span> },
+  { name: 'Google Search Console', cat: 'SEO', logo: <span className="text-[9px] font-black tracking-tight">GSC</span> },
+  { name: 'Google Tag Manager', cat: 'Tracking', logo: <span className="text-[9px] font-black tracking-tight">GTM</span> },
+  { name: 'Ahrefs', cat: 'SEO', logo: <span className="text-[11px] font-black tracking-tight">Ahrefs</span> },
+  { name: 'SEMrush', cat: 'SEO', logo: <span className="text-[10px] font-black tracking-tight">SEMrush</span> },
+  { name: 'Screaming Frog', cat: 'Technical', logo: <span className="text-[9px] font-black tracking-tight">SF</span> },
+  { name: 'HubSpot', cat: 'CRM', logo: <span className="text-[10px] font-black tracking-tight">HubSpot</span> },
+  { name: 'Make', cat: 'Automation', logo: <span className="text-[11px] font-black tracking-tight">Make</span> },
+  { name: 'Brevo', cat: 'Email', logo: <span className="text-[10px] font-black tracking-tight">Brevo</span> },
+  { name: 'Airtable', cat: 'Operations', logo: <span className="text-[10px] font-black tracking-tight">Airtable</span> },
+  { name: 'WordPress', cat: 'Web', logo: <span className="text-[10px] font-black tracking-tight">WP</span> },
+  { name: 'Webflow', cat: 'Web', logo: <span className="text-[10px] font-black tracking-tight">Webflow</span> },
+  { name: 'Shopify', cat: 'Commerce', logo: <span className="text-[10px] font-black tracking-tight">Shopify</span> },
+  { name: 'Vercel', cat: 'Build', logo: <span className="text-[10px] font-black tracking-tight">Vercel</span> },
+  { name: 'React', cat: 'Build', logo: <span className="text-[10px] font-black tracking-tight">React</span> },
+  { name: 'TypeScript', cat: 'Build', logo: <span className="text-[10px] font-black tracking-tight">TS</span> },
+  { name: 'Supabase', cat: 'Backend', logo: <span className="text-[10px] font-black tracking-tight">Supabase</span> },
+  { name: 'PostgreSQL', cat: 'Database', logo: <span className="text-[10px] font-black tracking-tight">Postgres</span> },
 ];
 
 // ── Client logos ──────────────────────────────────────────────
@@ -630,7 +519,7 @@ export default function Home() {
                   </div>
                 </motion.div>
               ))}
-              {/* +100 more tile */}
+              {/* More tools tile */}
               <motion.div
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -638,8 +527,8 @@ export default function Home() {
                 transition={{ duration: 0.35, delay: TOOLS.length * 0.03, ease: EASE }}
                 className="flex flex-col items-center justify-center border border-dashed border-[#09090B]/15 px-3 py-4 col-span-1"
               >
-                <p className="text-xl font-display text-[#09090B]/40">+100</p>
-                <p className="text-[9px] tracking-[0.15em] uppercase text-[#09090B]/25 mt-1 text-center">more tools</p>
+                <p className="text-xl font-display text-[#09090B]/40">MORE</p>
+                <p className="text-[9px] tracking-[0.15em] uppercase text-[#09090B]/25 mt-1 text-center">as needed</p>
               </motion.div>
             </div>
           </div>
