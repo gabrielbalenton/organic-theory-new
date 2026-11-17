@@ -157,7 +157,7 @@ export const caseStudies: CaseStudy[] = [
     client: 'B2B Timber Sourcing Business',
     context: 'An internal process-mapping application developed for a New Zealand B2B sourcing business to turn stakeholder discussions into shared, reviewable lead and customer journeys.',
     headline: 'From workshop conversations to a collaborative, AI-assisted process workspace.',
-    coverImage: '/images/fpx-lead-journey-lab-case-study.svg',
+    coverImage: '/images/ai-journey-case-study.svg',
     coverAlt: 'Conceptual illustration of an AI-assisted lead and customer journey workspace',
     metrics: [
       { value: 'Visual', label: 'Journey mapping' },
@@ -219,7 +219,7 @@ export const caseStudies: CaseStudy[] = [
       { value: 'RBAC', label: 'Scoped permissions' },
       { value: 'Relational', label: 'Domain model' },
       { value: 'Auditable', label: 'State & history' },
-      { value: 'Headless', label: 'Architecture' },
+      { value: 'Decoupled', label: 'Architecture' },
     ],
     stack: ['React', 'TypeScript', 'Supabase', 'PostgreSQL', 'Authentication', 'RBAC', 'Vercel'],
     sections: [
@@ -266,7 +266,7 @@ export const caseStudies: CaseStudy[] = [
     ],
     seo: {
       title: 'Full-Stack Operations Platform Case Study | Organic Theory',
-      description: 'A full-stack operations platform case study covering relational data, authentication, RBAC, transactional workflows, validation, auditability, and headless product architecture.',
+      description: 'A full-stack operations platform case study covering relational data, authentication, RBAC, transactional workflows, validation, auditability, and decoupled product architecture.',
       canonical: 'https://organic-theory.vercel.app/case-studies/operations-platform',
     },
   },
