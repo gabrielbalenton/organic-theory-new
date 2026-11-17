@@ -101,7 +101,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: 'paid-media-ecommerce',
     label: 'Google & Meta Ads',
-    client: 'U.S. Ecommerce Store',
+    client: 'U.S. Birth-Pool Store · Identity Withheld',
     context: 'A six-month paid media engagement for a U.S. ecommerce store selling birth pools, liners, and accessories, with purchase tracking reconciled against Shopify.',
     headline: '$157,674 in sales linked to paid ads from $42,121 in spend, producing a 3.74× blended return.',
     coverImage: '/images/paid-media-case-study.svg',
@@ -450,7 +450,7 @@ export const caseStudies: CaseStudy[] = [
   {
     slug: 'local-seo-programmatic-pages',
     label: 'SEO & Local SEO',
-    client: 'Australian Building Design Company',
+    client: 'Australian Building Design Company · Identity Withheld',
     context: 'An Australian building design and drafting business needed to reach homeowners, renovators, investors, and developers searching across New South Wales.',
     headline: '1,281 local landing pages in eight weeks, with search visibility reaching 63.21%.',
     metrics: [
