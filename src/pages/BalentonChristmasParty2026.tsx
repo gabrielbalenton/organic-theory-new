@@ -5,6 +5,7 @@ import {
   Heart, MapPin, RefreshCw, Sparkles, Users, UtensilsCrossed, X,
 } from 'lucide-react';
 import './BalentonChristmasParty2026.css';
+import { ChristmasOpening, GiftPassingDemo, KidsChristmasCorner } from '../components/christmas/ChristmasExtras';
 
 type Person = { name: string; drawn: boolean; assignment: string | null };
 type Trade = {
@@ -23,7 +24,7 @@ type PotluckData = {
 type Action = 'draw' | 'offer' | 'accept' | 'decline' | 'cancel';
 
 const ADULTS = [
-  'Teng', 'Julius', 'Mike M', 'Cj', 'Mark', 'Beth', 'Christine', 'Paulo',
+  'Teng', 'Julius', 'Mike M', 'CJ', 'Mark', 'Beth', 'Christine', 'Paulo',
   'Shela', 'Gab', 'Tricia', 'Geneva', 'Mike F', 'Ethel', 'Neriz', 'Jean',
 ];
 const KIDS = ['Luigi', 'Marga', 'Franco', 'Nathan', 'Mikee', 'Mygo', 'Theo'];
@@ -78,6 +79,14 @@ function StoryText({ paragraph }: { paragraph: string }) {
 }
 
 export default function BalentonChristmasParty2026() {
+  const [introVisible, setIntroVisible] = useState(() => {
+    try { return typeof window !== 'undefined' && sessionStorage.getItem('bcp-intro-seen-2026') !== 'true'; }
+    catch { return false; }
+  });
+  const dismissIntro = () => {
+    try { window.sessionStorage.setItem('bcp-intro-seen-2026','true'); } catch { /* continue without storage */ }
+    setIntroVisible(false);
+  };
   const [selected, setSelected] = useState('');
   const [data, setData] = useState<PotluckData | null>(null);
   const [target, setTarget] = useState('');
@@ -176,6 +185,7 @@ export default function BalentonChristmasParty2026() {
 
   return (
     <div className="bcp use-native-cursor">
+      <ChristmasOpening visible={introVisible} onClose={dismissIntro} />
       <Helmet>
         <title>Balenton Christmas Party 2026 | The Family Get-Together</title>
         <meta name="description" content="Details, the potluck draw and the Balenton family Christmas gift exchange." />
@@ -190,7 +200,7 @@ export default function BalentonChristmasParty2026() {
           <a href="#potluck">Potluck draw</a>
           <a href="#white-elephant">Gift exchange</a>
         </nav>
-        <button type="button" className="bcp-share" onClick={copyLink}>{copied ? <Check size={15} /> : <Copy size={15} />}{copied ? 'Copied!' : 'Share link'}</button>
+        <div className="bcp-header-actions"><button className="bcp-replay" type="button" onClick={() => setIntroVisible(true)}>Replay intro</button><button type="button" className="bcp-share" onClick={copyLink}>{copied ? <Check size={15} /> : <Copy size={15} />}{copied ? 'Copied!' : 'Share link'}</button></div>
       </header>
 
       <main id="home">
@@ -366,13 +376,15 @@ export default function BalentonChristmasParty2026() {
             <div className="bcp-rules-heading"><Gift size={24} /><h3>The rules of the game</h3><span>KEEP IT FUN, KEEP IT FAIR</span></div>
             <div className="bcp-rules-grid">
               <article><span className="bcp-step">01</span><h4>Bring one wrapped gift</h4><p>Spend no more than ₱500. Less is completely fine. One gift per participating player. Don&apos;t write your name or the recipient&apos;s name on it.</p></article>
-              <article><span className="bcp-step">02</span><h4>Unisex, no exceptions</h4><p>Make sure anyone can use or enjoy it. Food is absolutely welcome. Just skip gender-specific gifts, prank junk and things that only suit one person.</p></article>
-              <article><span className="bcp-step">03</span><h4>Get in a circle</h4><p>Put gifts in a pile. Each player picks a random gift that is not their own and forms a circle. Keep it wrapped until the story ends.</p></article>
+              <article><span className="bcp-step">02</span><h4>Unisex, no exceptions</h4><p>Make sure anyone can use or enjoy it. Food and snacks are absolutely welcome. Just skip gender-specific gifts, prank junk and things only one person could use.</p></article>
+              <article><span className="bcp-step">03</span><h4>Get in a circle</h4><p>Everyone forms a circle. An organizer hands each player one random wrapped gift that is not their own. Keep it wrapped until the story ends.</p></article>
               <article><span className="bcp-step">04</span><h4>Listen for LEFT &amp; RIGHT</h4><p>Every time the reader says LEFT, pass the gift one person left. Every time they say RIGHT, pass it one person right. No skipping!</p></article>
               <article><span className="bcp-step">05</span><h4>The story decides</h4><p>No stealing, no swapping and no peeking during the game. When the story ends, the gift in your hands is yours.</p></article>
               <article><span className="bcp-step">06</span><h4>Unwrap and enjoy!</h4><p>Open your gift together, celebrate the weird and wonderful surprises, and don&apos;t forget to thank whoever brought yours.</p></article>
             </div>
           </div>
+
+          <GiftPassingDemo />
 
           <div className={readerMode ? 'bcp-story bcp-story-reader' : 'bcp-story'} id="christmas-story">
             <div className="bcp-story-toolbar"><span>✳ THE OFFICIAL GAME STORY</span><button type="button" onClick={() => setReaderMode(!readerMode)}>{readerMode ? 'Exit reader mode' : 'Reader mode'}</button></div>
@@ -390,6 +402,8 @@ export default function BalentonChristmasParty2026() {
             <div className="bcp-guest-card bcp-kids-card"><div className="bcp-guest-card-title"><span><Heart size={20} /> THE LITTLE CREW</span><strong>{KIDS.length}</strong></div><div className="bcp-name-grid">{KIDS.map((name, index) => <span key={index}><i>✦</i> {name}</span>)}</div><p className="bcp-guest-footnote">Kids are listed separately from the main White Elephant players.</p></div>
           </div>
         </section>
+
+        <KidsChristmasCorner />
 
         <section className="bcp-finale"><div className="bcp-finale-spark">✶</div><span>FROM OUR FAMILY TO YOURS</span><h2>See you around<br />the <i>Christmas table.</i></h2><p>Bring your appetite, your wrapped gift and your best Christmas spirit.</p><a href="#home">BACK TO TOP ↑</a></section>
       </main>
