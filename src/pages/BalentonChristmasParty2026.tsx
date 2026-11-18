@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
-  ArrowDown, ArrowLeftRight, Check, ChevronDown, Clock3, Copy, Gift,
+  ArrowDown, ArrowLeftRight, CalendarDays, Check, ChevronDown, Clock3, Copy, Gift,
   Heart, MapPin, RefreshCw, Sparkles, Users, UtensilsCrossed, X,
 } from 'lucide-react';
 import './BalentonChristmasParty2026.css';
@@ -33,6 +33,17 @@ const CATEGORIES = [
   { title: 'Dessert', icon: '🍰', detail: 'Cake, ice cream or another sweet treat' },
   { title: 'The essentials', icon: '🥤', detail: 'Drinks, ice (yelo) and utensils' },
 ];
+
+const VENUE_URL = 'https://maps.app.goo.gl/gAvc23YXg39LwRcK9';
+const MAP_EMBED_URL = 'https://maps.google.com/maps?q=14.423767%2C121.011806&hl=en&z=17&output=embed';
+const CALENDAR_URL = 'https://calendar.google.com/calendar/render?' + new URLSearchParams({
+  action: 'TEMPLATE',
+  text: 'Balenton Christmas Party 2026',
+  dates: '20261227T130000/20261227T140000',
+  ctz: 'Asia/Manila',
+  details: 'Christmas get-together starts at 1:00 PM. One-hour calendar reminder only; the party may run longer. Bring your potluck assignment and, if joining White Elephant, one wrapped unisex gift worth no more than ₱500. Exact venue: ' + VENUE_URL,
+  location: 'SNIP Plant Nursery, Pilar, Las Piñas, Philippines',
+}).toString();
 
 const STORY = [
   'Christmas at Pilar was off to a great start. Teng looked LEFT to check the food table, then RIGHT to see who had arrived. Mike M walked in from the RIGHT with a present and asked, "Did I come to the RIGHT house?" Everyone said, "Of course!"',
@@ -160,7 +171,8 @@ export default function BalentonChristmasParty2026() {
             <div className="bcp-eyebrow"><span className="bcp-eyebrow-line" /> AN INVITATION TO OUR FAVORITE PEOPLE</div>
             <h1>It&apos;s the most <em>wonderful</em> time to be <span>together.</span></h1>
             <p>Good food, loud laughs, a little chaos and a whole lot of family. You know the drill. It&apos;s Christmas with the Balentons.</p>
-            <a className="bcp-primary" href="#potluck">Pick your potluck <ArrowDown size={17} /></a>
+            <div className="bcp-hero-date">SUNDAY, DECEMBER 27, 2026 <span>✳</span> 1:00 PM <span>✳</span> PILAR</div>
+            <div className="bcp-hero-actions"><a className="bcp-primary" href="#potluck">Pick your potluck <ArrowDown size={17} /></a><a className="bcp-calendar-button" href={CALENDAR_URL} target="_blank" rel="noopener noreferrer"><CalendarDays size={16} /> Add to Google Calendar</a></div>
           </div>
           <div className="bcp-hero-art" aria-hidden="true">
             <div className="bcp-art-glow" />
@@ -181,7 +193,6 @@ export default function BalentonChristmasParty2026() {
             <div className="bcp-art-spark bcp-art-spark-one">✦</div>
             <div className="bcp-art-spark bcp-art-spark-two">✧</div>
           </div>
-          <div className="bcp-hero-stamp">EST. FAMILY FOREVER <span>♡</span> CLASS OF 2026</div>
         </section>
 
         <section className="bcp-details" id="details">
@@ -193,11 +204,27 @@ export default function BalentonChristmasParty2026() {
               <p>Come hungry and ready for the yearly family catch-up. Let&apos;s make this one a good one.</p>
             </div>
             <div className="bcp-detail-grid">
-              <article><span className="bcp-detail-icon"><Clock3 size={23} /></span><small>WHEN</small><strong>1:00 PM</strong><span>Date to be confirmed</span></article>
-              <article><span className="bcp-detail-icon"><MapPin size={23} /></span><small>WHERE</small><strong>Pilar</strong><span>Full address to follow</span></article>
+              <article><span className="bcp-detail-icon"><Clock3 size={23} /></span><small>WHEN</small><strong>Dec 27, 2026</strong><span>Sunday, 1:00 PM</span></article>
+              <article><span className="bcp-detail-icon"><MapPin size={23} /></span><small>WHERE</small><strong>Pilar</strong><span>SNIP Plant Nursery · Exact map below</span></article>
               <article><span className="bcp-detail-icon"><UtensilsCrossed size={23} /></span><small>WHAT TO BRING</small><strong>Potluck!</strong><span>More food is always welcome</span></article>
-              <article><span className="bcp-detail-icon"><Gift size={23} /></span><small>GIFT EXCHANGE</small><strong>₱500</strong><span>Strict budget, unisex gifts</span></article>
+              <article><span className="bcp-detail-icon"><Gift size={23} /></span><small>GIFT EXCHANGE</small><strong>₱500 max</strong><span>Spend less if you like. Unisex gifts.</span></article>
             </div>
+          </div>
+        </section>
+
+        <section className="bcp-venue" aria-labelledby="bcp-venue-title">
+          <div className="bcp-venue-copy">
+            <span className="bcp-mini-heading">THE EXACT MEETING POINT</span>
+            <h2 id="bcp-venue-title">Find us in <i>Pilar.</i></h2>
+            <p>We&apos;ll see you at SNIP Plant Nursery. Use the map below for the exact pin.</p>
+            <div className="bcp-venue-links">
+              <a href={VENUE_URL} target="_blank" rel="noopener noreferrer"><MapPin size={17} /> Open the exact pin in Google Maps</a>
+              <a href={CALENDAR_URL} target="_blank" rel="noopener noreferrer"><CalendarDays size={17} /> Save December 27</a>
+            </div>
+          </div>
+          <div className="bcp-map-shell">
+            <iframe title="Balenton Christmas Party exact venue map" src={MAP_EMBED_URL} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
+            <a href={VENUE_URL} target="_blank" rel="noopener noreferrer">Get directions to this pin ↗</a>
           </div>
         </section>
 
@@ -294,12 +321,12 @@ export default function BalentonChristmasParty2026() {
           <div className="bcp-section-kicker"><span>03 / THE GIFT EXCHANGE</span><span>THE LEFT &amp; RIGHT EDITION</span></div>
           <div className="bcp-elephant-hero">
             <div><span className="bcp-mini-heading">NOT YOUR ORDINARY SECRET SANTA</span><h2>White Elephant.<br /><i>Balenton style.</i></h2><p>No drawing a name. No guessing who your recipient is. Just one wrapped gift, a hilarious story and a whole lot of passing LEFT and RIGHT.</p></div>
-            <div className="bcp-budget-sticker"><span>THE GIFT RULE</span><strong>₱500</strong><span>STRICT BUDGET</span><small>UNISEX • USEFUL • FUN</small></div>
+            <div className="bcp-budget-sticker"><span>THE GIFT LIMIT</span><strong>₱500</strong><span>MAXIMUM ONLY</span><small>LESS IS FINE • UNISEX • FUN</small></div>
           </div>
           <div className="bcp-rules">
             <div className="bcp-rules-heading"><Gift size={24} /><h3>The rules of the game</h3><span>KEEP IT FUN, KEEP IT FAIR</span></div>
             <div className="bcp-rules-grid">
-              <article><span className="bcp-step">01</span><h4>Bring one wrapped gift</h4><p>Stick to the ₱500 budget. One gift per participating player. Don&apos;t write your name or the recipient&apos;s name on it.</p></article>
+              <article><span className="bcp-step">01</span><h4>Bring one wrapped gift</h4><p>Spend no more than ₱500. Less is completely fine. One gift per participating player. Don&apos;t write your name or the recipient&apos;s name on it.</p></article>
               <article><span className="bcp-step">02</span><h4>Unisex, no exceptions</h4><p>Make sure anyone can use or enjoy it. Food is absolutely welcome. Just skip gender-specific gifts, prank junk and things that only suit one person.</p></article>
               <article><span className="bcp-step">03</span><h4>Get in a circle</h4><p>Put gifts in a pile. Each player picks a random gift that is not their own and forms a circle. Keep it wrapped until the story ends.</p></article>
               <article><span className="bcp-step">04</span><h4>Listen for LEFT &amp; RIGHT</h4><p>Every time the reader says LEFT, pass the gift one person left. Every time they say RIGHT, pass it one person right. No skipping!</p></article>
