@@ -33,6 +33,7 @@ const DMRSignature = lazy(() => import('./pages/DMRSignature'));
 const DMRSignatureRobby = lazy(() => import('./pages/DMRSignatureRobby'));
 const Internal = lazy(() => import('./pages/Internal'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const BalentonChristmasParty2026 = lazy(() => import('./pages/BalentonChristmasParty2026'));
 
 const PageLoader = () => <div className="min-h-screen bg-[#09090B]" />;
 
@@ -74,6 +75,7 @@ export default function App() {
             <Route path="pipeline/jobs" element={<Navigate to="/pipeline" replace />} />
             <Route path="*" element={<NotFound />} />
           </Route>
+          <Route path="/BalentonChristmasParty2026" element={<BalentonChristmasParty2026 />} />
           <Route path="/internal" element={<div className="life-os-shell ot-contrast"><Internal /></div>} />
           <Route path="/courses/:courseId/learn" element={<CoursePlayer />} />
           <Route path="/pitch/:slug" element={<Pitch />} />
