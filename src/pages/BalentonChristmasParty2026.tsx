@@ -23,7 +23,7 @@ type PotluckData = {
 type Action = 'draw' | 'offer' | 'accept' | 'decline' | 'cancel';
 
 const ADULTS = [
-  'Teng', 'Julius', 'Mike M', 'CJ', 'Mark', 'Beth', 'Christine', 'Paulo',
+  'Teng', 'Julius', 'Mike M', 'Cj', 'Mark', 'Beth', 'Christine', 'Paulo',
   'Shela', 'Gab', 'Tricia', 'Geneva', 'Mike F', 'Ethel', 'Neriz', 'Jean',
 ];
 const KIDS = ['Luigi', 'Marga', 'Franco', 'Nathan', 'Mikee', 'Mygo', 'Theo'];
@@ -301,7 +301,7 @@ export default function BalentonChristmasParty2026() {
             <div className="bcp-rules-grid">
               <article><span className="bcp-step">01</span><h4>Bring one wrapped gift</h4><p>Stick to the ₱500 budget. One gift per participating player. Don&apos;t write your name or the recipient&apos;s name on it.</p></article>
               <article><span className="bcp-step">02</span><h4>Unisex, no exceptions</h4><p>Make sure anyone can use or enjoy it. Food is absolutely welcome. Just skip gender-specific gifts, prank junk and things that only suit one person.</p></article>
-              <article><span className="bcp-step">03</span><h4>Get in a circle</h4><p>Everyone starts holding one randomly distributed wrapped gift. Keep it wrapped while the story is being read.</p></article>
+              <article><span className="bcp-step">03</span><h4>Get in a circle</h4><p>Put gifts in a pile. Each player picks a random gift that is not their own and forms a circle. Keep it wrapped until the story ends.</p></article>
               <article><span className="bcp-step">04</span><h4>Listen for LEFT &amp; RIGHT</h4><p>Every time the reader says LEFT, pass the gift one person left. Every time they say RIGHT, pass it one person right. No skipping!</p></article>
               <article><span className="bcp-step">05</span><h4>The story decides</h4><p>No stealing, no swapping and no peeking during the game. When the story ends, the gift in your hands is yours.</p></article>
               <article><span className="bcp-step">06</span><h4>Unwrap and enjoy!</h4><p>Open your gift together, celebrate the weird and wonderful surprises, and don&apos;t forget to thank whoever brought yours.</p></article>
