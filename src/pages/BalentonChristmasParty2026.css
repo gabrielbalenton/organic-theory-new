@@ -342,3 +342,26 @@
   .bcp-shuffling { animation: none; }
   .bcp-primary { transition: none; }
 }
+
+/* December 27 venue and calendar controls */
+.bcp-hero-date { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; color: #f7cf9d; font-size: 10px; font-weight: 700; letter-spacing: .13em; margin: -5px 0 24px; }
+.bcp-hero-date span { opacity: .65; }
+.bcp-hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.bcp-calendar-button { display: inline-flex; justify-content: center; align-items: center; gap: 10px; padding: 16px 19px; color: #ffe3bb!important; border: 1px solid rgba(245,211,163,.45); border-radius: 5px; font-weight: 700; font-size: 12px; transition: background .22s, border-color .22s, transform .22s; }
+.bcp-calendar-button:hover { border-color: #ffe3bb; background: rgba(255,243,213,.08); transform: translateY(-2px); }
+.bcp-venue { display: grid; grid-template-columns: .72fr 1.28fr; gap: clamp(30px,5vw,90px); background: #fdf8ed; padding: 70px clamp(24px,8vw,150px); align-items: center; border-top: 1px solid #e4decf; }
+.bcp-venue-copy h2 { font-size: clamp(35px,3.7vw,56px); }
+.bcp-venue-copy p { color: #6b7369; max-width: 320px; line-height: 1.8; }
+.bcp-venue-links { display: flex; flex-direction: column; gap: 11px; margin-top: 29px; }
+.bcp-venue-links a { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; color: #90212b; font-weight: 700; }
+.bcp-venue-links a:hover { text-decoration: underline; }
+.bcp-map-shell { overflow: hidden; border-radius: 10px; border: 1px solid #cbd3c7; background: #e4e8dc; }
+.bcp-map-shell iframe { display: block; height: 365px; width: 100%; border: 0; }
+.bcp-map-shell > a { display: block; color: #274b3c; padding: 13px 20px; background: #e6efdf; font-size: 12px; font-weight: 700; text-align: center; }
+.bcp-map-shell > a:hover { background: #d8e7d3; }
+@media(max-width:760px) {
+  .bcp-hero-date { line-height: 1.7; font-size: 9px; }
+  .bcp-hero-actions { align-items: stretch; flex-direction: column; max-width: 310px; }
+  .bcp-venue { grid-template-columns: 1fr; padding: 54px 22px; gap: 28px; }
+  .bcp-map-shell iframe { height: 310px; }
+}
