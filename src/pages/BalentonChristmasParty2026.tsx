@@ -45,6 +45,16 @@ const CALENDAR_URL = 'https://calendar.google.com/calendar/render?' + new URLSea
   location: 'SNIP Plant Nursery, Pilar, Las Piñas, Philippines',
 }).toString();
 
+const POTLUCK_OUTCOMES = [
+  'Pork dish', 'Chicken dish', 'Beef dish', 'Seafood or fish',
+  'Pasta, noodles or salad greens', 'Dessert: cake or ice cream', 'Drinks, ice and utensils',
+] as const;
+const SHORT_DISH: Record<string,string> = {
+  'Pork dish': 'PORK', 'Chicken dish': 'CHICKEN', 'Beef dish': 'BEEF',
+  'Seafood or fish': 'SEAFOOD', 'Pasta, noodles or salad greens': 'APPETIZERS',
+  'Dessert: cake or ice cream': 'DESSERT', 'Drinks, ice and utensils': 'DRINKS',
+};
+const WHEEL_COLORS = ['#a82d37','#27604a','#d5a252','#244634','#b4473d','#55775a','#d3b071'];
 const STORY = [
   'Christmas at Pilar was off to a great start. Teng looked LEFT to check the food table, then RIGHT to see who had arrived. Mike M walked in from the RIGHT with a present and asked, "Did I come to the RIGHT house?" Everyone said, "Of course!"',
   'Julius pointed LEFT toward the dining area. CJ turned RIGHT looking for a seat. Mark looked LEFT and saw Beth laughing, while Christine went RIGHT to check the desserts. Paulo took one step LEFT, then another step RIGHT, because someone mentioned there was still food coming.',
@@ -74,6 +84,8 @@ export default function BalentonChristmasParty2026() {
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
   const [drawing, setDrawing] = useState(false);
+  const [wheelRotation, setWheelRotation] = useState(0);
+  const [frozenWheel, setFrozenWheel] = useState<string[] | null>(null);
   const [notice, setNotice] = useState('');
   const [error, setError] = useState('');
   const [readerMode, setReaderMode] = useState(false);
@@ -105,25 +117,41 @@ export default function BalentonChristmasParty2026() {
   const outgoing = data?.trades.find((trade) => trade.from === selected);
   const canTradeWith = data?.people.filter((person) => person.drawn && person.name !== selected) || [];
   const allDrawn = data?.drawnCount === data?.total;
+  const availableDishes = POTLUCK_OUTCOMES.filter((dish) =>
+    !data?.people.some((person) => person.drawn && person.assignment === dish));
+  const wheelOptions = frozenWheel ?? (current?.drawn && current.assignment ? [current.assignment] : availableDishes.length ? availableDishes : ['All dishes drawn']);
+  const wheelBackground = 'conic-gradient(' + wheelOptions.map((dish, i) => {
+    const step = 100 / wheelOptions.length;
+    return WHEEL_COLORS[i % WHEEL_COLORS.length] + ' ' + (i * step) + '% ' + ((i + 1) * step) + '%';
+  }).join(',') + ')';
 
   const send = async (action: Action, extra: Record<string, string> = {}) => {
     if (!selected || busy) return;
     setBusy(true);
     setError('');
     setNotice('');
-    if (action === 'draw') setDrawing(true);
+    if (action === 'draw') {
+      setFrozenWheel([...wheelOptions]);
+      setDrawing(true);
+    }
     try {
-      const request = fetch('/api/balenton-potluck', {
+      const response = await fetch('/api/balenton-potluck', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ action, name: selected, ...extra }),
       });
-      const [response] = await Promise.all([
-        request,
-        action === 'draw' ? new Promise<void>((resolve) => window.setTimeout(resolve, 1450)) : Promise.resolve(),
-      ]);
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || 'Something went wrong. Please try again.');
+      if (action === 'draw') {
+        const index = wheelOptions.indexOf(result.assignment);
+        if (index >= 0) {
+          const center = (index + .5) * 360 / wheelOptions.length;
+          const currentAngle = ((wheelRotation % 360) + 360) % 360;
+          const adjust = ((360 - center - currentAngle) % 360 + 360) % 360;
+          setWheelRotation(wheelRotation + 1800 + adjust);
+        }
+        await new Promise<void>((resolve) => window.setTimeout(resolve, 3350));
+      }
       setData(result);
       setNotice(result.message || 'Saved.');
       if (action === 'offer') setTarget('');
@@ -132,6 +160,7 @@ export default function BalentonChristmasParty2026() {
     } finally {
       setBusy(false);
       setDrawing(false);
+      setFrozenWheel(null);
     }
   };
 
@@ -238,10 +267,20 @@ export default function BalentonChristmasParty2026() {
           <div className="bcp-potluck-panel">
             <div className="bcp-draw-area">
               <div className="bcp-draw-head"><span className="bcp-panel-overline">YOUR LUCKY CHRISTMAS DRAW</span><span className="bcp-draw-counter">{data?.drawnCount ?? '·'} / 7 DRAWN</span></div>
-              <div className="bcp-draw-graphic" aria-hidden="true"><span className={drawing ? 'bcp-gift-emblem bcp-shuffling' : 'bcp-gift-emblem'}>🎁</span><span className="bcp-draw-deco">✦</span><span className="bcp-draw-deco right">✳</span></div>
+              <div className="bcp-draw-graphic bcp-wheel-stage" aria-label="Spinning Christmas potluck wheel">
+                <div className="bcp-wheel-arrow" aria-hidden="true" />
+                <div className="bcp-wheel-disc" style={{background:wheelBackground,transform:'rotate(' + wheelRotation + 'deg)'}}>
+                  {wheelOptions.map((dish,i) => {
+                    const angle = (i+.5) * 360 / wheelOptions.length;
+                    return <span key={dish} className="bcp-wheel-label" style={{transform:'translate(-50%, -50%) rotate(' + angle + 'deg) translateY(-110px) rotate(-' + angle + 'deg)'}}>{SHORT_DISH[dish] || dish}</span>;
+                  })}
+                  <div className="bcp-wheel-hub"><span>✳</span><small>2026</small></div>
+                </div>
+                <span className="bcp-wheel-hint">{drawing ? 'THE WHEEL IS SPINNING...' : current?.drawn ? 'YOUR DRAW IS COMPLETE' : 'ONE SPIN PER PERSON'}</span>
+              </div>
               <label className="bcp-form-label" htmlFor="bcp-name-select">FIRST, FIND YOUR NAME</label>
               <div className="bcp-select-wrap">
-                <select id="bcp-name-select" value={selected} onChange={(event) => {setSelected(event.target.value); setTarget(''); setNotice(''); setError('');}}>
+                <select id="bcp-name-select" value={selected} onChange={(event) => {setSelected(event.target.value); setTarget(''); setFrozenWheel(null); setNotice(''); setError('');}}>
                   <option value="">Choose your name</option>
                   {(data?.people || ['Teng', 'Mike', 'Mark', 'Christine', 'Paulo', 'Gab', 'Geneva'].map((name) => ({ name, drawn: false, assignment: null }))).map((person) => (
                     <option key={person.name} value={person.name}>{person.name}{person.drawn ? ' ✓ Drawn' : ''}</option>
@@ -257,7 +296,7 @@ export default function BalentonChristmasParty2026() {
                 </div>
               ) : (
                 <button className="bcp-draw-button" type="button" disabled={!selected || busy || loading} onClick={() => {void send('draw');}}>
-                  {drawing ? 'Picking your dish...' : loading ? 'Loading the draw...' : 'Draw my potluck'} <Sparkles size={18} />
+                  {drawing ? 'Spinning your result...' : loading ? 'Loading the wheel...' : 'SPIN THE WHEEL'} <Sparkles size={18} />
                 </button>
               )}
               <p className="bcp-honor">Honor system, please select only your own name. One permanent draw per person, no PIN required.</p>
