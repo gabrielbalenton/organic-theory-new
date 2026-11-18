@@ -290,7 +290,7 @@ export default function BalentonChristmasParty2026() {
               </div>
               <label className="bcp-form-label" htmlFor="bcp-name-select">FIRST, FIND YOUR NAME</label>
               <div className="bcp-select-wrap">
-                <select id="bcp-name-select" value={selected} onChange={(event) => {setSelected(event.target.value); setTarget(''); setFrozenWheel(null); setNotice(''); setError('');}}>
+                <select id="bcp-name-select" value={selected} disabled={busy} onChange={(event) => {setSelected(event.target.value); setTarget(''); setFrozenWheel(null); setNotice(''); setError('');}}>
                   <option value="">Choose your name</option>
                   {(data?.people || ['Teng', 'Mike', 'Mark', 'Christine', 'Paulo', 'Gab', 'Geneva'].map((name) => ({ name, drawn: false, assignment: null }))).map((person) => (
                     <option key={person.name} value={person.name}>{person.name}{person.drawn ? ' ✓ Drawn' : ''}</option>
