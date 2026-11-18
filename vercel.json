@@ -1,82 +1,30 @@
 {
   "headers": [
-    {
-      "source": "/internal",
-      "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "value": "noindex, nofollow, noarchive, nosnippet"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "no-store, max-age=0"
-        }
-      ]
-    },
-    {
-      "source": "/old-jeans",
-      "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "value": "noindex, nofollow, noarchive"
-        }
-      ]
-    },
-    {
-      "source": "/ny-beauty",
-      "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "value": "noindex, nofollow, noarchive"
-        }
-      ]
-    }
+    {"source":"/internal","headers":[{"key":"X-Robots-Tag","value":"noindex, nofollow, noarchive, nosnippet"},{"key":"Cache-Control","value":"no-store, max-age=0"}]},
+    {"source":"/old-jeans","headers":[{"key":"X-Robots-Tag","value":"noindex, nofollow, noarchive"}]},
+    {"source":"/ny-beauty","headers":[{"key":"X-Robots-Tag","value":"noindex, nofollow, noarchive"}]},
+    {"source":"/cskinwellness/:path*","headers":[{"key":"X-Robots-Tag","value":"noindex, nofollow, noarchive"}]}
   ],
   "redirects": [
-    {
-      "source": "/work",
-      "destination": "/case-studies",
-      "permanent": true
-    },
-    {
-      "source": "/vault",
-      "destination": "/case-studies",
-      "permanent": true
-    },
-    {
-      "source": "/randall-penn-preview",
-      "destination": "/randall-penn/option-2",
-      "permanent": false
-    }
+    {"source":"/work","destination":"/case-studies","permanent":true},
+    {"source":"/vault","destination":"/case-studies","permanent":true},
+    {"source":"/randall-penn-preview","destination":"/randall-penn/option-2","permanent":false}
   ],
   "rewrites": [
-    {
-      "source": "/randall-penn/option-1",
-      "destination": "/randall-penn/option-1.html"
-    },
-    {
-      "source": "/randall-penn/option-2",
-      "destination": "/randall-penn/option-2.html"
-    },
-    {
-      "source": "/randall-penn/option-3",
-      "destination": "/randall-penn/option-3.html"
-    },
-    {
-      "source": "/randall-penn/homepage",
-      "destination": "/randall-penn/homepage.html"
-    },
-    {
-      "source": "/old-jeans",
-      "destination": "/old-jeans.html"
-    },
-    {
-      "source": "/ny-beauty",
-      "destination": "/ny-beauty.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    {"source":"/randall-penn/option-1","destination":"/randall-penn/option-1.html"},
+    {"source":"/randall-penn/option-2","destination":"/randall-penn/option-2.html"},
+    {"source":"/randall-penn/option-3","destination":"/randall-penn/option-3.html"},
+    {"source":"/randall-penn/homepage","destination":"/randall-penn/homepage.html"},
+    {"source":"/old-jeans","destination":"/old-jeans.html"},
+    {"source":"/ny-beauty","destination":"/ny-beauty.html"},
+    {"source":"/cskinwellness","destination":"/cskinwellness/home.html"},
+    {"source":"/cskinwellness/home","destination":"/cskinwellness/home.html"},
+    {"source":"/cskinwellness/about","destination":"/cskinwellness/about.html"},
+    {"source":"/cskinwellness/services","destination":"/cskinwellness/services.html"},
+    {"source":"/cskinwellness/shop","destination":"/cskinwellness/shop.html"},
+    {"source":"/cskinwellness/contact","destination":"/cskinwellness/contact.html"},
+    {"source":"/cskinwellness/booking","destination":"/cskinwellness/booking.html"},
+    {"source":"/cskinandwellness/home","destination":"/cskinwellness/home.html"},
+    {"source":"/(.*)","destination":"/index.html"}
   ]
 }
