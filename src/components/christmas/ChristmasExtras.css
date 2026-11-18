@@ -1,0 +1,118 @@
+/* Immersive Christmas opening, gift-passing practice and kids' workshop */
+.bcp-intro { position: fixed; z-index: 9000; inset: 0; background: #09291f; color: #fff2d9; display: grid; place-items: center; overflow: hidden; isolation: isolate; }
+.bcp-intro::before { content:''; position:absolute; inset: -30%; background: radial-gradient(circle at 50% 50%,rgba(228,165,94,.17),transparent 40%); pointer-events:none; }
+.bcp-intro::after { content:''; position:absolute; inset: 19px; border: 1px solid rgba(240,198,134,.24); pointer-events:none; }
+.bcp-intro-skip { position:absolute; right:clamp(25px,5vw,90px); top:35px; display:flex; align-items:center; gap:9px; z-index:3; color:#ffeac2; border:1px solid #c5aa815e; border-radius:50px; background:#174638; padding:11px 17px; font-size:10px!important; font-weight:800!important; letter-spacing:.12em; }
+.bcp-intro-center { position:relative; z-index:2; text-align:center; padding:45px 22px; width:100%; max-width:680px; }
+.bcp-intro-eyebrow { color:#f0c48b; font-size:10px; font-weight:700; letter-spacing:.25em; margin-bottom:21px; }
+.bcp-intro-center h2 { font-size:clamp(37px,5.5vw,68px); font-weight:500; max-width:620px; margin:0 auto 15px; line-height:1.2; }
+.bcp-intro-center h2 em { color:#eac286; }
+.bcp-intro-center p { color:#ffead0; font-size:13px; letter-spacing:.04em; }
+.bcp-intro-present { position:relative; display:block; margin:25px auto 8px; width:235px; height:215px; border:0; padding:0; background:transparent; filter:drop-shadow(0 29px 17px rgba(0,9,5,.48)); animation:bcp-present-float 3.8s ease-in-out infinite; cursor:pointer; }
+.bcp-intro-present-box { position:absolute; width:188px; height:137px; background:#aa2633; left:24px; bottom:9px; border:4px solid #e4a859; box-shadow:inset -20px 0 rgba(48,11,23,.18),inset 13px 0 rgba(255,255,255,.09); border-radius:5px; }
+.bcp-intro-present-lid { position:absolute; top:54px; left:10px; width:216px; height:42px; background:#d43d42; border:4px solid #ffc576; border-radius:4px; z-index:4; transform-origin:25% 90%; box-shadow:inset -14px 0 rgba(73,12,19,.16); }
+.bcp-intro-present-ribbon-vertical { position:absolute; background:#f2c985; top:58px; left:99px; width:35px; height:149px; z-index:5; border-left:2px solid #ffe4a7; border-right:2px solid #ffe4a7; pointer-events:none; }
+.bcp-intro-present-ribbon-horizontal { position:absolute; background:#f2c985; width:213px; height:23px; left:12px; top:64px; z-index:5; pointer-events:none; }
+.bcp-intro-present-bow { position:absolute; top:8px; left:92px; color:#ffe09b; font-size:70px; line-height:1; z-index:6; text-shadow:0 3px 2px #7f453d; }
+.bcp-intro-gift-light { position:absolute; top:80px; left:50%; width:40px; height:90px; border-radius:50%; background:#ffdf97; opacity:0; filter:blur(28px); transform:translateX(-50%); transition:all .75s ease; }
+.bcp-intro-explosion { position:absolute; z-index:8; top:56px; left:50%; width:260px; transform:translate(-50%,15px) scale(.3); color:#ffdfa0; font-size:28px; opacity:0; pointer-events:none; transition:all .8s cubic-bezier(.16,1,.3,1); }
+.bcp-intro-unwrapping .bcp-intro-present { animation:none; }
+.bcp-intro-unwrapping .bcp-intro-present-lid,.bcp-intro-unwrapping .bcp-intro-present-bow { transform:translateY(-74px) rotate(-25deg) scale(1.07); transition:transform 1s cubic-bezier(.16,1,.3,1); }
+.bcp-intro-unwrapping .bcp-intro-present-ribbon-vertical,.bcp-intro-unwrapping .bcp-intro-present-ribbon-horizontal { opacity:0; transform:translateY(-60px); transition:all .55s ease; }
+.bcp-intro-unwrapping .bcp-intro-gift-light { opacity:1; transform:translateX(-50%) scale(5); }
+.bcp-intro-unwrapping .bcp-intro-explosion { transform:translate(-50%,-80px) scale(1.6); opacity:1; }
+.bcp-intro-unwrapping { animation:bcp-intro-out 1.4s .1s both; }
+.bcp-intro-snow { position:absolute; inset:0; pointer-events:none; z-index:1; }
+.bcp-intro-snow span { width:4px; height:4px; border-radius:50%; background:#f4e6c7; position:absolute; top:-5%; animation:bcp-snowfall linear infinite; }
+.bcp-intro-corner { position:absolute; color:#deb07d; opacity:.5; font-size:44px; }
+.bcp-intro-corner-tl { left:9%; top:20%; }.bcp-intro-corner-br { right:9%; bottom:20%; }
+@keyframes bcp-snowfall { from{transform:translate3d(0,-5vh,0)}to{transform:translate3d(25px,110vh,0)} }
+@keyframes bcp-present-float { 0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-13px) rotate(2deg)} }
+@keyframes bcp-intro-out { 0%,72%{opacity:1;} 100%{opacity:0;visibility:hidden;} }
+
+/* White Elephant example only. No gift state is saved here. */
+.bcp-demo { background:#f1e2cc; color:#233d30; border:1px solid #d3b491; border-radius:8px; margin:47px 0; padding:clamp(22px,4vw,45px); overflow:hidden; }
+.bcp-demo-head { display:flex; align-items:start; gap:20px; justify-content:space-between; }
+.bcp-demo-head h3 { font:500 clamp(29px,3.2vw,43px)/1.2 'Playfair Display',Georgia,serif; margin:12px 0; letter-spacing:-.03em; }
+.bcp-demo-head p { color:#657464; font-size:13px; max-width:450px; line-height:1.75; }
+.bcp-demo-label { border:1px solid #b99e7b; border-radius:50px; padding:8px 12px; font-weight:800; font-size:9px; letter-spacing:.14em; color:#8c3c30; white-space:nowrap; }
+.bcp-demo-body { display:grid; grid-template-columns: .95fr 1.05fr; align-items:center; gap:clamp(25px,6vw,100px); }
+.bcp-demo-circle { height:350px; width:350px; max-width:100%; position:relative; margin:0 auto; border-radius:50%; background:radial-gradient(circle,#e7c9a1 0,#f2dec2 50%,transparent 66%); }
+.bcp-demo-circle::before { content:''; position:absolute; inset:34px; border:1px dashed #a99a75; border-radius:50%; }
+.bcp-demo-middle { text-align:center; display:grid; place-items:center; align-content:center; position:absolute; inset:0; pointer-events:none; }
+.bcp-demo-middle span { font-size:36px; color:#a83c38; line-height:1.4; }
+.bcp-demo-middle small { font-size:8px; letter-spacing:.11em; font-weight:800; color:#8a7868; }
+.bcp-demo-seat { position:absolute; transform:translate(-50%,-50%); width:41px; height:41px; display:grid; place-items:center; border-radius:50%; background:#fff7e7; border:2px solid #9c6e4b; box-shadow:0 4px 7px #3a2d1b18; z-index:1; }
+.bcp-demo-seat-face { font-weight:800; font-size:12px; color:#624d39; }
+.bcp-demo-moving-present { width:29px; height:29px; border:2px solid #f8e5c1; border-radius:3px; position:absolute; top:50%; left:50%; z-index:2; transition:transform .75s cubic-bezier(.16,1,.3,1); box-shadow:0 4px 7px #31231c48; background:#b83344; }
+.bcp-demo-moving-present::before { content:''; width:6px; height:100%; background:#f4d59e; position:absolute; top:0; left:calc(50% - 3px); }
+.bcp-demo-moving-present::after { content:''; width:100%; height:6px; background:#f4d59e; position:absolute; top:calc(50% - 3px); left:0; }
+.bcp-demo-present-gold { background:#c5913a; }.bcp-demo-present-green { background:#37745b; }.bcp-demo-present-cream { background:#d6b58b; }.bcp-demo-present-pine { background:#154733; }.bcp-demo-present-rose { background:#c36a65; }
+.bcp-demo-controls { align-self:center; }
+.bcp-demo-controls p { font:500 clamp(21px,2.1vw,29px)/1.45 'Playfair Display',Georgia,serif; margin-bottom:25px; max-width:350px; }
+.bcp-demo-buttons { display:flex; gap:12px; flex-wrap:wrap; }
+.bcp-demo-buttons button { background:#9d303b; color:#fff8e4; border:0; border-radius:5px; padding:14px 17px; display:flex; gap:11px; justify-content:center; align-items:center; font-weight:800!important; font-size:11px!important; letter-spacing:.1em; min-width:140px; transition:transform .2s,background .2s; }
+.bcp-demo-buttons button:last-child { background:#28604b; }
+.bcp-demo-buttons button:hover { transform:translateY(-2px); }
+.bcp-demo-reset { display:flex; align-items:center; gap:8px; margin-top:19px; background:transparent; border:0; padding:0; font-size:11px!important; color:#796852; text-decoration:underline; }
+
+/* Small interactive Christmas workshop */
+.bcp-kids-corner { background:#f4ecdb; color:#244033; padding:77px clamp(24px,8vw,150px) 90px; }
+.bcp-kids-heading { max-width:720px; padding-top:52px; }
+.bcp-kids-heading h2 { margin:14px 0 16px; }
+.bcp-kids-heading p { color:#657061; line-height:1.8; max-width:470px; }
+.bcp-kids-playground { margin-top:35px; display:grid; grid-template-columns: .9fr 1.1fr; gap:16px; }
+.bcp-kids-tree-section,.bcp-kids-presents-section { background:#fff9ed; border:1px solid #d7d5c8; border-radius:8px; padding:clamp(20px,3vw,35px); min-width:0; overflow:hidden; }
+.bcp-kids-label { display:inline-block; font-size:9px; letter-spacing:.17em; font-weight:800; color:#9b313a; }
+.bcp-kids-tree { position:relative; width:min(290px,100%); height:352px; margin:13px auto 18px; }
+.bcp-kids-tree-star { font-size:58px; color:#e6b962; position:absolute; z-index:5; top:-19px; left:calc(50% - 27px); line-height:1.1; transition:filter .5s,color .5s; }
+.bcp-kids-tree-shape { position:absolute; z-index:1; inset:27px 12px 21px; background:linear-gradient(130deg,#589575 4%,#1d6048 45%,#194934 100%); clip-path:polygon(50% 0,70% 26%,63% 26%,82% 53%,76% 53%,100% 95%,0% 95%,24% 53%,18% 53%,37% 26%,30% 26%); filter:drop-shadow(0 15px 2px #24452b40); }
+.bcp-kids-tree-trunk { position:absolute; bottom:1px; left:calc(50% - 16px); width:32px; height:55px; background:#835739; }
+.bcp-kids-ornament { position:absolute; z-index:5; border-radius:50%; width:17px; height:17px; box-shadow:0 1px 3px #103a29; animation:bcp-ornament-appear .65s cubic-bezier(.16,1,.3,1) both; }
+.bcp-kids-lights-on .bcp-kids-tree-star,.bcp-kids-lights-on .bcp-kids-ornament { filter:drop-shadow(0 0 10px #ffda80); }
+.bcp-kids-lights-on .bcp-kids-tree-star { animation:bcp-star-twinkle 2s ease-in-out infinite alternate; }
+.bcp-kids-tree-actions { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; }
+.bcp-kids-tree-actions button { display:flex; align-items:center; justify-content:center; gap:8px; background:#2a624d; color:#fff7e4; border:0; padding:11px 13px; border-radius:5px; font-size:11px!important; font-weight:700!important; }
+.bcp-kids-tree-actions button:last-child { background:#f1e6d4; border:1px solid #d6c7b1; color:#475547; }
+.bcp-kids-presents-section h3 { font:500 clamp(25px,2.9vw,36px)/1.2 'Playfair Display',Georgia,serif; margin:13px 0 26px; }
+.bcp-kids-gift-grid { display:grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap:12px; }
+.bcp-kids-gift { padding:12px 6px; min-height:124px; border:1px solid #e2d9c9; border-radius:5px; background:#f7f0e3; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; transition:transform .25s,border-color .25s, background .25s; }
+.bcp-kids-gift:hover { transform:translateY(-4px) rotate(-1deg); border-color:#b58259; background:#fae8cb; }
+.bcp-kids-box { width:55px; height:50px; display:grid; place-items:start center; background:#aa3440; position:relative; border-top:9px solid #e27272; box-shadow:inset 12px 0 #5815211c,0 6px 7px #27140e2e; }
+.bcp-kids-box::before { content:''; position:absolute; background:#f4ca7b; top:-9px; bottom:0; left:calc(50% - 5px); width:10px; }
+.bcp-kids-bow { z-index:2; position:absolute; top:-31px; color:#b77a35; font-size:34px; }
+.bcp-kids-gift small { font-size:8px; font-weight:800; letter-spacing:.1em; color:#847669; }
+.bcp-kids-gift-gold .bcp-kids-box { background:#d99c3d; border-color:#c8af8a; }.bcp-kids-gift-green .bcp-kids-box { background:#3f745b; border-color:#83ad80; }.bcp-kids-gift-cream .bcp-kids-box { background:#bca278; border-color:#e3c59c; }.bcp-kids-gift-pine .bcp-kids-box { background:#235241; border-color:#3b795d; }.bcp-kids-gift-rose .bcp-kids-box { background:#bf6563; border-color:#de9c8b; }
+.bcp-kids-gift.is-open .bcp-kids-box { animation:bcp-box-bounce .5s cubic-bezier(.16,1,.3,1); }
+.bcp-kids-surprise { display:flex; align-items:center; gap:12px; margin-top:21px; padding:17px 19px; background:#e4efdc; border:1px solid #cedfc4; border-radius:5px; min-height:58px; color:#35614a; font-size:12px; }
+.bcp-kids-names { display:flex; flex-wrap:wrap; gap:9px; margin-top:24px; }
+.bcp-kids-names span { font-size:10px; padding:7px 10px; border:1px solid #d9d5c6; border-radius:50px; color:#526457; }
+@keyframes bcp-ornament-appear {from{opacity:0;transform:scale(.3) translateY(-15px)}to{opacity:1;transform:scale(1) translateY(0)}}
+@keyframes bcp-star-twinkle {from{filter:drop-shadow(0 0 4px #ffc366)}to{filter:drop-shadow(0 0 15px #ffdc89)}}
+@keyframes bcp-box-bounce {0%{transform:scale(.8)}65%{transform:scale(1.15) rotate(5deg)}100%{transform:scale(1)}}
+
+@media(max-width:760px) {
+ .bcp-intro-center h2 { font-size:40px; }.bcp-intro-present { transform:scale(.9); }
+ .bcp-demo { margin:30px 0; padding:22px 15px; }
+ .bcp-demo-head { flex-direction:column; gap:9px; }
+ .bcp-demo-body { grid-template-columns:1fr; gap:0; }
+ .bcp-demo-circle { transform:scale(.9); margin:0 auto; }
+ .bcp-demo-controls { text-align:center; }
+ .bcp-demo-controls p { margin:0 auto 18px; }
+ .bcp-demo-buttons { justify-content:center; }
+ .bcp-demo-reset { margin:16px auto; }
+ .bcp-kids-corner { padding:54px 22px 69px; }
+ .bcp-kids-heading { padding-top:39px; }
+ .bcp-kids-playground { grid-template-columns:1fr; }
+ .bcp-kids-gift-grid { gap:9px; }
+ .bcp-kids-gift { min-height:112px; }
+}
+@media(max-width:400px) {
+ .bcp-demo-circle { transform:scale(.79); margin:-26px auto; }
+ .bcp-demo-head h3 { font-size:27px; }
+ .bcp-demo-buttons button { min-width:123px; font-size:10px!important; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .bcp-intro-snow span,.bcp-intro-present,.bcp-kids-lights-on .bcp-kids-tree-star { animation:none!important; }
+ .bcp-demo-moving-present { transition:none; }
+}
