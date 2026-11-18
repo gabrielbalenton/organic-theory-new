@@ -38,9 +38,11 @@ const BalentonChristmasParty2026 = lazy(() => import('./pages/BalentonChristmasP
 const PageLoader = () => <div className="min-h-screen bg-[#09090B]" />;
 
 export default function App() {
+  const isChristmasParty = typeof window !== 'undefined' && window.location.pathname.toLowerCase() === '/balentonchristmasparty2026';
+
   return (
     <BrowserRouter>
-      <Cursor />
+      {!isChristmasParty && <Cursor />}
       <style>{`button[aria-label="Log out"] { display: none !important; }`}</style>
       <Suspense fallback={<PageLoader />}>
         <Routes>
