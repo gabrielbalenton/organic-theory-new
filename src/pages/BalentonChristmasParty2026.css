@@ -384,3 +384,9 @@
 @media(prefers-reduced-motion:reduce) {
  .bcp-wheel-disc { transition-duration: .01ms; }
 }
+
+/* Small replay control beside the share link */
+.bcp-header-actions { display:flex; align-items:center; gap:12px; }
+.bcp-replay { background:transparent; color:#8b3a43; border:0; padding:10px 5px; font-size:10px!important; font-weight:800!important; white-space:nowrap; letter-spacing:.05em; text-decoration:underline; text-underline-offset:3px; }
+.bcp-replay:hover { color:#5c2530; }
+@media(max-width:440px) { .bcp-header-actions { gap:2px; }.bcp-replay { font-size:9px!important; padding:8px 5px; }.bcp-share { font-size:9px!important; padding:10px 7px; } }
